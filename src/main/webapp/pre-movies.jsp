@@ -1,6 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%@include file="header.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 <head>
@@ -13,10 +12,10 @@
     <meta http-equiv="Cache-Control" content="No-Cache" />
     <meta http-equiv="imagetoolbar" content="no" />
     <meta name="viewport" content="width=1024" />
-    <meta name="keywords" content="CGV, Ω√¡ˆ∫Í¿Ã, øµ»≠∞¸, ±ÿ¿Â, øµ»≠, ∆ºƒœ, π⁄Ω∫ø¿««Ω∫, ±ÿ¿Â, Movie, Theater, Cinema, Cgv, cgv, øπ∏≈, ªÛøµ¿€" />
-    <meta name="description" content="CGV¥¬ º±¡¯»≠µ» ∞¸∂˜πÆ»≠øÕ √÷∞Ì¿« º≠∫ÒΩ∫∑Œ ∞Ì∞¥ø°∞‘ ¿ÿ¿ª ºˆ æ¯¥¬ ∞®µø¿ª º±ªÁ«’¥œ¥Ÿ. CGV»®∆‰¿Ã¡ˆ∏¶ ≈Î«ÿ øµ»≠ øπ∏≈ª”∏∏ æ∆¥œ∂Û ±◊ ¿ÃªÛ¿« º≠∫ÒΩ∫øÕ ∞®µø¿ª ¿¸¥ﬁ«œ∞Ì, ¥ŸæÁ«— ¡Ò∞≈øÚ∞˙ ∆Ø∫∞«— ∞Ê«Ë¿ª ¡¶∞¯«œ∞Ì¿⁄ «’¥œ¥Ÿ." />
-    <meta property="og:site_name" content="øµ»≠ ±◊ ¿ÃªÛ¿« ∞®µø. CGV"/>
-    <meta id="ctl00_og_title" property="og:title" content="øµ»≠ ±◊ ¿ÃªÛ¿« ∞®µø. CGV"></meta>
+    <meta name="keywords" content="CGV, ÏãúÏßÄÎ∏åÏù¥, ÏòÅÌôîÍ¥Ä, Í∑πÏû•, ÏòÅÌôî, Ìã∞Ïºì, Î∞ïÏä§Ïò§ÌîºÏä§, Í∑πÏû•, Movie, Theater, Cinema, Cgv, cgv, ÏòàÎß§, ÏÉÅÏòÅÏûë" />
+    <meta name="description" content="CGVÎäî ÏÑ†ÏßÑÌôîÎêú Í¥ÄÎûåÎ¨∏ÌôîÏôÄ ÏµúÍ≥†Ïùò ÏÑúÎπÑÏä§Î°ú Í≥†Í∞ùÏóêÍ≤å ÏûäÏùÑ Ïàò ÏóÜÎäî Í∞êÎèôÏùÑ ÏÑ†ÏÇ¨Ìï©ÎãàÎã§. CGVÌôàÌéòÏù¥ÏßÄÎ•º ÌÜµÌï¥ ÏòÅÌôî ÏòàÎß§ÎøêÎßå ÏïÑÎãàÎùº Í∑∏ Ïù¥ÏÉÅÏùò ÏÑúÎπÑÏä§ÏôÄ Í∞êÎèôÏùÑ Ï†ÑÎã¨ÌïòÍ≥†, Îã§ÏñëÌïú Ï¶êÍ±∞ÏõÄÍ≥º ÌäπÎ≥ÑÌïú Í≤ΩÌóòÏùÑ Ï†úÍ≥µÌïòÍ≥†Ïûê Ìï©ÎãàÎã§." />
+    <meta property="og:site_name" content="ÏòÅÌôî Í∑∏ Ïù¥ÏÉÅÏùò Í∞êÎèô. CGV"/>
+    <meta id="ctl00_og_title" property="og:title" content="ÏòÅÌôî Í∑∏ Ïù¥ÏÉÅÏùò Í∞êÎèô. CGV"></meta>
     
     
     <meta id="ctl00_og_image" property="og:image" content="https://img.cgv.co.kr/WebApp/images/common/logo_new_kakao_prevw.png"></meta>
@@ -34,7 +33,6 @@
     <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/eggupdate.css" />
     <link rel="stylesheet" media="print" type="text/css" href="https://img.cgv.co.kr/R2014/css/print.css" />    
     <link rel="stylesheet" type="text/css" href="https://img.cgv.co.kr/R2014/js/jquery.ui/smoothness/jquery-ui-1.10.4.custom.min.css" />
-    
     <script type="text/javascript" src="/common/js/extraTheaters.js"></script>
     <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/app.config.js"></script>
     <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery-1.10.2.min.js"></script>
@@ -46,9 +44,7 @@
     <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/app.utils.js"></script>
 	<script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery.utils.pageing.js"></script>
     <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/app.init.js"></script>
-
-    <!--[if lte IE 9]><script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery.plugin/jquery.placeholder.js"></script><![endif]-->
-    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery.plugin/jquery.dotdotdot.min.js"></script>
+   <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery.plugin/jquery.dotdotdot.min.js"></script>
     <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/silverlight_link.js"></script>
 	<script src="https://img.cgv.co.kr/R2014/js/slick/slick.js" type="text/javascript" charset="utf-8"></script>
 
@@ -59,13 +55,11 @@
     <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/icheck/login.timer.js"></script>
     <script src="https://img.cgv.co.kr/R2014/js/icheck/icheck.min.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="https://img.cgv.co.kr/R2014/js/icheck/iCheck.css" />
-
-    <!-- 2020.05.07 ∞®¡§¡ˆºˆ/«¡∏Æø°±◊ «¡∑Œ¡ß∆Æ √ﬂ∞° -->
     <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/preegg.css" />
 
-    <!-- ∞¢∆‰¿Ã¡ˆ Header Start--> 
+    <!-- Í∞ÅÌéòÏù¥ÏßÄ Header Start--> 
     
-    <!--/∞¢∆‰¿Ã¡ˆ Header End--> 
+    <!--/Í∞ÅÌéòÏù¥ÏßÄ Header End--> 
   
 
 <meta charset="EUC-KR">
@@ -74,14 +68,15 @@
 <body class="">
 <div></div>
 <div class="skipnaiv">
-	<a href="#contents" id="skipHeader">∏ﬁ¿Œ ƒ¡≈Ÿ√˜ πŸ∑Œ∞°±‚</a>
+	<a href="#contents" id="skipHeader">Î©îÏù∏ Ïª®ÌÖêÏ∏† Î∞îÎ°úÍ∞ÄÍ∏∞</a>
 </div>
 <div id="cgvwrap">
    
 
 
+<%@include file="header.jsp" %>
 
-<div id="contaniner" class=""><!-- ∫Æµπ πË∞Ê¿ÃπÃ¡ˆ ªÁøÎ Ω√ class="bg-bricks" ¿˚øÎ / πË∞Ê¿ÃπÃ¡ˆ∞° æ¯¿ª ∞ÊøÏ class ªË¡¶  -->
+<div id="contaniner" class=""><!-- Î≤ΩÎèå Î∞∞Í≤ΩÏù¥ÎØ∏ÏßÄ ÏÇ¨Ïö© Ïãú class="bg-bricks" Ï†ÅÏö© / Î∞∞Í≤ΩÏù¥ÎØ∏ÏßÄÍ∞Ä ÏóÜÏùÑ Í≤ΩÏö∞ class ÏÇ≠Ï†ú  -->
         
 
 		<!-- Contents Area -->
@@ -93,28 +88,28 @@
     <div class="wrap-movie-chart">
         <!-- Heading Map Multi -->
         <div class="tit-heading-wrap">
-            <h3>π´∫Ò¬˜∆Æ</h3>
+            <h3>Î¨¥ÎπÑÏ∞®Ìä∏</h3>
             <div class="submenu">
                 <ul>
-                    <li><a href="/movies/">π´∫Ò¬˜∆Æ</a></li>
-                    <li class="on"><a href="pre-movies.aspx">ªÛøµøπ¡§¿€</a></li>
-                    <!--∫Ò≥Î√‚√≥∏Æ : 20211013 //-->
-                    <!--<li><a href="/movies/?lt=3">æ∆∆Æ«œøÏΩ∫</a></li>//-->
+                    <li><a href="/movies/">Î¨¥ÎπÑÏ∞®Ìä∏</a></li>
+                    <li class="on"><a href="pre-movies.aspx">ÏÉÅÏòÅÏòàÏ†ïÏûë</a></li>
+                    <!--ÎπÑÎÖ∏Ï∂úÏ≤òÎ¶¨ : 20211013 //-->
+                    <!--<li><a href="/movies/?lt=3">ÏïÑÌä∏ÌïòÏö∞Ïä§</a></li>//-->
                 </ul>
             </div>
         </div>
         <!-- //Heading Map Multi -->
         <div class="sect-movie-chart">
-            <h4 class="hidden">ªÛøµøπ¡§¿€</h4>
+            <h4 class="hidden">ÏÉÅÏòÅÏòàÏ†ïÏûë</h4>
             <ol>
-                <!--  coding start, ¿Ã¥ﬁ¿« √ﬂ√µøµ»≠ ¡§∫∏¡ﬂ 1,2,3¿ß∏∏ µπ∏Æ¥¬ ∫Œ∫–¿‘¥œ¥Ÿ. -->
+                <!--  coding start, Ïù¥Îã¨Ïùò Ï∂îÏ≤úÏòÅÌôî Ï†ïÎ≥¥Ï§ë 1,2,3ÏúÑÎßå ÎèåÎ¶¨Îäî Î∂ÄÎ∂ÑÏûÖÎãàÎã§. -->
                 <li>
                     <div class="box-image">
-                        <strong class="rank">¿Ã¥ﬁ¿« √ﬂ√µøµ»≠ 1</strong>	
+                        <strong class="rank">Ïù¥Îã¨Ïùò Ï∂îÏ≤úÏòÅÌôî 1</strong>	
                         <a href="/movies/detail-view/?midx=85603">
                             <span class="thumb-image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85603/85603_320.jpg" alt="±ÿ¿Â∆« ¡÷º˙»∏¿¸ 0 ∆˜Ω∫≈Õ" onerror="errorImage(this)">
-                                <span class="ico-grade grade-15">15ºº ¿ÃªÛ</span>
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85603/85603_320.jpg" alt="Í∑πÏû•Ìåê Ï£ºÏà†ÌöåÏ†Ñ 0 Ìè¨Ïä§ÌÑ∞" onerror="errorImage(this)">
+                                <span class="ico-grade grade-15">15ÏÑ∏ Ïù¥ÏÉÅ</span>
                             </span>
                             
                         </a>
@@ -122,22 +117,22 @@
                     
                     <div class="box-contents">
                         <a href="/movies/detail-view/?midx=85603">
-                            <strong class="title">±ÿ¿Â∆« ¡÷º˙»∏¿¸ 0</strong>
+                            <strong class="title">Í∑πÏû•Ìåê Ï£ºÏà†ÌöåÏ†Ñ 0</strong>
                         </a>
 
                         <div class="score">
-                            <strong class="percent">øπ∏≈¿≤<span>22.4%</span></strong>
+                            <strong class="percent">ÏòàÎß§Ïú®<span>22.4%</span></strong>
                         </div>
 
                         <span class="txt-info">
                             <strong>
                                 2022.02.17 
-                                <span>∞≥∫¿</span>
+                                <span>Í∞úÎ¥â</span>
                                 <em class="dday">D-8</em>
                             </strong>
                         </span>
                         <span class="like"> 
-                            <a class="link-reservation" href="/ticket/?MOVIE_CD=20028797&amp;MOVIE_CD_GROUP=20028797">øπ∏≈</a>
+                            <a class="link-reservation" href="/ticket/?MOVIE_CD=20028797&amp;MOVIE_CD_GROUP=20028797">ÏòàÎß§</a>
                         </span>
                     </div>    
                 </li>
@@ -147,35 +142,35 @@
             </ol>
             
             
-            	<!-- coding start, ¿Ã∫Œ∫–∫Œ≈Õ ªÛøµøπ¡§¿€ ¿œ¿⁄/ ªÛøµøπ¡§¿€ ≥Ø¬•∫∞∑Œ π›∫ππÆ µπ∏Æ¥¬ ∞˜¿‘¥œ¥Ÿ. -->
+            	<!-- coding start, Ïù¥Î∂ÄÎ∂ÑÎ∂ÄÌÑ∞ ÏÉÅÏòÅÏòàÏ†ïÏûë ÏùºÏûê/ ÏÉÅÏòÅÏòàÏ†ïÏûë ÎÇ†ÏßúÎ≥ÑÎ°ú Î∞òÎ≥µÎ¨∏ ÎèåÎ¶¨Îäî Í≥≥ÏûÖÎãàÎã§. -->
             
-                <h4><span class="hidden">ªÛøµøπ¡§¿€</span>2022.02.10(∏Ò)</h4>
+                <h4><span class="hidden">ÏÉÅÏòÅÏòàÏ†ïÏûë</span>2022.02.10(Î™©)</h4>
                 <ol>
                     
                       <li>
                         <div class="box-image">
                             <a href="/movies/detail-view/?midx=85633">
                                 <span class="thumb-image">
-                                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85633/85633_320.jpg" alt="±¬ ∫∏Ω∫ ∆˜Ω∫≈Õ" onerror="errorImage(this)">
-                                    <span class="ico-grade grade-15">15ºº ¿ÃªÛ</span>
+                                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85633/85633_320.jpg" alt="Íµø Î≥¥Ïä§ Ìè¨Ïä§ÌÑ∞" onerror="errorImage(this)">
+                                    <span class="ico-grade grade-15">15ÏÑ∏ Ïù¥ÏÉÅ</span>
                                 </span>
                                 
                             </a>
                             <span class="screentype">
                                 
-                                    <a class="arthouse" href="#" data-regioncode="MovieCollage">æ∆∆Æ«œøÏΩ∫</a>
+                                    <a class="arthouse" href="#" data-regioncode="MovieCollage">ÏïÑÌä∏ÌïòÏö∞Ïä§</a>
                                 
                             </span>
                         </div>
                     
                         <div class="box-contents">
                             <a href="/movies/detail-view/?midx=85633">
-                                <strong class="title">±¬ ∫∏Ω∫</strong>
+                                <strong class="title">Íµø Î≥¥Ïä§</strong>
                             </a>
 
                             <div class="score">
-                                <strong class="percent">øπ∏≈¿≤<span>2.7%</span></strong>
-                                <!-- 2020.05.07 ∞≥∫¿¿¸ «¡∏Æø°±◊ ≥Î√‚, ∞≥∫¿»ƒ ∞ÒµÁø°±◊¡ˆºˆ ≥Î√‚∫Ø∞Ê -->
+                                <strong class="percent">ÏòàÎß§Ïú®<span>2.7%</span></strong>
+                                <!-- 2020.05.07 Í∞úÎ¥âÏ†Ñ ÌîÑÎ¶¨ÏóêÍ∑∏ ÎÖ∏Ï∂ú, Í∞úÎ¥âÌõÑ Í≥®Îì†ÏóêÍ∑∏ÏßÄÏàò ÎÖ∏Ï∂úÎ≥ÄÍ≤Ω -->
                                 <div class="egg-gage small">
                                             <span class="sprite_preegg default"></span>
                                             <span class="percent">99%</span>
@@ -185,12 +180,12 @@
                             <span class="txt-info">
                                 <strong>
                                     2022.02.10 
-                                    <span>∞≥∫¿</span>
+                                    <span>Í∞úÎ¥â</span>
                                     <em class="dday">D-1</em>
                                 </strong>
                             </span>
                             <span class="like"> 
-                                <a class="link-reservation" href="/ticket/?MOVIE_CD=20028869&amp;MOVIE_CD_GROUP=20028869">øπ∏≈</a>
+                                <a class="link-reservation" href="/ticket/?MOVIE_CD=20028869&amp;MOVIE_CD_GROUP=20028869">ÏòàÎß§</a>
                             </span>
                         </div>    
                     </li>
@@ -228,16 +223,18 @@
 
     <!-- E Popup -->
     
-    <!-- S øπ∏≈«œ±‚ π◊ TOP Fixed πˆ∆∞ -->
+    <!-- S ÏòàÎß§ÌïòÍ∏∞ Î∞è TOP Fixed Î≤ÑÌäº -->
     <div class="fixedBtn_wrap">
      
-        <a href="ticket.jsp" class="btn_fixedTicketing">øπ∏≈«œ±‚</a>
+        <a href="ticket.jsp" class="btn_fixedTicketing">ÏòàÎß§ÌïòÍ∏∞</a>
         
-        <a href="#none" class="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="√÷ªÛ¥‹¿∏∑Œ ¿Ãµø" /></a>
+        <a href="#none" class="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="ÏµúÏÉÅÎã®ÏúºÎ°ú Ïù¥Îèô" /></a>
     </div>
     
-    <!-- E øπ∏≈«œ±‚ π◊ TOP Fixed πˆ∆∞ -->
+    <!-- E ÏòàÎß§ÌïòÍ∏∞ Î∞è TOP Fixed Î≤ÑÌäº -->
 	<%@include file="footer.jsp" %>
+
+
 
 
 </div>

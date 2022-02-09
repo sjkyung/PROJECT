@@ -1,8 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-    <!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="skipnaiv">
-            <a href="#contents" id="skipHeader">∏ﬁ¿Œ ƒ¡≈Ÿ√˜ πŸ∑Œ∞°±‚</a>
+            <a href="#contents" id="skipHeader">Î©îÏù∏ Ïª®ÌÖêÏ∏† Î∞îÎ°úÍ∞ÄÍ∏∞</a>
         </div>
         <div id="cgvwrap">
             <div class="cgv-ad-wrap" id="cgv_main_ad">
@@ -20,11 +18,11 @@
 
             <!-- S Header
             Description
-            - class 'nav' ø° class 'active' √ﬂ∞°Ω√ º≠∫Í∏ﬁ¥∫≥Î√‚
-            - class 'nav' ø° class 'fixed' √ﬂ∞°Ω√ ªÛ¥‹∞Ì¡§µ«∏Á Ω∫≈∏¿œ ∫Ø∞Êµ 
+            - class 'nav' Ïóê class 'active' Ï∂îÍ∞ÄÏãú ÏÑúÎ∏åÎ©îÎâ¥ÎÖ∏Ï∂ú
+            - class 'nav' Ïóê class 'fixed' Ï∂îÍ∞ÄÏãú ÏÉÅÎã®Í≥†Ï†ïÎêòÎ©∞ Ïä§ÌÉÄÏùº Î≥ÄÍ≤ΩÎê®
          -->
             <div class="header">
-                <!-- º≠∫ÒΩ∫ ∏ﬁ¥∫ -->
+                <!-- ÏÑúÎπÑÏä§ Î©îÎâ¥ -->
 
                 <div class="header_content">
                     <div class="contents">
@@ -36,7 +34,7 @@
                             <div class="ad-partner">
                                 <a href="#none">
                                     <img src="https://img.cgv.co.kr/WingBanner/2022/0110/16417749747880.png"
-                                        alt="«ˆ¥ÎM∆˜¿Œ∆Æ" />
+                                        alt="ÌòÑÎåÄMÌè¨Ïù∏Ìä∏" />
                                 </a>
                             </div>
 
@@ -45,13 +43,13 @@
 
                             <li>
                                 <a href="./login.jsp?">
-                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginPassword.png" alt="∑Œ±◊¿Œ" />
-                                    <span>∑Œ±◊¿Œ</span></a>
+                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginPassword.png" alt="Î°úÍ∑∏Ïù∏" />
+                                    <span>Î°úÍ∑∏Ïù∏</span></a>
                             </li>
                             <li>
                                 <a href="./join.jsp">
-                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginJoin.png" alt="»∏ø¯∞°¿‘" />
-                                    <span>»∏ø¯∞°¿‘</span>
+                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginJoin.png" alt="ÌöåÏõêÍ∞ÄÏûÖ" />
+                                    <span>ÌöåÏõêÍ∞ÄÏûÖ</span>
                                 </a>
                             </li>
 
@@ -64,15 +62,15 @@
 
                             <li>
                                 <a href="./support.jsp">
-                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginCustomer.png" alt="∞Ì∞¥ºæ≈Õ" />
-                                    <span>∞Ì∞¥ºæ≈Õ</span></a>
+                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginCustomer.png" alt="Í≥†Í∞ùÏÑºÌÑ∞" />
+                                    <span>Í≥†Í∞ùÏÑºÌÑ∞</span></a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- º≠∫ÒΩ∫ ∏ﬁ¥∫ -->
+                <!-- ÏÑúÎπÑÏä§ Î©îÎâ¥ -->
 
-                <!-- º≠∫Í ∏ﬁ¥∫ -->
+                <!-- ÏÑúÎ∏å Î©îÎâ¥ -->
                 <script>
                     $(document).ready(function() {
                         $('.nav_menu > li > h2 > a').on({
@@ -91,7 +89,6 @@
                                 }
                             }
                         });
-
                         $('.nav').on({
                             mouseleave: function(e) {
                                 $(this).find('.nav_overMenu').slideUp(200, function() {
@@ -99,23 +96,19 @@
                                 });
                             }
                         });
-
                         $('.totalSearch_wrap input[type=text]').on({
                             focusin: function() {
                                 $('.totalSearch_wrap').addClass("active");
                             }
                         });
-
                         $('.btn_totalSearchAutocomplete_close').on({
                             click: function() {
                                 $('.totalSearch_wrap').removeClass("active");
                             },
                             focusout: function(e) {
                                 //     $('.totalSearch_wrap').removeClass("active");
-
                             }
                         });
-
                         $(this).on({
                             scroll: function(e) {
                                 /* S GNB fixed */
@@ -124,7 +117,6 @@
                                 var fixedHeaderPosY = headerOffsetT + headerOuterH;
                                 var scrollT = $(this).scrollTop();
                                 var scrollL = $(this).scrollLeft();
-
                                 if (scrollT >= fixedHeaderPosY) {
                                     $('.nav').addClass('fixed');
                                     $('.fixedBtn_wrap').addClass('topBtn');
@@ -132,21 +124,19 @@
                                     $('.nav').removeClass('fixed');
                                     $('.fixedBtn_wrap').removeClass('topBtn');
                                 }
-
-                                /* S > GNB fixed ¡¬øÏ Ω∫≈©∑—
+                                /* S > GNB fixed Ï¢åÏö∞ Ïä§ÌÅ¨Î°§
                                 Description
-                                - GNB∞° fixed µ«æ˙¿ª∂ß ¡¬øÏ Ω∫≈©∑— µ«∞‘ √≥∏Æ
+                                - GNBÍ∞Ä fixed ÎêòÏóàÏùÑÎïå Ï¢åÏö∞ Ïä§ÌÅ¨Î°§ ÎêòÍ≤å Ï≤òÎ¶¨
                                 */
                                 if ($('.nav').hasClass('fixed')) {
                                     $('.nav').css({ 'left': -1 * scrollL })
                                 } else {
                                     $('.nav').css({ 'left': 0 })
                                 }
-                                /* E > GNB fixed ¡¬øÏ Ω∫≈©∑— */
+                                /* E > GNB fixed Ï¢åÏö∞ Ïä§ÌÅ¨Î°§ */
                                 /* S GNB fixed */
                             }
                         });
-
                         $('.btn_gotoTop').on({
                             click: function() {
                                 $('html, body').stop().animate({
@@ -154,62 +144,49 @@
                                 }, 400);
                             }
                         });
-
-                        //≈Î«’∞Àªˆ ªÛ¥‹ ∞Àªˆ πˆ∆∞
+                        //ÌÜµÌï©Í≤ÄÏÉâ ÏÉÅÎã® Í≤ÄÏÉâ Î≤ÑÌäº
                         $('#btn_header_search').on('click', function() {
                             if ($('#header_ad_keyword').val() != "")
-                                goSearch($('#header_ad_keyword'));      //±§∞Ì
+                                goSearch($('#header_ad_keyword'));      //Í¥ëÍ≥†
                             else
                                 goSearch($('#header_keyword'));
-
                             return false;
                         });
-
-                        //≈Î«’∞Àªˆ ∞ÀªˆæÓ ¿‘∑¬√¢
+                        //ÌÜµÌï©Í≤ÄÏÉâ Í≤ÄÏÉâÏñ¥ ÏûÖÎ†•Ï∞Ω
                         $('#header_keyword').keyup(function(e) {
                             if (e.keyCode == 13) goSearch($('#header_keyword'));
                         });
-
                     });
-
-                    //≈Î«’∞Àªˆ
+                    //ÌÜµÌï©Í≤ÄÏÉâ
                     function goSearch($objKeyword) {
-
                         if ($objKeyword.val() == "") {
-                            alert("∞ÀªˆæÓ∏¶ ¿‘∑¬«ÿ ¡÷ººø‰");
+                            alert("Í≤ÄÏÉâÏñ¥Î•º ÏûÖÎ†•Ìï¥ Ï£ºÏÑ∏Ïöî");
                             $objKeyword.focus();
                             return false;
                         }
-
                         location = "/search/?query=" + escape($objKeyword.val());
                     }
-
-                    //∞Àªˆ ¿‘∑¬√¢ ≈¨∏Ø Ω√ ±§∞Ì∞™ reset
+                    //Í≤ÄÏÉâ ÏûÖÎ†•Ï∞Ω ÌÅ¥Î¶≠ Ïãú Í¥ëÍ≥†Í∞í reset
                     $('#header_keyword').on('click', function() {
                         $(this).attr('placeholder', '');
                         $('#header_ad_keyword').val('');
                     });
-
-                    //ªÛ¥‹ ≈∞øˆµÂ ±§∞Ì (S)
+                    //ÏÉÅÎã® ÌÇ§ÏõåÎìú Í¥ëÍ≥† (S)
                     function AdSearchExt(txt, SearchText) {
                         $('#header_keyword').attr('placeholder', txt);
                         $('#header_ad_keyword').val(SearchText);
                     }
-
                     function hdIcoSet(left, sh) { }
-                    //ªÛ¥‹ ≈∞øˆµÂ ±§∞Ì (E)
-
-                    //ªÛ¥‹±§∞Ì¥›±‚
+                    //ÏÉÅÎã® ÌÇ§ÏõåÎìú Í¥ëÍ≥† (E)
+                    //ÏÉÅÎã®Í¥ëÍ≥†Îã´Í∏∞
                     function hideCgvTopAd() {
                         $(".cgv-ad-wrap").hide();
                         $('#wrap_main_notice').parent('div').css('top', 280);
                     }
-
-                    //∫Ò¡ÓΩ∫«¡∏µ ≈¨∏Ø∑Œ±◊
+                    //ÎπÑÏ¶àÏä§ÌîÑÎßÅ ÌÅ¥Î¶≠Î°úÍ∑∏
                     function setClickLog(title) {
                         // eval("try{trk_clickTrace('EVT', '" + title + "')}catch(_e){}");
                     }
-
                 </script>
 
                 <div class="nav">
@@ -219,141 +196,141 @@
                         </h1>
                         <ul class="nav_menu">
                             <li>
-                                <h2><a href="./movies.jsp">øµ»≠</a></h2>
+                                <h2><a href="./movies.jsp">ÏòÅÌôî</a></h2>
                                 <dl class="nav_overMenu">
                                     <dt>
-                                        <h2><a href="./movies.jsp" tabindex="-1">øµ»≠</a></h2>
+                                        <h2><a href="./movies.jsp" tabindex="-1">ÏòÅÌôî</a></h2>
                                     </dt>
                                     <dd>
-                                        <h3><a href="./movies.jsp">π´∫Ò¬˜∆Æ</a></h3>
+                                        <h3><a href="./movies.jsp">Î¨¥ÎπÑÏ∞®Ìä∏</a></h3>
                                     </dd>
                                 </dl>
                             </li>
                             <li>
-                                <h2><a href="../theaters.jsp">±ÿ¿Â</a></h2>
+                                <h2><a href="../theaters.jsp">Í∑πÏû•</a></h2>
                                 <dl class="nav_overMenu">
                                     <dt>
-                                        <h2><a href="./theaters.jsp" tabindex="-1">±ÿ¿Â</a></h2>
+                                        <h2><a href="./theaters.jsp" tabindex="-1">Í∑πÏû•</a></h2>
                                     </dt>
                                     <dd>
-                                        <h3><a href="./theaters.jsp">CGV ±ÿ¿Â</a></h3>
+                                        <h3><a href="./theaters.jsp">CGV Í∑πÏû•</a></h3>
                                     </dd>
                                 </dl>
                             </li>
                             <li>
-                                <h2><a href="./ticket.jsp"><strong>øπ∏≈</strong></a></h2>
+                                <h2><a href="./ticket.jsp"><strong>ÏòàÎß§</strong></a></h2>
                                 <dl class="nav_overMenu">
                                     <dt>
-                                        <h2><a href="./ticket.jsp" tabindex="-1">øπ∏≈</a></h2>
+                                        <h2><a href="./ticket.jsp" tabindex="-1">ÏòàÎß§</a></h2>
                                     </dt>
                                     <dd>
-                                        <h3><a href="./ticket.jsp">∫¸∏•øπ∏≈</a></h3>
+                                        <h3><a href="./ticket.jsp">Îπ†Î•∏ÏòàÎß§</a></h3>
                                     </dd>
                                     <dd>
-                                        <h3><a href="./show-times.jsp">ªÛøµΩ∫ƒ…¡Ÿ</a></h3>
+                                        <h3><a href="./show-times.jsp">ÏÉÅÏòÅÏä§ÏºÄÏ§Ñ</a></h3>
                                     </dd>
                                 </dl>
                             </li>
                             <li>
-                                <h2><a href="./popcorn-store.jsp">Ω∫≈‰æÓ</a></h2>
+                                <h2><a href="./popcorn-store.jsp">Ïä§ÌÜ†Ïñ¥</a></h2>
                                 <dl class="nav_overMenu">
                                     <dt>
-                                        <h2><a href="./popcorn-store.jsp" tabindex="-1">Ω∫≈‰æÓ</a></h2>
+                                        <h2><a href="./popcorn-store.jsp" tabindex="-1">Ïä§ÌÜ†Ïñ¥</a></h2>
                                     </dt>
 
                                     <dd>
                                         <h3><a
-                                                href="./store-category.jsp?CategoryIdx=2">øµ»≠∞¸∂˜±«</a>
+                                                href="./store-category.jsp?CategoryIdx=2">ÏòÅÌôîÍ¥ÄÎûåÍ∂å</a>
                                         </h3>
                                     </dd>
 
                                     <dd>
                                         <h3><a
-                                                href="./store-category.jsp?CategoryIdx=3">±‚«¡∆Æƒ´µÂ</a>
+                                                href="./store-category.jsp?CategoryIdx=3">Í∏∞ÌîÑÌä∏Ïπ¥Îìú</a>
                                         </h3>
                                     </dd>
 
                                     <dd>
                                         <h3><a
-                                                href="./store-category.jsp?CategoryIdx=4">ƒﬁ∫∏</a>
+                                                href="./store-category.jsp?CategoryIdx=4">ÏΩ§Î≥¥</a>
                                         </h3>
                                     </dd>
 
                                     <dd>
                                         <h3><a
-                                                href="./store-category.jsp?CategoryIdx=5">∆Àƒ‹</a>
+                                                href="./store-category.jsp?CategoryIdx=5">ÌåùÏΩò</a>
                                         </h3>
                                     </dd>
 
                                     <dd>
                                         <h3><a
-                                                href="./store-category.jsp?CategoryIdx=6">¿Ω∑·</a>
+                                                href="./store-category.jsp?CategoryIdx=6">ÏùåÎ£å</a>
                                         </h3>
                                     </dd>
 
                                     <dd>
                                         <h3><a
-                                                href="./store-category.jsp?CategoryIdx=7">Ω∫≥º</a>
+                                                href="./store-category.jsp?CategoryIdx=7">Ïä§ÎÇµ</a>
                                         </h3>
                                     </dd>
 
                                     <dd>
                                         <h3><a
-                                                href="./store-category.jsp?CategoryIdx=8">«√∑π¿Ã¡∏</a>
+                                                href="./store-category.jsp?CategoryIdx=8">ÌîåÎ†àÏù¥Ï°¥</a>
                                         </h3>
                                     </dd>
 
                                     <dd>
-                                        <h3><a href="https://brand.naver.com/cgv" class="arrowR" target="_blank">ææ≥◊º•</a>
+                                        <h3><a href="https://brand.naver.com/cgv" class="arrowR" target="_blank">Ïî®ÎÑ§ÏÉµ</a>
                                         </h3>
                                     </dd>
                                 </dl>
                             </li>
                             <li>
-                                <h2><a href="./defaultNew.jsp">¿Ã∫•∆Æ</a></h2>
+                                <h2><a href="./defaultNew.jsp">Ïù¥Î≤§Ìä∏</a></h2>
                                 <dl class="nav_overMenu">
                                     <dt>
                                         <h2><a href="./defaultNew.jsp?mCode=001"
-                                                tabindex="-1">¿Ã∫•∆Æ</a></h2>
+                                                tabindex="-1">Ïù¥Î≤§Ìä∏</a></h2>
                                     </dt>
                                     <dd>
                                         <h3><a href="./defaultNew.jsp?mCode=001">SPECIAL</a></h3>
                                     </dd>
                                     <dd>
-                                        <h3><a href="./defaultNew.jsp?mCode=004">øµ»≠/øπ∏≈</a></h3>
+                                        <h3><a href="./defaultNew.jsp?mCode=004">ÏòÅÌôî/ÏòàÎß§</a></h3>
                                     </dd>
                                     <dd>
-                                        <h3><a href="./defaultNew.jsp?mCode=008">∏‚πˆΩ /CLUB</a></h3>
+                                        <h3><a href="./defaultNew.jsp?mCode=008">Î©§Î≤ÑÏã≠/CLUB</a></h3>
                                     </dd>
                                     <dd>
-                                        <h3><a href="./defaultNew.jsp?mCode=005">CGV ±ÿ¿Â∫∞</a></h3>
+                                        <h3><a href="./defaultNew.jsp?mCode=005">CGV Í∑πÏû•Î≥Ñ</a></h3>
                                     </dd>
                                     <dd>
-                                        <h3><a href="./defaultNew.jsp?mCode=006">¡¶»ﬁ«“¿Œ</a></h3>
+                                        <h3><a href="./defaultNew.jsp?mCode=006">Ï†úÌú¥Ìï†Ïù∏</a></h3>
                                     </dd>
                                     <dd>
-                                        <h3><a href="./result_list.jsp">¥Á√∑¿⁄ πﬂ«•</a></h3>
+                                        <h3><a href="./result_list.jsp">ÎãπÏ≤®Ïûê Î∞úÌëú</a></h3>
                                     </dd>
                                     <dd>
-                                        <h3><a href="./end-list.jsp">¡æ∑·µ» ¿Ã∫•∆Æ</a></h3>
+                                        <h3><a href="./end-list.jsp">Ï¢ÖÎ£åÎêú Ïù¥Î≤§Ìä∏</a></h3>
                                     </dd>
                                 </dl>
                             </li>
                             <li>
-                                <h2><a href="./discountlist.jsp">«˝≈√</a></h2>
+                                <h2><a href="./discountlist.jsp">ÌòúÌÉù</a></h2>
                                 <dl class="nav_overMenu">
                                     <dt>
-                                        <h2><a href="./discountlist.jsp" tabindex="-1">«˝≈√</a></h2>
+                                        <h2><a href="./discountlist.jsp" tabindex="-1">ÌòúÌÉù</a></h2>
                                     </dt>
                                     <dd>
-                                        <h3><a href="./discountlist.jsp">CGV «“¿Œ¡§∫∏</a></h3>
+                                        <h3><a href="./discountlist.jsp">CGV Ìï†Ïù∏Ï†ïÎ≥¥</a></h3>
                                     </dd>
                                     <dd>
                                         <h3><a href="./ClubService.jsp">CLUB
-                                                º≠∫ÒΩ∫</a></h3>
+                                                ÏÑúÎπÑÏä§</a></h3>
                                     </dd>
                                     <dd>
-                                        <h3><a href="./vip-lounge.jsp">VIP ∂ÛøÓ¡ˆ</a></h3>
+                                        <h3><a href="./vip-lounge.jsp">VIP ÎùºÏö¥ÏßÄ</a></h3>
                                     </dd>
                                 </dl>
                             </li>
@@ -363,7 +340,7 @@
                                 <input type="text" id="header_keyword" value="" />
                                 <input type="hidden" id="header_ad_keyword" name="header_ad_keyword" />
                             </label>
-                            <button type="button" class="btn_totalSearch" id="btn_header_search">∞Àªˆ</button>
+                            <button type="button" class="btn_totalSearch" id="btn_header_search">Í≤ÄÏÉâ</button>
                             <iframe src="//ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/main@Search_txt" width="0"
                                 height="0" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"
                                 allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen"
@@ -372,6 +349,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- º≠∫Í ∏ﬁ¥∫ -->
+                <!-- ÏÑúÎ∏å Î©îÎâ¥ -->
             </div>
             <!-- E Header -->

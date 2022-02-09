@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 <head>
@@ -12,10 +12,10 @@
     <meta http-equiv="Cache-Control" content="No-Cache" />
     <meta http-equiv="imagetoolbar" content="no" />
     <meta name="viewport" content="width=1024" />
-    <meta name="keywords" content="CGV, ½ÃÁöºêÀÌ, ¿µÈ­°ü, ±ØÀå, ¿µÈ­, Æ¼ÄÏ, ¹Ú½º¿ÀÇÇ½º, ±ØÀå, Movie, Theater, Cinema, Cgv, cgv, ¿¹¸Å, »ó¿µÀÛ" />
-    <meta name="description" content="CGV´Â ¼±ÁøÈ­µÈ °ü¶÷¹®È­¿Í ÃÖ°íÀÇ ¼­ºñ½º·Î °í°´¿¡°Ô ÀØÀ» ¼ö ¾ø´Â °¨µ¿À» ¼±»çÇÕ´Ï´Ù. CGVÈ¨ÆäÀÌÁö¸¦ ÅëÇØ ¿µÈ­ ¿¹¸Å»Ó¸¸ ¾Æ´Ï¶ó ±× ÀÌ»óÀÇ ¼­ºñ½º¿Í °¨µ¿À» Àü´ÞÇÏ°í, ´Ù¾çÇÑ Áñ°Å¿ò°ú Æ¯º°ÇÑ °æÇèÀ» Á¦°øÇÏ°íÀÚ ÇÕ´Ï´Ù." />
-    <meta property="og:site_name" content="¿µÈ­ ±× ÀÌ»óÀÇ °¨µ¿. CGV"/>
-    <meta id="ctl00_og_title" property="og:title" content="¿µÈ­ ±× ÀÌ»óÀÇ °¨µ¿. CGV"></meta>
+    <meta name="keywords" content="CGV, ì‹œì§€ë¸Œì´, ì˜í™”ê´€, ê·¹ìž¥, ì˜í™”, í‹°ì¼“, ë°•ìŠ¤ì˜¤í”¼ìŠ¤, ê·¹ìž¥, Movie, Theater, Cinema, Cgv, cgv, ì˜ˆë§¤, ìƒì˜ìž‘" />
+    <meta name="description" content="CGVëŠ” ì„ ì§„í™”ëœ ê´€ëžŒë¬¸í™”ì™€ ìµœê³ ì˜ ì„œë¹„ìŠ¤ë¡œ ê³ ê°ì—ê²Œ ìžŠì„ ìˆ˜ ì—†ëŠ” ê°ë™ì„ ì„ ì‚¬í•©ë‹ˆë‹¤. CGVí™ˆíŽ˜ì´ì§€ë¥¼ í†µí•´ ì˜í™” ì˜ˆë§¤ë¿ë§Œ ì•„ë‹ˆë¼ ê·¸ ì´ìƒì˜ ì„œë¹„ìŠ¤ì™€ ê°ë™ì„ ì „ë‹¬í•˜ê³ , ë‹¤ì–‘í•œ ì¦ê±°ì›€ê³¼ íŠ¹ë³„í•œ ê²½í—˜ì„ ì œê³µí•˜ê³ ìž í•©ë‹ˆë‹¤." />
+    <meta property="og:site_name" content="ì˜í™” ê·¸ ì´ìƒì˜ ê°ë™. CGV"/>
+    <meta id="ctl00_og_title" property="og:title" content="ì˜í™” ê·¸ ì´ìƒì˜ ê°ë™. CGV"></meta>
     
     
     <meta id="ctl00_og_image" property="og:image" content="https://img.cgv.co.kr/WebApp/images/common/logo_new_kakao_prevw.png"></meta>
@@ -59,260 +59,29 @@
     <script src="https://img.cgv.co.kr/R2014/js/icheck/icheck.min.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="https://img.cgv.co.kr/R2014/js/icheck/iCheck.css" />
 
-    <!-- 2020.05.07 °¨Á¤Áö¼ö/ÇÁ¸®¿¡±× ÇÁ·ÎÁ§Æ® Ãß°¡ -->
+    <!-- 2020.05.07 ê°ì •ì§€ìˆ˜/í”„ë¦¬ì—ê·¸ í”„ë¡œì íŠ¸ ì¶”ê°€ -->
     <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/preegg.css" />
 
-    <!-- °¢ÆäÀÌÁö Header Start--> 
+    <!-- ê°íŽ˜ì´ì§€ Header Start--> 
     
-    <!--/°¢ÆäÀÌÁö Header End--> 
+    <!--/ê°íŽ˜ì´ì§€ Header End--> 
   
 
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 </head>
 <body class="">
+<%@include file="header.jsp" %>
+
 <div></div>
 <div class="skipnaiv">
-	<a href="#contents" id="skipHeader">¸ÞÀÎ ÄÁÅÙÃ÷ ¹Ù·Î°¡±â</a>
+	<a href="#contents" id="skipHeader">ë©”ì¸ ì»¨í…ì¸  ë°”ë¡œê°€ê¸°</a>
 </div>
 <div id="cgvwrap">
    
-	
-      <!-- S Header
-        Description
-        - class 'nav' ¿¡ class 'active' Ãß°¡½Ã ¼­ºê¸Þ´º³ëÃâ
-        - class 'nav' ¿¡ class 'fixed' Ãß°¡½Ã »ó´Ü°íÁ¤µÇ¸ç ½ºÅ¸ÀÏ º¯°æµÊ
-     -->
-	<div class="header">			
-            <!-- ¼­ºñ½º ¸Þ´º --> 
-            
-<div class="header_content">
-    <div class="contents">
-        <h1><a href="/"><img src="https://img.cgv.co.kr/R2014/images/common/logo/logoRed.png" alt="CGV" /></a><span>CULTUREPLEX</span></h1>
-        <ul class="memberInfo_wrap">
-
-
-            
-            <li><a href="/user/login/?returnURL=http%3a%2f%2fwww.cgv.co.kr%2fmovies%2fdefault.aspx%3flt%3d1%26ft%3d0"><img src="https://img.cgv.co.kr/R2014/images/common/ico/loginPassword.png" alt="·Î±×ÀÎ" /><span>·Î±×ÀÎ</span></a></li>
-            <li><a href="/user/join/"><img src="https://img.cgv.co.kr/R2014/images/common/ico/loginJoin.png" alt="È¸¿ø°¡ÀÔ" /><span>È¸¿ø°¡ÀÔ</span></a></li>
-            
-            
-            <li><a href="/user/mycgv/"><img src="https://img.cgv.co.kr/R2014/images/common/ico/loginMember.png" alt="MY CGV" /><span>MY CGV</span></a></li>
-            <li><a href="/support/default.aspx"><img src="https://img.cgv.co.kr/R2014/images/common/ico/loginCustomer.png" alt="°í°´¼¾ÅÍ" /><span>°í°´¼¾ÅÍ</span></a></li>
-        </ul>
-    </div>
-</div>
-            <!-- ¼­ºñ½º ¸Þ´º -->
-           
-			<!-- ¼­ºê ¸Þ´º -->
-			
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.nav_menu > li > h2 > a').on({
-            mouseenter: function (e) {
-                var target = e.target;
-                $(target).parents('.nav_menu').find('.nav_overMenu').slideDown(function () {
-                    $('.nav').addClass('active');
-                });
-            },
-            click: function (e) {
-                var target = e.target;
-                if (!$('.nav').hasClass('active')) {
-                    $(this).trigger('mouseenter');
-                } else {
-                    $('.nav').trigger('mouseleave');
-                }
-            }
-        });
-
-        $('.nav').on({
-            mouseleave: function (e) {
-                $(this).find('.nav_overMenu').slideUp(200, function () {
-                    $('.nav').removeClass('active');
-                });
-            }
-        });
-
-        $('.totalSearch_wrap input[type=text]').on({
-            focusin: function () {
-                $('.totalSearch_wrap').addClass("active");
-            }
-        });
-
-        $('.btn_totalSearchAutocomplete_close').on({
-            click: function () {
-                $('.totalSearch_wrap').removeClass("active");
-            },
-            focusout: function (e) {
-                //     $('.totalSearch_wrap').removeClass("active");
-
-            }
-        });
-
-        $(this).on({
-            scroll: function (e) {
-                /* S GNB fixed */
-                var headerOffsetT = $('.header').offset().top;
-                var headerOuterH = $('.header').outerHeight(true);
-                var fixedHeaderPosY = headerOffsetT + headerOuterH;
-                var scrollT = $(this).scrollTop();
-                var scrollL = $(this).scrollLeft();
-
-                if (scrollT >= fixedHeaderPosY) {
-                    $('.nav').addClass('fixed');
-                    $('.fixedBtn_wrap').addClass('topBtn');
-                } else {
-                    $('.nav').removeClass('fixed');
-                    $('.fixedBtn_wrap').removeClass('topBtn');
-                }
-
-                /* S > GNB fixed ÁÂ¿ì ½ºÅ©·Ñ
-                Description
-                - GNB°¡ fixed µÇ¾úÀ»¶§ ÁÂ¿ì ½ºÅ©·Ñ µÇ°Ô Ã³¸®
-                */
-                if ($('.nav').hasClass('fixed')) {
-                    $('.nav').css({ 'left': -1 * scrollL })
-                } else {
-                    $('.nav').css({ 'left': 0 })
-                }
-                /* E > GNB fixed ÁÂ¿ì ½ºÅ©·Ñ */
-                /* S GNB fixed */
-            }
-        });
-
-        $('.btn_gotoTop').on({
-            click: function () {
-                $('html, body').stop().animate({
-                    scrollTop: '0'
-                }, 400);
-            }
-        });
-
-        //ÅëÇÕ°Ë»ö »ó´Ü °Ë»ö ¹öÆ°
-        $('#btn_header_search').on('click', function () {
-            if ($('#header_ad_keyword').val() != "")
-                goSearch($('#header_ad_keyword'));      //±¤°í
-            else
-                goSearch($('#header_keyword'));
-
-            return false;
-        });
-
-        //ÅëÇÕ°Ë»ö °Ë»ö¾î ÀÔ·ÂÃ¢
-        $('#header_keyword').keyup(function (e) {
-            if (e.keyCode == 13) goSearch($('#header_keyword'));
-        });
-
-    });
-
-
-
-
-</script>
-<div class="nav">
-    <div class="contents">
-        <h1><a href="/" tabindex="-1"><img src="https://img.cgv.co.kr/R2014/images/common/logo/logoWhite.png" alt="CGV" /></a></h1>
-        <ul class="nav_menu">
-            <li>
-                <h2><a href="movies.jsp">¿µÈ­</a></h2>
-                <dl class="nav_overMenu">
-                    <dt><h2><a href="movies.jsp" tabindex="-1">¿µÈ­</a></h2></dt>
-                    <dd><h3><a href="movies.jsp">¹«ºñÂ÷Æ®</a></h3></dd>
-                </dl>
-            </li>
-            <li>
-                <h2><a href="theaters.jsp">±ØÀå</a></h2>
-                <dl class="nav_overMenu">
-                    <dt><h2><a href="theaters.jsp" tabindex="-1">±ØÀå</a></h2></dt>
-                    <dd><h3><a href="theaters.jsp">CGV ±ØÀå</a></h3></dd>
-                </dl>
-            </li>
-            <li>
-                <h2><a href="ticket.jsp"><strong>¿¹¸Å</strong></a></h2>
-                <dl class="nav_overMenu">
-                    <dt><h2><a href="ticket.jsp" tabindex="-1">¿¹¸Å</a></h2></dt>
-                    <dd><h3><a href="ticket.jsp">ºü¸¥¿¹¸Å</a></h3></dd>
-                    <dd><h3><a href="/reserve/show-times/">»ó¿µ½ºÄÉÁÙ</a></h3></dd>
-                    <dd><h3><a href="/ticket/eng/newdefault.aspx">English Ticketing</a></h3></dd>
-                    <dd><h3><a href="/reserve/show-times/eng/">English Schedule</a></h3></dd>
-                </dl>
-            </li>
-            <li>
-                <h2><a href="popcorn-store.jsp">½ºÅä¾î</a></h2>
-                <dl class="nav_overMenu">
-                    <dt><h2><a href="popcorn-store.jsp" tabindex="-1">½ºÅä¾î</a></h2></dt>
-                    
-                            <dd><h3><a href="/culture-event/popcorn-store/store-category.aspx?CategoryIdx=2">¿µÈ­°ü¶÷±Ç</a></h3></dd>
-                        
-                            <dd><h3><a href="/culture-event/popcorn-store/store-category.aspx?CategoryIdx=3">±âÇÁÆ®Ä«µå</a></h3></dd>
-                        
-                            <dd><h3><a href="/culture-event/popcorn-store/store-category.aspx?CategoryIdx=4">ÄÞº¸</a></h3></dd>
-                        
-                            <dd><h3><a href="/culture-event/popcorn-store/store-category.aspx?CategoryIdx=5">ÆËÄÜ</a></h3></dd>
-                        
-                            <dd><h3><a href="/culture-event/popcorn-store/store-category.aspx?CategoryIdx=6">À½·á</a></h3></dd>
-                        
-                            <dd><h3><a href="/culture-event/popcorn-store/store-category.aspx?CategoryIdx=7">½º³¼</a></h3></dd>
-                        
-                            <dd><h3><a href="/culture-event/popcorn-store/store-category.aspx?CategoryIdx=10">ÇÃ·¹ÀÌÁ¸</a></h3></dd>
-                        
-                    <dd><h3><a href="https://brand.naver.com/cgv" class="arrowR" target="_blank">¾¾³×¼¥</a></h3></dd>
-                </dl>
-            </li>
-            <li>
-                <h2><a href="/culture-event/event/defaultNew.aspx">ÀÌº¥Æ®</a></h2>
-                <dl class="nav_overMenu">
-                    <dt><h2><a href="/culture-event/event/defaultNew.aspx?mCode=001" tabindex="-1">ÀÌº¥Æ®</a></h2></dt>
-                    <dd><h3><a href="/culture-event/event/defaultNew.aspx?mCode=001">SPECIAL</a></h3></dd>
-                    <dd><h3><a href="/culture-event/event/defaultNew.aspx?mCode=004">¿µÈ­/¿¹¸Å</a></h3></dd>
-                    <dd><h3><a href="/culture-event/event/defaultNew.aspx?mCode=008">¸â¹ö½Ê/CLUB</a></h3></dd>
-                    <dd><h3><a href="/culture-event/event/defaultNew.aspx?mCode=005">CGV ±ØÀåº°</a></h3></dd>
-                    <dd><h3><a href="/culture-event/event/defaultNew.aspx?mCode=006">Á¦ÈÞÇÒÀÎ</a></h3></dd>
-                    <dd><h3><a href="/user/mycgv/event/result_list.aspx">´çÃ·ÀÚ ¹ßÇ¥</a></h3></dd>
-                    <dd><h3><a href="/culture-event/event/end-list.aspx">Á¾·áµÈ ÀÌº¥Æ®</a></h3></dd>
-                </dl>
-            </li>
-            <li>
-                <h2><a href="/discount/discountlist.aspx">ÇýÅÃ</a></h2>
-                <dl class="nav_overMenu">
-                    <dt><h2><a href="/discount/discountlist.aspx" tabindex="-1">ÇýÅÃ</a></h2></dt>
-                    <dd><h3><a href="/discount/discountlist.aspx">CGV ÇÒÀÎÁ¤º¸</a></h3></dd>
-                    <dd><h3><a href="https://www.cgv.co.kr/user/memberShip/ClubService.aspx">CLUB ¼­ºñ½º</a></h3></dd>
-                    <dd><h3><a href="/user/vip-lounge/">VIP ¶ó¿îÁö</a></h3></dd>
-                </dl>
-            </li>
-        </ul>
-        <div class="totalSearch_wrap">
-            <label for="totalSearch">
-                <input type="text" id="header_keyword" value="" />
-                <input type="hidden" id="header_ad_keyword" name="header_ad_keyword" />
-            </label>
-            <button type="button" class="btn_totalSearch" id="btn_header_search">°Ë»ö</button>
-            <iframe src="//ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/main@Search_txt" width="0" height="0" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe>
-            <!--<div class="totalSearchAutocomplete_wrap">
-                <dl class="totalSearchAutocomplete_list">
-                    <dt>¿µÈ­</dt>
-                    <dd><a href="#none"><strong>ÀüÁö</strong>Àû ÀÛ°¡½ÃÁ¡</a></dd>
-                    <dd><a href="#none">³»¾ð´Ï <strong>ÀüÁö</strong>Çö°ú ³ª</a></dd>
-                    <dd><a href="#none">¼öÈ£<strong>ÀüÁö</strong> ¿µ¿õº»»ö</a></dd>
-                </dl>
-                <dl class="totalSearchAutocomplete_list">
-                    <dt>ÀÎ¹°</dt>
-                    <dd><a href="#none"><strong>ÀüÁö</strong>Çö</a></dd>
-                    <dd><a href="#none"><strong>ÀüÁö</strong>Èñ</a></dd>
-                    <dd><a href="#none">ÀÌ<strong>ÀüÁö</strong></a></dd>
-                </dl>
-                <a href="#none" class="btn_totalSearchAutocomplete_close">´Ý±â</a>
-            </div>//-->
-        </div>
-    </div>
-</div>
-            <!-- ¼­ºê ¸Þ´º -->			
-	</div>
-	<!-- E Header -->
 
 	<!-- Contaniner -->
-	<div id="contaniner"  class=""><!-- º®µ¹ ¹è°æÀÌ¹ÌÁö »ç¿ë ½Ã class="bg-bricks" Àû¿ë / ¹è°æÀÌ¹ÌÁö°¡ ¾øÀ» °æ¿ì class »èÁ¦  -->
+	<div id="contaniner"  class=""><!-- ë²½ëŒ ë°°ê²½ì´ë¯¸ì§€ ì‚¬ìš© ì‹œ class="bg-bricks" ì ìš© / ë°°ê²½ì´ë¯¸ì§€ê°€ ì—†ì„ ê²½ìš° class ì‚­ì œ  -->
         
 
 		<!-- Contents Area -->
@@ -323,17 +92,17 @@
 			
 
 
-<!-- ½ÇÄÁÅÙÃ÷ ½ÃÀÛ -->
+<!-- ì‹¤ì»¨í…ì¸  ì‹œìž‘ -->
     <div class="wrap-movie-chart">
         <!-- Heading Map Multi -->
         <div class="tit-heading-wrap">
-            <h3>¹«ºñÂ÷Æ®</h3>
+            <h3>ë¬´ë¹„ì°¨íŠ¸</h3>
            
             <div class="submenu">
                 <ul>
-                    <li class="on"><a href="movies.jsp" title="¼±ÅÃ">¹«ºñÂ÷Æ®</a></li>
-                    <li><a href="pre-movies.jsp">»ó¿µ¿¹Á¤ÀÛ</a></li>
-                    <!--<li><a href="/movies/?lt=3">CGV¾ÆÆ®ÇÏ¿ì½º</a></li>//-->
+                    <li class="on"><a href="movies.jsp" title="ì„ íƒ">ë¬´ë¹„ì°¨íŠ¸</a></li>
+                    <li><a href="pre-movies.jsp">ìƒì˜ì˜ˆì •ìž‘</a></li>
+                    <!--<li><a href="/movies/?lt=3">CGVì•„íŠ¸í•˜ìš°ìŠ¤</a></li>//-->
                 </ul>
             </div>
         </div>
@@ -342,15 +111,15 @@
         <div class="sect-sorting">
              <div class="nowshow">
                         <input type="checkbox" id="chk_nowshow" />
-            <!-- sorting ºÎºÐÀÔ´Ï´Ù. È­¸é ÀüÈ¯¾øÀÌ »ó¿µÀÛ¸¸ º¼ ¼ö ÀÖµµ·Ï ±¸ÇöÇÕ´Ï´Ù. -->
-                <label for="chk_nowshow">ÇöÀç »ó¿µÀÛ¸¸ º¸±â</label>                
+            <!-- sorting ë¶€ë¶„ìž…ë‹ˆë‹¤. í™”ë©´ ì „í™˜ì—†ì´ ìƒì˜ìž‘ë§Œ ë³¼ ìˆ˜ ìžˆë„ë¡ êµ¬í˜„í•©ë‹ˆë‹¤. -->
+                <label for="chk_nowshow">í˜„ìž¬ ìƒì˜ìž‘ë§Œ ë³´ê¸°</label>                
             </div>
-            <label for="order_type" class="hidden">Á¤·Ä</label>
-            <!--  sorting ºÎºÐÀÔ´Ï´Ù. È­¸é ÀüÈ¯¾øÀÌ µ¥ÀÌÅÍ¸¸ ¼ø¼­ º¯°æÇÏ¿© ³ª¿­ÇÏ´Â ±â´É ¿©±â¼­ ±¸ÇöÇÕ´Ï´Ù. -->
+            <label for="order_type" class="hidden">ì •ë ¬</label>
+            <!--  sorting ë¶€ë¶„ìž…ë‹ˆë‹¤. í™”ë©´ ì „í™˜ì—†ì´ ë°ì´í„°ë§Œ ìˆœì„œ ë³€ê²½í•˜ì—¬ ë‚˜ì—´í•˜ëŠ” ê¸°ëŠ¥ ì—¬ê¸°ì„œ êµ¬í˜„í•©ë‹ˆë‹¤. -->
             <select id="order_type" name="order-type">
-				<option title="ÇöÀç ¼±ÅÃµÊ" selected value="1">¿¹¸ÅÀ²¼ø</option>
-                <option value="2">ÆòÁ¡¼ø</option>
-                <option value="3">°ü¶÷°´¼ø</option>
+				<option title="í˜„ìž¬ ì„ íƒë¨" selected value="1">ì˜ˆë§¤ìœ¨ìˆœ</option>
+                <option value="2">í‰ì ìˆœ</option>
+                <option value="3">ê´€ëžŒê°ìˆœ</option>
             </select>
             <button type="button" class="round gray"><span>GO</span></button>
         </div>
@@ -358,17 +127,17 @@
         
         <div class="sect-movie-chart">
             <h4 class="hidden">
-                ¹«ºñÂ÷Æ® - ¿¹¸ÅÀ²¼ø
+                ë¬´ë¹„ì°¨íŠ¸ - ì˜ˆë§¤ìœ¨ìˆœ
             </h4>
             <ol>
-            <!-- cording start. ÀÌ ºÎºÐºÎÅÍ ¹Ýº¹¹®À¸·Î µ¥ÀÌÅÍ °¡Á®¿À´Â ºÎºÐÀÔ´Ï´Ù.  -->
+            <!-- cording start. ì´ ë¶€ë¶„ë¶€í„° ë°˜ë³µë¬¸ìœ¼ë¡œ ë°ì´í„° ê°€ì ¸ì˜¤ëŠ” ë¶€ë¶„ìž…ë‹ˆë‹¤.  -->
                 <li>
                     <div class="box-image" >
                         <strong class="rank">No.1</strong>	
                         <a href="/movies/detail-view/?midx=84945">
                             <span class="thumb-image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84945/84945_320.jpg" alt="µá Æ÷½ºÅÍ" onerror="errorImage(this)"/>
-                                <span class="ico-grade grade-12">12¼¼ ÀÌ»ó</span>
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84945/84945_320.jpg" alt="ë“„ í¬ìŠ¤í„°" onerror="errorImage(this)"/>
+                                <span class="ico-grade grade-12">12ì„¸ ì´ìƒ</span>
                             </span>
                             
                         </a>
@@ -377,23 +146,23 @@
                     
                     <div class="box-contents">
                         <a href="/movies/detail-view/?midx=84945">
-                            <strong class="title">µá</strong>
+                            <strong class="title">ë“„</strong>
                         </a>
 
                         <div class="score">
-                            <strong class="percent">¿¹¸ÅÀ²<span>18.7%</span></strong>
+                            <strong class="percent">ì˜ˆë§¤ìœ¨<span>18.7%</span></strong>
                           
                         </div>
 
                         <span class="txt-info">
                             <strong>
                                 2022.02.09 
-                                <span>Àç°³ºÀ</span>
+                                <span>ìž¬ê°œë´‰</span>
                                 <em class="dday">D-5</em>
                             </strong>
                         </span>
                         <span class="like"> 
-                            <a class="link-reservation" href="/ticket/?MOVIE_CD=20028891&MOVIE_CD_GROUP=20027588">¿¹¸Å</a>
+                            <a class="link-reservation" href="/ticket/?MOVIE_CD=20028891&MOVIE_CD_GROUP=20027588">ì˜ˆë§¤</a>
                         </span>
                     </div>    
                 </li>
@@ -419,87 +188,19 @@
 
     <!-- E Popup -->
     
-    <!-- S ¿¹¸ÅÇÏ±â ¹× TOP Fixed ¹öÆ° -->
+    <!-- S ì˜ˆë§¤í•˜ê¸° ë° TOP Fixed ë²„íŠ¼ -->
     <div class="fixedBtn_wrap">
      
-        <a href="ticket.jsp" class="btn_fixedTicketing">¿¹¸ÅÇÏ±â</a>
+        <a href="ticket.jsp" class="btn_fixedTicketing">ì˜ˆë§¤í•˜ê¸°</a>
         
-        <a href="#none" class="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="ÃÖ»ó´ÜÀ¸·Î ÀÌµ¿" /></a>
+        <a href="#none" class="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="ìµœìƒë‹¨ìœ¼ë¡œ ì´ë™" /></a>
     </div>
     
-    <!-- E ¿¹¸ÅÇÏ±â ¹× TOP Fixed ¹öÆ° -->
+    <!-- E ì˜ˆë§¤í•˜ê¸° ë° TOP Fixed ë²„íŠ¼ -->
 	
-    <!-- S Footer -->
-    <footer>
-		<!-- footer_area (s) -->
-		
-<ul class="policy_list">
-    <li><a href="http://corp.cgv.co.kr/company/" target="_blank">È¸»ç¼Ò°³</a></li>
-    <li><a href="http://corp.cgv.co.kr/company/ir/financial/financial_list.aspx" target="_blank">IR</a></li>
-    <li><a href="http://corp.cgv.co.kr/company/recruit/step/default.aspx" target="_blank">Ã¤¿ëÁ¤º¸</a></li>
-    <li><a href="http://corp.cgv.co.kr/company/advertize/ad_Default.aspx" target="_blank">±¤°í/Á¦ÈÞ/ÃâÁ¡¹®ÀÇ</a></li>
-    <li><a href="http://www.cgv.co.kr/rules/service.aspx">ÀÌ¿ë¾à°ü</a></li>
-    <li><a href="http://www.cgv.co.kr/rules/organized.aspx">Æí¼º±âÁØ</a></li>
-    <li><a href="http://www.cgv.co.kr/rules/privacy.aspx"><strong>°³ÀÎÁ¤º¸Ã³¸®¹æÄ§</strong></a></li>
-    <li><a href="http://www.cgv.co.kr/rules/disclaimer.aspx">¹ýÀû°íÁö</a></li>
-    <li><a href="http://www.cgv.co.kr/rules/emreject.aspx">ÀÌ¸ÞÀÏÁÖ¼Ò¹«´Ü¼öÁý°ÅºÎ</a></li>
-    <li><a href="http://corp.cgv.co.kr/company/ethicalManagement/ceoMessage.aspx" target="_blank">À±¸®°æ¿µ</a></li>
-    <li><a href="/company/cyberAudit.aspx" class="empha-red">»çÀÌ¹ö°¨»ç½Ç</a></li>
-</ul>
-<article class="company_info_wrap">
-    <section class="company_info">
-        <address>(04377)¼­¿ïÆ¯º°½Ã ¿ë»ê±¸ ÇÑ°­´ë·Î 23±æ 55, ¾ÆÀÌÆÄÅ©¸ô 6Ãþ(ÇÑ°­·Îµ¿)</address>
-        <dl class="company_info_list">
-            <dt>´ëÇ¥ÀÌ»ç</dt>
-            <dd>Çã¹ÎÈ¸</dd>
-            <dt>»ç¾÷ÀÚµî·Ï¹øÈ£</dt>
-            <dd>104-81-45690</dd>
-            <dt>Åë½ÅÆÇ¸Å¾÷½Å°í¹øÈ£</dt>
-            <dd>2017-¼­¿ï¿ë»ê-0662 <a href="#none" onclick="goFtc()" class="btn_goFtc">»ç¾÷ÀÚÁ¤º¸È®ÀÎ<a></a></a></dd>
-        </dl>
-        <dl class="company_info_list">
-            <dt>È£½ºÆÃ»ç¾÷ÀÚ</dt>
-            <dd>CJ¿Ã¸®ºê³×Æ®¿÷½º</dd>
-            <dt>°³ÀÎÁ¤º¸º¸È£ Ã¥ÀÓÀÚ</dt>
-            <dd>½ÉÁØ¹ü</dd>
-            <dt>´ëÇ¥ÀÌ¸ÞÀÏ</dt>
-            <dd>cjcgvmaster@cj.net</dd>
-            <dt>°í°´¼¾ÅÍ</dt>
-            <dd>1544-1122</dd>
-        </dl>
-        <p class="copyright">&copy; CJ CGV. All Rights Reserved</p>
-    </section>
-    <section class="familysite_wrap">
-        <label for="familysite">CJ±×·ì °è¿­»ç ¹Ù·Î°¡±â</label>
-        <select id="familysite">
-            <option value="" class="familysiteTitle">°è¿­»ç ¹Ù·Î°¡±â</option>
-            <optgroup label="CJ±×·ì">
-<option value="http://www.cj.net/">CJÁÖ½ÄÈ¸»ç</option>
-</optgroup><optgroup label="½ÄÇ° & ½ÄÇ°¼­ºñ½º">
-<option value="https://www.cj.co.kr/kr/index">CJÁ¦ÀÏÁ¦´ç</option>
-<option value="https://www.cjfoodville.co.kr/main.asp">CJÇªµåºô</option>
-<option value="http://www.cjfreshway.com/index.jsp">CJÇÁ·¹½Ã¿þÀÌ</option>
-</optgroup><optgroup label="»ý¸í°øÇÐ">
-<option value="https://www.cj.co.kr/kr/about/business/bio">CJÁ¦ÀÏÁ¦´ç BIO»ç¾÷ºÎ¹®</option>
-<option value="https://www.cj.co.kr/kr/about/business/bio">CJ Feed&Card</option>
-</optgroup><optgroup label="¹°·ù & ½ÅÀ¯Åë">
-<option value="https://www.cjlogistics.com/ko/main">CJ´ëÇÑÅë¿î</option>
-<option value="http://www.cjenc.co.kr/kr/Default.asp">CJ´ëÇÑÅë¿î °Ç¼³ºÎ¹®</option>
-<option value="https://www.oliveyoung.co.kr/store/company/brandStory.do">CJ¿Ã¸®ºê¿µ</option>
-<option value="https://www.cjolivenetworks.co.kr:449/">CJ¿Ã¸®ºê³×Æ®¿÷½º</option>
-<option value="https://www.cjoshopping.com:9002/index.asp">CJ ENM Ä¿¸Ó½ººÎ¹®</option>
-</optgroup><optgroup label="¿£ÅÍÅ×ÀÎ¸ÕÆ® & ¹Ìµð¾î">
-<option value="http://www.cjem.net/main/?locale=ko">CJ ENM ¿£ÅÍÅ×ÀÎ¸ÕÆ®ºÎ¹®</option>
-<option value="http://corp.cgv.co.kr/">CJ CGV</option>
-</optgroup>
+<%@include file="footer.jsp" %>
 
-        </select>
-        <a href="#none" class="btn_familysite" onclick="goFamilySite()">GO</a>
-    </section>
-</article>
 
-	</footer>
-	<!-- E Footer -->
 
 </div>
 
