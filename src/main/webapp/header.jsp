@@ -182,32 +182,6 @@
                         location = "/search/?query=" + escape($objKeyword.val());
                     }
 
-                    //검색 입력창 클릭 시 광고값 reset
-                    $('#header_keyword').on('click', function() {
-                        $(this).attr('placeholder', '');
-                        $('#header_ad_keyword').val('');
-                    });
-
-                    //상단 키워드 광고 (S)
-                    function AdSearchExt(txt, SearchText) {
-                        $('#header_keyword').attr('placeholder', txt);
-                        $('#header_ad_keyword').val(SearchText);
-                    }
-
-                    function hdIcoSet(left, sh) { }
-                    //상단 키워드 광고 (E)
-
-                    //상단광고닫기
-                    function hideCgvTopAd() {
-                        $(".cgv-ad-wrap").hide();
-                        $('#wrap_main_notice').parent('div').css('top', 280);
-                    }
-
-                    //비즈스프링 클릭로그
-                    function setClickLog(title) {
-                        // eval("try{trk_clickTrace('EVT', '" + title + "')}catch(_e){}");
-                    }
-
                 </script>
 
                 <div class="nav">
@@ -295,16 +269,6 @@
                                         </h3>
                                     </dd>
 
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=8">플레이존</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a href="https://brand.naver.com/cgv" class="arrowR" target="_blank">씨네샵</a>
-                                        </h3>
-                                    </dd>
                                 </dl>
                             </li>
                             <li>
