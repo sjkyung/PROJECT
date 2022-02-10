@@ -166,6 +166,12 @@
                         }
                         location = "/search/?query=" + escape($objKeyword.val());
                     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 19ee537e334ae10c1137f8d2ccfe966ebfd99ea5
                     //검색 입력창 클릭 시 광고값 reset
                     $('#header_keyword').on('click', function() {
                         $(this).attr('placeholder', '');
@@ -187,6 +193,10 @@
                     function setClickLog(title) {
                         // eval("try{trk_clickTrace('EVT', '" + title + "')}catch(_e){}");
                     }
+<<<<<<< HEAD
+=======
+>>>>>>> b2ffeb4bcb03c1afc68d220b6da445a400245b9d
+>>>>>>> 19ee537e334ae10c1137f8d2ccfe966ebfd99ea5
                 </script>
 
                 <div class="nav">
@@ -274,16 +284,6 @@
                                         </h3>
                                     </dd>
 
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=8">플레이존</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a href="https://brand.naver.com/cgv" class="arrowR" target="_blank">씨네샵</a>
-                                        </h3>
-                                    </dd>
                                 </dl>
                             </li>
                             <li>
