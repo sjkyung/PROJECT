@@ -754,7 +754,7 @@
                     </video>
                     
                         <strong id="ctl00_PlaceHolderContent_AD_MOVIE_NM" class="movieSelection_title">355</strong>
-                        <span id="ctl00_PlaceHolderContent_AD_DESCRIPTION_NM" class="movieSelection_txt"><엑스맨: 다크 피닉스> 감독<br><블랙 위도우><본 시리즈> 제작진</span>
+                        <span id="ctl00_PlaceHolderContent_AD_DESCRIPTION_NM" class="movieSelection_txt">&lt;엑스맨: 다크 피닉스&gt; 감독<br><블랙 위도우><본 시리즈> 제작진</span>
                         <div class="movieSelection_video_controller_wrap">
                             <a href="http://ad.cgv.co.kr/click/CGV/CGV_201401/main@MovieSelection2021?ads_id%3d46468%26creative_id%3d66075%26click_id%3d86377%26maid%3D%26event%3d" id="ctl00_PlaceHolderContent_AD_CLIP_DETAIL_URL" class="btn_movieSelection_detailView">상세보기</a>
                             

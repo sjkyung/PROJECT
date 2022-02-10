@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
-Built-By: 82107
+<<<<<<< HEAD
 Build-Jdk: 11.0.13
+=======
+Built-By: IT강남-E강의장
+Build-Jdk: 17.0.1
+>>>>>>> 19ee537e334ae10c1137f8d2ccfe966ebfd99ea5
 Created-By: Maven Integration for Eclipse
 

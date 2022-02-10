@@ -70,13 +70,13 @@
                             <li>
                                 <strong class='category_product_title'>
                                     영화관람권
-                                    <a href='./store-category.jsp?CategoryIdx=4'class='btn_category_product'>
+                                    <a href='./store-category.jsp'class='btn_category_product'>
                                         더보기</a>
                                 </strong>
 
                                 <ul class='category_product_inner_list'>
                                     <li class=' '>
-                                        <a href='./product-detail.jsp?GG_NO=100253' class='btn_category_product'>
+                                        <a href='./product-detail.jsp' class='btn_category_product'>
                                             <span class='best_product_img_wrap'>
                                                 <img src="
                                         http://img.cgv.co.kr/GiftStore/Product/Pc/List/16094706927780.jpg"
@@ -102,14 +102,14 @@
                             <li>
                                 <strong class='category_product_title'>
                                     기프트카드
-                                    <a href='./store-category.jsp?CategoryIdx=4'
+                                    <a href='./store-category.jsp'
                                         class='btn_category_product'>
                                         더보기
                                     </a>
                                 </strong>
                                 <ul class='category_product_inner_list'>
                                     <li class=' state_giftcard'>
-                                        <a href='./product-detail.jsp?GG_NO=100161'
+                                        <a href='./product-detail.jsp'
                                             class='btn_category_product'>
                                             <span class='best_product_img_wrap'>
                                                 <img src="http://img.cgv.co.kr/GiftStore/Product/Pc/List/15814124358590.jpg"
@@ -131,14 +131,14 @@
                             <li>
                                 <strong class='category_product_title'>
                                     콤보
-                                    <a href='./store-category.jsp?CategoryIdx=4'
+                                    <a href='./store-category.jsp'
                                         class='btn_category_product'>
                                         더보기
                                     </a>
                                 </strong>
                                 <ul class='category_product_inner_list'>
                                     <li class=' '>
-                                        <a href='./product-detail.jsp?GG_NO=100019'
+                                        <a href='./product-detail.jsp'
                                             class='btn_category_product'>
                                             <span class='best_product_img_wrap'>
                                                 <img src="http://img.cgv.co.kr/GiftStore/Product/Pc/List/15463252009160.jpg"
@@ -160,11 +160,11 @@
 
                             <li>
                                 <strong class='category_product_title'>팝콘<a
-                                        href='./store-category.jsp?CategoryIdx=4'
+                                        href='./store-category.jsp'
                                         class='btn_category_product'>더보기</a></strong>
                                 <ul class='category_product_inner_list'>
                                     <li class=' '>
-                                        <a href='./product-detail.jsp?GG_NO=100069'
+                                        <a href='./product-detail.jsp'
                                             class='btn_category_product'>
                                             <span class='best_product_img_wrap'>
                                                 <img src="http://img.cgv.co.kr/GiftStore/Product/Pc/List/15463244796940.jpg"
@@ -184,12 +184,12 @@
                             </li>
                             <li>
                                 <strong class='category_product_title'>음료
-                                    <a href='./store-category.jsp?CategoryIdx=4'
+                                    <a href='./store-category.jsp'
                                         class='btn_category_product'>더보기</a>
                                 </strong>
                                 <ul class='category_product_inner_list'>
                                     <li class=' '>
-                                        <a href='./product-detail.jsp?GG_NO=100083'
+                                        <a href='./product-detail.jsp'
                                             class='btn_category_product'>
                                             <span class='best_product_img_wrap'>
                                                 <img src="http://img.cgv.co.kr/GiftStore/Product/Pc/List/15464083668990.jpg"
@@ -210,12 +210,12 @@
 
                             <li>
                                 <strong class='category_product_title'>스낵
-                                    <a href='./store-category.jsp?CategoryIdx=4'
+                                    <a href='./store-category.jsp'
                                         class='btn_category_product'>더보기</a>
                                 </strong>
                                 <ul class='category_product_inner_list'>
                                     <li class=' '>
-                                        <a href='./product-detail.jsp?GG_NO=100017'
+                                        <a href='./product-detail.jsp'
                                             class='btn_category_product'>
                                             <span class='best_product_img_wrap'>
                                                 <img src="http://img.cgv.co.kr/GiftStore/Product/Pc/List/15459092398190.jpg"
