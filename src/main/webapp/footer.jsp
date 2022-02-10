@@ -2,7 +2,6 @@
                 <!-- S Footer -->
                 <footer>
                     <!-- footer_area (s) -->
-
                     <div id="BottomWrapper" class="sect-ad">
                         <iframe src="https://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@Bottom" width="100%"
                             height="240" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"
@@ -85,16 +84,6 @@
                             <a href="#none" class="btn_familysite" onclick="goFamilySite()">GO</a>
                         </section>
                     </article>
-
                     <!-- footer_area (e) -->
-
-                    <footer class="adFloat1" style="display:none">
-
-                        <iframe src='//ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@Popicon' width='154' height='182'
-                            frameborder='0' scrolling='no' topmargin='0' leftmargin='0' marginwidth='0' marginheight='0'
-                            allowTransparency="true" id="ad_float1"></iframe>
-            </div>
-            <script type="text/javascript">            OpenAD();</script>
-            <!-- //Float Ad -->
             </footer>
             <!-- E Footer -->
