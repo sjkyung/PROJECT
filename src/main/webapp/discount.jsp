@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -446,21 +448,7 @@
             </label>
             <button type="button" class="btn_totalSearch" id="btn_header_search">검색</button>
             <iframe src="//ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/main@Search_txt" width="0" height="0" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe>
-            <!--<div class="totalSearchAutocomplete_wrap">
-                <dl class="totalSearchAutocomplete_list">
-                    <dt>영화</dt>
-                    <dd><a href="#none"><strong>전지</strong>적 작가시점</a></dd>
-                    <dd><a href="#none">내언니 <strong>전지</strong>현과 나</a></dd>
-                    <dd><a href="#none">수호<strong>전지</strong> 영웅본색</a></dd>
-                </dl>
-                <dl class="totalSearchAutocomplete_list">
-                    <dt>인물</dt>
-                    <dd><a href="#none"><strong>전지</strong>현</a></dd>
-                    <dd><a href="#none"><strong>전지</strong>희</a></dd>
-                    <dd><a href="#none">이<strong>전지</strong></a></dd>
-                </dl>
-                <a href="#none" class="btn_totalSearchAutocomplete_close">닫기</a>
-            </div>//-->
+            
         </div>
     </div>
 </div>
@@ -585,6 +573,10 @@
                 
                 </div>
                 <ul class="cgvSaleTab_Contents">
+                    <li><a id="tile_0" href="/culture-event/event/detailViewUnited.aspx?seq=33682&amp;menu=006"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33682/16420334331800.jpg" alt="CGV X 우리카드
+                        PLCC 출시!" width="314" height="196"></div><strong class="cgvSaleTxt">CGV X 우리카드
+                        PLCC 출시!</strong><span class="cgvSalePeriod" "="">2021.12.21~2022.12.31</span></a>
+                    </li>
                 </ul>
                 <button type="button" class="btn-item-more" id="btnMoreData">
                     <strong>더보기</strong>
@@ -797,15 +789,7 @@
     <!-- E Contaniner -->
  
     
-    <!-- S 예매하기 및 TOP Fixed 버튼 -->
-    <div class="fixedBtn_wrap">
-     
-        <a href="/ticket/" class="btn_fixedTicketing">예매하기</a>
-        
-        <a href="#none" class="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="최상단으로 이동" /></a>
-    </div>
-    
-    <!-- E 예매하기 및 TOP Fixed 버튼 -->
+  
 	
     <!-- S Footer -->
     <footer>
