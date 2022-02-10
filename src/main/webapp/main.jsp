@@ -367,9 +367,6 @@
                 }
             }
         }
-
-        
-
         //]]>
     </script>
     
@@ -411,7 +408,7 @@
                             </li>
                             <li>
                                 <a href="./join.jsp">
-                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginJoin.png" alt="회원가입" />
+                                    <img src="./css/loginJoin.png" alt="회원가입" />
                                     <span>회원가입</span>
                                 </a>
                             </li>
@@ -419,13 +416,13 @@
 
                             <li>
                                 <a href="./mycgv.jsp">
-                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginMember.png" alt="MY CGV" />
+                                    <img src="./css/loginMember.png" alt="MY CGV" />
                                     <span>MY CGV</span></a>
                             </li>
 
                             <li>
                                 <a href="./support.jsp">
-                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginCustomer.png" alt="고객센터" />
+                                    <img src="./css/loginCustomer.png" alt="고객센터" />
                                     <span>고객센터</span></a>
                             </li>
                         </ul>
@@ -576,7 +573,7 @@
                 <div class="nav">
                     <div class="contents">
                         <h1><a href="/" tabindex="-1"><img
-                                    src="https://img.cgv.co.kr/R2014/images/common/logo/logoWhite.png" alt="CGV" /></a>
+                                    src="./css/logoWhite.png" alt="CGV" /></a>
                         </h1>
                         <ul class="nav_menu">
                             <li>
@@ -791,13 +788,13 @@
                                     <div class="img_wrap" data-scale="false">
                                         <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84945/84945_320.jpg" alt="듄" onerror="errorImage(this)">
                                         <div class="movieAgeLimit_wrap">
-                                            <img src="https://img.cgv.co.kr/R2014/images/common/flag/age/grade-12.png" alt="12세 이상세">
+                                            <img src="./css/grade-12.png" alt="12세 이상세">
                                             <div class='dDay_wrap'><span>5</span></div>
                                         
                                         </div>
                                         <div class="screenType_wrap">
                                             
-                                            <i class="screenType"><img src="https://img.cgv.co.kr/R2014/images/common/logo/imax_white.png" alt="imax"></i>
+                                            <i class="screenType"><img src="./css/imax_white.png" alt="imax"></i>
                                             
                                         </div>
                                         <div class="movieChart_btn_wrap">
@@ -810,7 +807,7 @@
                                     </div>
                                     <div class="movie_info_wrap">
                                         <strong class="movieName">듄</strong>
-                                        <span> <img src='https://img.cgv.co.kr/R2014/images/common/egg/eggGoldenegggreat.png' alt='Golden Egg great'> 92%</span>
+                                        <span> <img src='./css/eggGoldenegggreat.png' alt='Golden Egg great'> 92%</span>
                                         <span>예매율 19.9%</span>
                                     </div>
                                 </div>
@@ -2363,19 +2360,19 @@
 
     <!-- S 예매하기 및 TOP Fixed 버튼 -->
     <div class="fixedBtn_wrap">
+    	<a href="#none" class="btn_gotoTop"><img src="./css/gotoTop.png" alt="최상단으로 이동" /></a>
      	<div class="btn_fixedTicketing">
-	        <p><a href=""/ticket/"><img src="./css/ticket.png" alt="예매"/></a></p>
-	        <p><a href="/ticket/">예매하기</a></p>
-	        <p><a href=""/theaters/"><img src="./css/calender.png" alt="예매"/></a></p>
-	        <p><a href="/teaters/">상영시간표</a></p>
-	        <p><a href=""//"><img src="./css/popcorn.png" alt="예매"/></a></p>
-	        <p><a href="/popcorn-store/">바로팝콘</a></p>
-	        <p><a href=""/ticket/"><img src="./css/coin.png" alt="예매"/></a></p>
-	        <p><a href="/point/">포인트적립</a></p>
-	        <p><a href=""/ticket/"><img src="./css/help.png" alt="예매"/></a></p>
-	        <p><a href="/support/">고객센터</a></p>
+	        <p><a href="#"><img src="./css/ticket.png" alt="예매"/></a></p>
+	        <p><a href="#">예매하기</a></p>
+	        <p><a href="#"><img src="./css/calender.png" alt="상영시간표"/></a></p>
+	        <p><a href="#">상영시간표</a></p>
+	        <p><a href="#"><img src="./css/popcorn.png" alt="바로팝콘"/></a></p>
+	        <p><a href="#">바로팝콘</a></p>
+	        <p><a href="#"><img src="./css/coin.png" alt="포인트"/></a></p>
+	        <p><a href="#">포인트적립</a></p>
+	        <p><a href="#"><img src="./css/help.png" alt="고객센터"/></a></p>
+	        <p><a href="#">고객센터</a></p>
         </div>
-        <a href="#none" class="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="최상단으로 이동" /></a>
     </div>
 
     <!-- E 예매하기 및 TOP Fixed 버튼 -->

@@ -174,7 +174,7 @@
 </head>
 
 <body class="">
-<%@ include file="/include/header.jsp" %>
+<%@ include file="./header.jsp" %>
     <!-- Contaniner -->
     <div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
 
@@ -669,7 +669,7 @@
 
     <!-- E 예매하기 및 TOP Fixed 버튼 -->
 
-<%@ include file="/include/footer.jsp" %>
+<%@ include file="./footer.jsp" %>
 
     <!-- Aside Banner :  -->
     <!--
