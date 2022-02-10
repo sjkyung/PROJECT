@@ -147,11 +147,7 @@
 
                             <div class="score">
                                 <strong class="percent">예매율<span>2.7%</span></strong>
-                                <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 -->
-                                <div class="egg-gage small">
-                                            <span class="sprite_preegg default"></span>
-                                            <span class="percent">99%</span>
-                                        </div>
+
                             </div>
 
                             <span class="txt-info">
