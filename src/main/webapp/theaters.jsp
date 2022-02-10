@@ -67,8 +67,8 @@
         <div class="sect-favorite">
             <h4><img src="https://img.cgv.co.kr/R2014/images/title/h4_favorite_cgv.png" alt="자주가는 CGV"></h4>
             <ul id="favoriteTheaters">
-  
-                    <li><a href="#" data-regioncode="" data-theatercode="" data-selecteddate="20220209"><span>1<em>순위</em></span></a></li>
+            <!-- 여기는 로그인시 본인이 등록한 자주가는 영화관을 a태그에 넣어줍니다. -->
+                    <li><a href="#" data-regioncode="" data-theatercode="" data-selecteddate="20220209"><span>1<em>순위</em></span>여기임</a></li>
                 
                     <li><a href="#" data-regioncode="" data-theatercode="" data-selecteddate="20220209"><span>2<em>순위</em></span></a></li>
                 
@@ -85,6 +85,7 @@
         <!--  coding start. 등록한 영화관을 여기서 반복으로 보여줍니다. -->
         <div class="sect-city"><ul><li class="on"><a href="#">서울</a><div class="area"><ul><li class="on"><a title="CGV강남" href="/theaters/?areacode=01&amp;theaterCode=0056&amp;date=20220209">CGV강남</a></li></ul></div></li></ul></div></div>
 </div>
+
 <!-- 실컨텐츠 시작, 여기서부터 상단 영화관에 맞춰 화면 이동없이 정보를 변경합니다. -->
 <div class="wrap-theater">
     <h3><img src="https://img.cgv.co.kr/R2014/images/title/h3_theater.gif" alt="THEATER"></h3>
@@ -98,7 +99,7 @@
             </div>
             <div class="box-contents">
                 <div class="theater-info">
-                    <strong class="title">서울특별시 강남구 역삼동 814-6 스타플렉스<br>서울특별시 강남구 강남대로 438  (역삼동)<a href="./?page=location&amp;theaterCode=0056#menu">위치/주차 안내  &gt;</a></strong>
+                    <strong class="title">서울특별시 강남구 역삼동 814-6 스타플렉스<br>서울특별시 강남구 강남대로 438  (역삼동)<a href="#">위치/주차 안내  &gt;</a></strong>
                     <span class="txt-info">
                         <em>1544-1122</em>
                         <em>6관 / 874석</em>
@@ -127,8 +128,8 @@
 
     
     <ul class="tab-menu" id="menu">
-        <li class="on"><a href="./?areacode=01&amp;theaterCode=0056&amp;date=20220209#menu" title="현재 선택됨">상영시간표</a></li>
-        <li class="last"><a href="./?page=location&amp;theaterCode=0056#menu">위치/주차안내</a></li>
+        <li class="on"><a href="#" title="현재 선택됨">상영시간표</a></li>
+        <li class="last"><a href="#">위치/주차안내</a></li>
         <!--<li class='last'><a href="./?page=price&theaterCode=0056#menu" >관람료안내</a></li>-->
     </ul>
     <div class="cols-content">
@@ -137,7 +138,7 @@
 <div class="col-detail"> 
 <div class="descri-info theater" style="display: block;">
     <ul>
-        <li><a id="li_view_price_btn" class="priceinfo" style="cursor:pointer;" onclick="javascript:fnPricePage();" title="새창">관람가격 안내</a></li>
+        <li><a id="li_view_price_btn" class="priceinfo" style="cursor:pointer;" onclick="location.href='theaterPrice.jsp'" title="새창">관람가격 안내</a></li>
         <li><a href="#" id="viewgrade" class="viewgrade" target="_blank" title="새창">관람등급 안내</a></li>
     </ul>
 </div>
