@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="skipnaiv">
             <a href="#contents" id="skipHeader">메인 컨텐츠 바로가기</a>
         </div>
@@ -90,7 +89,6 @@
                                 }
                             }
                         });
-
                         $('.nav').on({
                             mouseleave: function(e) {
                                 $(this).find('.nav_overMenu').slideUp(200, function() {
@@ -98,23 +96,19 @@
                                 });
                             }
                         });
-
                         $('.totalSearch_wrap input[type=text]').on({
                             focusin: function() {
                                 $('.totalSearch_wrap').addClass("active");
                             }
                         });
-
                         $('.btn_totalSearchAutocomplete_close').on({
                             click: function() {
                                 $('.totalSearch_wrap').removeClass("active");
                             },
                             focusout: function(e) {
                                 //     $('.totalSearch_wrap').removeClass("active");
-
                             }
                         });
-
                         $(this).on({
                             scroll: function(e) {
                                 /* S GNB fixed */
@@ -123,7 +117,6 @@
                                 var fixedHeaderPosY = headerOffsetT + headerOuterH;
                                 var scrollT = $(this).scrollTop();
                                 var scrollL = $(this).scrollLeft();
-
                                 if (scrollT >= fixedHeaderPosY) {
                                     $('.nav').addClass('fixed');
                                     $('.fixedBtn_wrap').addClass('topBtn');
@@ -131,7 +124,6 @@
                                     $('.nav').removeClass('fixed');
                                     $('.fixedBtn_wrap').removeClass('topBtn');
                                 }
-
                                 /* S > GNB fixed 좌우 스크롤
                                 Description
                                 - GNB가 fixed 되었을때 좌우 스크롤 되게 처리
@@ -145,7 +137,6 @@
                                 /* S GNB fixed */
                             }
                         });
-
                         $('.btn_gotoTop').on({
                             click: function() {
                                 $('html, body').stop().animate({
@@ -153,62 +144,59 @@
                                 }, 400);
                             }
                         });
-
                         //통합검색 상단 검색 버튼
                         $('#btn_header_search').on('click', function() {
                             if ($('#header_ad_keyword').val() != "")
                                 goSearch($('#header_ad_keyword'));      //광고
                             else
                                 goSearch($('#header_keyword'));
-
                             return false;
                         });
-
                         //통합검색 검색어 입력창
                         $('#header_keyword').keyup(function(e) {
                             if (e.keyCode == 13) goSearch($('#header_keyword'));
                         });
-
                     });
-
                     //통합검색
                     function goSearch($objKeyword) {
-
                         if ($objKeyword.val() == "") {
                             alert("검색어를 입력해 주세요");
                             $objKeyword.focus();
                             return false;
                         }
-
                         location = "/search/?query=" + escape($objKeyword.val());
                     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+=======
+>>>>>>> 19ee537e334ae10c1137f8d2ccfe966ebfd99ea5
                     //검색 입력창 클릭 시 광고값 reset
                     $('#header_keyword').on('click', function() {
                         $(this).attr('placeholder', '');
                         $('#header_ad_keyword').val('');
                     });
-
                     //상단 키워드 광고 (S)
                     function AdSearchExt(txt, SearchText) {
                         $('#header_keyword').attr('placeholder', txt);
                         $('#header_ad_keyword').val(SearchText);
                     }
-
                     function hdIcoSet(left, sh) { }
                     //상단 키워드 광고 (E)
-
                     //상단광고닫기
                     function hideCgvTopAd() {
                         $(".cgv-ad-wrap").hide();
                         $('#wrap_main_notice').parent('div').css('top', 280);
                     }
-
                     //비즈스프링 클릭로그
                     function setClickLog(title) {
                         // eval("try{trk_clickTrace('EVT', '" + title + "')}catch(_e){}");
                     }
-
+<<<<<<< HEAD
+=======
+>>>>>>> b2ffeb4bcb03c1afc68d220b6da445a400245b9d
+>>>>>>> 19ee537e334ae10c1137f8d2ccfe966ebfd99ea5
                 </script>
 
                 <div class="nav">
@@ -229,7 +217,7 @@
                                 </dl>
                             </li>
                             <li>
-                                <h2><a href="../theaters.jsp">극장</a></h2>
+                                <h2><a href="./theaters.jsp">극장</a></h2>
                                 <dl class="nav_overMenu">
                                     <dt>
                                         <h2><a href="./theaters.jsp" tabindex="-1">극장</a></h2>
@@ -296,16 +284,6 @@
                                         </h3>
                                     </dd>
 
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=8">플레이존</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a href="https://brand.naver.com/cgv" class="arrowR" target="_blank">씨네샵</a>
-                                        </h3>
-                                    </dd>
                                 </dl>
                             </li>
                             <li>
