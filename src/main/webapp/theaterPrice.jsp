@@ -70,21 +70,19 @@
                 <a id="a_right_smenu_reg" href="javascript:fnSetMenuToggle('R','reg')" class="on">
                     지역별
                 </a>
-                 · 
-                <a id="a_right_smenu_spe" href="javascript:fnSetMenuToggle('S','spe')">
-                    특별관
-                </a>
             </div>
         </div>
 
         <div class="movie_price">
             <div class="area_select">
                 <select id="selTH_Region" class="area_sel1" name="selTH_Region" title="지역선택" onchange="fnTheaterRegionSel(this.value);">
-                    <option value="01" selected="">서울</option> <option value="02">경기</option> <option value="202">인천</option> <option value="05">부산</option> <option value="207">울산</option> <option value="11">대구</option> <option value="03">대전</option> <option value="206">광주</option> <option value="12">강원</option> <option value="204">경상</option> <option value="04">전라</option> <option value="205">충청</option> <option value="06">제주</option> 
-                </select>
+                    <option value="01" selected="">서울</option> 
+                   </select>
+                   
+                   <!-- 이부분에서 등록한 상영관을 반복문으로 띄워줍니다. -->
                 <select id="selTH_Theater" class="area_sel2" name="selTH_Theater" title="영화관선택" onchange="fnTheaterSel(this.value);">
-                    <option value="0056" selected="">CGV강남</option> <option value="0001">CGV강변</option> <option value="0229">CGV건대입구</option> <option value="0010">CGV구로</option> <option value="0063">CGV대학로</option> <option value="0252">CGV동대문</option> <option value="0230">CGV등촌</option> <option value="0009">CGV명동</option> <option value="0105">CGV명동역 씨네라이브러리</option> <option value="0011">CGV목동</option> <option value="0057">CGV미아</option> <option value="0030">CGV불광</option> <option value="0046">CGV상봉</option> <option value="0300">CGV성신여대입구</option> <option value="0088">CGV송파</option> <option value="0276">CGV수유</option> <option value="0150">CGV신촌아트레온</option> <option value="0040">CGV압구정</option> <option value="0112">CGV여의도</option> <option value="0292">CGV연남</option> <option value="0059">CGV영등포</option> <option value="0074">CGV왕십리</option> <option value="0013">CGV용산아이파크몰</option> <option value="0131">CGV중계</option> <option value="0199">CGV천호</option> <option value="0107">CGV청담씨네시티</option> <option value="0223">CGV피카디리1958</option> <option value="0164">CGV하계</option> <option value="0191">CGV홍대</option> 
-                </select>
+                    <option value="0056" selected="">CGV강남</option> 
+                   </select>
             </div>
             <div class="mp_content">
                 <div class="mp_section">
@@ -94,40 +92,15 @@
                     
                     
 <div id="div_TheaterPrice_box">
+<!-- 입력한 금액이 해당 상영관에 맞춰서 띄워지는 부분입니다. -->
     <div class="mp_tablebox" id="div_theatercode_0056"><div class="mp_table_item"><div class="mp_tit cls_price_class">일반(2D)</div><div class="mp_table cls_price_class">
                             <table summary="일반(2D) 관람가격 정보 입니다."><caption>일반(2D) 관람가격 정보</caption>
                             <colgroup><col style="width:15%"><col style="width:49%"><col style="width:18%"><col style="width:18%"></colgroup>
                             <thead><tr><th scope="row">요일</th><th scope="row">시간대</th><th scope="row">일반</th><th scope="row">청소년</th></tr></thead>
-                            <tbody><tr class="fir"><td rowspan="3">월~목</td><td class="tal">모닝( 06:00~ )</td><td>9,000</td><td>7,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>12,000</td><td>9,000</td></tr><tr class="last"><td class="tal">일반( 13:01~ )</td><td>13,000</td><td>10,000</td></tr><tr class="fir"><td rowspan="3">금~일</td><td class="tal">모닝( 06:00~ )</td><td>10,000</td><td>7,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>14,000</td><td>11,000</td></tr><tr><td class="tal">일반( 13:01~ )</td><td>14,000</td><td>11,000</td></tr></tbody></table></div></div><div class="mp_table_item"><div class="mp_tit cls_price_class">일반(3D)</div><div class="mp_table cls_price_class">
-                            <table summary="일반(3D) 관람가격 정보 입니다."><caption>일반(3D) 관람가격 정보</caption>
-                            <colgroup><col style="width:15%"><col style="width:49%"><col style="width:18%"><col style="width:18%"></colgroup>
-                            <thead><tr><th scope="row">요일</th><th scope="row">시간대</th><th scope="row">일반</th><th scope="row">청소년</th></tr></thead>
-                            <tbody><tr class="fir"><td rowspan="3">월~목</td><td class="tal">모닝( 06:00~ )</td><td>10,000</td><td>9,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>12,000</td><td>11,000</td></tr><tr class="last"><td class="tal">일반( 13:01~ )</td><td>14,000</td><td>11,000</td></tr><tr class="fir"><td rowspan="3">금~일</td><td class="tal">모닝( 06:00~ )</td><td>11,000</td><td>10,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>15,000</td><td>12,000</td></tr><tr><td class="tal">일반( 13:01~ )</td><td>15,000</td><td>12,000</td></tr></tbody></table></div></div><div class="mp_table_item"><div class="mp_tit cls_price_class cls_price_class_SCREENX(2D)">SCREENX(2D)</div><div class="mp_table cls_price_class cls_price_class_SCREENX(2D)">
-                            <table summary="SCREENX(2D) 관람가격 정보 입니다."><caption>SCREENX(2D) 관람가격 정보</caption>
-                            <colgroup><col style="width:15%"><col style="width:49%"><col style="width:18%"><col style="width:18%"></colgroup>
-                            <thead><tr><th scope="row">요일</th><th scope="row">시간대</th><th scope="row">일반</th><th scope="row">청소년</th></tr></thead>
-                            <tbody><tr class="fir"><td rowspan="3">월~목</td><td class="tal">모닝( 06:00~ )</td><td>10,000</td><td>9,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>13,000</td><td>11,000</td></tr><tr class="last"><td class="tal">일반( 13:01~ )</td><td>14,000</td><td>11,000</td></tr><tr class="fir"><td rowspan="3">금~일</td><td class="tal">모닝( 06:00~ )</td><td>10,000</td><td>9,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>15,000</td><td>11,000</td></tr><tr><td class="tal">일반( 13:01~ )</td><td>15,000</td><td>11,000</td></tr></tbody></table></div></div><div class="mp_table_item"><div class="mp_tit cls_price_class cls_price_class_SCREENX(2D)-SWEETBOX">SCREENX(2D)-SWEETBOX</div><div class="mp_table cls_price_class cls_price_class_SCREENX(2D)-SWEETBOX">
-                            <table summary="SCREENX(2D)-SWEETBOX 관람가격 정보 입니다."><caption>SCREENX(2D)-SWEETBOX 관람가격 정보</caption>
-                            <colgroup><col style="width:15%"><col style="width:49%"><col style="width:18%"><col style="width:18%"></colgroup>
-                            <thead><tr><th scope="row">요일</th><th scope="row">시간대</th><th scope="row">일반</th><th scope="row">청소년</th></tr></thead>
-                            <tbody><tr class="fir"><td rowspan="3">월~목</td><td class="tal">모닝( 06:00~ )</td><td>13,000</td><td>13,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>14,000</td><td>13,000</td></tr><tr class="last"><td class="tal">일반( 13:01~ )</td><td>15,000</td><td>13,000</td></tr><tr class="fir"><td rowspan="3">금~일</td><td class="tal">모닝( 06:00~ )</td><td>15,000</td><td>15,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>18,000</td><td>15,000</td></tr><tr><td class="tal">일반( 13:01~ )</td><td>18,000</td><td>15,000</td></tr></tbody></table></div></div><div class="mp_table_item"><div class="mp_tit cls_price_class cls_price_class_SWEETBOX(2D)">SWEETBOX(2D)</div><div class="mp_table cls_price_class cls_price_class_SWEETBOX(2D)">
-                            <table summary="SWEETBOX(2D) 관람가격 정보 입니다."><caption>SWEETBOX(2D) 관람가격 정보</caption>
-                            <colgroup><col style="width:15%"><col style="width:49%"><col style="width:18%"><col style="width:18%"></colgroup>
-                            <thead><tr><th scope="row">요일</th><th scope="row">시간대</th><th scope="row">일반</th><th scope="row">청소년</th></tr></thead>
-                            <tbody><tr class="fir"><td rowspan="3">월~목</td><td class="tal">모닝( 06:00~ )</td><td>11,000</td><td>11,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>12,000</td><td>11,000</td></tr><tr class="last"><td class="tal">일반( 13:01~ )</td><td>14,000</td><td>11,000</td></tr><tr class="fir"><td rowspan="3">금~일</td><td class="tal">모닝( 06:00~ )</td><td>13,000</td><td>13,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>16,000</td><td>13,000</td></tr><tr><td class="tal">일반( 13:01~ )</td><td>16,000</td><td>13,000</td></tr></tbody></table></div></div><div class="mp_table_item"><div class="mp_tit cls_price_class cls_price_class_SWEETBOX(3D)">SWEETBOX(3D)</div><div class="mp_table cls_price_class cls_price_class_SWEETBOX(3D)">
-                            <table summary="SWEETBOX(3D) 관람가격 정보 입니다."><caption>SWEETBOX(3D) 관람가격 정보</caption>
-                            <colgroup><col style="width:15%"><col style="width:49%"><col style="width:18%"><col style="width:18%"></colgroup>
-                            <thead><tr><th scope="row">요일</th><th scope="row">시간대</th><th scope="row">일반</th><th scope="row">청소년</th></tr></thead>
-                            <tbody><tr class="fir"><td rowspan="3">월~목</td><td class="tal">모닝( 06:00~ )</td><td>11,000</td><td>11,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>14,000</td><td>11,000</td></tr><tr class="last"><td class="tal">일반( 13:01~ )</td><td>15,000</td><td>12,000</td></tr><tr class="fir"><td rowspan="3">금~일</td><td class="tal">모닝( 06:00~ )</td><td>13,000</td><td>13,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>18,000</td><td>14,000</td></tr><tr><td class="tal">일반( 13:01~ )</td><td>18,000</td><td>14,000</td></tr></tbody></table></div></div><div class="mp_table_item"><div class="mp_tit cls_price_class cls_price_class_CGV별★관(2D)">CGV별★관(2D)</div><div class="mp_table cls_price_class cls_price_class_CGV별★관(2D)">
-                            <table summary="CGV별★관(2D) 관람가격 정보 입니다."><caption>CGV별★관(2D) 관람가격 정보</caption>
-                            <colgroup><col style="width:15%"><col style="width:49%"><col style="width:18%"><col style="width:18%"></colgroup>
-                            <thead><tr><th scope="row">요일</th><th scope="row">시간대</th><th scope="row">일반</th><th scope="row">청소년</th></tr></thead>
-                            <tbody><tr class="fir"><td rowspan="3">월~목</td><td class="tal">모닝( 06:00~ )</td><td>7,000</td><td>7,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>7,000</td><td>7,000</td></tr><tr class="last"><td class="tal">일반( 13:01~ )</td><td>7,000</td><td>7,000</td></tr><tr class="fir"><td rowspan="3">금~일</td><td class="tal">모닝( 06:00~ )</td><td>7,000</td><td>7,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>7,000</td><td>7,000</td></tr><tr><td class="tal">일반( 13:01~ )</td><td>7,000</td><td>7,000</td></tr></tbody></table></div></div><div class="mp_table_item"><div class="mp_tit cls_price_class cls_price_class_CGV X CAR CINEMA(서울랜드)">CGV X CAR CINEMA(서울랜드)</div><div class="mp_table cls_price_class cls_price_class_CGV X CAR CINEMA(서울랜드)">
-                            <table summary="CGV X CAR CINEMA(서울랜드) 관람가격 정보 입니다."><caption>CGV X CAR CINEMA(서울랜드) 관람가격 정보</caption>
-                            <colgroup><col style="width:15%"><col style="width:49%"><col style="width:18%"><col style="width:18%"></colgroup>
-                            <thead><tr><th scope="row">요일</th><th scope="row">시간대</th><th scope="row">일반</th><th scope="row">청소년</th></tr></thead>
-                            <tbody><tr class="fir"><td rowspan="3">월~목</td><td class="tal">모닝( 06:00~ )</td><td>22,000</td><td>-</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>22,000</td><td>-</td></tr><tr class="last"><td class="tal">일반( 13:01~ )</td><td>22,000</td><td>-</td></tr><tr class="fir"><td rowspan="3">금~일</td><td class="tal">모닝( 06:00~ )</td><td>22,000</td><td>-</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>22,000</td><td>-</td></tr><tr><td class="tal">일반( 13:01~ )</td><td>22,000</td><td>-</td></tr></tbody></table></div></div></div>
-
+                            <tbody><tr class="fir"><td rowspan="3">월~목</td><td class="tal">모닝( 06:00~ )</td><td>9,000</td><td>7,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>12,000</td><td>9,000</td></tr><tr class="last"><td class="tal">일반( 13:01~ )</td><td>13,000</td><td>10,000</td></tr><tr class="fir"><td rowspan="3">금~일</td><td class="tal">모닝( 06:00~ )</td><td>10,000</td><td>7,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>14,000</td><td>11,000</td></tr><tr><td class="tal">일반( 13:01~ )</td><td>14,000</td><td>11,000</td></tr></tbody></table></div></div><div class="mp_table_item"><div class="mp_table cls_price_class">
+            </div>
+            </div>
+                            
 </div>
 
                     <!-- // 지역별 극장별 변경 영역 -->
