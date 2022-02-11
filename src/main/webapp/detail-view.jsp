@@ -66,12 +66,6 @@
 <!-- 실컨텐츠 시작 -->
 <div class="wrap-movie-detail" id="select_main">
 
-    
-<!--
-<div class="tit-heading-wrap">
-    <h3>영화상세</h3>
-</div>
-    //-->
 <div class="sect-base-movie">
     <h3><strong>극장판 주술회전 0</strong>기본정보</h3>
     <div class="box-image">
@@ -320,14 +314,6 @@
     });
 </script>
 
-<script type="text/javascript">
-    _TRK_PNC = "85603";
-    _TRK_PNC_NM = "극장판 주술회전 0";
-    _TRK_PNG = "영화";
-    _TRK_PI = "PDV";
-    _TRK_CP = "/영화/영화상세/{0}/극장판 주술회전 0";
-</script>
-
 
     <div class="cols-content" id="menu">
         <div class="col-detail">
@@ -354,7 +340,8 @@
             </div>
             <!-- .sect-story -->
             <!-- 2020.05.07 성별예매분포, 연령별예매분포 UI 변경 -->
-            <div id="ctl00_PlaceHolderContent_Section_Chart" class="sect-graph sect-graph-emotion">
+           <!--  인간적으로 그래프는 뺍시다
+           <div id="ctl00_PlaceHolderContent_Section_Chart" class="sect-graph sect-graph-emotion">
                 <ul class="graph">
                     <li>
                         <strong>성별 예매 분포</strong>
@@ -366,6 +353,7 @@
                     </li>
                 </ul>
             </div>
+            --> 
             <!-- .sect-graph -->
 
             <div class="movie-detail-ad">
