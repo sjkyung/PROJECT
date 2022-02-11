@@ -160,7 +160,7 @@
         
         $.ajax({
             type: "POST",
-            url: "popcorn-store/product-detail.jsp/SetProductTheater",
+            url: "SetProductTheater.jsp",
             data: jsonData,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -188,7 +188,7 @@
 	
 	    $.ajax({
 		    type: "POST",
-		    url: "popcorn-store/product-detail.jsp/GetCategoryInfo",
+		    url: "GetCategoryInfo.jsp",
 		    contentType: "application/json; charset=utf-8",
 		    dataType: "json",
 		    async: false,
@@ -218,7 +218,7 @@
         var jsonData = "{idx: '" + _idx + "', userid:''}"
         jQuery.ajax({
             type: "POST",
-            url: "popcorn-store/product-detail.jsp/GetPrevInviteCode",
+            url: "GetPrevInviteCode.jsp",
             data: jsonData,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -261,7 +261,7 @@
 
         $.ajax({
             type: "POST",
-            url: "popcorn-store/product-detail.jsp/GetInviteCode",
+            url: "GetInviteCode.jsp",
             data: jsonData,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -339,7 +339,7 @@
 
         $.ajax({
             type: "POST",
-            url: "popcorn-store/product-detail.jsp/SetAddCartItem",
+            url: "SetAddCartItem.jsp",
             data: "{ requestData: '" + JSON.stringify(params) + "'}",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -440,7 +440,7 @@
 
         $.ajax({
             type: "POST",
-            url: "popcorn-store/product-detail.jsp/SetPurchaseItem",
+            url: "SetPurchaseItem.jsp",
             data: "{ requestData: '" + JSON.stringify(params) + "'}",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -515,7 +515,7 @@
         
         $.ajax({
             type: "POST",
-            url: "popcorn-store/product-detail.jsp/GetInviteStatus",
+            url: "GetInviteStatus.jsp",
             data: jsonData,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
