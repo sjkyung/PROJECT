@@ -40,7 +40,7 @@
   
 
 <meta charset="EUC-KR">
-<title>수정중</title>
+<title>수정중입니다.</title>
 </head>
 <body class="">
 
