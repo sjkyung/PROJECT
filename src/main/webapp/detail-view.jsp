@@ -40,7 +40,7 @@
   
 
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>수정중</title>
 </head>
 <body class="">
 
