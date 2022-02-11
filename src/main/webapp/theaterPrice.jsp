@@ -43,7 +43,7 @@
 <title>Insert title here</title>
 </head>
 <body class="">
-<%@include file="header.jsp" %>	
+<%@include file="header.jsp" %>
 
 <div></div>
 <div class="skipnaiv">
