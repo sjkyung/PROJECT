@@ -51,8 +51,8 @@
 #cgvwrap #header > .head h1 > a {display:block;}
 
 /* S Common */
-.fixedBtn_wrap{display:flex; justify-content:flex-end; position:fixed; right:0; bottom:200px; min-height:50px; margin-left:440px; text-align:center; z-index:7}
-.fixedBtn_wrap .btn_fixedTicketing{left:auto; right:0px; width:136px; height:450px; padding:12px 0 14px; font-weight:500; font-size:16px; color:#fff; background-color:rgb(255, 115, 86); line-height:1.500em; box-shadow:1px 3px 6px 0 rgba(0, 0, 0, 0.3); border-radius:25px; transition:right 0.4s; opacity:0}
+.fixedBtn_wrap{ justify-content:flex-end; position:fixed; right:0; bottom:200px; min-height:50px; margin-left:440px; text-align:center; z-index:7}
+.fixedBtn_wrap .btn_fixedTicketing{left:auto; right:-100px; width:80px; padding:12px 0 14px; font-weight:500; font-size:11px; color:#fff; background-color:rgb(255, 115, 86); line-height:1.500em; box-shadow:1px 3px 6px 0 rgba(0, 0, 0, 0.3); border-radius:25px; transition:right 0.4s; opacity:0}
 .fixedBtn_wrap .btn_gotoTop{display:flex; align-items:center; justify-content:center; position:relative; right:0; width:48px; height:48px; background-color:#fff; border:1px solid #000; box-shadow:1px 3px 6px 0 rgba(0, 0, 0, 0.3); border-radius:50%; opacity:0; pointer-events:none; ; transition:opacity 0.2s}
 .fixedBtn_wrap .btn_gotoTop img{width:15px; height:21px}
 
@@ -151,7 +151,7 @@
 			.totalSearch_wrap:after{content:''; position:absolute; right:0; top:2px; width:1px; height:20px; background-color:#cacaca}
 			.totalSearch_wrap label{display:block}
 			.totalSearch_wrap label input[type="text"]{width:180px; height:auto; padding:0 0 0 7px; font-size:16px; color:#222; line-height:1.500em; border:none}
-			.totalSearch_wrap .btn_totalSearch{display:block; position:absolute; right:10px; top:-1px; ; width:26px; height:26px; font-size:0; line-height:0; background:transparent url('./../images/common/ico/search.png') center center/26px scroll no-repeat}
+			.totalSearch_wrap .btn_totalSearch{display:block; position:absolute; right:10px; top:-1px; ; width:26px; height:26px; font-size:0; line-height:0; background:transparent url('./search.png') center center/26px scroll no-repeat}
 
 			.totalSearch_wrap.active .totalSearchAutocomplete_wrap{display:block}
 
@@ -185,7 +185,7 @@
 		.nav.fixed .contents .totalSearch_wrap:before,
 		.nav.fixed .contents .totalSearch_wrap:after{background-color:#000; opacity:0.2}
 		.nav.fixed .contents .totalSearch_wrap label input[type="text"]{color:#fff; background-color:transparent}
-		.nav.fixed .contents .totalSearch_wrap .btn_totalSearch{background:transparent url('./../images/common/ico/search_w.png') center center/26px scroll no-repeat}
+		.nav.fixed .contents .totalSearch_wrap .btn_totalSearch{background:transparent url('./search_w.png') center center/26px scroll no-repeat}
 		.nav.fixed .contents .totalSearchAutocomplete_wrap{position:absolute; left:0; top:49px}
 /* E Header */
 

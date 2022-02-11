@@ -1,21 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <div class="skipnaiv">
             <a href="#contents" id="skipHeader">메인 컨텐츠 바로가기</a>
         </div>
         <div id="cgvwrap">
-            <div class="cgv-ad-wrap" id="cgv_main_ad">
-                <div id="TopBarWrapper" class="sect-head-ad">
-                    <div class="top_extend_ad_wrap">
-                        <div class="adreduce" id="adReduce">
-                            <iframe src="//ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@TopBar_EX" width="100%"
-                                height="80" title="" frameborder="0" scrolling="no" topmargin="0" leftmargin="0"
-                                marginwidth="0" marginheight="0" name="TopBanner" id="TopBanner"></iframe>
-                        </div>
-                        <div class="adextend" id="adExtend"></div>
-                    </div><!-- //.top_extend_ad_wrap -->
-                </div>
-            </div>
-
             <!-- S Header
             Description
             - class 'nav' 에 class 'active' 추가시 서브메뉴노출
@@ -26,29 +14,26 @@
 
                 <div class="header_content">
                     <div class="contents">
-                        <h1><a href="/"><img src="https://img.cgv.co.kr/R2014/images/common/logo/logoRed.png"
+                        <h1><a href="/"><img src="./css/logoRed.png"
                                     alt="CGV" /></a><span>CULTUREPLEX</span></h1>
                         <ul class="memberInfo_wrap">
                             <!-- Advertisement -->
 
                             <div class="ad-partner">
                                 <a href="#none">
-                                    <img src="https://img.cgv.co.kr/WingBanner/2022/0110/16417749747880.png"
+                                    <img src="./css/16417749747880.png"
                                         alt="현대M포인트" />
                                 </a>
                             </div>
-
                             <!-- /Advertisement -->
-
-
                             <li>
                                 <a href="./login.jsp?">
-                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginPassword.png" alt="로그인" />
+                                    <img src="./css/loginPassword.png" alt="로그인" />
                                     <span>로그인</span></a>
                             </li>
                             <li>
                                 <a href="./join.jsp">
-                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginJoin.png" alt="회원가입" />
+                                    <img src="./css/loginJoin.png" alt="회원가입" />
                                     <span>회원가입</span>
                                 </a>
                             </li>
@@ -56,13 +41,13 @@
 
                             <li>
                                 <a href="./mycgv.jsp">
-                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginMember.png" alt="MY CGV" />
+                                    <img src="./css/loginMember.png" alt="MY CGV" />
                                     <span>MY CGV</span></a>
                             </li>
 
                             <li>
                                 <a href="./support.jsp">
-                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginCustomer.png" alt="고객센터" />
+                                    <img src="./css/loginCustomer.png" alt="고객센터" />
                                     <span>고객센터</span></a>
                             </li>
                         </ul>
@@ -89,6 +74,7 @@
                                 }
                             }
                         });
+
                         $('.nav').on({
                             mouseleave: function(e) {
                                 $(this).find('.nav_overMenu').slideUp(200, function() {
@@ -96,19 +82,23 @@
                                 });
                             }
                         });
+
                         $('.totalSearch_wrap input[type=text]').on({
                             focusin: function() {
                                 $('.totalSearch_wrap').addClass("active");
                             }
                         });
+
                         $('.btn_totalSearchAutocomplete_close').on({
                             click: function() {
                                 $('.totalSearch_wrap').removeClass("active");
                             },
                             focusout: function(e) {
                                 //     $('.totalSearch_wrap').removeClass("active");
+
                             }
                         });
+
                         $(this).on({
                             scroll: function(e) {
                                 /* S GNB fixed */
@@ -117,6 +107,7 @@
                                 var fixedHeaderPosY = headerOffsetT + headerOuterH;
                                 var scrollT = $(this).scrollTop();
                                 var scrollL = $(this).scrollLeft();
+
                                 if (scrollT >= fixedHeaderPosY) {
                                     $('.nav').addClass('fixed');
                                     $('.fixedBtn_wrap').addClass('topBtn');
@@ -124,6 +115,7 @@
                                     $('.nav').removeClass('fixed');
                                     $('.fixedBtn_wrap').removeClass('topBtn');
                                 }
+
                                 /* S > GNB fixed 좌우 스크롤
                                 Description
                                 - GNB가 fixed 되었을때 좌우 스크롤 되게 처리
@@ -137,6 +129,7 @@
                                 /* S GNB fixed */
                             }
                         });
+
                         $('.btn_gotoTop').on({
                             click: function() {
                                 $('html, body').stop().animate({
@@ -144,65 +137,46 @@
                                 }, 400);
                             }
                         });
+
                         //통합검색 상단 검색 버튼
                         $('#btn_header_search').on('click', function() {
                             if ($('#header_ad_keyword').val() != "")
                                 goSearch($('#header_ad_keyword'));      //광고
                             else
                                 goSearch($('#header_keyword'));
+
                             return false;
                         });
+
                         //통합검색 검색어 입력창
                         $('#header_keyword').keyup(function(e) {
                             if (e.keyCode == 13) goSearch($('#header_keyword'));
                         });
+
                     });
+
                     //통합검색
                     function goSearch($objKeyword) {
+
                         if ($objKeyword.val() == "") {
                             alert("검색어를 입력해 주세요");
                             $objKeyword.focus();
                             return false;
                         }
-                        location = "/search/?query=" + escape($objKeyword.val());
-                    }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 19ee537e334ae10c1137f8d2ccfe966ebfd99ea5
-                    //검색 입력창 클릭 시 광고값 reset
-                    $('#header_keyword').on('click', function() {
-                        $(this).attr('placeholder', '');
-                        $('#header_ad_keyword').val('');
-                    });
-                    //상단 키워드 광고 (S)
-                    function AdSearchExt(txt, SearchText) {
-                        $('#header_keyword').attr('placeholder', txt);
-                        $('#header_ad_keyword').val(SearchText);
-                    }
-                    function hdIcoSet(left, sh) { }
-                    //상단 키워드 광고 (E)
-                    //상단광고닫기
-                    function hideCgvTopAd() {
-                        $(".cgv-ad-wrap").hide();
-                        $('#wrap_main_notice').parent('div').css('top', 280);
+                        location = "/search/?query=" + escape($objKeyword.val());
                     }
                     //비즈스프링 클릭로그
                     function setClickLog(title) {
                         // eval("try{trk_clickTrace('EVT', '" + title + "')}catch(_e){}");
                     }
-<<<<<<< HEAD
-=======
->>>>>>> b2ffeb4bcb03c1afc68d220b6da445a400245b9d
->>>>>>> 19ee537e334ae10c1137f8d2ccfe966ebfd99ea5
+
                 </script>
 
                 <div class="nav">
                     <div class="contents">
                         <h1><a href="/" tabindex="-1"><img
-                                    src="https://img.cgv.co.kr/R2014/images/common/logo/logoWhite.png" alt="CGV" /></a>
+                                    src="./css/logoWhite.png" alt="CGV" /></a>
                         </h1>
                         <ul class="nav_menu">
                             <li>
@@ -217,7 +191,7 @@
                                 </dl>
                             </li>
                             <li>
-                                <h2><a href="./theaters.jsp">극장</a></h2>
+                                <h2><a href="../theaters.jsp">극장</a></h2>
                                 <dl class="nav_overMenu">
                                     <dt>
                                         <h2><a href="./theaters.jsp" tabindex="-1">극장</a></h2>
@@ -235,9 +209,6 @@
                                     </dt>
                                     <dd>
                                         <h3><a href="./ticket.jsp">빠른예매</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./show-times.jsp">상영스케줄</a></h3>
                                     </dd>
                                 </dl>
                             </li>
@@ -281,6 +252,12 @@
                                     <dd>
                                         <h3><a
                                                 href="./store-category.jsp?CategoryIdx=7">스낵</a>
+                                        </h3>
+                                    </dd>
+
+                                    <dd>
+                                        <h3><a
+                                                href="./store-category.jsp?CategoryIdx=8">플레이존</a>
                                         </h3>
                                     </dd>
 
@@ -328,9 +305,6 @@
                                     <dd>
                                         <h3><a href="./ClubService.jsp">CLUB
                                                 서비스</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./vip-lounge.jsp">VIP 라운지</a></h3>
                                     </dd>
                                 </dl>
                             </li>

@@ -16,21 +16,21 @@
     <meta id="ctl00_og_title" property="og:title" content="영화 그 이상의 감동. CGV"></meta>
     
     
-    <meta id="ctl00_og_image" property="og:image" content="https://img.cgv.co.kr/WebApp/images/common/logo_new_kakao_prevw.png"></meta>
+    <meta id="ctl00_og_image" property="og:image" content="./css/logo_new_kakao_prevw.png"></meta>
     <link rel="alternate" href="http://m.cgv.co.kr" />
-    <link rel="shortcut icon" href="https://img.cgv.co.kr/theater_img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./css/favicon.ico" type="image/x-icon" />
     <title id="ctl00_headerTitle">영화 그 이상의 감동. CGV</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://img.cgv.co.kr/R2014/images/favicon.ico" />
-    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/webfont.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="./css/webfont.css" />
     <link rel="stylesheet" media="all" type="text/css" href="./css/reset.css" />
     <link rel="stylesheet" media="all" type="text/css" href="./css/layout.css" />
-    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/module.css?20211209" />
-    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/content.css" />
-    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/common.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="./css/module.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="./css/content.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="./css/common.css" />
     
-    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/eggupdate.css" />
-    <link rel="stylesheet" media="print" type="text/css" href="https://img.cgv.co.kr/R2014/css/print.css" />    
-    <link rel="stylesheet" type="text/css" href="https://img.cgv.co.kr/R2014/js/jquery.ui/smoothness/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="./css/eggupdate.css" />
+    <link rel="stylesheet" media="print" type="text/css" href="./css/print.css" />    
+    <link rel="stylesheet" type="text/css" href="./css/custom.min.css" />
     
     <script type="text/javascript" src="/common/js/extraTheaters.js"></script>
     <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/app.config.js"></script>
@@ -49,22 +49,22 @@
     <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/silverlight_link.js"></script>
 	<script src="https://img.cgv.co.kr/R2014/js/slick/slick.js" type="text/javascript" charset="utf-8"></script>
 
-    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/phototicket/phototicket.css" />
-    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/slick.css" />
-	<link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/slick-theme-custom.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="./css/phototicket.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="./css/slick.css" />
+	<link rel="stylesheet" media="all" type="text/css" href="./css/slick-theme-custom.css" />
 
     <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/icheck/login.timer.js"></script>
     <script src="https://img.cgv.co.kr/R2014/js/icheck/icheck.min.js" type="text/javascript" charset="utf-8"></script>
-    <link rel="stylesheet" type="text/css" href="https://img.cgv.co.kr/R2014/js/icheck/iCheck.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iCheck.css" />
 
     <!-- 2020.05.07 감정지수/프리에그 프로젝트 추가 -->
-    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/preegg.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="./css/preegg.css" />
 
     <!-- 각페이지 Header Start--> 
     
 <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">https, http  혼합사용시-->
 <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/swiper.min.js" ></script>
-<link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/swiper-bundle.min.css" />
+<link rel="stylesheet" media="all" type="text/css" href="./css/swiper-bundle.min.css" />
 <script type="text/javascript">
         $(document).ready(function(){
 
@@ -367,9 +367,6 @@
                 }
             }
         }
-
-        
-
         //]]>
     </script>
     
@@ -382,19 +379,6 @@
             <a href="#contents" id="skipHeader">메인 컨텐츠 바로가기</a>
         </div>
         <div id="cgvwrap">
-            <div class="cgv-ad-wrap" id="cgv_main_ad">
-                <div id="TopBarWrapper" class="sect-head-ad">
-                    <div class="top_extend_ad_wrap">
-                        <div class="adreduce" id="adReduce">
-                            <iframe src="//ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@TopBar_EX" width="100%"
-                                height="80" title="" frameborder="0" scrolling="no" topmargin="0" leftmargin="0"
-                                marginwidth="0" marginheight="0" name="TopBanner" id="TopBanner"></iframe>
-                        </div>
-                        <div class="adextend" id="adExtend"></div>
-                    </div><!-- //.top_extend_ad_wrap -->
-                </div>
-            </div>
-
             <!-- S Header
             Description
             - class 'nav' 에 class 'active' 추가시 서브메뉴노출
@@ -405,29 +389,26 @@
 
                 <div class="header_content">
                     <div class="contents">
-                        <h1><a href="/"><img src="https://img.cgv.co.kr/R2014/images/common/logo/logoRed.png"
+                        <h1><a href="/"><img src="./css/logoRed.png"
                                     alt="CGV" /></a><span>CULTUREPLEX</span></h1>
                         <ul class="memberInfo_wrap">
                             <!-- Advertisement -->
 
                             <div class="ad-partner">
                                 <a href="#none">
-                                    <img src="https://img.cgv.co.kr/WingBanner/2022/0110/16417749747880.png"
+                                    <img src="./css/16417749747880.png"
                                         alt="현대M포인트" />
                                 </a>
                             </div>
-
                             <!-- /Advertisement -->
-
-
                             <li>
                                 <a href="./login.jsp?">
-                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginPassword.png" alt="로그인" />
+                                    <img src="./css/loginPassword.png" alt="로그인" />
                                     <span>로그인</span></a>
                             </li>
                             <li>
                                 <a href="./join.jsp">
-                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginJoin.png" alt="회원가입" />
+                                    <img src="./css/loginJoin.png" alt="회원가입" />
                                     <span>회원가입</span>
                                 </a>
                             </li>
@@ -435,13 +416,13 @@
 
                             <li>
                                 <a href="./mycgv.jsp">
-                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginMember.png" alt="MY CGV" />
+                                    <img src="./css/loginMember.png" alt="MY CGV" />
                                     <span>MY CGV</span></a>
                             </li>
 
                             <li>
                                 <a href="./support.jsp">
-                                    <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginCustomer.png" alt="고객센터" />
+                                    <img src="./css/loginCustomer.png" alt="고객센터" />
                                     <span>고객센터</span></a>
                             </li>
                         </ul>
@@ -592,7 +573,7 @@
                 <div class="nav">
                     <div class="contents">
                         <h1><a href="/" tabindex="-1"><img
-                                    src="https://img.cgv.co.kr/R2014/images/common/logo/logoWhite.png" alt="CGV" /></a>
+                                    src="./css/logoWhite.png" alt="CGV" /></a>
                         </h1>
                         <ul class="nav_menu">
                             <li>
@@ -807,13 +788,13 @@
                                     <div class="img_wrap" data-scale="false">
                                         <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84945/84945_320.jpg" alt="듄" onerror="errorImage(this)">
                                         <div class="movieAgeLimit_wrap">
-                                            <img src="https://img.cgv.co.kr/R2014/images/common/flag/age/grade-12.png" alt="12세 이상세">
+                                            <img src="./css/grade-12.png" alt="12세 이상세">
                                             <div class='dDay_wrap'><span>5</span></div>
                                         
                                         </div>
                                         <div class="screenType_wrap">
                                             
-                                            <i class="screenType"><img src="https://img.cgv.co.kr/R2014/images/common/logo/imax_white.png" alt="imax"></i>
+                                            <i class="screenType"><img src="./css/imax_white.png" alt="imax"></i>
                                             
                                         </div>
                                         <div class="movieChart_btn_wrap">
@@ -826,7 +807,7 @@
                                     </div>
                                     <div class="movie_info_wrap">
                                         <strong class="movieName">듄</strong>
-                                        <span> <img src='https://img.cgv.co.kr/R2014/images/common/egg/eggGoldenegggreat.png' alt='Golden Egg great'> 92%</span>
+                                        <span> <img src='./css/eggGoldenegggreat.png' alt='Golden Egg great'> 92%</span>
                                         <span>예매율 19.9%</span>
                                     </div>
                                 </div>
@@ -2379,19 +2360,19 @@
 
     <!-- S 예매하기 및 TOP Fixed 버튼 -->
     <div class="fixedBtn_wrap">
+    	<a href="#none" class="btn_gotoTop"><img src="./css/gotoTop.png" alt="최상단으로 이동" /></a>
      	<div class="btn_fixedTicketing">
-	        <p><a href=""/ticket/"><img src="./css/ticket.png" alt="예매"/></a></p>
-	        <p><a href="/ticket/">예매하기</a></p>
-	        <p><a href=""/theaters/"><img src="./css/calender.png" alt="예매"/></a></p>
-	        <p><a href="/teaters/">상영시간표</a></p>
-	        <p><a href=""//"><img src="./css/popcorn.png" alt="예매"/></a></p>
-	        <p><a href="/popcorn-store/">바로팝콘</a></p>
-	        <p><a href=""/ticket/"><img src="./css/coin.png" alt="예매"/></a></p>
-	        <p><a href="/point/">포인트적립</a></p>
-	        <p><a href=""/ticket/"><img src="./css/help.png" alt="예매"/></a></p>
-	        <p><a href="/support/">고객센터</a></p>
+	        <p><a href="#"><img src="./css/ticket.png" alt="예매"/></a></p>
+	        <p><a href="#">예매하기</a></p>
+	        <p><a href="#"><img src="./css/calender.png" alt="상영시간표"/></a></p>
+	        <p><a href="#">상영시간표</a></p>
+	        <p><a href="#"><img src="./css/popcorn.png" alt="바로팝콘"/></a></p>
+	        <p><a href="#">바로팝콘</a></p>
+	        <p><a href="#"><img src="./css/coin.png" alt="포인트"/></a></p>
+	        <p><a href="#">포인트적립</a></p>
+	        <p><a href="#"><img src="./css/help.png" alt="고객센터"/></a></p>
+	        <p><a href="#">고객센터</a></p>
         </div>
-        <a href="#none" class="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="최상단으로 이동" /></a>
     </div>
 
     <!-- E 예매하기 및 TOP Fixed 버튼 -->
