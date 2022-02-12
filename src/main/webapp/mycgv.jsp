@@ -182,29 +182,9 @@
     <!-- Contaniner -->
     <div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
 
-
         <!-- Contents Area -->
         <div id="contents" class="">
             <!-- Contents Start -->
-            <script type="text/javascript">
-                //<![CDATA[
-                (function ($) {
-                    $(function () {
-                        //특별관 >
-                        //동성로타운
-                        $('.special1_pop').on('click', function () {
-                            openDownTown();
-                            return false;
-                        });
-                        function openDownTown() {
-                            //var win = window.open('http://section.cgv.co.kr/event/2016/0419_dongsungro_town/pop_service.aspx', 'winDownTown', 'left=0,top=0,width=670,height=800,toolbar=no,scrollbars=yes');
-                            //win.focus();
-                        }
-                    });
-                })(jQuery);
-                //]]>
-            </script>
-
             <!--상단 쪽 common Erea-->
 
             <div class="sect-common">
@@ -328,43 +308,37 @@
                     <div class="snb">
                         <ul>
                             <li class="on">
-                                <a href="/user/mycgv/?g=1" title="현재 선택">MY CGV HOME <i></i></a>
+                                <a href="./mycgv.jsp" title="현재 선택">MY CGV HOME <i></i></a>
                             </li>
 
                             <li >
-                                <a href="/user/mycgv/reserve/?g=1" >나의 예매내역 <i></i></a>
+                                <a href="./mycgv-reserve.jsp" >나의 예매내역 <i></i></a>
                             </li>
 
                             <li >
-                                <a href="/user/mycgv/cjone-point/cafeteria.aspx?g=1" >CGV 포인트 <i></i></a>
+                                <a href="./mycgv-cgvPoint.jsp" >CGV 포인트 <i></i></a>
                                 <ul>
                                     <li >
-                                        <a href="/user/mycgv/cjone-point/pointinfo.aspx?g=1" >포인트 적립/사용안내</a>
+                                        <a href="./mycgv-cgvPoint-pointInfo.jsp" >포인트 적립/사용안내</a>
                                     </li>
                                     <li >
-                                        <a href="/user/mycgv/cjone-point/pointlist.aspx?g=1" >포인트 적립/사용내역</a>
+                                        <a href="./mycgv-cgvPoint-pointList.jsp" >포인트 적립/사용내역</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li >
-                                <a href="/user/mycgv/event/" title="현재선택">이벤트 참여내역 <i></i></a>
+                                <a href="./mycgv-event.jsp" title="현재선택">이벤트 참여내역 <i></i></a>
                             </li>
 
                             <li >
-                                <a href="/user/mycgv/popcorn-store/" >기프트샵<i></i></a>
+                                <a href="./mycgv-popcorn-store.jsp" >기프트샵<i></i></a>
                                 <ul>
-                                    <!--  <li >
-                                          <a href="/user/mycgv/culture-shop/?type=1&g=1" >매점상품 기프트콘</a>
-                                      </li>
-                                      <li >
-                                          <a href="/user/mycgv/culture-shop/?type=0&g=1" >영화관람권 기프트콘</a>
-                                      </li> -->
                                     <li >
-                                        <a href="/user/mycgv/popcorn-store/" >내 기프트콘</a>
+                                        <a href="./mycgv-popcorn-store.jsp" >내 기프트콘</a>
                                     </li>
                                     <li >
-                                        <a href="/user/mycgv/popcorn-store/payment-list.aspx" >결제내역</a>
+                                        <a href="./mycgv-popcorn-store-paymentList.jsp" >결제내역</a>
                                     </li>
                                 </ul>
                             </li>
@@ -1076,26 +1050,6 @@
 <!-- E 예매하기 및 TOP Fixed 버튼 -->
 
 <%@ include file="./footer.jsp" %>
-
-<!-- Aside Banner :  -->
-<!--
-<div id="ctl00_ctl00_sect_person_right" class="sect-aside-banner" style="padding:0; margin:0; position:fixed; z-index:1;display:none">
-    <div class="aside-content-top">
-        <div class="aside-content-btm">
-            <a href="/theaters/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_theater.gif" alt="CGV THEATER" /></a>
-            <a href="/arthouse/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_arthouse.gif" alt="CGV arthouse" /></a>
-            <a href="/theaters/special/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_special.gif" alt="CGV SPECIAL" /></a>
-
-            <a href="/user/mycgv/reserve/" class="required-login" data-url="/user/mycgv/reserve/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_ticket.gif" alt="CGV TICKET INFO" /></a>
-            <a href="/discount/discountlist.aspx"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_discount.gif" alt="CGV DISCOUNT INFO" /></a>
-        </div>
-    </div>
-    <div class="btn-top">
-        <a href="#" onclick="window.scrollTo(0,0);return false;"><span>최상단으로 이동</span></a>
-    </div>
-</div>
-//-->
-<!-- //Aside Banner -->
 
 </div>
 
