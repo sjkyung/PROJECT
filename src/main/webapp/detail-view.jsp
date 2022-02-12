@@ -234,8 +234,26 @@
             </div>
             --> 
             <!-- .sect-graph -->
+            
+            <!-- 동영상 팝업 스크립트 -->
 
+    <script>
+        'use strict'
+        window.onload=function(){
 
+            let boxBtn=document.getElementsByClassName('box-image');
+            let layerpopup=document.getElementsByClassName('layerpopup');
+            boxBtn[0].addEventListener('click',video);
+            function video(){
+                console.log('영상 클릭!');
+                layerpopup[0].style.display='block';
+                
+            }
+
+        }
+
+    </script>
+    
             <!-- .sect-staff -->
             <div id="ctl00_PlaceHolderContent_Section_Trailer" class="sect-trailer">
                 <div class="heading">
@@ -313,9 +331,55 @@
                     </li>
                     
                 </ul>
+                
+                <script>
+                
+                </script>
 
             </div><!-- .sect-trailer -->
             
+            
+            
+            <!-- 영상 레이어 팝업 구현 부분입니다. -->
+<div class="layerpopup" style="display: none;">
+            <div class="mask" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 100; background-color: rgba(0, 0, 0, 0.8);"></div>
+            <div class="layer-wrap" style="margin-top: -355px; margin-left: -510px; position: fixed;" tabindex="0"><div class="popwrap">
+    <div class="sect-layerplayer">
+        <div class="cols-pop-player">
+            <h1 class="title" id="movie_player_popup_title"><span class="ico-trailer hd">HD</span>[355]TEAM ‘355’ 어셈블 캐릭터 영상</h1>
+            <div class="col-pop-player">
+                <div class="warp-pop-player" style="position: relative;">
+                    <iframe id="ifrm_movie_player_popup" name="ifrm_movie_player_popup" src="/common/player/?autoplay=true&amp;path=http%3A//h.vod.cgv.co.kr%3A80/vodCGVa/85595/85595_200129_1200_128_960_540.mp4&amp;poster=https%3A//img.cgv.co.kr/Movie/Thumbnail/Trailer/85595/85595200129_1024.jpg" style="width:800px;height:450px;" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+					
+					<div class="sect-replay" style="display:none" id="pop_player_relation_wrap">
+						<button class="btn-replay movie_player_inner_popup" type="button" data-gallery-idx="200129" id="btn_movie_replay">다시보기</button>
+						<!-- 없어지는 영역 -->
+						<div class="wrap-relationmovie" id="pop_player_relation_item_wrap">
+							<strong class="title">관련영상</strong>
+							<ul id="pop_player_relation_movie"><li>     <div class="box-image">         <a href="#" title="메인 예고편 영상보기" class="movie_player_inner_popup" data-gallery-idx="200128">             <span class="thumb-image">                 <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/85595/85595200128_1024.jpg" alt="메인 예고편_트레일러">                 <span class="ico-play">영상보기</span>             </span>         </a>     </div> </li><li>     <div class="box-image">         <a href="#" title="파이널 예고편 영상보기" class="movie_player_inner_popup" data-gallery-idx="200123">             <span class="thumb-image">                 <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/85595/85595200123_1024.jpg" alt="파이널 예고편_트레일러">                 <span class="ico-play">영상보기</span>             </span>         </a>     </div> </li><li>     <div class="box-image">         <a href="#" title="액션 #키워드 영상 영상보기" class="movie_player_inner_popup" data-gallery-idx="200122">             <span class="thumb-image">                 <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/85595/85595200122_1024.jpg" alt="액션 #키워드 영상_트레일러">                 <span class="ico-play">영상보기</span>             </span>         </a>     </div> </li></ul>
+						</div><!-- .wrap-relationmovie -->
+					</div><!-- .sect-replay -->
+					
+                </div><!-- .warp-pop-player -->
+                <div class="descri-trailer">
+                    <strong class="title">영상설명</strong>
+                    <textarea readonly="readonly" id="movie_player_popup_caption"></textarea>
+                </div>
+            </div><!-- .col-player -->
+            <div class="col-pop-playerinfo">
+                <div id="movie_player_popup_movie_info"><div class="box-image">     <a href="/movies/detail-view/?midx=85595" title="355 상세보기 새창">         <span class="thumb-image">             <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85595/85595_185.jpg" alt="355 포스터">             <span class="ico-grade grade-15">15세 이상</span>         </span>     </a>    </div> <div class="box-contents">     <a href="/movies/detail-view/?midx=85595" title="355 상세보기 새창">         <strong class="title">355</strong>     </a>     <span class="txt-info" style="margin-bottom:2px;">         <em class="genre">액션</em>         <span>             <i>2022.02.09</i>             <strong>개봉</strong>                      </span>     </span>      <a class="link-reservation" href="/ticket/?MOVIE_CD=20028772&amp;MOVIE_CD_GROUP=20028772">예매</a>   </div></div>
+                <div class="sect-trailer">
+                    <strong class="title">신규영상</strong>
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </div><!-- .col-playerinfo -->
+        </div><!-- .cols-player -->
+        <button type="button" class="btn-close">닫기</button>
+    </div>
+</div></div>
+            </div>
             
             <!-- 슬라이드 자바스크립트로 구현했습니다. -->
     <script>
@@ -352,42 +416,43 @@
     }
 }
     </script>
+   
             
             <!--  각 저장되어있는 영화별 사진 경로를 반복문으로 가져와야할 것으로 보임 -->
             <div id="ctl00_PlaceHolderContent_Section_Still_Cut" class="sect-stillcut">
                 <div class="heading">
-                    <h4>스틸컷</h4><span class="count"><strong id="stillcut_current">1</strong>/25건</span><a class="link-more" href="still-cut.aspx?midx=85603">더보기</a>
+                    <h4>스틸컷</h4><span class="count"><strong id="stillcut_current">1</strong>/	25건</span><a class="link-more" href="still-cut.aspx?midx=85603">더보기</a>
                 </div>
                 <div class="slider-wrap">
                     <div class="slider" id="still_motion">
                         <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img src="/img/1.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)" style="height: 100%;">
+                            <div class="item" style="width: 800px; height: 450px;">
+                                <img src="./img/1.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                                                 
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img src="/img/2.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)" style="height: 100%;">
+                                <img src="./img/2.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                                                 
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img src="/img/3.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)" style="height: 100%;">
+                                <img src="./img/3.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                         
                                                 
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img src="/img/4.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)" style="height: 100%;">
+                                <img src="./img/4.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                                                 
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img src="/img/5.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)" style="height: 100%;">
+                                <img src="./img/5.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                         
