@@ -80,7 +80,7 @@
     <div class="box-contents">
     <!-- 해당 영화 정보 시작-->
         <div class="title"> 
-            <strong>극장판 주술회전 0</strong>
+            <strong>영화한글명</strong>
             
             <em class="round brown"><span>예매중</span></em>
             <em class="round red"><span>D-7</span></em>
@@ -140,24 +140,23 @@
                 <dd class="on">2022.02.17</dd>
 
 
-            
 
             </dl>
         </div>
 
         <span class="like">
             <!-- 2020.05.07 영화찜하기 -> 프리에그 선택 변경(조회하여 노출) -->
-            <a class="link-count" href="javascript:void (0);"><i class="sprite_preegg btn_md default"></i>위시리스트</a>
+            <a class="link-count" href="javascript:void(0);><i class="sprite_preegg btn_md default"></i>위시리스트</a>
         
             <a class="link-reservation" href="ticket.jsp">예매</a> 
-        
+        </span>
         </span>
 
     </div>
 </div><!-- .sect-base -->
 
 <!-- 위시리스트 팝업 -->
-<div class="layer-wrap" id="movie-pre-select" style="top:100px;display:none">
+<div class="layer-wrap" id="movie-pre-select" style="top:100px; display:none">
     <div class="popwrap" style="width:516px;margin-top:0px;margin-left:-268px">
         <h1>프리에그 선택</h1>
         <div class="pop-contents">
@@ -193,7 +192,6 @@
     </div>
 </div>
 <!-- //위시리스트 팝업 -->
-
 
 
     <div class="cols-content" id="menu">
@@ -315,168 +313,89 @@
                     </li>
                     
                 </ul>
+
             </div><!-- .sect-trailer -->
-            <!-- 사진 슬라이드 구현 부분, 각 저장되어있는 영화별 사진 경로를 반복문으로 가져온 후 기능을 구현해야할 것으로 보임 -->
+            
+            
+            <!-- 슬라이드 자바스크립트로 구현했습니다. -->
+    <script>
+    'use strict'
+        window.onload=function(){
+            let pagenum=0;
+    let item=document.getElementsByClassName('item');
+    let btn=document.getElementById('btn-next');
+    let btnprev=document.getElementById('btn-prev');
+    btnprev.addEventListener('click',prev);
+    btn.addEventListener('click',next);
+    function next(){
+        console.log('next() 실행입니다.');
+        if(pagenum>=item.length-1){
+            item[pagenum].style.display='none';
+            pagenum=0;
+            
+        }
+        item[pagenum].style.display='none';
+        item[pagenum+1].style.display='block';
+        pagenum++;
+
+    }
+    function prev(){
+        console.log('prev() 실행입니다.');
+        if(pagenum<=0){
+            item[pagenum].style.display='none';
+            pagenum=item.length-1;
+        }
+        item[pagenum].style.display='none';
+        item[pagenum-1].style.display='block';
+        pagenum--;
+
+    }
+}
+    </script>
+            
+            <!--  각 저장되어있는 영화별 사진 경로를 반복문으로 가져와야할 것으로 보임 -->
             <div id="ctl00_PlaceHolderContent_Section_Still_Cut" class="sect-stillcut">
                 <div class="heading">
                     <h4>스틸컷</h4><span class="count"><strong id="stillcut_current">1</strong>/25건</span><a class="link-more" href="still-cut.aspx?midx=85603">더보기</a>
                 </div>
                 <div class="slider-wrap">
                     <div class="slider" id="still_motion">
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200171_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)" src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200171_727.jpg" style="height: 100%;">
-                            </div>
-                        </div>
-                        
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200170_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)" src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200170_727.jpg" style="height: 100%;">
+                                <img src="/img/1.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)" style="height: 100%;">
                             </div>
                         </div>
-                        
+                                                
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200168_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)">
+                                <img src="/img/2.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)" style="height: 100%;">
                             </div>
                         </div>
-                        
+                                                
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200167_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)">
+                                <img src="/img/3.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)" style="height: 100%;">
                             </div>
                         </div>
                         
+                                                
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200165_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)">
+                                <img src="/img/4.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)" style="height: 100%;">
                             </div>
                         </div>
-                        
+                                                
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200163_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)">
+                                <img src="/img/5.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)" style="height: 100%;">
                             </div>
                         </div>
                         
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200094_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
+                       
                         
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200093_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200092_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200091_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200090_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200089_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603200012_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603199755_727.png" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603199754_727.png" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603199753_727.png" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603199752_727.png" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603199751_727.png" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603199750_727.png" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603199749_727.png" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603199748_727.png" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603199747_727.png" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603199746_727.png" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603199539_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)">
-                            </div>
-                        </div>
-                        
-                        <div class="item-wrap">
-                            <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img data-src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603199433_727.jpg" alt="극장판 주술회전 0" onerror="errorImage(this)" src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000085/85603/85603199433_727.jpg" style="height: 100%;">
-                            </div>
-                        </div>
-                        
-                        <button type="button" class="btn-prev">이전 페이지 이동</button>
-                        <button type="button" class="btn-next">다음 페이지 이동</button>
-                    </div>
+                        <button type="button" class="btn-prev" id="btn-prev">이전 페이지 이동</button>
+                        <button type="button" class="btn-next" id="btn-next">다음 페이지 이동</button>
+                    </div>	
                 </div>
             </div><!-- .sect-stillcut -->
 
@@ -588,8 +507,6 @@
     <!-- E 예매하기 및 TOP Fixed 버튼 -->
 	
 <%@include file="footer.jsp" %>
-
-
 
 </div>
 
