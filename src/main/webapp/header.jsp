@@ -257,7 +257,6 @@
                             <dt><h2><a href="/movies/?lt=1&ft=0" tabindex="-1">영화</a></h2></dt>
                             <dd><h3><a href="/movies/?lt=1&ft=0">무비차트</a></h3></dd>
                             <dd><h3><a href="/arthouse/">아트하우스</a></h3></dd>
-                            <dd><h3><a href="/culture-event/event/detailViewUnited.aspx?seq=30717">ICECON</a></h3></dd>
                         </dl>
                     </li>
                     <li>
@@ -274,8 +273,6 @@
                             <dt><h2><a href="/ticket/" tabindex="-1">예매</a></h2></dt>
                             <dd><h3><a href="/ticket/">빠른예매</a></h3></dd>
                             <dd><h3><a href="/reserve/show-times/">상영스케줄</a></h3></dd>
-                            <dd><h3><a href="/ticket/eng/newdefault.aspx">English Ticketing</a></h3></dd>
-                            <dd><h3><a href="/reserve/show-times/eng/">English Schedule</a></h3></dd>
                         </dl>
                     </li>
                     <li>
@@ -294,10 +291,6 @@
                             <dd><h3><a href="/culture-event/popcorn-store/store-category.aspx?CategoryIdx=6">음료</a></h3></dd>
 
                             <dd><h3><a href="/culture-event/popcorn-store/store-category.aspx?CategoryIdx=7">스낵</a></h3></dd>
-
-                            <dd><h3><a href="/culture-event/popcorn-store/store-category.aspx?CategoryIdx=10">플레이존</a></h3></dd>
-
-                            <dd><h3><a href="https://brand.naver.com/cgv" class="arrowR" target="_blank">씨네샵</a></h3></dd>
                         </dl>
                     </li>
                     <li>
