@@ -6,8 +6,6 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-    <link rel="alternate" href="http://m.cgv.co.kr" />
     <link rel="shortcut icon" href="https://img.cgv.co.kr/theater_img/favicon.ico" type="image/x-icon" />
     <title id="ctl00_headerTitle"></title>
     <link rel="shortcut icon" type="image/x-icon" href="https://img.cgv.co.kr/R2014/images/favicon.ico" />
@@ -144,61 +142,146 @@
             </dl>
         </div>
 
-        <span class="like">
-            <!-- 2020.05.07 영화찜하기 -> 프리에그 선택 변경(조회하여 노출) -->
-            <a class="link-count" href="javascript:void(0);><i class="sprite_preegg btn_md default"></i>위시리스트</a>
-        
-            <a class="link-reservation" href="ticket.jsp">예매</a> 
-        </span>
-        </span>
+  
+    <script>
 
-    </div>
+    'use strict'
+    window.onload=function(){
+        let pagenum=0;
+let item=document.getElementsByClassName('item');
+let btn=document.getElementById('btn-next');
+let btnprev=document.getElementById('btn-prev');
+btnprev.addEventListener('click',prev);
+btn.addEventListener('click',next);
+function next(){
+
+    if(pagenum>=item.length-1){
+        item[pagenum].style.display='none';
+        pagenum=0;
+        
+    }
+    item[pagenum].style.display='none';
+    item[pagenum+1].style.display='block';
+    pagenum++;
+
+}
+function prev(){
+
+    if(pagenum<=0){
+        item[pagenum].style.display='none';
+        pagenum=item.length-1;
+    }
+    item[pagenum].style.display='none';
+    item[pagenum-1].style.display='block';
+    pagenum--;
+
+}
+
+        
+let boxBtn=document.getElementsByClassName('movie_player_popup');
+let layerpopup=document.getElementsByClassName('layerpopup');
+let btnClose=document.getElementsByClassName('btn-close');
+
+boxBtn[0].addEventListener('click',video);
+btnClose[1].addEventListener('click', videoclose);
+    function video(){
+
+        layerpopup[0].style.display='block';
+        };
+    
+    function videoclose(){
+    	layerpopup[0].style.display='none';
+    };
+  
+    
+let count=document.getElementsByClassName('link-count');
+let wishlist=document.getElementsByClassName('wishlist');
+
+ count[0].addEventListener('click', fnwishlist);
+ function fnwishlist(){
+	 wishlist[0].style.display='block';
+	 
+ };
+ btnClose[0].addEventListener('click', wlclose);
+ function wlclose(){
+	 wishlist[0].style.display='none';
+ };
+ 
+ 
+ let gradewrite=document.getElementsByClassName('link-gradewrite');
+ let comment=document.getElementsByClassName('comment');
+
+
+ gradewrite[0].addEventListener('click', fncomment);
+ btnClose[2].addEventListener('click', commentclose);
+ 
+ function fncomment(){
+	 comment[0].style.display='block';
+ }
+ function commentclose(){
+	 comment[0].style.display='none';
+ };
+
+
+}
+        
+    </script>
+    <span class="like">
+        <!-- 2020.05.07 영화찜하기 -> 프리에그 선택 변경(조회하여 노출) -->
+		<a class="link-count" href="javascript:void (0);"><i class="sprite_preegg btn_md default"></i>프리에그</a>
+        <a class="link-reservation" href="ticket.jsp">예매</a> 
+    </span>
+    </span>
+
+</div>
 </div><!-- .sect-base -->
 
 <!-- 위시리스트 팝업 -->
-<div class="layer-wrap" id="movie-pre-select" style="top:100px; display:none">
-    <div class="popwrap" style="width:516px;margin-top:0px;margin-left:-268px">
-        <h1>프리에그 선택</h1>
-        <div class="pop-contents">
-            <!-- Contents Addon -->
-            <div class="movie-pre-select">
-                <div class="header">
-                    <p class="main"></p>
-                </div>
-                <div class="box">
-                    <div class="desc">
-                        <div class="main">이 영화가 기대되시나요?</div>
-                        <div class="sub"><em>'기대돼요!'</em>를 선택하시면 <em>'기대되는 영화'에 추가</em>됩니다.</div>
-                    </div>
-                    <div class="wrap_btn">
-                        <a href="javascript:void(0);" class="btn good">
-                            <span class="sprite_preegg big favor"></span>
-                            <span>기대돼요!</span>
-                        </a>
-                        <a href="javascript:void(0);" class="btn bad">
-                            <span class="sprite_preegg big hate"></span>
-                            <span>글쎄요..</span>
-                        </a>
-                        <input type="hidden" id="preegg_useyn" value="">
-                    </div>
-                </div>
+<div class="layer-wrap wishlist" id="movie-pre-select" style="top:100px; display:none">
+<div class="popwrap" style="width:516px;margin-top:0px;margin-left:-268px">
+    <h1>위시리스트</h1>
+    <div class="pop-contents">
+        <!-- Contents Addon -->
+        <div class="movie-pre-select">
+            <div class="header">
+                <p class="main"></p>
             </div>
-            <!-- //Contents Addon -->
-            <div class="set-btn fix-width">
-                <button type="submit" id="btnSave" class="round inred"><span>확인</span></button>
+            <div class="box">
+                <div class="desc">
+                    <div class="main">이 영화가 기대되시나요?</div>
+                    <div class="sub"><em>'기대돼요!'</em>를 선택하시면 <em>'기대되는 영화'에 추가</em>됩니다.</div>
+                </div>
+                <div class="wrap_btn">
+                    <a href="javascript:void(0);" class="btn good">
+                        <span class="sprite_preegg big favor"></span>
+                        <span>기대돼요!</span>
+                    </a>
+                    <a href="javascript:void(0);" class="btn bad">
+                        <span class="sprite_preegg big hate"></span>
+                        <span>글쎄요..</span>
+                    </a>
+                    <input type="hidden" id="preegg_useyn" value="">
+                </div>
             </div>
         </div>
-        <button type="button" class="btn-close">프리에그 팝업 닫기</button>
+        <!-- //Contents Addon -->
+        <div class="set-btn fix-width">
+            <button type="submit" id="btnSave" class="round inred"><span>확인</span></button>
+        </div>
     </div>
+    <button type="button" class="btn-close">프리에그 팝업 닫기</button>
+</div>
 </div>
 <!-- //위시리스트 팝업 -->
+
 
 
     <div class="cols-content" id="menu">
         <div class="col-detail">
             <!-- 메뉴가 선택되면 a 에 title="선택" 이라고 넣는다 -->
             <ul class="tab-menu">
-                <li class="on"><a title="현재 선택됨" href="detail-view.jsp">주요정보 </a></li>             
+                <li class="on"><a title="현재 선택됨" href="detail-view.jsp">주요정보 </a></li>        
+                <li><a href="cast.jsp">감독/출연</a></li>     
                 <li><a href="trailer.jsp">트레일러</a></li>
                 <li><a href="still-cut.jsp">스틸컷</a></li>
                 <li><a href="detail-view.jsp">평점/리뷰</a></li> <!-- 이부분 아직 cgv에서도 구현 전인것같음. -->              
@@ -234,40 +317,21 @@
             </div>
             --> 
             <!-- .sect-graph -->
-            
-            <!-- 동영상 팝업 스크립트 -->
-
-    <script>
-        'use strict'
-        window.onload=function(){
-
-            let boxBtn=document.getElementsByClassName('box-image');
-            let layerpopup=document.getElementsByClassName('layerpopup');
-            boxBtn[0].addEventListener('click',video);
-            function video(){
-                console.log('영상 클릭!');
-                layerpopup[0].style.display='block';
-                
-            }
-
-        }
-
-    </script>
-    
             <!-- .sect-staff -->
-            <div id="ctl00_PlaceHolderContent_Section_Trailer" class="sect-trailer">
+            <div class="sect-trailer">
                 <div class="heading">
-                    <h4>트레일러</h4><span id="ctl00_PlaceHolderContent_TrailerTotalCount" class="count">3건</span><a class="link-more" href="trailer.jsp">	더보기</a>
+                    <h4>트레일러</h4><span class="count">3건</span><a class="link-more" href="trailer.jsp">	더보기</a>
                 </div>
                 <ul>
                 <!-- 사진 동영상 조회 -->
                 
+                                    
                     <li>
                         <div class="box-image">
                             <!-- TODO : 동영상 팝업 창 작업 후 링크 걸어야 함 //-->
                             <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="200013">
                                 <span class="thumb-image">
-                                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/85603/85603200013_1024.jpg" alt="[극장판 주술회전 0]2차 예고편" onerror="errorImage(this, {'type':'landscape'})">
+                                    <img src="./img/1.jpg" alt="[극장판 주술회전 0]2차 예고편">
                                     <span class="ico-play">영상보기</span>
                                 </span>
                             </a>
@@ -283,80 +347,52 @@
                             <span class="txt-info">2022.02.03</span>
                         </div>
                     </li>
-                    
-                    <li>
-                    
-                    <!-- 레이아웃 팝업창 구현부분 -->
-                        <div class="box-image">
-                            <!-- TODO : 동영상 팝업 창 작업 후 링크 걸어야 함 //-->
-                            <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="199812">
-                                <span class="thumb-image">
-                                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/85603/85603199812_1024.jpg" alt="[극장판 주술회전 0]런칭 예고편" onerror="errorImage(this, {'type':'landscape'})">
-                                    <span class="ico-play">영상보기</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="box-contents">
-                            <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="199812">
-                                <strong class="title">
-                                    
-                                    <span class="ico-trailer hd">HD</span>
-                                    런칭 예고편
-                                </strong>
-                            </a>
-                            <span class="txt-info">2022.01.24</span>
-                        </div>
-                    </li>
-                    
-                    <li>
-                        <div class="box-image">
-                            <!-- TODO : 동영상 팝업 창 작업 후 링크 걸어야 함 //-->
-                            <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="199777">
-                                <span class="thumb-image">
-                                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/85603/85603199777_1024.jpg" alt="[극장판 주술회전 0]1차 예고편" onerror="errorImage(this, {'type':'landscape'})">
-                                    <span class="ico-play">영상보기</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="box-contents">
-                            <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="199777">
-                                <strong class="title">
-                                    
-                                    <span class="ico-trailer hd">HD</span>
-                                    1차 예고편
-                                </strong>
-                            </a>
-                            <span class="txt-info">2022.01.21</span>
-                        </div>
-                    </li>
+                
                     
                 </ul>
                 
-                <script>
-                
-                </script>
 
             </div><!-- .sect-trailer -->
             
             
             
             <!-- 영상 레이어 팝업 구현 부분입니다. -->
-<div class="layerpopup" style="display: none;">
+		<div class="layerpopup" style="display: none;">
             <div class="mask" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 100; background-color: rgba(0, 0, 0, 0.8);"></div>
             <div class="layer-wrap" style="margin-top: -355px; margin-left: -510px; position: fixed;" tabindex="0"><div class="popwrap">
     <div class="sect-layerplayer">
         <div class="cols-pop-player">
-            <h1 class="title" id="movie_player_popup_title"><span class="ico-trailer hd">HD</span>[355]TEAM ‘355’ 어셈블 캐릭터 영상</h1>
+            <h1 class="title" id="movie_player_popup_title"><span class="ico-trailer hd">HD</span>[언차티드]파이널 예고편</h1>
             <div class="col-pop-player">
                 <div class="warp-pop-player" style="position: relative;">
-                    <iframe id="ifrm_movie_player_popup" name="ifrm_movie_player_popup" src="/common/player/?autoplay=true&amp;path=http%3A//h.vod.cgv.co.kr%3A80/vodCGVa/85595/85595_200129_1200_128_960_540.mp4&amp;poster=https%3A//img.cgv.co.kr/Movie/Thumbnail/Trailer/85595/85595200129_1024.jpg" style="width:800px;height:450px;" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+                    <iframe id="ifrm_movie_player_popup" name="ifrm_movie_player_popup" src="video.jsp" style="width:800px;height:450px;" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
 					
 					<div class="sect-replay" style="display:none" id="pop_player_relation_wrap">
-						<button class="btn-replay movie_player_inner_popup" type="button" data-gallery-idx="200129" id="btn_movie_replay">다시보기</button>
+						<button class="btn-replay movie_player_inner_popup" type="button" data-gallery-idx="200114" id="btn_movie_replay">다시보기</button>
 						<!-- 없어지는 영역 -->
 						<div class="wrap-relationmovie" id="pop_player_relation_item_wrap">
 							<strong class="title">관련영상</strong>
-							<ul id="pop_player_relation_movie"><li>     <div class="box-image">         <a href="#" title="메인 예고편 영상보기" class="movie_player_inner_popup" data-gallery-idx="200128">             <span class="thumb-image">                 <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/85595/85595200128_1024.jpg" alt="메인 예고편_트레일러">                 <span class="ico-play">영상보기</span>             </span>         </a>     </div> </li><li>     <div class="box-image">         <a href="#" title="파이널 예고편 영상보기" class="movie_player_inner_popup" data-gallery-idx="200123">             <span class="thumb-image">                 <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/85595/85595200123_1024.jpg" alt="파이널 예고편_트레일러">                 <span class="ico-play">영상보기</span>             </span>         </a>     </div> </li><li>     <div class="box-image">         <a href="#" title="액션 #키워드 영상 영상보기" class="movie_player_inner_popup" data-gallery-idx="200122">             <span class="thumb-image">                 <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/85595/85595200122_1024.jpg" alt="액션 #키워드 영상_트레일러">                 <span class="ico-play">영상보기</span>             </span>         </a>     </div> </li></ul>
+							<ul id="pop_player_relation_movie"><li>     
+							<div class="box-image">         
+							<a href="#" title="메인 예고편 영상보기" class="movie_player_inner_popup" data-gallery-idx="199951">             
+							<span class="thumb-image">                 
+							<img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/85624/85624199951_1024.jpg" alt="메인 예고편_트레일러">                 
+							<span class="ico-play">영상보기</span>             
+							</span>         
+							</a>     
+							</div> 
+							</li>
+							<li>     
+							<div class="box-image">         
+							<a href="#" title="1차 예고편 영상보기" class="movie_player_inner_popup" data-gallery-idx="199662">             
+							<span class="thumb-image">                 
+							<img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/85624/85624199662_1024.jpg" alt="1차 예고편_트레일러">                 
+							<span class="ico-play">영상보기</span>             
+							</span>         
+							</a>     
+							</div> 
+							</li
+							></ul>
 						</div><!-- .wrap-relationmovie -->
 					</div><!-- .sect-replay -->
 					
@@ -367,7 +403,7 @@
                 </div>
             </div><!-- .col-player -->
             <div class="col-pop-playerinfo">
-                <div id="movie_player_popup_movie_info"><div class="box-image">     <a href="/movies/detail-view/?midx=85595" title="355 상세보기 새창">         <span class="thumb-image">             <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85595/85595_185.jpg" alt="355 포스터">             <span class="ico-grade grade-15">15세 이상</span>         </span>     </a>    </div> <div class="box-contents">     <a href="/movies/detail-view/?midx=85595" title="355 상세보기 새창">         <strong class="title">355</strong>     </a>     <span class="txt-info" style="margin-bottom:2px;">         <em class="genre">액션</em>         <span>             <i>2022.02.09</i>             <strong>개봉</strong>                      </span>     </span>      <a class="link-reservation" href="/ticket/?MOVIE_CD=20028772&amp;MOVIE_CD_GROUP=20028772">예매</a>   </div></div>
+                <div id="movie_player_popup_movie_info"><div class="box-image">     <a href="/movies/detail-view/?midx=85624" title="언차티드 상세보기 새창">         <span class="thumb-image">             <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85624/85624_185.jpg" alt="언차티드 포스터">             <span class="ico-grade grade-12">12세 이상</span>         </span>     </a>    </div> <div class="box-contents">     <a href="/movies/detail-view/?midx=85624" title="언차티드 상세보기 새창">         <strong class="title">언차티드</strong>     </a>     <span class="txt-info" style="margin-bottom:2px;">         <em class="genre">액션,&nbsp;어드벤처</em>         <span>             <i>2022.02.16</i>             <strong>개봉</strong>                              <em class="dday">D-3</em>                      </span>     </span>      <a class="link-reservation" href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855">예매</a>   </div></div>
                 <div class="sect-trailer">
                     <strong class="title">신규영상</strong>
                     <ul>
@@ -379,43 +415,10 @@
         <button type="button" class="btn-close">닫기</button>
     </div>
 </div></div>
-            </div>
-            
-            <!-- 슬라이드 자바스크립트로 구현했습니다. -->
-    <script>
-    'use strict'
-        window.onload=function(){
-            let pagenum=0;
-    let item=document.getElementsByClassName('item');
-    let btn=document.getElementById('btn-next');
-    let btnprev=document.getElementById('btn-prev');
-    btnprev.addEventListener('click',prev);
-    btn.addEventListener('click',next);
-    function next(){
-        console.log('next() 실행입니다.');
-        if(pagenum>=item.length-1){
-            item[pagenum].style.display='none';
-            pagenum=0;
-            
-        }
-        item[pagenum].style.display='none';
-        item[pagenum+1].style.display='block';
-        pagenum++;
 
-    }
-    function prev(){
-        console.log('prev() 실행입니다.');
-        if(pagenum<=0){
-            item[pagenum].style.display='none';
-            pagenum=item.length-1;
-        }
-        item[pagenum].style.display='none';
-        item[pagenum-1].style.display='block';
-        pagenum--;
+        </div>
+        
 
-    }
-}
-    </script>
    
             
             <!--  각 저장되어있는 영화별 사진 경로를 반복문으로 가져와야할 것으로 보임 -->
@@ -472,10 +475,13 @@
                 <div class="real-rating">
                     <p class="title">관람일 포함 7일 이내 관람평을 남기시면 <strong>CJ ONE 20P</strong>가 적립됩니다. </p>
                     
-                    <!-- 댓글 기능 구현 -->
-                    <p class="desc"><span><em>26</em> 명의 실관람객이 평가해주셨습니다.</span></p>
+                    <!-- 댓글 기능 구현시작 -->
+                    <p class="desc"><span><em>코멘트 갯수</em> 명의 실관람객이 평가해주셨습니다.</span></p>
                     <div class="wrap_btn">
-                        <a class="link-gradewrite" href="javascript:void(0);"><span>평점작성</span></a><a class="link-reviewwrite" href="/movies/point/my-list.aspx"><span>내 평점</span></a>
+                        <a class="link-gradewrite" href="javascript:void(0);">
+                        <span>평점작성</span></a>
+                        <a class="link-reviewwrite" href="/movies/point/my-list.aspx">
+                        <span>내 평점</span></a>
                     </div>
                 </div>
                 <!-- //preegg.css 연관 UI -->
@@ -486,35 +492,111 @@
                                 
                 <div class="wrap-persongrade">
                     <!-- 평점 목록 -->
-                    <!--  댓글기능 뜨는부분, 수정중입니다. -->
+                    
                     <ul id="movie_point_list_container" class="point_col2">
+                    <!--  댓글기능 뜨는부분 각 유저 이미지를 넣어야하는데 이미지는 빼는 것이 어떨까요? li 반복하면 됨-->
                     	<li class="" id="liCommentFirst32284541" data-spoilercnt="0" data-reportcnt="0">      
                     		<a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     
-                    		<div class="box-image">         
-                    		<span class="thumb-image">                    
-                    		<img src="https://img.cgv.co.kr/MyCGV/Profile/2019/0619/junautogt2_094036_M.jpg" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">
-                    		<span class="profile-mask"></span>                 
-                    		<div class="theater-sticker"></div>
-                    		</span>     
-                    		</div>      
+                    			<!-- <div class="box-image">         
+                    				<span class="thumb-image">                    
+                    					<img src="./img/1.jpg" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">
+                    					<span class="profile-mask"></span>                 
+                    					<div class="theater-sticker"></div>
+                    				</span>     
+                    			</div>     -->  
                     		<div class="box-contents">
                     		<ul class="writerinfo">
                     		<li class="writer-name">
                     		<a href="#select_main" class="commentMore" data-moreuserid="junautogt2" data-moreuseridnicname="TG330" onclick="getPopList1('junautogt2', 'TG330')" ;="">             
-                    		<span class=" egg-icon good "></span>TG330</a>         
+                    			<span class=" egg-icon good "></span>userid</a>         
                     		</li>         
                     		<li class="writer-etc">
-                    		<span class="day">2022.02.08</span>
+                    		<span class="day">date</span>
                     		<span class="like point_like" id="junautogt232284541" data-ismygood="false" data-commentidx="32284541">
                     		<a href="javascript:return false;" class="btn_point_like">
                     		<span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span>
-                    		<span id="idLikeValue">3</span></a></span>
-                    		</li><li class="point_notify"><a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>
-                    		<div class="notify_wrap"><ul><li>
-                    		<a href="javascript:return false;" class="ico_spoiler" data-commentidx="32284541" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="32284541" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>극장판 주술회전 0 A3 L 화일</p>     </div>                              </li><li class="" id="liCommentFirst32284055" data-spoilercnt="0" data-reportcnt="0">      <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     <div class="box-image">         <span class="thumb-image">                    <img src="http://img.cgv.co.kr/R2014/images/common/default_profile.gif" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                                             <span class="profile-mask">                 </span>                 <div class="theater-sticker">                                                           </div>                                                              </span>     </div>      <div class="box-contents">         <ul class="writerinfo">              <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="lllksalll" data-moreuseridnicname="ll**salll" onclick="getPopList1('lllksalll', 'll**salll')" ;="">             <span class=" egg-icon good "></span>ll**salll</a>         </li>         <li class="writer-etc">                    <span class="day">2022.02.08</span>     <span class="like point_like" id="lllksalll32284055" data-ismygood="false" data-commentidx="32284055">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">7</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="32284055" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="32284055" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>이미 원작을 접했기 때문에 어느정도 예상하고 관람했지만 bgm에서 소름돋고 전투씬에서 숨쉬는법 까먹고 크레딧 올라가는거 보면서 이건 꼭 포디, 아맥으로도 봐야한다고 생각할 정도로 재밌었다.</p>     </div>                              </li><li class="" id="liCommentFirst32282935" data-spoilercnt="0" data-reportcnt="0">      <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     <div class="box-image">         <span class="thumb-image">                    <img src="https://img.cgv.co.kr/MyCGV/Profile/2017/0712/ysholicc_102552_M.jpg" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                                             <span class="profile-mask">                 </span>                 <div class="theater-sticker">                                                           </div>                                                              </span>     </div>      <div class="box-contents">         <ul class="writerinfo">              <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="ysholicc" data-moreuseridnicname="gretelious" onclick="getPopList1('ysholicc', 'gretelious')" ;="">             <span class=" egg-icon good "></span>gretelious</a>         </li>         <li class="writer-etc">                    <span class="day">2022.02.07</span>     <span class="like point_like" id="ysholicc32282935" data-ismygood="false" data-commentidx="32282935">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">22</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="32282935" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="32282935" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>진짜 최고 고죠 얼굴만 봐도 영화값 나옵니다</p>     </div>                              </li><li class="" id="liCommentFirst32282895" data-spoilercnt="0" data-reportcnt="0">      <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     <div class="box-image">         <span class="thumb-image">                    <img src="https://img.cgv.co.kr/MyCGV/Profile/2019/0722/euna9612_070237_M.jpg" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                                             <span class="profile-mask">                 </span>                 <div class="theater-sticker">                                                           </div>                                                              </span>     </div>      <div class="box-contents">         <ul class="writerinfo">              <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="euna9612" data-moreuseridnicname="스딱구" onclick="getPopList1('euna9612', '스딱구')" ;="">             <span class=" egg-icon good "></span>스딱구</a>         </li>         <li class="writer-etc">                    <span class="day">2022.02.07</span>     <span class="like point_like" id="euna961232282895" data-ismygood="false" data-commentidx="32282895">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">7</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="32282895" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="32282895" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>진짜 존잼... 사운드랑 액션 때문에 더 흥미 진진하게 봤어요ㅠㅠ😆😆💗</p>     </div>                              </li><li class="" id="liCommentFirst32282767" data-spoilercnt="0" data-reportcnt="0">      <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     <div class="box-image">         <span class="thumb-image">                    <img src="https://img.cgv.co.kr/MyCGV/Profile/2019/0416/dooly251_105545_M.jpg" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                                             <span class="profile-mask">                 </span>                 <div class="theater-sticker">                                                           </div>                                                              </span>     </div>      <div class="box-contents">         <ul class="writerinfo">              <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="dooly251" data-moreuseridnicname="조슝슝" onclick="getPopList1('dooly251', '조슝슝')" ;="">             <span class=" egg-icon good "></span>조슝슝</a>         </li>         <li class="writer-etc">                    <span class="day">2022.02.07</span>     <span class="like point_like" id="dooly25132282767" data-ismygood="false" data-commentidx="32282767">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">8</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="32282767" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="32282767" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>어우 엄청 액션이 미쳤네요, 애들 왤케 다 이쁘게 나오죠ㅠㅠ 엔차달립니다</p>     </div>                              </li><li class="" id="liCommentFirst32279251" data-spoilercnt="0" data-reportcnt="0">      <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     <div class="box-image">         <span class="thumb-image">                    <img src="https://img.cgv.co.kr/MyCGV/Profile/2016/0225/didtls115_095519_M.jpg" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                                             <span class="profile-mask">                 </span>                 <div class="theater-sticker">                                                           </div>                                                              </span>     </div>      <div class="box-contents">         <ul class="writerinfo">              <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="didtls115" data-moreuseridnicname="영화보는서리냥냥" onclick="getPopList1('didtls115', '영화보는서리냥냥')" ;="">             <span class=" egg-icon good "></span>영화보는서리냥냥</a>         </li>         <li class="writer-etc">                    <span class="day">2022.02.05</span>     <span class="like point_like" id="didtls11532279251" data-ismygood="false" data-commentidx="32279251">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">9</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="32279251" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="32279251" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>작화가 너무 좋음💦</p>     </div>                              </li></ul>
-                </div>
+                    		<span id="idLikeValue">좋아요 횟수</span></a></span>
+                    		</li>
+                    		</ul>     
+							</div>     
+							<div class="box-comment">        
+							<p>comment</p>     
+							</div>                             
+					</li>
+
+					
+				</ul>
+				</div>
             </div><!-- .sect-grade -->
-                     
+            
+            <!-- 댓글 달기 기능 -->
+                     <div class="layer-wrap comment" style="margin-top: -208px; margin-left: -355px; position: fixed; display: none;" tabindex="0">
+                     <div class="layer-contents on-shadow" style="width:710px;">
+		<div class="popup-general">
+			<div class="popwrap">
+				<h1>평점작성</h1>
+				<div class="pop-contents write-mygrade">
+
+					<div class="mygrade-cont">
+						<div class="movietit"><strong id="regTitle">영화제목</strong></div>
+						<div class="likeornot">
+							<div class="writerinfo">
+								<div class="box-image">
+									<span class="thumb-image">   
+										<img id="regUserPro" src="http://img.cgv.co.kr/R2014/images/common/default_profile.gif" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                            
+										
+                                        <span class="profile-mask"></span>
+									</span>
+								</div>
+							
+								<span class="round red on"><span class="position"><em class="see">실관람객</em></span></span>
+								<span class="writer-name" id="regUserName">닉네임</span>
+							</div>
+
+							<div class="likebox t1 on" id="defaultEggPoint">
+								<div class="likebox-inner">
+									<label for="likeornot1-1">
+										<span class="egg-icon good">
+											<input type="radio" name="likeornot1" id="likeornot1-1" value="2">
+										</span>
+										<span class="txt">좋았어요~^^</span>
+									</label>
+								</div>
+							</div>
+							<div class="likebox t2" id="notEggPoint">
+								<div class="likebox-inner">
+									<label for="likeornot1-2">
+										<span class="egg-icon">
+											<input type="radio" name="likeornot1" id="likeornot1-2" value="1">
+										</span>
+										<span class="txt">흠~좀 별로였어요;;;</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="textbox">
+                            <textarea id="textReviewContent" name="textReviewContent" title="영화평점 입력" cols="70" rows="2" maxlength="280" placeholder="운영원칙에 어긋나는 게시물로 판단되는 글은 제재 조치를 받을 수 있습니다."></textarea>
+						</div>
+
+						<div class="footbox">
+							<span class="role">
+								<a id="viewpopup" title="새창" href="javascript:void(0);" target="_blank">운영원칙 <img src="http://img.cgv.co.kr/R2014/images/common/ico/ico-question-mark.png" alt="?"></a>
+							</span>
+							
+							<div class="rbox">
+								<span class="count"><strong id="text_count">0</strong>/280(byte)</span>
+								<button type="button" class="round red on" id="regBtn"><span>작성완료!</span></button>
+							</div>
+						</div>
+
+					</div>
+					
+				</div>
+				<button type="button" class="btn-close" id="regLayerClose">평점작성 팝업 닫기</button>
+			</div>
+		</div>
+	</div></div>
                      
                      <!-- 댓글 개수에 맞춰서 페이징 -->
             <div class="paging">
