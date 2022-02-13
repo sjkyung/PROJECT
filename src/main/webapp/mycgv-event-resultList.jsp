@@ -301,15 +301,15 @@
                 <h2>MY CGV 서브메뉴</h2>
                 <div class="snb">
                     <ul>
-                        <li >
+                        <li>
                             <a href="./mycgv.jsp" title="현재 선택">MY CGV HOME <i></i></a>
                         </li>
 
-                        <li >
+                        <li>
                             <a href="./mycgv-reserve.jsp" >나의 예매내역 <i></i></a>
                         </li>
 
-                        <li>
+                        <li >
                             <a href="./mycgv-cgvPoint.jsp" >CGV 포인트 <i></i></a>
                             <ul>
                                 <li >
@@ -329,45 +329,45 @@
                             <a href="./mycgv-popcorn-store.jsp" >기프트샵<i></i></a>
                             <ul>
                                 <li >
-                                    <a href="./mycgv-popcorn-store.jsp" >내 기프트콘</a>
+                                    <a href="./mycgv-popcorn-store.jsp" title="현재 선택">내 기프트콘</a>
                                 </li>
-                                <li >
+                                <li>
                                     <a href="./mycgv-popcorn-store-paymentList.jsp" >결제내역</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li >
-                            <a href="/user/mycgv/myinfo/?g=1" >회원정보<i></i></a>
+                            <a href="./mycgv-myinfo.jsp" >회원정보<i></i></a>
                             <ul>
 
                                 <li >
-                                    <a href="/user/mycgv/myinfo/edit-myinfo-cjone.aspx?g=1" >개인정보 변경</a>
+                                    <a href="./mycgv-myinfo-edit-myinfo.jsp" >개인정보 변경</a>
                                 </li>
 
                                 <li >
-                                    <a href="/user/mycgv/myinfo/leave-cjone.aspx?g=1" >회원탈퇴</a>
+                                    <a href="./mycgv-myinfo-leavecgv.jsp" >회원탈퇴</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li >
-                            <a href="/user/mycgv/myinfo/edit-myinfo-myprofile.aspx?g=1" >프로필 관리<i></i></a>
+                            <a href="./mycgv-myinfo-edit-myinfo-myprofile.jsp" >프로필 관리<i></i></a>
                         </li>
 
                         <li >
-                            <a href="/user/mycgv/inquiry/qna/list.aspx?g=1" >나의 문의내역 <i></i></a>
+                            <a href="./mycgv-qna-list.jsp" >나의 문의내역 <i></i></a>
                             <ul>
                                 <li >
-                                    <a href="/user/mycgv/inquiry/qna/list.aspx?g=1" >1:1 문의</a>
+                                    <a href="./mycgv-qna-list.jsp" >1:1 문의</a>
                                 </li>
                                 <li >
-                                    <a href="/user/mycgv/inquiry/lost/list.aspx?g=1" >분실물 문의</a>
+                                    <a href="./mycgv-lost-list.jsp" >분실물 문의</a>
                                 </li>
                             </ul>
                         </li>
 
-                        <li class="my-event"><a href="/user/movielog/watched.aspx">내가 본 영화</a></li>
+                        <li class="my-event"><a href="./mycgv-movielog-watched.jsp">내가 본 영화</a></li>
                     </ul>
 
                 </div>

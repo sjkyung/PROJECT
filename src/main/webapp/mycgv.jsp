@@ -311,7 +311,7 @@
                                 <a href="./mycgv.jsp" title="현재 선택">MY CGV HOME <i></i></a>
                             </li>
 
-                            <li >
+                            <li>
                                 <a href="./mycgv-reserve.jsp" >나의 예매내역 <i></i></a>
                             </li>
 
@@ -335,45 +335,45 @@
                                 <a href="./mycgv-popcorn-store.jsp" >기프트샵<i></i></a>
                                 <ul>
                                     <li >
-                                        <a href="./mycgv-popcorn-store.jsp" >내 기프트콘</a>
+                                        <a href="./mycgv-popcorn-store.jsp" title="현재 선택">내 기프트콘</a>
                                     </li>
-                                    <li >
+                                    <li>
                                         <a href="./mycgv-popcorn-store-paymentList.jsp" >결제내역</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li >
-                                <a href="/user/mycgv/myinfo/?g=1" >회원정보<i></i></a>
+                                <a href="./mycgv-myinfo.jsp" >회원정보<i></i></a>
                                 <ul>
 
                                     <li >
-                                        <a href="/user/mycgv/myinfo/edit-myinfo-cjone.aspx?g=1" >개인정보 변경</a>
+                                        <a href="./mycgv-myinfo-edit-myinfo.jsp" >개인정보 변경</a>
                                     </li>
 
                                     <li >
-                                        <a href="/user/mycgv/myinfo/leave-cjone.aspx?g=1" >회원탈퇴</a>
+                                        <a href="./mycgv-myinfo-leavecgv.jsp" >회원탈퇴</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li >
-                                <a href="/user/mycgv/myinfo/edit-myinfo-myprofile.aspx?g=1" >프로필 관리<i></i></a>
+                                <a href="./mycgv-myinfo-edit-myinfo-myprofile.jsp" >프로필 관리<i></i></a>
                             </li>
 
                             <li >
-                                <a href="/user/mycgv/inquiry/qna/list.aspx?g=1" >나의 문의내역 <i></i></a>
+                                <a href="./mycgv-qna-list.jsp" >나의 문의내역 <i></i></a>
                                 <ul>
                                     <li >
-                                        <a href="/user/mycgv/inquiry/qna/list.aspx?g=1" >1:1 문의</a>
+                                        <a href="./mycgv-qna-list.jsp" >1:1 문의</a>
                                     </li>
                                     <li >
-                                        <a href="/user/mycgv/inquiry/lost/list.aspx?g=1" >분실물 문의</a>
+                                        <a href="./mycgv-lost-list.jsp" >분실물 문의</a>
                                     </li>
                                 </ul>
                             </li>
 
-                            <li class="my-event"><a href="/user/movielog/watched.aspx">내가 본 영화</a></li>
+                            <li class="my-event"><a href="./mycgv-movielog-watched.jsp">내가 본 영화</a></li>
                         </ul>
 
                     </div>
@@ -444,10 +444,6 @@
                                 $('.pop_corp_session').removeClass('on');
                             });
 
-                            //스페셜기프트 임시 알럿 2015.03.12
-//        $('.sp_gift').click(function(){
-//            alert('준비 중입니다');
-//        });
                         });
 
                         //팝업 창 가운데로 뜨도록
@@ -477,7 +473,7 @@
                                 </a>
                             </div>
                             <div class="box-inner watched" style="height: 120px">
-                                <a href="http://www.cgv.co.kr/user/movielog/watched.aspx" title="내가 본 영화" style="margin-top: -35px">
+                                <a href="./mycgv-movielog-watched" title="내가 본 영화" style="margin-top: -35px">
                                     <img src="css/mycgvMovieIcon.png" alt="CGV" />
                                     <h3>내가 본 영화</h3>
                                     <span>관람한 영화들을 한번에 <br />모아 보고 싶다면?</span>
@@ -573,17 +569,7 @@
                     <!-- MY 참여이력 -->
                     <div class="sect-mycgv-part">
                         <div class="box-polaroid type1">
-                            <!--  <div class="box-inner">
-                                  <div class="tit-mycgv">
-                                      <h3>MY 참여이벤트</h3>
-                                      <p><em>0건</em> <a href="/user/mycgv/event/">MY 참여이벤트 더보기</a></p>
-                                  </div>
-                                  <div class="col-myevt">
 
-                                          <ol><li>고객님의 이벤트 참여내역이 존재하지 않습니다.</li></ol>
-
-                                  </div>
-                              </div>-->
                             <div class="box-inner">
                                 <div class="tit-mycgv">
                                     <h3>MY Q&amp;A</h3>
@@ -597,34 +583,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- //MY 참여이력 -->
-                    <!-- MY 구매정보 -->
-                    <!-- 비노출 처리 : 20211013
-                    <div class="sect-mycgv-buying">
-                        <div class="box-polaroid">
-                            <div class="box-inner">
-                                <div class="tit-mycgv">
-                                    <h3>MY 구매정보</h3>
-                                    <span>현재 사용하실 수 있는 쿠폰정보입니다. 상품명을 클릭하시면 내역조회페이지로 이동합니다.</span>
-                                </div>
-                                <ul>
-                                    <li class="booth">
-                                        <a href="/user/mycgv/popcorn-store/default.aspx"><strong>내 기프트콘</strong></a>
-                                        <span><em>0</em> 개</span>
-                                    </li>
-                                    <li class="funcon">
-                                        <a href="/user/mycgv/culture-shop/fun-con.aspx"><strong>FUN-CON 기프트콘</strong></a>
-                                        <span><em></em>준비중</span>
-                                    </li>
-                                    <li class="collage">
-                                        <a href="/user/mycgv/culture-shop/movie-collage-passcard/"><strong>무비꼴라쥬 패스카드</strong></a>
-                                        <span><em>0</em> 개</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    //-->
+
                     <form name="targetform" id="targetform" method="post" novalidate="novalidate">
                         <input type="hidden" name="reverse_no" id="reverse_no" />
                     </form>
@@ -640,24 +599,6 @@
 
                         var hotdeal="00";
                         var moviescreenlavel="00";
-
-                        //2020.09.23
-                        //씨네드쉐프 용산, 센텀, 압구정 페이지이동
-                        function theaterMove(theaterCodeN) {
-
-                            if (theaterCodeN == "P013") {
-                                location.href="http://www.cgv.co.kr/theaters/special/show-times.aspx?regioncode=103&theatercode=0013";
-                            }
-                            else if (theaterCodeN == "P004") {
-                                location.href="http://www.cgv.co.kr/theaters/special/show-times.aspx?regioncode=103&theatercode=0089";
-                            }
-                            else if (theaterCodeN == "P001") {
-                                location.href="http://www.cgv.co.kr/theaters/special/show-times.aspx?regioncode=103&theatercode=0040";
-                            }
-                            else {
-                                location.href="http://www.cgv.co.kr/theaters/?theaterCode=" + theaterCodeN;
-                            }
-                        }
 
                         function noshowYN(N, D, H, L, T, C, P) {
                             noshoMovie =N;
@@ -691,9 +632,6 @@
 
                                     return false;
                                 });
-
-
-
 
                                 $('.cancel').on('click', function () {
                                     var photoTicketStatus = $(this).attr('data-status');
@@ -739,7 +677,6 @@
                                             return false;
                                         }
                                     }
-
 
                                     if(noshoMovie =='Y'){
                                         if(nowDate >= movieViewDate){
@@ -997,47 +934,6 @@
     <!-- /Contents Area -->
 </div>
 <!-- E Contaniner -->
-
-<!-- S Popup -->
-<div class="com_pop_wrap">
-    <div class="com_pop_fog"></div>
-</div>
-<div class="pop_wrap">
-    <!-- S > [팝업] 지원 OS 업데이트 유도-->
-    <div id="pop_supportOS" class="popup" style="display:none">
-        <div class="pop_iexp_wrap" style="position:fixed; left:50%; top:50%; width:600px; margin:-165px 0 0 -300px; z-index:1000;">
-            <div class="pi_headline">
-                <img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_headline2.jpg" alt="CGV 홈페이지는 고객님께서 사용중인 MS Windows XP에서 정상적인 서비스 이용이 어려울 수 있으며, OS업데이트를 권장합니다." />
-            </div>
-            <div class="down_app">
-                <p><img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_downtxt.jpg" alt="OS 업데이트가 어려운 경우 모바일앱을 이용하세요!!!" /></p>
-                <a class="btn" href="https://itunes.apple.com/kr/app/id370441190?mt=8" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ios.jpg" alt="Ios down" /></a>
-                <a class="btn" href="https://play.google.com/store/apps/details?id=com.cgv.android.movieapp" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_android.jpg" alt="Android down" /></a>
-            </div>
-            <a class="btn_close">닫기</a>
-        </div>
-    </div>
-    <!-- S > [팝업] 지원 브라우저 다운로드 유도-->
-    <div id="pop_supportBrower" class="popup" style="display:none">
-        <div class="pop_iexp_wrap" style="position:fixed; left:50%; top:50%; width:600px; margin:-265px 0 0 -300px; z-index:1000;">
-            <div class="pi_headline">
-                <img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_headline1.jpg" alt="CGV 홈페이지는 Internet Explorer 9이상에서 최적의 서비스 이용이 가능합니다. IE9 이하 브라우저에서 이용 시 정상적인 서비스 이용이 어려울 수 있으며, 브라우저 업그레이드 하시기를 권장합니다." />
-            </div>
-            <ul class="down_browser">
-                <li><a href="https://www.microsoft.com/ko-kr/edge" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ie.jpg" alt="Internet Explorer 다운받기" /></a></li>
-                <li><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_chrome.jpg" alt="Chrome 다운받기" /></a></li>
-            </ul>
-            <div class="down_app">
-                <p><img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_downtxt.jpg" alt="OS 업데이트가 어려운 경우 모바일앱을 이용하세요!" /></p>
-                <a class="btn" href="https://itunes.apple.com/kr/app/id370441190?mt=8" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ios.jpg" alt="Ios down" /></a>
-                <a class="btn" href="https://play.google.com/store/apps/details?id=com.cgv.android.movieapp " target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_android.jpg" alt="Android down" /></a>
-            </div>
-            <a class="btn_close">닫기</a>
-        </div>
-    </div>
-</div>
-
-<!-- E Popup -->
 
 <!-- S 예매하기 및 TOP Fixed 버튼 -->
 <div class="fixedBtn_wrap">

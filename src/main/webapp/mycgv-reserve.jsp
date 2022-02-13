@@ -66,6 +66,10 @@
     <!--통합결제-->
     <link rel="stylesheet" type="text/css" href="https://img.cgv.co.kr/R2014/css/mypagenew.css" />
 
+    <script type="text/javascript" src="./js/jquery.tmpl.js"></script>
+
+
+
     <!--/각페이지 Header End-->
     <script type="text/javascript">
         //<![CDATA[
@@ -213,13 +217,45 @@
 
                                 <button type="button" id="view_usergrade" class="round black"><span>MY 지난등급이력 보기</span></button>
 
+                                <div class="layer-wrap">
+                                <div id="user_grade" style="width:330px;margin-top:-500px;margin-left:-165px; display: none">
+                                    <h1>VIP 등급 이력</h1>
+                                    <div class="pop-contents">
+                                        <!-- Contents Addon -->
+                                        <div class="sect-my-grade">
+                                            <p><strong>공유</strong> 고객님의 연도별 고객 등급 이력입니다.</p>
+                                            <div class="grade-lst-light scrollbox">
+                                                <table summary="연도별 VIP 세부 등급 이력" id="mytable">
+                                                    <caption>VIP 등급 이력 리스트</caption>
+                                                    <colgroup>
+                                                        <col width="50%">
+                                                        <col width="*">
+                                                    </colgroup>
+                                                    <thead>
+                                                    <tr>
+                                                        <th scope="col">승급 년/월별</th>
+                                                        <th scope="col">등급</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
 
-                                <div class="mycgv_btn_special2">
-                                    <!-- 대구 아이피접속자 중 : 동성로 미가입 고객시 a.special_pop_text 노출/ 가입 고객은 a.special0_pop 노출 부탁드립니다.
-                                        또한 아무 해당 없는 고객에게는 .mycgv_btn_special2 에 클래스 none 추가 부탁드립니다.
-                                        -->
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="tb-desclist">
+                                                <li>- 고객님의 등급은 당해년도 VIP 규정에 따라 부여된 등급입니다</li>
+                                                <li>- 연속 VIP는 전년도와 등급 갱신월이 일치해야 인정됩니다<br />
+                                                    (예. 17년 4월 RVIP의 경우, 18년 4월 RVIP 갱신 시에만 2년 연속 RVIP로 인정되며, 2017년 5월 RVIP 승급 시 17년 5월에 1년 차 RVIP로 인정)</li>
+                                                <li>- 등급이 하락된 경우 하락된 등급의 1년 차로 인정됩니다<br />
+                                                    (예. 17년 4월 SVIP의 경우 18년 4월 VVIP로 등급 하락 시 VVIP 1년 차로 인정)</li>
+                                            </ul>
+                                        </div>
+                                        <!-- //Contents Addon -->
+                                    </div>
+                                    <button type="button">MY 지난 등급 이력 팝업 닫기</button>
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </div>
 
@@ -251,7 +287,7 @@
                             <ul>
                                 <li>
                                     <strong>CGV 사용가능 포인트</strong>
-                                    <span><em class="txt-maroon"><a href="">1,000,000</a></a></em> 점</span>
+                                    <span><em class="txt-maroon"><a href="">1,000,000</a></em> 점</span>
                                 </li>
                                 <li class="tooltip_list cf">
                                     <strong>VIP선정 포인트</strong><a href="" class="mycgv_tooltip"><img src="https://img.cgv.co.kr/R2014/images/common/mycgv_tooltip/ico_tooltip.png" alt="i" /></a>
@@ -300,7 +336,7 @@
                     <h2>MY CGV 서브메뉴</h2>
                     <div class="snb">
                         <ul>
-                            <li >
+                            <li>
                                 <a href="./mycgv.jsp" title="현재 선택">MY CGV HOME <i></i></a>
                             </li>
 
@@ -328,45 +364,45 @@
                                 <a href="./mycgv-popcorn-store.jsp" >기프트샵<i></i></a>
                                 <ul>
                                     <li >
-                                        <a href="./mycgv-popcorn-store.jsp" >내 기프트콘</a>
+                                        <a href="./mycgv-popcorn-store.jsp" title="현재 선택">내 기프트콘</a>
                                     </li>
-                                    <li >
+                                    <li>
                                         <a href="./mycgv-popcorn-store-paymentList.jsp" >결제내역</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li >
-                                <a href="/user/mycgv/myinfo/?g=1" >회원정보<i></i></a>
+                                <a href="./mycgv-myinfo.jsp" >회원정보<i></i></a>
                                 <ul>
 
                                     <li >
-                                        <a href="/user/mycgv/myinfo/edit-myinfo-cjone.aspx?g=1" >개인정보 변경</a>
+                                        <a href="./mycgv-myinfo-edit-myinfo.jsp" >개인정보 변경</a>
                                     </li>
 
                                     <li >
-                                        <a href="/user/mycgv/myinfo/leave-cjone.aspx?g=1" >회원탈퇴</a>
+                                        <a href="./mycgv-myinfo-leavecgv.jsp" >회원탈퇴</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li >
-                                <a href="/user/mycgv/myinfo/edit-myinfo-myprofile.aspx?g=1" >프로필 관리<i></i></a>
+                                <a href="./mycgv-myinfo-edit-myinfo-myprofile.jsp" >프로필 관리<i></i></a>
                             </li>
 
                             <li >
-                                <a href="/user/mycgv/inquiry/qna/list.aspx?g=1" >나의 문의내역 <i></i></a>
+                                <a href="./mycgv-qna-list.jsp" >나의 문의내역 <i></i></a>
                                 <ul>
                                     <li >
-                                        <a href="/user/mycgv/inquiry/qna/list.aspx?g=1" >1:1 문의</a>
+                                        <a href="./mycgv-qna-list.jsp" >1:1 문의</a>
                                     </li>
                                     <li >
-                                        <a href="/user/mycgv/inquiry/lost/list.aspx?g=1" >분실물 문의</a>
+                                        <a href="./mycgv-lost-list.jsp" >분실물 문의</a>
                                     </li>
                                 </ul>
                             </li>
 
-                            <li class="my-event"><a href="/user/movielog/watched.aspx">내가 본 영화</a></li>
+                            <li class="my-event"><a href="./mycgv-movielog-watched.jsp">내가 본 영화</a></li>
                         </ul>
 
                     </div>
@@ -465,7 +501,7 @@
                     <div class="tit-mycgv type2">
                         <h3>나의 예매내역</h3>
                         <p>지난 <em>1개월</em>까지의 예매내역을 확인하실 수 있으며, 영수증은 <em>신용카드 결제 내역</em>만 출력 가능합니다.</p>
-                        <a href="/user/movielog/watched.aspx" class="round inblack"><span>내가 본 영화</span></a>
+                        <a href="./mycgv-movielog-watched.jsp" class="round inblack"><span>내가 본 영화</span></a>
                     </div>
                     <input type="hidden" id="isIPIN" name="isIPIN" value="X8SFHrwIiO4jqLNbZjk1G51O01dZkw/3CEUATilV+Iq2ewdWF/B4UX0H9gp0Cqy/xlI7Hp1rldS6F9vGSuooaQ==" />
                     <!-- 팝업시작 -->
@@ -1879,49 +1915,7 @@
 
                 </div>
             </div>
-            <script id="temp_view_usergrade" type="text/x-jquery-tmpl">
 
-<div class="popwrap" style="width:330px;margin-top:-500px;margin-left:-165px">
-
-						<h1>VIP 등급 이력</h1>
-						<div class="pop-contents">
-						<!-- Contents Addon -->
-							<div class="sect-my-grade">
-								<p><strong>김태훈</strong> 고객님의 연도별 고객 등급 이력입니다.</p>
-								<div class="grade-lst-light scrollbox">
-									<table summary="연도별 VIP 세부 등급 이력" id="mytable">
-										<caption>VIP 등급 이력 리스트</caption>
-										<colgroup>
-											<col width="50%">
-											<col width="*">
-										</colgroup>
-										<thead>
-											<tr>
-												<th scope="col">승급 년/월별</th>
-												<th scope="col">등급</th>
-											</tr>
-										</thead>
-										<tbody>
-
-										</tbody>
-									</table>
-								</div>
-								<ul class="tb-desclist">
-									<li>- 고객님의 등급은 당해년도 VIP 규정에 따라 부여된 등급입니다</li>
-									<li>- 연속 VIP는 전년도와 등급 갱신월이 일치해야 인정됩니다<br />
-									(예. 17년 4월 RVIP의 경우, 18년 4월 RVIP 갱신 시에만 2년 연속 RVIP로 인정되며, 2017년 5월 RVIP 승급 시 17년 5월에 1년 차 RVIP로 인정)</li>
-									<li>- 등급이 하락된 경우 하락된 등급의 1년 차로 인정됩니다<br />
-									(예. 17년 4월 SVIP의 경우 18년 4월 VVIP로 등급 하락 시 VVIP 1년 차로 인정)</li>
-								</ul>
-
-
-							</div>
-						<!-- //Contents Addon -->
-						</div>
-						<button type="button" class="btn-close">MY 지난 등급 이력 팝업 닫기</button>
-					</div>
-
-</script>
             <script type="text/javascript">
                 //<![CDATA[
                 (function ($) {
@@ -1937,38 +1931,48 @@
                             win.focus();
                         });
 
+                        <!--MY 지난등급 이력보기 스크립트-->
+
                         $('#view_usergrade').on('click', function () {
-                            GetUserGradeList(this);
-                            return false;
+                            var usergrade = document.getElementById("user_grade");
+
+                            if(usergrade.style.display=='none'){
+                                usergrade.style.display = '';
+                            }else{
+                                usergrade.style.display = '';
+                            }
+
+                            // var popup = window.open('http://www.naver.com', '네이버팝업', 'width=700px,height=800px,scrollbars=yes');
+
                         });
 
-                        function GetUserGradeList(_this) {
-
-                            var url = '/common/ajax/user.aspx/GetUserGradeList_2017';
-                            var data = null;
-                            var callback = function (result) {
-                                app.log(result);
-
-                                var $std = $(_this),
-                                    options = {
-                                        '$target': $std,
-                                        'html': $('#temp_view_usergrade').html(),
-                                        'position': 'absolute',
-                                        'mask': 'none'
-                                    };
-                                app.instWin.add(options);
-
-                                var $tbody = $('#mytable > tbody:last'),
-                                    $tr1 = $('#tempUserGradeTbodyTr1')
-                                //  $tr2 = $('#tempUserGradeTbodyTr2');
-                                $.each(result, function (i, v) {
-
-                                    $tbody.append("<tr><th scope='row'>" + v.YearMonthSub + "년" + v.MonthSub + "월" + "</th><td>" + v.GradeCode + "</td></tr>");
-
-                                });
-                            }
-                            app.ajax().get({ dataType: 'json', url: url, data: data, contentType: "application/json; charset=utf-8", successHandler: callback });
-                        }
+                        // function GetUserGradeList(_this) {
+                        //
+                        //     var url = '/common/ajax/user.aspx/GetUserGradeList_2017';
+                        //     var data = null;
+                        //     var callback = function (result) {
+                        //         app.log(result);
+                        //
+                        //         var $std = $(_this),
+                        //             options = {
+                        //                 '$target': $std,
+                        //                 'html': $('#temp_view_usergrade').html(),
+                        //                 'position': 'absolute',
+                        //                 'mask': 'none'
+                        //             };
+                        //         app.instWin.add(options);
+                        //
+                        //         var $tbody = $('#mytable > tbody:last'),
+                        //             $tr1 = $('#tempUserGradeTbodyTr1')
+                        //         //  $tr2 = $('#tempUserGradeTbodyTr2');
+                        //         $.each(result, function (i, v) {
+                        //
+                        //             $tbody.append("<tr><th scope='row'>" + v.YearMonthSub + "년" + v.MonthSub + "월" + "</th><td>" + v.GradeCode + "</td></tr>");
+                        //
+                        //         });
+                        //     }
+                        //     app.ajax().get({ dataType: 'json', url: url, data: data, contentType: "application/json; charset=utf-8", successHandler: callback });
+                        // }
                         //개인화영역스킵
                         $('#skipPersoninfo').on('click', function () {
                             var $ctn = $('#menu');
