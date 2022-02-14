@@ -147,50 +147,22 @@
 
     'use strict'
     window.onload=function(){
-        let pagenum=0;
-let item=document.getElementsByClassName('item');
-let btn=document.getElementById('btn-next');
-let btnprev=document.getElementById('btn-prev');
-btnprev.addEventListener('click',prev);
-btn.addEventListener('click',next);
-function next(){
+    let btnClose=document.getElementsByClassName('btn-close');
+    let count=document.getElementsByClassName('link-count');
+    let wishlist=document.getElementsByClassName('wishlist');
 
-    if(pagenum>=item.length-1){
-        item[pagenum].style.display='none';
-        pagenum=0;
-        
-    }
-    item[pagenum].style.display='none';
-    item[pagenum+1].style.display='block';
-    pagenum++;
-
-}
-function prev(){
-
-    if(pagenum<=0){
-        item[pagenum].style.display='none';
-        pagenum=item.length-1;
-    }
-    item[pagenum].style.display='none';
-    item[pagenum-1].style.display='block';
-    pagenum--;
-
+     count[0].addEventListener('click', fnwishlist);
+     function fnwishlist(){
+    	 wishlist[0].style.display='block';
+    	 
+     };
+     btnClose[0].addEventListener('click', wlclose);
+     function wlclose(){
+    	 wishlist[0].style.display='none';
+     };
 }
 
-        
-let boxBtn=document.getElementsByClassName('movie_player_popup');
-let layerpopup=document.getElementsByClassName('layerpopup');
-let btnClose=document.getElementsByClassName('btn-close');
-
-boxBtn[0].addEventListener('click',video);
-btnClose[1].addEventListener('click', videoclose);
-    function video(){
-
-        layerpopup[0].style.display='block';
-        };
-    
-    function videoclose(){
-    	layerpopup[0].style.display='none';
+       
     };
   
     
@@ -322,6 +294,9 @@ let wishlist=document.getElementsByClassName('wishlist');
 </div>
 </div>
 <!-- 실컨텐츠 끝 -->
+
+
+
 
             
             <!--/ Contents End -->
