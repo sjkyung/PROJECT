@@ -1,12 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>guest_login</title>
-
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="Expires" content="-1" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -166,16 +163,335 @@
                 }
             }
         }
-
-        
-
-        //]]>
     </script>
-
 </head>
 <body class="">
+<div class="skipnaiv">
+            <a href="#contents" id="skipHeader">메인 컨텐츠 바로가기</a>
+        </div>
+        <div id="cgvwrap">
+            <!-- S Header
+            Description
+            - class 'nav' 에 class 'active' 추가시 서브메뉴노출
+            - class 'nav' 에 class 'fixed' 추가시 상단고정되며 스타일 변경됨
+         -->
+            <div class="header">
+                <!-- 서비스 메뉴 -->
 
-<%@ include file="header.jsp" %>
+                <div class="header_content">
+                    <div class="contents">
+                        <h1><a href="/"><img src="./css/logoRed.png"
+                                    alt="CGV" /></a><span>CULTUREPLEX</span></h1>
+                        <ul class="memberInfo_wrap">
+                            <!-- Advertisement -->
+
+                            <div class="ad-partner">
+                                <a href="#none">
+                                    <img src="./css/16417749747880.png"
+                                        alt="현대M포인트" />
+                                </a>
+                            </div>
+                            <!-- /Advertisement -->
+                            <li>
+                                <a href="./login.jsp?">
+                                    <img src="./css/loginPassword.png" alt="로그인" />
+                                    <span>로그인</span></a>
+                            </li>
+                            <li>
+                                <a href="./join.jsp">
+                                    <img src="./css/loginJoin.png" alt="회원가입" />
+                                    <span>회원가입</span>
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="./mycgv.jsp">
+                                    <img src="./css/loginMember.png" alt="MY CGV" />
+                                    <span>MY CGV</span></a>
+                            </li>
+
+                            <li>
+                                <a href="./support.jsp">
+                                    <img src="./css/loginCustomer.png" alt="고객센터" />
+                                    <span>고객센터</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 서비스 메뉴 -->
+
+                <!-- 서브 메뉴 -->
+                <script>
+                    $(document).ready(function() {
+                        $('.nav_menu > li > h2 > a').on({
+                            mouseenter: function(e) {
+                                var target = e.target;
+                                $(target).parents('.nav_menu').find('.nav_overMenu').slideDown(function() {
+                                    $('.nav').addClass('active');
+                                });
+                            },
+                            click: function(e) {
+                                var target = e.target;
+                                if (!$('.nav').hasClass('active')) {
+                                    $(this).trigger('mouseenter');
+                                } else {
+                                    $('.nav').trigger('mouseleave');
+                                }
+                            }
+                        });
+
+                        $('.nav').on({
+                            mouseleave: function(e) {
+                                $(this).find('.nav_overMenu').slideUp(200, function() {
+                                    $('.nav').removeClass('active');
+                                });
+                            }
+                        });
+
+                        $('.totalSearch_wrap input[type=text]').on({
+                            focusin: function() {
+                                $('.totalSearch_wrap').addClass("active");
+                            }
+                        });
+
+                        $('.btn_totalSearchAutocomplete_close').on({
+                            click: function() {
+                                $('.totalSearch_wrap').removeClass("active");
+                            },
+                            focusout: function(e) {
+                                //     $('.totalSearch_wrap').removeClass("active");
+
+                            }
+                        });
+
+                        $(this).on({
+                            scroll: function(e) {
+                                /* S GNB fixed */
+                                var headerOffsetT = $('.header').offset().top;
+                                var headerOuterH = $('.header').outerHeight(true);
+                                var fixedHeaderPosY = headerOffsetT + headerOuterH;
+                                var scrollT = $(this).scrollTop();
+                                var scrollL = $(this).scrollLeft();
+
+                                if (scrollT >= fixedHeaderPosY) {
+                                    $('.nav').addClass('fixed');
+                                    $('.fixedBtn_wrap').addClass('topBtn');
+                                } else {
+                                    $('.nav').removeClass('fixed');
+                                    $('.fixedBtn_wrap').removeClass('topBtn');
+                                }
+
+                                /* S > GNB fixed 좌우 스크롤
+                                Description
+                                - GNB가 fixed 되었을때 좌우 스크롤 되게 처리
+                                */
+                                if ($('.nav').hasClass('fixed')) {
+                                    $('.nav').css({ 'left': -1 * scrollL })
+                                } else {
+                                    $('.nav').css({ 'left': 0 })
+                                }
+                                /* E > GNB fixed 좌우 스크롤 */
+                                /* S GNB fixed */
+                            }
+                        });
+
+                        $('.btn_gotoTop').on({
+                            click: function() {
+                                $('html, body').stop().animate({
+                                    scrollTop: '0'
+                                }, 400);
+                            }
+                        });
+
+                        //통합검색 상단 검색 버튼
+                        $('#btn_header_search').on('click', function() {
+                            if ($('#header_ad_keyword').val() != "")
+                                goSearch($('#header_ad_keyword'));      //광고
+                            else
+                                goSearch($('#header_keyword'));
+
+                            return false;
+                        });
+
+                        //통합검색 검색어 입력창
+                        $('#header_keyword').keyup(function(e) {
+                            if (e.keyCode == 13) goSearch($('#header_keyword'));
+                        });
+
+                    });
+
+                    //통합검색
+                    function goSearch($objKeyword) {
+
+                        if ($objKeyword.val() == "") {
+                            alert("검색어를 입력해 주세요");
+                            $objKeyword.focus();
+                            return false;
+                        }
+
+                        location = "/search/?query=" + escape($objKeyword.val());
+                    }
+                    //비즈스프링 클릭로그
+                    function setClickLog(title) {
+                        // eval("try{trk_clickTrace('EVT', '" + title + "')}catch(_e){}");
+                    }
+
+                </script>
+
+                <div class="nav">
+                    <div class="contents">
+                        <h1><a href="/" tabindex="-1"><img
+                                    src="./css/logoWhite.png" alt="CGV" /></a>
+                        </h1>
+                        <ul class="nav_menu">
+                            <li>
+                                <h2><a href="./movies.jsp">영화</a></h2>
+                                <dl class="nav_overMenu">
+                                    <dt>
+                                        <h2><a href="./movies.jsp" tabindex="-1">영화</a></h2>
+                                    </dt>
+                                    <dd>
+                                        <h3><a href="./movies.jsp">무비차트</a></h3>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <h2><a href="../theaters.jsp">극장</a></h2>
+                                <dl class="nav_overMenu">
+                                    <dt>
+                                        <h2><a href="./theaters.jsp" tabindex="-1">극장</a></h2>
+                                    </dt>
+                                    <dd>
+                                        <h3><a href="./theaters.jsp">CGV 극장</a></h3>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <h2><a href="./ticket.jsp"><strong>예매</strong></a></h2>
+                                <dl class="nav_overMenu">
+                                    <dt>
+                                        <h2><a href="./ticket.jsp" tabindex="-1">예매</a></h2>
+                                    </dt>
+                                    <dd>
+                                        <h3><a href="./ticket.jsp">빠른예매</a></h3>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <h2><a href="./popcorn-store.jsp">스토어</a></h2>
+                                <dl class="nav_overMenu">
+                                    <dt>
+                                        <h2><a href="./popcorn-store.jsp" tabindex="-1">스토어</a></h2>
+                                    </dt>
+
+                                    <dd>
+                                        <h3><a
+                                                href="./store-category.jsp?CategoryIdx=2">영화관람권</a>
+                                        </h3>
+                                    </dd>
+
+                                    <dd>
+                                        <h3><a
+                                                href="./store-category.jsp?CategoryIdx=3">기프트카드</a>
+                                        </h3>
+                                    </dd>
+
+                                    <dd>
+                                        <h3><a
+                                                href="./store-category.jsp?CategoryIdx=4">콤보</a>
+                                        </h3>
+                                    </dd>
+
+                                    <dd>
+                                        <h3><a
+                                                href="./store-category.jsp?CategoryIdx=5">팝콘</a>
+                                        </h3>
+                                    </dd>
+
+                                    <dd>
+                                        <h3><a
+                                                href="./store-category.jsp?CategoryIdx=6">음료</a>
+                                        </h3>
+                                    </dd>
+
+                                    <dd>
+                                        <h3><a
+                                                href="./store-category.jsp?CategoryIdx=7">스낵</a>
+                                        </h3>
+                                    </dd>
+
+                                    <dd>
+                                        <h3><a
+                                                href="./store-category.jsp?CategoryIdx=8">플레이존</a>
+                                        </h3>
+                                    </dd>
+
+                                </dl>
+                            </li>
+                            <li>
+                                <h2><a href="./defaultNew.jsp">이벤트</a></h2>
+                                <dl class="nav_overMenu">
+                                    <dt>
+                                        <h2><a href="./defaultNew.jsp?mCode=001"
+                                                tabindex="-1">이벤트</a></h2>
+                                    </dt>
+                                    <dd>
+                                        <h3><a href="./defaultNew.jsp?mCode=001">SPECIAL</a></h3>
+                                    </dd>
+                                    <dd>
+                                        <h3><a href="./defaultNew.jsp?mCode=004">영화/예매</a></h3>
+                                    </dd>
+                                    <dd>
+                                        <h3><a href="./defaultNew.jsp?mCode=008">멤버십/CLUB</a></h3>
+                                    </dd>
+                                    <dd>
+                                        <h3><a href="./defaultNew.jsp?mCode=005">CGV 극장별</a></h3>
+                                    </dd>
+                                    <dd>
+                                        <h3><a href="./defaultNew.jsp?mCode=006">제휴할인</a></h3>
+                                    </dd>
+                                    <dd>
+                                        <h3><a href="./result_list.jsp">당첨자 발표</a></h3>
+                                    </dd>
+                                    <dd>
+                                        <h3><a href="./end-list.jsp">종료된 이벤트</a></h3>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <h2><a href="./discountlist.jsp">혜택</a></h2>
+                                <dl class="nav_overMenu">
+                                    <dt>
+                                        <h2><a href="./discountlist.jsp" tabindex="-1">혜택</a></h2>
+                                    </dt>
+                                    <dd>
+                                        <h3><a href="./discountlist.jsp">CGV 할인정보</a></h3>
+                                    </dd>
+                                    <dd>
+                                        <h3><a href="./ClubService.jsp">CLUB
+                                                서비스</a></h3>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <div class="totalSearch_wrap">
+                            <label for="totalSearch">
+                                <input type="text" id="header_keyword" value="" />
+                                <input type="hidden" id="header_ad_keyword" name="header_ad_keyword" />
+                            </label>
+                            <button type="button" class="btn_totalSearch" id="btn_header_search">검색</button>
+                            <iframe src="//ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/main@Search_txt" width="0"
+                                height="0" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"
+                                allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen"
+                                msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen"
+                                webkitallowfullscreen="webkitallowfullscreen"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!-- 서브 메뉴 -->
+            </div>
+            <!-- E Header -->
 
 	<!-- Contaniner -->
 	<div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
@@ -189,145 +505,54 @@
 			
 
 <!-- 실컨텐츠 시작 -->
-<div class="wrap-login">
-    <div class="sect-user">
-        <ul class="tab-menu-round">
-            <li>
-                <a href="./login.jsp">로그인</a>
-            </li>
-            <li>
-                <a href="./login-agreement.jsp">비회원 예매</a>
-            </li>
-            <li class="on">
-                <a href="./guest_login.jsp">비회원 예매확인</a>
-            </li>
-        </ul>
-        <h3>비회원 예매 확인</h3>
-        <p>비회원으로 예매하신 고객님은 개인정보(법정생년월일, 휴대폰 번호, 비밀번호(4자리)를 입력해 주세요.</p>
-        <div class="cols-enterform nomember">
-            <div class="col-simple">
-                <h4>비회원 예매확인</h4>
-                <div class="box-simple">
-                    <p class="disc-info">모든 항목은 필수 입력사항입니다.</p>
-                    <form id="form1" method="post" novalidate="novalidate" action="">
-                    <fieldset>
-                        <legend>비회원로그인 정보를 입력후 로그인 하실수 있습니다.</legend>
-                        <table cellpadding="0" cellspacing="0" summary="비회원예매확인/취소를 하기위해 정보를 입력하는 테이블 입니다">
-                            <caption>법정생년월일, 휴대폰번호, 비밀번호(4자리) 입력하는 테이블</caption>
-                            <colgroup>
-                                <col class="col01" />
-                                <col class="col02" />
-                            </colgroup>
-                            <tbody>
-                            <tr><!--20201207 woongseon ISMS 개인정보 부분 미흡 사항 개선 요청 추가-->
-                                <th scope="row" style="text-align:left"><label for="txtBirthday">법정생년월일<br /><em>(8자리) </em></label></th>
-                                <td style="text-align:left"><input type="text" class="only-number" title="법정생년월일(8자리)" data-title="법정생년월일(8자리)" data-message="을 입력해주세요."
-                                    name="txtBirthday" id="txtBirthday" digits="digits" length="8" maxlength="8" required="required" /></td>
-                            </tr>
-                            <tr>
-                                <th scope="row" style="text-align:left">휴대폰번호</th>
-                                <td style="text-align:left">
-                                    <select title="휴대폰번호 앞자리" name="txtMobile1" id="txtMobile1">
-                                        <option value="010">010</option>
-                                        <option value="011">011</option>
-                                        <option value="016">016</option>
-                                        <option value="017">017</option>
-                                        <option value="018">018</option>
-                                        <option value="019">019</option>
-                                    </select>
-                                    -
-                                    <input type="text" class="only-number" style="width:85px;" title="휴대폰번호 중간자리" data-title="휴대폰번호 중간자리" data-message="를 입력해주세요."
-                                        name="txtMobile2" id="txtMobile2" digits="digits" length="4" maxlength="4" required="required" />
-                                    -
-                                    <input type="text" class="only-number" style="width:85px;" title="휴대폰번호 끝자리" data-title="휴대폰번호 끝자리" data-message="를 입력해주세요."
-                                        name="txtMobile3" id="txtMobile3" digits="digits" length="4" maxlength="4" required="required" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row" style="text-align:left"><label for="txtPassword">비밀번호(4자리)</em></label></th>
-                                <td style="text-align:left"><input type="password" class="only-number" title="비밀번호(4자리)" data-title="비밀번호(4자리)" data-message="를 입력해주세요." 
-                                    name="txtPassword" id="txtPassword" digits="digits" length="4" maxlength="4" required="required" /></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <div class="box-btn">
-	                        <button type="submit" class="round inred" id="btn_submit"><span>비회원 예매확인</span></button>
-                        </div>
-                    </fieldset>
-                    </form>
-                </div>
-            </div>
-            <div class="col-confirm">
-                <h4>비회원 예매 비밀번호 찾기</h4>
-                <div class="box-confirm">
-                    <p class="disc-info">비회원 예매 시, 입력한 휴대폰번호로 SMS인증을 하면 비회원 예매 비밀번호를 찾으실수 있습니다.</p>
-                    <div class="confirm-type">
-                        <a href="find-pw.aspx" class="round black"><span>휴대폰 SMS인증으로 찾기</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
-    <div class="sect-loginguide">
-        <dl class="box-operationguide">
-            <dt>비회원 <br />예매 시 <br />참고하세요!</dt>
-            <dd>1.  상기 정보 수집에 동의하지 않을 경우, 비회원 예매 서비스를 이용하실 수 없습니다. </dd>
-            <dd>2.  비회원 예매 시 청소년 관람불가 영화는 예매가 제한됩니다. </dd>
-            <dd>3.  비회원 에매 결제수단은 신용카드만 가능하며 모든 제휴상품권, 쿠폰, 영화예매권 등의 사용은 회원 예매 서비스 이용 시 가능합니다. </dd>
-            <dd>4.  모바일과 ARS에서는 취소가 불가능하며, 홈페이지를 이용하여 입력하신 로그인 정보로 취소 처리하실 수 있습니다.</dd>
-            <dd>5.  비회원 예매 및 비회원 예매 확인/취소 메뉴만 이용 가능합니다. 이 외에 커뮤니티, 댓글, 인정 등의 서비스는 회원 가입 후 이용 가능합니다.</dd>
-            <dd>6.  문의사항은 CGV 고객센터(1544-1122)로 문의해 주시기 바랍니다. <br />
-                - 운영시간 : 월~금 09:00 ~ 18:00 (이 외 시간은 자동 응답 안내 가능)</dd>
-        </dl>
-    </div>
+<div class="wrap-join-2016">
+	<div class="join-hd">
+		<h3><img src="http://img.cgv.co.kr/R2014/images/common/img_join_hd.jpg" alt="CGV에 오신걸 환영합니다." /></h3>
+		<p>CGV 회원이 되시면 하나의 통합된 회원 ID와 비밀번호로<br />CGV의 다양한 서비스를 이용하실 수 있습니다.</p>
+        <a href="https://www.cjone.com/cjmweb/join.do?coopco_cd=7010&brnd_cd=1000" target="_blank" title="새창" class="link-join"><span>CGV 회원가입</span></a>
+	</div>
+
+	<div class="join-benefit">
+		<h4>CJ ONE 상세 혜택</h4>
+		<ul class="benefit-list">
+			<li>
+				<h5>기본 적립율</h5>
+				<ul class="bl-dep1">
+					<li>유료 영화관람 금액의 3 ~ 7% 적립</li>
+					<li>매점 결제 금액의 0.5% 적립
+						<ul class="bl-dep2">
+							<li>적립 방법 : 영수증 하단의 적립번호와<br />인증번호를 CGV 홈페이지/모바일에서 입력</li>
+							<li>이벤트 기간중에만 적립 가능<br />(일부매장 제외)</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h5>제휴할인 시 / 적립 가능매장</h5>
+				<ul class="bl-dep1">
+					<li>제휴할인 + 결제금액의 0 ~ 7% 적립</li>
+				</ul>
+			</li>
+			<li>
+				<h5>기타 적립안내 / 포인트 사용단위</h5>
+				<ul class="bl-dep1">
+					<li>단체할인 시, 무비머니, 관람권,<br />상품권 등으로 구매/결제 시 적립 제외</li>
+					<li>최대 1일 6회(현장 또는 온라인) 또는 1일<br />24매(온라인) 예매제한</li>
+					<li>사용 단위
+						<ul class="bl-dep2">
+							<li>매표, 매점 : 500P</li>
+							<li>온라인 예매 : 10P</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p class="bl-desc">※ CJ ONE 통합회원으로 가입되더라도 정보 제공 및 약관 동의가 되지 않은 CJ ONE 제휴 브랜드에는 개인정보가 제공되지 않습니다.</p>
+	</div>
+
+
 </div>
-<!-- 실컨텐츠 끝 -->
-
-<script type="text/javascript" src="https://img.cgv.co.kr/R2014//js/system/crypto.js"></script>
-<script type="text/javascript">
-//<![CDATA[
-
-    (function ($) {
-        $(function () {
-
-            var $frm = $('#form1');
-            $frm.validate({
-                submitHandler: function (form) {
-                    // 1. 비회원 예매갯수 조회
-                    var mobile = app.crypto.AESEncryptToBase64(($frm.find('#txtMobile1').val() + $frm.find('#txtMobile2').val() + $frm.find('#txtMobile3').val()));
-
-                    $.ajax({
-                        type: "POST",
-                        url: '/user/guest/login.aspx/GetReserveCount',
-                        data: "{'birthday':'" + app.crypto.AESEncryptToBase64($('#txtBirthday').val()) + "' , 'mobile':'" + mobile + "', 'pwd':'" + app.crypto.AESEncryptToBase64($('#txtPassword').val()) + "'}",
-                        contentType: "application/json; charset=utf-8",
-                        async: false,
-                        dataType: 'json',
-                        success: function (result) {
-                            switch (result.d.toString()) {
-                                case "0": // 복호화 에러 발생
-                                    break;
-                                case "2": // 예매내역 없음    
-                                    alert("입력하신 정보와 일치하는 예매내역이 없습니다.");
-                                    break;
-                                case "1":
-                                    location.href = "/user/guest/reserve.aspx";
-                                    break;
-                                default:
-                                    //   alert('Error result Value : ' + result);                    
-                                    break;
-                            }
-                        },
-                        error: function (e) {
-                            alert(e.responseText);
-                        }
-                    });
-                }
-            });
-        });
-    })(jQuery);
-//]]>
-</script>
+<!-- 실컨텐츠 끝 --> 
 
 
             
@@ -376,19 +601,8 @@
         </div>
 	</div>
 
-    <!-- E Popup -->
-    
-    <!-- S 예매하기 및 TOP Fixed 버튼 -->
-    <div class="fixedBtn_wrap">
-     
-        <a href="/ticket/" class="btn_fixedTicketing">예매하기</a>
-        
-        <a href="#none" class="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="최상단으로 이동" /></a>
-    </div>
-    
-    <!-- E 예매하기 및 TOP Fixed 버튼 -->
 	
-    <%@ include file="./footer.jsp" %>
+<%@include file = "./footer.jsp"%>    
 
     <!-- Aside Banner :  -->
     <!--
@@ -576,50 +790,5 @@
     }    
     //]]>
 </script>
-
-<!-- 앱다운로드 레이어 팝업 -->
-<script type="text/javascript">
-    //appDownInfoPop();
-</script>
-
-<script language="javascript" type="text/javascript">
-
-    //GA 에널리스트 이벤트LOG 함수- 2022.01.12: MYILSAN
-    function gaEventLog(pCategroy, pAction, pLabel) {
-        ga('send', {
-            hitType: 'event', eventCategory: pCategroy, eventAction: pAction, eventLabel: pLabel
-            , hitCallback: function () {
-            }
-            , hitCallbackFail: function () { 
-            }
-        });
-    }
-
-    //201402 SYH GA추가
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-47126437-1', 'cgv.co.kr'); //지주사
-    ga('create', 'UA-47951671-5', 'cgv.co.kr', { 'name': 'cgvTracker' }); //디마팀
-    ga('create', 'UA-47951671-7', 'cgv.co.kr', { 'name': 'rollup' }); //추가
-
-</script>
-
-
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NNNFR3"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>    (function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({ 'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NNNFR3');
-</script>
-<!-- End Google Tag Manager -->
-
 </body>
 </html>

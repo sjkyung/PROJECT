@@ -39,12 +39,7 @@
                                 </a>
                             </div>
                         </li>
-  
-       
-                        
                         </ul></div>
-   
-
             </div>
         </div>
         <div class="sect-guide">
