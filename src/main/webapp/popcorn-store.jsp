@@ -19,7 +19,7 @@
     </head>
 
     <body>
-        <%@include file = "./header.jsp"%>
+        <%@include file = "header.jsp"%>
 
             <!-- Contaniner -->
             <div id="contaniner" class="">
