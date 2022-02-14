@@ -424,7 +424,7 @@ let wishlist=document.getElementsByClassName('wishlist');
             <!--  각 저장되어있는 영화별 사진 경로를 반복문으로 가져와야할 것으로 보임 -->
             <div id="ctl00_PlaceHolderContent_Section_Still_Cut" class="sect-stillcut">
                 <div class="heading">
-                    <h4>스틸컷</h4><span class="count"><strong id="stillcut_current">1</strong>/	25건</span><a class="link-more" href="still-cut.aspx?midx=85603">더보기</a>
+                    <h4>스틸컷</h4><span class="count"><strong id="stillcut_current">1</strong>/	25건</span><a class="link-more" href="still-cut.jsp">더보기</a>
                 </div>
                 <div class="slider-wrap">
                     <div class="slider" id="still_motion">

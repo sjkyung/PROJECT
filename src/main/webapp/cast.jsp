@@ -38,7 +38,7 @@
   
 
 <meta charset="EUC-KR">
-<title>수정중입니다.</title>
+<title>CAST</title>
 </head>
 <body class="">
 
