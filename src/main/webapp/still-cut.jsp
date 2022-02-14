@@ -160,42 +160,66 @@
      function wlclose(){
     	 wishlist[0].style.display='none';
      };
-}
+     
+     
+     let stillcutPhoto= document.getElementById('stillcutPhoto');
+     let imgclick=document.getElementsByClassName('imgclick');
+     let item=document.getElementsByClassName('item');
+     let btn=document.getElementById('btn-next');
+     let btnprev=document.getElementById('btn-prev');
+     for(let i=0; i<=imgclick.length-1;i++){
+     imgclick[i].addEventListener('click', function(){
+    	 console.log('사진 클릭!');
+    	 console.log(i);
+         stillcutPhoto.style.display='block';
+         item[i].style.display='block';	
 
-       
-    };
-  
+    btnprev.addEventListener('click',prev);
+    btn.addEventListener('click',next);
+    function next(){
+        console.log('next() 실행입니다.');
+        if(i>=item.length-1){
+            item[i].style.display='none';
+            i=0;
+            
+        }
+        item[i].style.display='none';
+        item[i+1].style.display='block';
+        i++;
+    }
+    function prev(){
+        console.log('prev() 실행입니다.');
+        if(i<=0){
+            item[i].style.display='none';
+            i=item.length-1;
+        }else{
+        item[i].style.display='none';
+        item[i-1].style.display='block';
+        i--;
+        }
+        
+
+    }
+        })
+        
+        btnClose[1].addEventListener('click', function(){
+       	 stillcutPhoto.style.display='none';
+         
+     })
+
+
+     }
+
+
+
+        }
+
+
+ 
+     
     
-let count=document.getElementsByClassName('link-count');
-let wishlist=document.getElementsByClassName('wishlist');
 
- count[0].addEventListener('click', fnwishlist);
- function fnwishlist(){
-	 wishlist[0].style.display='block';
-	 
- };
- btnClose[0].addEventListener('click', wlclose);
- function wlclose(){
-	 wishlist[0].style.display='none';
- };
- 
- 
- let gradewrite=document.getElementsByClassName('link-gradewrite');
- let comment=document.getElementsByClassName('comment');
-
-
- gradewrite[0].addEventListener('click', fncomment);
- btnClose[2].addEventListener('click', commentclose);
- 
- function fncomment(){
-	 comment[0].style.display='block';
- }
- function commentclose(){
-	 comment[0].style.display='none';
- };
-
-
-}
+     
         
     </script>
     <span class="like">
@@ -267,24 +291,37 @@ let wishlist=document.getElementsByClassName('wishlist');
                     <h4>스틸컷</h4><span class="count"><span id="spanTotalCount">12</span>건</span>
                 </div>
 `				<div class="curation clear" id="stillcut_list" style="min-height: 700px;">
-					<div style="position: absolute; top: 0px; left: 0px;"><a id="tile_0" href="#">
-					<img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000083/83739/83739199787_727.jpg" alt="나일 강의 죽음" style="height: 371px;"></a></div>
+					<div class="imgclick" style="position: absolute; top: 0px; left: 0px;">
+					<a id="tile_0" href="#">
+					<img src="./img/1.jpg" alt="나일 강의 죽음" style="height: 371px;">
+					</a
+					></div>
 					
-					<div style="position: absolute; top: 0px; left: 270px;"><a id="tile_1" href="#">
-					<img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000083/83739/83739199786_727.jpg" alt="나일 강의 죽음" style="height: 371px;"></a></div>
+					<div class="imgclick" style="position: absolute; top: 0px; left: 270px;">
+					<a id="tile_1" href="#">
+					<img src="./img/2.jpg" alt="나일 강의 죽음" style="height: 371px;">
+					</a>
+					</div>
 					
-					<div style="position: absolute; top: 0px; left: 540px;"><a id="tile_2" href="#">
-					<img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000083/83739/83739199785_727.jpg" alt="나일 강의 죽음" style="height: 371px;"></a></div>
+					<div class="imgclick" style="position: absolute; top: 0px; left: 540px;">
+					<a id="tile_2" href="#">
+					<img src="./img/3.jpg" alt="나일 강의 죽음" style="height: 371px;">
+					</a>
+					</div>
 					
-					<div style="position: absolute; top: 381px; left: 0px;"><a id="tile_3" href="#">
-					<img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000083/83739/83739199784_727.jpg" alt="나일 강의 죽음" style="height: 371px;"></a></div>
 					
-					<div style="position: absolute; top: 381px; left: 270px;"><a id="tile_4" href="#">
-					<img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000083/83739/83739199783_727.jpg" alt="나일 강의 죽음" style="height: 371px;"></a></div>
+					<div class="imgclick" style="position: absolute; top: 381px; left: 0px;">
+					<a id="tile_3" href="#">
+					<img src="./img/4.jpg" alt="나일 강의 죽음" style="height: 371px;">
+					</a>
+					</div>
 					
-					<div style="position: absolute; top: 381px; left: 540px;"><a id="tile_5" href="#">
-					<img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000083/83739/83739199782_727.jpg" alt="나일 강의 죽음" style="height: 371px;"></a></div>
-				 
+					<div class="imgclick" style="position: absolute; top: 381px; left: 270px;">
+					<a id="tile_4" href="#">
+					<img src="./img/5.jpg" alt="나일 강의 죽음" style="height: 371px;">
+					</a>
+					</div>
+					
             </div>
             
             
@@ -294,9 +331,41 @@ let wishlist=document.getElementsByClassName('wishlist');
 </div>
 </div>
 <!-- 실컨텐츠 끝 -->
+<!-- 레이어 팝업 부분 -->
 
+<div id="stillcutPhoto" style="display:none">
+<div class="mask" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 100; background-color: rgba(0, 0, 0, 0.8);"></div>
+<div class="layer-wrap stillcut-viewer" style="margin-top: -253px; margin-left: -490px; position: fixed;">
+	<div class="layer-contents">
+		<div class="slider">
+		<div class="item-wrap">
+			<div class="item" style="width: 980px; height: 506px; display: none;">
+			<img src="./img/1.jpg" alt="undefined"></div>
+			</div>
+			<div class="item-wrap">
+			<div class="item" style="width: 980px; height: 506px; display: none;">
+			<img src="./img/2.jpg" alt="undefined"></div>
+			</div>
+			<div class="item-wrap">
+			<div class="item" style="width: 980px; height: 506px; display: none;">
+			<img src="./img/3.jpg" alt="undefined"></div>
+			</div>
+			<div class="item-wrap">
+			<div class="item" style="width: 980px; height: 506px; display: none;">
+			<img src="./img/4.jpg" alt="undefined"></div>
+			</div>
+			<div class="item-wrap">
+			<div class="item" style="width: 980px; height: 506px; display: none;">
+			<img src="./img/5.jpg" alt="undefined"></div>
+			</div>
+			<button type="button" class="btn-prev" id="btn-prev">이전 페이지 이동</button>
+			<button type="button" class="btn-next" id="btn-next">다음 페이지 이동</button>
+			</div>
+			<button class="btn-close">[팝업제목] 닫기</button>
+	</div>
+</div>
 
-
+</div>
 
             
             <!--/ Contents End -->
