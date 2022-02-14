@@ -88,11 +88,11 @@
 <div class="evt-nav-area">
     <ul class="evt-tab-menu">
         <!-- 활성화 시 a 태그에 on 클래스를 넣어주세요. -->
-        <li><a href="event-defaultNew.jsp?mCode=001" title="" class="on">SPECIAL</a></li>
-        <li><a href="event-defaultNew.jsp?mCode=004" title="" class="">영화/예매</a></li>
-        <li><a href="event-defaultNew.jsp?mCode=008" title="" class="">멤버십/CLUB</a></li>
-        <li><a href="event-defaultNew.jsp?mCode=005" title="" class="">CGV 극장별</a></li>
-        <li><a href="event-defaultNew.jsp?mCode=006" title="" class="">제휴/할인</a></li>        
+        <li><a href="defaultNew.jsp?mCode=001" title="" class="on">SPECIAL</a></li>
+        <li><a href="defaultNew.jsp?mCode=004" title="" class="">영화/예매</a></li>
+        <li><a href="defaultNew.jsp?mCode=008" title="" class="">멤버십/CLUB</a></li>
+        <li><a href="defaultNew.jsp?mCode=005" title="" class="">CGV 극장별</a></li>
+        <li><a href="defaultNew.jsp?mCode=006" title="" class="">제휴/할인</a></li>        
     </ul>    
     <div class="submenu">
         <a href="result_list.jsp" class="round red on"><i>당첨자 발표</i></a>
@@ -241,7 +241,7 @@
             $("#event_theater").val("");
 
             $("#search").on("click", function(){
-                location.href = "event-defaultNew.jsp?mCode=001&menu=0&regioncode=" + $("#event_region").val() + "&theatercode=" + $("#event_theater").val();
+                location.href = "defaultNew.jsp?mCode=001&menu=0&regioncode=" + $("#event_region").val() + "&theatercode=" + $("#event_theater").val();
             });          
 
 
