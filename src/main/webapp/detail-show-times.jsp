@@ -147,7 +147,9 @@
 
     'use strict'
     window.onload=function(){
-    	let btnClose= document.getElementsByClassName('btn-close');
+        
+
+let btnClose=document.getElementsByClassName('btn-close');
 let count=document.getElementsByClassName('link-count');
 let wishlist=document.getElementsByClassName('wishlist');
 
@@ -156,13 +158,27 @@ let wishlist=document.getElementsByClassName('wishlist');
 	 wishlist[0].style.display='block';
 	 
  };
- 
  btnClose[0].addEventListener('click', wlclose);
  function wlclose(){
 	 wishlist[0].style.display='none';
  };
  
- 
+let viewgrade=document.getElementById('viewgrade');
+let viewgradePop= document.getElementsByClassName('viewgradePop');
+
+
+viewgrade.addEventListener('click', fnviewgradePop);
+
+function fnviewgradePop(){
+	viewgradePop[0].style.display='block';
+}
+
+btnClose[1].addEventListener('click', vgclose);
+
+function vgclose(){
+	viewgradePop[0].style.display='none';
+}
+
 
 }
         
@@ -197,7 +213,7 @@ let wishlist=document.getElementsByClassName('wishlist');
                         <span class="sprite_preegg big favor"></span>
                         <span>기대돼요!</span>
                     </a>
-                    <a href="javascript:void(0);" class="btn bad">
+                    <a href="javascript:void(0);" class="btn bad redborder">
                         <span class="sprite_preegg big hate"></span>
                         <span>글쎄요..</span>
                     </a>
@@ -213,143 +229,91 @@ let wishlist=document.getElementsByClassName('wishlist');
     <button type="button" class="btn-close">프리에그 팝업 닫기</button>
 </div>
 </div>
-
 <!-- //위시리스트 팝업 -->
-<div class="cols-content" id="menu">
-            <div class="col-detail">
-                <ul class="tab-menu">
-					<li><a href="detail-view.jsp">주요정보</a></li>
-                    <li class="on"><a title="현재 선택됨"  href="cast.jsp">감독/출연</a></li>
-                    <li><a href="trailer.jsp">트레일러</a></li>
-                    <li><a href="still-cut.jsp">스틸컷</a></li>
-                    <!--
-                    <li><a href="/movies/detail-view/point-review.aspx?midx=85624#menu">평점/리뷰</a></li>
-                    -->
-                    <li><a href="detail-view.jsp">평점/리뷰</a></li>
-                    <li class="last"><a href="detail-show-times.jsp">상영시간표</a></li>
+
+<div class="cols-content">
+        <div class="col-detail" id="menu">
+            <!-- 메뉴가 선택되면 a 에 title="선택" 이라고 넣는다 -->
+            <ul class="tab-menu">
+                <li ><a href="detail-view.jsp">주요정보 </a></li>        
+                <li><a href="cast.jsp">감독/출연</a></li>     
+                <li><a href="trailer.jsp">트레일러</a></li>
+                <li><a href="still-cut.jsp">스틸컷</a></li>
+                <li><a href="detail-view.jsp">평점/리뷰</a></li> <!-- 이부분 아직 cgv에서도 구현 전인것같음. -->              
+                <li class="last on"><a  title="현재 선택됨" href="detail-show-times.jsp">상영시간표</a></li>
+            </ul>
+
+            <div class="descri-info movie-detail">
+                <ul>
+                    <li><a href="#" id="viewgrade" class="viewgrade">관람등급 안내</a></li>
                 </ul>
-                
-                <!-- 감독정보 넣는곳 -->
-                <div class="sect-staff-director">
-                    <div class="heading">
-                        <h4>감독</h4>
-                    </div>
-                    <ul>
-                        
-                        <li class="clear">
-                            <div class="box-image">
-                                <a href="/movies/persons/?pidx=106986">
-                                    <span class="thumb-image">
-                                        <img src="http://image.cine21.com/resize/cine21/person/2013/0329/73459[X120,150].jpg" onerror="errorImage(this)" alt="드니 빌뇌브">
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="box-contents">
-                                <dl>
-                                    <dd>
-                                        <a href="/movies/persons/?pidx=106986">
-                                            드니 빌뇌브
-                                            <span>Denis Villeneuve</span>
-                                        </a>
-                                    </dd>
-                                </dl>
-                            </div>
-                            <!-- 감독 출연 작품 -->
-                            <div class="movielist">
-                                <p>연관작품</p>
-                                <ul>
-                                    
-                                    <li>
-                                        <div class="box-image">
-                                            <a href="/movies/detail-view/?midx=79952">
-                                                <span class="thumb-image">
-                                                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000079/79952/79952_73.jpg" alt="블레이드 러너 2049" onerror="errorImage(this)">
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="box-contents">
-                                            <a href="/movies/detail-view/?midx=79952">
-                                                <strong>블레이드 러너 2049<!--<span>(9999)</span>--></strong>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    
-                                    
-                                </ul>
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </div>
-                <!-- .sect-staff-director -->
-                <!-- 출연진 정보 넣는 곳 -->
-                <div class="sect-staff-actor">
-                    <div class="heading">
-                        <h4>출연</h4>
-                    </div>
-                    <ul>
-                        
-                        <li>
-                            <div class="box-image">
-                                <a href="/movies/persons/?pidx=112579">
-                                    <span class="thumb-image">
-                                        <img src="http://image.cine21.com/resize/cine21/still/2018/1114/11_52_42__5beb8dfa348e4[X120,150].jpg" alt="톰 홀랜드" onerror="errorImage(this)" style="width:100px; height:136px;">
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="box-contents">
-                                <dl>
-                                    <!-- 주연 dt 에 class="mainactor" 조연 class="subactor" 를 넣는다 -->
-                                    <dt class="mainactor">주연</dt>
-                                    <dd>
-                                        <a href="/movies/persons/?pidx=112579">톰 홀랜드<span>Tom Holland</span></a>
-                                    </dd>
-                                </dl>                        
-                            </div>
-                            <!-- 배우별 출연 영화 정보넣는 곳 -->
-                            <div class="movielist">
-                                <p class="txt-title">연관작품</p>
-                                <ul>
-                                    
-                                    <li>
-                                        <div class="box-contents">
-                                            <a title="(스파이더맨: 홈커밍데이)" href="/movies/detail-view/?midx=79801">
-                                                <strong>스파이더맨: 홈커밍데이<span>(2017)</span></strong>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    
-                                    
-                                    
-                                </ul>
-                            </div>
-                        </li>
-                        
-                        
-                    </ul>
-                </div>
-            </div><!-- .col-detail -->
-            
+            </div>
+            <div class="viewgradePop"  style="display:none; position: absolute; top:200px;">
+			<div class="layer-wrap"><div class="layer-contents" style="width: 650px;">
+    			<div class="popwrap">
+       				 <h5>CGV 관람 등급 안내</h5>
+        			<div class="pop-contents">
+           			 <div class="tbl-list">
+                		<table summary="CGV 등급별 관람 안내">
+                    <caption>CGV 관람 등급 안내</caption>
+                    <colgroup>
+                        <col width="136">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">구분</th>
+                            <th scope="col">성명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span class="ico-grade grade-all">전체 관람가</span>전체 관람가</th>
+                            <td>모든 연령의 고객님께서 관람하실 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="ico-grade grade-12">12세 관람가</span>12세 관람가</th>
+                            <td>만 12세 미만의 고객님은 보호자를 동반하셔야 관람하실 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="ico-grade grade-15">15세 관람가</span>15세 관람가</th>
+                            <td>만 15세 미만의 고객님은 보호자를 동반하셔야 관람하실 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="ico-grade grade-19">청소년관람불가</span>청소년관람불가</th>
+                            <td> 만 18세 미만의 고객님은 보호자를 동반하셔도 관람하실 수 없습니다.<br>
+                                - 입장시 신분증을 꼭 지참하시기 바랍니다.<br>
+                                - 만 18세 이상이더라도 고등학교 재학중인 경우 관람이 불가합니다. </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="ico-grade grade-none">미정</span>미정</th>
+                            <td>등급 미정 영화입니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn-close">관람 등급 안내 닫기</button>
+</div></div>
+</div>
 
 
+
+			<!-- 해당 영화 제목값을 넘겨서 해당하는 시간표가 나오도록 함 -->
+            <iframe id="ifrm_movie_time_table" src="showtime.jsp" title="언차티드 상영시간표" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="height: 1000px; min-height: 100px;"></iframe>
+			
+        </div><!-- .col-detail -->
+        
+</div>
+</div>
        
 
 </div>
 
 
-             
 
-        </div><!-- .col-detail -->
-        <iframe class="layer-wrap review_pop" name="ifrm_movie_time_table1" id="ifrm_movie_time_table1" style="display:none" title="상세리스트" height="993px" width="849px" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe><!--회원 평점 모아보기 iframe. mwpark_RR2015-->
-        <form method="post" id="frmPointPopup" action="/movies/point/default-irm.aspx" novalidate="novalidate">
-            <input type="hidden" name="userid" id="frmPointUserId">
-            <input type="hidden" name="nick" id="frmPointNick">
-        </form>
-
-    </div>
-    <span style="display:none" class="modifyCommentDummy"></span>
-</div>
-<!-- 실컨텐츠 끝 -->
 
             
             <!--/ Contents End -->

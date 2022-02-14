@@ -256,7 +256,7 @@ let wishlist=document.getElementsByClassName('wishlist');
                         <span class="sprite_preegg big favor"></span>
                         <span>기대돼요!</span>
                     </a>
-                    <a href="javascript:void(0);" class="btn bad">
+                    <a href="javascript:void(0);" class="btn bad redborder">
                         <span class="sprite_preegg big hate"></span>
                         <span>글쎄요..</span>
                     </a>
@@ -285,7 +285,7 @@ let wishlist=document.getElementsByClassName('wishlist');
                 <li><a href="trailer.jsp">트레일러</a></li>
                 <li><a href="still-cut.jsp">스틸컷</a></li>
                 <li><a href="detail-view.jsp">평점/리뷰</a></li> <!-- 이부분 아직 cgv에서도 구현 전인것같음. -->              
-                <li class="last"><a href="show-times.jsp">상영시간표</a></li>
+                <li class="last"><a href="detail-show-times.jsp">상영시간표</a></li>
             </ul>
             <div class="sect-story-movie">
                 어릴 적 소꿉친구인 오리모토 리카를 교통사고로 눈앞에서 잃은 옷코츠 유타.<br>

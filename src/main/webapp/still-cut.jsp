@@ -285,7 +285,7 @@ let wishlist=document.getElementsByClassName('wishlist');
                 <li><a href="trailer.jsp">트레일러</a></li>
                 <li class="on"><a  title="현재 선택됨" href="still-cut.jsp">스틸컷</a></li>
                 <li ><a href="detail-view.jsp">평점/리뷰</a></li> <!-- 이부분 아직 cgv에서도 구현 전인것같음. -->              
-                <li class="last"><a href="show-times.jsp">상영시간표</a></li>
+                <li class="last"><a href="detail-show-times.jsp">상영시간표</a></li>
             </ul>
 		 </div>
             

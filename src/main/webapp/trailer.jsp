@@ -255,7 +255,7 @@ let wishlist=document.getElementsByClassName('wishlist');
                     <li><a href="/movies/detail-view/point-review.aspx?midx=85624#menu">평점/리뷰</a></li>
                     -->
                     <li><a href="detail-view.jsp">평점/리뷰</a></li>
-                    <li class="last"><a href="/movies/detail-view/show-times.aspx?midx=85624#menu">상영시간표</a></li>
+                    <li class="last"><a href="detail-show-times.jsp">상영시간표</a></li>
                 </ul>
                 <div class="sect-trailer">
                     <div class="heading">
