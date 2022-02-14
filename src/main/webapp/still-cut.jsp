@@ -192,11 +192,11 @@
         if(i<=0){
             item[i].style.display='none';
             i=item.length-1;
-        }else{
+        }
         item[i].style.display='none';
         item[i-1].style.display='block';
         i--;
-        }
+        
         
 
     }
