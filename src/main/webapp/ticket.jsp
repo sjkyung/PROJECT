@@ -544,7 +544,7 @@
             <!--/ Contents End -->
 		 </div>
 
-    <iframe title="CGV 빠른예매" id="ticket_iframe" src="http://ticket.cgv.co.kr/Reservation/Reservation.aspx?MOVIE_CD=&MOVIE_CD_GROUP=&PLAY_YMD=&THEATER_CD=&PLAY_NUM=&PLAY_START_TM=&AREA_CD=&SCREEN_CD=&THIRD_ITEM=" 
+    <iframe title="CGV 빠른예매" id="ticket_iframe" src="./reservation.jsp" 
         scrolling="no" frameborder="0" width="100%" height="987" style="width:100%; border:0 none;"></iframe>
     
     <script type="text/javascript">
@@ -702,13 +702,6 @@
 
     <!-- E Popup -->
     
-    <!-- S 예매하기 및 TOP Fixed 버튼 -->
-    <div class="fixedBtn_wrap">
-        
-        <a href="#none" class="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="최상단으로 이동" /></a>
-    </div>
-    
-    <!-- E 예매하기 및 TOP Fixed 버튼 -->
 	
     <!-- S Footer -->
     <footer>
@@ -791,34 +784,11 @@
 </script>
         <!-- footer_area (e) -->
 
-        <div class="adFloat" style="display:block">
-
-            <iframe src='//ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@Popicon' width='154' height='182' frameborder='0' scrolling='no' topmargin='0' leftmargin='0' marginwidth='0' marginheight='0' allowTransparency="true" id="ad_float1"></iframe>
-        </div>
-        <script type="text/javascript">            OpenAD();</script>
-        <!-- //Float Ad -->
+    
 	</footer>
 	<!-- E Footer -->
 
-    <!-- Aside Banner :  -->
-    <!--
-	<div id="ctl00_sect_person_right" class="sect-aside-banner" style="padding:0; margin:0; position:fixed; z-index:1;display:none">
-		<div class="aside-content-top">
-			<div class="aside-content-btm">
-				<a href="/theaters/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_theater.gif" alt="CGV THEATER" /></a>
-				<a href="/arthouse/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_arthouse.gif" alt="CGV arthouse" /></a>
-				<a href="/theaters/special/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_special.gif" alt="CGV SPECIAL" /></a>
-
-				<a href="/user/mycgv/reserve/" class="required-login" data-url="/user/mycgv/reserve/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_ticket.gif" alt="CGV TICKET INFO" /></a>
-				<a href="/discount/discountlist.aspx"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_discount.gif" alt="CGV DISCOUNT INFO" /></a>
-			</div>
-		</div>
-		<div class="btn-top">
-            <a href="#" onclick="window.scrollTo(0,0);return false;"><span>최상단으로 이동</span></a>
-		</div>
-	</div>
-    //-->
-	<!-- //Aside Banner -->
+   
     
 </div>
 

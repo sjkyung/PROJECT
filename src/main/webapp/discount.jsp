@@ -203,9 +203,8 @@
             <h3>CGV할인정보</h3>
             <div class="submenu">
                 <ul>
-                    <li><a href="http://www.cgv.co.kr/discount/" title="선택">할인카드</a></li>
-                    <li><a href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?SEQ=30038">KT 영화 무료/할인</a></li>
-                    <li><a href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?SEQ=30050">LGU+ 나만의콕 영화무료</a></li>
+                    <li><a href="./event02.jsp">KT 영화 무료/할인</a></li>
+                    <li><a href="./event03.jsp">LGU+ 나만의콕 영화무료</a></li>
                 </ul>
             </div>
         </div>
@@ -231,11 +230,7 @@
                                             </a>
                                         </div>
                                 
-                                        <div class ="swiper-slide">
-                                            <a href="/culture-event/event/detailViewUnited.aspx?SEQ=30024" id="ctl00_PlaceHolderContent_rptRollingList_ctl02_rollingLink">
-                                                <img src="http://img.cgv.co.kr/Event/Event/2021/0128/16117963434170.jpg" id="ctl00_PlaceHolderContent_rptRollingList_ctl02_rollingImg" width="735" height="310" />
-                                            </a>
-                                        </div>
+                
                                 
                                         <div class ="swiper-slide">
                                             <a href="/culture-event/event/detailViewUnited.aspx?SEQ=30226" id="ctl00_PlaceHolderContent_rptRollingList_ctl03_rollingLink">
@@ -243,11 +238,7 @@
                                             </a>
                                         </div>
                                 
-                                        <div class ="swiper-slide">
-                                            <a href="/culture-event/event/detailViewUnited.aspx?SEQ=30023" id="ctl00_PlaceHolderContent_rptRollingList_ctl04_rollingLink">
-                                                <img src="http://img.cgv.co.kr/Event/Event/2021/0128/16117963434330.jpg" id="ctl00_PlaceHolderContent_rptRollingList_ctl04_rollingImg" width="735" height="310" />
-                                            </a>
-                                        </div>
+                                       
                                 
                                         <div class ="swiper-slide">
                                             <a href="/culture-event/event/detailViewUnited.aspx?SEQ=30020" id="ctl00_PlaceHolderContent_rptRollingList_ctl05_rollingLink">

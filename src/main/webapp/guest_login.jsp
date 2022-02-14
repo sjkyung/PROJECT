@@ -175,7 +175,7 @@
 </head>
 <body class="">
 
-<%@ include file="./header.jsp" %>
+<%@ include file="header.jsp" %>
 
 	<!-- Contaniner -->
 	<div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
