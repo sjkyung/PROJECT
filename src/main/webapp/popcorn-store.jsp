@@ -55,7 +55,7 @@
                                 <li id='cm5' name='categorymenu' class=''><a href='#'>팝콘</a></li>
                                 <li id='cm6' name='categorymenu' class=''><a href='#'>음료</a></li>
                                 <li id='cm7' name='categorymenu' class=''><a href='#'>스낵</a></li>
-                                <li id='cm10' name='categorymenu' class=''><a href='#'">플레이존</a></li>
+                                <li id='cm10' name='categorymenu' class=''><a href='#'>플레이존</a></li>
                             </ul>
 
                             <ul class='cart_content'>
