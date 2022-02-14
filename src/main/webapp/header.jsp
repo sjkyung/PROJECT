@@ -294,13 +294,13 @@
                                 </dl>
                             </li>
                             <li>
-                                <h2><a href="./discountlist.jsp">혜택</a></h2>
+                                <h2><a href="./discount.jsp">혜택</a></h2>
                                 <dl class="nav_overMenu">
                                     <dt>
-                                        <h2><a href="./discountlist.jsp" tabindex="-1">혜택</a></h2>
+                                        <h2><a href="./discount.jsp" tabindex="-1">혜택</a></h2>
                                     </dt>
                                     <dd>
-                                        <h3><a href="./discountlist.jsp">CGV 할인정보</a></h3>
+                                        <h3><a href="./discount.jsp">CGV 할인정보</a></h3>
                                     </dd>
                                     <dd>
                                         <h3><a href="./ClubService.jsp">CLUB
