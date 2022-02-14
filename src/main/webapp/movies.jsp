@@ -106,7 +106,7 @@
                 <li>
                     <div class="box-image" >
                         <strong class="rank">No.1</strong>	
-                        <a href="/movies/detail-view/?midx=84945">
+                        <a href="detail-view.jsp">
                             <span class="thumb-image">
                                 <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84945/84945_320.jpg" alt="듄 포스터" onerror="errorImage(this)"/>
                                 <span class="ico-grade grade-12">12세 이상</span>
