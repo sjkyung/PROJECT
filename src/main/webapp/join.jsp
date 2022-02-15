@@ -71,432 +71,12 @@
         app.config('staticDomain', 'https://img.cgv.co.kr/R2014/')
             .config('imageDomain', 'https://img.cgv.co.kr')
             .config('isLogin', 'False');
-
-        
-        // AD FLOAT
-        // 암호화 할 문자열과 키값(상수값)을 매개변수로 받는다.
-        function EncryptAD(str, key) {
-            output = new String;
-            Temp = new Array();
-            TextSize = str.length;
-            for (i = 0; i < TextSize; i++) {
-                // key 값을 원하는 대로 연산을 한다
-                output += String.fromCharCode(str.charCodeAt(i) + parseInt(key) + 123 + i);
-            }
-            return output;
-        }
-        // 복호화
-        // 암호화 된 문자열과 키값(상수값)을 매개변수로 받는다.
-        function DecryptAD(str, key) {
-            output = new String;
-            Temp = new Array();
-            TextSize = str.length;
-            for (i = 0; i < TextSize; i++) {
-                // 암호화시 사용한 연산과 같아야 한다.
-                output += String.fromCharCode(str.charCodeAt(i) - (parseInt(key) + 123 + i));
-            }
-
-            return output;
-        }
-
-        function getCookieVal(offset) {
-            var endstr = document.cookie.indexOf(";", offset);
-            if (endstr == -1) endstr = document.cookie.length;
-            return unescape(document.cookie.substring(offset, endstr));
-        }
-        function GetCookieAd(name) {
-            var arg = name + "=";
-            var alen = arg.length;
-            var clen = document.cookie.length;
-            var i = 0;
-            while (i < clen) { //while open
-                var j = i + alen;
-                if (document.cookie.substring(i, j) == arg)
-                    return getCookieVal(j);
-                i = document.cookie.indexOf(" ", i) + 1;
-                if (i == 0) break;
-            } //while close
-            return null;
-        }
-        function setCookieAD(name, value, expiredays) {
-            var todayDate = new Date();
-            todayDate.setTime(todayDate.getTime() + (expiredays * 24 * 60 * 60 * 1000));
-            document.cookie = name + "=" + escape(value) + "; expires=" + todayDate.toGMTString() + "; path=/; domain=cgv.co.kr";
-        }
-        function CloseAD() {
-            var AdUrl = window.location.href;
-            var ArrAdUrl = AdUrl.split("/");
-
-            var CurCookieName = 'CgvPopAd-' + ArrAdUrl[3];
-            var CurCookieUrl = GetCookieAd(CurCookieName);
-            var CookieUrl = ArrAdUrl[3];
-
-            CookieUrl = EncryptAD(CookieUrl, "15442280");
-            setCookieAD(CurCookieName, CookieUrl, '1');
-            $(document).find('#ad_float1').hide();
-        }
-        function OpenAD() {
-            var AdUrl = window.location.href;
-            var ArrAdUrl = AdUrl.split("/");
-            var CookieUrl = ArrAdUrl[3];
-            var CurCookieName = 'CgvPopAd-' + ArrAdUrl[3];
-            var CurCookieUrl = GetCookieAd(CurCookieName);
-
-            if (CurCookieUrl == null) {
-                CurCookieUrl = "";
-            }
-            else {
-                CurCookieUrl = DecryptAD(CurCookieUrl, "15442280");
-            }
-
-            if (CurCookieUrl.indexOf(CookieUrl) != -1) {
-                $(document).find('#ad_float1').hide();
-            }
-
-            //section.cgv.co.kr 매거진 체크
-            var magazineckurl = GetCookieAd("CgvPopAd-magazine");
-            if (magazineckurl != null) {
-                var magazineck = DecryptAD(magazineckurl, "15442280");
-                if (magazineck != null && magazineck == "magazine") {
-                    //값이있는경우 표시하지않음
-                    $(document).find('#ad_float1').hide();
-                }
-            }
-        }
     </script>
 </head>
 <body class="">
-<div class="skipnaiv">
-            <a href="#contents" id="skipHeader">메인 컨텐츠 바로가기</a>
-        </div>
-        <div id="cgvwrap">
-            <!-- S Header
-            Description
-            - class 'nav' 에 class 'active' 추가시 서브메뉴노출
-            - class 'nav' 에 class 'fixed' 추가시 상단고정되며 스타일 변경됨
-         -->
-            <div class="header">
-                <!-- 서비스 메뉴 -->
-
-                <div class="header_content">
-                    <div class="contents">
-                        <h1><a href="/"><img src="./css/logoRed.png"
-                                    alt="CGV" /></a><span>CULTUREPLEX</span></h1>
-                        <ul class="memberInfo_wrap">
-                            <!-- Advertisement -->
-
-                            <div class="ad-partner">
-                                <a href="#none">
-                                    <img src="./css/16417749747880.png"
-                                        alt="현대M포인트" />
-                                </a>
-                            </div>
-                            <!-- /Advertisement -->
-                            <li>
-                                <a href="./login.jsp?">
-                                    <img src="./css/loginPassword.png" alt="로그인" />
-                                    <span>로그인</span></a>
-                            </li>
-                            <li>
-                                <a href="./join.jsp">
-                                    <img src="./css/loginJoin.png" alt="회원가입" />
-                                    <span>회원가입</span>
-                                </a>
-                            </li>
-
-
-                            <li>
-                                <a href="./mycgv.jsp">
-                                    <img src="./css/loginMember.png" alt="MY CGV" />
-                                    <span>MY CGV</span></a>
-                            </li>
-
-                            <li>
-                                <a href="./support.jsp">
-                                    <img src="./css/loginCustomer.png" alt="고객센터" />
-                                    <span>고객센터</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- 서비스 메뉴 -->
-
-                <!-- 서브 메뉴 -->
-                <script>
-                    $(document).ready(function() {
-                        $('.nav_menu > li > h2 > a').on({
-                            mouseenter: function(e) {
-                                var target = e.target;
-                                $(target).parents('.nav_menu').find('.nav_overMenu').slideDown(function() {
-                                    $('.nav').addClass('active');
-                                });
-                            },
-                            click: function(e) {
-                                var target = e.target;
-                                if (!$('.nav').hasClass('active')) {
-                                    $(this).trigger('mouseenter');
-                                } else {
-                                    $('.nav').trigger('mouseleave');
-                                }
-                            }
-                        });
-
-                        $('.nav').on({
-                            mouseleave: function(e) {
-                                $(this).find('.nav_overMenu').slideUp(200, function() {
-                                    $('.nav').removeClass('active');
-                                });
-                            }
-                        });
-
-                        $('.totalSearch_wrap input[type=text]').on({
-                            focusin: function() {
-                                $('.totalSearch_wrap').addClass("active");
-                            }
-                        });
-
-                        $('.btn_totalSearchAutocomplete_close').on({
-                            click: function() {
-                                $('.totalSearch_wrap').removeClass("active");
-                            },
-                            focusout: function(e) {
-                                //     $('.totalSearch_wrap').removeClass("active");
-
-                            }
-                        });
-
-                        $(this).on({
-                            scroll: function(e) {
-                                /* S GNB fixed */
-                                var headerOffsetT = $('.header').offset().top;
-                                var headerOuterH = $('.header').outerHeight(true);
-                                var fixedHeaderPosY = headerOffsetT + headerOuterH;
-                                var scrollT = $(this).scrollTop();
-                                var scrollL = $(this).scrollLeft();
-
-                                if (scrollT >= fixedHeaderPosY) {
-                                    $('.nav').addClass('fixed');
-                                    $('.fixedBtn_wrap').addClass('topBtn');
-                                } else {
-                                    $('.nav').removeClass('fixed');
-                                    $('.fixedBtn_wrap').removeClass('topBtn');
-                                }
-
-                                /* S > GNB fixed 좌우 스크롤
-                                Description
-                                - GNB가 fixed 되었을때 좌우 스크롤 되게 처리
-                                */
-                                if ($('.nav').hasClass('fixed')) {
-                                    $('.nav').css({ 'left': -1 * scrollL })
-                                } else {
-                                    $('.nav').css({ 'left': 0 })
-                                }
-                                /* E > GNB fixed 좌우 스크롤 */
-                                /* S GNB fixed */
-                            }
-                        });
-
-                        $('.btn_gotoTop').on({
-                            click: function() {
-                                $('html, body').stop().animate({
-                                    scrollTop: '0'
-                                }, 400);
-                            }
-                        });
-
-                        //통합검색 상단 검색 버튼
-                        $('#btn_header_search').on('click', function() {
-                            if ($('#header_ad_keyword').val() != "")
-                                goSearch($('#header_ad_keyword'));      //광고
-                            else
-                                goSearch($('#header_keyword'));
-
-                            return false;
-                        });
-
-                        //통합검색 검색어 입력창
-                        $('#header_keyword').keyup(function(e) {
-                            if (e.keyCode == 13) goSearch($('#header_keyword'));
-                        });
-
-                    });
-
-                    //통합검색
-                    function goSearch($objKeyword) {
-
-                        if ($objKeyword.val() == "") {
-                            alert("검색어를 입력해 주세요");
-                            $objKeyword.focus();
-                            return false;
-                        }
-
-                        location = "/search/?query=" + escape($objKeyword.val());
-                    }
-                    //비즈스프링 클릭로그
-                    function setClickLog(title) {
-                        // eval("try{trk_clickTrace('EVT', '" + title + "')}catch(_e){}");
-                    }
-
-                </script>
-
-                <div class="nav">
-                    <div class="contents">
-                        <h1><a href="/" tabindex="-1"><img
-                                    src="./css/logoWhite.png" alt="CGV" /></a>
-                        </h1>
-                        <ul class="nav_menu">
-                            <li>
-                                <h2><a href="./movies.jsp">영화</a></h2>
-                                <dl class="nav_overMenu">
-                                    <dt>
-                                        <h2><a href="./movies.jsp" tabindex="-1">영화</a></h2>
-                                    </dt>
-                                    <dd>
-                                        <h3><a href="./movies.jsp">무비차트</a></h3>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <h2><a href="../theaters.jsp">극장</a></h2>
-                                <dl class="nav_overMenu">
-                                    <dt>
-                                        <h2><a href="./theaters.jsp" tabindex="-1">극장</a></h2>
-                                    </dt>
-                                    <dd>
-                                        <h3><a href="./theaters.jsp">CGV 극장</a></h3>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <h2><a href="./ticket.jsp"><strong>예매</strong></a></h2>
-                                <dl class="nav_overMenu">
-                                    <dt>
-                                        <h2><a href="./ticket.jsp" tabindex="-1">예매</a></h2>
-                                    </dt>
-                                    <dd>
-                                        <h3><a href="./ticket.jsp">빠른예매</a></h3>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <h2><a href="./popcorn-store.jsp">스토어</a></h2>
-                                <dl class="nav_overMenu">
-                                    <dt>
-                                        <h2><a href="./popcorn-store.jsp" tabindex="-1">스토어</a></h2>
-                                    </dt>
-
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=2">영화관람권</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=3">기프트카드</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=4">콤보</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=5">팝콘</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=6">음료</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=7">스낵</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=8">플레이존</a>
-                                        </h3>
-                                    </dd>
-
-                                </dl>
-                            </li>
-                            <li>
-                                <h2><a href="./defaultNew.jsp">이벤트</a></h2>
-                                <dl class="nav_overMenu">
-                                    <dt>
-                                        <h2><a href="./defaultNew.jsp?mCode=001"
-                                                tabindex="-1">이벤트</a></h2>
-                                    </dt>
-                                    <dd>
-                                        <h3><a href="./defaultNew.jsp?mCode=001">SPECIAL</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./defaultNew.jsp?mCode=004">영화/예매</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./defaultNew.jsp?mCode=008">멤버십/CLUB</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./defaultNew.jsp?mCode=005">CGV 극장별</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./defaultNew.jsp?mCode=006">제휴할인</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./result_list.jsp">당첨자 발표</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./end-list.jsp">종료된 이벤트</a></h3>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <h2><a href="./discountlist.jsp">혜택</a></h2>
-                                <dl class="nav_overMenu">
-                                    <dt>
-                                        <h2><a href="./discountlist.jsp" tabindex="-1">혜택</a></h2>
-                                    </dt>
-                                    <dd>
-                                        <h3><a href="./discountlist.jsp">CGV 할인정보</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./ClubService.jsp">CLUB
-                                                서비스</a></h3>
-                                    </dd>
-                                </dl>
-                            </li>
-                        </ul>
-                        <div class="totalSearch_wrap">
-                            <label for="totalSearch">
-                                <input type="text" id="header_keyword" value="" />
-                                <input type="hidden" id="header_ad_keyword" name="header_ad_keyword" />
-                            </label>
-                            <button type="button" class="btn_totalSearch" id="btn_header_search">검색</button>
-                            <iframe src="//ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/main@Search_txt" width="0"
-                                height="0" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"
-                                allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen"
-                                msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen"
-                                webkitallowfullscreen="webkitallowfullscreen"></iframe>
-                        </div>
-                    </div>
-                </div>
-                <!-- 서브 메뉴 -->
-            </div>
-            <!-- E Header -->
-
+<%@include file="./header.jsp" %>
 	<!-- Contaniner -->
 	<div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
-        
-
 		<!-- Contents Area -->
 		 <div id="contents" class="">
         
@@ -509,11 +89,11 @@
 	<div class="join-hd">
 		<h3><img src="http://img.cgv.co.kr/R2014/images/common/img_join_hd.jpg" alt="CGV에 오신걸 환영합니다." /></h3>
 		<p>CGV 회원이 되시면 하나의 통합된 회원 ID와 비밀번호로<br />CGV의 다양한 서비스를 이용하실 수 있습니다.</p>
-        <a href="https://www.cjone.com/cjmweb/join.do?coopco_cd=7010&brnd_cd=1000" target="_blank" title="새창" class="link-join"><span>CGV 회원가입</span></a>
+        <a href="./join_do.jsp" target="_blank" title="새창" class="link-join"><span>CGV 회원가입</span></a>
 	</div>
 
 	<div class="join-benefit">
-		<h4>CJ ONE 상세 혜택</h4>
+		<h4>CGV 상세 혜택</h4>
 		<ul class="benefit-list">
 			<li>
 				<h5>기본 적립율</h5>
@@ -547,15 +127,9 @@
 				</ul>
 			</li>
 		</ul>
-		<p class="bl-desc">※ CJ ONE 통합회원으로 가입되더라도 정보 제공 및 약관 동의가 되지 않은 CJ ONE 제휴 브랜드에는 개인정보가 제공되지 않습니다.</p>
 	</div>
-
-
 </div>
 <!-- 실컨텐츠 끝 --> 
-
-
-            
             <!--/ Contents End -->
 		 </div>
 		<!-- /Contents Area -->
@@ -566,67 +140,8 @@
     <div class="com_pop_wrap">
         <div class="com_pop_fog"></div>
     </div>
-    <div class="pop_wrap">
-    <!-- S > [팝업] 지원 OS 업데이트 유도-->
-        <div id="pop_supportOS" class="popup" style="display:none">
-            <div class="pop_iexp_wrap" style="position:fixed; left:50%; top:50%; width:600px; margin:-165px 0 0 -300px; z-index:1000;">
-                <div class="pi_headline">
-                    <img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_headline2.jpg" alt="CGV 홈페이지는 고객님께서 사용중인 MS Windows XP에서 정상적인 서비스 이용이 어려울 수 있으며, OS업데이트를 권장합니다." />
-                </div>
-                <div class="down_app">
-                    <p><img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_downtxt.jpg" alt="OS 업데이트가 어려운 경우 모바일앱을 이용하세요!!!" /></p>
-                    <a class="btn" href="https://itunes.apple.com/kr/app/id370441190?mt=8" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ios.jpg" alt="Ios down" /></a>
-                    <a class="btn" href="https://play.google.com/store/apps/details?id=com.cgv.android.movieapp" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_android.jpg" alt="Android down" /></a>
-                </div>
-                <a class="btn_close">닫기</a>
-            </div>
-         </div>
-    <!-- S > [팝업] 지원 브라우저 다운로드 유도-->
-         <div id="pop_supportBrower" class="popup" style="display:none">
-            <div class="pop_iexp_wrap" style="position:fixed; left:50%; top:50%; width:600px; margin:-265px 0 0 -300px; z-index:1000;">
-                <div class="pi_headline">
-                    <img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_headline1.jpg" alt="CGV 홈페이지는 Internet Explorer 9이상에서 최적의 서비스 이용이 가능합니다. IE9 이하 브라우저에서 이용 시 정상적인 서비스 이용이 어려울 수 있으며, 브라우저 업그레이드 하시기를 권장합니다." />
-                </div>
-                <ul class="down_browser">
-                    <li><a href="https://www.microsoft.com/ko-kr/edge" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ie.jpg" alt="Internet Explorer 다운받기" /></a></li>
-                    <li><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_chrome.jpg" alt="Chrome 다운받기" /></a></li>
-                </ul>
-                <div class="down_app">
-                    <p><img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_downtxt.jpg" alt="OS 업데이트가 어려운 경우 모바일앱을 이용하세요!" /></p>
-                    <a class="btn" href="https://itunes.apple.com/kr/app/id370441190?mt=8" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ios.jpg" alt="Ios down" /></a>
-                    <a class="btn" href="https://play.google.com/store/apps/details?id=com.cgv.android.movieapp " target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_android.jpg" alt="Android down" /></a>
-                </div>
-                <a class="btn_close">닫기</a>
-            </div>
-        </div>
-	</div>
-
-	
 <%@include file = "./footer.jsp"%>    
-
-    <!-- Aside Banner :  -->
-    <!--
-	<div id="ctl00_sect_person_right" class="sect-aside-banner" style="padding:0; margin:0; position:fixed; z-index:1;display:none">
-		<div class="aside-content-top">
-			<div class="aside-content-btm">
-				<a href="/theaters/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_theater.gif" alt="CGV THEATER" /></a>
-				<a href="/arthouse/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_arthouse.gif" alt="CGV arthouse" /></a>
-				<a href="/theaters/special/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_special.gif" alt="CGV SPECIAL" /></a>
-
-				<a href="/user/mycgv/reserve/" class="required-login" data-url="/user/mycgv/reserve/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_ticket.gif" alt="CGV TICKET INFO" /></a>
-				<a href="/discount/discountlist.aspx"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_discount.gif" alt="CGV DISCOUNT INFO" /></a>
-			</div>
-		</div>
-		<div class="btn-top">
-            <a href="#" onclick="window.scrollTo(0,0);return false;"><span>최상단으로 이동</span></a>
-		</div>
-	</div>
-    //-->
-	<!-- //Aside Banner -->
-    
 </div>
-
-
 <script type="text/template" id="temp_popup_movie_player">
 <div class="popwrap">
     <div class="sect-layerplayer">
@@ -667,7 +182,6 @@
     </div>
 </div>
 </script>
-
 <script id="temp_popup_movie_player_movie_info" type="text/x-jquery-tmpl">
 <div class="box-image">
     <a href="/movies/detail-view/?midx=${MovieIdx}" title="${Title} 상세보기 새창">
@@ -769,11 +283,6 @@
                     return uri + separator + key + "=" + value + hash;
                 }
             }
-            //모바일버전 가기
-            $('.go-mobile').on('click', function() {
-                location.replace(updateQueryStringParameter(location.href, "IsMobile", "N"));
-                return false;
-            });
         });
     })(jQuery);
 	

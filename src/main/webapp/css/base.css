@@ -105,7 +105,7 @@ input[type='submit'], input[type='button'], button {cursor:pointer}
 .radio_btn, .check_box {display:inline-block; position:relative; height:16px; padding-left:0; line-height:16px; zoom:1;}
 .radio_btn .chk, .check_box .chk {display:none;}
 .radio_btn a,
-.check_box a {display:inline-block; width:16px; height:16px; background:url('/cjmweb/images/common/bg_form.png') no-repeat; vertical-align:middle;}
+.check_box a {display:inline-block; width:16px; height:16px; background:url('./bg_form.png') no-repeat; vertical-align:middle;}
 .radio_btn label, .check_box label {cursor:pointer;}
 .radio_btn.on a {background-position:0 -16px;}
 .check_box.on a {background-position:0 -16px;}
