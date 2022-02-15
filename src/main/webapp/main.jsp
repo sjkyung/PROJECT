@@ -67,11 +67,9 @@
 <link rel="stylesheet" media="all" type="text/css" href="./css/swiper-bundle.min.css" />
 <script type="text/javascript">
         $(document).ready(function(){
-
             $("#btnMovie").click(function(){
                 $("#movieChart_list").show();
                 $("#movieChart_list_Reser").hide();
-
                 $(".btn_allView").attr("href", "/movies/?lt=1&ft=0");
             });
 
@@ -308,366 +306,11 @@
     
 </head>
 <body class="">
-
-<div class="skipnaiv">
-            <a href="#contents" id="skipHeader">메인 컨텐츠 바로가기</a>
-        </div>
-        <div id="cgvwrap">
-            <!-- S Header
-            Description
-            - class 'nav' 에 class 'active' 추가시 서브메뉴노출
-            - class 'nav' 에 class 'fixed' 추가시 상단고정되며 스타일 변경됨
-         -->
-            <div class="header">
-                <!-- 서비스 메뉴 -->
-
-                <div class="header_content">
-                    <div class="contents">
-                        <h1><a href="/"><img src="./css/logoRed.png"
-                                    alt="CGV" /></a><span>CULTUREPLEX</span></h1>
-                        <ul class="memberInfo_wrap">
-                            <!-- Advertisement -->
-
-                            <div class="ad-partner">
-                                <a href="#none">
-                                    <img src="./css/16417749747880.png"
-                                        alt="현대M포인트" />
-                                </a>
-                            </div>
-                            <!-- /Advertisement -->
-                            <li>
-                                <a href="./login.jsp?">
-                                    <img src="./css/loginPassword.png" alt="로그인" />
-                                    <span>로그인</span></a>
-                            </li>
-                            <li>
-                                <a href="./join.jsp">
-                                    <img src="./css/loginJoin.png" alt="회원가입" />
-                                    <span>회원가입</span>
-                                </a>
-                            </li>
-
-
-                            <li>
-                                <a href="./mycgv.jsp">
-                                    <img src="./css/loginMember.png" alt="MY CGV" />
-                                    <span>MY CGV</span></a>
-                            </li>
-
-                            <li>
-                                <a href="./support.jsp">
-                                    <img src="./css/loginCustomer.png" alt="고객센터" />
-                                    <span>고객센터</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- 서비스 메뉴 -->
-
-                <!-- 서브 메뉴 -->
-                <script>
-                    $(document).ready(function() {
-                        $('.nav_menu > li > h2 > a').on({
-                            mouseenter: function(e) {
-                                var target = e.target;
-                                $(target).parents('.nav_menu').find('.nav_overMenu').slideDown(function() {
-                                    $('.nav').addClass('active');
-                                });
-                            },
-                            click: function(e) {
-                                var target = e.target;
-                                if (!$('.nav').hasClass('active')) {
-                                    $(this).trigger('mouseenter');
-                                } else {
-                                    $('.nav').trigger('mouseleave');
-                                }
-                            }
-                        });
-
-                        $('.nav').on({
-                            mouseleave: function(e) {
-                                $(this).find('.nav_overMenu').slideUp(200, function() {
-                                    $('.nav').removeClass('active');
-                                });
-                            }
-                        });
-
-                        $('.totalSearch_wrap input[type=text]').on({
-                            focusin: function() {
-                                $('.totalSearch_wrap').addClass("active");
-                            }
-                        });
-
-                        $('.btn_totalSearchAutocomplete_close').on({
-                            click: function() {
-                                $('.totalSearch_wrap').removeClass("active");
-                            },
-                            focusout: function(e) {
-                                //     $('.totalSearch_wrap').removeClass("active");
-
-                            }
-                        });
-
-                        $(this).on({
-                            scroll: function(e) {
-                                /* S GNB fixed */
-                                var headerOffsetT = $('.header').offset().top;
-                                var headerOuterH = $('.header').outerHeight(true);
-                                var fixedHeaderPosY = headerOffsetT + headerOuterH;
-                                var scrollT = $(this).scrollTop();
-                                var scrollL = $(this).scrollLeft();
-
-                                if (scrollT >= fixedHeaderPosY) {
-                                    $('.nav').addClass('fixed');
-                                    $('.fixedBtn_wrap').addClass('topBtn');
-                                } else {
-                                    $('.nav').removeClass('fixed');
-                                    $('.fixedBtn_wrap').removeClass('topBtn');
-                                }
-
-                                /* S > GNB fixed 좌우 스크롤
-                                Description
-                                - GNB가 fixed 되었을때 좌우 스크롤 되게 처리
-                                */
-                                if ($('.nav').hasClass('fixed')) {
-                                    $('.nav').css({ 'left': -1 * scrollL })
-                                } else {
-                                    $('.nav').css({ 'left': 0 })
-                                }
-                                /* E > GNB fixed 좌우 스크롤 */
-                                /* S GNB fixed */
-                            }
-                        });
-
-                        $('.btn_gotoTop').on({
-                            click: function() {
-                                $('html, body').stop().animate({
-                                    scrollTop: '0'
-                                }, 400);
-                            }
-                        });
-
-                        //통합검색 상단 검색 버튼
-                        $('#btn_header_search').on('click', function() {
-                            if ($('#header_ad_keyword').val() != "")
-                                goSearch($('#header_ad_keyword'));      //광고
-                            else
-                                goSearch($('#header_keyword'));
-
-                            return false;
-                        });
-
-                        //통합검색 검색어 입력창
-                        $('#header_keyword').keyup(function(e) {
-                            if (e.keyCode == 13) goSearch($('#header_keyword'));
-                        });
-
-                    });
-
-                    //통합검색
-                    function goSearch($objKeyword) {
-
-                        if ($objKeyword.val() == "") {
-                            alert("검색어를 입력해 주세요");
-                            $objKeyword.focus();
-                            return false;
-                        }
-
-                        location = "/search/?query=" + escape($objKeyword.val());
-                    }
-
-                    //검색 입력창 클릭 시 광고값 reset
-                    $('#header_keyword').on('click', function() {
-                        $(this).attr('placeholder', '');
-                        $('#header_ad_keyword').val('');
-                    });
-
-                    //상단 키워드 광고 (S)
-                    function AdSearchExt(txt, SearchText) {
-                        $('#header_keyword').attr('placeholder', txt);
-                        $('#header_ad_keyword').val(SearchText);
-                    }
-
-                    function hdIcoSet(left, sh) { }
-                    //상단 키워드 광고 (E)
-
-                    //상단광고닫기
-                    function hideCgvTopAd() {
-                        $(".cgv-ad-wrap").hide();
-                        $('#wrap_main_notice').parent('div').css('top', 280);
-                    }
-
-                    //비즈스프링 클릭로그
-                    function setClickLog(title) {
-                        // eval("try{trk_clickTrace('EVT', '" + title + "')}catch(_e){}");
-                    }
-
-                </script>
-
-                <div class="nav">
-                    <div class="contents">
-                        <h1><a href="/" tabindex="-1"><img
-                                    src="./css/logoWhite.png" alt="CGV" /></a>
-                        </h1>
-                        <ul class="nav_menu">
-                            <li>
-                                <h2><a href="./movies.jsp">영화</a></h2>
-                                <dl class="nav_overMenu">
-                                    <dt>
-                                        <h2><a href="./movies.jsp" tabindex="-1">영화</a></h2>
-                                    </dt>
-                                    <dd>
-                                        <h3><a href="./movies.jsp">무비차트</a></h3>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <h2><a href="../theaters.jsp">극장</a></h2>
-                                <dl class="nav_overMenu">
-                                    <dt>
-                                        <h2><a href="./theaters.jsp" tabindex="-1">극장</a></h2>
-                                    </dt>
-                                    <dd>
-                                        <h3><a href="./theaters.jsp">CGV 극장</a></h3>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <h2><a href="./ticket.jsp"><strong>예매</strong></a></h2>
-                                <dl class="nav_overMenu">
-                                    <dt>
-                                        <h2><a href="./ticket.jsp" tabindex="-1">예매</a></h2>
-                                    </dt>
-                                    <dd>
-                                        <h3><a href="./ticket.jsp">빠른예매</a></h3>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <h2><a href="./popcorn-store.jsp">스토어</a></h2>
-                                <dl class="nav_overMenu">
-                                    <dt>
-                                        <h2><a href="./popcorn-store.jsp" tabindex="-1">스토어</a></h2>
-                                    </dt>
-
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=2">영화관람권</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=3">기프트카드</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=4">콤보</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=5">팝콘</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=6">음료</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=7">스낵</a>
-                                        </h3>
-                                    </dd>
-
-                                    <dd>
-                                        <h3><a
-                                                href="./store-category.jsp?CategoryIdx=8">플레이존</a>
-                                        </h3>
-                                    </dd>
-
-                                </dl>
-                            </li>
-                            <li>
-                                <h2><a href="./defaultNew.jsp">이벤트</a></h2>
-                                <dl class="nav_overMenu">
-                                    <dt>
-                                        <h2><a href="./defaultNew.jsp?mCode=001"
-                                                tabindex="-1">이벤트</a></h2>
-                                    </dt>
-                                    <dd>
-                                        <h3><a href="./defaultNew.jsp?mCode=001">SPECIAL</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./defaultNew.jsp?mCode=004">영화/예매</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./defaultNew.jsp?mCode=008">멤버십/CLUB</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./defaultNew.jsp?mCode=005">CGV 극장별</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./defaultNew.jsp?mCode=006">제휴할인</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./result_list.jsp">당첨자 발표</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./end-list.jsp">종료된 이벤트</a></h3>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <h2><a href="./discountlist.jsp">혜택</a></h2>
-                                <dl class="nav_overMenu">
-                                    <dt>
-                                        <h2><a href="./discountlist.jsp" tabindex="-1">혜택</a></h2>
-                                    </dt>
-                                    <dd>
-                                        <h3><a href="./discountlist.jsp">CGV 할인정보</a></h3>
-                                    </dd>
-                                    <dd>
-                                        <h3><a href="./ClubService.jsp">CLUB
-                                                서비스</a></h3>
-                                    </dd>
-                                </dl>
-                            </li>
-                        </ul>
-                        <div class="totalSearch_wrap">
-                            <label for="totalSearch">
-                                <input type="text" id="header_keyword" value="" />
-                                <input type="hidden" id="header_ad_keyword" name="header_ad_keyword" />
-                            </label>
-                            <button type="button" class="btn_totalSearch" id="btn_header_search">검색</button>
-                            <iframe src="//ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/main@Search_txt" width="0"
-                                height="0" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"
-                                allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen"
-                                msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen"
-                                webkitallowfullscreen="webkitallowfullscreen"></iframe>
-                        </div>
-                    </div>
-                </div>
-                <!-- 서브 메뉴 -->
-            </div>
-            <!-- E Header -->
+<%@include file="./header.jsp" %>
 	<!-- Contaniner -->
 	<div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
-        
-
 		<!-- Contents Area -->
-		
-        
-            
-            <!-- Contents Start -->
-			
-
+        <!-- Contents Start -->
 <input type="hidden" id="isOpenUserEmailYNPopup" name="isOpenUserEmailYNPopup" value="False" />
 
 <!-- S > Movie Selection
@@ -1321,7 +964,7 @@
                                         <span>2022.02.03~2022.02.27</span>
                                     </a>
                                 </div>
-                            
+                            	
                                  <div class="swiper-slide">
                                     <a href="/culture-event/event/detailViewUnited.aspx?seq=33887">
                                         <div class="img_wrap"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33887/16425700995580.jpg" alt="[킹메이커]CGV필름마크" onerror="errorImage(this)"></div>
@@ -1329,7 +972,7 @@
                                         <span>2022.01.19~2022.02.13</span>
                                     </a>
                                 </div>
-                            
+                            	
                                  <div class="swiper-slide">
                                     <a href="/culture-event/event/detailViewUnited.aspx?seq=33942">
                                         <div class="img_wrap"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33942/16432688046760.jpg" alt="[화제의 신메뉴] 시그니처김치시즈닝믹스팝콘 런칭!" onerror="errorImage(this)"></div>
@@ -1348,64 +991,10 @@
                 </div>
             </div>
 <!-- E > EVENT -->
-<!-- S > 특별관 -->
-            <div class="specialHall_wrap">
-                <div class="contents">
-                    <div class="specialHall_title_wrap">
-                        <h3>특별관</h3>
-                        <a href="./theaters.jsp" class="btn_allView">전체보기</a>
-                    </div>
-                    <div class="specialHall_content">
-                        <a href="./theaters.jsp" id="ctl00_PlaceHolderContent_specialHall_link" class="specialHall_link"><div class="img_wrap" data-scale=false><img src="https://img.cgv.co.kr//Front/Main/2021/1209/16390080561620.png" id="ctl00_PlaceHolderContent_specialHall_img" alt="SUITE CINEMA" /></div></a>
-                        
-                        <ul class="specialHall_list">
-                            
-                            <li class='active'>
-                                <a href="http://www.cgv.co.kr/theaters/special/?regioncode=SC">
-                                    <strong>SUITE CINEMA</strong>
-                                    <div class="specialHall_hashTag_wrap">
-                                        <span class="specialHall_hashTag">#호텔 컨셉의 프리미엄관</span>                                        
-                                    </div>
-                                </a>
-                            </li>
-                            
-                            <li >
-                                <a href="http://www.cgv.co.kr/theaters/special/?regioncode=SKY">
-                                    <strong>SKY BOX</strong>
-                                    <div class="specialHall_hashTag_wrap">
-                                        <span class="specialHall_hashTag">#Premium #Private</span>                                        
-                                    </div>
-                                </a>
-                            </li>
-                            
-                            <li >
-                                <a href="http://www.cgv.co.kr/theaters/special/?regioncode=4D14">
-                                    <strong>4DX</strong>
-                                    <div class="specialHall_hashTag_wrap">
-                                        <span class="specialHall_hashTag">#모션시트 #오감체험</span>                                        
-                                    </div>
-                                </a>
-                            </li>
-                            
-                            <li >
-                                <a href="http://www.cgv.co.kr/theaters/special/?regioncode=103">
-                                    <strong>CINE de CHEF</strong>
-                                    <div class="specialHall_hashTag_wrap">
-                                        <span class="specialHall_hashTag">#쉐프가 있는 영화관</span>                                        
-                                    </div>
-                                </a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-<!-- E > 특별관 -->
 <!-- S > 기프트콘 노출 -->
             <div class="giftcon_wrap">
                 <div class="contents">
                     <ul class="giftcon_list_wrap">
-                        
                         <li>
                             <dl class='giftcon_list'>
                                 <dt>영화관람권<a href='/culture-event/popcorn-store/store-category.aspx?CategoryIdx=2' class='btn_more'>더보기</a></dt>
@@ -1419,27 +1008,6 @@
                                         </div>
                                     </a>
                                 </dd>
-                            
-                                <dd>
-                                    <a href='/culture-event/popcorn-store/product-detail.aspx?GG_NO=100026'>
-                                        <div class='img_wrap' data-scale=false><img src='http://img.cgv.co.kr/GiftStore/Product/Pc/List/15458911951520.jpg' alt='CGV 골드클래스'></div>
-                                        <div class='giftcon_info_wrap'>
-                                            <span>CGV 골드클래스</span>
-                                            <strong>35,000원</strong>
-                                        </div>
-                                    </a>
-                                </dd>
-                            
-                                <dd>
-                                    <a href='/culture-event/popcorn-store/product-detail.aspx?GG_NO=100255'>
-                                        <div class='img_wrap' data-scale=false><img src='http://img.cgv.co.kr/GiftStore/Product/Pc/List/16105061088530.jpg' alt='4DX관람권'></div>
-                                        <div class='giftcon_info_wrap'>
-                                            <span>4DX관람권</span>
-                                            <strong>19,000원</strong>
-                                        </div>
-                                    </a>
-                                </dd>
-                               
                             </dl>
                         </li>
                         <li>
@@ -1455,27 +1023,6 @@
                                         </div>
                                     </a>
                                 </dd>
-                            
-                                <dd>
-                                    <a href='/culture-event/popcorn-store/product-detail.aspx?GG_NO=100162'>
-                                        <div class='img_wrap' data-scale=false><img src='http://img.cgv.co.kr/GiftStore/Product/Pc/List/15814158039890.jpg' alt='PACONNIE B형'></div>
-                                        <div class='giftcon_info_wrap'>
-                                            <span>PACONNIE B형</span>
-                                            <strong>금액충전형</strong>
-                                        </div>
-                                    </a>
-                                </dd>
-                            
-                                <dd>
-                                    <a href='/culture-event/popcorn-store/product-detail.aspx?GG_NO=100163'>
-                                        <div class='img_wrap' data-scale=false><img src='http://img.cgv.co.kr/GiftStore/Product/Pc/List/15814162227570.jpg' alt='PACONNIE C형'></div>
-                                        <div class='giftcon_info_wrap'>
-                                            <span>PACONNIE C형</span>
-                                            <strong>금액충전형</strong>
-                                        </div>
-                                    </a>
-                                </dd>
-                               
                             </dl>
                         </li>
                         <li>
@@ -1491,27 +1038,6 @@
                                         </div>
                                     </a>
                                 </dd>
-                            
-                                <dd>
-                                    <a href='/culture-event/popcorn-store/product-detail.aspx?GG_NO=100020'>
-                                        <div class='img_wrap' data-scale=false><img src='http://img.cgv.co.kr/GiftStore/Product/Pc/List/15463251537260.jpg' alt='더블콤보'></div>
-                                        <div class='giftcon_info_wrap'>
-                                            <span>더블콤보</span>
-                                            <strong>12,000원</strong>
-                                        </div>
-                                    </a>
-                                </dd>
-                            
-                                <dd>
-                                    <a href='/culture-event/popcorn-store/product-detail.aspx?GG_NO=100073'>
-                                        <div class='img_wrap' data-scale=false><img src='http://img.cgv.co.kr/GiftStore/Product/Pc/List/15464065561050.jpg' alt='스몰세트'></div>
-                                        <div class='giftcon_info_wrap'>
-                                            <span>스몰세트</span>
-                                            <strong>6,500원</strong>
-                                        </div>
-                                    </a>
-                                </dd>
-                               
                             </dl>
                         </li>
                         
@@ -1607,30 +1133,7 @@
 </script>
 
 <script type="text/javascript">
-    //<![CDATA[
-     //CGV 공지 팝업 주석처리
-    //function getCookie(name) {
-    //    var nameOfCookie = name + "=";
-    //    var x = 0;
-    //    while (x <= document.cookie.length) {
-    //        var y = (x + nameOfCookie.length);
-    //        if (document.cookie.substring(x, y) == nameOfCookie) {
-    //            if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
-    //                endOfCookie = document.cookie.length;
-    //            return unescape(document.cookie.substring(y, endOfCookie));
-    //        }
-    //        x = document.cookie.indexOf(" ", x) + 1;
-    //        if (x == 0)
-    //            break;
-    //    }
-    //    return "";
-    //}    
-    //if (getCookie("cgv_notice") != "done") {
-    //    var spcwin = window.open('/popup/1411_personal_popup_1107_v2.html', 'cgv_notice', "height=414,width=280,menubar=no,scrollbars=no,resizeable=no,toolbar=no,left=355,top=100")
-    //    spcwin.focus();        
-    //}       
-
-    
+in.focus();        
     (function ($) {
         $(function () {
             var popupData = { 'List': [{"Title":"현대M포인트 사용 혜택","Contents":"<div class=\"item-wrap\"><div class=\"item\"><div style=\"text-align:center;\"><div><a href=\"http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=31426&menu=006\"><img alt=\"\" height=\"480\" src=\"http://img.cgv.co.kr/Event/cultureplexPhoto/16408495224530.jpg\" width=\"640\" /></a></div></div></div></div>"}]}; //cgv 공지사항
@@ -1697,19 +1200,6 @@
             }
 
             openPopup();
-
-            //layer 팝업공지 닫기클릭
-            $('#open_today').on('click', function () {
-                var isChecked = $("#open_today").is(":checked");
-
-                if (isChecked) {
-                    setCookie_Main("mainpopup", "true");
-
-                    $('.layer-wrap').remove();
-                }
-
-            });
-
             function OpenSystemPopup() {
                 if (userPopupData && userPopupData.length > 0) {
                     for (var i=0;i<userPopupData.length;i++) {
@@ -1741,8 +1231,6 @@
 //]]>
 </script>
 
-
-            
             <!--/ Contents End -->
 		
 		<!-- /Contents Area -->
@@ -1753,43 +1241,6 @@
     <div class="com_pop_wrap">
         <div class="com_pop_fog"></div>
     </div>
-    <div class="pop_wrap">
-    <!-- S > [팝업] 지원 OS 업데이트 유도-->
-        <div id="pop_supportOS" class="popup">
-            <div class="pop_iexp_wrap" style="position:fixed; left:50%; top:50%; width:600px; margin:-165px 0 0 -300px; z-index:1000;">
-                <div class="pi_headline">
-                    <img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_headline2.jpg" alt="CGV 홈페이지는 고객님께서 사용중인 MS Windows XP에서 정상적인 서비스 이용이 어려울 수 있으며, OS업데이트를 권장합니다." />
-                </div>
-                <div class="down_app">
-                    <p><img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_downtxt.jpg" alt="OS 업데이트가 어려운 경우 모바일앱을 이용하세요!!!" /></p>
-                    <a class="btn" href="https://itunes.apple.com/kr/app/id370441190?mt=8" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ios.jpg" alt="Ios down" /></a>
-                    <a class="btn" href="https://play.google.com/store/apps/details?id=com.cgv.android.movieapp" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_android.jpg" alt="Android down" /></a>
-                </div>
-                <a class="btn_close">닫기</a>
-            </div>
-         </div>
-    <!-- S > [팝업] 지원 브라우저 다운로드 유도-->
-         <div id="pop_supportBrower" class="popup">
-            <div class="pop_iexp_wrap" style="position:fixed; left:50%; top:50%; width:600px; margin:-265px 0 0 -300px; z-index:1000;">
-                <div class="pi_headline">
-                    <img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_headline1.jpg" alt="CGV 홈페이지는 Internet Explorer 9이상에서 최적의 서비스 이용이 가능합니다. IE9 이하 브라우저에서 이용 시 정상적인 서비스 이용이 어려울 수 있으며, 브라우저 업그레이드 하시기를 권장합니다." />
-                </div>
-                <ul class="down_browser">
-                    <li><a href="https://www.microsoft.com/ko-kr/edge" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ie.jpg" alt="Internet Explorer 다운받기" /></a></li>
-                    <li><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_chrome.jpg" alt="Chrome 다운받기" /></a></li>
-                </ul>
-                <div class="down_app">
-                    <p><img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_downtxt.jpg" alt="OS 업데이트가 어려운 경우 모바일앱을 이용하세요!" /></p>
-                    <a class="btn" href="https://itunes.apple.com/kr/app/id370441190?mt=8" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ios.jpg" alt="Ios down" /></a>
-                    <a class="btn" href="https://play.google.com/store/apps/details?id=com.cgv.android.movieapp " target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_android.jpg" alt="Android down" /></a>
-                </div>
-                <a class="btn_close">닫기</a>
-            </div>
-        </div>
-	</div>
-
-    <!-- E Popup -->
-
     <!-- S 예매하기 및 TOP Fixed 버튼 -->
     <div class="fixedBtn_wrap">
     	<a href="#none" class="btn_gotoTop"><img src="./css/gotoTop.png" alt="최상단으로 이동" /></a>
@@ -1825,8 +1276,6 @@
 
     (function ($) {
         $(function () {
-
-        
             $('.movie_player_popup').moviePlayer();     //동영상플레이어
 
             //노원타운

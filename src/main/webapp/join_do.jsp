@@ -170,7 +170,7 @@ function search(){
         //$("#h_search_keyword").val(encodeURIComponent(search_keyword));
         //$("#headerFrm").attr("action", "https://www.cjone.com/cjmweb/search.do?h_search_keyword=" + encodeURIComponent(search_keyword));
         $("#h_search_keyword").val(search_keyword);
-        /* 
+        /* `
         $("#headerFrm").attr("action", "https://www.cjone.com/cjmweb/search.do?h_search_keyword=" + search_keyword);
         $("#headerFrm").submit();
          */
