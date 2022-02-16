@@ -64,13 +64,24 @@
     <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/preegg.css" />
 
     <!-- 각페이지 Header Start--> 
-
-
     
+
+    <!--/각페이지 Header End--> 
+    <script type="text/javascript">
+        //<![CDATA[
+        _TRK_CP = "/홈";
+
+        app.config('staticDomain', 'https://img.cgv.co.kr/R2014/')
+            .config('imageDomain', 'https://img.cgv.co.kr')
+            .config('isLogin', 'False');
+
+      //
+    </script>
+      
 </head>
 <body class="">
 
-<%@include file="./header.jsp" %>
+	<%@include file="./header.jsp" %>
 
 	<!-- Contaniner -->
 	<div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
@@ -86,7 +97,7 @@
             <!--/ Contents End -->
 		 </div>
 
-    <iframe title="CGV 빠른예매" id="ticket_iframe" src="./reservation.jsp" 
+    <iframe title="CGV 빠른예매" id="ticket_iframe" src="http://ticket.cgv.co.kr/Reservation/Reservation.aspx?MOVIE_CD=&MOVIE_CD_GROUP=&PLAY_YMD=&THEATER_CD=&PLAY_NUM=&PLAY_START_TM=&AREA_CD=&SCREEN_CD=&THIRD_ITEM=" 
         scrolling="no" frameborder="0" width="100%" height="987" style="width:100%; border:0 none;"></iframe>
     
     <script type="text/javascript">
@@ -203,7 +214,11 @@
 	</div>
     <!-- E Contaniner -->
     
-<%@include file="./footer.jsp" %>
+  	 <%@include file="./footer.jsp" %>
+
+   
+    
+</div>
 
 
 <script type="text/template" id="temp_popup_movie_player">
@@ -291,7 +306,128 @@
 </script>
 
 <script type="text/javascript" src="https://img.cgv.co.kr/R2014//js/system/crypto.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    function closeBanner(){        
+        $('#cgv_main_ad').remove();     
+        for(var i = 0; i < 2; i++) {
+            window.setTimeout(function(){
+                $(window).resize()                
+            }, 30)
+        }
+    }
+    function showPlayEndEvent() {
+        $('#pop_player_relation_wrap').show();
+        $('#btn_movie_replay').focus();
+    }
 
+    (function ($) {
+        $(function () {
+
+        
+            $('.movie_player_popup').moviePlayer();     //동영상플레이어
+
+            //노원타운
+            $('.special5_pop').on('click', function () {
+                openNowonTown();
+                return false;
+            });           
+            // 검색 auto validate version.
+            $('.btn-go-search').on('click', function () {
+                var $frmSearch = $(this).parent().parent('form');
+                $frmSearch.submit();
+                return false;
+            });
+
+            //메인스킵네비
+            $('#skipHeader').on('click', function(){
+                var $ctn = $('#contents');
+                $ctn.attr({
+                    tabIndex : -1
+                }).focus();				
+                return false;
+            });
+
+            //현재 URL 해당파라미터 교체
+            function updateQueryStringParameter(uri, key, value) {
+                var re = new RegExp("([?|&])" + key + "=.*?(&|#|$)", "i");
+                if (uri.match(re)) {
+                    return uri.replace(re, '$1' + key + "=" + value + '$2');
+                } else {
+                    var hash =  '';
+                    var separator = uri.indexOf('?') !== -1 ? "&" : "?";    
+                    if( uri.indexOf('#') !== -1 ){
+                        hash = uri.replace(/.*#/, '#');
+                        uri = uri.replace(/#.*/, '');
+                    }
+                    return uri + separator + key + "=" + value + hash;
+                }
+            }
+            //모바일버전 가기
+            $('.go-mobile').on('click', function() {
+                location.replace(updateQueryStringParameter(location.href, "IsMobile", "N"));
+                return false;
+            });
+        });
+    })(jQuery);
+	
+    function goFamilySite() {
+        var famulySiteURL = $(familysite).val();
+        if (famulySiteURL != "") {
+            var win = window.open(famulySiteURL, 'winFamilySite')
+            win.focus();
+        }
+    }
+    function goFtc() {
+        var ftcUrl = "http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1048145690";
+        window.open(ftcUrl, "bizCommPop", "width=750, height=700, scrollbars=1;");        
+    }    
+    //]]>
+</script>
+
+<!-- 앱다운로드 레이어 팝업 -->
+<script type="text/javascript">
+    //appDownInfoPop();
+</script>
+
+<script language="javascript" type="text/javascript">
+
+    //GA 에널리스트 이벤트LOG 함수- 2022.01.12: MYILSAN
+    function gaEventLog(pCategroy, pAction, pLabel) {
+        ga('send', {
+            hitType: 'event', eventCategory: pCategroy, eventAction: pAction, eventLabel: pLabel
+            , hitCallback: function () {
+            }
+            , hitCallbackFail: function () { 
+            }
+        });
+    }
+
+    //201402 SYH GA추가
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-47126437-1', 'cgv.co.kr'); //지주사
+    ga('create', 'UA-47951671-5', 'cgv.co.kr', { 'name': 'cgvTracker' }); //디마팀
+    ga('create', 'UA-47951671-7', 'cgv.co.kr', { 'name': 'rollup' }); //추가
+
+</script>
+
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NNNFR3"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({ 'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NNNFR3');
+</script>
+<!-- End Google Tag Manager -->
 
 </body>
 </html>

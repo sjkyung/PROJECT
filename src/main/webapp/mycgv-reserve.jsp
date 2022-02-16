@@ -68,110 +68,88 @@
 
     <script type="text/javascript" src="./js/jquery.tmpl.js"></script>
 
-
-
-    <!--/각페이지 Header End-->
     <script type="text/javascript">
         //<![CDATA[
-        _TRK_CP = "/홈";
 
-        app.config('staticDomain', 'https://img.cgv.co.kr/R2014/')
-            .config('imageDomain', 'https://img.cgv.co.kr')
-            .config('isLogin', 'True');
+        var myVar;
+        jQuery(document).ready(function () {
+            myVar = setInterval(function () { checkCookieExp() }, 1000 * 10);
+        });
+
+        function checkCookieExp() {
+            //alert("도는건가");
+            $.ajax({
+                type: "POST",
+                url: "/common/ajax/loginExpireCheck.aspx/expireCheck",
+                data: "{ pageSize : 20 }",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+
+                success: function (data) {
+                    var rst = $.parseJSON(data.d);
+                    rst = Number(rst) + 1;
+
+                    if (rst > 1 && rst < 62) {
+                        //alert("크다");
+                        jQuery(".logpopup").removeClass("on").removeClass("off");
+                        jQuery(".logpopup").addClass("on");
+                        $('#expTime').text(rst);
+                        clearInterval(myVar);
+                        timerMyVar = setInterval(function () { expTimeValue() }, 1000);
+
+                    } else {
+                        jQuery(".logpopup").removeClass("on").removeClass("off");
+                        jQuery(".logpopup").addClass("off");
+                    }
+
+                    //여기서 시간이 쿠키유효시간이 1분 미만이면 레이어 안내창을 표시
+                    //if( 레이어가 떠있는 상태면 무시 처리 - 김홍우님 가이드
+                },
+                error: function (request, error) {
+                    //alert("error:" + error);
+                    clearInterval(myVar);
+                }
+            });
 
 
-        // AD FLOAT
-        // 암호화 할 문자열과 키값(상수값)을 매개변수로 받는다.
-        function EncryptAD(str, key) {
-            output = new String;
-            Temp = new Array();
-            TextSize = str.length;
-            for (i = 0; i < TextSize; i++) {
-                // key 값을 원하는 대로 연산을 한다
-                output += String.fromCharCode(str.charCodeAt(i) + parseInt(key) + 123 + i);
-            }
-            return output;
+
+            // 로그인 연장 확인 클릭 시
+            //clearInterval(myVar);
         }
-        // 복호화
-        // 암호화 된 문자열과 키값(상수값)을 매개변수로 받는다.
-        function DecryptAD(str, key) {
-            output = new String;
-            Temp = new Array();
-            TextSize = str.length;
-            for (i = 0; i < TextSize; i++) {
-                // 암호화시 사용한 연산과 같아야 한다.
-                output += String.fromCharCode(str.charCodeAt(i) - (parseInt(key) + 123 + i));
-            }
+        function expTimeValue() {
 
-            return output;
-        }
-
-        function getCookieVal(offset) {
-            var endstr = document.cookie.indexOf(";", offset);
-            if (endstr == -1) endstr = document.cookie.length;
-            return unescape(document.cookie.substring(offset, endstr));
-        }
-        function GetCookieAd(name) {
-            var arg = name + "=";
-            var alen = arg.length;
-            var clen = document.cookie.length;
-            var i = 0;
-            while (i < clen) { //while open
-                var j = i + alen;
-                if (document.cookie.substring(i, j) == arg)
-                    return getCookieVal(j);
-                i = document.cookie.indexOf(" ", i) + 1;
-                if (i == 0) break;
-            } //while close
-            return null;
-        }
-        function setCookieAD(name, value, expiredays) {
-            var todayDate = new Date();
-            todayDate.setTime(todayDate.getTime() + (expiredays * 24 * 60 * 60 * 1000));
-            document.cookie = name + "=" + escape(value) + "; expires=" + todayDate.toGMTString() + "; path=/; domain=cgv.co.kr";
-        }
-        function CloseAD() {
-            var AdUrl = window.location.href;
-            var ArrAdUrl = AdUrl.split("/");
-
-            var CurCookieName = 'CgvPopAd-' + ArrAdUrl[3];
-            var CurCookieUrl = GetCookieAd(CurCookieName);
-            var CookieUrl = ArrAdUrl[3];
-
-            CookieUrl = EncryptAD(CookieUrl, "15442280");
-            setCookieAD(CurCookieName, CookieUrl, '1');
-            $(document).find('#ad_float1').hide();
-        }
-        function OpenAD() {
-            var AdUrl = window.location.href;
-            var ArrAdUrl = AdUrl.split("/");
-            var CookieUrl = ArrAdUrl[3];
-            var CurCookieName = 'CgvPopAd-' + ArrAdUrl[3];
-            var CurCookieUrl = GetCookieAd(CurCookieName);
-
-            if (CurCookieUrl == null) {
-                CurCookieUrl = "";
+            if (Number($('#expTime').text()) <= 0) {
+                clearInterval(timerMyVar);
+                window.location.href = "http://www.cgv.co.kr/user/login/logoutAuto.aspx";
             }
             else {
-                CurCookieUrl = DecryptAD(CurCookieUrl, "15442280");
+                $('#expTime').text($('#expTime').text() - 1);
             }
+        }
+        //팝업 닫기
+        jQuery(document).ready(function () {
+            $('.pop_corp_session .btn-close').click(function () {
+                $('.pop_corp_session').removeClass('on');
+            });
 
-            if (CurCookieUrl.indexOf(CookieUrl) != -1) {
-                $(document).find('#ad_float1').hide();
-            }
+        });
 
-            //section.cgv.co.kr 매거진 체크
-            var magazineckurl = GetCookieAd("CgvPopAd-magazine");
-            if (magazineckurl != null) {
-                var magazineck = DecryptAD(magazineckurl, "15442280");
-                if (magazineck != null && magazineck == "magazine") {
-                    //값이있는경우 표시하지않음
-                    $(document).find('#ad_float1').hide();
-                }
-            }
+        //팝업 창 가운데로 뜨도록
+        function fnOpenChapter() {
+            var obj = $('#layer-wrap');
+            var iHeight = (document.body.clientHeight / 2) - obj.height() / 2 + document.body.scrollTop;
+            var iWidth = (document.body.clientWidth / 2) - obj.width() / 2 + document.body.scrollLeft;
+
+            obj.css({
+                position: 'absolute'
+                , display: 'block'
+                , top: iHeight
+                , left: iWidth
+            });
         }
         //]]>
     </script>
+
 </head>
 <body class="">
 
@@ -218,46 +196,48 @@
                                 <button type="button" id="view_usergrade" class="round black"><span>MY 지난등급이력 보기</span></button>
 
                                 <div class="layer-wrap">
-                                <div id="user_grade" style="width:330px;margin-top:-500px;margin-left:-165px; display: none">
-                                    <h1>VIP 등급 이력</h1>
-                                    <div class="pop-contents">
-                                        <!-- Contents Addon -->
-                                        <div class="sect-my-grade">
-                                            <p><strong>공유</strong> 고객님의 연도별 고객 등급 이력입니다.</p>
-                                            <div class="grade-lst-light scrollbox">
-                                                <table summary="연도별 VIP 세부 등급 이력" id="mytable">
-                                                    <caption>VIP 등급 이력 리스트</caption>
-                                                    <colgroup>
-                                                        <col width="50%">
-                                                        <col width="*">
-                                                    </colgroup>
-                                                    <thead>
-                                                    <tr>
-                                                        <th scope="col">승급 년/월별</th>
-                                                        <th scope="col">등급</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
+                                    <div id="user_grade" class="popwrap" style="width:330px;margin-top:-500px;margin-left:-165px; display: none">
+                                        <h1>VIP 등급 이력</h1>
+                                        <div class="pop-contents">
+                                            <!-- Contents Addon -->
+                                            <div class="sect-my-grade">
+                                                <p><strong>공유</strong> 고객님의 연도별 고객 등급 이력입니다.</p>
+                                                <div class="grade-lst-light scrollbox">
+                                                    <table summary="연도별 VIP 세부 등급 이력" id="mytable">
+                                                        <caption>VIP 등급 이력 리스트</caption>
+                                                        <colgroup>
+                                                            <col width="50%">
+                                                            <col width="*">
+                                                        </colgroup>
+                                                        <thead>
+                                                        <tr>
+                                                            <th scope="col">승급 년/월별</th>
+                                                            <th scope="col">등급</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
 
-                                                    </tbody>
-                                                </table>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <ul class="tb-desclist">
+                                                    <li>- 고객님의 등급은 당해년도 VIP 규정에 따라 부여된 등급입니다</li>
+                                                    <li>- 연속 VIP는 전년도와 등급 갱신월이 일치해야 인정됩니다<br />
+                                                        (예. 17년 4월 RVIP의 경우, 18년 4월 RVIP 갱신 시에만 2년 연속 RVIP로 인정되며, 2017년 5월 RVIP 승급 시 17년 5월에 1년 차 RVIP로 인정)</li>
+                                                    <li>- 등급이 하락된 경우 하락된 등급의 1년 차로 인정됩니다<br />
+                                                        (예. 17년 4월 SVIP의 경우 18년 4월 VVIP로 등급 하락 시 VVIP 1년 차로 인정)</li>
+                                                </ul>
                                             </div>
-                                            <ul class="tb-desclist">
-                                                <li>- 고객님의 등급은 당해년도 VIP 규정에 따라 부여된 등급입니다</li>
-                                                <li>- 연속 VIP는 전년도와 등급 갱신월이 일치해야 인정됩니다<br />
-                                                    (예. 17년 4월 RVIP의 경우, 18년 4월 RVIP 갱신 시에만 2년 연속 RVIP로 인정되며, 2017년 5월 RVIP 승급 시 17년 5월에 1년 차 RVIP로 인정)</li>
-                                                <li>- 등급이 하락된 경우 하락된 등급의 1년 차로 인정됩니다<br />
-                                                    (예. 17년 4월 SVIP의 경우 18년 4월 VVIP로 등급 하락 시 VVIP 1년 차로 인정)</li>
-                                            </ul>
+                                            <!-- //Contents Addon -->
                                         </div>
-                                        <!-- //Contents Addon -->
+                                        <button type="button" id="close_usergrade" class="btn-close ">MY 지난 등급 이력 팝업 닫기</button>
                                     </div>
-                                    <button type="button">MY 지난 등급 이력 팝업 닫기</button>
                                 </div>
+
+                            </div>
+
                             </div>
                         </div>
-                        </div>
-                    </div>
 
                     <div class="cols-benefit-info">
                         <div class="col-my-coupon">
@@ -283,7 +263,7 @@
 
                         <div class="col-one-point">
                             <h3 style="!important;">CGV POINT</h3>
-                            <a href="">CGV POINT 더보기</a>
+                            <a href="./mycgv-cgvPoint-pointList.jsp">CGV POINT 더보기</a>
                             <ul>
                                 <li>
                                     <strong>CGV 사용가능 포인트</strong>
@@ -410,93 +390,6 @@
 
                 <div class="col-detail" id="mycgv_contents">
 
-                    <script type="text/javascript">
-                        //<![CDATA[
-
-                        var myVar;
-                        jQuery(document).ready(function () {
-                            myVar = setInterval(function () { checkCookieExp() }, 1000 * 10);
-                        });
-
-                        function checkCookieExp() {
-                            //alert("도는건가");
-                            $.ajax({
-                                type: "POST",
-                                url: "/common/ajax/loginExpireCheck.aspx/expireCheck",
-                                data: "{ pageSize : 20 }",
-                                contentType: "application/json; charset=utf-8",
-                                dataType: "json",
-
-                                success: function (data) {
-                                    var rst = $.parseJSON(data.d);
-                                    rst = Number(rst) + 2;
-                                    if (rst > 1 && rst < 62) {
-                                        //alert("크다");
-                                        jQuery(".logpopup").removeClass("on").removeClass("off");
-                                        jQuery(".logpopup").addClass("on");
-                                        $('#expTime').text(rst);
-                                        clearInterval(myVar);
-                                        timerMyVar = setInterval(function () { expTimeValue() }, 1000);
-
-                                    } else {
-                                        jQuery(".logpopup").removeClass("on").removeClass("off");
-                                        jQuery(".logpopup").addClass("off");
-                                    }
-                                },
-                                error: function (request, error) {
-                                    //alert("error:" + error);
-                                    clearInterval(myVar);
-                                }
-                            });
-
-
-
-                            // 로그인 연장 확인 클릭 시
-                            //clearInterval(myVar);
-                        }
-                        function expTimeValue() {
-
-                            if (Number($('#expTime').text()) <= 0) {
-                                clearInterval(timerMyVar);
-                                window.location.href = "http://www.cgv.co.kr/user/login/logoutAuto.aspx";
-                            }
-                            else {
-                                $('#expTime').text($('#expTime').text() - 1);
-                            }
-                        }
-
-
-                        //팝업 닫기
-                        jQuery(document).ready(function () {
-                            $('.pop_corp_session .btn-close').click(function () {
-                                $('.pop_corp_session').removeClass('on');
-                            });
-                        });
-
-
-
-                        //팝업 닫기
-                        jQuery(document).ready(function () {
-                            $('.photi_agree .btn-close').click(function () {
-                                $('.layer-wrap.photi_agree').hide();
-                            });
-                        });
-
-                        //팝업 창 가운데로 뜨도록
-                        function fnOpenChapter() {
-                            var obj = $('#layer-wrap');
-                            var iHeight = (document.body.clientHeight / 2) - obj.height() / 2 + document.body.scrollTop;
-                            var iWidth = (document.body.clientWidth / 2) - obj.width() / 2 + document.body.scrollLeft;
-
-                            obj.css({
-                                position: 'absolute'
-                                , display: 'block'
-                                , top: iHeight
-                                , left: iWidth
-                            });
-                        }
-                        //]]>
-                    </script>
 
                     <div class="tit-mycgv type2">
                         <h3>나의 예매내역</h3>
@@ -513,21 +406,6 @@
                             <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTA1NzIzNjU1ZGQosR2CqW6VPifp/ciP2Tew8flWyg==" />
                         </div>
 
-                        <script type="text/javascript">
-                            //<![CDATA[
-                            var theForm = document.forms['aspnetForm'];
-                            if (!theForm) {
-                                theForm = document.aspnetForm;
-                            }
-                            function __doPostBack(eventTarget, eventArgument) {
-                                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-                                    theForm.__EVENTTARGET.value = eventTarget;
-                                    theForm.__EVENTARGUMENT.value = eventArgument;
-                                    theForm.submit();
-                                }
-                            }
-                            //]]>
-                        </script>
 
 
                         <div>
@@ -1698,115 +1576,6 @@
                                     app.ajax().set({ dataType: 'json', url: url, data: JSON.stringify(data), contentType: "application/json; charset=utf-8", successHandler: callback });
                                 }
 
-
-//            $('.create-phototicket').on('click', function () {
-//                //시작1
-
-
-//                var status = $(this).attr("data-status");
-//                var message = $(this).attr("data-message");
-//                var reserveNo = $(this).attr("data-reserveno");
-//                var customNo = $(this).attr("data-customno");
-//                var saleNo = $(this).attr("data-saleno");
-
-//                var theaterCode = $(this).attr("data-theatercode");
-//                var multiplexCode = $(this).attr("data-multiplexcode");
-//                var movieplayDate = $(this).attr("data-movieplaydate");
-//                var movieplayTurn = $(this).attr("data-movieplayturn");
-//                var cgvCode = $(this).attr("data-cgvcode");
-
-//                $('#status1').val(status);
-//                $('#message1').val(message);
-//                $('#reserveNo1').val(reserveNo);
-//                $('#customNo1').val(customNo);
-//                $('#saleNo1').val(saleNo);
-
-//                //                $('#theaterCode1').val(theaterCode);
-//                //                $('#multiplexCode1').val(multiplexCode);
-//                //                $('#movieplayDate1').val(movieplayDate);
-//                //                $('#movieplayTurn1').val(movieplayTurn);
-//                //                $('#cgvCode1').val(cgvCode);
-
-//                // $.support.cors = true;
-//                var usercode = $("#isIPIN").val();
-//                // var subStr = "ipin=" + encodeURIComponent(usercode);
-//                //포토시작1
-
-//                $.ajax({
-//                    type: "POST",
-//                    url: '/common/ajax/theaters.aspx/SetUserInfoAgreePHOTO',
-//                    data: "{'usercode':'" + usercode + "'}",
-//                    contentType: "application/json; charset=utf-8",
-//                    dataType: 'json',
-//                    success: function (result) {
-
-//                        switch (result.d.toString()) {
-
-
-//                            case "2":
-//                                $("input:radio[id='agree1']").attr("checked", true);
-//                                $('#agree').show();
-//                                // 등록되지 않음
-//                                break;
-//                            case "0":
-//                                $("input:radio[id='agree2']").attr("checked", true);
-//                                $('#agree').show();
-//                                // 등록되지 않음
-//                                break;
-//                            case "1":
-//                                // 등록완료
-//                                //$("input:radio[id='rd_agree_preferPhototicket_Y']").attr("checked", true);
-
-//                                switch (status) {
-//                                    case '1':
-//                                        // openMakePhotoTicketPopup(reserveNo, customNo, saleNo);
-//                                        openMakePhotoTicketPopup(reserveNo, customNo, saleNo, theaterCode, multiplexCode, movieplayDate, movieplayTurn, cgvCode);  // 오프라인확장
-//                                        break;
-//                                    case '97':
-//                                        alert('동반관람자가 이미 포토티켓을 제작하셨습니다.'); // TODO : 문구확인필요
-//                                        break;
-//                                    case '98':
-//                                        alert('이미 포토티켓을 제작하셨습니다.\n내가 만든 포토티켓에서 확인해주세요.');
-//                                        break;
-//                                    default:
-//                                        alert(message);
-//                                        break;
-//                                }
-//                                break;
-//                            default:
-//                                alert('Error result Value : ' + result);
-//                                break;
-//                        }
-//                    }
-//                });
-                                //끝1
-//            });
-
-
-
-//            $('.cancel-phototicket').on('click', function () {
-//                var saleNo = $(this).attr("data-saleno");
-//                var url = '/common/ajax/user.aspx/CancelPhotoTicket';
-//                var data = { 'saleNo': saleNo };
-//                var callback = function (result) {
-//                    if (result == null)
-//                        return;
-
-//                    if (parseInt(result['Result']) == 1) {
-//                        alert('포토티켓 취소가 완료되었습니다.\n다시 포토티켓 만들기가 가능합니다.');
-//                        location.replace('./');
-//                    }
-//                    else {
-//                        alert(result['Msg']);
-//                    }
-//                };
-
-//                if (!confirm('포토티켓을 취소하시겠습니까?\n결제하신 포토티켓 금액은 환불처리 됩니다.'))
-//                    return false;
-
-//                app.ajax().set({ dataType: 'json', url: url, data: JSON.stringify(data), contentType: "application/json; charset=utf-8", successHandler: callback });
-//            });
-
                                 var map = null;
                                 var myVar;
 
@@ -1922,12 +1691,12 @@
                     $(function () {
 
                         $('#go_edit_page').on('click', function () {
-                            var win = window.open("/user/popup/edit-profile.aspx", "profile", "left=0,top=o,width=445,height=440,toolbar=no,scrollbars=no");
+                            var win = window.open("./mycgv-popupedit-profile.jsp", "profile", "left=0,top=o,width=445,height=440,toolbar=no,scrollbars=no");
                             win.focus();
                         });
 
                         $('#btn_set_my_favorite').on('click', function () {
-                            var win = window.open("/user/popup/favoriteTheaters.aspx?ismycgv=true", "url", "left=0,top=o,width=645,height=370,toolbar=no,scrollbars=no");
+                            var win = window.open("./mycgv-favoriteTheaters.jsp", "url", "left=0,top=o,width=645,height=370,toolbar=no,scrollbars=no");
                             win.focus();
                         });
 
@@ -1938,42 +1707,24 @@
 
                             if(usergrade.style.display=='none'){
                                 usergrade.style.display = '';
-                            }else{
+                            }else(usergrade.style.display=='')
+                            {
                                 usergrade.style.display = '';
                             }
 
-                            // var popup = window.open('http://www.naver.com', '네이버팝업', 'width=700px,height=800px,scrollbars=yes');
-
                         });
 
-                        // function GetUserGradeList(_this) {
-                        //
-                        //     var url = '/common/ajax/user.aspx/GetUserGradeList_2017';
-                        //     var data = null;
-                        //     var callback = function (result) {
-                        //         app.log(result);
-                        //
-                        //         var $std = $(_this),
-                        //             options = {
-                        //                 '$target': $std,
-                        //                 'html': $('#temp_view_usergrade').html(),
-                        //                 'position': 'absolute',
-                        //                 'mask': 'none'
-                        //             };
-                        //         app.instWin.add(options);
-                        //
-                        //         var $tbody = $('#mytable > tbody:last'),
-                        //             $tr1 = $('#tempUserGradeTbodyTr1')
-                        //         //  $tr2 = $('#tempUserGradeTbodyTr2');
-                        //         $.each(result, function (i, v) {
-                        //
-                        //             $tbody.append("<tr><th scope='row'>" + v.YearMonthSub + "년" + v.MonthSub + "월" + "</th><td>" + v.GradeCode + "</td></tr>");
-                        //
-                        //         });
-                        //     }
-                        //     app.ajax().get({ dataType: 'json', url: url, data: data, contentType: "application/json; charset=utf-8", successHandler: callback });
-                        // }
-                        //개인화영역스킵
+                        $('#close_usergrade').on('click', function () {
+                            var usergrade = document.getElementById("user_grade");
+
+                            if(usergrade.style.display==''){
+                                usergrade.style.display = 'none';
+                            }else (usergrade.style.display=='')
+                            {
+                                usergrade.style.display = 'none';
+                            }
+                        });
+
                         $('#skipPersoninfo').on('click', function () {
                             var $ctn = $('#menu');
                             $ctn.attr({
@@ -2023,236 +1774,5 @@
 
 <%@ include file="./footer.jsp" %>
 </div>
-<!-- Aside Banner :  -->
-<!--
-<div id="ctl00_ctl00_sect_person_right" class="sect-aside-banner" style="padding:0; margin:0; position:fixed; z-index:1;display:none">
-    <div class="aside-content-top">
-        <div class="aside-content-btm">
-            <a href="/theaters/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_theater.gif" alt="CGV THEATER" /></a>
-            <a href="/arthouse/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_arthouse.gif" alt="CGV arthouse" /></a>
-            <a href="/theaters/special/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_special.gif" alt="CGV SPECIAL" /></a>
-
-            <a href="/user/mycgv/reserve/" class="required-login" data-url="/user/mycgv/reserve/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_ticket.gif" alt="CGV TICKET INFO" /></a>
-            <a href="/discount/discountlist.aspx"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_discount.gif" alt="CGV DISCOUNT INFO" /></a>
-        </div>
-    </div>
-    <div class="btn-top">
-        <a href="#" onclick="window.scrollTo(0,0);return false;"><span>최상단으로 이동</span></a>
-    </div>
-</div>
-//-->
-<!-- //Aside Banner -->
-
-</div>
-
-
-<script type="text/template" id="temp_popup_movie_player">
-    <div class="popwrap">
-        <div class="sect-layerplayer">
-            <div class="cols-pop-player">
-                <h1 class="title" id="movie_player_popup_title"></h1>
-                <div class="col-pop-player">
-                    <div class="warp-pop-player" style="position: relative;">
-                        <iframe id="ifrm_movie_player_popup" name="ifrm_movie_player_popup" src="about:blank" style="width:800px;height:450px;" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-
-                        <div class="sect-replay" style="display:none" id="pop_player_relation_wrap">
-                            <button class="btn-replay movie_player_inner_popup" type="button" data-gallery-idx="0" id="btn_movie_replay">다시보기</button>
-                            <!-- 없어지는 영역 -->
-                            <div class="wrap-relationmovie" id="pop_player_relation_item_wrap">
-                                <strong class="title">관련영상</strong>
-                                <ul id="pop_player_relation_movie">
-                                    <li></li>
-                                </ul>
-                            </div><!-- .wrap-relationmovie -->
-                        </div><!-- .sect-replay -->
-
-                    </div><!-- .warp-pop-player -->
-                    <div class="descri-trailer">
-                        <strong class="title">영상설명</strong>
-                        <textarea readonly="readonly" id="movie_player_popup_caption"></textarea>
-                    </div>
-                </div><!-- .col-player -->
-                <div class="col-pop-playerinfo">
-                    <div id="movie_player_popup_movie_info"></div>
-                    <div class="sect-trailer">
-                        <strong class="title">신규영상</strong>
-                        <ul>
-
-                        </ul>
-                    </div>
-                </div><!-- .col-playerinfo -->
-            </div><!-- .cols-player -->
-            <button type="button" class="btn-close">닫기</button>
-        </div>
-    </div>
-</script>
-
-<script id="temp_popup_movie_player_movie_info" type="text/x-jquery-tmpl">
-<div class="box-image">
-    <a href="/movies/detail-view/?midx=${MovieIdx}" title="${Title} 상세보기 새창">
-        <span class="thumb-image">
-            <img src="${PosterImage.MiddleImage}" alt="${Title} 포스터" />
-            <span class="ico-grade ${MovieGrade.StyleClassName}">${MovieGrade.GradeText}</span>
-        </span>
-    </a>
-</div>
-<div class="box-contents">
-    <a href="/movies/detail-view/?midx=${MovieIdx}" title="${Title} 상세보기 새창">
-        <strong class="title">${Title}</strong>
-    </a>
-    <span class="txt-info" style="margin-bottom:2px;">
-        <em class="genre">${GenreText}</em>
-        <span>
-            <i>${OpenDate}</i>
-            <strong>${OpenText}</strong>
-            {{if D_Day > 0}}
-                <em class="dday">D-${D_Day}</em>
-            {{/if}}
-        </span>
-    </span>
-{{if IsTicketing }}
-    <a class="link-reservation" href="/ticket/?MOVIE_CD=${CGVCode}&MOVIE_CD_GROUP=${CGVCode}">예매</a>
-{{/if}}
-</div>
-</script>
-
-<script id="temp_popup_movie_player_relation_movie_item" type="text/x-jquery-tmpl">
-<li>
-    <div class="box-image">
-        <a href="#" title="${Title} 영상보기" class="movie_player_inner_popup" data-gallery-idx="${GalleryIdx}">
-            <span class="thumb-image">
-                <img src="${ImageUrl}"
-                alt="${Title}_트레일러" />
-                <span class="ico-play">영상보기</span>
-            </span>
-        </a>
-    </div>
-</li>
-</script>
-
-<script type="text/javascript" src="https://img.cgv.co.kr/R2014//js/system/crypto.js"></script>
-<script type="text/javascript">
-    //<![CDATA[
-    function closeBanner(){
-        $('#cgv_main_ad').remove();
-        for(var i = 0; i < 2; i++) {
-            window.setTimeout(function(){
-                $(window).resize()
-            }, 30)
-        }
-    }
-    function showPlayEndEvent() {
-        $('#pop_player_relation_wrap').show();
-        $('#btn_movie_replay').focus();
-    }
-
-    (function ($) {
-        $(function () {
-
-
-            $('.movie_player_popup').moviePlayer();     //동영상플레이어
-
-            //노원타운
-            $('.special5_pop').on('click', function () {
-                openNowonTown();
-                return false;
-            });
-            // 검색 auto validate version.
-            $('.btn-go-search').on('click', function () {
-                var $frmSearch = $(this).parent().parent('form');
-                $frmSearch.submit();
-                return false;
-            });
-
-            //메인스킵네비
-            $('#skipHeader').on('click', function(){
-                var $ctn = $('#contents');
-                $ctn.attr({
-                    tabIndex : -1
-                }).focus();
-                return false;
-            });
-
-            //현재 URL 해당파라미터 교체
-            function updateQueryStringParameter(uri, key, value) {
-                var re = new RegExp("([?|&])" + key + "=.*?(&|#|$)", "i");
-                if (uri.match(re)) {
-                    return uri.replace(re, '$1' + key + "=" + value + '$2');
-                } else {
-                    var hash =  '';
-                    var separator = uri.indexOf('?') !== -1 ? "&" : "?";
-                    if( uri.indexOf('#') !== -1 ){
-                        hash = uri.replace(/.*#/, '#');
-                        uri = uri.replace(/#.*/, '');
-                    }
-                    return uri + separator + key + "=" + value + hash;
-                }
-            }
-            //모바일버전 가기
-            $('.go-mobile').on('click', function() {
-                location.replace(updateQueryStringParameter(location.href, "IsMobile", "N"));
-                return false;
-            });
-        });
-    })(jQuery);
-
-    function goFamilySite() {
-        var famulySiteURL = $(familysite).val();
-        if (famulySiteURL != "") {
-            var win = window.open(famulySiteURL, 'winFamilySite')
-            win.focus();
-        }
-    }
-    function goFtc() {
-        var ftcUrl = "http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1048145690";
-        window.open(ftcUrl, "bizCommPop", "width=750, height=700, scrollbars=1;");
-    }
-    //]]>
-</script>
-
-<!-- 앱다운로드 레이어 팝업 -->
-<script type="text/javascript">
-    //appDownInfoPop();
-</script>
-
-<script language="javascript" type="text/javascript">
-
-    //GA 에널리스트 이벤트LOG 함수- 2022.01.12: MYILSAN
-    function gaEventLog(pCategroy, pAction, pLabel) {
-        ga('send', {
-            hitType: 'event', eventCategory: pCategroy, eventAction: pAction, eventLabel: pLabel
-            , hitCallback: function () {
-            }
-            , hitCallbackFail: function () {
-            }
-        });
-    }
-
-    //201402 SYH GA추가
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-47126437-1', 'cgv.co.kr'); //지주사
-    ga('create', 'UA-47951671-5', 'cgv.co.kr', { 'name': 'cgvTracker' }); //디마팀
-    ga('create', 'UA-47951671-7', 'cgv.co.kr', { 'name': 'rollup' }); //추가
-
-</script>
-
-
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NNNFR3"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>    (function (w, d, s, l, i) {
-    w[l] = w[l] || []; w[l].push({ 'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-    }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-        '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-})(window, document, 'script', 'dataLayer', 'GTM-NNNFR3');
-</script>
-<!-- End Google Tag Manager -->
-
 </body>
 </html>
