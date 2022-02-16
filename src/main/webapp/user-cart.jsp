@@ -679,7 +679,7 @@
 
                             </ul>
                             <ul class='cart_content'>
-                                <li><a href='#' onclick="javascript:location.href='/user/mycgv/popcorn-store/';">내
+                                <li><a href='#' onclick="javascript:location.href='mycgv-popcorn-store.jsp/';">내
                                         기프트콘</a><span id='giftconcnt'>0</span></li>
                                 <li><a href='#' onclick="javascript:location.href='./user-cart.jsp';">장바구니</a><span
                                         id='cartviewcnt'>2</span></li>
