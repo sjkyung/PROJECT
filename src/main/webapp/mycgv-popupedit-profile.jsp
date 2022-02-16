@@ -60,8 +60,8 @@
         </div>
         <div class="sect-profile-modify">
           <div class="profile-name">
-            <strong>김태훈님</strong>
-            <em>bf**com</em>
+            <strong>공유님</strong>
+            <em>Gong-U</em>
           </div>
           <div class="profile-modify">
             <dl>
@@ -80,7 +80,7 @@
                 <input type="hidden" id="user_image" name="user_image" value="" />
                 <input type="hidden" id="user_small_image" name="user_small_image" value="" />
                 <div class="thumb-image">
-                  <img id="profile_image" src="" alt="김태훈님 프로필 사진" onerror="errorImage(this, {type:'profile'})" />
+                  <img id="profile_image" src="http://img.cgv.co.kr/R2014/images/common/default_profile.gif" alt="프로필 사진" onerror="errorImage(this, {type:'profile'})" />
                   <span class="profile-mask"></span>
 
                 </div>
