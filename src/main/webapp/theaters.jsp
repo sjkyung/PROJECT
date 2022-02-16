@@ -126,12 +126,6 @@
     
    
 
-    
-    <ul class="tab-menu" id="menu">
-        <li class="on"><a href="#" title="현재 선택됨">상영시간표</a></li>
-        <li class="last"><a href="#">위치/주차안내</a></li>
-        <!--<li class='last'><a href="./?page=price&theaterCode=0056#menu" >관람료안내</a></li>-->
-    </ul>
 
     <script>
 
@@ -231,7 +225,7 @@
 <h4 class="hidden"> + [상영시간표]</h4>
             
 <!-- Showtimes Start -->
-<iframe id="ifrm_movie_time_table" src="showtime.jsp" title="[] 상영시간표" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="height: 846px; min-height: 100px; padding-top: 120px;"></iframe>
+<iframe id="ifrm_movie_time_table" src="showtime.jsp" title="[] 상영시간표" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="height: 900px; min-height: 100px; padding-top: 120px;"></iframe>
 <!-- /Showtimes End -->
 
 </div>

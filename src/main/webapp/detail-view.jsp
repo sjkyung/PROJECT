@@ -331,7 +331,7 @@ let wishlist=document.getElementsByClassName('wishlist');
                             <!-- TODO : 동영상 팝업 창 작업 후 링크 걸어야 함 //-->
                             <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="200013">
                                 <span class="thumb-image">
-                                    <img src="./img/1.jpg" alt="[극장판 주술회전 0]2차 예고편">
+                                    <img src="css/1.jpg" alt="[극장판 주술회전 0]2차 예고편">
                                     <span class="ico-play">영상보기</span>
                                 </span>
                             </a>
@@ -430,32 +430,32 @@ let wishlist=document.getElementsByClassName('wishlist');
                     <div class="slider" id="still_motion">
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px;">
-                                <img src="./img/1.jpg" alt="극장판 주술회전 0" style="height: 100%;">
+                                <img src="css/1.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                                                 
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img src="./img/2.jpg" alt="극장판 주술회전 0" style="height: 100%;">
+                                <img src="css/2.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                                                 
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img src="./img/3.jpg" alt="극장판 주술회전 0" style="height: 100%;">
+                                <img src="css/3.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                         
                                                 
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img src="./img/4.jpg" alt="극장판 주술회전 0" style="height: 100%;">
+                                <img src="css/4.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                                                 
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img src="./img/5.jpg" alt="극장판 주술회전 0" style="height: 100%;">
+                                <img src="css/5.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                         
