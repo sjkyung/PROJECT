@@ -284,7 +284,7 @@
 
 
                         <div class="col-one-point">
-                            <h3 style="!important;">CGV POINT</h3>
+                            <h3 style="background: url(./css/logoRed.png) no-repeat center; background-size: 90px 25px">CGV POINT</h3>
                             <a href="./mycgv-cgvPoint-pointList.jsp">CGV POINT 더보기</a>
                             <ul>
                                 <li>
