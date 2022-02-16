@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <title>mycgv-movielog-watched</title>
+    <title>mycgv-movielog-expected</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="Expires" content="-1" />
@@ -373,7 +373,7 @@
                         <div class="box-round-inner">
                             <div class="inner-contents-log">
                                 <a href="./mycgv-movielog-watched.jsp">
-                                    <em>21</em>
+                                    <em>3</em>
                                     <strong>내가 본 영화</strong>
                                 </a>
                             </div>
