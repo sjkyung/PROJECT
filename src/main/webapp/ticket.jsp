@@ -75,10 +75,9 @@
             .config('imageDomain', 'https://img.cgv.co.kr')
             .config('isLogin', 'False');
 
-        
-    
-
-    
+      //
+    </script>
+      
 </head>
 <body class="">
 
