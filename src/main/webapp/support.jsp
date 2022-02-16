@@ -223,7 +223,7 @@
             
             
             <li><a href="/user/mycgv/"><img src="https://img.cgv.co.kr/R2014/images/common/ico/loginMember.png" alt="MY CGV" /><span>MY CGV</span></a></li>
-            <li><a href="/support/default.aspx"><img src="https://img.cgv.co.kr/R2014/images/common/ico/loginCustomer.png" alt="고객센터" /><span>고객센터</span></a></li>
+            <li><a href="/ProjectCGV/support.jsp"><img src="https://img.cgv.co.kr/R2014/images/common/ico/loginCustomer.png" alt="고객센터" /><span>고객센터</span></a></li>
         </ul>
     </div>
 </div>
@@ -553,12 +553,12 @@
         고객센터 메뉴</h2>
     <div class="snb">
         <ul>
-            <li class='on'><a href="/ProjectCGV/support.jsp">고객센터 메인<i></i></a></li>
-            <li class=''><a href="/ProjectCGV/support-faq.jsp" title="현재선택">자주찾는 질문<i></i></a></li>
-            <li class=''><a href="/ProjectCGV/support-new.jsp">공지/뉴스<i></i></a></li>
-            <li class=''><a href="/ProjectCGV/support-qna.jsp">이메일 문의<i></i></a></li>
-            <li class=''><a href="/ProjectCGV/support-lost.jsp">분실물 문의<i></i></a></li>
-            <li class=''><a href="/ProjectCGV/support-lease.jsp">단체/ 대관 문의<i></i></a></li>            
+            <li class='on'><a href="./support.jsp">고객센터 메인<i></i></a></li>
+            <li class=''><a href="./support-faq.jsp" title="현재선택">자주찾는 질문<i></i></a></li>
+            <li class=''><a href="./support-new.jsp">공지/뉴스<i></i></a></li>
+            <li class=''><a href="./support-qna.jsp">이메일 문의<i></i></a></li>
+            <li class=''><a href="./support-lost.jsp">분실물 문의<i></i></a></li>
+            <li class=''><a href="./support-lease.jsp">단체/ 대관 문의<i></i></a></li>            
             
             
           
@@ -606,17 +606,17 @@
                 <div class="c_box talk_inquiry" style="cursor:pointer;">
                     <strong class="c_tit">상담톡 이용</strong>
                     <span class="c_txt">상담 톡을 이용해보세요.</span>
-                    <a href="suport-lease.jsp">문의하기</a>
+                    <a href="/ProjectCGV/support.jsp">문의하기</a>
                 </div>
 				<div class="c_box email_inquiry" style="cursor:pointer;">
 					<strong class="c_tit">이메일 문의</strong>
 					<span class="c_txt">24시간 365일 언제든지 문의해주세요.</span>
-					<a href="/support/qna/default.aspx">문의하기</a>
+					<a href="/ProjectCGV/support-qna.jsp">문의하기</a>
                 </div>
 				<div class="c_box my_advice"  style="cursor:pointer;">
 					<strong class="c_tit">내 상담 내역 확인</strong>
 					<span class="c_txt">문의하신 내용을 확인하실 수 있습니다.</span>
-					<a href="/user/mycgv/inquiry/qna/list.aspx?g=1#contaniner"  target="_blank" title="새창열기" >문의내역 조회</a>
+					<a href="/ProjectCGV/support.jsp"  target="_blank" title="새창열기" >문의내역 조회</a>
                 </div>
 			</div>
 			<div class="customer_notice_area">
@@ -627,7 +627,7 @@
 
                         <!-- 로그아웃일 경우에만 링크  -->
                           
-						<li><a href="/user/login/find-account.aspx"  target="_blank" title="새창열기">아이디/<br/>비밀번호 찾기</a></li>
+						<li><a href="/ProjectCGV/support.jsp"  target="_blank" title="새창열기">아이디/<br/>비밀번호 찾기</a></li>
                           
                         <!-- 로그아웃일 경우에만 링크  -->
 
@@ -635,7 +635,7 @@
 
                         <!-- 로그아웃일 경우에만 링크  --> 
                             
-						<li><a href="/user/guest/default.aspx"  target="_blank" title="새창열기">비회원<br/>예매/취소</a></li>
+						<li><a href="/ProjectCGV/support.jsp"  target="_blank" title="새창열기">비회원<br/>예매/취소</a></li>
                          
                         <!-- 로그아웃일 경우에만 링크  -->
 

@@ -631,13 +631,12 @@
         고객센터 메뉴</h2>
     <div class="snb">
         <ul>
-            <li class=''><a href="/support/default.aspx">고객센터 메인<i></i></a></li>
-            <li class=''><a href="/support/faq/default.aspx" title="현재선택">자주찾는 질문<i></i></a></li>
-            <li class=''><a href="/support/news/default.aspx">공지/뉴스<i></i></a></li>
-            <li class='on'><a href="/support/qna/default.aspx">이메일 문의<i></i></a></li>
-            <li class=''><a href="/support/lost/default.aspx">분실물 문의<i></i></a></li>
-            <li class=''><a href="/support/lease/default.aspx">단체/ 대관 문의<i></i></a></li>            
-            
+             <li class=''><a href="./support.jsp">고객센터 메인<i></i></a></li>
+            <li class=''><a href="./support-faq.jsp" title="현재선택">자주찾는 질문<i></i></a></li>
+            <li class=''><a href="./support-new.jsp">공지/뉴스<i></i></a></li>
+            <li class='on'><a href="./support-qna.jsp">이메일 문의<i></i></a></li>
+            <li class=''><a href="./support-lost.jsp">분실물 문의<i></i></a></li>
+            <li class=''><a href="./support-lease.jsp">단체/ 대관 문의<i></i></a></li>      
             
           
         </ul>

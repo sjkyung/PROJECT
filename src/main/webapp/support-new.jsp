@@ -553,14 +553,12 @@
         고객센터 메뉴</h2>
     <div class="snb">
         <ul>
-            <li class=''><a href="/ProjectCGV/support.jsp">고객센터 메인<i></i></a></li>
-            <li class=''><a href="/ProjectCGV/support-qna.jsp" title="현재선택">자주찾는 질문<i></i></a></li>
-            <li class='on'><a href="/ProjectCGV/support.jsp">공지/뉴스<i></i></a></li>
-            <li class=''><a href="/ProjectCGV/support.jsp">이메일 문의<i></i></a></li>
-            <li class=''><a href="/ProjectCGV/support.jsp">분실물 문의<i></i></a></li>
-            <li class=''><a href="/ProjectCGV/support-least.jsp">단체/ 대관 문의<i></i></a></li>            
-            
-            
+           <li class=''><a href="./support.jsp">고객센터 메인<i></i></a></li>
+            <li class=''><a href="./support-faq.jsp" title="현재선택">자주찾는 질문<i></i></a></li>
+            <li class='on'><a href="./support-new.jsp">공지/뉴스<i></i></a></li>
+            <li class=''><a href="./support-qna.jsp">이메일 문의<i></i></a></li>
+            <li class=''><a href="./support-lost.jsp">분실물 문의<i></i></a></li>
+            <li class=''><a href="./support-lease.jsp">단체/ 대관 문의<i></i></a></li>      
           
         </ul>
     </div>
