@@ -496,7 +496,7 @@
                     <div class="sect-mycgv-reserve movielog col3">
                         <div class="box-polaroid">
                             <div class="box-inner preegg" style="height: 120px">
-                                <a href="http://www.cgv.co.kr/user/movielog/" title="기대되는 영화" style="margin-top: -38px">
+                                <a href="./mycgv-movielog-expected.jsp" title="기대되는 영화" style="margin-top: -38px">
                                     <img src="./css/mycgvEggIcon.png" alt="movielog" />
                                     <h3>기대되는 영화</h3>
                                     <span>보고 싶은 영화들을 미리 <br>담아두고 싶다면?</span>
@@ -504,14 +504,14 @@
                                 </a>
                             </div>
                             <div class="box-inner watched" style="height: 120px">
-                                <a href="./mycgv-movielog-watched" title="내가 본 영화" style="margin-top: -35px">
+                                <a href="./mycgv-movielog-watched.jsp" title="내가 본 영화" style="margin-top: -35px">
                                     <img src="css/mycgvMovieIcon.png" alt="CGV" />
                                     <h3>내가 본 영화</h3>
                                     <span>관람한 영화들을 한번에 <br />모아 보고 싶다면?</span>
                                 </a>
                             </div>
                             <div class="box-inner mvdiary" style="height: 120px">
-                                <a href="http://www.cgv.co.kr/movies/point/my-list.aspx" title="내가 쓴 평점" style="margin-top: -35px">
+                                <a href="./mycgv-movielog-mylist.jsp" title="내가 쓴 평점" style="margin-top: -35px">
                                     <img src="./css/mycgvReviewIcon.png" alt="CGV" />
                                     <h3>내가 쓴 평점</h3>
                                     <span>관람 후 내 감상평을 적어 <br />추억하고 싶다면?</span>
