@@ -191,7 +191,7 @@
                                 </dl>
                             </li>
                             <li>
-                                <h2><a href="../theaters.jsp">극장</a></h2>
+                                <h2><a href="./theaters.jsp">극장</a></h2>
                                 <dl class="nav_overMenu">
                                     <dt>
                                         <h2><a href="./theaters.jsp" tabindex="-1">극장</a></h2>

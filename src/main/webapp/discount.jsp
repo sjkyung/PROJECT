@@ -219,7 +219,7 @@
 
                             
                                         <div class ="swiper-slide">
-                                            <a href="/culture-event/event/detailViewUnited.aspx?SEQ=33682" id="ctl00_PlaceHolderContent_rptRollingList_ctl00_rollingLink">
+                                            <a href="./event01.jsp" id="ctl00_PlaceHolderContent_rptRollingList_ctl00_rollingLink">
                                                 <img src="http://img.cgv.co.kr/Event/Event/2021/1221/16400635619670.jpg" id="ctl00_PlaceHolderContent_rptRollingList_ctl00_rollingImg" width="735" height="310" />
                                             </a>
                                         </div>
@@ -253,7 +253,7 @@
                                         </div>
                                 
                                         <div class ="swiper-slide">
-                                            <a href="/culture-event/event/detailViewUnited.aspx?SEQ=30038" id="ctl00_PlaceHolderContent_rptRollingList_ctl07_rollingLink">
+                                            <a href="./event02.jsp" id="ctl00_PlaceHolderContent_rptRollingList_ctl07_rollingLink">
                                                 <img src="http://img.cgv.co.kr/Event/Event/2022/0110/16417849129550.jpg" id="ctl00_PlaceHolderContent_rptRollingList_ctl07_rollingImg" width="735" height="310" />
                                             </a>
                                         </div>
@@ -277,11 +277,11 @@
         </div>
         <div class="cgvSaleTab_wrap">
             <ul class="cgvSaleTab_titleWrap">
-                <li class="active" ><a href="/discount/discountlist.aspx?mCate=116">hot</a></li>
-                <li class=""><a href="/discount/discountlist.aspx?mCate=001">통신사</a></li>
-                <li class=""><a href="/discount/discountlist.aspx?mCate=002">신용카드</a></li>
-                <li class=""><a href="/discount/discountlist.aspx?mCate=003">포인트</a></li>
-                <li class=""><a href="/discount/discountlist.aspx?mCate=004">극장별할인</a></li>
+                <li class="active" ><a href="discount.jsp?mCate=116">hot</a></li>
+                <li class=""><a href="discount.jsp?mCate= 001">통신사</a></li>
+                <li class=""><a href="discount.jsp?mCate= 002">신용카드</a></li>
+                <li class=""><a href="discount.jsp?mCate= 003">포인트</a></li>
+                <li class=""><a href="discount.jsp?mCate= 004">극장별할인</a></li>
             </ul>
             <div class="cgvSaleTab_ContentsWrap">
                 
@@ -292,9 +292,7 @@
                         PLCC 출시!</strong><span class="cgvSalePeriod" "="">2021.12.21~2022.12.31</span></a>
                     </li>
                 </ul>
-                <button type="button" class="btn-item-more" id="btnMoreData">
-                    <strong>더보기</strong>
-                </button>
+               
             </div>
         </div>
 <!-- S [U20200724] CGV할인정보 변경
