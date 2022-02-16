@@ -539,7 +539,7 @@
             $(function () {
 
                 $('#go_edit_page').on('click', function () {
-                    var win = window.open("/user/popup/edit-profile.aspx", "profile", "left=0,top=o,width=445,height=440,toolbar=no,scrollbars=no");
+                    var win = window.open("./mycgv-popupedit-profile.jsp", "profile", "left=0,top=o,width=445,height=440,toolbar=no,scrollbars=no");
                     win.focus();
                 });
 
