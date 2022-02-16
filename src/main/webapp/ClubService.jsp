@@ -68,8 +68,10 @@
     <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/Club_201102.css" />
     <script type="text/javascript">
         _TRK_CP = "/Club서비스";
-    </script>
-
+  	</script>
+  	 <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+ 
     <!--/각페이지 Header End--> 
     <script type="text/javascript">
         //<![CDATA[
@@ -193,15 +195,45 @@
             <!-- Contents Start -->
 			
     <div id="contents">
-      <form name="aspnetForm" method="post" action="./ClubService.aspx" id="aspnetForm">
+      <form name="aspnetForm" method="post" action="./ClubService.aspx" id="aspnetForm" novalidate="novalidate">
 <div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTEwNzIzMjk2NGRkNt5uOw85t9+yEoIMrb8kmiee2Bs=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTEwNzIzMjk2NGRkNt5uOw85t9+yEoIMrb8kmiee2Bs=">
 </div>
 
 <div>
 
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CDCD6CF3" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAKZZogfbLemSLEpbQqbE04eMAvTmklJ+0LQe+qea3W14M0zTuoBZiXJLpy59zzHkyjZVYa0" />
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CDCD6CF3">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAKZZogfbLemSLEpbQqbE04eMAvTmklJ+0LQe+qea3W14M0zTuoBZiXJLpy59zzHkyjZVYa0">
+	
+	<script>
+	
+	$(function(){
+        $('.thumb-box').on('mouseover', function(){
+            $('span').css('display','inline');
+        });
+	
+	
+	
+	/* 'use strict';
+    window.onload =function(){
+    let over=document.getElementsByClassName('thumb-box');
+      
+     over[0].addEventListener('mouseover', fnover);
+     function fnover(){
+        document.getElementsByClassName('desc-dim').style.display='inline';
+     };
+    */
+    
+    
+    
+    
+    
+  
+    
+    
+    }
+    
+    </script>
 </div>  
         
         <div class="tit-heading-wrap tit-mag">
@@ -210,24 +242,23 @@
 	    <div>
 		    <div class="sect-club-list on">
                 <div>
-                    <br />
+                    <br>
                     <p style="display: block;margin-bottom: 7px;font-size: 19px;color: #2c2c2c;line-height: 1.3;">
-                        다양한 라이프 스타일 혜택의 즐거움<br />
+                        다양한 라이프 스타일 혜택의 즐거움<br>
                     </p>
                     <p style="font-size: 13px;color: #2c2c2c;line-height: 150%;">
-                        연령대, 자주 방문하는 지역, 영화관람 타입 등에 따라 CJ ONE 회원이라면 누구나 누릴 수 있는 특별한 혜택 나에게 꼭 맞는 Club을 확인하세요!<br />
+                        연령대, 자주 방문하는 지역, 영화관람 타입 등에 따라 CJ ONE 회원이라면 누구나 누릴 수 있는 특별한 혜택 나에게 꼭 맞는 Club을 확인하세요!<br>
                     </p>
-
-                   
                 </div>
-
-                <div class="club-list" >
+                
+                <div class="club-list" style="padding-top: 388px;">
                     <!-- 1. 1318 Club -->
                     
 
     <!-- 1.1 1318 Club Thumb -->
     <div class="club-listbox cl-box1">
         <div class="thumb-box">
+        
             <a href="#cb1-2">
                 <img src="http://img.cgv.co.kr/R2014/images/club/img_club_thumb4_2020.jpg" alt="">
                 <span class="desc-dim" style="display: none;">
@@ -245,8 +276,11 @@
         </div>
     </div>
     <!-- END 1.1 1318 Club Thumb -->
+    
+    
+    
     <!-- 1.2 1318 Club 상세 -->
-    <div class="club-benefit cb-l" id="cb1-2">
+    <div class="club-benefit cb-l" id="cb1-2" tabindex="0">
         <div class="benefitbox">
             <strong class="benefit-tit">1318 Club 혜택</strong>
                             
@@ -342,7 +376,7 @@
                         </li>
                     </ul>	
                 </div>
-                <div class="dv_line" id="li_ment_1318">
+                <div class="dv_line" id="li_ment_1318" style="display: none;">
                     <div class="tit_evt_list">
                         <em>현재 진행중인 1318 클럽 이벤트</em>
                     </div>	
@@ -447,7 +481,7 @@
     <!-- END 1.2 1318 Club 상세 -->
 
 	<!-- 1318 Club 가입신청 pop -->        
-	<div class="layer-wrap clubtype" id="club1318Join" style="position:fixed; margin:-250px 0 0 -266px; display:none">
+	<div class="layer-wrap clubtype" id="club1318Join" style="position: fixed; margin: -250px 0px 0px -266px; display: none;">
 		<div class="layer-contents" style="width:522px;">
 			<div class="popwrap">
 				<h5>1318 Club 가입신청</h5>
@@ -461,19 +495,19 @@
 
 					<div class="inpbox">
 						<label for="userPhone2">고객님의 <em class="emtxt">휴대폰 번호</em>를 확인해주세요.</label>
-						<input type="text" id="userPhone2" class="aj_mobile"  readonly="readonly" />
+						<input type="text" id="userPhone2" class="aj_mobile" readonly="readonly">
 					</div>
 					<div class="inpbox">
 						<label for="userEmail2">고객님의 <em class="emtxt">이메일 주소</em>를 확인해주세요.</label>
-						<input type="text" id="userEmail2" class="aj_email" readonly="readonly" />
+						<input type="text" id="userEmail2" class="aj_email" readonly="readonly">
 					</div>
 
 					<div class="pop-confirmbox">
-						<input type="checkbox" id="agreeInfo2" name="agreeInfo" class="checkbox" />
+						<input type="checkbox" id="agreeInfo2" name="agreeInfo" class="checkbox">
 						<label for="agreeInfo">고객 정보를 확인하였습니다.</label>
 					</div>
 					
-                    <button type="button" class="btn_join" onclick="join1318Open()" ><span>가입하기</span></button>
+                    <button type="button" class="btn_join" onclick="join1318Open()"><span>가입하기</span></button>
 				</div>
 			</div>
 
@@ -491,24 +525,24 @@
 				<div class="pop-contents">
 					<div class="pop-hd-msg">
 						<p>
-							<strong class="em-txt">&lsquo;1318 Club&rsquo;탈퇴를 신청하기 전에<br />다음 사항을 꼭 확인하여 주시기 바랍니다.</strong>
+							<strong class="em-txt">‘1318 Club’탈퇴를 신청하기 전에<br>다음 사항을 꼭 확인하여 주시기 바랍니다.</strong>
 						</p>
 					</div>
 
 					<div class="pop-bd-msg">
-						<p>서비스 해지 시 1318 Club 전용 혜택은 자동 소멸/종료 됩니다.<br />
+						<p>서비스 해지 시 1318 Club 전용 혜택은 자동 소멸/종료 됩니다.<br>
 						동일 아이디로 재가입하시더라도 가입기념 쿠폰은 재발급되지 않습니다.</p>
 					</div>
 
 					<div class="inpbox">
-						<input type="password" id="userPw1318" placeholder="비밀번호 입력" title="비밀번호 입력" />
+						<input type="password" id="userPw1318" placeholder="비밀번호 입력" title="비밀번호 입력">
 					</div>
 
 					<div class="pop-confirmbox">
-						<input type="checkbox" id="passwordInfo1318" class="checkbox"/>
+						<input type="checkbox" id="passwordInfo1318" class="checkbox">
 						<label for="passwordInfo">위 안내 사항을 모두 확인하였으며 1318 Club해지에 동의합니다.</label>
 					</div>
-                    <button type="button" class="btn_join" onclick="withdrawYoungClub()" ><span>탈퇴하기</span></button>
+                    <button type="button" class="btn_join" onclick="withdrawYoungClub()"><span>탈퇴하기</span></button>
 				</div>
 			</div>
 
@@ -517,219 +551,176 @@
 	</div>
 	<!--// 1318Club 서비스탈퇴 pop -->
 
-    <script type="text/javascript">
-        var is1318JoinYN = "N";
-
-        function endAlert1318() {
-
-            if ("N" == "Y") {
-                alert("2021년 새로운 모습으로 다시 오픈할 예정입니다.\n많은 관심 부탁드립니다.");
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        $(function () {
-            Club1318Init();
-            goClubBanner1318();
-        });
-
-        //화면 세팅
-        function Club1318Init() {
-
-            // 종료
-            if ("N" == "Y") {
-                $('#btn_1318Register').hide();
-                $('#btn_RegisterSub1318').hide();
-                $('#withdraw1318').hide();
-                $('#clubTxt').show();
-                return;
-            }
-
-            // 오픈전
-            if ("Y" != "Y") {
-                $('#btn_1318Register').hide();
-                $('#btn_RegisterSub1318').hide();
-                $('#withdraw1318').hide();
-                $('#clubTxt').hide();
-                return;
-            }
-
-            $.ajax({
-                type: "POST",
-                url: "/user/memberShip/Club1318/Club1318Json.aspx/Init1318",
-                data: "{ 'userId':''}",
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (data) {
-                    var json = $.parseJSON(data.d);
-                    is1318JoinYN = json.is1318JoinYN;
-
-                    if (is1318JoinYN == "Y") {
-                        $('#btn_1318Register').hide();
-                        $('#btn_RegisterSub1318').hide();
-                        $('#withdraw1318').show();
-                        $('#clubTxt').hide();
-                    } else {
-                        $('#btn_1318Register').hide();
-                        $('#btn_RegisterSub1318').hide();
-                        $('#withdraw1318').hide();
-                        $('#clubTxt').hide();
-                    }
-                },
-                error: function (request, error) {
-                    alert("code:" + request.statusText + request.readyState + "\n" + "error:" + error);
-                }
-            });
-        }
-
-        function joinOpen1318() {
-            if ("False" == "False") {
-                goLogin();
-            } else if (is1318JoinYN == "Y") {
-                alert("고객님은 이미 1318Club 회원입니다.");
-                return false;
-            }
-            else {
-                $('#club1318Join').show();
-                return false;
-            }
-        }
-
-        function join1318Open() {
-            if ($('#agreeInfo2').prop('checked') == false) {
-                alert("정보 확인을 하지 않을 경우, 가입하실 수 없습니다.");
-                return;
-            }
-
-            $.ajax({
-                type: "POST",
-                url: "/user/memberShip/Club1318/Club1318Json.aspx/Join1318",
-                data: "{ 'userId':''}",
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (data) {
-                    var json = $.parseJSON(data.d);
-
-                    alert(json.MSG);
-
-                    if (json.CODE == "SUCCESS") Club1318Init();
-
-                    $('#club1318Join').hide();
-                },
-                error: function (request, error) {
-                    alert("code:" + request.statusText + request.readyState + "\n" + "error:" + error);
-                }
-            });
-        }
-
-        //탈퇴하기 버튼 클릭
-        function withdraw1318Open() {
-            if ("False" == "False") {
-                goLogin();
-            } else if (is1318JoinYN == "Y") {
-                $('#userPw1318').val('');
-                $('#passwordInfo1318').removeAttr('checked');
-                $('#club1318Withdraw').show();
-            }
-            else {
-                alert("고객님은 1318 Club 회원이 아닙니다.");
-                artHouseClubInit();
-            }
-        }
-
-        function withdrawYoungClub() {
-            var passwordInput = $('#userPw1318').val();
-
-            if ($('#passwordInfo1318').prop('checked') == false) {
-                alert("해지에 동의하지 않을 경우, 탈퇴하실 수 없습니다.");
-                return;
-            } 
-            
-            if (passwordInput == "") {
-                alert("비밀번호 입력 부탁드립니다.");
-                return;
-            }
-
-            $.ajax({
-                type: "POST",
-                url: "/user/memberShip/Club1318/Club1318Json.aspx/Withdraw1318",
-                data: "{ 'userId':'', 'userPw' : '" + passwordInput + "'}",
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (data) {
-                    var json = $.parseJSON(data.d);
-
-                    alert(json.MSG);
-
-                    if (json.CODE == "SUCCESS") Club1318Init();
-
-                    $('#club1318Withdraw').hide();
-                },
-                error: function (request, error) {
-                    alert("code:" + request.statusText + request.readyState + "\n" + "error:" + error);
-                }
-            });
-        }
-
-        function goClubBanner1318() {
-       
-            $('#clubevent1318').empty();
-            $.ajax({
-                type: "POST",
-                url: "/user/memberShip/Club1318/Club1318Json.aspx/GetClubBanner1318",
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (data) {
-
-                    var json = $.parseJSON(data.d);
-
-                    $('#clubevent1318').empty();
-
-                    if (json.length == 0) {
-                        // CMS에 등록된 내용 없음        
-                        // if (json.length == 0) $('.evt_banner_area').append('<div class="nodata"><p>현재 진행 중인 이벤트가 없습니다.</p></div>');
-
-                        if (json.length == 0) $('#li_ment_1318').hide();         
-                    }
-                    else {
-                        var html = '';
-                        var jsonCnt = json.length > 3 ? 3 : json.length;
-                        for (var i = 0; i < jsonCnt; i++) {
-                            html += '<li>';
-                            html += '<a href="' + json[i].EVENT_URL + '">';
-                            html += '<img src="' + json[i].IMAGE_URL + '" alt="' + json[i].TITLE + '" onerror="errorImage(this)"/></span></a></li>';
-                            html += '</a>';
-                        }
-                        html += '</ul>';
-                        $('#clubevent1318').append(html);
-                    }
-                },
-                error: function (request, error) {
-                    alert("code:" + request.statusText + request.readyState + "\n" + "error:" + error);
-                }
-            });
-        }
-    </script>
                     <!-- END 2. 1318 Club -->
                     <!-- 2. 커플링 Club -->
                     
 
 
+<!-- 커플링 Club Thumb -->
+<div class="club-listbox cl-box2">
+	<div class="thumb-box">
+		<a href="#couplingClub">
+			<img src="https://img.cgv.co.kr/R2014/images/club/img_club_thumb9.jpg" alt="">
+			<span class="desc-dim" style="display: none;">
+				<img src="https://img.cgv.co.kr/R2014/images/club/img_club_thumb9_over.png" alt="COUPLING CLUB - 현재 진행형(ing)인 커플(Couple)이라면 누구나 누릴 수 있는 CGV 커플 전용 클럽 서비스입니다.">
+			</span>
+		</a>
+	</div>
+	<div class="club-titbox" style="height: 29px;">
+		<strong class="club-tit">커플링 Club</strong>
+		<span class="club-date" style="display:none">2018.02.21 – 2018.12.22</span>
+		<p class="club-txt" style="display:none">클럽 운영 기간이 아니더라도 포인트 페이백 및 발급된 가입쿠폰은 12/31까지 사용할 수 있으며, 정기적으로 진행되는 클럽 전용 이벤트와 시사회 참여가 가능합니다.</p>
+		<div id="btn_couplingRegister" style="display:none">
+			<button type="button" class="round inred" onclick=""><span>가입하기</span></button>
+		</div>
+	</div>
+</div>
+<!-- END 커플링클럽 Thumb -->
 
-    
-            
+<!-- 커플링 Club 상세 -->
+<div class="club-benefit cb-r" id="couplingClub" tabindex="0">
+    <div class="benefitbox">
+        <strong class="benefit-tit">커플링 Club 혜택</strong>
+        <div class="benefit-tabbox coupling_club">
+            <div class="btab-cont" id="btabCont8">
+                <div class="artist_intro2">
+                    <div class="ai-tit">커플링(Coupling) 클럽이란?</div>
+                    <p>현재 진행형(ing)인 커플(Couple)이라면 누구나 누릴 수 있는 CGV 커플 전용 클럽 서비스입니다.<br>커플등록은 <em>QR코드</em> 또는 <em>CGV APP</em>을 확인해주세요!</p>
+                    <img class="qrcode" src="https://img.cgv.co.kr/R2014/images/club/img_qrcode_coupling.png" alt="QR CODE">
+                </div>
+                <div class="dv_line">
+                    <ul class="benefit-list type9">
+                        <li class="bl1">
+                            <strong class="bl-tit">주중(월-목)엔 언제나 스윗박스 할인</strong>
+                            <ul><li>월-목 스윗박스 1만원 관람</li></ul>
+                        </li>
+                        <li class="bl2">
+                            <strong class="bl-tit">웰컴 쿠폰팩 &amp; 기념일 혜택</strong>
+                            <ul>
+                                <li>영화 2천원 할인부터 콤보 할인, 씨네드쉐프 50% 할인까지</li>
+                            </ul>
+                        </li>
+                        <li class="bl3">
+                            <strong class="bl-tit">매월 쏟아지는 데이트 쿠폰</strong>
+                            <ul><li>커플 회원에게만 제공되는 본격 데이트 지원 쿠폰</li></ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dv_line" id="li_ment_c" style="display: none;">
+                    <div class="tit_evt_list">
+                        <em>현재 진행중인 커플링 CLUB 이벤트</em>
+                    </div>	
+                    <div class="evt_banner_area">
+                        <ul>
+                            <div id="couplingclubevent_list"></div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="benefit-sinfo type2">
+                    <dl class="notice_wrap">
+                        <dt>유의사항</dt>
+                        <dd>
+                            <strong>1. 상시 스윗박스 1만원 관람</strong>
+                            <ul class="dot_list">
+                                <li>
+                                    온라인 예매 적용 방법
+                                    <ul class="dash_list">
+                                        <li>결제 단계에서 멤버십 &gt; 커플링 클럽 스윗박스 할인 &gt; 할인 적용</li>
+                                    </ul>
+                                </li>
+                                <li>일 1회 최대 2매까지 가능</li>
+                                <li>영화별 1회 적용 (중복 관람 시 할인 불가)</li>
+                                <li>성인/청소년 권종만 적용 (우대불가)</li>
+                                <li>조조/공휴일/컬처데이 및 타 할인 혜택 중복 적용 불가</li>
+                                <li>일반 2D 영화/일반관에 한해 적용</li>
+                                <li>할인 제외 극장: CGV청담, 이천, 익산, 서산</li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <strong>2. 웰컴 쿠폰팩 &amp; 커플 기념일 쿠폰 팩</strong>
+                            <ul class="count_list">
+                                <li>
+                                    <strong>1) 웰컴 쿠폰팩</strong>
+                                    <ul class="dot_list">
+                                        <li class="strong">2D영화 2천원 할인 2매 / 콤보 2천원 할인1매 / 포토플레이 무료 2매</li>
+                                        <li>월컴쿠폰팩은 최초 가입 익일 CJ ONE ID로 지급됩니다. (커플 등록/해지에 관계없이 아이디당 1회 제공)</li>
+                                        <li>웰컴 쿠폰의 유효기간은 발급일로부터 1개월(31일)입니다.</li>
+                                    </ul>
+
+                                </li>
+                                <li>
+                                    <strong>2) 기념일 쿠폰팩</strong>
+                                    <ul class="dot_list">
+                                        <li class="strong">100일 기념일 마다
+                                            <ul class="dash_list">
+                                                <li>2D영화 3천원 할인 2매 / 콤보 2천원 할인 1매 / 포토플레이 무료 1매</li>
+                                            </ul>
+                                        </li>
+                                        <li class="strong">1년 기념일 마다
+                                            <ul class="dash_list">
+                                                <li>주중 스윗박스 50% 할인 2매 / 주중 씨네드쉐프 영화 50%할인 2매 / 더블, 라지콤보 50%할인 1매 / 포토플레이 무료 1매</li>
+                                            </ul>
+                                        </li>
+                                        <li class="mB15">웰컴 쿠폰 및 기념일 쿠폰 혜택 제외 극장
+                                            <ul class="dash_list">
+                                                <li>영화 : CGV청담, 서산, 익산, 인제, 고성</li>
+                                                <li>매점 : CGV청담, 고성, 남주안, 대구이시아, 불광, 서산, 성남모란, 안동, 용인, 이천, 익산, 인제, 정읍, 주안역, 청주성안길, 화정</li>
+                                            </ul>
+                                        </li>
+                                        <li class="mB15">기념일을 등록한 커플 기준으로 쿠폰 혜택 제공 (쿠폰 유효기간 기념일로부터 1개월)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="dot_list dash">
+                                <li>모든 쿠폰은 극장 (신규 오픈, 폐점 등) 및 배급사 사정에 따라 사용 불가할 수 있으며 영화 쿠폰은 온라인 예매 전용 입니다</li>
+                                <li>모든 쿠폰은 이벤트 상품으로 이용기간 연장 및 환불 불가하며 포토플레이 쿠폰은 설치 극장에 한해 사용 가능합니다</li>
+                                <li>콤보 할인 쿠폰은 매점키오스크, 모바일APP에서 사용 가능합니다
+                                    <ul class="dash_list">
+                                        <li>오프라인) 매점키오스크 &gt; 할인받고 결제 &gt; 쿠폰 선택 or 매점에서 CJ ONE 카드 제시</li>
+                                        <li>모바일 APP) 패스트오더 &gt; 결제 단계 &gt; CGV 할인쿠폰 &gt; 쿠폰 적용</li>
+                                    </ul>
+                                </li>
+								<li>포토플레이 무료쿠폰은 설치 극장에 한해 사용 가능합니다</li>
+                                <li>모든 쿠폰은 타쿠폰 및 할인 중복이 불가능하며 영화쿠폰은 컬처데이 적용이 불가능합니다</li>
+                                <li>
+                                    특정 특별관 적용을 제외한 모든 영화 쿠폰은 특별관/특별좌석/특별프로그램 적용이 불가능하며 주중 쿠폰의 경우 월~목요일에 사용 가능하며 주말 및 공휴일은 사용이 불가능합니다<br>[모닝(조조)/A,B열 할인 제외/ 3천원 할인쿠폰은 청소년 적용 제외]
+                                </li>
+                                <li>
+                                    가입쿠폰, 기념일 쿠폰 이외의 커플링 클럽 이벤트로 진행되는 쿠폰의 경우<br>
+                                    유효기간 및 제외극장 등 유의사항이 상이하니 해당 쿠폰의 할인 설명을 반드시 확인해주세요<br>
+                                    (할인 설명 확인방법 &gt; MY CGV &gt; 쿠폰함 &gt; 해당 쿠폰 클릭 &gt; 할인 설명)
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn-close">닫기</button>
+    </div>
+</div>
+    <!-- END 커플링 Club 상세 -->
+<!-- END 커플링클럽 -->
+
+					<!-- END 8. 커플링 Club -->      
+                 
+				</div>
+
+
+
+		</div>
+         </form>
+    </div>
             <!--/ Contents End -->
 		 </div>
 		<!-- /Contents Area -->
 	</div>
     <!-- E Contaniner -->
-    
+</div>    
      <%@include file="./footer.jsp" %>
     
-</div>
 
+</div>
 
 <script type="text/template" id="temp_popup_movie_player">
 <div class="popwrap">

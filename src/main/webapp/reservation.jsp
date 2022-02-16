@@ -778,11 +778,6 @@ preselectSetting(
 			<a class="btn-right" id="tnb_step_btn_right" href="#" onclick="OnTnbRightClick(); return false;" title="좌석선택">다음단계로 이동 - 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</a>
 		</div>
 	</div>
-
-	
-	
-	
-	
 </div>
 
 
