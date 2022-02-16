@@ -46,7 +46,7 @@
 
 <div></div>
 <div class="skipnaiv">
-	<a href="#contents" id="skipHeader">메인 컨텐츠 바로가기</a>
+	<a href="#contents" id="skipHeader">메인 컨텐츠 바로가기 수정중</a>
 </div>
 <div id="cgvwrap">
    
