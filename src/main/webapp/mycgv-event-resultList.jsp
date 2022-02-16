@@ -266,7 +266,7 @@
 
                             <li>
                                 <strong>CGV VIP에 도전하세요!</strong>
-                                <span style="height: 15px"><a href="./product-detail.jsp" class="round black1" ><i>CGV VIP 혜택보기</i></a></span>
+                                <span style="height: 15px"><a href="./vip-lounge.jsp" class="round black1" ><i>CGV VIP 혜택보기</i></a></span>
                             </li>
 
                             <li>
