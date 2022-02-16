@@ -278,115 +278,12 @@
 						</div>
 					
 					</div>
-					<div class="info-btnbox">
-						<ul>
-					         <li class="fir">
-								<a id="chk_vip" style="cursor:pointer">나의 VIP 연간 혜택   <span class="rb">       </span></a>
-								<div class="layer-wrap vip-benefits-year" id="benefits" style="display:none; top:300px"><div class="popwrap" style="width:450px;margin-top:0px;margin-left:-225px">
-									<h1>VIP 연간 혜택</h1>
-									<div class="pop-contents">
-									<!-- Contents Addon -->
-										<div class="vip-benefits-cont">
-											<ul>
-												<li>
-													VIP D.I.Y 쿠폰북
-													<a class="more" href="http://section.cgv.co.kr/event/Vip_CouponBook/default.aspx">혜택보기</a>
-												</li>
-												<li>
-													VIP반값 할인
-													<a class="more" href="./event/2017/vip-half-sale.aspx">혜택보기</a>
-												</li>
-												<li>
-													만원의 행복
-													<a class="more" href="./event/2017/vip-manwon.aspx">혜택보기</a>
-												</li>
-												<li>
-													스페셜 데이
-													<a class="more" href="./event/2017/vip-special-day.aspx">혜택보기</a>
-												</li>
-												<li>
-													원데이 프리패스카드
-													<a class="more" href="./event/2017/vip-one-day.aspx">혜택보기</a>
-												</li>
-												<li>
-													VIP더블적립
-													<a class="more" href="./event/2017/vip-point-save.aspx">혜택보기</a>
-												</li>
-                                                <li>
-													VIP리필적립
-													<a class="more" href="./event/2017/vip-point-save.aspx">혜택보기</a>
-												</li>
-                                                
-												<li style="display:none">
-													생일콤보
-													<a class="more" href="./event/2017/vip-birthday-combo.aspx">혜택보기</a>
-												</li>
-                                                <li style="display:none">
-													스페셜 기프트
-													<a class="more" href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=31429&amp;menu=008">혜택보기</a>
-												</li>
-											</ul>
-										</div>
-									<!-- //Contents Addon -->
-									</div>
-									<button type="button" class="btn-close">VIP 연간 혜택 팝업 닫기</button>
-								</div></div>
-							</li>
-							<li class="sec">
-								<a href="http://www.cgv.co.kr/user/vip-lounge/coupon.aspx">사용 가능한 나의 VIP 쿠폰 <span class="rb"><em>0</em> 장</span></a>
-								
-                                
-                                <div class="hint-box" style="display:none" id="hintcoupon">
-									<a href="http://section.cgv.co.kr/event/Vip_CouponBook/default.aspx"> </a><div class="inner"><a href="http://section.cgv.co.kr/event/Vip_CouponBook/default.aspx">
-										<div class="hint-tit">VIP쿠폰북을 발급받으세요!</div>
-										<p>VIP쿠폰북 다운로드 가능기간은  까지입니다.</p>
-										</a><a class="hint_close"><img src="https://img.cgv.co.kr/R2014/images/sub/vip/hint_box_btn_close.gif" alt="닫기"></a>
-									</div>
-								  </div>
-
-                              
-							</li>
-							<li class="las">
-								<a href="http://www.cgv.co.kr/user/vip-lounge/faq.aspx">VIP 고객센터를 통해 궁금증을 해결하세요.</a>
-							</li>
-						</ul>
-					</div>
+					
 				</div>
 
-                <div id="ctl00_PlaceHolderContent_divEvent_List">
-				    <h3><img src="https://img.cgv.co.kr/R2014/images/title/h3_event.gif" alt="EVENT"></h3>
+                
 
-                    <div class="sect-vip-banner">
-					    <div class="sect-slider">
-						    <div class="slider" id="slider">
-							    <button type="button" class="btn-play" style="left: 386px; display: block;">자동 넘기기 시작</button>
-							    <button type="button" class="btn-prev">이전 페이지 이동</button>
-									         
-                                            <div class="item-wrap on">
-                                                <button type="button" class="on" style="left: 332px; display: block;" title="선택됨.">포인트 반값할인</button>
-                                                <a class="item" style="width: 732px; height: 280px; display: block;" href="http://m.cgv.co.kr/WebAPP/MyCgvV4/Vip/vipHalfSale.aspx">
-                                                <img src="http://img.cgv.co.kr/Front/Main/2021/1005/16334114660380.jpg" alt="포인트 반값할인" style="width: 100%; height: 100%;"></a>
-                                            </div>          
-                                                 
-                                            <div class="item-wrap">
-                                                <button type="button" class="" style="left: 350px; display: block;">스페셜데이</button>
-                                                <a class="item" style="width: 732px; height: 280px; display: none;">
-                                                <img src="http://img.cgv.co.kr/Front/Main/2021/1005/16334122172100.jpg" alt="스페셜데이" style="width: 100%; height: 100%;"></a>
-                                            </div>          
-                                                 
-                                            <div class="item-wrap">
-                                                <button type="button" style="left: 368px; display: block;" class="">만원의 행복</button>
-                                                <a class="item" style="width: 732px; height: 280px; display: none;">
-                                                <img src="http://img.cgv.co.kr/Front/Main/2021/1005/16334122171640.jpg" alt="만원의 행복" style="width: 100%; height: 100%;"></a>
-                                            </div>          
-                                        
-								 <button type="button" class="btn-next">다음 페이지 이동</button>
-						    </div>
-					    </div>
-
-				        
-				    </div>
-                </div>
+                   
 
                 
                 
