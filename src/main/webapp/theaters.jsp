@@ -231,11 +231,19 @@
 <h4 class="hidden"> + [상영시간표]</h4>
             
 <!-- Showtimes Start -->
-<iframe id="ifrm_movie_time_table" src="showtime.jsp" title="[] 상영시간표" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="height: 826px; min-height: 100px;"></iframe>
+<iframe id="ifrm_movie_time_table" src="showtime.jsp" title="[] 상영시간표" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="height: 846px; min-height: 100px; padding-top: 120px;"></iframe>
 <!-- /Showtimes End -->
 
 </div>
-        
+
+        <div class="col-aside" style="padding-top: 120px">
+            <div class="ad-partner01">
+                <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@M_Rectangle" width="160" height="300" title="영화광고-나이트메어앨리" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="M_Rectangle" id="M_Rectangle"></iframe>
+            </div>
+            <div class="ad-partner02">
+                <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@C_Rectangle" width="160" height="300" title="기업광고-CGV" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="C_Rectangle" id="C_Rectangle"></iframe>
+            </div>
+        </div>
         	
     </div>
 </div>
