@@ -302,10 +302,19 @@ function vgclose(){
 
 
 			<!-- 해당 영화 제목값을 넘겨서 해당하는 시간표가 나오도록 함 -->
-            <iframe id="ifrm_movie_time_table" src="showtime.jsp" title="언차티드 상영시간표" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="height: 1000px; min-height: 100px;"></iframe>
+            <iframe id="ifrm_movie_time_table" src="showtime.jsp" title="언차티드 상영시간표" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="padding-top:50px; height: 1050px; min-height: 100px;"></iframe>
 			
         </div><!-- .col-detail -->
-        
+
+    <div class="col-aside" style="padding-top:50px">
+        <div class="ad-partner01">
+            <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@M_Rectangle" width="160" height="300" title="영화광고-나이트메어앨리" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="M_Rectangle" id="M_Rectangle"></iframe>
+        </div>
+        <div class="ad-external01">
+            <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@C_Rectangle" width="160" height="300" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="C_Rectangle" id="C_Rectangle"></iframe>
+        </div>
+
+    </div>
 </div>
 </div>
        
