@@ -65,7 +65,7 @@
 <div class="wrap-movie-detail" id="select_main">
 
 <div class="sect-base-movie">
-    <h3><strong>극장판 주술회전 0</strong>기본정보</h3>
+    <h3><strong>영화제목 부분입니다.</strong>기본정보</h3>
     <div class="box-image">
         <a href="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85603/85603_1000.jpg" title="포스터 크게 보기 새창" target="_blank">
             <span class="thumb-image"> 
@@ -78,7 +78,7 @@
     <div class="box-contents">
     <!-- 해당 영화 정보 시작-->
         <div class="title"> 
-            <strong>영화한글명</strong>
+            <strong>영화명</strong>
             
             <em class="round brown"><span>예매중</span></em>
             <em class="round red"><span>D-7</span></em>
