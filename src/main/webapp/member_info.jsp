@@ -469,7 +469,7 @@ function linkLogin() {
 								</div>
 									<div class="btn_sec">
 									<button type="button" class="btn" onclick="javascript:goCancel();">취소</button>
-									<button type="button" class="btn btn_em" onclick="javascript:goSubmit();" onclick="location.href='./finish_do.jsp'">등록</button>
+									<button type="button" class="btn btn_em" onclick="location.href='./finish_do.jsp'">등록</button>
 								</div>
 							</form>
 						</div>
