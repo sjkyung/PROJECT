@@ -198,7 +198,7 @@
 			</div>
 			<div class="tbl-viw-nav">
 				<div class="dir-prev">
-					<a href="/culture-event/event/?menu=0">목록</a>
+					<a href="defaultNew.jsp">목록</a>
 				</div>
 			</div>
 
