@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
-<head>
     <meta charset="utf-8"/>
     <title>회원정보 입력 | CJ ONE</title>
 	<meta name="Description" content="CJ ONE 서비스를 이용하실 회원님의 정보를 입력해주세요. 다양한 혜택과 서비스를 받으실 수 있습니다." />
@@ -167,20 +166,6 @@ function linkLogin() {
     location.href = 'https://www.cjone.com/cjmweb/login.do'+rtn;
 }
 
-function linkCardMng() {
-    if( !loginCheck() ) {
-        if(confirm('카드 등록을 위해 로그인이 필요합니다.\n계속 진행하시겠습니까?')) {
-            //location.href='https://www.cjone.com/cjmweb/my-one/card.do';
-            $(location).attr('href', '/cjmweb/login.do?return_url='+escape('https://www.cjone.com/cjmweb/my-one/card.do'));
-            return false;
-        }
-    } else {
-        location.href='https://www.cjone.com/cjmweb/my-one/card.do';
-        return false;
-    }
-    return false;
-}
-
 </script>
 <form id="headerFrm" method="get">
     <input type="hidden" name="h_search_keyword" id="h_search_keyword">
@@ -195,7 +180,7 @@ function linkCardMng() {
         <div id="cgvwrap">
                 <div class="header_content">
                     <div class="contents" style="width:980px; margin:0 auto;">
-                        <h1><a href="/"><img src="./css/logoRed.png"
+                        <h1><a href="./main.jsp"><img src="./css/logoRed.png"
                                     alt="CGV" /></a><span>CULTUREPLEX</span></h1>
                         <ul class="memberInfo_wrap">
                             <div class="ad-partner">
@@ -231,9 +216,7 @@ function linkCardMng() {
                 </div>
             </div>
 	<!--//header-->
-    
-
-	<!--//header-->
+   
 
 	<!--contents-->
 	<div id="contentsWrap">
@@ -291,7 +274,7 @@ function linkCardMng() {
 							    <input type="hidden" name="coop_return_url" id="coop_return_url" value="">
 							    <input type="hidden" id="sub_type"      name="sub_type"      value="1">
 							    <input type="hidden" id="ipin_use_yn"   name="ipin_use_yn"   value="">
-							    <input type="hidden" id="hg_nm"         name="hg_nm"         value="홍은주">
+							    <input type="hidden" id="hg_nm"         name="hg_nm"         value="">
 							    <input type="hidden" id="vno"           name="vno"           value="">
 							    <!-- ####주민번호미보유#### 주민번호삭제 -->
 							    <input type="hidden" id="ipin_ci"       name="ipin_ci"       value="PptSo3Ev3IynSfdyomhZlTNn+S/lHzlFhPIwAlqSWUYO4r1Ka2MxmbEjiLFs1W9/hMFCM0eErE/PZ3dGPXfDfw==">
@@ -299,7 +282,7 @@ function linkCardMng() {
     							<input type="hidden" id="ssn2"          name="ssn2"                 value="">
 							    <input type="hidden" id="ipin_di"       name="ipin_di"       value="">
 							    <input type="hidden" id="gender"        name="gender"        value="F">
-							    <input type="hidden" id="legl_birth_dy" name="legl_birth_dy" value="19650228">
+							    <input type="hidden" id="legl_birth_dy" name="legl_birth_dy" value="20220101">
 							    <input type="hidden" id="frgnr_yn"      name="frgnr_yn"      value="N">
 							    <input type="hidden" id="under_14"      name="under_14"      value="N">
 							    <input type='hidden' id="id_validate"   name="id_validate"   value="">
@@ -347,15 +330,15 @@ function linkCardMng() {
 												<th scope="row" class="mandatory">
 													<label for="input_member_name"><span class="haze">"필수"</span> 이름</label>
 												</th>
-												<td>
-													<span class="input_txt"><input type="text" readonly value="홍은주" class="text readonly member_name" id="input_member_name"></span><!-- 에러시 .error 클래스 추가 -->
+												<td style="text-align:left">
+													<span class="input_txt"><input type="text" class="text" id="input_member_name" placeholder="이름을 입력해주세요."></span><!-- 에러시 .error 클래스 추가 -->
 												</td>
 											</tr>
 											<tr class="input">
 												<th scope="row" class="mandatory">
 													<label for="mbr_id"><span class="haze">"필수"</span> 아이디</label>
 												</th>
-												<td>
+												<td style="text-align:left">
 													<div class="input_group">
 														<span class="input_txt w250"><input type="text" class="text" title="사용 할 영문 아이디 명 입력" placeholder="아이디를 입력해주세요." name="mbr_id" id="mbr_id" maxlength="12" value=""><!-- 에러시 .error 클래스 추가 --></span>
 														
@@ -368,7 +351,7 @@ function linkCardMng() {
 												<th scope="row" class="mandatory">
 													<label for="pwd"><span class="haze">"필수"</span> 비밀번호</label>
 												</th>
-												<td>
+												<td style="text-align:left">
 													<div class="input_group">
 														<span class="input_txt w250"><input type="password" class="text" placeholder="비밀번호를 입력해주세요." name="pwd" id="pwd" maxlength="50"></span>
 														<span class="pwd_lv" id="alert_pwd_strength"></span>
@@ -381,7 +364,7 @@ function linkCardMng() {
 												<th scope="row" class="mandatory">
 													<label for="pwd_check"><span class="haze">"필수"</span> 비밀번호 확인</label>
 												</th>
-												<td>
+												<td style="text-align:left">
 													<div class="input_group">
 														<span class="input_txt"><input type="password" class="text" placeholder="비밀번호를 재입력해주세요." name="pwd_check"  id="pwd_check" maxlength="50"></span>
 														<p class="msg_info em hide" id="msg_pwd_check">비밀번호와 비밀번호 확인이 일치하지 않습니다.</p>
@@ -393,23 +376,23 @@ function linkCardMng() {
 													<label for="birth_yy">
 													<span class="haze">"필수"</span> 생년월일</label>
 												</th>
-												<td>
+												<td style="text-align:left">
 													<div class="birthday_select">
 														<span class="select w120" data-skin="form">
 															<select title="생년월일 중 년 선택" id="birth_yy" name="birth_yy">
-																[<option value=''>년</option>, <option value='2022' >2022</option>, <option value='2021' >2021</option>, <option value='2020' >2020</option>, <option value='2019' >2019</option>, <option value='2018' >2018</option>, <option value='2017' >2017</option>, <option value='2016' >2016</option>, <option value='2015' >2015</option>, <option value='2014' >2014</option>, <option value='2013' >2013</option>, <option value='2012' >2012</option>, <option value='2011' >2011</option>, <option value='2010' >2010</option>, <option value='2009' >2009</option>, <option value='2008' >2008</option>, <option value='2007' >2007</option>, <option value='2006' >2006</option>, <option value='2005' >2005</option>, <option value='2004' >2004</option>, <option value='2003' >2003</option>, <option value='2002' >2002</option>, <option value='2001' >2001</option>, <option value='2000' >2000</option>, <option value='1999' >1999</option>, <option value='1998' >1998</option>, <option value='1997' >1997</option>, <option value='1996' >1996</option>, <option value='1995' >1995</option>, <option value='1994' >1994</option>, <option value='1993' >1993</option>, <option value='1992' >1992</option>, <option value='1991' >1991</option>, <option value='1990' >1990</option>, <option value='1989' >1989</option>, <option value='1988' >1988</option>, <option value='1987' >1987</option>, <option value='1986' >1986</option>, <option value='1985' >1985</option>, <option value='1984' >1984</option>, <option value='1983' >1983</option>, <option value='1982' >1982</option>, <option value='1981' >1981</option>, <option value='1980' >1980</option>, <option value='1979' >1979</option>, <option value='1978' >1978</option>, <option value='1977' >1977</option>, <option value='1976' >1976</option>, <option value='1975' >1975</option>, <option value='1974' >1974</option>, <option value='1973' >1973</option>, <option value='1972' >1972</option>, <option value='1971' >1971</option>, <option value='1970' >1970</option>, <option value='1969' >1969</option>, <option value='1968' >1968</option>, <option value='1967' >1967</option>, <option value='1966' >1966</option>, <option value='1965' selected>1965</option>, <option value='1964' >1964</option>, <option value='1963' >1963</option>, <option value='1962' >1962</option>, <option value='1961' >1961</option>, <option value='1960' >1960</option>, <option value='1959' >1959</option>, <option value='1958' >1958</option>, <option value='1957' >1957</option>, <option value='1956' >1956</option>, <option value='1955' >1955</option>, <option value='1954' >1954</option>, <option value='1953' >1953</option>, <option value='1952' >1952</option>, <option value='1951' >1951</option>, <option value='1950' >1950</option>, <option value='1949' >1949</option>, <option value='1948' >1948</option>, <option value='1947' >1947</option>, <option value='1946' >1946</option>, <option value='1945' >1945</option>, <option value='1944' >1944</option>, <option value='1943' >1943</option>, <option value='1942' >1942</option>, <option value='1941' >1941</option>, <option value='1940' >1940</option>, <option value='1939' >1939</option>, <option value='1938' >1938</option>, <option value='1937' >1937</option>, <option value='1936' >1936</option>, <option value='1935' >1935</option>, <option value='1934' >1934</option>, <option value='1933' >1933</option>, <option value='1932' >1932</option>, <option value='1931' >1931</option>, <option value='1930' >1930</option>, <option value='1929' >1929</option>, <option value='1928' >1928</option>, <option value='1927' >1927</option>, <option value='1926' >1926</option>, <option value='1925' >1925</option>, <option value='1924' >1924</option>, <option value='1923' >1923</option>, <option value='1922' >1922</option>, <option value='1921' >1921</option>, <option value='1920' >1920</option>, <option value='1919' >1919</option>, <option value='1918' >1918</option>, <option value='1917' >1917</option>, <option value='1916' >1916</option>, <option value='1915' >1915</option>, <option value='1914' >1914</option>, <option value='1913' >1913</option>, <option value='1912' >1912</option>, <option value='1911' >1911</option>, <option value='1910' >1910</option>, <option value='1909' >1909</option>, <option value='1908' >1908</option>, <option value='1907' >1907</option>, <option value='1906' >1906</option>, <option value='1905' >1905</option>, <option value='1904' >1904</option>, <option value='1903' >1903</option>, <option value='1902' >1902</option>, <option value='1901' >1901</option>, <option value='1900' >1900</option>]
+																[<option value=''>년</option>, <option value='2022' selected>2022</option>, <option value='2021' >2021</option>, <option value='2020' >2020</option>, <option value='2019' >2019</option>, <option value='2018' >2018</option>, <option value='2017' >2017</option>, <option value='2016' >2016</option>, <option value='2015' >2015</option>, <option value='2014' >2014</option>, <option value='2013' >2013</option>, <option value='2012' >2012</option>, <option value='2011' >2011</option>, <option value='2010' >2010</option>, <option value='2009' >2009</option>, <option value='2008' >2008</option>, <option value='2007' >2007</option>, <option value='2006' >2006</option>, <option value='2005' >2005</option>, <option value='2004' >2004</option>, <option value='2003' >2003</option>, <option value='2002' >2002</option>, <option value='2001' >2001</option>, <option value='2000' >2000</option>, <option value='1999' >1999</option>, <option value='1998' >1998</option>, <option value='1997' >1997</option>, <option value='1996' >1996</option>, <option value='1995' >1995</option>, <option value='1994' >1994</option>, <option value='1993' >1993</option>, <option value='1992' >1992</option>, <option value='1991' >1991</option>, <option value='1990' >1990</option>, <option value='1989' >1989</option>, <option value='1988' >1988</option>, <option value='1987' >1987</option>, <option value='1986' >1986</option>, <option value='1985' >1985</option>, <option value='1984' >1984</option>, <option value='1983' >1983</option>, <option value='1982' >1982</option>, <option value='1981' >1981</option>, <option value='1980' >1980</option>, <option value='1979' >1979</option>, <option value='1978' >1978</option>, <option value='1977' >1977</option>, <option value='1976' >1976</option>, <option value='1975' >1975</option>, <option value='1974' >1974</option>, <option value='1973' >1973</option>, <option value='1972' >1972</option>, <option value='1971' >1971</option>, <option value='1970' >1970</option>, <option value='1969' >1969</option>, <option value='1968' >1968</option>, <option value='1967' >1967</option>, <option value='1966' >1966</option>, <option value='1965'>1965</option>, <option value='1964' >1964</option>, <option value='1963' >1963</option>, <option value='1962' >1962</option>, <option value='1961' >1961</option>, <option value='1960' >1960</option>, <option value='1959' >1959</option>, <option value='1958' >1958</option>, <option value='1957' >1957</option>, <option value='1956' >1956</option>, <option value='1955' >1955</option>, <option value='1954' >1954</option>, <option value='1953' >1953</option>, <option value='1952' >1952</option>, <option value='1951' >1951</option>, <option value='1950' >1950</option>, <option value='1949' >1949</option>, <option value='1948' >1948</option>, <option value='1947' >1947</option>, <option value='1946' >1946</option>, <option value='1945' >1945</option>, <option value='1944' >1944</option>, <option value='1943' >1943</option>, <option value='1942' >1942</option>, <option value='1941' >1941</option>, <option value='1940' >1940</option>, <option value='1939' >1939</option>, <option value='1938' >1938</option>, <option value='1937' >1937</option>, <option value='1936' >1936</option>, <option value='1935' >1935</option>, <option value='1934' >1934</option>, <option value='1933' >1933</option>, <option value='1932' >1932</option>, <option value='1931' >1931</option>, <option value='1930' >1930</option>, <option value='1929' >1929</option>, <option value='1928' >1928</option>, <option value='1927' >1927</option>, <option value='1926' >1926</option>, <option value='1925' >1925</option>, <option value='1924' >1924</option>, <option value='1923' >1923</option>, <option value='1922' >1922</option>, <option value='1921' >1921</option>, <option value='1920' >1920</option>, <option value='1919' >1919</option>, <option value='1918' >1918</option>, <option value='1917' >1917</option>, <option value='1916' >1916</option>, <option value='1915' >1915</option>, <option value='1914' >1914</option>, <option value='1913' >1913</option>, <option value='1912' >1912</option>, <option value='1911' >1911</option>, <option value='1910' >1910</option>, <option value='1909' >1909</option>, <option value='1908' >1908</option>, <option value='1907' >1907</option>, <option value='1906' >1906</option>, <option value='1905' >1905</option>, <option value='1904' >1904</option>, <option value='1903' >1903</option>, <option value='1902' >1902</option>, <option value='1901' >1901</option>, <option value='1900' >1900</option>]
 															</select>
 														</span>
 														<span class="symbol">년</span>
 														<span class="select w70" data-skin="form">
 															<select title="생년월일 중 월 선택" class="narrow" id="birth_mm" name="birth_mm">
-																[<option value=''>월</option>, <option value='01' >01</option>, <option value='02' selected>02</option>, <option value='03' >03</option>, <option value='04' >04</option>, <option value='05' >05</option>, <option value='06' >06</option>, <option value='07' >07</option>, <option value='08' >08</option>, <option value='09' >09</option>, <option value='10' >10</option>, <option value='11' >11</option>, <option value='12' >12</option>]
+																[<option value=''>월</option>, <option value='01' selected>01</option>, <option value='02' selected>02</option>, <option value='03' >03</option>, <option value='04' >04</option>, <option value='05' >05</option>, <option value='06' >06</option>, <option value='07' >07</option>, <option value='08' >08</option>, <option value='09' >09</option>, <option value='10' >10</option>, <option value='11' >11</option>, <option value='12'></option>]
 															</select>
 														</span>
 														<span class="symbol">월</span>
 														<span class="select w70" data-skin="form">
 															<select title="생년월일 중 일 선택" class="narrow" id="birth_dd" name="birth_dd">
-																[<option value=''>일</option>, <option value='01' >01</option>, <option value='02' >02</option>, <option value='03' >03</option>, <option value='04' >04</option>, <option value='05' >05</option>, <option value='06' >06</option>, <option value='07' >07</option>, <option value='08' >08</option>, <option value='09' >09</option>, <option value='10' >10</option>, <option value='11' >11</option>, <option value='12' >12</option>, <option value='13' >13</option>, <option value='14' >14</option>, <option value='15' >15</option>, <option value='16' >16</option>, <option value='17' >17</option>, <option value='18' >18</option>, <option value='19' >19</option>, <option value='20' >20</option>, <option value='21' >21</option>, <option value='22' >22</option>, <option value='23' >23</option>, <option value='24' >24</option>, <option value='25' >25</option>, <option value='26' >26</option>, <option value='27' >27</option>, <option value='28' selected>28</option>]
+																[<option value=''>일</option>, <option value='01' selected>01</option>, <option value='02' >02</option>, <option value='03' >03</option>, <option value='04' >04</option>, <option value='05' >05</option>, <option value='06' >06</option>, <option value='07' >07</option>, <option value='08' >08</option>, <option value='09' >09</option>, <option value='10' >10</option>, <option value='11' >11</option>, <option value='12' >12</option>, <option value='13' >13</option>, <option value='14' >14</option>, <option value='15' >15</option>, <option value='16' >16</option>, <option value='17' >17</option>, <option value='18' >18</option>, <option value='19' >19</option>, <option value='20' >20</option>, <option value='21' >21</option>, <option value='22' >22</option>, <option value='23' >23</option>, <option value='24' >24</option>, <option value='25' >25</option>, <option value='26' >26</option>, <option value='27' >27</option>, <option value='28'>28</option>]
 															</select>
 														</span>
 														<span class="symbol">일</span>
@@ -421,7 +404,7 @@ function linkCardMng() {
 												<th scope="row" class="mandatory">
 													<label for="mob_no_1"><span class="haze">"필수"</span> 휴대전화</label>
 												</th>
-												<td>
+												<td style="text-align:left">
 													<div class="phon_write">
 														<span class="select w100" data-skin="form">
 															<select title="휴대전화 앞자리 선택" id="mob_no_1" name="mob_no_1">
@@ -457,7 +440,7 @@ function linkCardMng() {
 												<th scope="row" class="mandatory">
 													<label for="email_addr1"><span class="haze">"필수"</span> 이메일</label>
 												</th>
-												<td>
+												<td style="text-align:left">
 													<div class="email_write">
 														<span class="input_txt w110" data-skin="form">
 															<input type="text" class="text small" title="이메일 아이디 입력" name="email_addr1" id="email_addr1" value="" placeholder="이메일 아이디" data-format="email">
@@ -466,24 +449,19 @@ function linkCardMng() {
 														<span class="input_txt w110">
 															<input type="text" class="text small" title="이메일 도메인 입력" name="email_addr2" id="email_addr2" value="" placeholder="이메일 도메인" data-format="email">
 														</span>
-														<span class="select w100" data-skin="form">
-														<select title="이메일 도메인 선택" name="email_addr_opt" id="email_addr_opt" data-control="emailSelector">
-															
-																<option value="0">직접입력</option>
-															
-																<option value="naver.com">네이버</option>
-															
-																<option value="hanmail.net">한메일</option>
-															
-																<option value="nate.com">네이트</option>
-															
-																<option value="gmail.com">지메일</option>
-															  
-														</select>
-														</span>
 														<p class="msg_info em hide" id="alert_email_addr">이메일 주소를 다시 확인해주세요.</p>
 													</div>
 													<p class="msg_desc">이메일 주소 입력 시 사용 가능 특수 문자 : - . _</p>
+												</td>
+											</tr>
+											<tr class="input">
+												<th scope="row" class="mandatory">
+													<label for="input_member_name"><span class="haze">"필수"</span> 주소 </label>
+												</th>
+												<td style="text-align:left">
+													<span class="input_txt"><input type="text" class="text" id="input_member_name" ></span>
+													<span class="input_txt"><input type="text" class="text" id="input_member_name" ></span>
+													<span class="input_txt"><input type="text" class="text" id="input_member_name" ></span><!-- 에러시 .error 클래스 추가 -->
 												</td>
 											</tr>
 										</tbody>
@@ -491,7 +469,7 @@ function linkCardMng() {
 								</div>
 									<div class="btn_sec">
 									<button type="button" class="btn" onclick="javascript:goCancel();">취소</button>
-									<button type="button" class="btn btn_em" onclick="javascript:goSubmit();">등록</button>
+									<button type="button" class="btn btn_em" onclick="javascript:goSubmit();" onclick="location.href='./finish_do.jsp'">등록</button>
 								</div>
 							</form>
 						</div>
@@ -973,7 +951,7 @@ function goFooterMenu(type){
         {
         	var actionUrl = $('#form2').attr('action');
         	
-        	if(actionUrl.indexOf('/join.do') > -1){
+        	if(actionUrl.indexOf('./join_do') > -1){
         		location.href = actionUrl;
         	}else{
         		$('#form2').submit();
@@ -996,24 +974,6 @@ function goFooterMenu(type){
         	ajaxRegister();
             return true;
         }
-    }
-    
-    //매장가입pc
-    function submitOk() {
-        // 이메일 셋팅
-        if($('#email_addr_opt').val() != "0"){
-            $('#email_addr2').val($('#email_addr_opt').val());
-        }
-
-        ajaxRegister();
-        
-        var actionUrl = $('#form2').attr('action');
-    	
-    	if(actionUrl.indexOf('/join.do') > -1){
-    		location.href = actionUrl;
-    	}else{
-    		$('#form2').submit();
-    	}   
     }
     
     function ajaxRegister(){
@@ -1285,191 +1245,8 @@ function goFooterMenu(type){
             return false;
         }
         $('#alert_email_addr').hide();
-        
-        if($('#upd_coopco_id').val() != ""){
-      
-			//카드번호 체크
-	        if($('#crdNo01').val() == "" && 
-	                $('#crdNo02').val() == "" && 
-	                $('#crdNo03').val() == "" && 
-	                $('#crdNo04').val() == "" &&
-	                $('#crd_pwd').val() == "" && 
-	                $('#re_crd_pwd').val() == "") {
-	         /*   if (checkValidate()){
-	            	if($('#upd_coopco_id').val()!=""){
-	           		 $('#card_chk').val("Y");
-	           		} 
-	            	 return false;
-	            }else{
-	            	if($('#upd_coopco_id').val()!=""){
-	           		 $('#card_chk').val("N");
-	           	} 	           	
-	            	 return true;
-	            }*/
-	        	 checkValidate();
-	             return false;
-	        } else {
-	            if($('#crdNo01').val() == "") {
-	                alertMsg("labelCardNo", "카드번호를 입력하세요.");
-	                $('#crdNo01').focus();
-	                return false;
-	            }
-	            
-	            if($('#crdNo02').val() == "") {
-	                alertMsg("labelCardNo", "카드번호를 입력하세요.");    
-	                $('#crdNo02').focus();
-	                return false;
-	            }
-	            
-	            if($('#crdNo03').val() == "") {
-	                alertMsg("labelCardNo", "카드번호를 입력하세요.");    
-	                $('#crdNo03').focus();
-	                return false;
-	            }
-	            
-	            if($('#crdNo04').val() == "") {
-	                alertMsg("labelCardNo", "카드번호를 입력하세요.");
-	                $('#crdNo04').focus();
-	                return false;
-	            }
-	
-	            if($('#re_crdNo05').val() == "") {
-	                alertMsg("labelCardNo", "카드번호를 입력하세요.");
-	                $('#re_crdNo05').focus();
-	                return false;
-	            }
-	
-	            if($('#re_crdNo06').val() == "") {
-	                alertMsg("labelCardNo", "카드번호를 입력하세요.");
-	                $('#re_crdNo06').focus();
-	                return false;
-	            }
-	
-	            if($('#re_crdNo07').val() == "") {
-	                alertMsg("labelCardNo", "카드번호를 입력하세요.");
-	                $('#re_crdNo07').focus();
-	                return false;
-	            }
-	
-	            if($('#re_crdNo08').val() == "") {
-	                alertMsg("labelCardNo", "카드번호를 입력하세요.");
-	                $('#re_crdNo08').focus();
-	                return false;
-	            }
-	            
-	            if($('#crdNo01').val().substring(0,2) != "77") {
-	                alertMsg("labelCardNo", "유효하지 않은 카드 번호입니다. 확인 후 다시 입력해주세요.");       
-	                $('#crdNo01').focus();
-	                return false;
-	            }
-	
-	            if($('#crdNo01').val().length + $('#crdNo02').val().length +
-	               $('#crdNo03').val().length + $('#crdNo04').val().length != 16) {
-	                alertMsg("labelCardNo", "카드번호 16자리를 정확하게 입력해주세요.");             
-	                return false;
-	            }
-	            
-	            if($("#crdNo01").val() != $("#re_crdNo05").val()) {
-	                alertMsg("labelCardNo", "카드번호가 서로 다릅니다.");
-	                $("#re_crdNo05").focus();
-	                return;
-	            }
-	            
-	            if($("#crdNo02").val() != $("#re_crdNo06").val()) {
-	                alertMsg("labelCardNo", "카드번호가 서로 다릅니다.");
-	                $("#re_crdNo06").focus();
-	                return;
-	            }
-	            
-	            if($("#crdNo03").val() != $("#re_crdNo07").val()) {
-	                alertMsg("labelCardNo", "카드번호가 서로 다릅니다.");
-	                $("#re_crdNo07").focus();
-	                return;
-	            }
-	            
-	            if($("#crdNo04").val() != $("#re_crdNo08").val()) {
-	                alertMsg("labelCardNo", "카드번호가 서로 다릅니다.");
-	                $("#re_crdNo08").focus();
-	                return;
-	            }
-	
-	            if($('#crd_pwd').val().length != 4) {
-	                alertMsg("labelPW1", "4자리의 숫자만 입력해주세요.");
-	                $('#crd_pwd').focus();
-	                return false;
-	            } 
-	            else{
-	                $("#labelPW1").hide();
-	            }
-	            
-	            if($('#re_crd_pwd').val().length != 4) {
-	                alertMsg("labelPW2", "4자리의 숫자만 입력해주세요.");
-	                $('#re_crd_pwd').focus();
-	                return false;
-	            }
-	            
-	            if($('#crd_pwd').val() != $('#re_crd_pwd').val()) {
-	                alertMsg("labelPW2", "카드 비밀번호가 서로 다릅니다.");
-	                $('#re_crd_pwd').focus();
-	                return false;
-	            }
-	            else{
-	                $("#labelPW2").hide();
-	            }
-
-	           $('#card_chk').val("Y");
-
-	        }
-        }
 		return true;
     }
-    
-    // 카드번호 재입력 창으로 커서 이동시
-    function reInput() {
-        if($("#crdNo03").val().length == 4 && $("#crdNo04").val().length == 4) {
-            var crdNo05 = $("#crdNo01").val();
-            var crdNo06 = $("#crdNo02").val();
-            $("#re_crdNo05").val(crdNo05);
-            $("#re_crdNo06").val(crdNo06);
-        } else return false;
-    }
-    
- // 다음창으로 이동
-    function goNext(){
-        if($('#'+this.id).val().length == 4){
-            switch(this.id) {
-                case "crdNo01": //카드번호1
-                    if($("#crdNo01").val().length == 4){
-                        $("#crdNo02").focus();
-                    }
-                    break;
-                case "crdNo02": //카드번호2
-                    if($("#crdNo02").val().length == 4){
-                        $("#crdNo03").focus();
-                    }
-                    break;
-                case "crdNo03": //카드번호3
-                    if($("#crdNo03").val().length == 4){
-                        $("#crdNo04").focus();
-                    }
-                case "crdNo04": //카드번호4
-                    if($("#crdNo04").val().length == 4){
-                        $("#re_crdNo07").focus();
-                    }
-                case "re_crdNo07": //카드번호7
-                    if($("#re_crdNo07").val().length == 4){
-                        $("#re_crdNo08").focus();
-                    }
-                    break;
-            }
-        }
-    }
- 
-    // 카드유효성 체크 팝업창
-    function checkValidate(){	
-    	cjone.openModal('/cjmweb/join/regCardPop.do');
-    }
-
     function checkPwd3(){
         // 비밀번호 유효성 체크 
         if($('#crd_pwd').val() == ""){
@@ -1489,30 +1266,6 @@ function goFooterMenu(type){
         else{
             $("#labelPW2").hide();
         }
-    }
-
-    function checkCardNo(){
-        alertMsg("labelCardNo", "카드번호를 입력하세요.");
-    }
-    /* 2012.02.01 휴대전화번호가 양식에 틀리면 focus를 준다. */
-    function setFocusMobileTel(id) {
-        /* 휴대전화 검사 */
-        var objMp   = $('#mob_no_'+id);
-        var chkVal  = "";
-
-        if(objMp.val() == "")   chkVal  = "*";
-
-        if(objMp.val() != "" && ((id == "2" && objMp.val().length < 3) || (id == "3" && objMp.val().length < 4)))   chkVal  = "*";
-
-        if(chkVal != "") {
-            alertMsg("alert_mob_no", "휴대 전화번호를  정확히 입력해 주세요.");
-            alert("휴대 전화번호를  정확히 입력해 주세요.");
-            objMp.focus();
-
-            return false;
-        }
-        else return true;
-
     }
     
     function isValid_mbrId(str) {
@@ -1551,72 +1304,6 @@ function goFooterMenu(type){
     }
     
     // 아이디 체크 팝업창
-    // 탈퇴회원 재가입은 안띄움
-    function idCheck()  {
-        if ( $('#id_validate').val() != 'Y' ) {
-        	$('#mbr_id').val($('#mbr_id').val().replace(' ',''));
-        	if ( isValid_mbrId($('#mbr_id').val()) ) {
-                if ( $('#mbr_id').val().length > 5 ) {
-    				$.ajax({
-    			        url     : '/cjmweb/join/check-iddup.do',
-    			        dataType  : 'json',
-    			        data	: 'mbr_id='+$('#mbr_id').val()+'&ipin_ci='+encodeURIComponent($('#ipin_ci').val())+'&coopco_cd='+$('#coopco_cd').val()+'&brnd_cd='+$('#brnd_cd').val(),
-    			        async   : false,
-    					cache   : false,
-    			        type    : 'POST',
-    			        error   : function(err) { alert(err); },
-    			        success   : function(resp) {
-    			        	if (resp.resultCode == '00') $('#id_validate').val('Y');
-    			        	else {
-    			        		$('#id_validate').val('N');
-    			        		$('#mbr_id').focus();
-    			        	}
-    			        	alertMsg("alert_mbr_id", resp.resultMessage);
-    			        	alert(resp.resultMessage);
-    			        }
-    				});
-                } else {
-                	alertMsg("alert_mbr_id", "6~12자리의 영문 소문자 또는 영문 소문자+숫자 아이디를 입력해 주세요.");
-                	alert("6~12자리의 영문 소문자 또는 영문 소문자+숫자 아이디를 입력해 주세요.");
-                    $('#mbr_id').focus();
-                }
-        	} else {
-        		$('#mbr_id').focus();
-        	}
-        }
-    }
-    
-    function checkRcmId(){
-   	 if($('#rcm_id').val() == ""){
-   		 alertMsg("alert_rcm_id", "추천인 아이디를 입력해주세요");
-   		$('#rcm_id').focus();
-   		 return false;
-   	 }else{
-   		 $.ajax({
-   				url : "/cjmweb/join/chkRcmId.do"
-   				, dataType:"json"
-   				, async: false
-   				, type: "POST"
-   				, data : {rcm_id : $('#rcm_id').val()}
-   				, success:function(data)
-   				{				
-   					var html = '';
-   					if(data.result == "0"){
-   						alertMsg("alert_rcm_id", "추천인 ID가 확인되었습니다.");
-   						rcmCheck = true;
-   					}else{
-   						alertMsg("alert_rcm_id", "입력하신 회원 정보를 찾을 수 없습니다.<br>확인 후 다시 입력 해 주세요.");
-   						rcmCheck = false;
-   						$('#rcm_id').focus();
-   					}
-   				}
-   				, error:function(data){
-   					alert(data.msg);
-   				}
-   			});
-   	 }
-   	 
-    }
     
 	function date_change(){
 		$('#birth_dd').empty();
@@ -1637,20 +1324,6 @@ function goFooterMenu(type){
 	}
 
 </script>   
-    <script>
-        $(function () {
-            $('[data-check-all]').checkboxAllChecker();             //CJONE마케팅 전체동의
-            
-            //input type 설정
-            cjone.importJs(['/cjmweb/js/modules/formatter'], function () {
-                $('[data-format]').formatter();
-            });
-            
-            if('' == '') {
-	            $("#email_addr_opt").val("naver.com").change();
-            }
-        });
-    </script>
 <!-- //160203 수정 -->    
 <!--//script 영역-->
 	<form method="post" name="form2" id="form2">
@@ -1677,29 +1350,11 @@ function goFooterMenu(type){
 	<input type="hidden" id="agr_tm" name="agr_tm" value="" />
 	<input type="hidden" id="agr_yn" name="agr_yn" value="" />
 	
-	<input type="hidden" name="agr_sub_yn99" id="agr_sub_yn99" value="" /><!-- 3자 동의파라메터   -->
-	<input type="hidden" id="mbr_no" name="mbr_no" value=""  />
-	<input type="hidden" id="mbr_typ_cd" name="mbr_typ_cd" value=""  />
-	<input type="hidden" id="legl_rep_nm" name="legl_rep_nm" value=""  />
-	<input type="hidden" id="legl_birth_day" name="legl_birth_day" value="">
-	<input type="hidden" id="legl_ipin_ci" name="legl_ipin_ci" value="">
-	<input type="hidden" id="legl_cert" name="legl_cert" value="">
-	<input type="hidden" id="legl_typ_cd" name="legl_typ_cd" value="">
-	<input type="hidden" id="legl_rep_agr_yn" name="legl_rep_agr_yn" value="" />
-	<input type="hidden" id="join_coopco_list" name="join_coopco_list" value="" />
 	
 	<input type="hidden" id="rejoin_yn" name="rejoin_yn" value="" />
 	<input type="hidden" id="action_url" name="action_url" value="" />
 	
-	<input type="hidden" name="evt_typ" id="evt_typ" value="" />
-	<input type="hidden" name="strEvtCode" id="strEvtCode" value="" />
-	<input type="hidden" name="evt_coopco_cd" id="evt_coopco_cd" value="" />
-	<input type="hidden" name="evt_brnd_cd" id="evt_brnd_cd" value="" />
-	<input type="hidden" name="evt_mcht_no" id="evt_mcht_no" value="" />
-	<input type="hidden" name="evt_mbr_no" id="evt_mbr_no" value="" />
-	<input type="hidden" name="card_register_error" id="card_register_error" value="" />
-	<input type="hidden" name="upd_coopco_id"  id="upd_coopco_id"  value="">
-	<input type="hidden" name="card_chk"  id="card_chk"  value="">
+
 	</form>
 </body>
 </html>

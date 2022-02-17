@@ -181,7 +181,7 @@ function linkCardMng() {
         <div id="cgvwrap">
                 <div class="header_content">
                     <div class="contents" style="width:980px; margin:0 auto;">
-                        <h1><a href="/"><img src="./css/logoRed.png"
+                        <h1><a href="./main.jsp"><img src="./css/logoRed.png"
                                     alt="CGV" /></a><span>CULTUREPLEX</span></h1>
                         <ul class="memberInfo_wrap">
                             <div class="ad-partner">
