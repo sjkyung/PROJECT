@@ -126,7 +126,38 @@
     
    
 
-    
+    <script>
+
+        'use strict'
+        window.onload=function(){
+
+            let viewgrade=document.getElementsByClassName('viewgrade');
+            let layerwrap= document.getElementsByClassName('layer-wrap');
+            let btnClose=document.getElementsByClassName('btn-close');
+
+            viewgrade[0].addEventListener('click',fnlayer);
+            btnClose[0].addEventListener('click', layerclose);
+            function fnlayer(){
+
+                layerwrap[0].style.display='block';
+            };
+
+            function layerclose(){
+                layerwrap[0].style.display='none';
+            };
+
+
+            $('#btn_set_my_favorite').on('click', function () {
+                var win = window.open("./mycgv-favoriteTheaters.jsp", "url", "left=0,top=o,width=645,height=370,toolbar=no,scrollbars=no");
+                win.focus();
+            });
+
+
+        }
+
+    </script>
+
+
     <ul class="tab-menu" id="menu">
         <li class="on"><a href="#" title="현재 선택됨">상영시간표</a></li>
         <li class="last"><a href="#">위치/주차안내</a></li>
@@ -146,11 +177,19 @@
 <h4 class="hidden"> + [상영시간표]</h4>
             
 <!-- Showtimes Start -->
-<iframe id="ifrm_movie_time_table" src="showtime.jsp" title="[] 상영시간표" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="height: 826px; min-height: 100px;"></iframe>
+<iframe id="ifrm_movie_time_table" src="showtime.jsp" title="[] 상영시간표" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="height: 1200px; min-height: 500px; padding-top: 120px;"></iframe>
 <!-- /Showtimes End -->
 
 </div>
-        
+
+        <div class="col-aside" style="padding-top: 120px">
+            <div class="ad-partner01">
+                <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@M_Rectangle" width="160" height="300" title="영화광고-나이트메어앨리" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="M_Rectangle" id="M_Rectangle"></iframe>
+            </div>
+            <div class="ad-partner02">
+                <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@C_Rectangle" width="160" height="300" title="기업광고-CGV" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="C_Rectangle" id="C_Rectangle"></iframe>
+            </div>
+        </div>
         	
     </div>
 </div>
