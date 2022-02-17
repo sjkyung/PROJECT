@@ -93,13 +93,12 @@
                     
 <div id="div_TheaterPrice_box">
 <!-- 입력한 금액이 해당 상영관에 맞춰서 띄워지는 부분입니다. -->
-    <div class="mp_tablebox" id="div_theatercode_0056"><div class="mp_table_item"><div class="mp_tit cls_price_class">일반(2D)</div><div class="mp_table cls_price_class">
+    <div class="mp_tablebox" id="div_theatercode_0056"><div class="mp_table_item" style="padding:20px; margin: 0 auto; float: none; width:auto !important;">
+        <div class="mp_tit cls_price_class">일반(2D)</div><div class="mp_table cls_price_class">
                             <table summary="일반(2D) 관람가격 정보 입니다."><caption>일반(2D) 관람가격 정보</caption>
                             <colgroup><col style="width:15%"><col style="width:49%"><col style="width:18%"><col style="width:18%"></colgroup>
                             <thead><tr><th scope="row">요일</th><th scope="row">시간대</th><th scope="row">일반</th><th scope="row">청소년</th></tr></thead>
-                            <tbody><tr class="fir"><td rowspan="3">월~목</td><td class="tal">모닝( 06:00~ )</td><td>9,000</td><td>7,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>12,000</td><td>9,000</td></tr><tr class="last"><td class="tal">일반( 13:01~ )</td><td>13,000</td><td>10,000</td></tr><tr class="fir"><td rowspan="3">금~일</td><td class="tal">모닝( 06:00~ )</td><td>10,000</td><td>7,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>14,000</td><td>11,000</td></tr><tr><td class="tal">일반( 13:01~ )</td><td>14,000</td><td>11,000</td></tr></tbody></table></div></div><div class="mp_table_item"><div class="mp_table cls_price_class">
-            </div>
-            </div>
+                            <tbody><tr class="fir"><td rowspan="3">월~목</td><td class="tal">모닝( 06:00~ )</td><td>9,000</td><td>7,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>12,000</td><td>9,000</td></tr><tr class="last"><td class="tal">일반( 13:01~ )</td><td>13,000</td><td>10,000</td></tr><tr class="fir"><td rowspan="3">금~일</td><td class="tal">모닝( 06:00~ )</td><td>10,000</td><td>7,000</td></tr><tr><td class="tal">브런치( 10:01~ )</td><td>14,000</td><td>11,000</td></tr><tr><td class="tal">일반( 13:01~ )</td><td>14,000</td><td>11,000</td></tr></tbody></table></div></div>
                             
 </div>
 
@@ -112,6 +111,7 @@
                 <ul id="sec_desc_tip_text" class="mp_etc" style="display: block;">
                     <p><strong>■ 장애/경로&nbsp;및 국가유공자</strong><br>
 &nbsp;</p>
+
 
 <p><em>경로&nbsp;: 2D: 6</em>,000ㆍ<em>3D: 9</em>,000<br>
 <em>우대 : 2D:&nbsp;</em>5,000ㆍ<em>3D:&nbsp;</em>8,000</p>
