@@ -674,12 +674,10 @@
                                         onclick="javascript:fnCategoryData('6');">음료</a></li>
                                 <li id='cm7' name='categorymenu' class=''><a href='#'
                                         onclick="javascript:fnCategoryData('7');">스낵</a></li>
-                                <li id='cm10' name='categorymenu' class=''><a href='#'
-                                        onclick="javascript:fnCategoryData('10');">플레이존</a></li>
 
                             </ul>
                             <ul class='cart_content'>
-                                <li><a href='#' onclick="javascript:location.href='mycgv-popcorn-store.jsp/';">내
+                                <li><a href='#' onclick="javascript:location.href='mycgv-popcorn-store.jsp';">내
                                         기프트콘</a><span id='giftconcnt'>0</span></li>
                                 <li><a href='#' onclick="javascript:location.href='./user-cart.jsp';">장바구니</a><span
                                         id='cartviewcnt'>2</span></li>

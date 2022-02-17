@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 <head>
@@ -67,7 +66,11 @@
     <!-- 각페이지 Header Start--> 
     
     <!--/각페이지 Header End--> 
-  <%@include file="header.jsp" %>
+   
+</head>
+<body class="">
+
+<%@include file="./header.jsp" %>
 
 	<!-- Contaniner -->
 	<div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
@@ -88,6 +91,7 @@
 <div class="evt-nav-area">
     <ul class="evt-tab-menu">
         <!-- 활성화 시 a 태그에 on 클래스를 넣어주세요. -->
+
         <li><a href="defaultNew.jsp?mCode=001" title="" class="on">SPECIAL</a></li>
         <li><a href="defaultNew.jsp?mCode=004" title="" class="">영화/예매</a></li>
         <li><a href="defaultNew.jsp?mCode=008" title="" class="">멤버십/CLUB</a></li>
@@ -95,7 +99,7 @@
         <li><a href="defaultNew.jsp?mCode=006" title="" class="">제휴/할인</a></li>        
     </ul>    
     <div class="submenu">
-        <a href="result_list.jsp" class="round red on"><i>당첨자 발표</i></a>
+        <a href="mycgv-event-resultList.jsp" class="round red on"><i>당첨자 발표</i></a>
         <a href="event-end-list.jsp" class="round red on"><i>종료된 이벤트</i></a>
     </div>
 </div>
@@ -110,12 +114,28 @@
 <div class="cols-content">
     <div class="col-detail event">
         
-        <ul class="sect-evt-item-list">
+<ul class="sect-evt-item-list">
            
                 
                 
 
-        </ul>
+        <li><a id="tile_0" href="./detailViewUnited.jsp"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34022/16450753700990.jpg" alt="개봉작 사용설명서"></div><div class="evt-desc"><p class="txt1">개봉작 사용설명서</p><p class="txt2"></p></div></a></li><li><a id="tile_1" href="./detailViewUnited.jsp?seq=34007&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34007/16445669820970.jpg" alt="[더 배트맨] 
+CGV 골든티켓"></div><div class="evt-desc"><p class="txt1">[더 배트맨] 
+CGV 골든티켓</p><p class="txt2">2022.02.11~2022.02.17<span> . </span><em>종료임박</em></p></div></a></li><li><a id="tile_2" href="./detailViewUnited.jsp?seq=33839&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33839/16425473374760.jpg" alt="[CGV NFT 플레이 포스터] 
+No.1 킹메이커"></div><div class="evt-desc"><p class="txt1">[CGV NFT 플레이 포스터] 
+No.1 킹메이커</p><p class="txt2">2022.01.19~2022.02.27</p></div></a></li><li><a id="tile_3" href="./detailViewUnited.jsp?seq=34004&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34004/16444732784970.jpg" alt="[언차티드] 
+4DX 리미티드 포스터"></div><div class="evt-desc"><p class="txt1">[언차티드] 
+4DX 리미티드 포스터</p><p class="txt2">2022.02.10~2022.02.28</p></div></a></li><li><a id="tile_4" href="./detailViewUnited.jsp?seq=33993&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33993/16443856193110.jpg" alt="[언차티드]
+CGV 필름마크"></div><div class="evt-desc"><p class="txt1">[언차티드]
+CGV 필름마크</p><p class="txt2">2022.02.09~2022.03.06</p></div></a></li><li><a id="tile_5" href="./detailViewUnited.jsp?seq=33874&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33874/16425472489570.jpg" alt="[킹메이커] 
+포토플레이 시크릿 컷"></div><div class="evt-desc"><p class="txt1">[킹메이커] 
+포토플레이 시크릿 컷</p><p class="txt2">2022.01.19~2022.02.27</p></div></a></li><li><a id="tile_6" href="./detailViewUnited.jsp?seq=34000&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34000/16444585263010.jpg" alt="[나일 강의 죽음]
+오리지널 북마크"></div><div class="evt-desc"><p class="txt1">[나일 강의 죽음]
+오리지널 북마크</p><p class="txt2">2022.02.10~2022.02.27</p></div></a></li><li><a id="tile_7" href="./detailViewUnited.jsp?seq=33963&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33963/16438648940860.jpg" alt="[나일강의 죽음]
+CGV 필름마크"></div><div class="evt-desc"><p class="txt1">[나일강의 죽음]
+CGV 필름마크</p><p class="txt2">2022.02.03~2022.02.27</p></div></a></li><li><a id="tile_8" href="./detailViewUnited.jsp?seq=34038&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34038/16450783727330.jpg" alt="공주들을 위한 
+프린세스전"></div><div class="evt-desc"><p class="txt1">공주들을 위한 
+프린세스전</p><p class="txt2">2022.02.17~2022.02.21<span> . </span><em>D-4</em></p></div></a></li></ul>
         
         
         
@@ -245,7 +265,7 @@
             });          
 
 
-            var jsonData = [{"idx":"33839","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/33839/16425473374760.jpg","link":"./detailViewUnited.aspx?seq=33839&menu=001","description":"[CGV NFT 플레이 포스터] \r\nNo.1 킹메이커","eventTerm":"2022.01.19~2022.02.27","spanDay":""}];
+            var jsonData = [{"idx":"34022","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/34022/16450753700990.jpg","link":"http://www.cgv.co.kr/event/Goods/Default.aspx","description":"개봉작 사용설명서","eventTerm":"","spanDay":""},{"idx":"34007","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/34007/16445669820970.jpg","link":"./detailViewUnited.aspx?seq=34007&menu=001","description":"[더 배트맨] \r\nCGV 골든티켓","eventTerm":"2022.02.11~2022.02.17","spanDay":"종료임박"},{"idx":"33839","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/33839/16425473374760.jpg","link":"./detailViewUnited.aspx?seq=33839&menu=001","description":"[CGV NFT 플레이 포스터] \r\nNo.1 킹메이커","eventTerm":"2022.01.19~2022.02.27","spanDay":""},{"idx":"34004","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/34004/16444732784970.jpg","link":"./detailViewUnited.aspx?seq=34004&menu=001","description":"[언차티드] \r\n4DX 리미티드 포스터","eventTerm":"2022.02.10~2022.02.28","spanDay":""},{"idx":"33993","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/33993/16443856193110.jpg","link":"./detailViewUnited.aspx?seq=33993&menu=001","description":"[언차티드]\r\nCGV 필름마크","eventTerm":"2022.02.09~2022.03.06","spanDay":""},{"idx":"33874","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/33874/16425472489570.jpg","link":"./detailViewUnited.aspx?seq=33874&menu=001","description":"[킹메이커] \r\n포토플레이 시크릿 컷","eventTerm":"2022.01.19~2022.02.27","spanDay":""},{"idx":"34000","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/34000/16444585263010.jpg","link":"./detailViewUnited.aspx?seq=34000&menu=001","description":"[나일 강의 죽음]\r\n오리지널 북마크","eventTerm":"2022.02.10~2022.02.27","spanDay":""},{"idx":"33963","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/33963/16438648940860.jpg","link":"./detailViewUnited.aspx?seq=33963&menu=001","description":"[나일강의 죽음]\r\nCGV 필름마크","eventTerm":"2022.02.03~2022.02.27","spanDay":""},{"idx":"34038","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/34038/16450783727330.jpg","link":"./detailViewUnited.aspx?seq=34038&menu=001","description":"공주들을 위한 \r\n프린세스전","eventTerm":"2022.02.17~2022.02.21","spanDay":"D-4"},{"idx":"34014","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/34014/16445650100580.jpg","link":"./detailViewUnited.aspx?seq=34014&menu=001","description":"[언차티드]\r\nIMAX 포스터 증정","eventTerm":"2022.02.11~2022.02.22","spanDay":"D-5"},{"idx":"33942","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/33942/16432688046760.jpg","link":"./detailViewUnited.aspx?seq=33942&menu=001","description":"[화제의 신메뉴] 시그니처\r\n김치시즈닝믹스팝콘 런칭!","eventTerm":"2022.01.28~2022.02.22","spanDay":"D-5"},{"idx":"33893","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/33893/16431819318600.jpg","link":"./detailViewUnited.aspx?seq=33893&menu=001","description":"설맞이 팝콘 펑펑\r\n포켓몬 팝콘 스노우볼!","eventTerm":"2022.01.26~2022.02.28","spanDay":""},{"idx":"33931","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/33931/16431724282650.jpg","link":"./detailViewUnited.aspx?seq=33931&menu=001","description":"[화제의 신메뉴]\r\n오틀리 곡물라떼 출시!","eventTerm":"2022.01.25~2022.02.24","spanDay":"D-7"},{"idx":"30717","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/30717/16427236073760.jpg","link":"./detailViewUnited.aspx?seq=30717&menu=001","description":"[이달의 아이스콘] \r\n2월 라인업보고 쿠폰 GET!","eventTerm":"2022.01.21~2022.02.28","spanDay":""},{"idx":"33840","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/33840/16418861678840.jpg","link":"./detailViewUnited.aspx?seq=33840&menu=001","description":"[추운겨울 따뜻하고 든든한]\r\n마시는 옥수수 한잔 출시!","eventTerm":"2022.01.12~2022.02.28","spanDay":""},{"idx":"33438","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/33438/16414696279880.jpg","link":"./detailViewUnited.aspx?seq=33438&menu=001","description":"[귀멸의 칼날]\r\n남매세트 한정판매!","eventTerm":"2022.01.07~2022.02.28","spanDay":""},{"idx":"33713","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/33713/16400784442280.jpg","link":"./detailViewUnited.aspx?seq=33713&menu=001","description":"템퍼시네마 여의도, 판교\r\nGRAND OPENING","eventTerm":"2021.12.21~2022.02.28","spanDay":""},{"idx":"33447","imageUrl":"https://img.cgv.co.kr/WebApp/contents/eventV4/33447/16365993268590.jpg","link":"./detailViewUnited.aspx?seq=33447&menu=001","description":"예매 오픈 \r\n알림 서비스","eventTerm":"","spanDay":""}];
             $(".sect-evt-item-list").tileGalleryEvent({
                 "type": "event",
                 "data": jsonData,
@@ -349,217 +369,7 @@
     </div>
     
     <!-- E 예매하기 및 TOP Fixed 버튼 -->
-	
- <%@include file="./footer.jsp" %>
-
-
-<script type="text/template" id="temp_popup_movie_player">
-<div class="popwrap">
-    <div class="sect-layerplayer">
-        <div class="cols-pop-player">
-            <h1 class="title" id="movie_player_popup_title"></h1>
-            <div class="col-pop-player">
-                <div class="warp-pop-player" style="position: relative;">
-                    <iframe id="ifrm_movie_player_popup" name="ifrm_movie_player_popup" src="about:blank" style="width:800px;height:450px;" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-					
-					<div class="sect-replay" style="display:none" id="pop_player_relation_wrap">
-						<button class="btn-replay movie_player_inner_popup" type="button" data-gallery-idx="0" id="btn_movie_replay">다시보기</button>
-						<!-- 없어지는 영역 -->
-						<div class="wrap-relationmovie" id="pop_player_relation_item_wrap">
-							<strong class="title">관련영상</strong>
-							<ul id="pop_player_relation_movie">
-                                <li></li>
-                            </ul>
-						</div><!-- .wrap-relationmovie -->
-					</div><!-- .sect-replay -->
-					
-                </div><!-- .warp-pop-player -->
-                <div class="descri-trailer">
-                    <strong class="title">영상설명</strong>
-                    <textarea readonly="readonly" id="movie_player_popup_caption"></textarea>
-                </div>
-            </div><!-- .col-player -->
-            <div class="col-pop-playerinfo">
-                <div id="movie_player_popup_movie_info"></div>
-                <div class="sect-trailer">
-                    <strong class="title">신규영상</strong>
-                    <ul>
-                        
-                    </ul>
-                </div>
-            </div><!-- .col-playerinfo -->
-        </div><!-- .cols-player -->
-        <button type="button" class="btn-close">닫기</button>
-    </div>
-</div>
-</script>
-
-<script id="temp_popup_movie_player_movie_info" type="text/x-jquery-tmpl">
-<div class="box-image">
-    <a href="/movies/detail-view/?midx=${MovieIdx}" title="${Title} 상세보기 새창">
-        <span class="thumb-image">
-            <img src="${PosterImage.MiddleImage}" alt="${Title} 포스터" />
-            <span class="ico-grade ${MovieGrade.StyleClassName}">${MovieGrade.GradeText}</span>
-        </span>
-    </a>   
-</div>
-<div class="box-contents">
-    <a href="/movies/detail-view/?midx=${MovieIdx}" title="${Title} 상세보기 새창">
-        <strong class="title">${Title}</strong>
-    </a>
-    <span class="txt-info" style="margin-bottom:2px;">
-        <em class="genre">${GenreText}</em>
-        <span>
-            <i>${OpenDate}</i>
-            <strong>${OpenText}</strong>
-            {{if D_Day > 0}}
-                <em class="dday">D-${D_Day}</em>
-            {{/if}}
-        </span>
-    </span>
-{{if IsTicketing }}
-    <a class="link-reservation" href="/ticket/?MOVIE_CD=${CGVCode}&MOVIE_CD_GROUP=${CGVCode}">예매</a> 
-{{/if}}
-</div>
-</script>
-
-<script id="temp_popup_movie_player_relation_movie_item" type="text/x-jquery-tmpl">
-<li>
-    <div class="box-image">
-        <a href="#" title="${Title} 영상보기" class="movie_player_inner_popup" data-gallery-idx="${GalleryIdx}">
-            <span class="thumb-image">
-                <img src="${ImageUrl}" 
-                alt="${Title}_트레일러" />
-                <span class="ico-play">영상보기</span>
-            </span>
-        </a>
-    </div>
-</li>
-</script>
-
-<script type="text/javascript" src="https://img.cgv.co.kr/R2014//js/system/crypto.js"></script>
-<script type="text/javascript">
-    //<![CDATA[
-    function closeBanner(){        
-        $('#cgv_main_ad').remove();     
-        for(var i = 0; i < 2; i++) {
-            window.setTimeout(function(){
-                $(window).resize()                
-            }, 30)
-        }
-    }
-    function showPlayEndEvent() {
-        $('#pop_player_relation_wrap').show();
-        $('#btn_movie_replay').focus();
-    }
-
-    (function ($) {
-        $(function () {
-
-        
-            $('.movie_player_popup').moviePlayer();     //동영상플레이어
-
-            //노원타운
-            $('.special5_pop').on('click', function () {
-                openNowonTown();
-                return false;
-            });           
-            // 검색 auto validate version.
-            $('.btn-go-search').on('click', function () {
-                var $frmSearch = $(this).parent().parent('form');
-                $frmSearch.submit();
-                return false;
-            });
-
-            //메인스킵네비
-            $('#skipHeader').on('click', function(){
-                var $ctn = $('#contents');
-                $ctn.attr({
-                    tabIndex : -1
-                }).focus();				
-                return false;
-            });
-
-            //현재 URL 해당파라미터 교체
-            function updateQueryStringParameter(uri, key, value) {
-                var re = new RegExp("([?|&])" + key + "=.*?(&|#|$)", "i");
-                if (uri.match(re)) {
-                    return uri.replace(re, '$1' + key + "=" + value + '$2');
-                } else {
-                    var hash =  '';
-                    var separator = uri.indexOf('?') !== -1 ? "&" : "?";    
-                    if( uri.indexOf('#') !== -1 ){
-                        hash = uri.replace(/.*#/, '#');
-                        uri = uri.replace(/#.*/, '');
-                    }
-                    return uri + separator + key + "=" + value + hash;
-                }
-            }
-            //모바일버전 가기
-            $('.go-mobile').on('click', function() {
-                location.replace(updateQueryStringParameter(location.href, "IsMobile", "N"));
-                return false;
-            });
-        });
-    })(jQuery);
-	
-    function goFamilySite() {
-        var famulySiteURL = $(familysite).val();
-        if (famulySiteURL != "") {
-            var win = window.open(famulySiteURL, 'winFamilySite')
-            win.focus();
-        }
-    }
-    function goFtc() {
-        var ftcUrl = "http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1048145690";
-        window.open(ftcUrl, "bizCommPop", "width=750, height=700, scrollbars=1;");        
-    }    
-    //]]>
-</script>
-
-<!-- 앱다운로드 레이어 팝업 -->
-<script type="text/javascript">
-    //appDownInfoPop();
-</script>
-
-<script language="javascript" type="text/javascript">
-
-    //GA 에널리스트 이벤트LOG 함수- 2022.01.12: MYILSAN
-    function gaEventLog(pCategroy, pAction, pLabel) {
-        ga('send', {
-            hitType: 'event', eventCategory: pCategroy, eventAction: pAction, eventLabel: pLabel
-            , hitCallback: function () {
-            }
-            , hitCallbackFail: function () { 
-            }
-        });
-    }
-
-    //201402 SYH GA추가
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-47126437-1', 'cgv.co.kr'); //지주사
-    ga('create', 'UA-47951671-5', 'cgv.co.kr', { 'name': 'cgvTracker' }); //디마팀
-    ga('create', 'UA-47951671-7', 'cgv.co.kr', { 'name': 'rollup' }); //추가
-
-</script>
-
-
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NNNFR3"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>    (function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({ 'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NNNFR3');
-</script>
-<!-- End Google Tag Manager -->
+	<%@include file="./footer.jsp" %>
 
 </body>
 </html>

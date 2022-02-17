@@ -96,7 +96,7 @@
         
                 <li>
                     <div class="box-image">
-                        <a href="/culture-event/event/detailViewUnited.jsp?seq=33947">
+                        <a href="detailViewUnited.jsp?seq=33947">
                             <span class="thumb-image">
                                 <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33947/16433283013380.jpg" onerror="errorImage(this)" alt="전체 [해적:도깨비 깃발] 
 특별관 스페셜 특가 이벤트"/>
@@ -104,7 +104,7 @@
                         </a>
                     </div>
                     <div class="box-contents">
-                        <a href="/culture-event/event/detailViewUnited.jsp?seq=33947&page=1">
+                        <a href="detailViewUnited.jsp?seq=33947&page=1">
                             <em class="txt-lightblue">전체</em>
                             <strong>[해적:도깨비 깃발] 
 특별관 스페셜 특가 이벤트</strong>
@@ -118,7 +118,7 @@
             
                 <li>
                     <div class="box-image">
-                        <a href="/culture-event/event/detailViewUnited.jsp?seq=33951">
+                        <a href="detailViewUnited.jsp?seq=33951">
                             <span class="thumb-image">
                                 <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33951/16432753290800.jpg" onerror="errorImage(this)" alt="전체 [장민호 드라마 최종회]
 2주차 굿즈패키지"/>
@@ -126,7 +126,7 @@
                         </a>
                     </div>
                     <div class="box-contents">
-                        <a href="/culture-event/event/detailViewUnited.jsp?seq=33951&page=1">
+                        <a href="detailViewUnited.jsp?seq=33951&page=1">
                             <em class="txt-lightblue">전체</em>
                             <strong>[장민호 드라마 최종회]
 2주차 굿즈패키지</strong>
