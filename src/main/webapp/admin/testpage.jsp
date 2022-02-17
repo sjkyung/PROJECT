@@ -62,7 +62,7 @@
         <div class="container-fluid px-4" STYLE="margin-left: 240px;
                     margin-top: 100px !important " >
 
-            <h1 class="mt-4">여기서부터 본문 시작해주세요.</h1>
+            <h1 class="mt-4">여기서부터 본문 시작해주세요!!!</h1>
 
 
         </div>
