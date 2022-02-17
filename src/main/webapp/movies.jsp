@@ -82,7 +82,7 @@
                     <ul>
                         <!-- sorting 부분입니다. 화면 전환없이 상영작만 볼 수 있도록 구현합니다. -->
                         <li class="on"><a href="/movies/" title="선택">무비차트</a></li>
-                        <li><a href="/movies/pre-movies.aspx">상영예정작</a></li>
+                        <li><a href="pre-movies.jsp">상영예정작</a></li>
                         <!--<li><a href="/movies/?lt=3">CGV아트하우스</a></li>//-->
                     </ul>
                 </div>

@@ -91,7 +91,7 @@
     <h3><img src="https://img.cgv.co.kr/R2014/images/title/h3_theater.gif" alt="THEATER"></h3>
     <div class="sect-theater ">
         <h4 class="theater-tit"><span>CGV강남</span></h4>
-        <a href="/support/lease/default.aspx" class="round inred btn_lease"><span style="padding:0 14px;">단체/대관문의</span></a>
+        <a href="#" class="round inred btn_lease"><span style="padding:0 14px;">단체/대관문의</span></a>
         
         <div class="wrap-theaterinfo">
             <div class="box-image">
@@ -138,7 +138,7 @@
             viewgrade[0].addEventListener('click',fnlayer);
             btnClose[0].addEventListener('click', layerclose);
             function fnlayer(){
-
+                console.log("fnlayer 실행입니다!")
                 layerwrap[0].style.display='block';
             };
 
@@ -158,21 +158,69 @@
     </script>
 
 
-    <ul class="tab-menu" id="menu">
-        <li class="on"><a href="#" title="현재 선택됨">상영시간표</a></li>
-        <li class="last"><a href="#">위치/주차안내</a></li>
-        <!--<li class='last'><a href="./?page=price&theaterCode=0056#menu" >관람료안내</a></li>-->
-    </ul>
     <div class="cols-content">
         <!-- 상영시간표 UserControl -->
         
-<div class="col-detail"> 
+<div class="col-detail">
 <div class="descri-info theater" style="display: block;">
     <ul>
         <li><a id="li_view_price_btn" class="priceinfo" style="cursor:pointer;" onclick="location.href='theaterPrice.jsp'" title="새창">관람가격 안내</a></li>
-        <li><a href="#" id="viewgrade" class="viewgrade" target="_blank" title="새창">관람등급 안내</a></li>
+        <li><a href=#viewgrade" id="viewgrade" class="viewgrade">관람등급 안내</a></li>
     </ul>
 </div>
+
+<!-- 영화등급 레이어-->
+    <div class="layer-wrap" style="display: none; top:10% !important;"><div class="layer-contents" style="width:650px;">
+        <div class="popwrap">
+            <h5>CGV 관람 등급 안내</h5>
+            <div class="pop-contents">
+                <div class="tbl-list">
+                    <table summary="CGV 등급별 관람 안내">
+                        <caption>CGV 관람 등급 안내</caption>
+                        <colgroup>
+                            <col width="136">
+                            <col width="*">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">구분</th>
+                            <th scope="col">성명</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row"><span class="ico-grade grade-all">전체 관람가</span>전체 관람가</th>
+                            <td>모든 연령의 고객님께서 관람하실 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="ico-grade grade-12">12세 관람가</span>12세 관람가</th>
+                            <td>만 12세 미만의 고객님은 보호자를 동반하셔야 관람하실 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="ico-grade grade-15">15세 관람가</span>15세 관람가</th>
+                            <td>만 15세 미만의 고객님은 보호자를 동반하셔야 관람하실 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="ico-grade grade-19">청소년관람불가</span>청소년관람불가</th>
+                            <td> 만 18세 미만의 고객님은 보호자를 동반하셔도 관람하실 수 없습니다.<br>
+                                - 입장시 신분증을 꼭 지참하시기 바랍니다.<br>
+                                - 만 18세 이상이더라도 고등학교 재학중인 경우 관람이 불가합니다. </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="ico-grade grade-none">미정</span>미정</th>
+                            <td>등급 미정 영화입니다.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn-close">관람 등급 안내 닫기</button>
+    </div></div>
+
+
+
 <!-- 탭메뉴 class="on" 에따라서 아래 h4 내용을 바꿔주세요 -->                
 <h4 class="hidden"> + [상영시간표]</h4>
             
