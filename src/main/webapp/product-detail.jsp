@@ -181,6 +181,7 @@
                 alert(err.Message);
             }
         });
+        $.fn.comPopupLayer(this, true, 'pop_product_cgv', '0');
     }
 
     //뒤로가기 새로고침
