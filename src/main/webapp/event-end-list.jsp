@@ -87,7 +87,7 @@
 <div class="tit-heading-wrap tit-evt">
     <h3>EVENT</h3>
     <div class="submenu">
-        <a href="result_list.jsp" class="round red on"><span>당첨자 발표</span></a>
+        <a href="mycgv-event-resultList.jsp" class="round red on"><span>당첨자 발표</span></a>
     </div>
 </div>
 <h4>종료된 이벤트</h4>

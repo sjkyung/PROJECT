@@ -791,8 +791,8 @@
 
 
                         <div class="com_btn_wrap pT60">
-                            <a href="#none" class="btn_style0 "
-                                onclick="javascript:fn_Buy(this, 'gift', '');">선물하기</a><a href="#none"
+                            <a href="user-gift.jsp" class="btn_style0 "
+                                onclick="javascript:fn_Buy(this, 'gift', '');">선물하기</a><a href="purchase-confirm.jsp"
                                 class="btn_style0 " onclick="javascript:fn_Buy(this, 'purchase', '');">구매하기</a>
                         </div>
                     </div>

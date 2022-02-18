@@ -264,7 +264,7 @@
                                 </dl>
                             </li>
                             <li>
-                                <h2><a href="./defaultNew.jsp">이벤트</a></h2>
+                                <h2><a href="./defaultNew.jsp?mCode=001">이벤트</a></h2>
                                 <dl class="nav_overMenu">
                                     <dt>
                                         <h2><a href="./defaultNew.jsp?mCode=001"
