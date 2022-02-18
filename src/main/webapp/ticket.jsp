@@ -97,7 +97,7 @@
             <!--/ Contents End -->
 		 </div>
 
-    <iframe title="CGV 빠른예매" id="ticket_iframe" src="http://ticket.cgv.co.kr/Reservation/Reservation.aspx?MOVIE_CD=&MOVIE_CD_GROUP=&PLAY_YMD=&THEATER_CD=&PLAY_NUM=&PLAY_START_TM=&AREA_CD=&SCREEN_CD=&THIRD_ITEM=" 
+    <iframe title="CGV 빠른예매" id="ticket_iframe" src="./reservation.jsp" 
         scrolling="no" frameborder="0" width="100%" height="987" style="width:100%; border:0 none;"></iframe>
     
     <script type="text/javascript">
