@@ -258,7 +258,9 @@
                                     <button type="button" id="close_usergrade" class="btn-close ">MY 지난 등급 이력 팝업 닫기</button>
                                 </div>
                             </div>
-
+                            <div class="mycgv_btn_special2">
+                                <!-- 세로줄 없어져서 맞추기용 div 및 class-->
+                            </div>
                         </div>
 
                     </div>
@@ -276,29 +278,29 @@
 
                             <li>
                                 <strong>CGV 할인쿠폰</strong>
-                                <span><em><a href="/user/mycgv/coupon/discount/list.aspx?g=1#contaniner">100,000</a></em> 개</span>
+                                <span><em><a href="/user/mycgv/coupon/discount/list.aspx?g=1#contaniner">1,000</a></em> 개</span>
                             </li>
                             <li>
                                 <strong>영화관람권</strong>
-                                <span><em><a href="/user/mycgv/coupon/movie-ticket/list.aspx?g=1#contaniner">100,000</a></em> 개</span>
+                                <span><em><a href="/user/mycgv/coupon/movie-ticket/list.aspx?g=1#contaniner">1,000</a></em> 개</span>
                             </li>
                         </ul>
                     </div>
 
 
                     <div class="col-one-point">
-                        <h3 style="!important;">CGV POINT</h3>
+                        <h3 style="background: url(./css/cgvpoint.png) center;">CGV POINT</h3>
                         <a href="./mycgv-cgvPoint-pointList.jsp">CGV POINT 더보기</a>
                         <ul>
                             <li>
                                 <strong>CGV 사용가능 포인트</strong>
-                                <span><em class="txt-maroon"><a href="">1,000,000</a></em> 점</span>
+                                <span><em class="txt-maroon"><a href="">1,000</a></em> 점</span>
                             </li>
                             <li class="tooltip_list cf">
                                 <strong>VIP선정 포인트</strong><a href="" class="mycgv_tooltip"><img src="https://img.cgv.co.kr/R2014/images/common/mycgv_tooltip/ico_tooltip.png" alt="i" /></a>
 
                                 <div class="tooltip_con tc2"><span><img src="https://img.cgv.co.kr/R2014/images/common/mycgv_tooltip/tooltip_con2.png" alt="CGV에서 구매를 통해 적립된 매표 구매 포인트/매점&amp;씨네샵 구매 포인트/VIP 선정에 포함되는 이벤트 포인트가 누적으로 합산된 포인트 입니다" /></span></div>
-                                <span><em>1,000,000</em> 점</span>
+                                <span><em>1,000</em> 점</span>
                             </li>
                         </ul>
 
@@ -412,248 +414,250 @@
 
                 </div>
             </div>
-                <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/giftstore/giftstore.css" />
-                <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/common/moment.min.js"></script>
 
-                <script type="text/javascript">
-                    //<![CDATA[
-                    (function ($) {
-                        $(function () {
-                            $('#period_wrap').datePeriod({
-                                'start': $('#startdate'),
-                                'end': $('#enddate'),
-                                'data': [
-                                    { 'title': '1개월', 'data-period': 1, 'data-type': 'm' },
-                                    { 'title': '3개월', 'data-period': 3, 'data-type': 'm' },
-                                    { 'title': '직접/입력', 'data-period': 3, 'data-type': 'm' }
-                                ]
-                            });
+                <div class="col-detail" id="mycgv_contents">
 
-                            $('.tps-period-gray .round[data-type="' + 0 + '"]').addClass('on').siblings('button').removeClass('on').removeAttr('title');
-                            $('.tps-search-gray .round[data-type="' + 0 + '"]').addClass('on').siblings('button').removeClass('on').removeAttr('title');
+                    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/giftstore/giftstore.css" />
+                    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/common/moment.min.js"></script>
 
-                            $('#btn_search').on('click', function () {
-                                var data = $('#tps-search-type').find('.on').data('type');
-                                var status = $('#tps-search-status').find('.on').data('type');
-                                var startDate = $("#startdate").val();
-                                var endDate = $("#enddate").val();
-                                var firstDate = '2014-01-03';
-                                if (startDate > endDate) {
-                                    alert("조회기간을 확인해주세요.");
-                                    return;
-                                }
-                                if (moment(endDate).diff(moment(moment(endDate).add(-3, 'months').format('YYYY-MM-DD')), 'asMilliseconds') < moment(endDate).diff(moment(startDate), 'asMilliseconds')) {
-                                    alert("최대 3개월까지만 조회가능합니다.");
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        (function ($) {
+                            $(function () {
+                                $('#period_wrap').datePeriod({
+                                    'start': $('#startdate'),
+                                    'end': $('#enddate'),
+                                    'data': [
+                                        { 'title': '1개월', 'data-period': 1, 'data-type': 'm' },
+                                        { 'title': '3개월', 'data-period': 3, 'data-type': 'm' },
+                                        { 'title': '직접/입력', 'data-period': 3, 'data-type': 'm' }
+                                    ]
+                                });
+
+                                $('.tps-period-gray .round[data-type="' + 0 + '"]').addClass('on').siblings('button').removeClass('on').removeAttr('title');
+                                $('.tps-search-gray .round[data-type="' + 0 + '"]').addClass('on').siblings('button').removeClass('on').removeAttr('title');
+
+                                $('#btn_search').on('click', function () {
+                                    var data = $('#tps-search-type').find('.on').data('type');
+                                    var status = $('#tps-search-status').find('.on').data('type');
+                                    var startDate = $("#startdate").val();
+                                    var endDate = $("#enddate").val();
+                                    var firstDate = '2014-01-03';
+                                    if (startDate > endDate) {
+                                        alert("조회기간을 확인해주세요.");
+                                        return;
+                                    }
+                                    if (moment(endDate).diff(moment(moment(endDate).add(-3, 'months').format('YYYY-MM-DD')), 'asMilliseconds') < moment(endDate).diff(moment(startDate), 'asMilliseconds')) {
+                                        alert("최대 3개월까지만 조회가능합니다.");
+                                        return false;
+                                    }
+                                    if (firstDate > startDate) {
+                                        alert("2014년 1월 3일 이후부터 조회가능합니다.");
+                                        return false;
+                                    }
+                                    location.href = "./default.aspx?type=" + data + "&status=" + status + "&startdate=" + $("#startdate").val() + "&enddate=" + $("#enddate").val();
+                                });
+
+                                $('.tps-period-gray .round').on('click', function () {
+                                    var $this = $(this);
+                                    $this.attr('title', '현재 선택됨');
+                                    $this.addClass('on').siblings('button').removeClass('on').removeAttr('title');
                                     return false;
-                                }
-                                if (firstDate > startDate) {
-                                    alert("2014년 1월 3일 이후부터 조회가능합니다.");
+                                });
+
+                                $('.tps-search-gray .round').on('click', function () {
+                                    var $this = $(this);
+                                    $this.attr('title', '현재 선택됨');
+                                    $this.addClass('on').siblings('button').removeClass('on').removeAttr('title');
                                     return false;
+                                });
+
+                                //환불신청팝업
+                                $('.btn-close').on('click', function () {
+                                    $('.refund').hide();
+                                });
+                            });
+                        })(jQuery);
+
+                        function number_filter(str_value){
+                            var tmp = str_value.replace(/[^0-9]/gi, "");
+                            return tmp;
+                        }
+
+                        function fnRenewalExpiry(n, u) {
+                            var params = { number: n , sender: u };
+                            jQuery.ajax({
+                                type: 'POST',
+                                url: "/user/mycgv/popcorn-store/default.aspx/SetRenewalExpiry",
+                                data: "{ requestData: '" + JSON.stringify(params) + "'}",
+                                dataType: 'json',
+                                contentType: 'application/json',
+                                success: function (data) {
+                                    if (data.d.ResultCode == "00000") {
+                                        alert("유효기간이 정상적으로 연장되었습니다.");
+                                        window.location.reload();
+                                    } else {
+                                        if (data.d.ResultCode == "99997") {
+                                            app.goLogin();
+                                        }
+                                        else {
+                                            alert(data.d.ResultMessage);
+                                        }
+                                    }
+                                },
+                                error: function (xhr, status, error) {
+                                    alert(error + "\n" + status + "\n" + xhr.responseText);
                                 }
-                                location.href = "./default.aspx?type=" + data + "&status=" + status + "&startdate=" + $("#startdate").val() + "&enddate=" + $("#enddate").val();
                             });
+                        }
 
-                            $('.tps-period-gray .round').on('click', function () {
-                                var $this = $(this);
-                                $this.attr('title', '현재 선택됨');
-                                $this.addClass('on').siblings('button').removeClass('on').removeAttr('title');
-                                return false;
-                            });
+                        // 기프트콘 환불신청 popup
+                        function fnRefundGiftcon(n) {
 
-                            $('.tps-search-gray .round').on('click', function () {
-                                var $this = $(this);
-                                $this.attr('title', '현재 선택됨');
-                                $this.addClass('on').siblings('button').removeClass('on').removeAttr('title');
-                                return false;
-                            });
-
-                            //환불신청팝업
-                            $('.btn-close').on('click', function () {
-                                $('.refund').hide();
-                            });
-                        });
-                    })(jQuery);
-
-                    function number_filter(str_value){
-                        var tmp = str_value.replace(/[^0-9]/gi, "");
-                        return tmp;
-                    }
-
-                    function fnRenewalExpiry(n, u) {
-                        var params = { number: n , sender: u };
-                        jQuery.ajax({
-                            type: 'POST',
-                            url: "/user/mycgv/popcorn-store/default.aspx/SetRenewalExpiry",
-                            data: "{ requestData: '" + JSON.stringify(params) + "'}",
-                            dataType: 'json',
-                            contentType: 'application/json',
-                            success: function (data) {
-                                if (data.d.ResultCode == "00000") {
-                                    alert("유효기간이 정상적으로 연장되었습니다.");
-                                    window.location.reload();
-                                } else {
+                            $('.refund').hide();
+                            $('#refund-information').empty();
+                            var params = { number: n };
+                            jQuery.ajax({
+                                type: 'POST',
+                                url: "/user/mycgv/popcorn-store/default.aspx/GetRefundPopup",
+                                data: "{ requestData: '" + JSON.stringify(params) + "'}",
+                                dataType: 'json',
+                                contentType: 'application/json',
+                                success: function (data) {
                                     if (data.d.ResultCode == "99997") {
                                         app.goLogin();
                                     }
                                     else {
-                                        alert(data.d.ResultMessage);
+                                        $('#refund-information').empty();
+                                        $('#refund-information').append(data.d.ResultHtml);
+                                        fnRefundPopup();
                                     }
+                                },
+                                error: function (xhr, status, error) {
+                                    alert(error + "\n" + status + "\n" + xhr.responseText);
                                 }
-                            },
-                            error: function (xhr, status, error) {
-                                alert(error + "\n" + status + "\n" + xhr.responseText);
-                            }
-                        });
-                    }
-
-                    // 기프트콘 환불신청 popup
-                    function fnRefundGiftcon(n) {
-
-                        $('.refund').hide();
-                        $('#refund-information').empty();
-                        var params = { number: n };
-                        jQuery.ajax({
-                            type: 'POST',
-                            url: "/user/mycgv/popcorn-store/default.aspx/GetRefundPopup",
-                            data: "{ requestData: '" + JSON.stringify(params) + "'}",
-                            dataType: 'json',
-                            contentType: 'application/json',
-                            success: function (data) {
-                                if (data.d.ResultCode == "99997") {
-                                    app.goLogin();
-                                }
-                                else {
-                                    $('#refund-information').empty();
-                                    $('#refund-information').append(data.d.ResultHtml);
-                                    fnRefundPopup();
-                                }
-                            },
-                            error: function (xhr, status, error) {
-                                alert(error + "\n" + status + "\n" + xhr.responseText);
-                            }
-                        });
-                    };
-
-                    // 기프트콘 환불신청 popup
-                    function fnRefundPopup() {
-                        $('.refund').show();
-                        $('.refund').find('input[type="checkbox"]').off('change').on({
-                            change: function (e) {
-                                var _target = e.target;
-                                var $AllChecker = $('.com_all_checker')
-                                var isAllChecker = $AllChecker.is(':checked');
-                                if ($(_target).hasClass('com_all_checker')) {
-                                    $('.refund').find('.com_all_particle_checker').prop('checked', isAllChecker);
-                                } else {
-                                    var _isAllParticleCheck = true;
-
-                                    $('.refund').find('.com_all_particle_checker').each(function (idx) {
-                                        _isAllParticleCheck *= $(this).is(':checked');
-                                    });
-                                    $AllChecker.prop('checked', _isAllParticleCheck);
-                                }
-                            }
-                        });
-                    };
-
-                    function fnRefundAcct(n) {
-                        var regExp = /^[0-9]*$/;
-                        var aNumber = ($("#txtAccountNumber").val()).trim().toString();
-                        var sBankCode = $("#bankSelect option:selected").val();
-                        var sBankName = $("#bankSelect option:selected").text();
-
-                        if ($("#check00").prop("checked") == false) {
-                            alert("약관 동의 후 환불신청이 가능 합니다.");
-                            return false;
-                        }
-
-                        if (typeof sBankCode == "undefined") {
-                            alert("은행을 선택하세요.");
-                            return false;
-                        }
-
-                        if (aNumber.length < 10) {
-                            alert("계좌번호를 입력해 주세요.");
-                            $("txtAccountNumber").focus();
-                            return false;
-                        }
-
-                        if (!regExp.test(aNumber)) {
-                            alert("계좌번호를 확인하세요.");
-                            $("txtAccountNumber").focus();
-                            return false;
-                        }
-
-                        var params = {
-                            bankCode: sBankCode,
-                            bankName: sBankName,
-                            accountNumber: aNumber,
-                            number: n
+                            });
                         };
 
-                        fnSetAccountRequest().then(function (data) {
-                            if (data != null) {
-                                if (data.d.CJSResultCode === "0000") {
-                                    $.ajax({
-                                        type: 'POST',
-                                        url: '/user/mycgv/popcorn-store/default.aspx/SetAccountRequest',
-                                        data: "{ requestData: '" + JSON.stringify(params) + "'}",
-                                        dataType: 'json',
-                                        contentType: 'application/json',
-                                        success: function (data) {
-                                            if (data.d.ResultCode == "00000") {
-                                                alert("환불신청이 완료되었습니다.");
-                                                $('.refund').hide();
-                                                $('#refund-information').empty();
-                                                window.location.reload();
-                                            } else {
-                                                if (data.d.ResultCode == "99997") {
-                                                    app.goLogin();
-                                                }
-                                                else {
-                                                    alert(data.d.ResultMessage);
-                                                }
-                                            }
-                                        },
-                                        error: function (xhr, status, error) {
-                                            alert(error + "\n" + status + "\n" + xhr.responseText);
-                                        }
-                                    });
+                        // 기프트콘 환불신청 popup
+                        function fnRefundPopup() {
+                            $('.refund').show();
+                            $('.refund').find('input[type="checkbox"]').off('change').on({
+                                change: function (e) {
+                                    var _target = e.target;
+                                    var $AllChecker = $('.com_all_checker')
+                                    var isAllChecker = $AllChecker.is(':checked');
+                                    if ($(_target).hasClass('com_all_checker')) {
+                                        $('.refund').find('.com_all_particle_checker').prop('checked', isAllChecker);
+                                    } else {
+                                        var _isAllParticleCheck = true;
+
+                                        $('.refund').find('.com_all_particle_checker').each(function (idx) {
+                                            _isAllParticleCheck *= $(this).is(':checked');
+                                        });
+                                        $AllChecker.prop('checked', _isAllParticleCheck);
+                                    }
                                 }
-                                else {
-                                    if (data.d.CJSResultCode == "99997") {
-                                        app.goLogin();
+                            });
+                        };
+
+                        function fnRefundAcct(n) {
+                            var regExp = /^[0-9]*$/;
+                            var aNumber = ($("#txtAccountNumber").val()).trim().toString();
+                            var sBankCode = $("#bankSelect option:selected").val();
+                            var sBankName = $("#bankSelect option:selected").text();
+
+                            if ($("#check00").prop("checked") == false) {
+                                alert("약관 동의 후 환불신청이 가능 합니다.");
+                                return false;
+                            }
+
+                            if (typeof sBankCode == "undefined") {
+                                alert("은행을 선택하세요.");
+                                return false;
+                            }
+
+                            if (aNumber.length < 10) {
+                                alert("계좌번호를 입력해 주세요.");
+                                $("txtAccountNumber").focus();
+                                return false;
+                            }
+
+                            if (!regExp.test(aNumber)) {
+                                alert("계좌번호를 확인하세요.");
+                                $("txtAccountNumber").focus();
+                                return false;
+                            }
+
+                            var params = {
+                                bankCode: sBankCode,
+                                bankName: sBankName,
+                                accountNumber: aNumber,
+                                number: n
+                            };
+
+                            fnSetAccountRequest().then(function (data) {
+                                if (data != null) {
+                                    if (data.d.CJSResultCode === "0000") {
+                                        $.ajax({
+                                            type: 'POST',
+                                            url: '/user/mycgv/popcorn-store/default.aspx/SetAccountRequest',
+                                            data: "{ requestData: '" + JSON.stringify(params) + "'}",
+                                            dataType: 'json',
+                                            contentType: 'application/json',
+                                            success: function (data) {
+                                                if (data.d.ResultCode == "00000") {
+                                                    alert("환불신청이 완료되었습니다.");
+                                                    $('.refund').hide();
+                                                    $('#refund-information').empty();
+                                                    window.location.reload();
+                                                } else {
+                                                    if (data.d.ResultCode == "99997") {
+                                                        app.goLogin();
+                                                    }
+                                                    else {
+                                                        alert(data.d.ResultMessage);
+                                                    }
+                                                }
+                                            },
+                                            error: function (xhr, status, error) {
+                                                alert(error + "\n" + status + "\n" + xhr.responseText);
+                                            }
+                                        });
                                     }
                                     else {
-                                        alert(data.d.CJSResultMessage);
+                                        if (data.d.CJSResultCode == "99997") {
+                                            app.goLogin();
+                                        }
+                                        else {
+                                            alert(data.d.CJSResultMessage);
+                                        }
                                     }
                                 }
-                            }
-                        });
-                    }
+                            });
+                        }
 
-                    function fnSetAccountRequest() {
-                        var aNumber = ($("#txtAccountNumber").val()).trim().toString();
-                        var sBankCode = $("#bankSelect option:selected").val();
+                        function fnSetAccountRequest() {
+                            var aNumber = ($("#txtAccountNumber").val()).trim().toString();
+                            var sBankCode = $("#bankSelect option:selected").val();
 
-                        var params = {
-                            bankCode: sBankCode,
-                            accountNumber: aNumber
+                            var params = {
+                                bankCode: sBankCode,
+                                accountNumber: aNumber
+                            };
+
+                            var response = $.ajax({
+                                type: "POST",
+                                url: "/user/mycgv/popcorn-store/default.aspx/GetAccountCheck",
+                                data: "{requestData: '" + JSON.stringify(params) + "'}",
+                                dataType: "JSON",
+                                contentType: "application/json"
+                            });
+
+                            return response;
                         };
-
-                        var response = $.ajax({
-                            type: "POST",
-                            url: "/user/mycgv/popcorn-store/default.aspx/GetAccountCheck",
-                            data: "{requestData: '" + JSON.stringify(params) + "'}",
-                            dataType: "JSON",
-                            contentType: "application/json"
-                        });
-
-                        return response;
-                    };
-                    //]]>
-                </script>
-                <div class="col-detail" id="mycgv_contents">
+                        //]]>
+                    </script>
                     <div class="tit-mycgv"><h3>내 기프트콘</h3></div>
                     <div class="set-btn" style="height: 20px"><a href="giftcon-register.aspx" class="round inblack"><span>기프트콘 등록</span></a></div>
                     <div class="tit-mycgv"><h4>CGV 기프트콘 내역</h4></div>

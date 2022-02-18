@@ -800,7 +800,7 @@
 							</tbody>
 						</table>
 						<div class="com_btn_wrap pT40">
-							<a href="#none" class="btn_style0" onclick="frmBuySubmit();">다음</a>
+							<a href="store-payment.jsp" class="btn_style0" onclick="frmBuySubmit();">다음</a>
 							<a href="#none" class="btn_prev"
 								onclick="javascript:location.replace('./user-cart.jsp');">
 								<img src="./css/btn_prev.png" alt="이전화면으로 이동"/>이전화면</a>

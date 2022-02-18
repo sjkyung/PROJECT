@@ -258,7 +258,9 @@
                                     <button type="button" id="close_usergrade" class="btn-close ">MY 지난 등급 이력 팝업 닫기</button>
                                 </div>
                             </div>
-
+                            <div class="mycgv_btn_special2">
+                                <!-- 세로줄 없어져서 맞추기용 div 및 class-->
+                            </div>
                         </div>
 
                     </div>
@@ -276,29 +278,29 @@
 
                             <li>
                                 <strong>CGV 할인쿠폰</strong>
-                                <span><em><a href="/user/mycgv/coupon/discount/list.aspx?g=1#contaniner">100,000</a></em> 개</span>
+                                <span><em><a href="/user/mycgv/coupon/discount/list.aspx?g=1#contaniner">1,000</a></em> 개</span>
                             </li>
                             <li>
                                 <strong>영화관람권</strong>
-                                <span><em><a href="/user/mycgv/coupon/movie-ticket/list.aspx?g=1#contaniner">100,000</a></em> 개</span>
+                                <span><em><a href="/user/mycgv/coupon/movie-ticket/list.aspx?g=1#contaniner">1,000</a></em> 개</span>
                             </li>
                         </ul>
                     </div>
 
 
                     <div class="col-one-point">
-                        <h3 style="!important;">CGV POINT</h3>
+                        <h3 style="background: url(./css/cgvpoint.png) center;">CGV POINT</h3>
                         <a href="./mycgv-cgvPoint-pointList.jsp">CGV POINT 더보기</a>
                         <ul>
                             <li>
                                 <strong>CGV 사용가능 포인트</strong>
-                                <span><em class="txt-maroon"><a href="">1,000,000</a></em> 점</span>
+                                <span><em class="txt-maroon"><a href="">1,000</a></em> 점</span>
                             </li>
                             <li class="tooltip_list cf">
                                 <strong>VIP선정 포인트</strong><a href="" class="mycgv_tooltip"><img src="https://img.cgv.co.kr/R2014/images/common/mycgv_tooltip/ico_tooltip.png" alt="i" /></a>
 
                                 <div class="tooltip_con tc2"><span><img src="https://img.cgv.co.kr/R2014/images/common/mycgv_tooltip/tooltip_con2.png" alt="CGV에서 구매를 통해 적립된 매표 구매 포인트/매점&amp;씨네샵 구매 포인트/VIP 선정에 포함되는 이벤트 포인트가 누적으로 합산된 포인트 입니다" /></span></div>
-                                <span><em>1,000,000</em> 점</span>
+                                <span><em>1,000</em> 점</span>
                             </li>
                         </ul>
 
@@ -414,59 +416,61 @@
                 </div>
             </div>
 
-                <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/giftstore/giftstore.css" />
-                <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/common/moment.min.js"></script>
-
-                <script type="text/javascript">
-                    //<![CDATA[
-                    (function ($) {
-                        $(function () {
-                            $('#period_wrap').datePeriod({
-                                'start': $('#startdate'),
-                                'end': $('#enddate'),
-                                'data': [
-                                    { 'title': '1개월', 'data-period': 1, 'data-type': 'm' },
-                                    { 'title': '3개월', 'data-period': 3, 'data-type': 'm' },
-                                    { 'title': '6개월', 'data-period': 6, 'data-type': 'm' },
-                                    { 'title': '직접/입력', 'data-period': 2, 'data-type': 'm' }
-                                ]
-                            });
-
-                            $('button[id*="btn_receipt"]').on('click', function () {
-
-                                var url = 'https://cjpay.cjsystems.co.kr/cjs/pg/adj/receipt.fo?SHOP_SYS_NO=' + $(this).attr("data-payid") + '&SHOP_ID=' + $(this).attr("data-shopid");
-                                var win = window.open(url, "url", "left=0,top=o,width=450,height=800,toolbar=no,scrollbars=yes");
-                                win.focus();
-                            });
-
-                            $('.tps-search-gray .round[data-type="' + 0 + '"]').addClass('on').siblings('button').removeClass('on').removeAttr('title');
-
-                            $('.tps-search-gray .round').on('click', function () {
-                                var $this = $(this);
-                                $this.attr('title', '현재 선택됨');
-                                $this.addClass('on').siblings('button').removeClass('on').removeAttr('title');
-                                return false;
-                            });
-
-                            $('#btn_search').on('click', function () {
-                                var data = $('#tps-search-type').find('.on').data('type');
-                                var startDate = $("#startdate").val();
-                                var endDate = $("#enddate").val();
-                                if (startDate > endDate) {
-                                    alert("조회기간을 확인해주세요.");
-                                    return;
-                                }
-                                if (moment(endDate).diff(moment(moment(endDate).add(-6, 'months').format('YYYY-MM-DD')), 'asMilliseconds') < moment(endDate).diff(moment(startDate), 'asMilliseconds')) {
-                                    alert("최대 6개월까지만 조회가능합니다.");
-                                    return false;
-                                }
-                                location.href = "./payment-list.aspx?type=" + data + "&startdate=" + $("#startdate").val() + "&enddate=" + $("#enddate").val();
-                            });
-                        });
-                    })(jQuery);
-                    //]]>
-                </script>
                 <div class="col-detail" id="mycgv_contents">
+
+                    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/giftstore/giftstore.css" />
+                    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/common/moment.min.js"></script>
+
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        (function ($) {
+                            $(function () {
+                                $('#period_wrap').datePeriod({
+                                    'start': $('#startdate'),
+                                    'end': $('#enddate'),
+                                    'data': [
+                                        { 'title': '1개월', 'data-period': 1, 'data-type': 'm' },
+                                        { 'title': '3개월', 'data-period': 3, 'data-type': 'm' },
+                                        { 'title': '6개월', 'data-period': 6, 'data-type': 'm' },
+                                        { 'title': '직접/입력', 'data-period': 2, 'data-type': 'm' }
+                                    ]
+                                });
+
+                                $('button[id*="btn_receipt"]').on('click', function () {
+
+                                    var url = 'https://cjpay.cjsystems.co.kr/cjs/pg/adj/receipt.fo?SHOP_SYS_NO=' + $(this).attr("data-payid") + '&SHOP_ID=' + $(this).attr("data-shopid");
+                                    var win = window.open(url, "url", "left=0,top=o,width=450,height=800,toolbar=no,scrollbars=yes");
+                                    win.focus();
+                                });
+
+                                $('.tps-search-gray .round[data-type="' + 0 + '"]').addClass('on').siblings('button').removeClass('on').removeAttr('title');
+
+                                $('.tps-search-gray .round').on('click', function () {
+                                    var $this = $(this);
+                                    $this.attr('title', '현재 선택됨');
+                                    $this.addClass('on').siblings('button').removeClass('on').removeAttr('title');
+                                    return false;
+                                });
+
+                                $('#btn_search').on('click', function () {
+                                    var data = $('#tps-search-type').find('.on').data('type');
+                                    var startDate = $("#startdate").val();
+                                    var endDate = $("#enddate").val();
+                                    if (startDate > endDate) {
+                                        alert("조회기간을 확인해주세요.");
+                                        return;
+                                    }
+                                    if (moment(endDate).diff(moment(moment(endDate).add(-6, 'months').format('YYYY-MM-DD')), 'asMilliseconds') < moment(endDate).diff(moment(startDate), 'asMilliseconds')) {
+                                        alert("최대 6개월까지만 조회가능합니다.");
+                                        return false;
+                                    }
+                                    location.href = "./payment-list.aspx?type=" + data + "&startdate=" + $("#startdate").val() + "&enddate=" + $("#enddate").val();
+                                });
+                            });
+                        })(jQuery);
+                        //]]>
+                    </script>
+
                     <div class="tit-mycgv"><h3>내 기프트콘</h3></div>
                     <div class="tit-mycgv pT25"><h4>CGV 결제내역</h4></div>
                     <form id="form">
