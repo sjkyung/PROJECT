@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<<<<<<< HEAD
 
 
 
@@ -7,6 +8,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 <head>
     
+=======
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+>>>>>>> af3e36c12075855e2936b0c467124b532a1ff20e
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="Expires" content="-1" />
@@ -75,6 +81,7 @@
         app.config('staticDomain', 'https://img.cgv.co.kr/R2014/')
             .config('imageDomain', 'https://img.cgv.co.kr')
             .config('isLogin', 'False');
+<<<<<<< HEAD
 
         
         // AD FLOAT
@@ -535,6 +542,14 @@
 	<div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
         
 
+=======
+    </script>
+</head>
+<body class="">
+<%@include file="./header.jsp" %>
+	<!-- Contaniner -->
+	<div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
+>>>>>>> af3e36c12075855e2936b0c467124b532a1ff20e
 		<!-- Contents Area -->
 		 <div id="contents" class="">
         
@@ -546,12 +561,21 @@
 <div class="wrap-join-2016">
 	<div class="join-hd">
 		<h3><img src="http://img.cgv.co.kr/R2014/images/common/img_join_hd.jpg" alt="CGV에 오신걸 환영합니다." /></h3>
+<<<<<<< HEAD
 		<p>CJ ONE 회원이 되시면 하나의 통합된 회원 ID와 비밀번호로<br />CGV와 CJ ONE의 다양한 서비스를 이용하실 수 있습니다.</p>
         <a href="https://www.cjone.com/cjmweb/join.do?coopco_cd=7010&brnd_cd=1000" target="_blank" title="새창" class="link-join"><span>CGV + CJONE 통합회원 가입</span></a>
 	</div>
 
 	<div class="join-benefit">
 		<h4>CJ ONE 상세 혜택</h4>
+=======
+		<p>CGV 회원이 되시면 하나의 통합된 회원 ID와 비밀번호로<br />CGV의 다양한 서비스를 이용하실 수 있습니다.</p>
+        <a href="./agreement.jsp" target="_blank" title="새창" class="link-join"><span>CGV 회원가입</span></a>
+	</div>
+
+	<div class="join-benefit" style="padding:0">
+		<h4>CGV 상세 혜택</h4>
+>>>>>>> af3e36c12075855e2936b0c467124b532a1ff20e
 		<ul class="benefit-list">
 			<li>
 				<h5>기본 적립율</h5>
@@ -585,6 +609,7 @@
 				</ul>
 			</li>
 		</ul>
+<<<<<<< HEAD
 		<p class="bl-desc">※ CJ ONE 통합회원으로 가입되더라도 정보 제공 및 약관 동의가 되지 않은 CJ ONE 제휴 브랜드에는 개인정보가 제공되지 않습니다.</p>
 	</div>
 
@@ -594,6 +619,11 @@
 
 
             
+=======
+	</div>
+</div>
+<!-- 실컨텐츠 끝 --> 
+>>>>>>> af3e36c12075855e2936b0c467124b532a1ff20e
             <!--/ Contents End -->
 		 </div>
 		<!-- /Contents Area -->
@@ -604,6 +634,7 @@
     <div class="com_pop_wrap">
         <div class="com_pop_fog"></div>
     </div>
+<<<<<<< HEAD
     <div class="pop_wrap">
     <!-- S > [팝업] 지원 OS 업데이트 유도-->
         <div id="pop_supportOS" class="popup" style="display:none">
@@ -764,6 +795,10 @@
 </div>
 
 
+=======
+<%@include file = "./footer.jsp"%>    
+</div>
+>>>>>>> af3e36c12075855e2936b0c467124b532a1ff20e
 <script type="text/template" id="temp_popup_movie_player">
 <div class="popwrap">
     <div class="sect-layerplayer">
@@ -804,7 +839,10 @@
     </div>
 </div>
 </script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> af3e36c12075855e2936b0c467124b532a1ff20e
 <script id="temp_popup_movie_player_movie_info" type="text/x-jquery-tmpl">
 <div class="box-image">
     <a href="/movies/detail-view/?midx=${MovieIdx}" title="${Title} 상세보기 새창">
@@ -906,11 +944,14 @@
                     return uri + separator + key + "=" + value + hash;
                 }
             }
+<<<<<<< HEAD
             //모바일버전 가기
             $('.go-mobile').on('click', function() {
                 location.replace(updateQueryStringParameter(location.href, "IsMobile", "N"));
                 return false;
             });
+=======
+>>>>>>> af3e36c12075855e2936b0c467124b532a1ff20e
         });
     })(jQuery);
 	
@@ -927,6 +968,7 @@
     }    
     //]]>
 </script>
+<<<<<<< HEAD
 
 <!-- 앱다운로드 레이어 팝업 -->
 <script type="text/javascript">
@@ -972,5 +1014,7 @@
 </script>
 <!-- End Google Tag Manager -->
 
+=======
+>>>>>>> af3e36c12075855e2936b0c467124b532a1ff20e
 </body>
 </html>

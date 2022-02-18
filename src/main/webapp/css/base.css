@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 @charset "UTF-8";
 
+=======
+@charset "utf-8";
+>>>>>>> af3e36c12075855e2936b0c467124b532a1ff20e
 /************************************************************************
  * filename : base.css
  * description : 기본공통 CSS
@@ -36,7 +40,11 @@
 	font-weight:normal;
 }
 
+<<<<<<< HEAD
 html {height:100%; margin:0; padding:0; overflow-y:scroll; }
+=======
+html {height:100%; margin:0; padding:0; overflow-y:scroll; *overflow-y:;}
+>>>>>>> af3e36c12075855e2936b0c467124b532a1ff20e
 body {margin:0; padding:0; color:#555; font-size:14px; line-height:24px; -webkit-text-size-adjust:none;}
 body, input, textarea, select, button, table {color:#555; font-size:14px; font-family:Arial, nbgr, '나눔바른고딕', '돋음'; *font-family:nbgr; line-height:24px;}
 h1, h2, h3, h4, p {margin:0; padding:0;}
@@ -106,7 +114,11 @@ input[type='submit'], input[type='button'], button {cursor:pointer}
 .radio_btn, .check_box {display:inline-block; position:relative; height:16px; padding-left:0; line-height:16px; zoom:1;}
 .radio_btn .chk, .check_box .chk {display:none;}
 .radio_btn a,
+<<<<<<< HEAD
 .check_box a {display:inline-block; width:16px; height:16px; background:url('/cjmweb/images/common/bg_form.png') no-repeat; vertical-align:middle;}
+=======
+.check_box a {display:inline-block; width:16px; height:16px; background:url('./bg_form.png') no-repeat; vertical-align:middle;}
+>>>>>>> af3e36c12075855e2936b0c467124b532a1ff20e
 .radio_btn label, .check_box label {cursor:pointer;}
 .radio_btn.on a {background-position:0 -16px;}
 .check_box.on a {background-position:0 -16px;}
@@ -2015,4 +2027,8 @@ button.btn_more {width:310px; height:50px; border:1px solid #ddd; background-col
 .coupon_box.new .h_desc + .sub_txt{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 
 /*2021-05-24, GNB 통합회원 전환 버튼 추가*/
+<<<<<<< HEAD
 .header_wrap .util dd.uni a{border:1px solid #fff;color:#fff;border-radius:20px;padding:4px 10px 5px;letter-spacing:-1px;}
+=======
+.header_wrap .util dd.uni a{border:1px solid #fff;color:#fff;border-radius:20px;padding:4px 10px 5px;letter-spacing:-1px;}
+>>>>>>> af3e36c12075855e2936b0c467124b532a1ff20e
