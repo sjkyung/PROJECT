@@ -68,6 +68,7 @@
     
 <link rel="stylesheet" media="all" type="text/css" href="http://img.cgv.co.kr/R2014/css/customer.css" />
 
+
     <!--/각페이지 Header End--> 
     <script type="text/javascript">
         //<![CDATA[
@@ -217,7 +218,7 @@
             <!-- /Advertisement -->
 
             
-            <li><a href="/user/login/?returnURL=http%3a%2f%2fwww.cgv.co.kr%2fsupport%2fnews%2fdefault.aspx"><img src="https://img.cgv.co.kr/R2014/images/common/ico/loginPassword.png" alt="로그인" /><span>로그인</span></a></li>
+            <li><a href="/user/login/?returnURL=http%3a%2f%2fwww.cgv.co.kr%2fsupport%2fdefault.aspx"><img src="https://img.cgv.co.kr/R2014/images/common/ico/loginPassword.png" alt="로그인" /><span>로그인</span></a></li>
             <li><a href="/user/join/"><img src="https://img.cgv.co.kr/R2014/images/common/ico/loginJoin.png" alt="회원가입" /><span>회원가입</span></a></li>
             
             
@@ -542,7 +543,6 @@
             
             <!-- Contents Start -->
 			
-
 <!-- Contents Area -->
 <div id="contents">
 	<!-- Contents Start -->
@@ -553,12 +553,14 @@
         고객센터 메뉴</h2>
     <div class="snb">
         <ul>
-           <li class=''><a href="./support.jsp">고객센터 메인<i></i></a></li>
-            <li class=''><a href="./support-faq.jsp" title="현재선택">자주찾는 질문<i></i></a></li>
-            <li class='on'><a href="./support-news.jsp">공지/뉴스<i></i></a></li>
-            <li class=''><a href="./support-qna.jsp">이메일 문의<i></i></a></li>
-            <li class=''><a href="./support-lost.jsp">분실물 문의<i></i></a></li>
-            <li class=''><a href="./support-lease.jsp">단체/ 대관 문의<i></i></a></li>      
+            <li class='on'><a href="/support/default.aspx">고객센터 메인<i></i></a></li>
+            <li class=''><a href="/support/faq/default.aspx" title="현재선택">자주찾는 질문<i></i></a></li>
+            <li class=''><a href="/support/news/default.aspx">공지/뉴스<i></i></a></li>
+            <li class=''><a href="/support/qna/default.aspx">이메일 문의<i></i></a></li>
+            <li class=''><a href="/support/lost/default.aspx">분실물 문의<i></i></a></li>
+            <li class=''><a href="/support/lease/default.aspx">단체/ 대관 문의<i></i></a></li>            
+            
+            
           
         </ul>
     </div>
@@ -577,278 +579,139 @@
 </div>
 
 		<div class="col-detail">
-			<div class="customer_top">
-				<h2 class="tit">공지/뉴스</h2>
-				<p class="stit">CGV의 주요한 이슈 및 여러가지 소식들을 확인하실 수 있습니다.</p>
+			<div class="c_check_warp">
+				<div class="c_box qna_search">
+					<strong class="c_tit">자주찾는 질문 빠른검색</strong>
+					<legend><label for="searchtext">검색</label></legend>
+					<div class="search_box">
+						<input id="searchtext" type="text" title="검색어 입력" placeholder="검색어를 입력해 주세요." />
+						<button type="button" class="btn_search" title="검색하기" id="btn_search">검색</button>
+					</div>
+					<div class="c_qu">
+                       
+						    <a href="#none">현금영수증</a>                       
+                        
+						    <a href="#none">관람권</a>                       
+                        
+						    <a href="#none">예매</a>                       
+                        
+						    <a href="#none">환불</a>                       
+                        
+						    <a href="#none">취소</a>                       
+                        
+						    <a href="#none"></a>                       
+                        
+					</div>
+				</div>
+                <div class="c_box talk_inquiry" style="cursor:pointer;">
+                    <strong class="c_tit">상담톡 이용</strong>
+                    <span class="c_txt">상담 톡을 이용해보세요.</span>
+                    <a href="javascript:;">문의하기</a>
+                </div>
+				<div class="c_box email_inquiry" style="cursor:pointer;">
+					<strong class="c_tit">이메일 문의</strong>
+					<span class="c_txt">24시간 365일 언제든지 문의해주세요.</span>
+					<a href="/support/qna/default.aspx">문의하기</a>
+                </div>
+				<div class="c_box my_advice"  style="cursor:pointer;">
+					<strong class="c_tit">내 상담 내역 확인</strong>
+					<span class="c_txt">문의하신 내용을 확인하실 수 있습니다.</span>
+					<a href="/user/mycgv/inquiry/qna/list.aspx?g=1#contaniner"  target="_blank" title="새창열기" >문의내역 조회</a>
+                </div>
 			</div>
-			<div class="search_area">
-				<legend><label for="c_select">검색</label></legend>
-				<select name="selsearchfield" id="selsearchfield" class="c_select" style="width:100px;">
-					<option selected="selected" value="0">제목</option>
-					<option value="1">내용</option>
-				</select>
-				<label for="searchtext" class="hidden">검색어 입력</label>
-				<input id="searchtext" type="text" class="c_input" title="검색어 입력" placeholder="검색어를 입력해 주세요" style="width:185px;" value="" />
-				<button type="button" class="round inblack" title="검색하기" id="btn_search"><span>검색하기</span></button>
+			<div class="customer_notice_area">
+				<div class="service_area">
+					<span class="tit">자주찾는 서비스</span>
+					<ul class="list">
+						<li><a href="/user/mycgv/reserve/?g=1#contaniner" target="_blank" title="새창열기">신용카드<br/>영수증출력</a></li>
+
+                        <!-- 로그아웃일 경우에만 링크  -->
+                          
+						<li><a href="/user/login/find-account.aspx"  target="_blank" title="새창열기">아이디/<br/>비밀번호 찾기</a></li>
+                          
+                        <!-- 로그아웃일 경우에만 링크  -->
+
+						<li><a href="/user/mycgv/reserve/?g=1#contaniner"  target="_blank" title="새창열기">예매/<br/>취소내역 확인</a></li>
+
+                        <!-- 로그아웃일 경우에만 링크  --> 
+                            
+						<li><a href="/user/guest/default.aspx"  target="_blank" title="새창열기">비회원<br/>예매/취소</a></li>
+                         
+                        <!-- 로그아웃일 경우에만 링크  -->
+
+						<li><a href="/user/mycgv/cjone-point/pointlist.aspx?g=1#contaniner"  target="_blank" title="새창열기">멤버십포인트<br/>사용안내</a></li>
+						<li><a href="/user/mycgv/coupon/movie-ticket/list.aspx?g=1#contaniner"  target="_blank" title="새창열기">관람권<br/>할인쿠폰 등록</a></li>
+					</ul>
+				</div>
+				<div class="notice_area">
+                    <a href="/support/news/default.aspx">
+					    <span class="tit">공지/뉴스</span>
+                    </a>
+					<ul class="txt">
+                    
+                            <li><a href="/support/news/detail-view.aspx?idx=7856&type=4">[기타] 22년 VIP 선정 기준 변경 및 추가 기준 관련 안내</a><span class="day">2021.09.01</span></li>
+                        
+                            <li><a href="/support/news/detail-view.aspx?idx=7847&type=4">[기타] 2021 SVIP 스페셜 기프트 신청 안내 </a><span class="day">2021.06.29</span></li>
+                        
+                            <li><a href="/support/news/detail-view.aspx?idx=7804&type=2">[극장] 연말연시 특별 방역 조치에 따른 극장 운영 시간 조정 안내</a><span class="day">2020.12.04</span></li>
+                        
+                            <li><a href="/support/news/detail-view.aspx?idx=7778&type=4">[기타] 포토플레이 서비스 개선 안내 </a><span class="day">2020.09.15</span></li>
+                        
+                            <li><a href="/support/news/detail-view.aspx?idx=7754&type=4">[기타] 영진위 지원사업-“모든요일 6천원 할인”이벤트 조기 종료 안내 (8/16 종료)</a><span class="day">2020.08.16</span></li>
+                        
+					</ul>
+					<a href="/support/news/default.aspx" class="more">공지/뉴스 더보기</a>
+					<div class="noti_ban_area">
+						<a href="/culture-event/event/preview/?menu=7" class="ban_preview">CGV PREVIEW 시사회/무대인사</a>
+						<a href="/discount/discountlist.aspx" class="ban_discount">DISCOUNT INFO 할인카드 및 혜택 안내</a>
+					</div>
+				</div>
 			</div>
-			<div class="c_tab_wrap">
-				<ul class="c_tab">
-					<li class='on'><a href="/support/news/default.aspx?type=&searchtext=" title="선택된 탭메뉴">전체</a></li>
-					<li class=''><a href="/support/news/default.aspx?type=1&searchtext=">시스템점검</a></li>
-					<li class=''><a href="/support/news/default.aspx?type=2&searchtext=">극장</a></li>
-					<li class=''><a href="/support/news/default.aspx?type=4&searchtext=">기타</a></li>
+			<div class="shortcu_area">
+				<ul>
+					<li>
+						<strong class="tit_shortcut ico_lost">분실물 문의</strong>
+						<span class="txt">CGV에서 잃어버리신 물건을 신속하게 찾아 드리는 서비스</span>
+						<a href="/support/lost/default.aspx" class="round gray on" title=""><i>바로가기</i></a>
+					</li>
+					<li>
+						<strong class="tit_shortcut ico_general">대관/단체 서비스</strong>
+						<span class="txt">CGV에서 진행하는 우리만의 특별한 이벤트 색다른 문화행사</span>
+						<a href="/support/lease/default.aspx"  class="round gray on" title=""><i>바로가기</i></a>
+					</li>
+					<li>
+						<strong class="tit_shortcut ico_vipinfo">VIP 안내</strong>
+						<span class="txt">영화를 사랑하는 당신에게 드리는 특별한 CGV만의 VIP혜택</span>
+						<a href="/user/vip-lounge/" target="_blank" class="round gray on" title="새창열기"><i>바로가기</i></a>
+					</li>
+					<li>
+						<strong class="tit_shortcut ico_vipcustomer">VIP 고객센터</strong>
+						<span class="txt">VIP 고객님들께 알려드리는<br/>VIP 혜택 제대로 활용하는 방법</span>
+						<a href="/user/vip-lounge/faq.aspx" target="_blank" class="round gray on" title="새창열기"><i>바로가기</i></a>
+					</li>
 				</ul>
 			</div>
-			<div class="search_result">
-                  총<span class="num">2836건</span>이 검색되었습니다.
-			</div>
-			<div class="tbl_area">
-				<table cellspacing="0" cellpadding="0" class="tbl_notice_list">
-				<caption>목록</caption>
-				<colgroup>
-					<col style="width:70px;" />
-                    <col style="width:160px;" />
-					<col style="auto;" />
-					<col style="width:140px;" />
-					<col style="width:120px" />
-				</colgroup>
-				<thead>
-					<tr>
-					<th scope="col">번호</th>
-                    <th scope="col">구분</th>
-					<th scope="col" class="tit">제목</th>
-					<th scope="col">등록일</th>
-					<th scope="col">조회수</th>
-					</tr>
-				</thead>
-				<tbody>
-                
-					    <tr class="first">
-						    <td>2836</td>
-                            <td>[기타]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7885&page=1&searchtext=&searchfield=0&type=4">CJ ONE 통합회원정보 정책 개선 안내 (2/17 字 시행)</a></td>
-						    <td>2022.02.10</td>
-						    <td class="num">414</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2835</td>
-                            <td>[기타]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7884&page=1&searchtext=&searchfield=0&type=4">개인정보처리방침, 위치기반서비스 이용약관 개정 안내 (2/17 字 시행)</a></td>
-						    <td>2022.02.09</td>
-						    <td class="num">23</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2834</td>
-                            <td>[극장]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7883&page=1&searchtext=&searchfield=0&type=2">22년 문화가 있는 날 가격 조정 안내</a></td>
-						    <td>2022.01.21</td>
-						    <td class="num">1655</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2833</td>
-                            <td>[극장]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7882&page=1&searchtext=&searchfield=0&type=2">CGV대구이시아 영업 종료 안내</a></td>
-						    <td>2022.01.14</td>
-						    <td class="num">636</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2832</td>
-                            <td>[시스템점검]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7881&page=1&searchtext=&searchfield=0&type=1">2022년 1월 시스템 점검 안내</a></td>
-						    <td>2022.01.04</td>
-						    <td class="num">393</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2831</td>
-                            <td>[극장]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7880&page=1&searchtext=&searchfield=0&type=2">[CGV통영]22년 1월 3일부터 임시휴업</a></td>
-						    <td>2021.12.31</td>
-						    <td class="num">653</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2830</td>
-                            <td>[기타]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7879&page=1&searchtext=&searchfield=0&type=4">[REMIND] CJ ONE 포인트 혜택 변경 안내 (2022년 1월 1일 字 시행)</a></td>
-						    <td>2021.12.30</td>
-						    <td class="num">886</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2829</td>
-                            <td>[극장]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7878&page=1&searchtext=&searchfield=0&type=2">CGV남포 영업 종료 안내(2021년 12월 31일)</a></td>
-						    <td>2021.12.27</td>
-						    <td class="num">724</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2828</td>
-                            <td>[극장]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7877&page=1&searchtext=&searchfield=0&type=2">CGV양산물금 영업 종료 안내(2021년 12월 20일)</a></td>
-						    <td>2021.12.14</td>
-						    <td class="num">1483</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2827</td>
-                            <td>[기타]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7876&page=1&searchtext=&searchfield=0&type=4">개인정보처리방침 개정 안내 (12/17 字 시행)</a></td>
-						    <td>2021.12.10</td>
-						    <td class="num">331</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2826</td>
-                            <td>[극장]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7874&page=1&searchtext=&searchfield=0&type=2">[공지] CGV압구정 아트하우스 ART3관, 일반관 전환 안내</a></td>
-						    <td>2021.12.08</td>
-						    <td class="num">1290</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2825</td>
-                            <td>[시스템점검]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7872&page=1&searchtext=&searchfield=0&type=1">PAYCO 서비스 개선 작업에 따른 서비스 이용 일시중지 (12/8 04:00~04:30)</a></td>
-						    <td>2021.11.29</td>
-						    <td class="num">179</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2824</td>
-                            <td>[행사/이벤트]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7870&page=1&searchtext=&searchfield=0&type=3">"CGV가 쏜다! 만이많이" 이벤트 당첨자 발표 연기 안내</a></td>
-						    <td>2021.11.17</td>
-						    <td class="num">806</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2823</td>
-                            <td>[기타]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7869&page=1&searchtext=&searchfield=0&type=4">[재안내] 현대 모빌리티 아멕스카드 블루멤버스 포인트 사용 일부 제한 재안내</a></td>
-						    <td>2021.11.09</td>
-						    <td class="num">186</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2822</td>
-                            <td>[기타]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7867&page=1&searchtext=&searchfield=0&type=4">백신패스관 이용 안내</a></td>
-						    <td>2021.10.29</td>
-						    <td class="num">5545</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2821</td>
-                            <td>[행사/이벤트]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7865&page=1&searchtext=&searchfield=0&type=3">[이터널스] 스피드 페이백 이벤트 오류 관련 공지</a></td>
-						    <td>2021.10.22</td>
-						    <td class="num">919</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2820</td>
-                            <td>[기타]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7864&page=1&searchtext=&searchfield=0&type=4">개인정보처리방침 개정 안내 (10/28 字 시행)</a></td>
-						    <td>2021.10.21</td>
-						    <td class="num">274</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2819</td>
-                            <td>[극장]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7862&page=1&searchtext=&searchfield=0&type=2">현대 모빌리티 아멕스카드 현대블루멤버스 포인트 사용 일부 제한 안내</a></td>
-						    <td>2021.10.06</td>
-						    <td class="num">248</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2818</td>
-                            <td>[극장]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7861&page=1&searchtext=&searchfield=0&type=2">[CGV센텀시티]21.10.07~21.10.14 부산국제영화제 상영안내</a></td>
-						    <td>2021.10.03</td>
-						    <td class="num">335</td>
-					    </tr>
-                    
-					    <tr class="first">
-						    <td>2817</td>
-                            <td>[극장]</td>
-						    <td class="txt"><a href="/support/news/detail-view.aspx?idx=7860&page=1&searchtext=&searchfield=0&type=2">CGV대구 영업 종료 안내</a></td>
-						    <td>2021.09.23</td>
-						    <td class="num">2439</td>
-					    </tr>
-                    
-				</tbody>
-				</table>
-			</div>
-			<?xml version="1.0" encoding="utf-8"?>
-<div class="paging">
-  <ul>
-    <li class="on">
-      <a title="1 페이지 선택" href=" #pg">1</a>
-    </li>
-    <li>
-      <a href="/support/news/default.aspx?page=2&amp;type=&amp;searchtext=&amp;searchfield=0">2</a>
-    </li>
-    <li>
-      <a href="/support/news/default.aspx?page=3&amp;type=&amp;searchtext=&amp;searchfield=0">3</a>
-    </li>
-    <li>
-      <a href="/support/news/default.aspx?page=4&amp;type=&amp;searchtext=&amp;searchfield=0">4</a>
-    </li>
-    <li>
-      <a href="/support/news/default.aspx?page=5&amp;type=&amp;searchtext=&amp;searchfield=0">5</a>
-    </li>
-    <li>
-      <a href="/support/news/default.aspx?page=6&amp;type=&amp;searchtext=&amp;searchfield=0">6</a>
-    </li>
-    <li>
-      <a href="/support/news/default.aspx?page=7&amp;type=&amp;searchtext=&amp;searchfield=0">7</a>
-    </li>
-    <li>
-      <a href="/support/news/default.aspx?page=8&amp;type=&amp;searchtext=&amp;searchfield=0">8</a>
-    </li>
-    <li>
-      <a href="/support/news/default.aspx?page=9&amp;type=&amp;searchtext=&amp;searchfield=0">9</a>
-    </li>
-    <li>
-      <a href="/support/news/default.aspx?page=10&amp;type=&amp;searchtext=&amp;searchfield=0">10</a>
-    </li>
-  </ul>
-  <button class="btn-paging next" type="button" onclick="location='/support/news/default.aspx?page=11&amp;type=&amp;searchtext=&amp;searchfield=0'">다음</button>
-  <button class="btn-paging end" type="button" onclick="location='/support/news/default.aspx?page=142&amp;type=&amp;searchtext=&amp;searchfield=0'">끝</button>
-</div>
+			<ul class="tel_inquiry">
+				<li>CGV 고객센터 : 1544-1122<span class="time">(상담가능 시간, 월~금 09:00~18:00) *이 외 시간은 자동 응답 안내 가능</span></li>
+			</ul>
 		</div>
 	</div>
 	<!-- //Contents End -->
 </div>
 <!-- //Contents Area -->
 <script type="text/javascript">
-
 //<![CDATA[
 
     (function ($) {
         $(function () {
-
-            var searchfield = "0";
-
-            $('#selsearchfield').val(searchfield).attr("selected", "selected");
-
             $('#btn_search').on('click', function () {
-//                if ($('#searchtext').val() == "") {
-//                    alert("검색어를 입력해 주세요.");
-//                    $('#searchtext').focus();
-//                    return false;
-//                } else {
-//                    Search();
-                //                }
-
-                Search();
+                if ($('#searchtext').val() == "") {
+                    alert("검색어를 입력해 주세요.");
+                    $('#searchtext').focus();
+                    return false;
+                } else {
+                    Search();
+                }
             });
 			
 			$('#searchtext').keypress(function(event){
@@ -863,20 +726,56 @@
 				}
 			});
 
-
             function Search() {
-                location.href = "/support/news/default.aspx?searchtext=" + escape($("#searchtext").val()) + "&searchfield=" + $('#selsearchfield option:selected').val();
-                return false;
+                location.href = "/support/faq/default.aspx?searchtext=" + escape($("#searchtext").val());
+                //return false;
             }
 
-            $('.c_tab_wrap').children('.c_tab').children('li').on('click', function () {
-                //$('.c_tab_wrap').children('.c_tab').children('li').removeClass("on");
-                //$(this).addClass("on");
-
-                location.href = $(this).children('a').attr("href") + escape("") + "&searchfield=0";
-                return false;
+            $('.c_qu').children('a').on("click", function () {
+                location.href = "/support/faq/default.aspx?searchtext=" + escape($(this).html());
+                //return false;
             });
 
+            $('.email_inquiry').on('click', function () {
+                location.href = "/support/qna/default.aspx";
+            });
+
+            /**  중복링크 제거
+            $('.my_advice').on('click', function () {
+                var openNewWindow = window.open("/user/mycgv/inquiry/qna/list.aspx?g=1#contaniner", "_blank");
+                if (openNewWindow)
+                    openNewWindow.submit();
+                else
+                    alert("팝업이 허용되어 있지 않습니다.");
+                //openNewWindow.focus();
+                return false;
+
+            });
+            **/
+            $('.talk_inquiry').on('click', function () {
+
+                var popupWidth = 600;
+                var popupHeight = 600;
+
+                // 듀얼 모니터 기준
+                var _left = (screen.availWidth - popupWidth) / 2;
+                if( window.screenLeft < 0){
+                    _left += window.screen.width*-1;
+                }
+                else if ( window.screenLeft > window.screen.width ){
+                    _left += window.screen.width;
+                }
+
+                var _top= (screen.availHeight - popupHeight) / 2 - 10;
+
+                var openNewWindow = window.open("https://cgv.enomix.co.kr/sharedfront/jsp/view/chatWindow.jsp?channelId=pcweb", "cgvTalk", "width="+popupWidth+",height="+popupHeight+",resizable=yes, toolbar=no, menubar=no, status=no, scrollbars=yes,left="+ _left + ", top="+ _top);
+                if (openNewWindow)
+                    openNewWindow.submit();
+                else
+                    alert("팝업이 허용되어 있지 않습니다.");
+                //openNewWindow.focus();
+                return false;
+            });
 
         });
     })(jQuery);
