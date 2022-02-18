@@ -229,28 +229,28 @@
                             <div class="c_box talk_inquiry" style="cursor:pointer;">
                                 <strong class="c_tit">상담톡 이용</strong>
                                 <span class="c_txt">상담 톡을 이용해보세요.</span>
-                                <a href="/ProjectCGV/support.jsp">문의하기</a>
+                                <a href="./support.jsp">문의하기</a>
                             </div>
                             <div class="c_box email_inquiry" style="cursor:pointer;">
                                 <strong class="c_tit">이메일 문의</strong>
                                 <span class="c_txt">24시간 365일 언제든지 문의해주세요.</span>
-                                <a href="/ProjectCGV/support-qna.jsp">문의하기</a>
+                                <a href="./support-qna.jsp">문의하기</a>
                             </div>
                             <div class="c_box my_advice"  style="cursor:pointer;">
                                 <strong class="c_tit">내 상담 내역 확인</strong>
                                 <span class="c_txt">문의하신 내용을 확인하실 수 있습니다.</span>
-                                <a href="/ProjectCGV/support.jsp"  target="_blank" title="새창열기" >문의내역 조회</a>
+                                <a href="./mycgv-qna-list.jsp"  target="_blank" title="새창열기" >문의내역 조회</a>
                             </div>
                         </div>
                         <div class="customer_notice_area">
                             <div class="service_area">
                                 <span class="tit">자주찾는 서비스</span>
                                 <ul class="list">
-                                    <li><a href="/user/mycgv/reserve/?g=1#contaniner" target="_blank" title="새창열기">신용카드<br/>영수증출력</a></li>
+                                    <li><a href="./mycgv-reserve.jsp" target="_blank" title="새창열기">신용카드<br/>영수증출력</a></li>
 
                                     <!-- 로그아웃일 경우에만 링크  -->
 
-                                    <li><a href="/ProjectCGV/support.jsp"  target="_blank" title="새창열기">아이디/<br/>비밀번호 찾기</a></li>
+                                    <li><a href="./support.jsp"  target="_blank" title="새창열기">아이디/<br/>비밀번호 찾기</a></li>
 
                                     <!-- 로그아웃일 경우에만 링크  -->
 
@@ -258,16 +258,16 @@
 
                                     <!-- 로그아웃일 경우에만 링크  -->
 
-                                    <li><a href="/ProjectCGV/support.jsp"  target="_blank" title="새창열기">비회원<br/>예매/취소</a></li>
+                                    <li><a href="./support.jsp"  target="_blank" title="새창열기">비회원<br/>예매/취소</a></li>
 
                                     <!-- 로그아웃일 경우에만 링크  -->
 
-                                    <li><a href="/user/mycgv/cjone-point/pointlist.aspx?g=1#contaniner"  target="_blank" title="새창열기">멤버십포인트<br/>사용안내</a></li>
+                                    <li><a href="./mycgv-cgvPoint.jsp.jsp"  target="_blank" title="새창열기">멤버십포인트<br/>사용안내</a></li>
                                     <li><a href="/user/mycgv/coupon/movie-ticket/list.aspx?g=1#contaniner"  target="_blank" title="새창열기">관람권<br/>할인쿠폰 등록</a></li>
                                 </ul>
                             </div>
                             <div class="notice_area">
-                                <a href="/support/news/default.aspx">
+                                <a href="./support-qna.jsp">
                                     <span class="tit">공지/뉴스</span>
                                 </a>
                                 <ul class="txt">
@@ -283,7 +283,7 @@
                                     <li><a href="/support/news/detail-view.aspx?idx=7754&type=4">[기타] 영진위 지원사업-“모든요일 6천원 할인”이벤트 조기 종료 안내 (8/16 종료)</a><span class="day">2020.08.16</span></li>
 
                                 </ul>
-                                <a href="/support/news/default.aspx" class="more">공지/뉴스 더보기</a>
+                                <a href="./support-news.jsp" class="more">공지/뉴스 더보기</a>
                                 <div class="noti_ban_area">
                                     <a href="/culture-event/event/preview/?menu=7" class="ban_preview">CGV PREVIEW 시사회/무대인사</a>
                                     <a href="/discount/discountlist.aspx" class="ban_discount">DISCOUNT INFO 할인카드 및 혜택 안내</a>
@@ -295,12 +295,12 @@
                                 <li>
                                     <strong class="tit_shortcut ico_lost">분실물 문의</strong>
                                     <span class="txt">CGV에서 잃어버리신 물건을 신속하게 찾아 드리는 서비스</span>
-                                    <a href="/support/lost/default.aspx" class="round gray on" title=""><i>바로가기</i></a>
+                                    <a href="./support-lost.jsp" class="round gray on" title=""><i>바로가기</i></a>
                                 </li>
                                 <li>
                                     <strong class="tit_shortcut ico_general">대관/단체 서비스</strong>
                                     <span class="txt">CGV에서 진행하는 우리만의 특별한 이벤트 색다른 문화행사</span>
-                                    <a href="/support/lease/default.aspx"  class="round gray on" title=""><i>바로가기</i></a>
+                                    <a href="./support-lease.jsp"  class="round gray on" title=""><i>바로가기</i></a>
                                 </li>
                                 <li>
                                     <strong class="tit_shortcut ico_vipinfo">VIP 안내</strong>
@@ -360,7 +360,7 @@
                         });
 
                         $('.email_inquiry').on('click', function () {
-                            location.href = "/support/qna/default.aspx";
+                            location.href = "./support-qna.jsp";
                         });
 
                         /**  중복링크 제거
