@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
 <title>login-agreement</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -196,7 +194,7 @@
 			                <a href="./login-agreement.jsp">비회원 예매</a>
 			            </li>
 			            <li>
-			                <a href="./guest_login.jsp">비회원 예매확인</a>
+			                <a href="login-guest-login.jsp">비회원 예매확인</a>
 			            </li>
                     </ul>
 
@@ -246,7 +244,7 @@
                             </table>
                             <div class="inbtn-desc marginT20">
                                 <p>※ CGV 비회원 예매서비스 제공을 위해 필요한 최소한의 개인정보이므로 입력(수집)에 동의하시지 않을 경우 서비스를 이용하실 수 없습니다.</p>
-                                <a href="http://www.cgv.co.kr/rules/privacy.aspx" target="_blank" class="round red"><span>개인정보처리(취급)방침전문보기</span></a>
+                                <a href="http://www.cgv.co.kr/rules/privacy.aspx" target="_blank" class="round red"><span style="height: 22px">개인정보처리(취급)방침전문보기</span></a>
                             </div>
                         </div>
 

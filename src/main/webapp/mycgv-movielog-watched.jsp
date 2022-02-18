@@ -362,7 +362,7 @@
                     <div class="box-round-wgray">
                         <div class="box-round-inner">
                             <div class="inner-contents-log">
-                                <a href="/user/movielog/default.aspx">
+                                <a href="./mycgv-movielog-expected.jsp">
                                     <em>0</em>
                                     <strong>기대되는 영화</strong>
                                 </a>
@@ -372,8 +372,8 @@
                     <div class="box-round-on">
                         <div class="box-round-inner">
                             <div class="inner-contents-log">
-                                <a href="/user/movielog/watched.aspx">
-                                    <em>21</em>
+                                <a href="./mycgv-movielog-watched.jsp">
+                                    <em>6</em>
                                     <strong>내가 본 영화</strong>
                                 </a>
                             </div>
@@ -382,7 +382,7 @@
                     <div class="box-round-wgray">
                         <div class="box-round-inner">
                             <div class="inner-contents-log">
-                                <a href="/movies/point/my-list.aspx">
+                                <a href="./mycgv-movielog-mylist.jsp">
                                     <em>0</em>
                                     <strong>내가 쓴 평점</strong>
                                 </a>
