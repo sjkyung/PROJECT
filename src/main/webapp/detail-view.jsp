@@ -331,7 +331,7 @@ let wishlist=document.getElementsByClassName('wishlist');
                             <!-- TODO : 동영상 팝업 창 작업 후 링크 걸어야 함 //-->
                             <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="200013">
                                 <span class="thumb-image">
-                                    <img src="./img/1.jpg" alt="[극장판 주술회전 0]2차 예고편">
+                                    <img src="css/1.jpg" alt="[극장판 주술회전 0]2차 예고편">
                                     <span class="ico-play">영상보기</span>
                                 </span>
                             </a>
@@ -430,32 +430,32 @@ let wishlist=document.getElementsByClassName('wishlist');
                     <div class="slider" id="still_motion">
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px;">
-                                <img src="./img/1.jpg" alt="극장판 주술회전 0" style="height: 100%;">
+                                <img src="css/1.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                                                 
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img src="./img/2.jpg" alt="극장판 주술회전 0" style="height: 100%;">
+                                <img src="css/2.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                                                 
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img src="./img/3.jpg" alt="극장판 주술회전 0" style="height: 100%;">
+                                <img src="css/3.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                         
                                                 
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img src="./img/4.jpg" alt="극장판 주술회전 0" style="height: 100%;">
+                                <img src="css/4.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                                                 
                         <div class="item-wrap">
                             <div class="item" style="width: 800px; height: 450px; display: none;">
-                                <img src="./img/5.jpg" alt="극장판 주술회전 0" style="height: 100%;">
+                                <img src="css/5.jpg" alt="극장판 주술회전 0" style="height: 100%;">
                             </div>
                         </div>
                         
@@ -623,6 +623,15 @@ let wishlist=document.getElementsByClassName('wishlist');
             <input type="hidden" name="nick" id="frmPointNick">
         </form>
 
+        <div class="col-aside" style="padding-top:120px">
+            <div class="ad-partner01">
+                <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@M_Rectangle" width="160" height="300" title="영화광고-나이트메어앨리" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="M_Rectangle" id="M_Rectangle"></iframe>
+            </div>
+            <div class="ad-external01">
+                <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@C_Rectangle" width="160" height="300" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="C_Rectangle" id="C_Rectangle"></iframe>
+            </div>
+
+        </div>
     </div>
     <span style="display:none" class="modifyCommentDummy"></span>
 </div>

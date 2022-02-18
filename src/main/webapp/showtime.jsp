@@ -24,104 +24,375 @@
 
 <!-- Contents Start -->
 
-    <div class="showtimes-wrap">
-        <div class="sect-schedule">
-            <div id="slider" class="slider">
-                <!-- 여기서부터 현재날짜 +7일을 반복하여 보여줍니다. 해당 날짜를 클릭하면 하단의 시간표(div.sect-showtimes)를 변경합니다.-->
-                        <div class="item-wrap"><ul class="item" style="width: 800px; height: 108.012px;">
-                        <li class="on">
-                            <div class="day">
-                                <a href="showtime.jsp" title="현재 선택">
-                                    <span>
-                                        02월</span> <em>
-                                            목</em> <strong>
-                                                10</strong>
-                                </a>
-                            </div>
-                        </li>
-                        </ul></div>
-            </div>
-        </div>
-        <div class="sect-guide">
-            <div class="descri-timezone">
-                <ul>
-                    <li><span class="early">조조</span></li>
-                    <li><span class="midnight">심야</span></li>
-                </ul>
-                <p>
-                    * 시간을 클릭하시면 빠른 예매를 하실 수 있습니다.</p>
-            </div>
-        </div>
+<div class="showtimes-wrap">
 
+    <div class="sect-city">
+        <ul>
 
-        <div class="sect-showtimes">
-            <ul>
-                <!-- 해당일자에 상영중인 영화정보를 반복문으로 나열합니다. -->
-                        <li>
-                            <div class="col-times">
-                                <div class="info-movie">
-                                    <span class="ico-grade grade-15">
-                                        15세 이상</span> <a href="/movies/detail-view/?midx=85595" target="_parent"><strong>
-                                                355</strong></a>
-                                    <span class="round lightblue">
-                                        <em>
-                                            상영중</em>
-                                    </span><span class="">
-                                        <em>
-                                            </em>
-                                    </span><i>
-                                        액션</i>/ <i>
-                                            122분</i>/ <i>
-                                                2022.02.09
-                                                개봉</i>
-                                </div>
-                                
-                                        <div class="type-hall">
-                                            <div class="info-hall">
-                                                <ul>
-                                                    <li>
-                                                        2D</li>
-                                                    <li>
-                                                        5관(Laser) 10층</li>
-                                                    <li>총
-                                                        172석</li>
-                                                </ul>
-                                            </div>
-                                            <div class="info-timetable">
-                                                <ul>
-                                                    <!-- 상영중인 시간, 남은 좌석수를 보여줍니다. -->
-                                                            <li><a href="/ticket/?MOVIE_CD=20028772&amp;MOVIE_CD_GROUP=20028772&amp;PLAY_YMD=20220210&amp;THEATER_CD=0056&amp;PLAY_START_TM=1030&amp;AREA_CD=13&amp;SCREEN_CD=005" target="_top" data-theatercode="0056" data-playymd="20220210" data-screencode="005" data-playnum="1" data-playstarttime="1030" data-playendtime="1242" data-theatername="CGV 강남" data-seatremaincnt="136" data-screenkorname="5관(Laser) 10층"><em>10:30</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>136석</span></a></li>
-                                                            
-                                                        
-                                                            <li><a href="/ticket/?MOVIE_CD=20028772&amp;MOVIE_CD_GROUP=20028772&amp;PLAY_YMD=20220210&amp;THEATER_CD=0056&amp;PLAY_START_TM=1535&amp;AREA_CD=13&amp;SCREEN_CD=005" target="_top" data-theatercode="0056" data-playymd="20220210" data-screencode="005" data-playnum="3" data-playstarttime="1535" data-playendtime="1747" data-theatername="CGV 강남" data-seatremaincnt="130" data-screenkorname="5관(Laser) 10층"><em>15:35</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>130석</span></a></li>
-                                                            
-                                                        
-                                                            <li><a href="/ticket/?MOVIE_CD=20028772&amp;MOVIE_CD_GROUP=20028772&amp;PLAY_YMD=20220210&amp;THEATER_CD=0056&amp;PLAY_START_TM=2040&amp;AREA_CD=13&amp;SCREEN_CD=005" target="_top" data-theatercode="0056" data-playymd="20220210" data-screencode="005" data-playnum="5" data-playstarttime="2040" data-playendtime="2252" data-theatername="CGV 강남" data-seatremaincnt="135" data-screenkorname="5관(Laser) 10층"><em>20:40</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>135석</span></a></li>
-                                                            
-                                                        
-                                                </ul>
-                                            </div>
+            <li class="on">
+                <a href="./iframeMovie.aspx?midx=85624&amp;mcode=20028855&amp;areacode=13&amp;date=20220216" title="현재 선택">서울</a>
+            </li>
 
-                                             
-                                        </div>
-                                    
+            <li>
+                <a href="./iframeMovie.aspx?midx=85624&amp;mcode=20028855&amp;areacode=09&amp;date=20220216">경기</a>
+            </li>
 
+            <li>
+                <a href="./iframeMovie.aspx?midx=85624&amp;mcode=20028855&amp;areacode=06&amp;date=20220216">인천</a>
+            </li>
 
-                            
-                            </div>
-                        </li>
+            <li>
+                <a href="./iframeMovie.aspx?midx=85624&amp;mcode=20028855&amp;areacode=07&amp;date=20220216">강원</a>
+            </li>
 
-                
-            </ul>
-        </div>
-      
+            <li>
+                <a href="./iframeMovie.aspx?midx=85624&amp;mcode=20028855&amp;areacode=15,04,05&amp;date=20220216">대전/충청</a>
+            </li>
 
-      
-        <p class="info-noti">
-            </p><p>ㆍ입장 지연에 따른 관람 불편을 최소화하기 위해 영화는 10분 후 상영이 시작됩니다.</p>
-        <p></p>
+            <li>
+                <a href="./iframeMovie.aspx?midx=85624&amp;mcode=20028855&amp;areacode=14&amp;date=20220216">대구</a>
+            </li>
+
+            <li>
+                <a href="./iframeMovie.aspx?midx=85624&amp;mcode=20028855&amp;areacode=12,16&amp;date=20220216">부산/울산</a>
+            </li>
+
+            <li>
+                <a href="./iframeMovie.aspx?midx=85624&amp;mcode=20028855&amp;areacode=10,11&amp;date=20220216">경상</a>
+            </li>
+
+            <li>
+                <a href="./iframeMovie.aspx?midx=85624&amp;mcode=20028855&amp;areacode=08,02,03,01&amp;date=20220216">광주/전라/제주</a>
+            </li>
+
+        </ul>
     </div>
 
+    <div class="sect-schedule">
+        <div id="slider" class="slider">
+
+            <div class="item-wrap"><ul class="item" style="width: 800px; height: 156.003px;">
+                <li class="on">
+                    <div class="day">
+                        <a href="#">
+                            <span> 02월</span>
+                            <em>수</em>
+                            <strong>16</strong>
+                        </a>
+                    </div>
+                </li>
+
+
+
+                <li>
+                    <div class="day">
+                        <a href="#">
+                            <span> 02월</span>
+                            <em>목</em>
+                            <strong>17</strong>
+                        </a>
+                    </div>
+                </li>
+
+
+
+                <li>
+                    <div class="day">
+                        <a href="#">
+                            <span> 02월</span>
+                            <em>금</em>
+                            <strong>18</strong>
+                        </a>
+                    </div>
+                </li>
+
+
+
+                <li>
+                    <div class="day">
+                        <a href="#">
+                            <span> 02월</span>
+                            <em>토</em>
+                            <strong>19</strong>
+                        </a>
+                    </div>
+                </li>
+
+
+
+                <li>
+                    <div class="day">
+                        <a href="#">
+                            <span> 02월</span>
+                            <em>일</em>
+                            <strong>20</strong>
+                        </a>
+                    </div>
+                </li>
+
+
+
+                <li>
+                    <div class="day">
+                        <a href="#">
+                            <span> 02월</span>
+                            <em>월</em>
+                            <strong>21</strong>
+                        </a>
+                    </div>
+                </li>
+
+
+
+                <li>
+                    <div class="day">
+                        <a href="#">
+                            <span> 02월</span>
+                            <em>화</em>
+                            <strong>22</strong>
+                        </a>
+                    </div>
+                </li>
+
+
+
+                <li>
+                    <div class="day">
+                        <a href="#">
+                            <span> 02월</span>
+                            <em>수</em>
+                            <strong>23</strong>
+                        </a>
+                    </div>
+                </li>
+            </ul></div>
+
+
+            <button type="button" class="btn-prev">이전 날자보기</button>
+            <button type="button" class="btn-next">다음 날자보기</button>
+        </div>
+    </div>
+
+    <div class="sect-guide">
+        <div class="descri-timezone">
+            <ul>
+                <li><span class="early">조조</span></li>
+                <li><span class="midnight">심야</span></li>
+            </ul>
+            <p>* 시간을 클릭하시면 빠른 예매를 하실 수 있습니다.</p>
+        </div>
+
+    </div>
+    <div class="sect-showtimes">
+        <ul>
+
+
+
+            <li>
+                <div class="col-theater"><a href="/theaters/?theaterCode=0131" target="_top">CGV<br>중계</a></div>
+                <div class="col-times">
+
+                    <div class="type-hall">
+                        <div class="info-hall">
+                            <ul>
+                                <li>2D</li>
+                                <!--<li>4관</li>//-->
+                                <li>4관</li>
+                                <li>총 188석</li>
+                            </ul>
+                        </div>
+                        <div class="info-timetable">
+                            <ul>
+
+                                <li><a href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855&amp;PLAY_YMD=20220216&amp;THEATER_CD=0131&amp;PLAY_START_TM=2035&amp;AREA_CD=13&amp;SCREEN_CD=004" target="_top" data-theatercode="0131" data-playymd="20220216" data-screencode="004" data-playnum="5" data-playstarttime="2035" data-playendtime="2241" data-theatername="CGV 중계" data-seatremaincnt="175" data-screenkorname="4관"><em>20:35</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>175석</span></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="type-hall">
+                        <div class="info-hall">
+                            <ul>
+                                <li>2D</li>
+                                <!--<li>5관</li>//-->
+                                <li>5관</li>
+                                <li>총 148석</li>
+                            </ul>
+                        </div>
+                        <div class="info-timetable">
+                            <ul>
+
+                                <li><em>16:55</em><span>마감</span></li>
+
+                                <li><a href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855&amp;PLAY_YMD=20220216&amp;THEATER_CD=0131&amp;PLAY_START_TM=1920&amp;AREA_CD=13&amp;SCREEN_CD=005" target="_top" data-theatercode="0131" data-playymd="20220216" data-screencode="005" data-playnum="5" data-playstarttime="1920" data-playendtime="2126" data-theatername="CGV 중계" data-seatremaincnt="115" data-screenkorname="5관"><em>19:20</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>115석</span></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="type-hall">
+                        <div class="info-hall">
+                            <ul>
+                                <li>2D</li>
+                                <!--<li>7관</li>//-->
+                                <li>7관</li>
+                                <li>총 199석</li>
+                            </ul>
+                        </div>
+                        <div class="info-timetable">
+                            <ul>
+
+                                <li><em>16:10</em><span>마감</span></li>
+
+                                <li><a href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855&amp;PLAY_YMD=20220216&amp;THEATER_CD=0131&amp;PLAY_START_TM=1835&amp;AREA_CD=13&amp;SCREEN_CD=007" target="_top" data-theatercode="0131" data-playymd="20220216" data-screencode="007" data-playnum="4" data-playstarttime="1835" data-playendtime="2041" data-theatername="CGV 중계" data-seatremaincnt="153" data-screenkorname="7관"><em>18:35</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>153석</span></a></li>
+
+                                <li><a href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855&amp;PLAY_YMD=20220216&amp;THEATER_CD=0131&amp;PLAY_START_TM=2100&amp;AREA_CD=13&amp;SCREEN_CD=007" target="_top" data-theatercode="0131" data-playymd="20220216" data-screencode="007" data-playnum="5" data-playstarttime="2100" data-playendtime="2306" data-theatername="CGV 중계" data-seatremaincnt="182" data-screenkorname="7관"><em>21:00</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>182석</span></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+
+            <li>
+                <div class="col-theater"><a href="/theaters/?theaterCode=0199" target="_top">CGV<br>천호</a></div>
+                <div class="col-times">
+
+                    <div class="type-hall">
+                        <div class="info-hall">
+                            <ul>
+                                <li>2D</li>
+                                <!--<li><span class='screentype'><span class='sphereX'>SphereX</span></span></li>//-->
+                                <li><span class="screentype"><span class="sphereX">SphereX</span></span></li>
+                                <li>총 213석</li>
+                            </ul>
+                        </div>
+                        <div class="info-timetable">
+                            <ul>
+
+                                <li><a href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855&amp;PLAY_YMD=20220216&amp;THEATER_CD=0199&amp;PLAY_START_TM=1715&amp;AREA_CD=13&amp;SCREEN_CD=005" target="_top" data-theatercode="0199" data-playymd="20220216" data-screencode="005" data-playnum="4" data-playstarttime="1715" data-playendtime="1921" data-theatername="CGV 천호" data-seatremaincnt="205" data-screenkorname="5관[SphereX관]"><em>17:15</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>205석</span></a></li>
+
+                                <li><a href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855&amp;PLAY_YMD=20220216&amp;THEATER_CD=0199&amp;PLAY_START_TM=1940&amp;AREA_CD=13&amp;SCREEN_CD=005" target="_top" data-theatercode="0199" data-playymd="20220216" data-screencode="005" data-playnum="5" data-playstarttime="1940" data-playendtime="2146" data-theatername="CGV 천호" data-seatremaincnt="193" data-screenkorname="5관[SphereX관]"><em>19:40</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>193석</span></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="type-hall">
+                        <div class="info-hall">
+                            <ul>
+                                <li>2D</li>
+                                <!--<li>1관</li>//-->
+                                <li>1관</li>
+                                <li>총 170석</li>
+                            </ul>
+                        </div>
+                        <div class="info-timetable">
+                            <ul>
+
+                                <li><a href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855&amp;PLAY_YMD=20220216&amp;THEATER_CD=0199&amp;PLAY_START_TM=1800&amp;AREA_CD=13&amp;SCREEN_CD=001" target="_top" data-theatercode="0199" data-playymd="20220216" data-screencode="001" data-playnum="4" data-playstarttime="1800" data-playendtime="2006" data-theatername="CGV 천호" data-seatremaincnt="155" data-screenkorname="1관"><em>18:00</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>155석</span></a></li>
+
+                                <li><a href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855&amp;PLAY_YMD=20220216&amp;THEATER_CD=0199&amp;PLAY_START_TM=2030&amp;AREA_CD=13&amp;SCREEN_CD=001" target="_top" data-theatercode="0199" data-playymd="20220216" data-screencode="001" data-playnum="5" data-playstarttime="2030" data-playendtime="2236" data-theatername="CGV 천호" data-seatremaincnt="142" data-screenkorname="1관"><em>20:30</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>142석</span></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+
+            <li>
+                <div class="col-theater"><a href="/theaters/?theaterCode=0107" target="_top">CGV<br>청담씨네시티</a></div>
+                <div class="col-times">
+
+                    <div class="type-hall">
+                        <div class="info-hall">
+                            <ul>
+                                <li>2D</li>
+                                <!--<li>5층 CINEMA PREMIUM</li>//-->
+                                <li>5층 CINEMA PREMIUM</li>
+                                <li>총 112석</li>
+                            </ul>
+                        </div>
+                        <div class="info-timetable">
+                            <ul>
+
+                                <li><a href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855&amp;PLAY_YMD=20220216&amp;THEATER_CD=0107&amp;PLAY_START_TM=2100&amp;AREA_CD=13&amp;SCREEN_CD=001" target="_top" data-theatercode="0107" data-playymd="20220216" data-screencode="001" data-playnum="5" data-playstarttime="2100" data-playendtime="2306" data-theatername="CGV 청담씨네시티" data-seatremaincnt="112" data-screenkorname="5층 CINEMA PREMIUM"><em>21:00</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>112석</span></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="type-hall">
+                        <div class="info-hall">
+                            <ul>
+                                <li>2D</li>
+                                <!--<li>6층 SWEETBOX PREMIUM</li>//-->
+                                <li>6층 SWEETBOX PREMIUM</li>
+                                <li>총 20석</li>
+                            </ul>
+                        </div>
+                        <div class="info-timetable">
+                            <ul>
+
+                                <li><a href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855&amp;PLAY_YMD=20220216&amp;THEATER_CD=0107&amp;PLAY_START_TM=2100&amp;AREA_CD=13&amp;SCREEN_CD=002" target="_top" data-theatercode="0107" data-playymd="20220216" data-screencode="002" data-playnum="5" data-playstarttime="2100" data-playendtime="2306" data-theatername="CGV 청담씨네시티" data-seatremaincnt="16" data-screenkorname="6층 SWEETBOX PREMIUM"><em>21:00</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>16석</span></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="type-hall">
+                        <div class="info-hall">
+                            <ul>
+                                <li>2D</li>
+                                <!--<li>9층 3관 [COMFORT SEAT]</li>//-->
+                                <li>9층 3관 [COMFORT SEAT]</li>
+                                <li>총 186석</li>
+                            </ul>
+                        </div>
+                        <div class="info-timetable">
+                            <ul>
+
+                                <li><a href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855&amp;PLAY_YMD=20220216&amp;THEATER_CD=0107&amp;PLAY_START_TM=1715&amp;AREA_CD=13&amp;SCREEN_CD=005" target="_top" data-theatercode="0107" data-playymd="20220216" data-screencode="005" data-playnum="4" data-playstarttime="1715" data-playendtime="1921" data-theatername="CGV 청담씨네시티" data-seatremaincnt="183" data-screenkorname="9층 3관 [COMFORT SEAT]"><em>17:15</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>183석</span></a></li>
+
+                                <li><a href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855&amp;PLAY_YMD=20220216&amp;THEATER_CD=0107&amp;PLAY_START_TM=1940&amp;AREA_CD=13&amp;SCREEN_CD=005" target="_top" data-theatercode="0107" data-playymd="20220216" data-screencode="005" data-playnum="5" data-playstarttime="1940" data-playendtime="2146" data-theatername="CGV 청담씨네시티" data-seatremaincnt="176" data-screenkorname="9층 3관 [COMFORT SEAT]"><em>19:40</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>176석</span></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="type-hall">
+                        <div class="info-hall">
+                            <ul>
+                                <li>2D</li>
+                                <!--<li>10층 SWEETBOX PREMIUM</li>//-->
+                                <li>10층 SWEETBOX PREMIUM</li>
+                                <li>총 20석</li>
+                            </ul>
+                        </div>
+                        <div class="info-timetable">
+                            <ul>
+
+                                <li><a href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855&amp;PLAY_YMD=20220216&amp;THEATER_CD=0107&amp;PLAY_START_TM=1715&amp;AREA_CD=13&amp;SCREEN_CD=006" target="_top" data-theatercode="0107" data-playymd="20220216" data-screencode="006" data-playnum="4" data-playstarttime="1715" data-playendtime="1921" data-theatername="CGV 청담씨네시티" data-seatremaincnt="12" data-screenkorname="10층 SWEETBOX PREMIUM"><em>17:15</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>12석</span></a></li>
+
+                                <li><a href="/ticket/?MOVIE_CD=20028855&amp;MOVIE_CD_GROUP=20028855&amp;PLAY_YMD=20220216&amp;THEATER_CD=0107&amp;PLAY_START_TM=1940&amp;AREA_CD=13&amp;SCREEN_CD=006" target="_top" data-theatercode="0107" data-playymd="20220216" data-screencode="006" data-playnum="5" data-playstarttime="1940" data-playendtime="2146" data-theatername="CGV 청담씨네시티" data-seatremaincnt="8" data-screenkorname="10층 SWEETBOX PREMIUM"><em>19:40</em><span class="txt-lightblue"><span class="hidden">잔여좌석</span>8석</span></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+
+
+
+
+
+        </ul>
+    </div>
+    <p class="info-noti">* 입장 지연에 따른 관람불편을 최소화하고자 영화는 약 10분 후에 시작됩니다. 관람 에티켓을 위한 사전 입장 부탁드립니다.</p>
+</div>
 
 <!--/ Contents End -->
 

@@ -89,10 +89,10 @@
 	<div class="join-hd">
 		<h3><img src="http://img.cgv.co.kr/R2014/images/common/img_join_hd.jpg" alt="CGV에 오신걸 환영합니다." /></h3>
 		<p>CGV 회원이 되시면 하나의 통합된 회원 ID와 비밀번호로<br />CGV의 다양한 서비스를 이용하실 수 있습니다.</p>
-        <a href="./join_do.jsp" target="_blank" title="새창" class="link-join"><span>CGV 회원가입</span></a>
+        <a href="./agreement.jsp" target="_blank" title="새창" class="link-join"><span>CGV 회원가입</span></a>
 	</div>
 
-	<div class="join-benefit">
+	<div class="join-benefit" style="padding:0">
 		<h4>CGV 상세 혜택</h4>
 		<ul class="benefit-list">
 			<li>

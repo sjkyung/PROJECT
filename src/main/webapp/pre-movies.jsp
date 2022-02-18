@@ -69,7 +69,7 @@
             <div class="submenu">
                 <ul>
                     <li><a href="movies.jsp">무비차트</a></li>
-                    <li class="on"><a href="pre-movies.aspx">상영예정작</a></li>
+                    <li class="on"><a href="pre-movies.jsp">상영예정작</a></li>
                     <!--비노출처리 : 20211013 //-->
                     <!--<li><a href="/movies/?lt=3">아트하우스</a></li>//-->
                 </ul>
@@ -83,7 +83,7 @@
                 <li>
                     <div class="box-image">
                         <strong class="rank">이달의 추천영화 1</strong>	
-                        <a href="/movies/detail-view/?midx=85603">
+                        <a href="detail-view.jsp">
                             <span class="thumb-image">
                                 <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85603/85603_320.jpg" alt="극장판 주술회전 0 포스터" onerror="errorImage(this)">
                                 <span class="ico-grade grade-15">15세 이상</span>
@@ -93,7 +93,7 @@
                     </div>
                     
                     <div class="box-contents">
-                        <a href="/movies/detail-view/?midx=85603">
+                        <a href="detail-view.jsp">
                             <strong class="title">극장판 주술회전 0</strong>
                         </a>
 
@@ -109,7 +109,7 @@
                             </strong>
                         </span>
                         <span class="like"> 
-                            <a class="link-reservation" href="/ticket/?MOVIE_CD=20028797&amp;MOVIE_CD_GROUP=20028797">예매</a>
+                            <a class="link-reservation" href="ticket.jsp">예매</a>
                         </span>
                     </div>    
                 </li>
@@ -126,7 +126,7 @@
                     
                       <li>
                         <div class="box-image">
-                            <a href="/movies/detail-view/?midx=85633">
+                            <a href="detail-view.jsp">
                                 <span class="thumb-image">
                                     <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85633/85633_320.jpg" alt="굿 보스 포스터" onerror="errorImage(this)">
                                     <span class="ico-grade grade-15">15세 이상</span>
@@ -141,7 +141,7 @@
                         </div>
                     
                         <div class="box-contents">
-                            <a href="/movies/detail-view/?midx=85633">
+                            <a href="detail-view.jsp">
                                 <strong class="title">굿 보스</strong>
                             </a>
 
@@ -158,7 +158,7 @@
                                 </strong>
                             </span>
                             <span class="like"> 
-                                <a class="link-reservation" href="/ticket/?MOVIE_CD=20028869&amp;MOVIE_CD_GROUP=20028869">예매</a>
+                                <a class="link-reservation" href="ticket.jsp">예매</a>
                             </span>
                         </div>    
                     </li>
@@ -201,7 +201,7 @@
      
         <a href="ticket.jsp" class="btn_fixedTicketing">예매하기</a>
         
-        <a href="#none" class="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="최상단으로 이동" /></a>
+        <a href="#movie_more_container" class="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="최상단으로 이동" /></a>
     </div>
     
     <!-- E 예매하기 및 TOP Fixed 버튼 -->

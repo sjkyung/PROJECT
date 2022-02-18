@@ -293,39 +293,49 @@
 `				<div class="curation clear" id="stillcut_list" style="min-height: 700px;">
 					<div class="imgclick" style="position: absolute; top: 0px; left: 0px;">
 					<a id="tile_0" href="#">
-					<img src="./img/1.jpg" alt="나일 강의 죽음" style="height: 371px;">
+					<img src="css/1.jpg" alt="나일 강의 죽음" style="height: 371px;">
 					</a
 					></div>
 					
 					<div class="imgclick" style="position: absolute; top: 0px; left: 270px;">
 					<a id="tile_1" href="#">
-					<img src="./img/2.jpg" alt="나일 강의 죽음" style="height: 371px;">
+					<img src="css/2.jpg" alt="나일 강의 죽음" style="height: 371px;">
 					</a>
 					</div>
 					
 					<div class="imgclick" style="position: absolute; top: 0px; left: 540px;">
 					<a id="tile_2" href="#">
-					<img src="./img/3.jpg" alt="나일 강의 죽음" style="height: 371px;">
+					<img src="css/3.jpg" alt="나일 강의 죽음" style="height: 371px;">
 					</a>
 					</div>
 					
 					
 					<div class="imgclick" style="position: absolute; top: 381px; left: 0px;">
 					<a id="tile_3" href="#">
-					<img src="./img/4.jpg" alt="나일 강의 죽음" style="height: 371px;">
+					<img src="css/4.jpg" alt="나일 강의 죽음" style="height: 371px;">
 					</a>
 					</div>
 					
 					<div class="imgclick" style="position: absolute; top: 381px; left: 270px;">
 					<a id="tile_4" href="#">
-					<img src="./img/5.jpg" alt="나일 강의 죽음" style="height: 371px;">
+					<img src="css/5.jpg" alt="나일 강의 죽음" style="height: 371px;">
 					</a>
 					</div>
-					
+                <div class="col-aside">
+                    <div class="ad-partner01">
+                        <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@M_Rectangle" width="160" height="300" title="영화광고-나이트메어앨리" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="M_Rectangle" id="M_Rectangle"></iframe>
+                    </div>
+                    <div class="ad-external01">
+                        <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@C_Rectangle" width="160" height="300" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="C_Rectangle" id="C_Rectangle"></iframe>
+                    </div>
+
+                </div>
             </div>
-            
+
             
              </div>
+
+
              </div>
 
 </div>
@@ -340,23 +350,23 @@
 		<div class="slider">
 		<div class="item-wrap">
 			<div class="item" style="width: 980px; height: 506px; display: none;">
-			<img src="./img/1.jpg" alt="undefined"></div>
+			<img src="css/1.jpg" alt="undefined"></div>
 			</div>
 			<div class="item-wrap">
 			<div class="item" style="width: 980px; height: 506px; display: none;">
-			<img src="./img/2.jpg" alt="undefined"></div>
+			<img src="css/2.jpg" alt="undefined"></div>
 			</div>
 			<div class="item-wrap">
 			<div class="item" style="width: 980px; height: 506px; display: none;">
-			<img src="./img/3.jpg" alt="undefined"></div>
+			<img src="css/3.jpg" alt="undefined"></div>
 			</div>
 			<div class="item-wrap">
 			<div class="item" style="width: 980px; height: 506px; display: none;">
-			<img src="./img/4.jpg" alt="undefined"></div>
+			<img src="css/4.jpg" alt="undefined"></div>
 			</div>
 			<div class="item-wrap">
 			<div class="item" style="width: 980px; height: 506px; display: none;">
-			<img src="./img/5.jpg" alt="undefined"></div>
+			<img src="css/5.jpg" alt="undefined"></div>
 			</div>
 			<button type="button" class="btn-prev" id="btn-prev">이전 페이지 이동</button>
 			<button type="button" class="btn-next" id="btn-next">다음 페이지 이동</button>

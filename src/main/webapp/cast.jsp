@@ -329,8 +329,16 @@ let wishlist=document.getElementsByClassName('wishlist');
                     </ul>
                 </div>
             </div><!-- .col-detail -->
-            
 
+    <div class="col-aside" style="padding-top:120px">
+        <div class="ad-partner01">
+            <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@M_Rectangle" width="160" height="300" title="영화광고-나이트메어앨리" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="M_Rectangle" id="M_Rectangle"></iframe>
+        </div>
+        <div class="ad-external01">
+            <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@C_Rectangle" width="160" height="300" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="C_Rectangle" id="C_Rectangle"></iframe>
+        </div>
+
+    </div>
 
        
 
