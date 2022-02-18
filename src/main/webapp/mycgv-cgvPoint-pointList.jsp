@@ -255,7 +255,9 @@
                                     <button type="button" id="close_usergrade" class="btn-close ">MY 지난 등급 이력 팝업 닫기</button>
                                 </div>
                             </div>
-
+                            <div class="mycgv_btn_special2">
+                                <!-- 세로줄 없어져서 맞추기용 div 및 class-->
+                            </div>
                         </div>
 
                     </div>
@@ -273,29 +275,29 @@
 
                             <li>
                                 <strong>CGV 할인쿠폰</strong>
-                                <span><em><a href="/user/mycgv/coupon/discount/list.aspx?g=1#contaniner">100,000</a></em> 개</span>
+                                <span><em><a href="/user/mycgv/coupon/discount/list.aspx?g=1#contaniner">1,000</a></em> 개</span>
                             </li>
                             <li>
                                 <strong>영화관람권</strong>
-                                <span><em><a href="/user/mycgv/coupon/movie-ticket/list.aspx?g=1#contaniner">100,000</a></em> 개</span>
+                                <span><em><a href="/user/mycgv/coupon/movie-ticket/list.aspx?g=1#contaniner">1,000</a></em> 개</span>
                             </li>
                         </ul>
                     </div>
 
 
                     <div class="col-one-point">
-                        <h3 style="!important;">CGV POINT</h3>
+                        <h3 style="background: url(./css/cgvpoint.png) center;">CGV POINT</h3>
                         <a href="./mycgv-cgvPoint-pointList.jsp">CGV POINT 더보기</a>
                         <ul>
                             <li>
                                 <strong>CGV 사용가능 포인트</strong>
-                                <span><em class="txt-maroon"><a href="">1,000,000</a></em> 점</span>
+                                <span><em class="txt-maroon"><a href="">1,000</a></em> 점</span>
                             </li>
                             <li class="tooltip_list cf">
                                 <strong>VIP선정 포인트</strong><a href="" class="mycgv_tooltip"><img src="https://img.cgv.co.kr/R2014/images/common/mycgv_tooltip/ico_tooltip.png" alt="i" /></a>
 
                                 <div class="tooltip_con tc2"><span><img src="https://img.cgv.co.kr/R2014/images/common/mycgv_tooltip/tooltip_con2.png" alt="CGV에서 구매를 통해 적립된 매표 구매 포인트/매점&amp;씨네샵 구매 포인트/VIP 선정에 포함되는 이벤트 포인트가 누적으로 합산된 포인트 입니다" /></span></div>
-                                <span><em>1,000,000</em> 점</span>
+                                <span><em>1,000</em> 점</span>
                             </li>
                         </ul>
 
