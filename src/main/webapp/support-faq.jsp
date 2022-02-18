@@ -106,6 +106,7 @@
     <link rel="stylesheet" media="all" type="text/css" href="http://img.cgv.co.kr/R2014/css/customer.css" />
 
     <!--/각페이지 Header End-->
+<<<<<<< HEAD
 >>>>>>> af3e36c12075855e2936b0c467124b532a1ff20e
     <script type="text/javascript">
         //<![CDATA[
@@ -905,20 +906,17 @@
 
         //]]>
     </script>
+=======
+
+>>>>>>> 88b50f0b0eed6f584767c2d830b0abf54a404bad
 
 
 
 </head>
 <body class="">
-
-
-                </div>
-
-        <!-- 서브 메뉴 -->
-    </div>
-    <!-- E Header -->
-                <%@ include file="header.jsp"%>
-    <!-- Contaniner -->
+	
+	<%@include file="./header.jsp" %>
+	
     <div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
 
 
@@ -1531,6 +1529,7 @@
 
     <!-- E 예매하기 및 TOP Fixed 버튼 -->
 
+<<<<<<< HEAD
     <!-- S Footer -->
     <footer>
         <!-- footer_area (s) -->
@@ -1961,6 +1960,9 @@
 >>>>>>> af3e36c12075855e2936b0c467124b532a1ff20e
 </script>
 <!-- End Google Tag Manager -->
+=======
+<%@include file="./footer.jsp" %>
+>>>>>>> 88b50f0b0eed6f584767c2d830b0abf54a404bad
 
 </body>
 </html>

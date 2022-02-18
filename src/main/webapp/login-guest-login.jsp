@@ -1,10 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+         pageEncoding="UTF-8"%>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>guest_login</title>
+    <title>login-guest-login</title>
 
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -199,7 +197,7 @@
                 <a href="./login-agreement.jsp">비회원 예매</a>
             </li>
             <li class="on">
-                <a href="./guest_login.jsp">비회원 예매확인</a>
+                <a href="login-guest-login.jsp">비회원 예매확인</a>
             </li>
         </ul>
         <h3>비회원 예매 확인</h3>
@@ -252,6 +250,8 @@
                         </table>
                         <div class="box-btn">
 	                        <button type="submit" class="round inred" id="btn_submit"><span>비회원 예매확인</span></button>
+                        <br/><br/>
+                            <a href="./login-guest-reserve.jsp"><button type="button" class="round inred"><span>비회원 예매확인누르면 어디로 가는지 확인용 버튼</span></button></a>
                         </div>
                     </fieldset>
                     </form>
@@ -262,7 +262,7 @@
                 <div class="box-confirm">
                     <p class="disc-info">비회원 예매 시, 입력한 휴대폰번호로 SMS인증을 하면 비회원 예매 비밀번호를 찾으실수 있습니다.</p>
                     <div class="confirm-type">
-                        <a href="find-pw.aspx" class="round black"><span>휴대폰 SMS인증으로 찾기</span></a>
+                        <a href="find-pw.aspx" class="round black"><span style="height: 22px;">휴대폰 SMS인증으로 찾기</span></a>
                     </div>
                 </div>
             </div>

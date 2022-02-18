@@ -226,7 +226,7 @@
                             <div class="box-round-inner">
                                 <div class="inner-contents-log">
                                     <a href="./mycgv-movielog-watched.jsp">
-                                        <em>3</em>
+                                        <em>6</em>
                                         <strong>내가 본 영화</strong>
                                     </a>
                                 </div>
