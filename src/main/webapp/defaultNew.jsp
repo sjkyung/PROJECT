@@ -5,7 +5,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 <head>
-    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="Expires" content="-1" />
@@ -91,12 +90,22 @@
 <div class="evt-nav-area">
     <ul class="evt-tab-menu">
         <!-- 활성화 시 a 태그에 on 클래스를 넣어주세요. -->
+		<%
+		request.setCharacterEncoding("UTF-8");
+		String mCode = request.getParameter("mCode");
+		String m1 = "", m2="",m3="",m4="",m5="";
+		if(mCode.equals("001")) m1 = "on";
+		if(mCode.equals("004")) m2 = "on";
+		if(mCode.equals("008")) m3 = "on";
+		if(mCode.equals("005")) m4 = "on";
+		if(mCode.equals("006")) m5 = "on";
 
-        <li><a href="defaultNew.jsp?mCode=001" title="" class="on">SPECIAL</a></li>
-        <li><a href="defaultNew.jsp?mCode=004" title="" class="">영화/예매</a></li>
-        <li><a href="defaultNew.jsp?mCode=008" title="" class="">멤버십/CLUB</a></li>
-        <li><a href="defaultNew.jsp?mCode=005" title="" class="">CGV 극장별</a></li>
-        <li><a href="defaultNew.jsp?mCode=006" title="" class="">제휴/할인</a></li>        
+		%>
+        <li><a href="defaultNew.jsp?mCode=001" title="" class="<%=m1%>">SPECIAL</a></li>
+        <li><a href="defaultNew.jsp?mCode=004" title="" class="<%=m2%>">영화/예매</a></li>
+        <li><a href="defaultNew.jsp?mCode=008" title="" class="<%=m3%>">멤버십/CLUB</a></li>
+        <li><a href="defaultNew.jsp?mCode=005" title="" class="<%=m4%>">CGV 극장별</a></li>
+        <li><a href="defaultNew.jsp?mCode=006" title="" class="<%=m5%>">제휴/할인</a></li>        
     </ul>    
     <div class="submenu">
         <a href="mycgv-event-resultList.jsp" class="round red on"><i>당첨자 발표</i></a>

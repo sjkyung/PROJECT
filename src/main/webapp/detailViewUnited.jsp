@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
 
 
 
@@ -198,7 +199,7 @@
 			</div>
 			<div class="tbl-viw-nav">
 				<div class="dir-prev">
-					<a href="defaultNew.jsp">목록</a>
+					<a href="#" onclick="history.back()">목록</a>
 				</div>
 			</div>
 

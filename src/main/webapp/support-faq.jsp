@@ -245,16 +245,16 @@
                         </div>
                         <div class="c_tab_wrap">
                             <ul class="c_tab type_free">
-                                <li class='on'><a href="/support/faq/default.aspx?type=0&searchtext=" style="font-size: 11px;" title="선택된 탭메뉴">전체</a></li>
-                                <li class=''><a href="/support/faq/default.aspx?type=101,239&searchtext=" style="font-size: 11px;" >예매/매표</a></li>
-                                <li class=''><a href="/support/faq/default.aspx?type=243&searchtext=" style="font-size: 11px;" >관람권/결제수단</a></li>
-                                <li class=''><a href="/support/faq/default.aspx?type=102,240&searchtext=" style="font-size: 11px;" >멤버쉽/클럽서비스</a></li>
-                                <li class=''><a href="/support/faq/default.aspx?type=1262&searchtext=" style="font-size: 11px;" >VIP관련</a></li>
-                                <li class=''><a href="/support/faq/default.aspx?type=242&searchtext=" style="font-size: 11px;" >할인혜택</a></li>
-                                <li class=''><a href="/support/faq/default.aspx?type=103,246&searchtext=" style="font-size: 11px;" >영화관이용</a></li>
-                                <li class=''><a href="/support/faq/default.aspx?type=244&searchtext=" style="font-size: 11px;" >특별관</a></li>
-                                <li class=''><a href="/support/faq/default.aspx?type=104,1259&searchtext=" style="font-size: 11px;" >기프트샵</a></li>
-                                <li class=''><a href="/support/faq/default.aspx?type=105,245&searchtext=" style="font-size: 11px;" >홈페이지/모바일</a></li>
+                                <li class='on'><a href="support-faq.jsp?type=0&searchtext=" style="font-size: 11px;" title="선택된 탭메뉴">전체</a></li>
+                                <li class=''><a href="support-faq.jsp?type=101,239&searchtext=" style="font-size: 11px;" >예매/매표</a></li>
+                                <li class=''><a href="support-faq.jsp?type=243&searchtext=" style="font-size: 11px;" >관람권/결제수단</a></li>
+                                <li class=''><a href="support-faq.jsp?type=102,240&searchtext=" style="font-size: 11px;" >멤버쉽/클럽서비스</a></li>
+                                <li class=''><a href="support-faq.jsp?type=1262&searchtext=" style="font-size: 11px;" >VIP관련</a></li>
+                                <li class=''><a href="support-faq.jsp?type=242&searchtext=" style="font-size: 11px;" >할인혜택</a></li>
+                                <li class=''><a href="support-faq.jsp?type=103,246&searchtext=" style="font-size: 11px;" >영화관이용</a></li>
+                                <li class=''><a href="support-faq.jsp?type=244&searchtext=" style="font-size: 11px;" >특별관</a></li>
+                                <li class=''><a href="support-faq.jsp?type=104,1259&searchtext=" style="font-size: 11px;" >기프트샵</a></li>
+                                <li class=''><a href="support-faq.jsp?type=105,245&searchtext=" style="font-size: 11px;" >홈페이지/모바일</a></li>
 
                             </ul>
                         </div>
@@ -451,31 +451,31 @@
                                     <a title="1 페이지 선택" href=" #pg">1</a>
                                 </li>
                                 <li>
-                                    <a href="/support/faq/default.aspx?page=2&amp;type=0&amp;searchtext=">2</a>
+                                    <a href="support-faq.jsp?page=2&amp;type=0&amp;searchtext=">2</a>
                                 </li>
                                 <li>
-                                    <a href="/support/faq/default.aspx?page=3&amp;type=0&amp;searchtext=">3</a>
+                                    <a href="support-faq.jsp?page=3&amp;type=0&amp;searchtext=">3</a>
                                 </li>
                                 <li>
-                                    <a href="/support/faq/default.aspx?page=4&amp;type=0&amp;searchtext=">4</a>
+                                    <a href="support-faq.jsp?page=4&amp;type=0&amp;searchtext=">4</a>
                                 </li>
                                 <li>
-                                    <a href="/support/faq/default.aspx?page=5&amp;type=0&amp;searchtext=">5</a>
+                                    <a href="support-faq.jsp?page=5&amp;type=0&amp;searchtext=">5</a>
                                 </li>
                                 <li>
-                                    <a href="/support/faq/default.aspx?page=6&amp;type=0&amp;searchtext=">6</a>
+                                    <a href="support-faq.jsp?page=6&amp;type=0&amp;searchtext=">6</a>
                                 </li>
                                 <li>
-                                    <a href="/support/faq/default.aspx?page=7&amp;type=0&amp;searchtext=">7</a>
+                                    <a href="support-faq.jsp?page=7&amp;type=0&amp;searchtext=">7</a>
                                 </li>
                                 <li>
-                                    <a href="/support/faq/default.aspx?page=8&amp;type=0&amp;searchtext=">8</a>
+                                    <a href="support-faq.jsp?page=8&amp;type=0&amp;searchtext=">8</a>
                                 </li>
                                 <li>
-                                    <a href="/support/faq/default.aspx?page=9&amp;type=0&amp;searchtext=">9</a>
+                                    <a href="support-faq.jsp?page=9&amp;type=0&amp;searchtext=">9</a>
                                 </li>
                             </ul>
-                            <button class="btn-paging end" type="button" onclick="location='/support/faq/default.aspx?page=9&amp;type=0&amp;searchtext='">끝</button>
+                            <button class="btn-paging end" type="button" onclick="location='support-faq.jsp?page=9&amp;type=0&amp;searchtext='">끝</button>
                         </div>
                         <div class="search_order">
                             <ol>
@@ -526,7 +526,7 @@
                         });
 
                         function Search() {
-                            location.href = "/support/faq/default.aspx?searchtext=" + escape($("#searchtext").val());
+                            location.href = "support-faq.jsp?searchtext=" + escape($("#searchtext").val());
                             return false;
                         }
 
@@ -539,7 +539,7 @@
                         });
 
                         $('.qu_txt').children('span').children('a').on("click", function () {
-                            location.href = "/support/faq/default.aspx?searchtext=" + escape($(this).html());
+                            location.href = "support-faq.jsp?searchtext=" + escape($(this).html());
                             return false;
                         });
                         //SR 4020337 검색어 검색 시 검색결과에서 해당 검색어 붉은색으로 변경
