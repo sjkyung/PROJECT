@@ -3,8 +3,8 @@
 <!DOCTYPE html>
 <html lang="ko">
     <meta charset="utf-8"/>
-    <title>회원정보 입력 | CJ ONE</title>
-	<meta name="Description" content="CJ ONE 서비스를 이용하실 회원님의 정보를 입력해주세요. 다양한 혜택과 서비스를 받으실 수 있습니다." />
+    <title>회원정보 입력 | CGV</title>
+	<meta name="Description" content="CGV 서비스를 이용하실 회원님의 정보를 입력해주세요. 다양한 혜택과 서비스를 받으실 수 있습니다." />
     <meta http-equiv="X-UA-Compatible" content="IE=edge ,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 	<meta name="format-detection" content="telephone=no" />
