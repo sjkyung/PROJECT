@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+=======
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 <head>
@@ -19,10 +27,30 @@
 
     <meta id="ctl00_og_image" property="og:image" content="https://img.cgv.co.kr/WebApp/images/common/logo_new_kakao_prevw.png"></meta>
     <link rel="alternate" href="http://m.cgv.co.kr" />
+>>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
     <link rel="shortcut icon" href="https://img.cgv.co.kr/theater_img/favicon.ico" type="image/x-icon" />
     <title id="ctl00_headerTitle"></title>
     <link rel="shortcut icon" type="image/x-icon" href="https://img.cgv.co.kr/R2014/images/favicon.ico" />
     <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/webfont.css" />
+<<<<<<< HEAD
+    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/reset.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/layout.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/module.css?20211209" />
+    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/content.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/common.css" />
+    
+    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/eggupdate.css" />
+    <link rel="stylesheet" media="print" type="text/css" href="https://img.cgv.co.kr/R2014/css/print.css" />    
+    <link rel="stylesheet" type="text/css" href="https://img.cgv.co.kr/R2014/js/jquery.ui/smoothness/jquery-ui-1.10.4.custom.min.css" />
+    
+
+    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/phototicket/phototicket.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/slick.css" />
+	<link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/slick-theme-custom.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+            </script>
+=======
     <link rel="stylesheet" media="all" type="text/css" href="./css/reset.css" />
     <link rel="stylesheet" media="all" type="text/css" href="./css/layout.css" />
     <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/module.css?20211209" />
@@ -56,11 +84,21 @@
 
     <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/icheck/login.timer.js"></script>
     <script src="https://img.cgv.co.kr/R2014/js/icheck/icheck.min.js" type="text/javascript" charset="utf-8"></script>
+>>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
     <link rel="stylesheet" type="text/css" href="https://img.cgv.co.kr/R2014/js/icheck/iCheck.css" />
 
     <!-- 2020.05.07 감정지수/프리에그 프로젝트 추가 -->
     <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/preegg.css" />
 
+<<<<<<< HEAD
+    <!-- 각페이지 Header Start--> 
+    
+    <!--/각페이지 Header End--> 
+  
+
+<meta charset="EUC-KR">
+<title>CAST</title>
+=======
     <!-- 각페이지 Header Start-->
 
     <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/common/jquery.bxslider.min.js"></script>
@@ -181,11 +219,114 @@
 
 
 
+>>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
 </head>
 <body class="">
 
 <%@include file="header.jsp" %>
 
+<<<<<<< HEAD
+<div></div>
+<div class="skipnaiv">
+	<a href="#contents" id="skipHeader">메인 컨텐츠 바로가기</a>
+</div>
+<div id="cgvwrap">
+   
+
+<div id="contaniner" class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
+        
+
+		<!-- Contents Area -->
+		 <div id="contents" class="">
+        
+            
+            <!-- Contents Start -->
+			
+
+<!-- 실컨텐츠 시작 -->
+<div class="wrap-movie-detail" id="select_main">
+
+<div class="sect-base-movie">
+    <h3><strong>극장판 주술회전 0</strong>기본정보</h3>
+    <div class="box-image">
+        <a href="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85603/85603_1000.jpg" title="포스터 크게 보기 새창" target="_blank">
+            <span class="thumb-image"> 
+                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85603/85603_320.jpg" alt="극장판 주술회전 0 포스터 새창" onerror="errorImage(this)">
+                <span class="ico-posterdetail">포스터 크게 보기</span>
+                <span class="ico-grade grade-15"> 15세 이상</span>
+            </span> 
+        </a> 
+    </div>
+    <div class="box-contents">
+    <!-- 해당 영화 정보 시작-->
+        <div class="title"> 
+            <strong>영화한글명</strong>
+            
+            <em class="round brown"><span>예매중</span></em>
+            <em class="round red"><span>D-7</span></em>
+            <p>영문 영화명</p>
+        </div>
+        
+        <!-- 영화 예매율 -->
+        <div class="score"> 
+            <strong class="percent">예매율&nbsp;<span>24.2%</span></strong>
+        </div>
+        <!-- 떨어지는 얘 이전 요소에 class=on을 넣는다 -->
+        <div class="spec">
+            <dl>
+                <dt>감독 :&nbsp;</dt>
+                <dd>
+                    
+                        
+                        <a href="/movies/persons/?pidx=122739">박성후</a>                    
+                        
+                </dd>
+                
+                <dd>
+                    
+                </dd>
+
+                <dt>&nbsp;/ 배우 :&nbsp;</dt>
+                <dd class="on">
+                    
+                        
+                        <a href="/movies/persons/?pidx=111157">오가타 메구미</a>                    
+                        
+                        ,&nbsp;
+                        <a href="/movies/persons/?pidx=115800">하나자와 카나</a>                    
+                        
+                        ,&nbsp;
+                        <a href="/movies/persons/?pidx=122742">코마츠 미카코</a>                    
+                        
+                        ,&nbsp;
+                        <a href="/movies/persons/?pidx=116316">우치야마 코우키</a>                    
+                        
+                        ,&nbsp;
+                        <a href="/movies/persons/?pidx=54378">세키 토모카즈</a>                    
+                        
+                        ,&nbsp;
+                        <a href="/movies/persons/?pidx=112152">나카무라 유이치</a>                    
+                        
+                        ,&nbsp;
+                        <a href="/movies/persons/?pidx=85870">사쿠라이 타카히로</a>                    
+                        
+                </dd>
+
+                <dt>장르 :&nbsp;애니메이션</dt> 
+                <dd></dd>
+                <dt>&nbsp;/ 기본 :&nbsp;</dt>
+                <dd class="on">15세 이상,&nbsp;105분,&nbsp;일본</dd>
+                <dt>개봉 :&nbsp;</dt>
+                <dd class="on">2022.02.17</dd>
+
+
+
+            </dl>
+        </div>
+
+  
+    <script>
+=======
 <!-- Contaniner -->
 <div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
 
@@ -280,6 +421,7 @@
 
 
                     <script>
+>>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
 
     'use strict'
     window.onload=function(){
@@ -374,7 +516,11 @@ let wishlist=document.getElementsByClassName('wishlist');
                         
                         <li class="clear">
                             <div class="box-image">
+<<<<<<< HEAD
+                                <a href="/movies/persons/?pidx=106986">
+=======
                                 <a href="#">
+>>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
                                     <span class="thumb-image">
                                         <img src="http://image.cine21.com/resize/cine21/person/2013/0329/73459[X120,150].jpg" onerror="errorImage(this)" alt="드니 빌뇌브">
                                     </span>
@@ -383,7 +529,11 @@ let wishlist=document.getElementsByClassName('wishlist');
                             <div class="box-contents">
                                 <dl>
                                     <dd>
+<<<<<<< HEAD
+                                        <a href="/movies/persons/?pidx=106986">
+=======
                                         <a href="#">
+>>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
                                             드니 빌뇌브
                                             <span>Denis Villeneuve</span>
                                         </a>
@@ -397,14 +547,22 @@ let wishlist=document.getElementsByClassName('wishlist');
                                     
                                     <li>
                                         <div class="box-image">
+<<<<<<< HEAD
+                                            <a href="/movies/detail-view/?midx=79952">
+=======
                                             <a href="detail-view.jsp">
+>>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
                                                 <span class="thumb-image">
                                                     <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000079/79952/79952_73.jpg" alt="블레이드 러너 2049" onerror="errorImage(this)">
                                                 </span>
                                             </a>
                                         </div>
                                         <div class="box-contents">
+<<<<<<< HEAD
+                                            <a href="/movies/detail-view/?midx=79952">
+=======
                                             <a href="detail-view.jsp">
+>>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
                                                 <strong>블레이드 러너 2049<!--<span>(9999)</span>--></strong>
                                             </a>
                                         </div>
@@ -427,7 +585,11 @@ let wishlist=document.getElementsByClassName('wishlist');
                         
                         <li>
                             <div class="box-image">
+<<<<<<< HEAD
+                                <a href="/movies/persons/?pidx=112579">
+=======
                                 <a href="#">
+>>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
                                     <span class="thumb-image">
                                         <img src="http://image.cine21.com/resize/cine21/still/2018/1114/11_52_42__5beb8dfa348e4[X120,150].jpg" alt="톰 홀랜드" onerror="errorImage(this)" style="width:100px; height:136px;">
                                     </span>
@@ -438,7 +600,11 @@ let wishlist=document.getElementsByClassName('wishlist');
                                     <!-- 주연 dt 에 class="mainactor" 조연 class="subactor" 를 넣는다 -->
                                     <dt class="mainactor">주연</dt>
                                     <dd>
+<<<<<<< HEAD
+                                        <a href="/movies/persons/?pidx=112579">톰 홀랜드<span>Tom Holland</span></a>
+=======
                                         <a href="#">톰 홀랜드<span>Tom Holland</span></a>
+>>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
                                     </dd>
                                 </dl>                        
                             </div>
@@ -449,7 +615,11 @@ let wishlist=document.getElementsByClassName('wishlist');
                                     
                                     <li>
                                         <div class="box-contents">
+<<<<<<< HEAD
+                                            <a title="(스파이더맨: 홈커밍데이)" href="/movies/detail-view/?midx=79801">
+=======
                                             <a title="(스파이더맨: 홈커밍데이)" href="#">
+>>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
                                                 <strong>스파이더맨: 홈커밍데이<span>(2017)</span></strong>
                                             </a>
                                         </div>
