@@ -4,7 +4,7 @@
 <html lang="ko">
 <head>
     <meta charset="utf-8"/>
-    <title>회원가입 완료│CJ ONE</title>
+    <title>회원가입 완료│CGV</title>
 	<meta name="Description" content="CJ ONE 이란 문화, 외식, 쇼핑, 엔터테인먼트 등 CJ의 30여개 라이프스타일 브랜드에서 사용하실 수 있는 통합멤버십카드입니다. CJ ONE은 한 장의 카드로 최대 10% 포인트 적립 , 최대 10% 할인,  그리고 다양한 문화 공연헤택을 한번에 즐기실 수 있으며,  ONE PICK(원픽), ONE BOX(원박스), ONE TICKET(원티켓) 등 추첨이벤트에 참여하실 수 있습니다." />
     <meta http-equiv="X-UA-Compatible" content="IE=edge ,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
@@ -111,20 +111,20 @@
 							<h2 class="haze">가입 완료</h2>
 							<div class="certi_txt check">
 								<span class="ico"></span>
-								<p class="b_txt"><strong class="em">CJ ONE  회원가입</strong>을 축하합니다.</p>
+								<p class="b_txt"><strong class="em">CGV  회원가입</strong>을 축하합니다.</p>
 										</div>
 					                    <div class="btn_sec col2">
-													<a href="http://www.cgv.co.kr/" class="btn btn_em" title="CGV 웹사이트">홈페이지 바로가기</a>
+													<a href="./main.jsp" class="btn btn_em" title="CGV 웹사이트">홈페이지 바로가기</a>
 										</div>
 								<div class="uesr_data">
 									<h3 class="haze">내 정보</h3>
 									<dl>
-										<dt>CJ ONE  아이디</dt>
+										<dt>CGV  아이디</dt>
 										<dd class="em">hej9205</dd>
 									</dl>
 									
 										<dl class="marketing_data">
-											<dt>CJ ONE</dt>
+											<dt>CGV</dt>
 											<dd>
 												<span>일시 : 2022.02.17(목)</span>
 											    
