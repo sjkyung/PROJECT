@@ -23,13 +23,17 @@
 
 
 <!-- Contents Start -->
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
 <div class="showtimes-wrap">
 
     <div class="sect-city">
         <ul>
 
             <li class="on">
+<<<<<<< HEAD
                 <a href="./iframeMovie.aspx?midx=85624&amp;mcode=20028855&amp;areacode=13&amp;date=20220216" title="현재 선택">서울</a>
             </li>
 
@@ -63,6 +67,41 @@
 
             <li>
                 <a href="./iframeMovie.aspx?midx=85624&amp;mcode=20028855&amp;areacode=08,02,03,01&amp;date=20220216">광주/전라/제주</a>
+=======
+                <a href="./showtime.jsp?areacode=01" title="현재 선택">서울</a>
+            </li>
+
+            <li>
+                <a href="./showtime.jsp?areacode=02">경기</a>
+            </li>
+
+            <li>
+                <a href="./showtime.jsp?areacode=03">인천</a>
+            </li>
+
+            <li>
+                <a href="./showtime.jsp?areacode=04">강원</a>
+            </li>
+
+            <li>
+                <a href="./showtime.jsp?areacode=05">대전/충청</a>
+            </li>
+
+            <li>
+                <a href="./showtime.jsp?areacode=06">대구</a>
+            </li>
+
+            <li>
+                <a href="./showtime.jsp?areacode=07">부산/울산</a>
+            </li>
+
+            <li>
+                <a href="./showtime.jsp?areacode=08">경상</a>
+            </li>
+
+            <li>
+                <a href="./showtime.jsp?areacode=09">광주/전라/제주</a>
+>>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
             </li>
 
         </ul>
