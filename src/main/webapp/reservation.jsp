@@ -69,19 +69,31 @@ preselectSetting(
 	let btnClose=document.getElementsByClassName('btn-close');
 	let popup =document.getElementsByName('popup_guide');
 
-	btnClose[0].addEventListener('click', popupClose)
+	btnClose[0].addEventListener('click', popupClose);
 	function popupClose(){
 		popup[0].style.display='none';
 	};
 	
 	let select =document.getElementsByClassName('rating-12');
 	let post =document.getElementsByClassName('movie_poster');
+	let movieType= document.getElementsByClassName('movie_type');
+	let movieRating =document.getElementsByClassName('movie_rating');
 
-	selct[0].addEventListener('click', postImg)
+	select[0].addEventListener('click', postImg);
 	function  postImg(){
-		select[0].img.src='http://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85624/85624_185.JPG';
-		select[0].style.display='block';
+		// select[0].img.src='http://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85624/85624_185.JPG';
+		post[0].style.display='inline';
 	};
+
+	select[1].addEventListener('click', movie)
+	function movie(){
+		movieType[0].style.display='block';
+		movieRating[0].style.display='block';
+	};
+
+
+
+
 
 
 }
@@ -165,7 +177,7 @@ preselectSetting(
 									<a href="#" onclick="sortMovieByName();return false;" id="movieSortNameBtn" class="button btn-abc">가나다순</a>
 									
 								</div>
-								<div class="movie-list " id="movie_list">
+								<div class="movie-list nano has-scrollbar has-scrollbar-y" id="movie_list">
 									<ul class="content scroll-y" onscroll="movieSectionScrollEvent();" tabindex="-1" style="right: -15px;"><div class="selectbox-movie-type checkedBD" style="width: auto; top: 0px; display: none;">
 									<a href="#" onclick="closeSelectboxMovieType();return false;" class="btn-close">영화속성 레이어 닫기</a>
 									<ul>
@@ -269,11 +281,11 @@ preselectSetting(
 						</div>
 						<div class="col-body" style="height: 560px;">
 							<!-- 날짜선택 -->
-							<div class="date-list " id="date_list">
+							<div class="date-list nano has-scrollbar has-scrollbar-y" id="date_list">
 								<ul class="content scroll-y" tabindex="-1" style="right: -15px;"><div><li class="month dimmed"><div><span class="year">2022</span><span class="month">2</span><div></div></div></li><li data-index="0" date="20220218" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">18</span><span class="sreader"></span></a></li><li data-index="1" date="20220219" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">19</span><span class="sreader"></span></a></li><li data-index="2" date="20220220" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">20</span><span class="sreader"></span></a></li><li data-index="3" date="20220221" class="day"><a href="#" onclick="return false;"><span class="dayweek">월</span><span class="day">21</span><span class="sreader"></span></a></li><li data-index="4" date="20220222" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">22</span><span class="sreader"></span></a></li><li data-index="5" date="20220223" class="day"><a href="#" onclick="return false;"><span class="dayweek">수</span><span class="day">23</span><span class="sreader"></span></a></li><li data-index="6" date="20220224" class="day"><a href="#" onclick="return false;"><span class="dayweek">목</span><span class="day">24</span><span class="sreader"></span></a></li><li data-index="7" date="20220225" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">25</span><span class="sreader"></span></a></li><li data-index="8" date="20220226" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">26</span><span class="sreader"></span></a></li><li data-index="9" date="20220227" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">27</span><span class="sreader"></span></a></li><li data-index="10" date="20220228" class="day"><a href="#" onclick="return false;"><span class="dayweek">월</span><span class="day">28</span><span class="sreader"></span></a></li><li class="month dimmed"><div><span class="year">2022</span><span class="month">3</span><div></div></div></li><li data-index="11" date="20220301" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">1</span><span class="sreader"></span></a></li><li data-index="12" date="20220302" class="day"><a href="#" onclick="return false;"><span class="dayweek">수</span><span class="day">2</span><span class="sreader"></span></a></li><li data-index="13" date="20220303" class="day"><a href="#" onclick="return false;"><span class="dayweek">목</span><span class="day">3</span><span class="sreader"></span></a></li><li data-index="14" date="20220304" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">4</span><span class="sreader"></span></a></li><li data-index="15" date="20220305" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">5</span><span class="sreader"></span></a></li><li data-index="16" date="20220306" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">6</span><span class="sreader"></span></a></li><li data-index="17" date="20220308" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">8</span><span class="sreader"></span></a></li><li data-index="18" date="20220312" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">12</span><span class="sreader"></span></a></li><li data-index="19" date="20220322" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">22</span><span class="sreader"></span></a></li><li data-index="20" date="20220326" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">26</span><span class="sreader"></span></a></li></div>
 							<div><li class="month dimmed"><div><span class="year">2022</span><span class="month">2</span><div></div></div></li><li data-index="0" date="20220218" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">18</span><span class="sreader"></span></a></li><li data-index="1" date="20220219" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">19</span><span class="sreader"></span></a></li><li data-index="2" date="20220220" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">20</span><span class="sreader"></span></a></li><li data-index="3" date="20220221" class="day"><a href="#" onclick="return false;"><span class="dayweek">월</span><span class="day">21</span><span class="sreader"></span></a></li><li data-index="4" date="20220222" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">22</span><span class="sreader"></span></a></li><li data-index="5" date="20220223" class="day"><a href="#" onclick="return false;"><span class="dayweek">수</span><span class="day">23</span><span class="sreader"></span></a></li><li data-index="6" date="20220224" class="day"><a href="#" onclick="return false;"><span class="dayweek">목</span><span class="day">24</span><span class="sreader"></span></a></li><li data-index="7" date="20220225" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">25</span><span class="sreader"></span></a></li><li data-index="8" date="20220226" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">26</span><span class="sreader"></span></a></li><li data-index="9" date="20220227" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">27</span><span class="sreader"></span></a></li><li data-index="10" date="20220228" class="day"><a href="#" onclick="return false;"><span class="dayweek">월</span><span class="day">28</span><span class="sreader"></span></a></li><li class="month dimmed"><div><span class="year">2022</span><span class="month">3</span><div></div></div></li><li data-index="11" date="20220301" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">1</span><span class="sreader"></span></a></li><li data-index="12" date="20220302" class="day"><a href="#" onclick="return false;"><span class="dayweek">수</span><span class="day">2</span><span class="sreader"></span></a></li><li data-index="13" date="20220303" class="day"><a href="#" onclick="return false;"><span class="dayweek">목</span><span class="day">3</span><span class="sreader"></span></a></li><li data-index="14" date="20220304" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">4</span><span class="sreader"></span></a></li><li data-index="15" date="20220305" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">5</span><span class="sreader"></span></a></li><li data-index="16" date="20220306" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">6</span><span class="sreader"></span></a></li><li data-index="17" date="20220308" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">8</span><span class="sreader"></span></a></li><li data-index="18" date="20220312" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">12</span><span class="sreader"></span></a></li><li data-index="19" date="20220322" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">22</span><span class="sreader"></span></a></li><li data-index="20" date="20220326" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">26</span><span class="sreader"></span></a></li></div>
 							</ul>
-							<div class="pane pane-y" style="display: block; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px; top: 0px;"></div></div>
+							<div class="pane pane-y active" style="display: block; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px; top: 0px;"></div></div>
 							<div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div>
 						</div>
 							</div>
