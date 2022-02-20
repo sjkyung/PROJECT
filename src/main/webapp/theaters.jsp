@@ -362,7 +362,7 @@
 <h4 class="hidden"> + [상영시간표]</h4>
             
 <!-- Showtimes Start -->
-<iframe id="ifrm_movie_time_table" src="showtime.jsp" title="[] 상영시간표" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="height: 1200px; min-height: 500px; padding-top: 120px;"></iframe>
+<iframe id="ifrm_movie_time_table" src="showtime.jsp?areacode=01" title="[] 상영시간표" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="height: 1200px; min-height: 500px; padding-top: 120px;"></iframe>
 <!-- /Showtimes End -->
 
 </div>

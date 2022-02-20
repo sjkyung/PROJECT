@@ -438,7 +438,7 @@ function vgclose(){
 
 
 			<!-- 해당 영화 제목값을 넘겨서 해당하는 시간표가 나오도록 함 -->
-            <iframe id="ifrm_movie_time_table" src="showtime.jsp" title="언차티드 상영시간표" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="padding-top:50px; height: 1050px; min-height: 100px;"></iframe>
+            <iframe id="ifrm_movie_time_table" src="showtime.jsp?areacode=01" title="언차티드 상영시간표" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="padding-top:50px; height: 1200px; min-height: 100px;"></iframe>
 			
         </div><!-- .col-detail -->
 

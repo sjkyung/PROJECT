@@ -282,7 +282,7 @@
 
                     <script>
 
-    'use strict'
+
     window.onload=function(){
     let btnClose=document.getElementsByClassName('btn-close');
     let count=document.getElementsByClassName('link-count');
@@ -304,59 +304,51 @@
      let item=document.getElementsByClassName('item');
      let btn=document.getElementById('btn-next');
      let btnprev=document.getElementById('btn-prev');
-     for(let i=0; i<=imgclick.length-1;i++){
+        for(let i=0; i<=imgclick.length-1;i++) {
      imgclick[i].addEventListener('click', function(){
-    	 console.log('사진 클릭!');
-    	 console.log(i);
-         stillcutPhoto.style.display='block';
-         item[i].style.display='block';	
 
-    btnprev.addEventListener('click',prev);
-    btn.addEventListener('click',next);
-    function next(){
-        console.log('next() 실행입니다.');
-        if(i>=item.length-1){
-            item[i].style.display='none';
-            i=0;
-            
-        }
-        item[i].style.display='none';
-        item[i+1].style.display='block';
-        i++;
+             btnClose[1].addEventListener('click', function () {
+                 stillcutPhoto.style.display = 'none';
+                 item[i].style.display = 'none';
+             })
+             console.log('사진 클릭!');
+             console.log(i);
+             stillcutPhoto.style.display = 'block';
+             item[i].style.display = 'block';
+
+             btnprev.addEventListener('click', prev);
+             btn.addEventListener('click', next);
+
+             function next() {
+                 console.log('next() 실행입니다.');
+                 console.log(i);
+                 if (i >= imgclick.length - 1) {
+                     item[imgclick.length - 1].style.display = 'none';
+                     item[0].style.display = 'block';
+                     i = 1;
+                 }
+                 item[i].style.display = 'none';
+                 item[i + 1].style.display = 'block';
+                 i++;
+             }
+
+             function prev() {
+                 console.log('prev() 실행입니다.');
+                 console.log(i);
+                 item[i].style.display = 'none';
+                 item[i - 1].style.display = 'block';
+                 i--;
+
+
+             }
+         })
+
     }
-    function prev(){
-        console.log('prev() 실행입니다.');
-        if(i<=0){
-            item[i].style.display='none';
-            i=item.length-1;
-        }
-        item[i].style.display='none';
-        item[i-1].style.display='block';
-        i--;
-        
-        
-
-    }
-        })
-        
-        btnClose[1].addEventListener('click', function(){
-       	 stillcutPhoto.style.display='none';
-         
-     })
-
-
-     }
 
 
 
         }
 
-
- 
-     
-    
-
-     
         
     </script>
     <span class="like">
