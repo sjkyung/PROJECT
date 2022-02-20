@@ -1,14 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: small
-  Date: 2022-02-17
-  Time: 오후 6:56
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
+    <title>CGV-Admin-main</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -22,7 +18,7 @@
     <script type="text/javascript">
         $(document).ready( function() {
 
-            $("#headers").load("header.html");
+            $("#headers").load("header.jsp");
 
         });
     </script>
@@ -30,7 +26,7 @@
 <body class="sb-nav-fixed" >
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="../../../../../../Downloads/cgv_admin/index.html">CGV Administrator</a>
+    <a class="navbar-brand ps-3" href="main.jsp">CGV Administrator</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <!-- Navbar Search-->
@@ -57,7 +53,7 @@
 
 <div id="headers"></div>
 
-<div id="layoutSidenav_content" style="margin-top:100px; margin-left: 240px">
+<div id="layoutSidenav_content" style="margin-top:70px; margin-left: 240px">
     <main>
         <div class="container-fluid px-4" >
 
@@ -65,20 +61,20 @@
 
 
 
-            <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item active">바로가기  --> </li>
-            </ol>
+<%--            <ol class="breadcrumb mb-4">--%>
+<%--                <li class="breadcrumb-item active">바로가기  --> </li>--%>
+<%--            </ol>--%>
             <div class="row">
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-6" style="width: 18%">
                     <div class="card bg-primary text-white mb-4">
                         <div class="card-body">회원관리</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="#">View Details</a>
+                            <a class="small text-white stretched-link" href="member-lookup.jsp">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-6" style="width: 18%">
                     <div class="card bg-warning text-white mb-4">
                         <div class="card-body">영화관리</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
@@ -87,7 +83,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-6" style="width: 18%">
                     <div class="card bg-success text-white mb-4">
                         <div class="card-body">이벤트 관리</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
@@ -96,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-6" style="width: 18%">
                     <div class="card bg-danger text-white mb-4">
                         <div class="card-body">공지관리</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
@@ -105,9 +101,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-xl-3 col-md-6" style="width: 18%">
+                    <div class="card bg-black text-white mb-4">
+                        <div class="card-body">문의관리</div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href="#">View Details</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <img src="./assets/img/CGVgangnam.jpg" width="100%" style="padding-bottom: 30px;">
+            <img src="./assets/img/CGVgangnam.jpg" width="90%" style="padding-bottom: 30px;">
             <!--  여기는 그래프인데 생략합니다
             <div class="row">
                 <div class="col-xl-6">

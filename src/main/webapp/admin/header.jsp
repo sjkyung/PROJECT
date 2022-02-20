@@ -1,6 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-    
+<html lang="ko">
+
     <body class="sb-nav-fixed" >
 
         <div id="layoutSidenav">
@@ -21,9 +23,9 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="testpage.jsp">회원정보조회</a>
-                                    <a class="nav-link" href="testpage.jsp">예매내역조회</a>
-                                    <a class="nav-link" href="testpage.jsp">결제내역조회</a>
+                                    <a class="nav-link" href="./member-lookup.jsp">회원정보조회</a>
+                                    <a class="nav-link" href="./member-ticket.jsp">예매내역조회</a>
+                                    <a class="nav-link" href="./member-paymentlist.jsp">결제내역조회</a>
                                     <a class="nav-link" href="testpage.jsp">포인트내역조회</a>
                                 </nav>
                                 </div>
@@ -91,7 +93,7 @@
                                         Authentication
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    
+
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="login.html">Login</a>
