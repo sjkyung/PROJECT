@@ -4,8 +4,8 @@
 <html lang="ko">
 <head>
     <meta charset="utf-8"/>
-    <title>일반회원 약관동의 | CJ ONE</title>
-	<meta name="Description" content="CCJ ONE 회원이 되시면 보다 쿠폰, 이벤트 등 다양한 혜택과 서비스를 받으실 수 있습니다. " />
+    <title>일반회원 약관동의 | CGV</title>
+	<meta name="Description" content="CGV 회원이 되시면 보다 쿠폰, 이벤트 등 다양한 혜택과 서비스를 받으실 수 있습니다. " />
     <meta http-equiv="X-UA-Compatible" content="IE=edge ,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 	<meta name="format-detection" content="telephone=no" />
@@ -289,7 +289,7 @@ function linkCardMng() {
                             <h1 class="h1_tit">회원가입</h1>
                         
                     					
-					<p class="h_desc">라이프스타일 멤버십 CJ ONE! 외식, 쇼핑, 엔터테인먼트 서비스를 한 장의 카드로 즐기세요~</p>
+					<p class="h_desc">라이프스타일 멤버십 CGV! 외식, 쇼핑, 엔터테인먼트 서비스를 한 장의 카드로 즐기세요~</p>
 				</div>
 				<!--title-->
 				<div class="cont_area">
@@ -321,7 +321,7 @@ function linkCardMng() {
 									
 									<!-- 제휴브랜드 -->
 									<div class="allianceBrand_box">
-										<h2 class="haze">CJ ONE 제휴 브랜드</h2>
+										<h2 class="haze">CGV 제휴 브랜드</h2>
 										<div class="in_sec">
 											<ul class='alliance_list'><li><a href='/cjmweb/point-card/brand/detail.do?coopco_cd=7010&brnd_cd=1000&mcht_no=1000'><img src='./css/20190809_1724081.png' alt='CGV'></a><li><a href='/cjmweb/point-card/brand/detail.do?coopco_cd=7190&brnd_cd=1900&mcht_no=1900'><img src='./css/20191211_16ef2602d5451.png' alt='TVING'></a><li><a href='/cjmweb/point-card/brand/detail.do?coopco_cd=7150&brnd_cd=1501&mcht_no=1501'><img src='./css/20180914_1352121.png' alt='CJ문화재단'></a><li><a href='/cjmweb/point-card/brand/detail.do?coopco_cd=7040&brnd_cd=4160&mcht_no=4160'><img src='./css/20180910_1411221.png' alt='CATCHON'></a><li><a href='/cjmweb/point-card/brand/detail.do?coopco_cd=7190&brnd_cd=1910&mcht_no=1910'><img src='./css/20191105_1610451.png' alt='티빙몰'></a><li><a href='/cjmweb/point-card/brand/detail.do?coopco_cd=7230&brnd_cd=2301&mcht_no=2301'><img src='./css/20210827_17b86a5fb1071.png' alt='CJ더마켓(오프라인)'></a><li><a href='/cjmweb/point-card/brand/detail.do?coopco_cd=7030&brnd_cd=3000&mcht_no=3000'><img src='./css/20191007_1836371.png' alt='올리브영'></a><li><a href='/cjmweb/point-card/brand/detail.do?coopco_cd=7050&brnd_cd=5000&mcht_no=30'><img src='./css/20210510_17953c8f11841.png' alt='CJ온스타일'></a><li><a href='/cjmweb/point-card/brand/detail.do?coopco_cd=7060&brnd_cd=6130&mcht_no=6130'><img src='./css/20190628_1544231.png' alt='쿡킷'></a><li><a href='/cjmweb/point-card/brand/detail.do?coopco_cd=7060&brnd_cd=6010&mcht_no=6010'><img src='./css/20190703_0846461.png' alt='CJ더마켓'></a></li></ul>
 										</div>
@@ -368,7 +368,7 @@ function linkCardMng() {
 					                       	
 					                       		
 					                       			<p class="s_txt">
-						                       			이용자는 개인정보 수집 및 활용(선택)에 대한 동의를 거부할 권리가 있으며, 미 동의시에도 회원가입을 하실 수 있습니다. 단, <strong class="em">미 동의시 CJ ONE의 주요 행사 안내 및 혜택 제공에 제한</strong>이 있을 수 있습니다.
+						                       			이용자는 개인정보 수집 및 활용(선택)에 대한 동의를 거부할 권리가 있으며, 미 동의시에도 회원가입을 하실 수 있습니다. 단, <strong class="em">미 동의시 CGV의 주요 행사 안내 및 혜택 제공에 제한</strong>이 있을 수 있습니다.
 					                       			</p>
 
 										</div>
@@ -390,7 +390,7 @@ function linkCardMng() {
 		</thead>
 	<tbody>
 		<tr>
-			<td>CJ  ONE및 스템프 서비스가 제휴된 제휴사</td>
+			<td>CGV및 스템프 서비스가 제휴된 제휴사</td>
 			<td>e-스탬프 서비스 제공 및   혜택 제공</td>
 			<td>상품명(서비스명), 상품분류명, 구매/이용 수량, 구매/이용일시</td>
 			<td>회원 탈퇴 후 30일 까지 또는 해당 서비스 동의 철회시까지</td>
@@ -404,7 +404,7 @@ function linkCardMng() {
 						                   		
 						                 		
 						                 			<ul class="bul_list">
-														<li class="dot_arr">개인정보 제공받는 업체 및 서비스는 CJ ONE 홈페이지(www.cjone.com)를 통해 확인하실 수 있으며, 상기 내용의 변경 발생 시 별도 통지없이 홈페이지를 통해 안내를 드립니다.</li>
+														<li class="dot_arr">개인정보 제공받는 업체 및 서비스는 CGVE 홈페이지(www.CGV.com)를 통해 확인하실 수 있으며, 상기 내용의 변경 발생 시 별도 통지없이 홈페이지를 통해 안내를 드립니다.</li>
 														<li class="dot_arr em">이용자는 스탬프 서비스 이용을 위한 개인정보 수집 및 활용 동의 동의를 거부할 권리가 있으며, <strong class="em">동의 거부를 하더라도 회원가입 및 서비스 이용이 가능</strong>합니다.</li>
 													</ul>
 										</div>
@@ -435,7 +435,7 @@ function linkCardMng() {
                 <td>
                     <ul class="bul_list">
                         <li><span class="dot_arr">제공받는 자의 개인맞춤형 상품 &middot; 서비스, 우대 &middot; 혜택 정보 제공</span></li>
-                        <li><span class="dot_arr">CJ ONE 회원에 대한 이벤트, 우대서비스 제공 및 마케팅 활동</span></li>
+                        <li><span class="dot_arr">CGV 회원에 대한 이벤트, 우대서비스 제공 및 마케팅 활동</span></li>
                         <li><span class="dot_arr">이용자들의 상품 &middot; 서비스 이용행태 분석 및 통계</span></li>
                     </ul>
                 </td>
@@ -444,7 +444,7 @@ function linkCardMng() {
                 <th scope="row">제공항목</th>
                 <td>
                     <ul class="bul_list">
-                        <li><span class="dot_arr">이름, 생년월일, 성별, 회원번호, 휴대전화번호, 이메일 주소, CJ ONE 카드번호, CI</span></li>
+                        <li><span class="dot_arr">이름, 생년월일, 성별, 회원번호, 휴대전화번호, 이메일 주소, CGV 카드번호, CI</span></li>
                         <li><span class="dot_arr">포인트 이용정보(실적, 내역, 이용처 등), 서비스 구매 내역 정보(상품명, 금액 등), 위치정보 및  결제정보(수단, 내역, 사용처 등)</span></li>
                         <li><span class="dot_arr">개인정보의 가공 &middot; 분석을 통한 정보(고객 선호, 구매 패턴, 개인성향 등), 서비스 접속/이용기록</span></li>
                         <li style="padding-top:5px">※ 상기 제공에 동의하신 모든 항목은 본인이 가입한 서비스의 가입 시점부터 본 동의 시점까지의 정보도 포함됩니다.</li>
@@ -455,14 +455,14 @@ function linkCardMng() {
                 <th scope="row">보유 및 이용기간</th>
                 <td>
                     <ul class="bul_list">
-                        <li><span class="dot_arr">위 개인정보는 제공에 관한 동의일로부터 CJ ONE 가입 해지(탈퇴확정)시까지 위 이용목적을 위하여 보유 및 이용됩니다.</span></li>
+                        <li><span class="dot_arr">위 개인정보는 제공에 관한 동의일로부터 CGV 가입 해지(탈퇴확정)시까지 위 이용목적을 위하여 보유 및 이용됩니다.</span></li>
                     </ul>
                 </td>
             </tr>
         </tbody>
     </table>
     <p style="padding-top:8px;">※ 본 동의 사항은 선택적 동의 사항으로, 회원은 개인정보의 제공 및 동의를 거부할 수 있으며, 거부하시더라도 회원가입 등 기타 서비스 이용은 가능합니다. 단, 일부 서비스 이용이 제한될 수 있습니다.</p>
-    <p style="padding-top:5px">※ 동의 의사를 철회하고자 하는 경우에는 &lsquo;CJ ONE &gt; 회원정보관리&rsquo; 메뉴를 통해 약관 철회가 가능하며, 보유기간 경과 전 파기를 원하시는 경우 CJ ONE 혹은 해당 서비스 고객센터를 통해 파기 요청이 가능합니다.</p>
+    <p style="padding-top:5px">※ 동의 의사를 철회하고자 하는 경우에는 &lsquo;CGV &gt; 회원정보관리&rsquo; 메뉴를 통해 약관 철회가 가능하며, 보유기간 경과 전 파기를 원하시는 경우 CGV 혹은 해당 서비스 고객센터를 통해 파기 요청이 가능합니다.</p>
     <p style="padding-top:5px;font-size: 12px">※ 씨제이올리브네트웍스(주) 올리브영은 2019년 11월 1일 이후 변경된 법인명으로 적용됩니다.</p>
 </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 											</div>
@@ -471,7 +471,7 @@ function linkCardMng() {
 						                   		
 						                 		
 						                 			<ul class="bul_list">
-														<li class="dot_arr">개인정보 제공받는 업체 및 서비스는 CJ ONE 홈페이지(www.cjone.com)를 통해 확인하실 수 있으며, 상기 내용의 변경 발생 시 별도 통지없이 홈페이지를 통해 안내를 드립니다.</li>
+														<li class="dot_arr">개인정보 제공받는 업체 및 서비스는 CGV 홈페이지(www.CGV.com)를 통해 확인하실 수 있으며, 상기 내용의 변경 발생 시 별도 통지없이 홈페이지를 통해 안내를 드립니다.</li>
 														<li class="dot_arr em">이용자는 개인정보의 선택적인 제3자 제공에 대한 동의 동의를 거부할 권리가 있으며, <strong class="em">동의 거부를 하더라도 회원가입 및 서비스 이용이 가능</strong>합니다.</li>
 													</ul>
 										</div>
@@ -541,7 +541,7 @@ function linkCardMng() {
                 
                if(document.location.protocol == 'http:' && chrome_ver()){
                $.ajax({
-                   url: 'https://www.cjone.com/cjmweb/member/ssoLogin.do?callback=?', 
+                   url: 'https://www.CGV.com/cjmweb/member/ssoLogin.do?callback=?', 
                    dataType: "jsonp",
                    type:"post",
                    success: function(data) {
