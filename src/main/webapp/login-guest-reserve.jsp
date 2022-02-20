@@ -460,8 +460,7 @@
                             });
 
                             $('.hometicket').on('click', function () {
-                                // var url = 'http://ticket.cgv.co.kr/CGV2011/RIA/home_ticket.aspx?booking_no=' + $(this).attr("data");
-                                var url = 'http://ticket.cgv.co.kr/CGV2011/RIA/home_ticket.aspx?booking_no=' + $(this).attr("data") + '&isMember=N' + '&userPIN=' + "9IK5YZ20i11vJSiKvMClJg%3d%3d";
+                                var url = './login-guest-hometicket.jsp';
                                 var win = window.open(url, "hometicket", "left=0,top=o,width=640,height=897,toolbar=no,scrollbars=no");
                                 win.focus();
                             });
