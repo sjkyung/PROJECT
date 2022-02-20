@@ -272,13 +272,26 @@
                 </div>
             </div>
         </div>
+       
         <div class="cgvSaleTab_wrap">
             <ul class="cgvSaleTab_titleWrap" style="width: 97%;">
-                <li class="active" ><a href="discount.jsp?page=1">hot</a></li>
-                <li class=""><a href="discount.jsp?page=2">통신사</a></li>
-                <li class=""><a href="discount.jsp?page=3">신용카드</a></li>
-                <li class=""><a href="discount.jsp?page=4">포인트</a></li>
-                <li class=""><a href="discount.jsp?page=5">극장별할인</a></li>
+                
+               <%--  <%
+                request.setCharacterEncoding("UTF-8");
+                String Page = request.getParameter("page");
+                String m1 = "", m2="",m3="",m4="",m5="";
+                if(Page.equals("001")) m1 = "active";
+                if(Page.equals("002")) m2 = "active";
+                if(Page.equals("003")) m3 = "active";
+                if(Page.equals("004")) m4 = "active";
+                if(Page.equals("005")) m5 = "active";
+        
+                %> --%>
+                <li class="active"><a href="discount.jsp?page=001" ">hot</a></li>
+                <li class=""><a href="discount.jsp?page=002" ">통신사</a></li>
+                <li class=""><a href="discount.jsp?page=003" ">신용카드</a></li>
+                <li class=""><a href="discount.jsp?page=004" ">포인트</a></li>
+                <li class=""><a href="discount.jsp?page=005" ">극장별할인</a></li>
             </ul>
             <div class="cgvSaleTab_ContentsWrap">
 
