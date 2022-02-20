@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 <head>
     <title>discount</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -276,22 +276,22 @@
         <div class="cgvSaleTab_wrap">
             <ul class="cgvSaleTab_titleWrap" style="width: 97%;">
                 
-               <%--  <%
+              <%--   <%
                 request.setCharacterEncoding("UTF-8");
-                String Page = request.getParameter("page");
+                String mCate = request.getParameter("mCate");
                 String m1 = "", m2="",m3="",m4="",m5="";
-                if(Page.equals("001")) m1 = "active";
-                if(Page.equals("002")) m2 = "active";
-                if(Page.equals("003")) m3 = "active";
-                if(Page.equals("004")) m4 = "active";
-                if(Page.equals("005")) m5 = "active";
+                if(mCate.equals("001")) m1 = "active";
+                if(mCate.equals("002")) m2 = "active";
+                if(mCate.equals("003")) m3 = "active";
+                if(mCate.equals("004")) m4 = "active";
+                if(mCate.equals("005")) m5 = "active";
         
-                %> --%>
-                <li class="active"><a href="discount.jsp?page=001" ">hot</a></li>
-                <li class=""><a href="discount.jsp?page=002" ">통신사</a></li>
-                <li class=""><a href="discount.jsp?page=003" ">신용카드</a></li>
-                <li class=""><a href="discount.jsp?page=004" ">포인트</a></li>
-                <li class=""><a href="discount.jsp?page=005" ">극장별할인</a></li>
+                %>  --%>
+                <li class="active"><a href="discount.jsp?mCate=116" >hot</a></li>
+                <li class=""><a href="discount.jsp?mCate=001" >통신사</a></li>
+                <li class=""><a href="discount.jsp?mCate=002" >신용카드</a></li>
+                <li class=""><a href="discount.jsp?mCate=003" >포인트</a></li>
+                <li class=""><a href="discount.jsp?mCate=004" >극장별할인</a></li>
             </ul>
             <div class="cgvSaleTab_ContentsWrap">
 
