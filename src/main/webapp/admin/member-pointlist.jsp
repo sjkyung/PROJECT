@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>admin-lookup</title>
+    <title>admin-pointlist</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -59,140 +59,140 @@
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    회원 정보 조회
+                    포인트 내역 조회
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple">
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Password</th>
-                            <th>Hp</th>
-                            <th>Address</th>
-                            <th>age</th>
-                            <th>Reg date</th>
-                            <th>Point</th>
+                            <th>적립 구분</th>
+                            <th>상품 구매 극장</th>
+                            <th>결제 금액</th>
+                            <th>적립</th>
+                            <th>적립일</th>
+                            <th>사용 가능 Point</th>
                         </tr>
                         </thead>
                         <tfoot>
                         <tr>
                             <th>Id</th>
-                            <th>Password</th>
-                            <th>Hp</th>
-                            <th>Address</th>
-                            <th>age</th>
-                            <th>Reg date</th>
-                            <th>Point</th>
+                            <th>적립 구분</th>
+                            <th>상품 구매 극장</th>
+                            <th>결제 금액</th>
+                            <th>적립</th>
+                            <th>적립일</th>
+                            <th>사용 가능 Point</th>
                         </tr>
                         </tfoot>
                         <tbody>
                         <tr>
-                            <td style="width: 10%;">apple</td>
-                            <td style="width: 10%;">1234</td>
-                            <td style="width: 15%;">010-1111-1111</td>
-                            <td style="width: 15%;">경기도 수원시 영통구</td>
-                            <td style="width: 10%;">20</td>
+                            <td style="width: 15%;">apple</td>
+                            <td style="width: 15%;">팝콘</td>
+                            <td style="width: 15%;">시흥 CGV</td>
+                            <td style="width: 15%;">14,000 원</td>
+                            <td style="width: 10%;">700 P</td>
                             <td style="width: 15%;">2020/02/02</td>
                             <td style="width: 15%;">50,000 P</td>
                         </tr>
                         <tr>
-                            <td>banana</td>
-                            <td>5678</td>
-                            <td>010-2222-2222</td>
-                            <td>서울특별시 노원구 공릉동</td>
-                            <td>30</td>
-                            <td>2020/01/02</td>
-                            <td>5,000 P</td>
+                            <td>apple</td>
+                            <td>팝콘</td>
+                            <td>시흥 CGV</td>
+                            <td>14,000 원</td>
+                            <td>700 P</td>
+                            <td>2020/02/02</td>
+                            <td>50,000 P</td>
                         </tr>
                         <tr>
-                            <td>hello</td>
-                            <td>1234</td>
-                            <td>010-3333-3333</td>
-                            <td>서울특별시 강남구 양재동</td>
-                            <td>15</td>
-                            <td>2020/12/02</td>
-                            <td>4,000 P</td>
+                            <td>apple</td>
+                            <td>팝콘</td>
+                            <td>시흥 CGV</td>
+                            <td>14,000 원</td>
+                            <td>700 P</td>
+                            <td>2020/02/02</td>
+                            <td>50,000 P</td>
                         </tr>
                         <tr>
-                            <td>hello</td>
-                            <td>1234</td>
-                            <td>010-3333-3333</td>
-                            <td>서울특별시 강남구 양재동</td>
-                            <td>15</td>
-                            <td>2020/12/02</td>
-                            <td>4,000 P</td>
+                            <td>apple</td>
+                            <td>팝콘</td>
+                            <td>시흥 CGV</td>
+                            <td>14,000 원</td>
+                            <td>700 P</td>
+                            <td>2020/02/02</td>
+                            <td>50,000 P</td>
                         </tr>
                         <tr>
-                            <td>banana</td>
-                            <td>5678</td>
-                            <td>010-2222-2222</td>
-                            <td>서울특별시 노원구 공릉동</td>
-                            <td>30</td>
-                            <td>2020/01/02</td>
-                            <td>5,000 P</td>
+                            <td>apple</td>
+                            <td>팝콘</td>
+                            <td>시흥 CGV</td>
+                            <td>14,000 원</td>
+                            <td>700 P</td>
+                            <td>2020/02/02</td>
+                            <td>50,000 P</td>
                         </tr>
                         <tr>
-                            <td>hello</td>
-                            <td>1234</td>
-                            <td>010-3333-3333</td>
-                            <td>서울특별시 강남구 양재동</td>
-                            <td>15</td>
-                            <td>2020/12/02</td>
-                            <td>4,000 P</td>
+                            <td>apple</td>
+                            <td>팝콘</td>
+                            <td>시흥 CGV</td>
+                            <td>14,000 원</td>
+                            <td>700 P</td>
+                            <td>2020/02/02</td>
+                            <td>50,000 P</td>
                         </tr>
                         <tr>
-                            <td>hello</td>
-                            <td>1234</td>
-                            <td>010-3333-3333</td>
-                            <td>서울특별시 강남구 양재동</td>
-                            <td>15</td>
-                            <td>2020/12/02</td>
-                            <td>4,000 P</td>
+                            <td>apple</td>
+                            <td>팝콘</td>
+                            <td>시흥 CGV</td>
+                            <td>14,000 원</td>
+                            <td>700 P</td>
+                            <td>2020/02/02</td>
+                            <td>50,000 P</td>
                         </tr>
                         <tr>
-                            <td>banana</td>
-                            <td>5678</td>
-                            <td>010-2222-2222</td>
-                            <td>서울특별시 노원구 공릉동</td>
-                            <td>30</td>
-                            <td>2020/01/02</td>
-                            <td>5,000 P</td>
+                            <td>apple</td>
+                            <td>팝콘</td>
+                            <td>시흥 CGV</td>
+                            <td>14,000 원</td>
+                            <td>700 P</td>
+                            <td>2020/02/02</td>
+                            <td>50,000 P</td>
                         </tr>
                         <tr>
-                            <td>hello</td>
-                            <td>1234</td>
-                            <td>010-3333-3333</td>
-                            <td>서울특별시 강남구 양재동</td>
-                            <td>15</td>
-                            <td>2020/12/02</td>
-                            <td>4,000 P</td>
+                            <td>apple</td>
+                            <td>팝콘</td>
+                            <td>시흥 CGV</td>
+                            <td>14,000 원</td>
+                            <td>700 P</td>
+                            <td>2020/02/02</td>
+                            <td>50,000 P</td>
                         </tr>
                         <tr>
-                            <td>hello</td>
-                            <td>1234</td>
-                            <td>010-3333-3333</td>
-                            <td>서울특별시 강남구 양재동</td>
-                            <td>15</td>
-                            <td>2020/12/02</td>
-                            <td>4,000 P</td>
+                            <td>apple</td>
+                            <td>팝콘</td>
+                            <td>시흥 CGV</td>
+                            <td>14,000 원</td>
+                            <td>700 P</td>
+                            <td>2020/02/02</td>
+                            <td>50,000 P</td>
                         </tr>
                         <tr>
-                            <td>banana</td>
-                            <td>5678</td>
-                            <td>010-2222-2222</td>
-                            <td>서울특별시 노원구 공릉동</td>
-                            <td>30</td>
-                            <td>2020/01/02</td>
-                            <td>5,000 P</td>
+                            <td>apple</td>
+                            <td>팝콘</td>
+                            <td>시흥 CGV</td>
+                            <td>14,000 원</td>
+                            <td>700 P</td>
+                            <td>2020/02/02</td>
+                            <td>50,000 P</td>
                         </tr>
                         <tr>
-                            <td>hello</td>
-                            <td>1234</td>
-                            <td>010-3333-3333</td>
-                            <td>서울특별시 강남구 양재동</td>
-                            <td>15</td>
-                            <td>2020/12/02</td>
-                            <td>4,000 P</td>
+                            <td>apple</td>
+                            <td>팝콘</td>
+                            <td>시흥 CGV</td>
+                            <td>14,000 원</td>
+                            <td>700 P</td>
+                            <td>2020/02/02</td>
+                            <td>50,000 P</td>
                         </tr>
                         </tbody>
                     </table>

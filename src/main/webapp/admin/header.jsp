@@ -26,7 +26,7 @@
                                     <a class="nav-link" href="./member-lookup.jsp">회원정보조회</a>
                                     <a class="nav-link" href="./member-ticket.jsp">예매내역조회</a>
                                     <a class="nav-link" href="./member-paymentlist.jsp">결제내역조회</a>
-                                    <a class="nav-link" href="testpage.jsp">포인트내역조회</a>
+                                    <a class="nav-link" href="./member-pointlist.jsp">포인트내역조회</a>
                                 </nav>
                                 </div>
                                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
