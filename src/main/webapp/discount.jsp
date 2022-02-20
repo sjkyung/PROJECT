@@ -287,11 +287,11 @@
                 if(Page.equals("005")) m5 = "active";
         
                 %> --%>
-                <li class="active"><a href="discount.jsp?page=001" ">hot</a></li>
-                <li class=""><a href="discount.jsp?page=002" ">통신사</a></li>
-                <li class=""><a href="discount.jsp?page=003" ">신용카드</a></li>
-                <li class=""><a href="discount.jsp?page=004" ">포인트</a></li>
-                <li class=""><a href="discount.jsp?page=005" ">극장별할인</a></li>
+                <li class="active"><a href="discount.jsp">hot</a></li>
+                <li class=""><a href="discount.jsp">통신사</a></li>
+                <li class=""><a href="discount.jsp">신용카드</a></li>
+                <li class=""><a href="discount.jsp">포인트</a></li>
+                <li class=""><a href="discount.jsp">극장별할인</a></li>
             </ul>
             <div class="cgvSaleTab_ContentsWrap">
 
@@ -381,8 +381,6 @@
         
     </script>
 <!-- E [U20200724] CGV할인정보 변경 -->
-
-
 
 
 
