@@ -1027,10 +1027,10 @@
                     <ul class="giftcon_list_wrap">
                         <li>
                             <dl class='giftcon_list'>
-                                <dt>영화관람권<a href='/culture-event/popcorn-store/store-category.aspx?CategoryIdx=2' class='btn_more'>더보기</a></dt>
+                                <dt>영화관람권<a href='./store-category.jsp?Categoryidx=2' class='btn_more'>더보기</a></dt>
                                
                                 <dd>
-                                    <a href='/culture-event/popcorn-store/product-detail.aspx?GG_NO=100253'>
+                                    <a href='./product-detail.jsp?GG_NO=100253'>
                                         <div class='img_wrap' data-scale=false><img src='http://img.cgv.co.kr/GiftStore/Product/Pc/List/16094706927780.jpg' alt='CGV 영화관람권'></div>
                                         <div class='giftcon_info_wrap'>
                                             <span>CGV 영화관람권</span>
@@ -1042,10 +1042,10 @@
                         </li>
                         <li>
                             <dl class='giftcon_list'>
-                                <dt>기프트카드<a href='/culture-event/popcorn-store/store-category.aspx?CategoryIdx=3' class='btn_more'>더보기</a></dt>
+                                <dt>기프트카드<a href='./store-category.jsp?Categoryidx=3' class='btn_more'>더보기</a></dt>
                                
                                 <dd>
-                                    <a href='/culture-event/popcorn-store/product-detail.aspx?GG_NO=100161'>
+                                    <a href='./product-detail.jsp?GG_NO=100253'>
                                         <div class='img_wrap' data-scale=false><img src='http://img.cgv.co.kr/GiftStore/Product/Pc/List/15814124358590.jpg' alt='PACONNIE A형'></div>
                                         <div class='giftcon_info_wrap'>
                                             <span>PACONNIE A형</span>
