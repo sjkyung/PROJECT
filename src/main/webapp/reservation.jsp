@@ -59,8 +59,7 @@ preselectSetting(
 	''
 );
 </script>
-<<<<<<< HEAD
-=======
+
 <script>
 	
 
@@ -70,24 +69,36 @@ preselectSetting(
 	let btnClose=document.getElementsByClassName('btn-close');
 	let popup =document.getElementsByName('popup_guide');
 
-	btnClose[0].addEventListener('click', popupClose)
+	btnClose[0].addEventListener('click', popupClose);
 	function popupClose(){
 		popup[0].style.display='none';
 	};
 	
 	let select =document.getElementsByClassName('rating-12');
 	let post =document.getElementsByClassName('movie_poster');
+	let movieType= document.getElementsByClassName('movie_type');
+	let movieRating =document.getElementsByClassName('movie_rating');
 
-	selct[0].addEventListener('click', postImg)
+	select[0].addEventListener('click', postImg);
 	function  postImg(){
-		select[0].img.src='http://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85624/85624_185.JPG';
-		select[0].style.display='block';
+		// select[0].img.src='http://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85624/85624_185.JPG';
+		post[0].style.display='inline';
 	};
+
+	select[1].addEventListener('click', movie)
+	function movie(){
+		movieType[0].style.display='block';
+		movieRating[0].style.display='block';
+	};
+
+
+
+
 
 
 }
 </script>
->>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
+
 </head>
 
 <body>
@@ -101,12 +112,10 @@ preselectSetting(
 			<!-- 타이틀 -->
 			<div class="navi">
 				<div  class="newsletter">
-<<<<<<< HEAD
-					<p><a href="#">Click here</a> if you want to receive newsletter about English subtitle movies</p>
-=======
+
 					<p style="display :none">
 						<a href="#">Click here</a> if you want to receive newsletter about English subtitle movies</p>
->>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
+
 				</div>
 				<span class="right">
 				
@@ -123,7 +132,7 @@ preselectSetting(
 			<!-- 메인컨텐츠 -->
 			<div class="steps">
 				<!-- step1 -->
-				<div class="step step1">
+				<div class="step step1" style="height: 595px; display: block;">
 					<!-- MOVIE 섹션 -->
 					<div class="section section-movie">
 						<!-- col-head -->
@@ -132,7 +141,7 @@ preselectSetting(
 							<a href="#" class="skip_to_something" onclick="skipToSomething('skip_theater_list');return false;">영화선택 건너뛰기</a>
 						</div>
 						<!-- col-body -->
-						<div class="col-body">
+						<div class="col-body"  style="height: 560px;">
 							<!-- 영화선택 -->
 							<div class="movie-select">
 								<div class="tabmenu">
@@ -168,7 +177,7 @@ preselectSetting(
 									<a href="#" onclick="sortMovieByName();return false;" id="movieSortNameBtn" class="button btn-abc">가나다순</a>
 									
 								</div>
-								<div class="movie-list " id="movie_list">
+								<div class="movie-list nano has-scrollbar has-scrollbar-y" id="movie_list">
 									<ul class="content scroll-y" onscroll="movieSectionScrollEvent();" tabindex="-1" style="right: -15px;"><div class="selectbox-movie-type checkedBD" style="width: auto; top: 0px; display: none;">
 									<a href="#" onclick="closeSelectboxMovieType();return false;" class="btn-close">영화속성 레이어 닫기</a>
 									<ul>
@@ -185,7 +194,8 @@ preselectSetting(
 										<li id="sbmt_liveTalk" class="GROUP3 LIVETALK proplist dimmed" style="display: none;"><a data-type="LIVETALK" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">스타라이브톡</a></li>
 										<li id="sbmt_wheelchairAccess" class="GROUP3 WHEELCHAIRACCESS proplist dimmed" style="display: none;"><a data-type="WHEELCHAIRACCESS" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">배리어프리</a></li>
 									</ul>
-								</div><li class="rating-15" data-index="0" movie_cd_group="20028797" movie_idx="85603"><a href="#" onclick="return false;" title="극장판주술회전0" alt="극장판주술회전0"><span class="icon">&nbsp;</span><span class="text">극장판주술회전0</span><span class="sreader"></span></a></li>
+								</div>
+								<li class="rating-15" data-index="0" movie_cd_group="20028797" movie_idx="85603"><a href="#" onclick="return false;" title="극장판주술회전0" alt="극장판주술회전0"><span class="icon">&nbsp;</span><span class="text">극장판주술회전0</span><span class="sreader"></span></a></li>
 								<li class="rating-12" data-index="1" movie_cd_group="20028855" movie_idx="85624"><a href="#" onclick="return false;" title="언차티드" alt="언차티드"><span class="icon">&nbsp;</span><span class="text">언차티드</span><span class="sreader"></span></a></li>
 								<li class="rating-15" data-index="2" movie_cd_group="20028868" movie_idx="85632"><a href="#" onclick="return false;" title="더배트맨" alt="더배트맨"><span class="icon">&nbsp;</span><span class="text">더배트맨</span><span class="sreader"></span></a></li>
 								<li class="rating-15" data-index="3" movie_cd_group="20028859" movie_idx="85627"><a href="#" onclick="return false;" title="리코리쉬피자" alt="리코리쉬피자"><span class="icon">&nbsp;</span><span class="text">리코리쉬피자</span><span class="sreader"></span></a></li>
@@ -222,16 +232,16 @@ preselectSetting(
 							<a href="#" class="skip_to_something" onclick="skipToSomething('skip_date_list');return false;">극장선택 건너뛰기</a>
 						</div>
 						<!-- col-body -->
-						<div class="col-body">
+						<div class="col-body" style="height: 560px;">
 							<!-- 자주가는 CGV -->
 							<div class="favorite_cgv" id="favorite_cgv">
 								<p class="tit">자주가는 CGV</p>
-								<p class="setting" style="display:none;"><a href="#" onclick="favoriteCGVSettingClickListener();return false;" class="btn_setting">설정 &gt;</a></p>
+								<p class="setting" style=""><a href="#" onclick="favoriteCGVSettingClickListener();return false;" class="btn_setting">설정 &gt;</a></p>
 								<ul class="theaters"></ul>
 								<div class="nolist" style="display: block;">자주가는 CGV를<br>등록해주세요</div>
 							</div>
 							<!-- 극장선택 -->
-							<div class="theater-select">
+							<div class="theater-select" style="height: 429px;">
 								<div class="tabmenu">
 									<span class="side on"></span>
 									<a href="#" onclick="return false;" class="button menu1 selected">전체</a>
@@ -241,29 +251,14 @@ preselectSetting(
 									<a href="#" onclick="return false;" class="button menu3">특별관</a>
 									<span class="side"></span>
 								</div>
-<<<<<<< HEAD
-								<div class="theater-list">
-=======
+
 								<div class="theater-list" style="height: 388px;">
->>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
 									<div class="theater-area-list" id="theater_area_list">
 										<ul>
 											<li class="selected"><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name">서울</span><span class="count">(31)</span></a><div class="area_theater_list nano has-scrollbar has-scrollbar-y"><ul class="content scroll-y" tabindex="-1" style="right: -15px;"><li class="" data-index="0" areaindex="0" theater_cd="0056" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">강남<span class="sreader"></span></a></li><li class="" data-index="2" areaindex="0" theater_cd="0001" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="강변역 테크노마트">강변<span class="sreader"></span></a></li><li class="" data-index="4" areaindex="0" theater_cd="0229" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">건대입구<span class="sreader"></span></a></li><li class="" data-index="21" areaindex="0" theater_cd="0010" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">구로<span class="sreader"></span></a></li><li class="" data-index="50" areaindex="0" theater_cd="0063" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">대학로<span class="sreader"></span></a></li><li class="" data-index="51" areaindex="0" theater_cd="0252" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">동대문<span class="sreader"></span></a></li><li class="" data-index="58" areaindex="0" theater_cd="0230" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">등촌<span class="sreader"></span></a></li><li class="" data-index="60" areaindex="0" theater_cd="0009" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="눈스퀘어 8층">명동<span class="sreader"></span></a></li><li class="" data-index="61" areaindex="0" theater_cd="0105" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="명동역 7,8번 출구">명동역 씨네라이브러리<span class="sreader"></span></a></li><li class="" data-index="62" areaindex="0" theater_cd="0011" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">목동<span class="sreader"></span></a></li><li class="" data-index="65" areaindex="0" theater_cd="0057" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">미아<span class="sreader"></span></a></li><li class="" data-index="76" areaindex="0" theater_cd="0030" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">불광<span class="sreader"></span></a></li><li class="" data-index="78" areaindex="0" theater_cd="0046" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">상봉<span class="sreader"></span></a></li><li class="" data-index="86" areaindex="0" theater_cd="0300" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">성신여대입구<span class="sreader"></span></a></li><li class="" data-index="91" areaindex="0" theater_cd="0088" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">송파<span class="sreader"></span></a></li><li class="" data-index="93" areaindex="0" theater_cd="0276" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">수유<span class="sreader"></span></a></li><li class="" data-index="98" areaindex="0" theater_cd="0150" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">신촌아트레온<span class="sreader"></span></a></li><li class="" data-index="100" areaindex="0" theater_cd="P001" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">씨네드쉐프 압구정<span class="sreader"></span></a></li><li class="" data-index="101" areaindex="0" theater_cd="P013" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">씨네드쉐프 용산아이파크몰<span class="sreader"></span></a></li><li class="" data-index="106" areaindex="0" theater_cd="0040" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">압구정<span class="sreader"></span></a></li><li class="" data-index="111" areaindex="0" theater_cd="0112" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">여의도<span class="sreader"></span></a></li><li class="" data-index="113" areaindex="0" theater_cd="0292" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">연남<span class="sreader"></span></a></li><li class="" data-index="114" areaindex="0" theater_cd="0059" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">영등포<span class="sreader"></span></a></li><li class="" data-index="118" areaindex="0" theater_cd="0074" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">왕십리<span class="sreader"></span></a></li><li class="" data-index="119" areaindex="0" theater_cd="0013" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">용산아이파크몰<span class="sreader"></span></a></li><li class="" data-index="148" areaindex="0" theater_cd="0131" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="홈플러스 중계점 8층">중계<span class="sreader"></span></a></li><li class="" data-index="157" areaindex="0" theater_cd="0199" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">천호<span class="sreader"></span></a></li><li class="" data-index="158" areaindex="0" theater_cd="0107" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">청담씨네시티<span class="sreader"></span></a></li><li class="" data-index="177" areaindex="0" theater_cd="0223" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">피카디리1958<span class="sreader"></span></a></li><li class="" data-index="178" areaindex="0" theater_cd="0164" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="건영백화점 B1층">하계<span class="sreader"></span></a></li><li class="" data-index="182" areaindex="0" theater_cd="0191" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">홍대<span class="sreader"></span></a></li></ul><div class="pane pane-y" style="display: block; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px; top: 0px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div></li>
 											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name">경기</span><span class="count">(54)</span></a><div class="area_theater_list nano has-scrollbar"><ul class="content scroll-y" tabindex="-1" style="right: -15px;"><li class="" data-index="5" areaindex="1" theater_cd="0260" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">경기광주<span class="sreader"></span></a></li><li class="" data-index="9" areaindex="1" theater_cd="0255" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">고양행신<span class="sreader"></span></a></li><li class="" data-index="10" areaindex="1" theater_cd="0257" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">광교<span class="sreader"></span></a></li><li class="" data-index="11" areaindex="1" theater_cd="0266" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">광교상현<span class="sreader"></span></a></li><li class="" data-index="22" areaindex="1" theater_cd="0232" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">구리<span class="sreader"></span></a></li><li class="" data-index="25" areaindex="1" theater_cd="0344" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">기흥<span class="sreader"></span></a></li><li class="" data-index="27" areaindex="1" theater_cd="0278" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">김포<span class="sreader"></span></a></li><li class="" data-index="28" areaindex="1" theater_cd="0188" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">김포운양<span class="sreader"></span></a></li><li class="" data-index="29" areaindex="1" theater_cd="0298" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">김포한강<span class="sreader"></span></a></li><li class="" data-index="53" areaindex="1" theater_cd="0124" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">동백<span class="sreader"></span></a></li><li class="" data-index="54" areaindex="1" theater_cd="0041" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="인계동 씨네파크 7층">동수원<span class="sreader"></span></a></li><li class="" data-index="55" areaindex="1" theater_cd="0106" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="메타폴리스 A블럭">동탄<span class="sreader"></span></a></li><li class="" data-index="56" areaindex="1" theater_cd="0265" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">동탄역<span class="sreader"></span></a></li><li class="" data-index="57" areaindex="1" theater_cd="0233" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">동탄호수공원<span class="sreader"></span></a></li><li class="" data-index="66" areaindex="1" theater_cd="0226" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">배곧<span class="sreader"></span></a></li><li class="" data-index="67" areaindex="1" theater_cd="0155" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="범계역 뉴코아아울렛">범계<span class="sreader"></span></a></li><li class="" data-index="70" areaindex="1" theater_cd="0015" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="현대백화점 5층">부천<span class="sreader"></span></a></li><li class="" data-index="71" areaindex="1" theater_cd="0194" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="부천역 3번출구에 있습니다.">부천역<span class="sreader"></span></a></li><li class="" data-index="72" areaindex="1" theater_cd="0287" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">부천옥길<span class="sreader"></span></a></li><li class="" data-index="74" areaindex="1" theater_cd="0049" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">북수원<span class="sreader"></span></a></li><li class="" data-index="77" areaindex="1" theater_cd="0242" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">산본<span class="sreader"></span></a></li><li class="" data-index="84" areaindex="1" theater_cd="0196" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">서현<span class="sreader"></span></a></li><li class="" data-index="85" areaindex="1" theater_cd="0304" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">성남모란<span class="sreader"></span></a></li><li class="" data-index="89" areaindex="1" theater_cd="0143" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">소풍<span class="sreader"></span></a></li><li class="" data-index="92" areaindex="1" theater_cd="0012" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">수원<span class="sreader"></span></a></li><li class="" data-index="96" areaindex="1" theater_cd="0274" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">스타필드시티위례<span class="sreader"></span></a></li><li class="" data-index="97" areaindex="1" theater_cd="0073" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">시흥<span class="sreader"></span></a></li><li class="" data-index="104" areaindex="1" theater_cd="0211" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">안산<span class="sreader"></span></a></li><li class="" data-index="105" areaindex="1" theater_cd="0279" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">안성<span class="sreader"></span></a></li><li class="" data-index="107" areaindex="1" theater_cd="0003" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">야탑<span class="sreader"></span></a></li><li class="" data-index="109" areaindex="1" theater_cd="0262" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">양주옥정<span class="sreader"></span></a></li><li class="" data-index="112" areaindex="1" theater_cd="0338" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">역곡<span class="sreader"></span></a></li><li class="" data-index="115" areaindex="1" theater_cd="0004" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">오리<span class="sreader"></span></a></li><li class="" data-index="116" areaindex="1" theater_cd="0305" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">오산<span class="sreader"></span></a></li><li class="" data-index="117" areaindex="1" theater_cd="0307" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">오산중앙<span class="sreader"></span></a></li><li class="" data-index="120" areaindex="1" theater_cd="0271" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">용인<span class="sreader"></span></a></li><li class="" data-index="127" areaindex="1" theater_cd="0113" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="신세계 백화점 10층">의정부<span class="sreader"></span></a></li><li class="" data-index="128" areaindex="1" theater_cd="0187" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="센트럴타워 15층">의정부태흥<span class="sreader"></span></a></li><li class="" data-index="129" areaindex="1" theater_cd="0205" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">이천<span class="sreader"></span></a></li><li class="" data-index="137" areaindex="1" theater_cd="0054" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">일산<span class="sreader"></span></a></li><li class="" data-index="142" areaindex="1" theater_cd="0320" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">정왕<span class="sreader"></span></a></li><li class="" data-index="147" areaindex="1" theater_cd="0055" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">죽전<span class="sreader"></span></a></li><li class="" data-index="168" areaindex="1" theater_cd="0148" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">파주문산<span class="sreader"></span></a></li><li class="" data-index="169" areaindex="1" theater_cd="0310" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">파주야당<span class="sreader"></span></a></li><li class="" data-index="170" areaindex="1" theater_cd="0181" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">판교<span class="sreader"></span></a></li><li class="" data-index="171" areaindex="1" theater_cd="0195" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">평촌<span class="sreader"></span></a></li><li class="" data-index="172" areaindex="1" theater_cd="0052" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">평택<span class="sreader"></span></a></li><li class="" data-index="173" areaindex="1" theater_cd="0334" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">평택고덕<span class="sreader"></span></a></li><li class="" data-index="174" areaindex="1" theater_cd="0214" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">평택소사<span class="sreader"></span></a></li><li class="" data-index="175" areaindex="1" theater_cd="0309" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">포천<span class="sreader"></span></a></li><li class="" data-index="179" areaindex="1" theater_cd="0326" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">하남미사<span class="sreader"></span></a></li><li class="" data-index="185" areaindex="1" theater_cd="0301" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">화성봉담<span class="sreader"></span></a></li><li class="" data-index="186" areaindex="1" theater_cd="0145" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">화정<span class="sreader"></span></a></li><li class="" data-index="187" areaindex="1" theater_cd="0342" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">Drive In 곤지암<span class="sreader"></span></a></li></ul><div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div></li>
 											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name">인천</span><span class="count">(11)</span></a><div class="area_theater_list nano has-scrollbar"><ul class="content scroll-y" tabindex="-1" style="right: -15px;"><li class="" data-index="7" areaindex="2" theater_cd="0043" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">계양<span class="sreader"></span></a></li><li class="" data-index="73" areaindex="2" theater_cd="0021" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="청천동 아이즈빌 아울렛">부평<span class="sreader"></span></a></li><li class="" data-index="90" areaindex="2" theater_cd="0325" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">송도타임스페이스<span class="sreader"></span></a></li><li class="" data-index="132" areaindex="2" theater_cd="0002" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="구월동 홈플러스">인천<span class="sreader"></span></a></li><li class="" data-index="133" areaindex="2" theater_cd="0254" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">인천논현<span class="sreader"></span></a></li><li class="" data-index="134" areaindex="2" theater_cd="0340" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">인천도화<span class="sreader"></span></a></li><li class="" data-index="135" areaindex="2" theater_cd="0258" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">인천연수<span class="sreader"></span></a></li><li class="" data-index="136" areaindex="2" theater_cd="0269" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">인천학익<span class="sreader"></span></a></li><li class="" data-index="146" areaindex="2" theater_cd="0308" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">주안역<span class="sreader"></span></a></li><li class="" data-index="159" areaindex="2" theater_cd="0235" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">청라<span class="sreader"></span></a></li><li class="" data-index="188" areaindex="2" theater_cd="0339" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">Drive In 스퀘어원<span class="sreader"></span></a></li></ul><div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div></li>
 											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name">강원</span><span class="count">(4)</span></a><div class="area_theater_list nano has-scrollbar"><ul class="content scroll-y" tabindex="-1" style="right: -15px;"><li class="" data-index="1" areaindex="3" theater_cd="0139" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">강릉<span class="sreader"></span></a></li><li class="" data-index="125" areaindex="3" theater_cd="0144" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">원주<span class="sreader"></span></a></li><li class="" data-index="131" areaindex="3" theater_cd="0281" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">인제<span class="sreader"></span></a></li><li class="" data-index="165" areaindex="3" theater_cd="0070" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">춘천<span class="sreader"></span></a></li></ul><div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div></li>
-<<<<<<< HEAD
-											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name"></span><span class="count"></span></a><div class="area_theater_list nano"><ul class="content scroll-y"></ul></div></li>
-											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name"></span><span class="count"></span></a><div class="area_theater_list nano"><ul class="content scroll-y"></ul></div></li>
-											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name"></span><span class="count"></span></a><div class="area_theater_list nano"><ul class="content scroll-y"></ul></div></li>
-											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name"></span><span class="count"></span></a><div class="area_theater_list nano"><ul class="content scroll-y"></ul></div></li>
-											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name"></span><span class="count"></span></a><div class="area_theater_list nano"><ul class="content scroll-y"></ul></div></li>
-										</ul>
-									</div>
-									<div class="theater-cgv-list nano" id="theater_cgv_list">
-										<ul class="content scroll-y"></ul>
-									</div>
-=======
 											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name">대전/충청</span><span class="count">(23)</span></a><div class="area_theater_list nano has-scrollbar"><ul class="content scroll-y" tabindex="-1" style="right: -15px;"><li class="" data-index="34" areaindex="4" theater_cd="0261" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">논산<span class="sreader"></span></a></li><li class="" data-index="35" areaindex="4" theater_cd="0207" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">당진<span class="sreader"></span></a></li><li class="" data-index="45" areaindex="4" theater_cd="0007" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">대전<span class="sreader"></span></a></li><li class="" data-index="46" areaindex="4" theater_cd="0286" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">대전가수원<span class="sreader"></span></a></li><li class="" data-index="47" areaindex="4" theater_cd="0154" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">대전가오<span class="sreader"></span></a></li><li class="" data-index="48" areaindex="4" theater_cd="0202" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">대전탄방<span class="sreader"></span></a></li><li class="" data-index="49" areaindex="4" theater_cd="0127" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">대전터미널<span class="sreader"></span></a></li><li class="" data-index="68" areaindex="4" theater_cd="0275" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">보령<span class="sreader"></span></a></li><li class="" data-index="82" areaindex="4" theater_cd="0091" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">서산<span class="sreader"></span></a></li><li class="" data-index="87" areaindex="4" theater_cd="0219" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">세종<span class="sreader"></span></a></li><li class="" data-index="126" areaindex="4" theater_cd="0206" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">유성노은<span class="sreader"></span></a></li><li class="" data-index="153" areaindex="4" theater_cd="0044" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="천안역 1번 출구">천안<span class="sreader"></span></a></li><li class="" data-index="154" areaindex="4" theater_cd="0332" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">천안시청<span class="sreader"></span></a></li><li class="" data-index="155" areaindex="4" theater_cd="0293" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">천안터미널<span class="sreader"></span></a></li><li class="" data-index="156" areaindex="4" theater_cd="0110" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="불당동 펜타포트(천안아산역)">천안펜타포트<span class="sreader"></span></a></li><li class="" data-index="160" areaindex="4" theater_cd="0297" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">청주성안길<span class="sreader"></span></a></li><li class="" data-index="161" areaindex="4" theater_cd="0282" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">청주율량<span class="sreader"></span></a></li><li class="" data-index="162" areaindex="4" theater_cd="0142" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">청주지웰시티<span class="sreader"></span></a></li><li class="" data-index="163" areaindex="4" theater_cd="0319" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">청주터미널<span class="sreader"></span></a></li><li class="" data-index="164" areaindex="4" theater_cd="0228" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">청주(서문)<span class="sreader"></span></a></li><li class="" data-index="166" areaindex="4" theater_cd="0284" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">충북혁신<span class="sreader"></span></a></li><li class="" data-index="167" areaindex="4" theater_cd="0328" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">충주교현<span class="sreader"></span></a></li><li class="" data-index="183" areaindex="4" theater_cd="0217" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">홍성<span class="sreader"></span></a></li></ul><div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div></li>
 											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name">대구</span><span class="count">(8)</span></a><div class="area_theater_list nano has-scrollbar"><ul class="content scroll-y" tabindex="-1" style="right: -15px;"><li class="" data-index="36" areaindex="5" theater_cd="0157" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">대구수성<span class="sreader"></span></a></li><li class="" data-index="37" areaindex="5" theater_cd="0108" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">대구스타디움<span class="sreader"></span></a></li><li class="" data-index="38" areaindex="5" theater_cd="0185" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="중앙로역 2번 출구">대구아카데미<span class="sreader"></span></a></li><li class="" data-index="39" areaindex="5" theater_cd="0343" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">대구연경<span class="sreader"></span></a></li><li class="" data-index="40" areaindex="5" theater_cd="0216" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">대구월성<span class="sreader"></span></a></li><li class="" data-index="41" areaindex="5" theater_cd="0071" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">대구칠곡<span class="sreader"></span></a></li><li class="" data-index="42" areaindex="5" theater_cd="0147" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="동성로광장 진입로">대구한일<span class="sreader"></span></a></li><li class="" data-index="43" areaindex="5" theater_cd="0109" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="현대백화점 지하 2층">대구현대<span class="sreader"></span></a></li></ul><div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div></li>
 											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name">부산/울산</span><span class="count">(17)</span></a><div class="area_theater_list nano has-scrollbar"><ul class="content scroll-y" tabindex="-1" style="right: -15px;"><li class="" data-index="44" areaindex="6" theater_cd="0061" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">대연<span class="sreader"></span></a></li><li class="" data-index="52" areaindex="6" theater_cd="0042" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">동래<span class="sreader"></span></a></li><li class="" data-index="69" areaindex="6" theater_cd="0337" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">부산명지<span class="sreader"></span></a></li><li class="" data-index="79" areaindex="6" theater_cd="0005" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">서면<span class="sreader"></span></a></li><li class="" data-index="80" areaindex="6" theater_cd="0285" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">서면삼정타워<span class="sreader"></span></a></li><li class="" data-index="81" areaindex="6" theater_cd="0303" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">서면상상마당<span class="sreader"></span></a></li><li class="" data-index="88" areaindex="6" theater_cd="0089" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">센텀시티<span class="sreader"></span></a></li><li class="" data-index="99" areaindex="6" theater_cd="P004" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">씨네드쉐프 센텀시티<span class="sreader"></span></a></li><li class="" data-index="102" areaindex="6" theater_cd="0160" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">아시아드<span class="sreader"></span></a></li><li class="" data-index="121" areaindex="6" theater_cd="0335" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">울산동구<span class="sreader"></span></a></li><li class="" data-index="122" areaindex="6" theater_cd="0128" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="삼산동">울산삼산<span class="sreader"></span></a></li><li class="" data-index="123" areaindex="6" theater_cd="0264" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">울산신천<span class="sreader"></span></a></li><li class="" data-index="124" areaindex="6" theater_cd="0246" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">울산진장<span class="sreader"></span></a></li><li class="" data-index="141" areaindex="6" theater_cd="0306" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">정관<span class="sreader"></span></a></li><li class="" data-index="180" areaindex="6" theater_cd="0245" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">하단아트몰링<span class="sreader"></span></a></li><li class="" data-index="181" areaindex="6" theater_cd="0318" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">해운대<span class="sreader"></span></a></li><li class="" data-index="184" areaindex="6" theater_cd="0159" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">화명<span class="sreader"></span></a></li></ul><div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div></li>
@@ -274,7 +269,6 @@ preselectSetting(
 									<div class="theater-cgv-list nano has-scrollbar" id="theater_cgv_list">
 										<ul class="content scroll-y" tabindex="-1" style="right: -15px;"></ul>
 									<div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div>
->>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
 								</div>
 							</div>
 						</div>
@@ -285,29 +279,24 @@ preselectSetting(
 							<h3 class="sreader">날짜</h3>
 							<a href="#" onclick="return false;" class="skip_to_something" onclick="skipToSomething('skip_time_list');return false;">날짜 건너뛰기</a>
 						</div>
-						<div class="col-body">
+						<div class="col-body" style="height: 560px;">
 							<!-- 날짜선택 -->
-<<<<<<< HEAD
-							<div class="date-list" id="date_list">
-=======
-							<div class="date-list " id="date_list">
->>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
+							<div class="date-list nano has-scrollbar has-scrollbar-y" id="date_list">
 								<ul class="content scroll-y" tabindex="-1" style="right: -15px;"><div><li class="month dimmed"><div><span class="year">2022</span><span class="month">2</span><div></div></div></li><li data-index="0" date="20220218" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">18</span><span class="sreader"></span></a></li><li data-index="1" date="20220219" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">19</span><span class="sreader"></span></a></li><li data-index="2" date="20220220" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">20</span><span class="sreader"></span></a></li><li data-index="3" date="20220221" class="day"><a href="#" onclick="return false;"><span class="dayweek">월</span><span class="day">21</span><span class="sreader"></span></a></li><li data-index="4" date="20220222" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">22</span><span class="sreader"></span></a></li><li data-index="5" date="20220223" class="day"><a href="#" onclick="return false;"><span class="dayweek">수</span><span class="day">23</span><span class="sreader"></span></a></li><li data-index="6" date="20220224" class="day"><a href="#" onclick="return false;"><span class="dayweek">목</span><span class="day">24</span><span class="sreader"></span></a></li><li data-index="7" date="20220225" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">25</span><span class="sreader"></span></a></li><li data-index="8" date="20220226" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">26</span><span class="sreader"></span></a></li><li data-index="9" date="20220227" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">27</span><span class="sreader"></span></a></li><li data-index="10" date="20220228" class="day"><a href="#" onclick="return false;"><span class="dayweek">월</span><span class="day">28</span><span class="sreader"></span></a></li><li class="month dimmed"><div><span class="year">2022</span><span class="month">3</span><div></div></div></li><li data-index="11" date="20220301" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">1</span><span class="sreader"></span></a></li><li data-index="12" date="20220302" class="day"><a href="#" onclick="return false;"><span class="dayweek">수</span><span class="day">2</span><span class="sreader"></span></a></li><li data-index="13" date="20220303" class="day"><a href="#" onclick="return false;"><span class="dayweek">목</span><span class="day">3</span><span class="sreader"></span></a></li><li data-index="14" date="20220304" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">4</span><span class="sreader"></span></a></li><li data-index="15" date="20220305" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">5</span><span class="sreader"></span></a></li><li data-index="16" date="20220306" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">6</span><span class="sreader"></span></a></li><li data-index="17" date="20220308" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">8</span><span class="sreader"></span></a></li><li data-index="18" date="20220312" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">12</span><span class="sreader"></span></a></li><li data-index="19" date="20220322" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">22</span><span class="sreader"></span></a></li><li data-index="20" date="20220326" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">26</span><span class="sreader"></span></a></li></div>
 							<div><li class="month dimmed"><div><span class="year">2022</span><span class="month">2</span><div></div></div></li><li data-index="0" date="20220218" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">18</span><span class="sreader"></span></a></li><li data-index="1" date="20220219" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">19</span><span class="sreader"></span></a></li><li data-index="2" date="20220220" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">20</span><span class="sreader"></span></a></li><li data-index="3" date="20220221" class="day"><a href="#" onclick="return false;"><span class="dayweek">월</span><span class="day">21</span><span class="sreader"></span></a></li><li data-index="4" date="20220222" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">22</span><span class="sreader"></span></a></li><li data-index="5" date="20220223" class="day"><a href="#" onclick="return false;"><span class="dayweek">수</span><span class="day">23</span><span class="sreader"></span></a></li><li data-index="6" date="20220224" class="day"><a href="#" onclick="return false;"><span class="dayweek">목</span><span class="day">24</span><span class="sreader"></span></a></li><li data-index="7" date="20220225" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">25</span><span class="sreader"></span></a></li><li data-index="8" date="20220226" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">26</span><span class="sreader"></span></a></li><li data-index="9" date="20220227" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">27</span><span class="sreader"></span></a></li><li data-index="10" date="20220228" class="day"><a href="#" onclick="return false;"><span class="dayweek">월</span><span class="day">28</span><span class="sreader"></span></a></li><li class="month dimmed"><div><span class="year">2022</span><span class="month">3</span><div></div></div></li><li data-index="11" date="20220301" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">1</span><span class="sreader"></span></a></li><li data-index="12" date="20220302" class="day"><a href="#" onclick="return false;"><span class="dayweek">수</span><span class="day">2</span><span class="sreader"></span></a></li><li data-index="13" date="20220303" class="day"><a href="#" onclick="return false;"><span class="dayweek">목</span><span class="day">3</span><span class="sreader"></span></a></li><li data-index="14" date="20220304" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">4</span><span class="sreader"></span></a></li><li data-index="15" date="20220305" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">5</span><span class="sreader"></span></a></li><li data-index="16" date="20220306" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">6</span><span class="sreader"></span></a></li><li data-index="17" date="20220308" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">8</span><span class="sreader"></span></a></li><li data-index="18" date="20220312" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">12</span><span class="sreader"></span></a></li><li data-index="19" date="20220322" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">22</span><span class="sreader"></span></a></li><li data-index="20" date="20220326" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">26</span><span class="sreader"></span></a></li></div>
 							</ul>
-							<div class="pane pane-y" style="display: block; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px; top: 0px;"></div></div>
+							<div class="pane pane-y active" style="display: block; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px; top: 0px;"></div></div>
 							<div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div>
 						</div>
 							</div>
 						</div>
-					</div>
 					<!-- TIME 섹션 -->
 					<div class="section section-time">
 						<div class="col-head" id="skip_time_list">
 							<h3 class="sreader">시간</h3>
 							<a href="#" class="skip_to_something" onclick="skipToSomething('tnb_step_btn_right');return false;">시간선택 건너뛰기</a>
 						</div>
-						<div class="col-body">
+						<div class="col-body" style="height: 560px;">
 							<!-- 시간선택 -->
 							<div class="time-option">
 								<span class="morning">조조</span><span class="night">심야</span>
@@ -315,7 +304,7 @@ preselectSetting(
 							<div class="placeholder">영화, 극장, 날짜를 선택해주세요.</div>
 						</div>
 					</div>
-				</div>
+				</div>	
 				<!-- //step1 -->
 				<!-- step2 -->
 				<div class="step step2">
@@ -793,45 +782,20 @@ preselectSetting(
 			<!-- btn-left -->
 			<a class="btn-left" href="#" onclick="OnTnbLeftClick(); return false;" title="">이전단계로 이동</a>
 			<div class="info movie">
-<<<<<<< HEAD
-				<span class="movie_poster"><img src="" alt="영화 포스터" /></span>
-				<div class="row movie_title colspan2">
-					<span class="data letter-spacing-min ellipsis-line2"><a href="#" target="_blank" onmousedown="javascript:logClick('SUMMARY/영화상세보기');" title="새창열기">영화정보 상세보기</a></span>
+				<span class="movie_poster">
+					<img src="" alt="영화 포스터"  style="display: none;">
+				</span>
+				<div class="row movie_title colspan2" style="display: none;">
+					<span class="data letter-spacing-min ellipsis-line2">
+						<a href="#" target="_blank" onmousedown="javascript:logClick('SUMMARY/영화상세보기');" title="새창열기">영화정보 상세보기</a></span>
 				</div>
-				<div class="row movie_type">
+				<div class="row movie_type"  style="display: none;>
 					<span class="data ellipsis-line1"></span>
 				</div>
-				<div class="row movie_rating">
+				<div class="row movie_rating"  style="display: none;>
 					<span class="data"></span>
 				</div>
 				<div class="placeholder" title="영화선택"></div>
-			</div>
-			<div class="info theater">
-				<div class="row name">
-					<span class="header">극장</span>
-					<span class="data letter-spacing-min ellipsis-line1"><a href="#" target="_blank" onmousedown="javascript:logClick('SUMMARY/극장상세보기');" title="새창열기">극장정보 상세보기</a></span>
-				</div>
-				<div class="row date">
-					<span class="header">일시</span>
-					<span class="data"></span>
-				</div>
-				<div class="row screen">
-					<span class="header">상영관</span>
-					<span class="data"></span>
-				</div>
-				<div class="row number">
-=======
-				<span class="movie_poster"><img src="" alt="영화 포스터" style="display: none;"/></span>
-				<div class="row movie_title colspan2" style="display: none;">
-					<span class="data letter-spacing-min ellipsis-line2"><a href="#" target="_blank" onmousedown="javascript:logClick('SUMMARY/영화상세보기');" title="새창열기">영화정보 상세보기</a></span>
-				</div>
-				<div class="row movie_type" style="display: none;">
-					<span class="data ellipsis-line1"></span>
-				</div>
-				<div class="row movie_rating" style="display: none;">
-					<span class="data"></span>
-				</div>
-				<div class="placeholder" title="영화선택" style="display: block;"></div>
 			</div>
 			<div class="info theater">
 				<div class="row name" style="display: none;">
@@ -847,7 +811,6 @@ preselectSetting(
 					<span class="data"></span>
 				</div>
 				<div class="row number" style="display: none;">
->>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
 					<span class="header">인원</span>
 					<span class="data"></span>
 				</div>
@@ -908,18 +871,20 @@ preselectSetting(
 
 	<!-- bottom banner -->
 	<div class="banner" id="ticket_bottom_banner">
-		<a  target="_blank" title="새창"><span style="sreader">배너광고 영역</span></a>
+		<a target="_blank" title="새창" href="http://ad.cgv.co.kr/click/CGV/CGV_201401/RIA@B_ticketing?ads_id=46580&amp;creative_id=66105&amp;click_id=86408&amp;maid=&amp;event=" style="background-color: rgb(255, 255, 255);"><span style="sreader">??踰⑤８</span><img src="https://adimg.cgv.co.kr/images/202202/Antebellum/996x140.jpg" alt="??踰⑤８" onload="ticketNeedResize();" style="width:996px;height:140px"></a>
 	</div>
 	
 	<!-- wing banner -->
 	<div id="ticket_banner" class="ticket_banner">
-		<div><div>
-			<a class="left_link" target="_blank" alt="" title="새창"><span class="sreader">배너광고 영역</span></a>
-			<a class="right_link" target="_blank" alt="" title="새창"><span class="sreader">배너광고 영역</span></a>
-		</div></div>
+		<div>
+			<div class="AdvertiseCon" id="RIA_Skin_Ticketing_L" style="width: 160px; height: 300px; background: none; position: absolute; top: 75px; left: -164px; overflow: hidden;"><a href="http://ad.cgv.co.kr/click/CGV/CGV_201608/RIA@RIA_Skin_Ticketing?ads_id=28597&amp;creative_id=65465&amp;click_id=85718&amp;content_series=&amp;maid=&amp;event=" target="_blank" style="top: 0px;"><img src="https://adimg.cgv.co.kr/images/202111/cgvgift/1221_160x300.jpg" width="160" height="300" border="0" alt="광고-CGV 기프트 카드" style="width: 160px; height: 300px;"></a></div>
+			<div class="AdvertiseCon" id="RIA_Skin_Ticketing_R" style="width: 160px; height: 300px; background: none; position: absolute; top: 75px; left: 1000px; overflow: hidden;"><a href="http://ad.cgv.co.kr/click/CGV/CGV_201608/RIA@RIA_Skin_Ticketing?ads_id=28597&amp;creative_id=65465&amp;click_id=85718&amp;content_series=&amp;maid=&amp;event=" target="_blank" style="top: 0px;"><img src="https://adimg.cgv.co.kr/images/202111/cgvgift/1221_160x300.jpg" width="160" height="300" border="0" alt="광고-CGV 기프트 카드" style="width: 160px; height: 300px;"></a></div>
+		</div>
 	</div>
 	
 </div>
+	
+
 
 
 
@@ -934,14 +899,6 @@ preselectSetting(
 <iframe src="/CGV2011/RIA/RR999.aspx" name="rsvDataframe" id="rsvDataframe" scrolling="no" frameborder="0" width="0" height="0" style="display:none;" title="데이터 연동 프레임"></iframe>
 <!-- javascript 상위프레임에 있는 스크립트를 사용-->
 <!--<script type="text/javascript" src="http://img.cgv.co.kr/common/js/insightIS.js"></script>-->
-<<<<<<< HEAD
-=======
 
-
-
-
-
-
->>>>>>> 9db6d6f8d042036721a6808914ccf899512fc33a
 </body>
 </html>
