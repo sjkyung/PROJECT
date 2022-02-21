@@ -59,6 +59,7 @@
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
                     현재 상영중인 영화
+                    <input type="button" value="영화 등록" onclick="location.href=#"   style="background-color: #F08080; float:right"/>
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple">
@@ -101,113 +102,114 @@
                         <tbody>
                         <tr>
                             <td style="width: 5%;">7</td>
-                            <td style="width: 15%;">2관</td>
-                            <td style="width: 10%;">2D(스페셜 특가)</td>
-                            <td style="width: 10%;">LASER</td>
-                            <td style="width: 10%;">6층</td>
-                            <td style="width: 10%;">126석</td>
-                            <td style="width: 5%;">9석</td>
-                            <td style="width: 5%;">9석</td>
-                            <td style="width: 5%;">9석</td>
-                            <td style="width: 5%;">9석</td>
-                            <td style="width: 5%;">9석</td>
-                            <td style="width: 5%;">9석</td>
-                            <td style="width: 10%;">2022-2-17</td>
+                            <td style="width: 10%;">20220217</td>
+                            <td style="width: 15%;">극장판 주술회전 0</td>
+                            <td style="width: 10%;">Jujutsu Kaisen: Zero</td>
+                            <td style="width: 10%;">2022.02.17</td>
+                            <td style="width: 5%;">신규</td>
+                            <td style="width: 5%;">일본</td>
+                            <td style="width: 5%;">105분</td>
+                            <td style="width: 5%;">애니메이션</td>
+                            <td style="width: 5%;">15세 이상</td>
+                            <td style="width: 5%;">박성후</td>
+                            <td style="width: 20%;">오가타 메구미, 하나자와 카나, 코마츠 미카코,  우치야마 코우키, 세키 토모카즈, 나카무라 유이치,  사쿠라이 타카</td>
+                            <td style="width: 10%;"><span>상영중</span></td>
+                            <td>2022-2-17</td>
                         </tr>
                         <tr>
                             <td>6</td>
-                            <td>6관</td>
-                            <td>2D</td>
-                            <td>LASER</td>
-                            <td>10층</td>
-                            <td>126석</td>
-                            <td>9석</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>20220216</td>
+                            <td>언차티드</td>
+                            <td>Uncharted</td>
+                            <td>2022.02.16</td>
+                            <td>신규</td>
+                            <td>미국</td>
+                            <td>116분</td>
+                            <td>액션,어드벤처</td>
+                            <td>12세 이상</td>
+                            <td>루벤 플레셔</td>
+                            <td>톰 홀랜드, 마크 월버그, 소피아 알리, 타티 가브리엘, 안토니오 반데라스</td>
+                            <td>상영중</td>
                             <td>2022-2-17</td>
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td>6관</td>
-                            <td>2D</td>
-                            <td>LASER</td>
-                            <td>10층</td>
-                            <td>126석</td>
-                            <td>9석</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>20220209</td>
+                            <td>나일 강의 죽음</td>
+                            <td>Death on the Nile</td>
+                            <td>2022.02.09</td>
+                            <td>신규</td>
+                            <td>미국</td>
+                            <td>127분</td>
+                            <td>범죄,드라마,미스터리</td>
+                            <td>12세 이상</td>
+                            <td>케네스 브래너</td>
+                            <td>케네스 브래너, 갤 가돗, 레티티아 라이트, 톰 베이트먼, 에마 매키,  아네트 베닝</td>
+                            <td>상영중</td>
                             <td>2022-2-17</td>
                         </tr>
                         <tr>
-                            <td>5</td>
-                            <td>6관</td>
-                            <td>2D</td>
-                            <td>LASER</td>
-                            <td>10층</td>
-                            <td>126석</td>
-                            <td>9석</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>4</td>
+                            <td>20220216</td>
+                            <td>리코리쉬 피자</td>
+                            <td>Licorice Pizza</td>
+                            <td>2022.02.16</td>
+                            <td>신규</td>
+                            <td>미국</td>
+                            <td>134분</td>
+                            <td>로맨스,멜로,드라마</td>
+                            <td>15세 이상</td>
+                            <td>폴 토마스 앤더슨</td>
+                            <td>알라나 하임, 쿠퍼 호프만, 숀 펜, 톰 웨이츠, 브래들리 쿠퍼,  베니 사프디</td>
+                            <td>상영중</td>
                             <td>2022-2-17</td>
                         </tr>
                         <tr>
-                            <td>5</td>
-                            <td>6관</td>
-                            <td>2D</td>
-                            <td>LASER</td>
-                            <td>10층</td>
-                            <td>126석</td>
-                            <td>9석</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>3</td>
+                            <td>20220126</td>
+                            <td>킹메이커</td>
+                            <td>Kingmaker</td>
+                            <td>2022.01.26</td>
+                            <td>신규</td>
+                            <td>한국</td>
+                            <td>123분</td>
+                            <td>드라마</td>
+                            <td>15세 이상</td>
+                            <td>변성현</td>
+                            <td>설경구, 이선균, 유재명,  조우진</td>
+                            <td>상영중</td>
                             <td>2022-2-17</td>
                         </tr>
                         <tr>
-                            <td>5</td>
-                            <td>6관</td>
-                            <td>2D</td>
-                            <td>LASER</td>
-                            <td>10층</td>
-                            <td>126석</td>
-                            <td>9석</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>2</td>
+                            <td>20220301</td>
+                            <td>더 배트맨</td>
+                            <td>The Batman</td>
+                            <td>2022.03.01</td>
+                            <td>신규</td>
+                            <td>미국</td>
+                            <td>176분</td>
+                            <td>액션</td>
+                            <td>15세 이상</td>
+                            <td>맷 리브스</td>
+                            <td>로버트 패틴슨, 폴 다노, 조 크라비츠, 앤디 서키스, 제프리 라이트, 콜린 파렐, 피터 사스가드, 존 터투로,  제이미 로슨</td>     
+                            <td>예정</td>
                             <td>2022-2-17</td>
                         </tr>
                         <tr>
-                            <td>5</td>
-                            <td>6관</td>
-                            <td>2D</td>
-                            <td>LASER</td>
-                            <td>10층</td>
-                            <td>126석</td>
-                            <td>9석</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>1</td>
+                            <td>20220223</td>
+                            <td>안테벨룸</td>
+                            <td>Antebellum</td>
+                            <td>2022-02-23</td>
+                            <td>신규</td>
+                            <td>미국</td>
+                            <td>105분</td>
+                            <td>미스터리,스릴러</td>
+                            <td>15세 이상</td>
+                            <td>제라드 부시, 크리스토퍼 렌즈 </td>
+                            <td>자넬 모네, 잭 휴스턴,  지나 말론</td>
+                            <td>예정</td>
                             <td>2022-2-17</td>
                         </tr>
                         </tbody>
