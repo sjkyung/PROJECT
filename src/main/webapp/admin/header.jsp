@@ -27,7 +27,7 @@
                                     <a class="nav-link" href="./member-lookup.jsp" style="font-size:15px; padding-left:30px;">회원정보조회</a>
                                     <a class="nav-link" href="./member-ticket.jsp" style="font-size:15px; padding-left:30px;">예매내역조회</a>
                                     <a class="nav-link" href="./member-paymentlist.jsp" style="font-size:15px; padding-left:30px;">결제내역조회</a>
-                                    <a class="nav-link" href="testpage.jsp" style="font-size:15px; padding-left:30px;">포인트내역조회</a>
+                                    <a class="nav-link" href="./member-pointlist.jsp" style="font-size:15px; padding-left:30px;">포인트내역조회</a>
                                 </nav>
                                 </div>
                                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#movie" aria-expanded="false" aria-controls="movie">
