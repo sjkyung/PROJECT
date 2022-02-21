@@ -2,7 +2,7 @@
          pageEncoding="UTF-8"%>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 <head>
-
+    <title>support-faq</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="Expires" content="-1" />
@@ -71,7 +71,8 @@
 
 </head>
 <body class="">
-	
+
+
 	<%@include file="./header.jsp" %>
 	
     <div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
@@ -80,11 +81,6 @@
         <!-- Contents Area -->
         <div id="contents" class="">
 
-
-            <!-- Contents Start -->
-
-            <!-- Contents Area -->
-            <div id="contents">
                 <!-- Contents Start -->
                 <div class="cols-content">
 
@@ -159,7 +155,7 @@
                                     <col style="width:40px;" />
                                     <col style="width:120px;" />
                                     <col style="width:560px;" />
-                                    <col style="auto" />
+                                    <col style="width:auto" />
                                 </colgroup>
                                 <thead>
                                 <tr>
@@ -371,7 +367,7 @@
                         <div class="search_order">
                             <ol>
                                 <li><span class="ico_oder find_q">01 자주찾는 질문 검색</span></li>
-                                <li><span class="ico_oder email_i">02 이메일 문의</span><a href="/support/qna/default.aspx"><img src="http://img.cgv.co.kr/support/faq/btn_inquiry.png" alt="문의" /></a></li>
+                                <li><span class="ico_oder email_i">02 이메일 문의</span><a href="./support-qna.jsp"><img src="http://img.cgv.co.kr/support/faq/btn_inquiry.png" alt="문의" /></a></li>
                                 <li style="text-align: left;"><span class="ico_oder tel_i">03 고객센터 전화문의</span><span class="num">1544-1122<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(상담가능 시간, 월~금 09:00~18:00)</span></li>
                             </ol>
                         </div>
@@ -460,47 +456,6 @@
     </div>
     <!-- E Contaniner -->
 
-    <!-- S Popup -->
-    <div class="com_pop_wrap">
-        <div class="com_pop_fog"></div>
-    </div>
-    <div class="pop_wrap">
-        <!-- S > [팝업] 지원 OS 업데이트 유도-->
-        <div id="pop_supportOS" class="popup" style="display:none">
-            <div class="pop_iexp_wrap" style="position:fixed; left:50%; top:50%; width:600px; margin:-165px 0 0 -300px; z-index:1000;">
-                <div class="pi_headline">
-                    <img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_headline2.jpg" alt="CGV 홈페이지는 고객님께서 사용중인 MS Windows XP에서 정상적인 서비스 이용이 어려울 수 있으며, OS업데이트를 권장합니다." />
-                </div>
-                <div class="down_app">
-                    <p><img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_downtxt.jpg" alt="OS 업데이트가 어려운 경우 모바일앱을 이용하세요!!!" /></p>
-                    <a class="btn" href="https://itunes.apple.com/kr/app/id370441190?mt=8" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ios.jpg" alt="Ios down" /></a>
-                    <a class="btn" href="https://play.google.com/store/apps/details?id=com.cgv.android.movieapp" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_android.jpg" alt="Android down" /></a>
-                </div>
-                <a class="btn_close">닫기</a>
-            </div>
-        </div>
-        <!-- S > [팝업] 지원 브라우저 다운로드 유도-->
-        <div id="pop_supportBrower" class="popup" style="display:none">
-            <div class="pop_iexp_wrap" style="position:fixed; left:50%; top:50%; width:600px; margin:-265px 0 0 -300px; z-index:1000;">
-                <div class="pi_headline">
-                    <img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_headline1.jpg" alt="CGV 홈페이지는 Internet Explorer 9이상에서 최적의 서비스 이용이 가능합니다. IE9 이하 브라우저에서 이용 시 정상적인 서비스 이용이 어려울 수 있으며, 브라우저 업그레이드 하시기를 권장합니다." />
-                </div>
-                <ul class="down_browser">
-                    <li><a href="https://www.microsoft.com/ko-kr/edge" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ie.jpg" alt="Internet Explorer 다운받기" /></a></li>
-                    <li><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_chrome.jpg" alt="Chrome 다운받기" /></a></li>
-                </ul>
-                <div class="down_app">
-                    <p><img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_downtxt.jpg" alt="OS 업데이트가 어려운 경우 모바일앱을 이용하세요!" /></p>
-                    <a class="btn" href="https://itunes.apple.com/kr/app/id370441190?mt=8" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ios.jpg" alt="Ios down" /></a>
-                    <a class="btn" href="https://play.google.com/store/apps/details?id=com.cgv.android.movieapp " target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_android.jpg" alt="Android down" /></a>
-                </div>
-                <a class="btn_close">닫기</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- E Popup -->
-
     <!-- S 예매하기 및 TOP Fixed 버튼 -->
     <div class="fixedBtn_wrap">
 
@@ -511,7 +466,7 @@
 
     <!-- E 예매하기 및 TOP Fixed 버튼 -->
 
-<%@include file="./footer.jsp" %>
-
+    <%@ include file="./footer.jsp" %>
+    </div>
 </body>
 </html>

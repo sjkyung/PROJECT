@@ -2,7 +2,7 @@
          pageEncoding="UTF-8"%>
 <html>
 <head>
-
+    <title>support-qna</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="Expires" content="-1" />
@@ -266,11 +266,6 @@
         <!-- Contents Area -->
         <div id="contents" class="">
 
-
-            <!-- Contents Start -->
-
-            <!-- Contents Area -->
-            <div id="contents">
                 <!-- Contents Start -->
                 <div class="cols-content">
 
@@ -370,23 +365,23 @@
                                             <tbody>
                                             <tr>
                                                 <th scope="row"><label for="inp_name">이름</label></th>
-                                                <td colspan="3"><strong>이순자</strong></td>
+                                                <td colspan="3"><strong>공유</strong></td>
                                                 <input type="hidden" id="HiddenUserID"      name="HiddenUserID" value="3208b0a8e21d4a1b997fed0cf9208e30"/>
                                                 <input type="hidden" id="HiddenUserName" name="HiddenUserName" value="5b0349cbb6ae3cd8"/>
                                             </tr>
                                             <tr>
                                                 <th scope="row">휴대전화</th>
-                                                <td><strong>010-****-3815</strong></td>
+                                                <td><strong>010-****-1111</strong></td>
                                                 <input type="hidden" id="HiddenMobile1" name="HiddenMobile1" value="1fda157c4e4edaefbf617b5537bd17bb"/>
                                                 <th scope="row">이메일</th>
-                                                <td><span>ka**100ho10@naver.com</span></td>
+                                                <td><span>1111@naver.com</span></td>
                                                 <input type="hidden" id="HiddenEmail1" name="HiddenEmail1" value="869ed149d4237bb28179d2c99e108199412ccb028c2e8750"/>
                                             </tr>
                                             <tr class="check_info">
                                                 <td colspan="4">
                                                     <div>
                                                         <strong>※  문의에 대한 빠른 답변을 위해 회원 가입 시 입력하신 연락처를 확인해주세요.</strong>
-                                                        <a href="https://www.cjone.com/cjmweb/member/passwd.do?coopco_cd=7010&brnd_cd=1000" id="A1" class="round gray on" title="수정" target="_blank"><span>수정</span></a>
+                                                        <a href="./mycgv-myinfo-edit-myinfo.jsp" id="A1" class="round gray on" title="수정" target="_blank"><span>수정</span></a>
                                                     </div>
                                                     <div class="desc_miso">
                                                         <p class="desc_txt1">고객님의 문의에 답변하는 직원은 <em>고객 여러분의 가족 중 한 사람</em>일 수 있습니다.</p>
@@ -450,7 +445,7 @@
                                         </table>
                                     </div>
                                     <div class="box-btn qna_email">
-                                        <a style="margin-left:5px" href="/support/default.aspx" class="round gray"><span style="padding:0 14px;">취소</span></a>
+                                        <a style="margin-left:5px" href="./support.jsp" class="round gray"><span style="padding:0 14px; height: 22px">취소</span></a>
                                         <button style="width:80px" class="round inred" type="submit" id="emailsubmit" ><span>등록하기</span></button>
                                     </div>
                                 </fieldset>
@@ -780,47 +775,6 @@
     </div>
     <!-- E Contaniner -->
 
-    <!-- S Popup -->
-    <div class="com_pop_wrap">
-        <div class="com_pop_fog"></div>
-    </div>
-    <div class="pop_wrap">
-        <!-- S > [팝업] 지원 OS 업데이트 유도-->
-        <div id="pop_supportOS" class="popup" style="display:none">
-            <div class="pop_iexp_wrap" style="position:fixed; left:50%; top:50%; width:600px; margin:-165px 0 0 -300px; z-index:1000;">
-                <div class="pi_headline">
-                    <img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_headline2.jpg" alt="CGV 홈페이지는 고객님께서 사용중인 MS Windows XP에서 정상적인 서비스 이용이 어려울 수 있으며, OS업데이트를 권장합니다." />
-                </div>
-                <div class="down_app">
-                    <p><img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_downtxt.jpg" alt="OS 업데이트가 어려운 경우 모바일앱을 이용하세요!!!" /></p>
-                    <a class="btn" href="https://itunes.apple.com/kr/app/id370441190?mt=8" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ios.jpg" alt="Ios down" /></a>
-                    <a class="btn" href="https://play.google.com/store/apps/details?id=com.cgv.android.movieapp" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_android.jpg" alt="Android down" /></a>
-                </div>
-                <a class="btn_close">닫기</a>
-            </div>
-        </div>
-        <!-- S > [팝업] 지원 브라우저 다운로드 유도-->
-        <div id="pop_supportBrower" class="popup" style="display:none">
-            <div class="pop_iexp_wrap" style="position:fixed; left:50%; top:50%; width:600px; margin:-265px 0 0 -300px; z-index:1000;">
-                <div class="pi_headline">
-                    <img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_headline1.jpg" alt="CGV 홈페이지는 Internet Explorer 9이상에서 최적의 서비스 이용이 가능합니다. IE9 이하 브라우저에서 이용 시 정상적인 서비스 이용이 어려울 수 있으며, 브라우저 업그레이드 하시기를 권장합니다." />
-                </div>
-                <ul class="down_browser">
-                    <li><a href="https://www.microsoft.com/ko-kr/edge" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ie.jpg" alt="Internet Explorer 다운받기" /></a></li>
-                    <li><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_chrome.jpg" alt="Chrome 다운받기" /></a></li>
-                </ul>
-                <div class="down_app">
-                    <p><img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_downtxt.jpg" alt="OS 업데이트가 어려운 경우 모바일앱을 이용하세요!" /></p>
-                    <a class="btn" href="https://itunes.apple.com/kr/app/id370441190?mt=8" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ios.jpg" alt="Ios down" /></a>
-                    <a class="btn" href="https://play.google.com/store/apps/details?id=com.cgv.android.movieapp " target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_android.jpg" alt="Android down" /></a>
-                </div>
-                <a class="btn_close">닫기</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- E Popup -->
-
     <!-- S 예매하기 및 TOP Fixed 버튼 -->
     <div class="fixedBtn_wrap">
 
@@ -831,326 +785,8 @@
 
     <!-- E 예매하기 및 TOP Fixed 버튼 -->
 
-    <!-- S Footer -->
-    <footer>
-        <!-- footer_area (s) -->
 
-        <div id="BottomWrapper" class="sect-ad">
-            <iframe src="https://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@Bottom" width="100%" height="240" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="Bottom" id="Bottom"></iframe>
-        </div>
-        <ul class="policy_list">
-            <li><a href="http://corp.cgv.co.kr/company/" target="_blank">회사소개</a></li>
-            <li><a href="http://corp.cgv.co.kr/company/ir/financial/financial_list.aspx" target="_blank">IR</a></li>
-            <li><a href="http://corp.cgv.co.kr/company/recruit/step/default.aspx" target="_blank">채용정보</a></li>
-            <li><a href="http://corp.cgv.co.kr/company/advertize/ad_Default.aspx" target="_blank">광고/제휴/출점문의</a></li>
-            <li><a href="http://www.cgv.co.kr/rules/service.aspx">이용약관</a></li>
-            <li><a href="http://www.cgv.co.kr/rules/organized.aspx">편성기준</a></li>
-            <li><a href="http://www.cgv.co.kr/rules/privacy.aspx"><strong>개인정보처리방침</strong></a></li>
-            <li><a href="http://www.cgv.co.kr/rules/disclaimer.aspx">법적고지</a></li>
-            <li><a href="http://www.cgv.co.kr/rules/emreject.aspx">이메일주소무단수집거부</a></li>
-            <li><a href="http://corp.cgv.co.kr/company/ethicalManagement/ceoMessage.aspx" target="_blank">윤리경영</a></li>
-            <li><a href="/company/cyberAudit.aspx" class="empha-red">사이버감사실</a></li>
-        </ul>
-        <article class="company_info_wrap">
-            <section class="company_info">
-                <address>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</address>
-                <dl class="company_info_list">
-                    <dt>대표이사</dt>
-                    <dd>허민회</dd>
-                    <dt>사업자등록번호</dt>
-                    <dd>104-81-45690</dd>
-                    <dt>통신판매업신고번호</dt>
-                    <dd>2017-서울용산-0662 <a href="#none" onclick="goFtc()" class="btn_goFtc">사업자정보확인<a></a></a></dd>
-                </dl>
-                <dl class="company_info_list">
-                    <dt>호스팅사업자</dt>
-                    <dd>CJ올리브네트웍스</dd>
-                    <dt>개인정보보호 책임자</dt>
-                    <dd>심준범</dd>
-                    <dt>대표이메일</dt>
-                    <dd>cjcgvmaster@cj.net</dd>
-                    <dt>고객센터</dt>
-                    <dd>1544-1122</dd>
-                </dl>
-                <p class="copyright">&copy; CJ CGV. All Rights Reserved</p>
-            </section>
-            <section class="familysite_wrap">
-                <label for="familysite">CJ그룹 계열사 바로가기</label>
-                <select id="familysite">
-                    <option value="" class="familysiteTitle">계열사 바로가기</option>
-                    <optgroup label="CJ그룹">
-                        <option value="http://www.cj.net/">CJ주식회사</option>
-                    </optgroup><optgroup label="식품 & 식품서비스">
-                    <option value="https://www.cj.co.kr/kr/index">CJ제일제당</option>
-                    <option value="https://www.cjfoodville.co.kr/main.asp">CJ푸드빌</option>
-                    <option value="http://www.cjfreshway.com/index.jsp">CJ프레시웨이</option>
-                </optgroup><optgroup label="생명공학">
-                    <option value="https://www.cj.co.kr/kr/about/business/bio">CJ제일제당 BIO사업부문</option>
-                    <option value="https://www.cj.co.kr/kr/about/business/bio">CJ Feed&Card</option>
-                </optgroup><optgroup label="물류 & 신유통">
-                    <option value="https://www.cjlogistics.com/ko/main">CJ대한통운</option>
-                    <option value="http://www.cjenc.co.kr/kr/Default.asp">CJ대한통운 건설부문</option>
-                    <option value="https://www.oliveyoung.co.kr/store/company/brandStory.do">CJ올리브영</option>
-                    <option value="https://www.cjolivenetworks.co.kr:449/">CJ올리브네트웍스</option>
-                    <option value="https://www.cjoshopping.com:9002/index.asp">CJ ENM 커머스부문</option>
-                </optgroup><optgroup label="엔터테인먼트 & 미디어">
-                    <option value="http://www.cjem.net/main/?locale=ko">CJ ENM 엔터테인먼트부문</option>
-                    <option value="http://corp.cgv.co.kr/">CJ CGV</option>
-                </optgroup>
-
-                </select>
-                <a href="#none" class="btn_familysite" onclick="goFamilySite()">GO</a>
-            </section>
-        </article>
-        <script>
-            //footer 영역 LOG
-            $('.policy_list > li > a').on({
-                click: function (e) {
-                    gaEventLog('PC_footer', this.text, '');
-                }
-            });
-        </script>
-        <!-- footer_area (e) -->
-
-        <div class="adFloat" style="display:block">
-
-            <iframe src='//ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@Popicon' width='154' height='182' frameborder='0' scrolling='no' topmargin='0' leftmargin='0' marginwidth='0' marginheight='0' allowTransparency="true" id="ad_float1"></iframe>
-        </div>
-        <script type="text/javascript">            OpenAD();</script>
-        <!-- //Float Ad -->
-    </footer>
-    <!-- E Footer -->
-
-    <!-- Aside Banner :  -->
-    <!--
-	<div id="ctl00_sect_person_right" class="sect-aside-banner" style="padding:0; margin:0; position:fixed; z-index:1;display:none">
-		<div class="aside-content-top">
-			<div class="aside-content-btm">
-				<a href="/theaters/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_theater.gif" alt="CGV THEATER" /></a>
-				<a href="/arthouse/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_arthouse.gif" alt="CGV arthouse" /></a>
-				<a href="/theaters/special/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_special.gif" alt="CGV SPECIAL" /></a>
-
-				<a href="/user/mycgv/reserve/" class="required-login" data-url="/user/mycgv/reserve/"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_ticket.gif" alt="CGV TICKET INFO" /></a>
-				<a href="/discount/discountlist.aspx"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_person_discount.gif" alt="CGV DISCOUNT INFO" /></a>
-			</div>
-		</div>
-		<div class="btn-top">
-            <a href="#" onclick="window.scrollTo(0,0);return false;"><span>최상단으로 이동</span></a>
-		</div>
-	</div>
-    //-->
-    <!-- //Aside Banner -->
-
+<%@ include file="./footer.jsp" %>
 </div>
-
-
-<script type="text/template" id="temp_popup_movie_player">
-    <div class="popwrap">
-        <div class="sect-layerplayer">
-            <div class="cols-pop-player">
-                <h1 class="title" id="movie_player_popup_title"></h1>
-                <div class="col-pop-player">
-                    <div class="warp-pop-player" style="position: relative;">
-                        <iframe id="ifrm_movie_player_popup" name="ifrm_movie_player_popup" src="about:blank" style="width:800px;height:450px;" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-
-                        <div class="sect-replay" style="display:none" id="pop_player_relation_wrap">
-                            <button class="btn-replay movie_player_inner_popup" type="button" data-gallery-idx="0" id="btn_movie_replay">다시보기</button>
-                            <!-- 없어지는 영역 -->
-                            <div class="wrap-relationmovie" id="pop_player_relation_item_wrap">
-                                <strong class="title">관련영상</strong>
-                                <ul id="pop_player_relation_movie">
-                                    <li></li>
-                                </ul>
-                            </div><!-- .wrap-relationmovie -->
-                        </div><!-- .sect-replay -->
-
-                    </div><!-- .warp-pop-player -->
-                    <div class="descri-trailer">
-                        <strong class="title">영상설명</strong>
-                        <textarea readonly="readonly" id="movie_player_popup_caption"></textarea>
-                    </div>
-                </div><!-- .col-player -->
-                <div class="col-pop-playerinfo">
-                    <div id="movie_player_popup_movie_info"></div>
-                    <div class="sect-trailer">
-                        <strong class="title">신규영상</strong>
-                        <ul>
-
-                        </ul>
-                    </div>
-                </div><!-- .col-playerinfo -->
-            </div><!-- .cols-player -->
-            <button type="button" class="btn-close">닫기</button>
-        </div>
-    </div>
-</script>
-
-<script id="temp_popup_movie_player_movie_info" type="text/x-jquery-tmpl">
-<div class="box-image">
-    <a href="/movies/detail-view/?midx=${MovieIdx}" title="${Title} 상세보기 새창">
-        <span class="thumb-image">
-            <img src="${PosterImage.MiddleImage}" alt="${Title} 포스터" />
-            <span class="ico-grade ${MovieGrade.StyleClassName}">${MovieGrade.GradeText}</span>
-        </span>
-    </a>
-</div>
-<div class="box-contents">
-    <a href="/movies/detail-view/?midx=${MovieIdx}" title="${Title} 상세보기 새창">
-        <strong class="title">${Title}</strong>
-    </a>
-    <span class="txt-info" style="margin-bottom:2px;">
-        <em class="genre">${GenreText}</em>
-        <span>
-            <i>${OpenDate}</i>
-            <strong>${OpenText}</strong>
-            {{if D_Day > 0}}
-                <em class="dday">D-${D_Day}</em>
-            {{/if}}
-        </span>
-    </span>
-{{if IsTicketing }}
-    <a class="link-reservation" href="/ticket/?MOVIE_CD=${CGVCode}&MOVIE_CD_GROUP=${CGVCode}">예매</a>
-{{/if}}
-</div>
-</script>
-
-<script id="temp_popup_movie_player_relation_movie_item" type="text/x-jquery-tmpl">
-<li>
-    <div class="box-image">
-        <a href="#" title="${Title} 영상보기" class="movie_player_inner_popup" data-gallery-idx="${GalleryIdx}">
-            <span class="thumb-image">
-                <img src="${ImageUrl}"
-                alt="${Title}_트레일러" />
-                <span class="ico-play">영상보기</span>
-            </span>
-        </a>
-    </div>
-</li>
-</script>
-
-<script type="text/javascript" src="https://img.cgv.co.kr/R2014//js/system/crypto.js"></script>
-<script type="text/javascript">
-    //<![CDATA[
-    function closeBanner(){
-        $('#cgv_main_ad').remove();
-        for(var i = 0; i < 2; i++) {
-            window.setTimeout(function(){
-                $(window).resize()
-            }, 30)
-        }
-    }
-    function showPlayEndEvent() {
-        $('#pop_player_relation_wrap').show();
-        $('#btn_movie_replay').focus();
-    }
-
-    (function ($) {
-        $(function () {
-
-
-            $('.movie_player_popup').moviePlayer();     //동영상플레이어
-
-            //노원타운
-            $('.special5_pop').on('click', function () {
-                openNowonTown();
-                return false;
-            });
-            // 검색 auto validate version.
-            $('.btn-go-search').on('click', function () {
-                var $frmSearch = $(this).parent().parent('form');
-                $frmSearch.submit();
-                return false;
-            });
-
-            //메인스킵네비
-            $('#skipHeader').on('click', function(){
-                var $ctn = $('#contents');
-                $ctn.attr({
-                    tabIndex : -1
-                }).focus();
-                return false;
-            });
-
-            //현재 URL 해당파라미터 교체
-            function updateQueryStringParameter(uri, key, value) {
-                var re = new RegExp("([?|&])" + key + "=.*?(&|#|$)", "i");
-                if (uri.match(re)) {
-                    return uri.replace(re, '$1' + key + "=" + value + '$2');
-                } else {
-                    var hash =  '';
-                    var separator = uri.indexOf('?') !== -1 ? "&" : "?";
-                    if( uri.indexOf('#') !== -1 ){
-                        hash = uri.replace(/.*#/, '#');
-                        uri = uri.replace(/#.*/, '');
-                    }
-                    return uri + separator + key + "=" + value + hash;
-                }
-            }
-            //모바일버전 가기
-            $('.go-mobile').on('click', function() {
-                location.replace(updateQueryStringParameter(location.href, "IsMobile", "N"));
-                return false;
-            });
-        });
-    })(jQuery);
-
-    function goFamilySite() {
-        var famulySiteURL = $(familysite).val();
-        if (famulySiteURL != "") {
-            var win = window.open(famulySiteURL, 'winFamilySite')
-            win.focus();
-        }
-    }
-    function goFtc() {
-        var ftcUrl = "http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1048145690";
-        window.open(ftcUrl, "bizCommPop", "width=750, height=700, scrollbars=1;");
-    }
-    //]]>
-</script>
-
-<!-- 앱다운로드 레이어 팝업 -->
-<script type="text/javascript">
-    //appDownInfoPop();
-</script>
-
-<script language="javascript" type="text/javascript">
-
-    //GA 에널리스트 이벤트LOG 함수- 2022.01.12: MYILSAN
-    function gaEventLog(pCategroy, pAction, pLabel) {
-        ga('send', {
-            hitType: 'event', eventCategory: pCategroy, eventAction: pAction, eventLabel: pLabel
-            , hitCallback: function () {
-            }
-            , hitCallbackFail: function () {
-            }
-        });
-    }
-
-    //201402 SYH GA추가
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-47126437-1', 'cgv.co.kr'); //지주사
-    ga('create', 'UA-47951671-5', 'cgv.co.kr', { 'name': 'cgvTracker' }); //디마팀
-    ga('create', 'UA-47951671-7', 'cgv.co.kr', { 'name': 'rollup' }); //추가
-
-</script>
-
-
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NNNFR3"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>    (function (w, d, s, l, i) {
-    w[l] = w[l] || []; w[l].push({ 'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-    }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-        '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-})(window, document, 'script', 'dataLayer', 'GTM-NNNFR3');
-</script>
-<!-- End Google Tag Manager -->
-
 </body>
 </html>
