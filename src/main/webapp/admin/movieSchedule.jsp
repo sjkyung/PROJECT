@@ -59,7 +59,7 @@
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
                     영화 상영 스케줄
-                    <input type="button" value="새로운 스케줄 등록" onclick="location.href=#"   style="background-color: #F08080; float:right"/>
+                    <input type="button" value="새로운 스케줄 등록" onclick="location.href='./manage_movieSchedule.jsp'"   style="background-color: #F08080; float:right"/>
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple">
