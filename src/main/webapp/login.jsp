@@ -207,8 +207,8 @@
                 <legend>회원 로그인</legend>
                 <p>아이디 비밀번호를 입력하신 후, 로그인 버튼을 클릭해 주세요.</p>
                 <div class="login">
-                    <input type="text" title="아이디" id="txtUserId" name="txtUserId" data-title="아이디를 " data-message="입력하세요." required="required" />
-                    <input type="password" title="패스워드" id="txtPassword" name="txtPassword" data-title="패스워드를 " data-message="입력하세요." required="required" />
+                    <input type="text" title="아이디" id="txtUserId" name="txtUserId" data-title="아이디를 " data-message="입력하세요." required="required" style="width: 264px" />
+                    <input type="password" title="패스워드" id="txtPassword" name="txtPassword" data-title="패스워드를 " data-message="입력하세요." required="required" style="width: 264px"/>
                 </div>
                 <div class="save-id"> <input type="checkbox" id="loginSet"  /><label for="save_id">아이디 저장</label></div>
 

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
+    <title>support</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="Expires" content="-1" />
@@ -207,8 +208,8 @@
                                 <strong class="c_tit">자주찾는 질문 빠른검색</strong>
                                 <legend><label for="searchtext">검색</label></legend>
                                 <div class="search_box">
-                                    <input id="searchtext" type="text" title="검색어 입력" placeholder="검색어를 입력해 주세요." style="text-align:center"/>
-                                    <button type="button" class="btn_search" title="검색하기" id="btn_search">검색</button>
+                                    <input id="searchtext" type="text" title="검색어 입력" placeholder="검색어를 입력해 주세요." style="margin-top: 5px"/>
+                                    <a href="support-faq.jsp"><button type="button" class="btn_search" title="검색하기" id="btn_search">검색</button></a>
                                 </div>
                                 <div class="c_qu">
 
@@ -226,67 +227,67 @@
 
                                 </div>
                             </div>
-                            <div class="c_box talk_inquiry" style="cursor:pointer;">
+                            <div class="c_box talk_inquiry" style="cursor:pointer;width: 23%;">
                                 <strong class="c_tit">상담톡 이용</strong>
                                 <span class="c_txt">상담 톡을 이용해보세요.</span>
                                 <a href="./support.jsp">문의하기</a>
                             </div>
-                            <div class="c_box email_inquiry" style="cursor:pointer;">
+                            <div class="c_box email_inquiry" style="cursor:pointer;width: 23%;">
                                 <strong class="c_tit">이메일 문의</strong>
                                 <span class="c_txt">24시간 365일 언제든지 문의해주세요.</span>
                                 <a href="./support-qna.jsp">문의하기</a>
                             </div>
-                            <div class="c_box my_advice"  style="cursor:pointer;">
+                            <div class="c_box my_advice"  style="cursor:pointer;width: 23%;">
                                 <strong class="c_tit">내 상담 내역 확인</strong>
                                 <span class="c_txt">문의하신 내용을 확인하실 수 있습니다.</span>
-                                <a href="./mycgv-qna-list.jsp"  target="_blank" title="새창열기" >문의내역 조회</a>
+                                <a href="./mycgv-qna-list.jsp">문의내역 조회</a>
                             </div>
                         </div>
                         <div class="customer_notice_area">
                             <div class="service_area">
                                 <span class="tit">자주찾는 서비스</span>
                                 <ul class="list">
-                                    <li><a href="./mycgv-reserve.jsp" target="_blank" title="새창열기">신용카드<br/>영수증출력</a></li>
+                                    <li><a href="./mycgv-cgvPoint-pointList.jsp" title="새창열기">나의 포인트<br/>찾아보기</a></li>
 
                                     <!-- 로그아웃일 경우에만 링크  -->
 
-                                    <li><a href="./support.jsp"  target="_blank" title="새창열기">아이디/<br/>비밀번호 찾기</a></li>
+                                    <li><a href="./support.jsp" title="새창열기">아이디/<br/>비밀번호 찾기</a></li>
 
                                     <!-- 로그아웃일 경우에만 링크  -->
 
-                                    <li><a href="/user/mycgv/reserve/?g=1#contaniner"  target="_blank" title="새창열기">예매/<br/>취소내역 확인</a></li>
+                                    <li><a href="./mycgv-reserve.jsp" title="새창열기">예매/<br/>취소내역 확인</a></li>
 
                                     <!-- 로그아웃일 경우에만 링크  -->
 
-                                    <li><a href="./support.jsp"  target="_blank" title="새창열기">비회원<br/>예매/취소</a></li>
+                                    <li><a href="./login-agreement.jsp"  target="_blank" title="새창열기">비회원<br/>예매확인/취소</a></li>
 
                                     <!-- 로그아웃일 경우에만 링크  -->
 
-                                    <li><a href="./mycgv-cgvPoint.jsp.jsp"  target="_blank" title="새창열기">멤버십포인트<br/>사용안내</a></li>
-                                    <li><a href="/user/mycgv/coupon/movie-ticket/list.aspx?g=1#contaniner"  target="_blank" title="새창열기">관람권<br/>할인쿠폰 등록</a></li>
+                                    <li><a href="./mycgv-cgvPoint-pointInfo.jsp">멤버십포인트<br/>사용안내</a></li>
+                                    <li><a href="./mycgv-popcorn-store.jsp">기프트콘<br/>할인쿠폰 등록</a></li>
                                 </ul>
                             </div>
                             <div class="notice_area">
-                                <a href="./support-qna.jsp">
+                                <a href="./support-news.jsp">
                                     <span class="tit">공지/뉴스</span>
                                 </a>
                                 <ul class="txt">
 
-                                    <li><a href="/support/news/detail-view.aspx?idx=7856&type=4">[기타] 22년 VIP 선정 기준 변경 및 추가 기준 관련 안내</a><span class="day">2021.09.01</span></li>
+                                    <li><a href="./support-news.jsp">[기타] 22년 VIP 선정 기준 변경 및 추가 기준 관련 안내</a><span class="day">2021.09.01</span></li>
 
-                                    <li><a href="/support/news/detail-view.aspx?idx=7847&type=4">[기타] 2021 SVIP 스페셜 기프트 신청 안내 </a><span class="day">2021.06.29</span></li>
+                                    <li><a href="./support-news.jsp">[기타] 2021 SVIP 스페셜 기프트 신청 안내 </a><span class="day">2021.06.29</span></li>
 
-                                    <li><a href="/support/news/detail-view.aspx?idx=7804&type=2">[극장] 연말연시 특별 방역 조치에 따른 극장 운영 시간 조정 안내</a><span class="day">2020.12.04</span></li>
+                                    <li><a href="./support-news.jsp">[극장] 연말연시 특별 방역 조치에 따른 극장 운영 시간 조정 안내</a><span class="day">2020.12.04</span></li>
 
-                                    <li><a href="/support/news/detail-view.aspx?idx=7778&type=4">[기타] 포토플레이 서비스 개선 안내 </a><span class="day">2020.09.15</span></li>
+                                    <li><a href="./support-news.jsp">[기타] 포토플레이 서비스 개선 안내 </a><span class="day">2020.09.15</span></li>
 
-                                    <li><a href="/support/news/detail-view.aspx?idx=7754&type=4">[기타] 영진위 지원사업-“모든요일 6천원 할인”이벤트 조기 종료 안내 (8/16 종료)</a><span class="day">2020.08.16</span></li>
+                                    <li><a href="./support-news.jsp">[기타] 영진위 지원사업-“모든요일 6천원 할인”이벤트 조기 종료 안내 (8/16 종료)</a><span class="day">2020.08.16</span></li>
 
                                 </ul>
                                 <a href="./support-news.jsp" class="more">공지/뉴스 더보기</a>
                                 <div class="noti_ban_area">
-                                    <a href="/culture-event/event/preview/?menu=7" class="ban_preview">CGV PREVIEW 시사회/무대인사</a>
-                                    <a href="/discount/discountlist.aspx" class="ban_discount">DISCOUNT INFO 할인카드 및 혜택 안내</a>
+                                    <a href="./defaultNew.jsp?mCode=001" class="ban_preview">CGV PREVIEW</a>
+                                    <a href="./discount.jsp" class="ban_discount">DISCOUNT INFO 할인카드 및 혜택 안내</a>
                                 </div>
                             </div>
                         </div>
@@ -300,17 +301,17 @@
                                 <li>
                                     <strong class="tit_shortcut ico_general">대관/단체 서비스</strong>
                                     <span class="txt">CGV에서 진행하는 우리만의 특별한 이벤트 색다른 문화행사</span>
-                                    <a href="./support-lease.jsp"  class="round gray on" title=""><i>바로가기</i></a>
+                                    <a href="./support-lease.jsp" class="round gray on" title=""><i>바로가기</i></a>
                                 </li>
                                 <li>
                                     <strong class="tit_shortcut ico_vipinfo">VIP 안내</strong>
                                     <span class="txt">영화를 사랑하는 당신에게 드리는 특별한 CGV만의 VIP혜택</span>
-                                    <a href="/user/vip-lounge/" target="_blank" class="round gray on" title="새창열기"><i>바로가기</i></a>
+                                    <a href="./vip-lounge.jsp" class="round gray on" title="새창열기"><i>바로가기</i></a>
                                 </li>
                                 <li>
                                     <strong class="tit_shortcut ico_vipcustomer">VIP 고객센터</strong>
                                     <span class="txt">VIP 고객님들께 알려드리는<br/>VIP 혜택 제대로 활용하는 방법</span>
-                                    <a href="/user/vip-lounge/faq.aspx" target="_blank" class="round gray on" title="새창열기"><i>바로가기</i></a>
+                                    <a href="#" target="_blank" class="round gray on" title="새창열기"><i>바로가기</i></a>
                                 </li>
                             </ul>
                         </div>
