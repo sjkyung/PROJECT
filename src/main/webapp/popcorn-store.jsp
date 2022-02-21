@@ -524,24 +524,11 @@
     <!-- S 예매하기 및 TOP Fixed 버튼 -->
     <div class="fixedBtn_wrap">
     	<a href="#none" class="btn_gotoTop"><img src="./css/gotoTop.png" alt="최상단으로 이동" /></a>
-     	<div class="btn_fixedTicketing">
-	        <p><a href="#"><img src="./css/ticket.png" alt="예매"/></a></p>
-	        <p><a href="#">예매하기</a></p>
-	        <p><a href="#"><img src="./css/calender.png" alt="상영시간표"/></a></p>
-	        <p><a href="#">상영시간표</a></p>
-	        <p><a href="#"><img src="./css/popcorn.png" alt="바로팝콘"/></a></p>
-	        <p><a href="#">바로팝콘</a></p>
-	        <p><a href="#"><img src="./css/coin.png" alt="포인트"/></a></p>
-	        <p><a href="#">포인트적립</a></p>
-	        <p><a href="#"><img src="./css/help.png" alt="고객센터"/></a></p>
-	        <p><a href="#">고객센터</a></p>
-        </div>
     </div>
     
     <!-- E 예매하기 및 TOP Fixed 버튼 -->
 	
  
 	<%@include file="./footer.jsp" %>
-
 </body>
 </html>
