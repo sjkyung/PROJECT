@@ -79,517 +79,7 @@
     var ggOfferType = "";  
 
 
-    $(document).ready(function () {
-        $.giftstore_fixObj(this, $('.category_contents_wrap'), $('.category_content'), $('.giftstore_logo'));
-        $.giftstore_togetherView('category_product_together_view_wrap');
-        $.fn.focusSet1($('.category_product_together_view_wrap li'), 'active');
-            
-        $.giftstore_hotdeal('category_product_detail_wrap',
-                            []
-        );
-           
-        //영역 문제로 gift_store 클래스 추가
-        $("#contents").addClass("gift_store");
-
-        //네비게이션의 카테고리명 변경
-        $(".sect-linemap .sect-bcrumb .last").html("영화관람권");
-        $("#cm" + categoryid).addClass("active");
-        
-        $(".com_pop_wrap").append(addTheaterHtml());
-
-        if(invithtml != "")
-        {
-            $(".com_pop_wrap").append(invithtml);
-
-            $("#reginvit").click(function(){
-                fnCheckInviteCode(gidx);
-            });
-        }
-
-        $(window).bind("pageshow", function (event) {
-            if (!!window.performance && window.performance.navigation.type == 2) {
-                fnGetRefreshInfo();
-            }
-        });
-    });
-
-  
-
-    function addTheaterHtml()
-    {
-        var addhtml = "";
-
-        addhtml  = "    <div class='com_pop pop_product_cgv'>";
-		addhtml += "    <div class='com_pop_header'><span>사용가능한 CGV</span><a href='#none' class='sprite com_pop_btn_close'>닫기</a></div>";
-		addhtml += "       <div class='com_pop_container' id ='divAvailableCgv'>";						
-		addhtml += "       </div>";
-	    addhtml += "    </div>";
-
-        return addhtml;
-    }
-
-    $(window).load(function () {
-        $('.sect-aside-banner').asideRePosition();
-    });
-
-    //극장 데이터 가져오기
-    function fnTheaterData(_gCdoe) {
-            
-        $("#theaterRegion").children("li").each(function () {
-            if ($(this).hasClass("active")) {
-                $(this).removeClass("active");
-            }
-            if ($(this)[0].id == "liTheater" + _gCdoe) {
-                $(this).addClass("active");
-            }
-        });
-
-        $(".pop_product_cgv_content").each(function () {
-            if ($(this)[0].id == "divLocation" + _gCdoe) {
-                $(this).show();
-            }
-            else {
-                $(this).hide();
-            }
-        });
-    }
-
-
-    function fnGetTheater(_idx) {
-        var jsonData = "{idx: '" + _idx + "'}";
-        
-        $.ajax({
-            type: "POST",
-            url: "SetProductTheater.jsp",
-            data: jsonData,
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            async: true,
-            success: function (data) {
-                if (data.d.length > 0) {
-                    pHtml = data.d;
-                    //alert(data.d);
-                    
-                    $("#divAvailableCgv").empty();
-                    $("#divAvailableCgv").append(pHtml);
-
-                    $.fn.comPopupLayer(this, true, 'pop_product_cgv', '0');
-                }
-            },
-            error: function (xhr, status, err) {
-                var err = eval("(" + xhr.responseText + ")");
-                alert(err.Message);
-            }
-        });
-        $.fn.comPopupLayer(this, true, 'pop_product_cgv', '0');
-    }
-
-    //뒤로가기 새로고침
-    function fnGetRefreshInfo() {
-	
-	    $.ajax({
-		    type: "POST",
-		    url: "GetCategoryInfo.jsp",
-		    contentType: "application/json; charset=utf-8",
-		    dataType: "json",
-		    async: false,
-		    success: function (data) {
-			
-			    var tmpval = data.d.split('|');
-			
-			    $("#cartviewcnt").text(tmpval[0]);
-			    $("#giftconcnt").text(tmpval[1]);
-
-		    },
-
-		    error: function (xhr, status, err) {
-			    var err = eval("(" + xhr.responseText + ")");
-			    alert(err.Message);
-		    }
-	    });
-	
-    }
-
-
-    //초대코드 확인
-    function fnInviteCode(_idx) {
-        //다시 열때 초기화
-        $('#txtInvitation').val('');
-
-        var jsonData = "{idx: '" + _idx + "', userid:''}"
-        jQuery.ajax({
-            type: "POST",
-            url: "GetPrevInviteCode.jsp",
-            data: jsonData,
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            async: true,
-            success: function (data) {
-                if (data.d.ResultCode == "00000") {
-                        
-                    $.fn.comPopupLayer(this, true, 'pop_invitation_code', '0');
-                        
-                } else {
-                    alert(data.d.ResultMessage);
-                }
-            },
-            error: function (xhr, status, err) {
-                var err = eval("(" + xhr.responseText + ")");
-                //alert(err.Message);
-                alert("장애가 발생하였습니다. 잠시 후 다시 시도해 주세요.");
-                window.location.reload();
-            }
-        });
-    }
-    //초대코드 닫기
-    function fnCloseLayer() {
-        history.replaceState({ 'pop': 'close' }, '', "product-detail.jsp?GG_NO=" + gidx);
-        $.fn.comPopupLayer(this, false, 'pop_invitation_code', '0');
-            
-    }
-
-    //초대코드체크
-    function fnCheckInviteCode(_idx) {
-            
-        var iCode = $("#txtInvitation").val().trim();
-
-        if (iCode.length < 1) {
-            alert("초대코드를 입력해 주세요.");
-            $("txtInvitation").focus();
-            return false;
-        }
-        var jsonData = "{idx: '" + _idx + "',iCode: '" + iCode + "', userid:''}";
-
-        $.ajax({
-            type: "POST",
-            url: "GetInviteCode.jsp",
-            data: jsonData,
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            async: true,
-            success: function (data) {
-                if (data.d.code == "0") {
-                    alert("초대코드가 적용되었습니다.");
-                    if (jQuery(".com_form_count0").length > 0) {
-                        $(".com_form_count0").text("1");
-                        $(".com_total_price0").text(data.d.message);
-                        $(".com_btn_fixed_wrap").removeClass("com_btn_fixed_type1");
-                        $(".com_btn_fixed_wrap").addClass("com_btn_fixed_type0");
-                        $(".com_btn_minus").attr("onclick", "javascript:$.fn.comFormNumberCnt('com_form_count0', 'com_total_price' ,'com_total_price0', -1, 1, " + data.d.qty + ")");
-                        $(".com_btn_plus").attr("onclick", "javascript:$.fn.comFormNumberCnt('com_form_count0', 'com_total_price' ,'com_total_price0', 1, 1, " + data.d.qty + ")");
-                        $("#btn_style0").attr("inviteYN", "Y");
-                    }
-                    $("#spnSalePrice").text(data.d.message);
-                    $("#spantotalprice").text(data.d.message);
-                    pIdx = data.d.idx;
-                    //$('#spnBtnWrap').attr('data-promo', pIdx);
-                    $("#btn_style0").text("할인적용");
-                    $("#btn_style0").attr("href", "javascript:void(0);").attr("onclick", "javascript:void(0);");
-                    $(".sale_price").show();
-                    if (Number($(".store_deatail_sale_price")[0].innerText.replace(/,/g, "")) < Number($(".store_deatail_source_price")[0].innerText.replace(/,/g, ""))) 
-                        $(".store_deatail_source_price").show();
-                    $(".btn_cart").remove();
-                    fnCloseLayer();
-                } else {
-                    alert(data.d.message);
-                    pIdx = "0";
-                    //jQuery('#spnBtnWrap').attr('data-promo', pIdx);
-                    //fnCloseLayer();
-                }
-            },
-            error: function (xhr, status, err) {
-                var err = eval("(" + xhr.responseText + ")");
-                //alert(err.Message);
-                alert("장애가 발생하였습니다. 잠시 후 다시 시도해 주세요.");
-                window.location.reload();
-            }
-        });
-    }
-
-
-    function fnAddCart(_idx, _pidx) {
-        if ("False" == "False") {
-	        app.goLogin();
-        }
-
-        var _Cnt = 0;
-        var _SubNo="";
-        if($(".com_form_count0").length > 0) {
-            _Cnt = $(".com_form_count0").text().replace(/,/g, "");
-        } else if($(".com_form_count").length > 0) {
-            _Cnt = $(".com_form_count").text().replace(/,/g, "");
-            $(".com_checkbox_list").find('li').each(function(idx){
-                if($(this).hasClass('active')){
-                    _SubNo += "," + $(this).find('.add_product_info_img')[0].id.replace(/GG_/g, "");
-                }
-            });
-        }
-        
-        if($("#btn_style0").attr("inviteYN") == "N")
-        {
-            _pidx = "0";
-        }
-           
-        var params = {
-            UserId:encodeURIComponent(""),
-            idx: encodeURIComponent(_idx),
-            Quantity: encodeURIComponent(_Cnt),
-            SubGG: encodeURIComponent(_SubNo),
-            ProIdx: encodeURIComponent(_pidx)
-        };
-
-        $.ajax({
-            type: "POST",
-            url: "SetAddCartItem.jsp",
-            data: "{ requestData: '" + JSON.stringify(params) + "'}",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            async: true,
-            success: function (data) {
-                if (data.d.ResultCode == "00000") {
-                    if (data.d.ResultMessage <= 10) {
-                        $("#cartviewcnt").text(data.d.ResultMessage);
-                        if (confirm("장바구니에 등록되었습니다.\n확인하시겠습니까?")) {
-                            location.replace("popcorn-store/user-cart.jsp");
-                        } else {
-                            return false;
-                        }
-                    } else {
-                        alert("최대 10개의 상품을 장바구니에 담을 수 있습니다.");
-                        window.location.reload();
-                        //return false;
-                    }
-                } 
-                else 
-                {
-                    if(data.d.ResultMessage == null)
-                    {
-                        app.goLogin();
-                        //window.location.reload();
-                    }
-                    else
-                    {
-                        if(data.d.ResultCode != "")
-                        { 
-                            alert(data.d.ResultMessage);
-                        }
-                        // 전체판매수량 소진시 새로고침해준다
-                        if (data.d.ResultCode == "99994" || data.d.ResultCode == "99997" || data.d.ResultCode == "99999")
-                        {
-                            alert(data.d.ResultMessage);
-                            window.location.reload();
-                        }
-                    }
-                }
-            },
-            error: function (xhr, status, err) {
-                var err = eval("(" + xhr.responseText + ")");
-                //alert(err.Message);
-                alert("장애가 발생하였습니다. 잠시 후 다시 시도해 주세요.");
-                window.location.reload();
-            }
-        });
-        
-    }
-
-
-    function fnBuyGoods(_idx,pidx, type, cnt) {
-        
-        var ggOfferType = "";
-        if (loginstatus == "False") {
-	        app.goLogin();
-        }
-
-        if(_idx != gidx)
-        {
-            fnCheckPromotionGoods(_idx);
-        }
-        
-        var _Cnt = cnt;
-        var _SubNo = "";
-        var _pidx = pidx;
-        
-        if($("#btn_style0").attr("inviteYN") == "N" || $("#btn_style0").attr("inviteYN") == "undefined")
-        {
-            _pidx = "0";
-        }
-        
-        if(cnt == 0)
-        {
-            if ($(".com_form_count0").length > 0) {
-                _Cnt = $(".com_form_count0").text().replace(/,/g, "");
-            } else if ($(".com_form_count").length > 0) {
-                _Cnt = $(".com_form_count").text().replace(/,/g, "");
-                $(".com_checkbox_list").find('li').each(function (idx) {
-                    if ($(this).hasClass('active')) {
-                        _SubNo += "," + $(this).find('.add_product_info_img')[0].id.replace(/GG_/g, "");
-                    }
-                });
-            }else {
-                _Cnt = $(".com_custom_selectbox_btn").text().replace(/,/g, "");
-            }
-        }
-                
-        var params = {
-            idx: encodeURIComponent(_idx),
-            Quantity: encodeURIComponent(_Cnt),
-            SubGG:  encodeURIComponent(_SubNo),
-            ProIdx: encodeURIComponent(_pidx),
-            Type: encodeURIComponent(type),
-            UserId : encodeURIComponent("")
-        };
-
-        $.ajax({
-            type: "POST",
-            url: "SetPurchaseItem.jsp",
-            data: "{ requestData: '" + JSON.stringify(params) + "'}",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            async: true,
-            success: function (data) {
-                if (data.d.ResultCode == "00000") {
-                    if (ggOfferType === "02") {                      
-                        NetFunnel_Action({ "skin_id": "template1", "action_id": "act_01" }, {
-                            success: function (ev, ret) {
-                          
-                                $('#divAction').append(data.d.ResultHtml);
-                                $('#frmBuyAction').submit();
-
-                            },
-                            block: function (ev, ret) {
-                               
-                                alert("상품이 모두 판매되었습니다.");
-                                return false;
-                              //  location.reload();
-                             
-                            }
-                        });
-                    }
-                    else {
-                    
-                            $('#divAction').append(data.d.ResultHtml);
-                            $('#frmBuyAction').submit();
-                    }
-                }
-                else {
-                    if(data.d.ResultMessage == null)
-                    {
-                        app.goLogin();
-                        //window.location.reload();
-                    }
-                    else
-                    {
-                        alert(data.d.ResultMessage);
-
-                        if (data.d.ResultCode == "99999") {
-                            var additems = $(".com_custom_checkbox_wrap p").hasClass("com_custom_checkbox_title");
-                        
-                            if (additems) 
-                            {
-                                window.location.reload();
-                            }
-                            else {
-                                location.replace("popcorn-store/");
-                            }
-                        }
-                        // 전체판매수량 소진시 새로고침해준다
-                        else if (data.d.ResultCode == "99994") 
-                        {
-                            window.location.reload();
-                        }
-                    }
-                }
-            },
-            error: function (xhr, status, err) {
-                var err = eval("(" + xhr.responseText + ")");
-                //alert(err.Message);
-                alert("장애가 발생하였습니다. 잠시 후 다시 시도해 주세요.");
-                window.location.reload();
-            }
-        });
-    }
-
-    //타겟팅 할인가 확인
-    function fnCheckPromotionGoods(_idx) {
-        
-        var jsonData = "{idx: '" + _idx  + "', userId: ''}";
-        
-        $.ajax({
-            type: "POST",
-            url: "GetInviteStatus.jsp",
-            data: jsonData,
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            async: true,
-            success: function (data) {
-                if (data.d.code == "00") {
-                    alert(data.d.message);
-                }
-            },
-            error: function (xhr, status, err) {
-                var err = eval("(" + xhr.responseText + ")");
-                //alert(err.Message);
-                alert("장애가 발생하였습니다. 잠시 후 다시 시도해 주세요.");
-                window.location.reload();
-            }
-        });
-    }
-
-    function fnAddGoodsName(obj){
-        var addgoods = "";
-        var cnt = 0;
-        
-        if($(obj).attr("chkstatus") =="Y")
-        {
-            $(obj).attr("chkstatus", "N");
-        }
-        else
-        {
-            $(obj).attr("chkstatus", "Y");
-        }
-
-        $(".com_custom_checkbox").each(function(){
-            
-            if($(this).attr("chkstatus") == "Y")
-            {
-                if(addgoods == "")
-                {
-                    addgoods = "(추가 : ";
-                    addgoods += $(this).parent().find(".add_product_title").text();
-                }
-                else
-                {
-                    addgoods += ", " + $(this).parent().find(".add_product_title").text();  
-                }
-                                
-            }
-        });
-
-        if(cnt >= 4)
-        {
-            alert("최대 3개까지 구매가 가능합니다.");
-            return false;
-        }
-
-        if(addgoods != "")
-        {
-            addgoods += ")";
-        }
-        
-        $(".com_form_number_subtitle").text(addgoods);
-    }
-
-    function fnSetLeftPrice(obj)
-    {
-        var setprice = $(obj).text();
-        $(".com_total_price").text(setprice);    
-    }
-    
-    function fnHotDealClose() {
-        alert("핫딜이 종료되었습니다.");
-        location.reload();
-    }
-    </script>
+	</script>
     
 
     <!--/각페이지 Header End--> 
@@ -633,6 +123,28 @@
         if (cname != "") {
             $(".sect-linemap .sect-bcrumb .last").html("");
         }
+        
+        $('.btn_available_viewcgv').on('click', function(e){
+            $('.com_pop_wrap').show();
+            $('.com_pop').show();
+            $('.com_pop_fog').css('background-color', 'rgba(0,0,0,0.5)');
+            $('.pop_product_cgv').css('top', '55%');
+        })
+
+        $('.com_pop_wrap').click(function(){
+            $('.com_pop_wrap').hide();
+            $('.com_pop').hide();
+        })
+
+        $('.pop_product_cgv').click(function(e){
+            e.stopPropagation();
+
+        })
+
+        $('.com_pop_btn_close').click(function(){
+            $('.com_pop_wrap').hide();
+            $('.com_pop').hide();
+        });
 
     });
 
@@ -658,7 +170,7 @@
     <div class='category_product_detail_wrap'>   <strong class='category_product_detail_title'>CGV 영화관람권<span>기프트콘</span></strong>   <div class='category_product_detail_contents'>         <div class='category_product_detail_contents_img_wrap'>
                  <ul class='bxslider'>
               <li><img src='http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/16094706931690.jpg' alt='CGV 영화관람권'></li>                 </ul>
-           </div>           <div class='category_product_detail_contents_wrap'>               <p class='category_product_detail_sale_price_wrap'>    <span class="store_deatail_sale_price" id="spnSalePrice">11,000</span>               </p>               <dl class='category_product_detail_add_info'>                   <dt>상품구성</dt>                   <dd>일반 영화관람권</dd>                  <dt>유효기간</dt>                  <dd>구매일로부터 24개월 이내</dd>                  <dt>상품교환</dt>                  <dd><a href='#none' class='btn_available_viewcgv' onclick='javascript:fnGetTheater(100253);'>사용가능 CGV 보기</a></dd>               </dl>               <div class='category_product_detail_price_wrap'>                   <div class='com_form_number'>                      <a href="#none" onclick="javascript:$.fn.comFormNumberCnt('com_form_count0', 'com_total_price' ,'com_total_price0', -1, 1, 10);" class="com_btn_minus">-</a>               		<span class='com_form_count com_form_count0'>1</span>                      <a href="#none" onclick="javascript:$.fn.comFormNumberCnt('com_form_count0','com_total_price', 'com_total_price0', 1, 1, 10);" class="com_btn_plus">+</a>               		<span class='com_total_price' id='spantotalprice'>11,000</span>               	</div>               	<div class='category_product_detail_total_price'>               		<p class='com_form_total_price'>총 구매금액<span class='com_total_price0 com_product_total_price'>11,000</span></p>               	</div>                </div>               <div class='category_product_detail_btn_wrap'> <a href='user-cart.jsp' onclick='javascript:app.goLogin();return false;' class='btn_cart'>장바구니</a>               <a href='user-gift.jsp' onclick='javascript:app.goLogin(); return false;'>선물하기</a><a href='purchase-confirm.jsp' onclick='javascript:app.goLogin();return false;'>구매하기</a>               </div>           </div>       </div>         <p class='category_product_detail_txtbox'>CGV 영화관람권으로 즐거운 영화관람하세요!</p>         <dl class='category_product_detail_dlist'>         	<dt>이용안내</dt>         	<dd>• 해당 기프트콘은 CGV모바일, 홈페이지, 오프라인 극장에서 영화를 예매할 수 있는 온라인 상품권입니다.<br />
+           </div>           <div class='category_product_detail_contents_wrap'>               <p class='category_product_detail_sale_price_wrap'>    <span class="store_deatail_sale_price" id="spnSalePrice">11,000</span>               </p>               <dl class='category_product_detail_add_info'>                   <dt>상품구성</dt>                   <dd>일반 영화관람권</dd>                  <dt>유효기간</dt>                  <dd>구매일로부터 24개월 이내</dd>                  <dt>상품교환</dt>                  <dd><a href='#none' class='btn_available_viewcgv' onclick='javascript:getPop();'>사용가능 CGV 보기</a></dd>               </dl>               <div class='category_product_detail_price_wrap'>                   <div class='com_form_number'>                      <a href="#none" onclick="javascript:$.fn.comFormNumberCnt('com_form_count0', 'com_total_price' ,'com_total_price0', -1, 1, 10);" class="com_btn_minus">-</a>               		<span class='com_form_count com_form_count0'>1</span>                      <a href="#none" onclick="javascript:$.fn.comFormNumberCnt('com_form_count0','com_total_price', 'com_total_price0', 1, 1, 10);" class="com_btn_plus">+</a>               		<span class='com_total_price' id='spantotalprice'>11,000</span>               	</div>               	<div class='category_product_detail_total_price'>               		<p class='com_form_total_price'>총 구매금액<span class='com_total_price0 com_product_total_price'>11,000</span></p>               	</div>                </div>               <div class='category_product_detail_btn_wrap'> <a href='user-cart.jsp' onclick='javascript:app.goLogin();return false;' class='btn_cart'>장바구니</a>               <a href='user-gift.jsp' onclick='javascript:app.goLogin(); return false;'>선물하기</a><a href='purchase-confirm.jsp' onclick='javascript:app.goLogin();return false;'>구매하기</a>               </div>           </div>       </div>         <p class='category_product_detail_txtbox'>CGV 영화관람권으로 즐거운 영화관람하세요!</p>         <dl class='category_product_detail_dlist'>         	<dt>이용안내</dt>         	<dd>• 해당 기프트콘은 CGV모바일, 홈페이지, 오프라인 극장에서 영화를 예매할 수 있는 온라인 상품권입니다.<br />
 • <strong>구매 후 전송받으신 기프트콘은,</strong><br />
 - 사용가능한 CGV에서 지정된 상영타입의 영화만 예매 가능합니다.(ex. 3D 관람권으로는 3D 영화만 예매 가능합니다)<br />
 - 금액권이 아니므로 차액 환급이 불가합니다. (ex.조조영화/청소년 관람 시 차액환급 불가)<br />
@@ -700,6 +212,17 @@
     <!-- S Popup -->
     <div class="com_pop_wrap">
         <div class="com_pop_fog"></div>
+        <div class="com_pop pop_product_cgv" style="display: block; margin-left: -275px; margin-top: -310px;">    <div class="com_pop_header"><span>사용가능한 CGV</span><a href="#none" class="sprite com_pop_btn_close">닫기</a></div>       <div class="com_pop_container" id="divAvailableCgv">           <p>해당 기프트콘을 사용할 수 있는 CGV 입니다</p>           <ul class="pop_product_cgv_title" id="theaterRegion">        <li class="active" id="liTheater01"><a href="javascript:void(0);" onclick="javascript:fnTheaterData('01');">서울</a><span>28</span></li>        <li class="" id="liTheater02"><a href="javascript:void(0);" onclick="javascript:fnTheaterData('02');">경기</a><span>54</span></li>        <li class="" id="liTheater202"><a href="javascript:void(0);" onclick="javascript:fnTheaterData('202');">인천</a><span>13</span></li>        <li class="" id="liTheater12"><a href="javascript:void(0);" onclick="javascript:fnTheaterData('12');">강원</a><span>4</span></li>        <li class="" id="liTheater03"><a href="javascript:void(0);" onclick="javascript:fnTheaterData('03');">대전/충청</a><span>22</span></li>        <li class="" id="liTheater11"><a href="javascript:void(0);" onclick="javascript:fnTheaterData('11');">대구</a><span>8</span></li>        <li class="" id="liTheater207"><a href="javascript:void(0);" onclick="javascript:fnTheaterData('207');">부산/울산</a><span>15</span></li>        <li class="" id="liTheater204"><a href="javascript:void(0);" onclick="javascript:fnTheaterData('204');">경상</a><span>19</span></li>        <li class="" id="liTheater206"><a href="javascript:void(0);" onclick="javascript:fnTheaterData('206');">광주/전라/제주</a><span>24</span></li>   </ul>
+            <ul class="pop_product_cgv_content" id="divLocation01">       <li><a href="javascript:void(0);">CGV강남</a></li>       <li><a href="javascript:void(0);">CGV강변</a></li>       <li><a href="javascript:void(0);">CGV건대입구</a></li>       <li><a href="javascript:void(0);">CGV구로</a></li>       <li><a href="javascript:void(0);">CGV대학로</a></li>       <li><a href="javascript:void(0);">CGV동대문</a></li>       <li><a href="javascript:void(0);">CGV등촌</a></li>       <li><a href="javascript:void(0);">CGV명동</a></li>       <li><a href="javascript:void(0);">CGV명동역 씨네라이브러리</a></li>       <li><a href="javascript:void(0);">CGV목동</a></li>       <li><a href="javascript:void(0);">CGV미아</a></li>       <li><a href="javascript:void(0);">CGV불광</a></li>       <li><a href="javascript:void(0);">CGV상봉</a></li>       <li><a href="javascript:void(0);">CGV성신여대입구</a></li>       <li><a href="javascript:void(0);">CGV송파</a></li>       <li><a href="javascript:void(0);">CGV수유</a></li>       <li><a href="javascript:void(0);">CGV신촌아트레온</a></li>       <li><a href="javascript:void(0);">CGV압구정</a></li>       <li><a href="javascript:void(0);">CGV여의도</a></li>       <li><a href="javascript:void(0);">CGV연남</a></li>       <li><a href="javascript:void(0);">CGV영등포</a></li>       <li><a href="javascript:void(0);">CGV왕십리</a></li>       <li><a href="javascript:void(0);">CGV용산아이파크몰</a></li>       <li><a href="javascript:void(0);">CGV중계</a></li>       <li><a href="javascript:void(0);">CGV천호</a></li>       <li><a href="javascript:void(0);">CGV피카디리1958</a></li>       <li><a href="javascript:void(0);">CGV하계</a></li>       <li><a href="javascript:void(0);">CGV홍대</a></li>   </ul>
+            <ul class="pop_product_cgv_content" id="divLocation02" style="display:none;">       <li><a href="javascript:void(0);">CGV경기광주</a></li>       <li><a href="javascript:void(0);">CGV고양행신</a></li>       <li><a href="javascript:void(0);">CGV광교</a></li>       <li><a href="javascript:void(0);">CGV광교상현</a></li>       <li><a href="javascript:void(0);">CGV구리</a></li>       <li><a href="javascript:void(0);">CGV김포</a></li>       <li><a href="javascript:void(0);">CGV김포운양</a></li>       <li><a href="javascript:void(0);">CGV김포풍무</a></li>       <li><a href="javascript:void(0);">CGV김포한강</a></li>       <li><a href="javascript:void(0);">CGV동백</a></li>       <li><a href="javascript:void(0);">CGV동수원</a></li>       <li><a href="javascript:void(0);">CGV동탄</a></li>       <li><a href="javascript:void(0);">CGV동탄스타</a></li>       <li><a href="javascript:void(0);">CGV동탄역</a></li>       <li><a href="javascript:void(0);">CGV동탄호수공원</a></li>       <li><a href="javascript:void(0);">CGV배곧</a></li>       <li><a href="javascript:void(0);">CGV범계</a></li>       <li><a href="javascript:void(0);">CGV부천</a></li>       <li><a href="javascript:void(0);">CGV부천역</a></li>       <li><a href="javascript:void(0);">CGV부천옥길</a></li>       <li><a href="javascript:void(0);">CGV북수원</a></li>       <li><a href="javascript:void(0);">CGV산본</a></li>       <li><a href="javascript:void(0);">CGV서현</a></li>       <li><a href="javascript:void(0);">CGV성남모란</a></li>       <li><a href="javascript:void(0);">CGV소풍</a></li>       <li><a href="javascript:void(0);">CGV수원</a></li>       <li><a href="javascript:void(0);">CGV스타필드시티위례</a></li>       <li><a href="javascript:void(0);">CGV시흥</a></li>       <li><a href="javascript:void(0);">CGV안산</a></li>       <li><a href="javascript:void(0);">CGV안성</a></li>       <li><a href="javascript:void(0);">CGV안양</a></li>       <li><a href="javascript:void(0);">CGV야탑</a></li>       <li><a href="javascript:void(0);">CGV양주옥정</a></li>       <li><a href="javascript:void(0);">CGV역곡</a></li>       <li><a href="javascript:void(0);">CGV오리</a></li>       <li><a href="javascript:void(0);">CGV오산</a></li>       <li><a href="javascript:void(0);">CGV오산중앙</a></li>       <li><a href="javascript:void(0);">CGV용인</a></li>       <li><a href="javascript:void(0);">CGV의정부</a></li>       <li><a href="javascript:void(0);">CGV의정부태흥</a></li>       <li><a href="javascript:void(0);">CGV이천</a></li>       <li><a href="javascript:void(0);">CGV일산</a></li>       <li><a href="javascript:void(0);">CGV정왕</a></li>       <li><a href="javascript:void(0);">CGV죽전</a></li>       <li><a href="javascript:void(0);">CGV파주문산</a></li>       <li><a href="javascript:void(0);">CGV파주야당</a></li>       <li><a href="javascript:void(0);">CGV판교</a></li>       <li><a href="javascript:void(0);">CGV평촌</a></li>       <li><a href="javascript:void(0);">CGV평택</a></li>       <li><a href="javascript:void(0);">CGV평택소사</a></li>       <li><a href="javascript:void(0);">CGV포천</a></li>       <li><a href="javascript:void(0);">CGV하남미사</a></li>       <li><a href="javascript:void(0);">CGV화성봉담</a></li>       <li><a href="javascript:void(0);">CGV화정</a></li>   </ul>
+            <ul class="pop_product_cgv_content" id="divLocation202" style="display:none;">       <li><a href="javascript:void(0);">CGV계양</a></li>       <li><a href="javascript:void(0);">CGV남주안</a></li>       <li><a href="javascript:void(0);">CGV부평</a></li>       <li><a href="javascript:void(0);">CGV송도타임스페이스</a></li>       <li><a href="javascript:void(0);">CGV연수역</a></li>       <li><a href="javascript:void(0);">CGV인천</a></li>       <li><a href="javascript:void(0);">CGV인천공항</a></li>       <li><a href="javascript:void(0);">CGV인천논현</a></li>       <li><a href="javascript:void(0);">CGV인천도화</a></li>       <li><a href="javascript:void(0);">CGV인천연수</a></li>       <li><a href="javascript:void(0);">CGV인천학익</a></li>       <li><a href="javascript:void(0);">CGV주안역</a></li>       <li><a href="javascript:void(0);">CGV청라</a></li>   </ul>
+            <ul class="pop_product_cgv_content" id="divLocation12" style="display:none;">       <li><a href="javascript:void(0);">CGV강릉</a></li>       <li><a href="javascript:void(0);">CGV원주</a></li>       <li><a href="javascript:void(0);">CGV인제</a></li>       <li><a href="javascript:void(0);">CGV춘천</a></li>   </ul>
+            <ul class="pop_product_cgv_content" id="divLocation03" style="display:none;">       <li><a href="javascript:void(0);">CGV대전</a></li>       <li><a href="javascript:void(0);">CGV대전가수원</a></li>       <li><a href="javascript:void(0);">CGV대전가오</a></li>       <li><a href="javascript:void(0);">CGV대전탄방</a></li>       <li><a href="javascript:void(0);">CGV대전터미널</a></li>       <li><a href="javascript:void(0);">CGV유성노은</a></li>       <li><a href="javascript:void(0);">CGV논산</a></li>       <li><a href="javascript:void(0);">CGV당진</a></li>       <li><a href="javascript:void(0);">CGV보령</a></li>       <li><a href="javascript:void(0);">CGV서산</a></li>       <li><a href="javascript:void(0);">CGV세종</a></li>       <li><a href="javascript:void(0);">CGV천안</a></li>       <li><a href="javascript:void(0);">CGV천안터미널</a></li>       <li><a href="javascript:void(0);">CGV천안펜타포트</a></li>       <li><a href="javascript:void(0);">CGV청주(서문)</a></li>       <li><a href="javascript:void(0);">CGV청주성안길</a></li>       <li><a href="javascript:void(0);">CGV청주율량</a></li>       <li><a href="javascript:void(0);">CGV청주지웰시티</a></li>       <li><a href="javascript:void(0);">CGV청주터미널</a></li>       <li><a href="javascript:void(0);">CGV충북혁신</a></li>       <li><a href="javascript:void(0);">CGV충주교현</a></li>       <li><a href="javascript:void(0);">CGV홍성</a></li>   </ul>
+            <ul class="pop_product_cgv_content" id="divLocation11" style="display:none;">       <li><a href="javascript:void(0);">CGV대구수성</a></li>       <li><a href="javascript:void(0);">CGV대구스타디움</a></li>       <li><a href="javascript:void(0);">CGV대구아카데미</a></li>       <li><a href="javascript:void(0);">CGV대구월성</a></li>       <li><a href="javascript:void(0);">CGV대구이시아</a></li>       <li><a href="javascript:void(0);">CGV대구칠곡</a></li>       <li><a href="javascript:void(0);">CGV대구한일</a></li>       <li><a href="javascript:void(0);">CGV대구현대</a></li>   </ul>
+            <ul class="pop_product_cgv_content" id="divLocation207" style="display:none;">       <li><a href="javascript:void(0);">CGV남포</a></li>       <li><a href="javascript:void(0);">CGV대연</a></li>       <li><a href="javascript:void(0);">CGV동래</a></li>       <li><a href="javascript:void(0);">CGV부산대</a></li>       <li><a href="javascript:void(0);">CGV서면</a></li>       <li><a href="javascript:void(0);">CGV서면삼정타워</a></li>       <li><a href="javascript:void(0);">CGV센텀시티</a></li>       <li><a href="javascript:void(0);">CGV아시아드</a></li>       <li><a href="javascript:void(0);">CGV정관</a></li>       <li><a href="javascript:void(0);">CGV하단아트몰링</a></li>       <li><a href="javascript:void(0);">CGV해운대</a></li>       <li><a href="javascript:void(0);">CGV화명</a></li>       <li><a href="javascript:void(0);">CGV울산삼산</a></li>       <li><a href="javascript:void(0);">CGV울산신천</a></li>       <li><a href="javascript:void(0);">CGV울산진장</a></li>   </ul>
+            <ul class="pop_product_cgv_content" id="divLocation204" style="display:none;">       <li><a href="javascript:void(0);">CGV거제</a></li>       <li><a href="javascript:void(0);">CGV경산</a></li>       <li><a href="javascript:void(0);">CGV고성</a></li>       <li><a href="javascript:void(0);">CGV구미</a></li>       <li><a href="javascript:void(0);">CGV김천율곡</a></li>       <li><a href="javascript:void(0);">CGV김해</a></li>       <li><a href="javascript:void(0);">CGV김해율하</a></li>       <li><a href="javascript:void(0);">CGV김해장유</a></li>       <li><a href="javascript:void(0);">CGV마산</a></li>       <li><a href="javascript:void(0);">CGV북포항</a></li>       <li><a href="javascript:void(0);">CGV안동</a></li>       <li><a href="javascript:void(0);">CGV양산물금</a></li>       <li><a href="javascript:void(0);">CGV양산삼호</a></li>       <li><a href="javascript:void(0);">CGV진주혁신</a></li>       <li><a href="javascript:void(0);">CGV창원</a></li>       <li><a href="javascript:void(0);">CGV창원더시티</a></li>       <li><a href="javascript:void(0);">CGV창원상남</a></li>       <li><a href="javascript:void(0);">CGV통영</a></li>       <li><a href="javascript:void(0);">CGV포항</a></li>   </ul>
+            <ul class="pop_product_cgv_content" id="divLocation206" style="display:none;">       <li><a href="javascript:void(0);">CGV광양</a></li>       <li><a href="javascript:void(0);">CGV광양 엘에프스퀘어</a></li>       <li><a href="javascript:void(0);">CGV군산</a></li>       <li><a href="javascript:void(0);">CGV나주</a></li>       <li><a href="javascript:void(0);">CGV목포</a></li>       <li><a href="javascript:void(0);">CGV목포평화광장</a></li>       <li><a href="javascript:void(0);">CGV서전주</a></li>       <li><a href="javascript:void(0);">CGV순천</a></li>       <li><a href="javascript:void(0);">CGV순천신대</a></li>       <li><a href="javascript:void(0);">CGV여수웅천</a></li>       <li><a href="javascript:void(0);">CGV익산</a></li>       <li><a href="javascript:void(0);">CGV전주</a></li>       <li><a href="javascript:void(0);">CGV전주고사</a></li>       <li><a href="javascript:void(0);">CGV전주효자</a></li>       <li><a href="javascript:void(0);">CGV정읍</a></li>       <li><a href="javascript:void(0);">CGV제주</a></li>       <li><a href="javascript:void(0);">CGV제주노형</a></li>       <li><a href="javascript:void(0);">CGV광주금남로</a></li>       <li><a href="javascript:void(0);">CGV광주상무</a></li>       <li><a href="javascript:void(0);">CGV광주용봉</a></li>       <li><a href="javascript:void(0);">CGV광주첨단</a></li>       <li><a href="javascript:void(0);">CGV광주충장로</a></li>       <li><a href="javascript:void(0);">CGV광주터미널</a></li>       <li><a href="javascript:void(0);">CGV광주하남</a></li>   </ul>
+  </div>    </div>
     </div>
     <div class="pop_wrap">
     <!-- S > [팝업] 지원 OS 업데이트 유도-->
