@@ -20,10 +20,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript">
-        $(document).ready( function() {
+        $(function() {
 
             $("#headers").load("header.jsp");
-
+            
         });
     </script>
 </head>
