@@ -40,7 +40,12 @@
 	<script type="text/javascript" src="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/reservation.step1.js"></script>
 	<script type="text/javascript" src="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/reservation.step2.js"></script>
 	<script type="text/javascript">
-		// for loadStep3Resources_STEP2 include source path;
+		function printHomeTicket() {
+			window.open("home_ticket.jsp","new","width=500,height=500,top=100,left=100");
+
+		}
+
+	// for loadStep3Resources_STEP2 include source path;
 		var CDN_PATH_JS = "http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/";
 		// 초기 선택값 설정
 		preselectSetting(
@@ -64,6 +69,8 @@
 		window.onload =function(){
 
 
+
+			// 예매가이드 팝업
 			let guide=document.getElementsByClassName('button-guide');
 			let btnClose=document.getElementsByClassName('btn_close');
 			let popup =document.getElementsByClassName('popup_guide');
@@ -84,24 +91,50 @@
 				blackscreen[0].style.display='none';
 			};
 
+			// 영화 선택시 하단에 정보 전달하는 부분임
 			let placeholder=document.getElementsByClassName('placeholder');
-			let movie_click=document.getElementsByClassName('rating-15');
-			let movieName=document.getElementById('movieName').getAttribute('title');
+			let movie_click=document.getElementsByClassName('movieClick');
 			let movieTitle=document.getElementsByClassName('movie_title');
 
-			movie_click[0].addEventListener('click',function(){
-				console.log("영화 선택!");
-				console.log(movieName);
-				movieTitle[0].style.display='block';
-				placeholder[1].style.display='none';
 
-			});
 
+			for(let i=0;i<=movie_click.length-1;i++){
+				movie_click[i].addEventListener('click',function(){
+					let movieName=document.getElementsByClassName('movieName')[i].getAttribute('title');
+					console.log("영화 선택!");
+					console.log(movieName);
+					movieTitle[0].style.display='block';
+					placeholder[1].style.display='none';
+					let movieSel=document.getElementById("movie_sel");
+					movieSel.innerText=movieName;
+					if(movieName=="극장판주술회전0"){
+						let moviePoster=document.getElementById("movie_poster");
+						moviePoster.style.display='block';
+						moviePoster.src='./css/85603.jpg';
+					};
+					if(movieName=="언차티드"){
+						let moviePoster=document.getElementById("movie_poster");
+						moviePoster.style.display='block';
+						moviePoster.src='./css/85624.jpg';
+					};
+					if(movieName=="더배트맨"){
+						let moviePoster=document.getElementById("movie_poster");
+						moviePoster.style.display='block';
+						moviePoster.src='./css/85603.jpg';
+					}
+
+				});
+			}
+
+
+			// 슬라이드 부분 구현
 			let pagenum=0;
 			let btnLeft=document.getElementById('btn-left');
 			let btnRight=document.getElementById('tnb_step_btn_right');
 			let step=document.getElementsByClassName('step');
 			let tnb=document.getElementById("tnb");
+			let layerPopup=document.getElementsByClassName("ft_layer_popup");
+			let btn_ok=document.getElementsByClassName("btn_ok");
 
 			btnRight.addEventListener('click',function(){
 				console.log(pagenum);
@@ -113,9 +146,21 @@
 				step[pagenum+1].style.display='block';
 				tnb.className='tnb step'+(pagenum+2);
 				pagenum++;
+				if(pagenum==1){
+					placeholder[3].style.display='none';
+					layerPopup[3].style.display='block';
+					layerPopup[4].style.display='block';
+				}
 
 			});
 
+			// 레이어팝업 닫기
+			btn_ok[3].addEventListener('click',function(){
+				layerPopup[3].style.display='none';
+			})
+			btn_ok[4].addEventListener('click',function(){
+				layerPopup[4].style.display='none';
+			})
 
 			btnLeft.addEventListener('click',function(){
 				console.log(pagenum);
@@ -127,10 +172,6 @@
 
 			});
 
-			function printHomeTicket(){
-				window.open("home_ticket.jsp","new","width=500,height=500,top=100,left=100");
-
-			}
 
 
 
@@ -233,27 +274,27 @@
 											<li id="sbmt_wheelchairAccess" class="GROUP3 WHEELCHAIRACCESS proplist dimmed" style="display: none;"><a data-type="WHEELCHAIRACCESS" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">배리어프리</a></li>
 										</ul>
 									</div>
-										<li class="rating-15" data-index="0" movie_cd_group="20028797" movie_idx="85603"><a id="movieName" href="#" onclick="return false;" title="극장판주술회전0" alt="극장판주술회전0"><span class="icon">&nbsp;</span><span class="text">극장판주술회전0</span><span class="sreader"></span></a></li>
-										<li class="rating-12" data-index="1" movie_cd_group="20028855" movie_idx="85624"><a href="#" onclick="return false;" title="언차티드" alt="언차티드"><span class="icon">&nbsp;</span><span class="text">언차티드</span><span class="sreader"></span></a></li>
-										<li class="rating-15" data-index="2" movie_cd_group="20028868" movie_idx="85632"><a href="#" onclick="return false;" title="더배트맨" alt="더배트맨"><span class="icon">&nbsp;</span><span class="text">더배트맨</span><span class="sreader"></span></a></li>
-										<li class="rating-15" data-index="3" movie_cd_group="20028859" movie_idx="85627"><a href="#" onclick="return false;" title="리코리쉬피자" alt="리코리쉬피자"><span class="icon">&nbsp;</span><span class="text">리코리쉬피자</span><span class="sreader"></span></a></li>
-										<li class="rating-12" data-index="4" movie_cd_group="20024619" movie_idx="83739"><a href="#" onclick="return false;" title="나일강의죽음" alt="나일강의죽음"><span class="icon">&nbsp;</span><span class="text">나일강의죽음</span><span class="sreader"></span></a></li>
-										<li class="rating-18" data-index="5" movie_cd_group="20028871" movie_idx="85635"><a href="#" onclick="return false;" title="인민을위해복무하라" alt="인민을위해복무하라"><span class="icon">&nbsp;</span><span class="text">인민을위해복무하라</span><span class="sreader"></span></a></li>
-										<li class="rating-all" data-index="6" movie_cd_group="20022848" movie_idx="83152"><a href="#" onclick="return false;" title="나의촛불" alt="나의촛불"><span class="icon">&nbsp;</span><span class="text">나의촛불</span><span class="sreader"></span></a></li>
-										<li class="rating-12" data-index="7" movie_cd_group="20028987" movie_idx="85672"><a href="#" onclick="return false;" title="라라랜드" alt="라라랜드"><span class="icon">&nbsp;</span><span class="text">라라랜드</span><span class="sreader"></span></a></li>
-										<li class="rating-12" data-index="8" movie_cd_group="20028688" movie_idx="85561"><a href="#" onclick="return false;" title="해적-도깨비깃발" alt="해적-도깨비깃발"><span class="icon">&nbsp;</span><span class="text">해적-도깨비깃발</span><span class="sreader"></span></a></li>
-										<li class="rating-15" data-index="9" movie_cd_group="20028235" movie_idx="85291"><a href="#" onclick="return false;" title="킹메이커" alt="킹메이커"><span class="icon">&nbsp;</span><span class="text">킹메이커</span><span class="sreader"></span></a></li>
-										<li class="rating-12" data-index="10" movie_cd_group="20027596" movie_idx="84949"><a href="#" onclick="return false;" title="스파이더맨-노웨이홈" alt="스파이더맨-노웨이홈"><span class="icon">&nbsp;</span><span class="text">스파이더맨-노웨이홈</span><span class="sreader"></span></a></li>
-										<li class="rating-all" data-index="11" movie_cd_group="20029013" movie_idx="85680"><a href="#" onclick="return false;" title="에이핑크스페셜무비-혼" alt="에이핑크스페셜무비-혼"><span class="icon">&nbsp;</span><span class="text">에이핑크스페셜무비-혼</span><span class="sreader"></span></a></li>
-										<li class="rating-15" data-index="12" movie_cd_group="20028772" movie_idx="85595"><a href="#" onclick="return false;" title="355" alt="355"><span class="icon">&nbsp;</span><span class="text">355</span><span class="sreader"></span></a></li>
-										<li class="rating-all" data-index="13" movie_cd_group="20027178" movie_idx="84780"><a href="#" onclick="return false;" title="씽2게더" alt="씽2게더"><span class="icon">&nbsp;</span><span class="text">씽2게더</span><span class="sreader"></span></a></li>
-										<li class="rating-15" data-index="14" movie_cd_group="20028869" movie_idx="85633"><a href="#" onclick="return false;" title="굿보스" alt="굿보스"><span class="icon">&nbsp;</span><span class="text">굿보스</span><span class="sreader"></span></a></li>
-										<li class="rating-12" data-index="15" movie_cd_group="20028737" movie_idx="85582"><a href="#" onclick="return false;" title="피그" alt="피그"><span class="icon">&nbsp;</span><span class="text">피그</span><span class="sreader"></span></a></li>
-										<li class="rating-all" data-index="16" movie_cd_group="20028908" movie_idx="85644"><a href="#" onclick="return false;" title="역으로가는길을알려줘" alt="역으로가는길을알려줘"><span class="icon">&nbsp;</span><span class="text">역으로가는길을알려줘</span><span class="sreader"></span></a></li>
-										<li class="rating-15" data-index="17" movie_cd_group="20028951" movie_idx="85659"><a href="#" onclick="return false;" title="매미소리" alt="매미소리"><span class="icon">&nbsp;</span><span class="text">매미소리</span><span class="sreader"></span></a></li>
-										<li class="rating-15" data-index="18" movie_cd_group="20028870" movie_idx="85634"><a href="#" onclick="return false;" title="시크릿카운터" alt="시크릿카운터"><span class="icon">&nbsp;</span><span class="text">시크릿카운터</span><span class="sreader"></span></a></li>
-										<li class="rating-15" data-index="19" movie_cd_group="20028736" movie_idx="85581"><a href="#" onclick="return false;" title="안테벨룸" alt="안테벨룸"><span class="icon">&nbsp;</span><span class="text">안테벨룸</span><span class="sreader"></span></a></li>
-										<li class="rating-15" data-index="20" movie_cd_group="20028469" movie_idx="85469"><a href="#" onclick="return false;" title="드라이브마이카" alt="드라이브마이카"><span class="icon">&nbsp;</span><span class="text">드라이브마이카</span><span class="sreader"></span></a></li><li class="rating-12" data-index="21" movie_cd_group="20028685" movie_idx="85560"><a href="#" onclick="return false;" title="만년이지나도변하지않는게있어" alt="만년이지나도변하지않는게있어"><span class="icon">&nbsp;</span><span class="text">만년이지나도변하지않는게있어</span><span class="sreader"></span></a></li><li class="rating-all" data-index="22" movie_cd_group="20028861" movie_idx="85628"><a href="#" onclick="return false;" title="극장판안녕자두야:제주도의비밀" alt="극장판안녕자두야:제주도의비밀"><span class="icon">&nbsp;</span><span class="text">극장판안녕자두야:제주도의비밀</span><span class="sreader"></span></a></li><li class="rating-15" data-index="23" movie_cd_group="20028464" movie_idx="85464"><a href="#" onclick="return false;" title="어나더라운드" alt="어나더라운드"><span class="icon">&nbsp;</span><span class="text">어나더라운드</span><span class="sreader"></span></a></li><li class="rating-12" data-index="24" movie_cd_group="20028925" movie_idx="85648"><a href="#" onclick="return false;" title="전투왕" alt="전투왕"><span class="icon">&nbsp;</span><span class="text">전투왕</span><span class="sreader"></span></a></li><li class="rating-15" data-index="25" movie_cd_group="20028889" movie_idx="85640"><a href="#" onclick="return false;" title="뮤지컬이퀄(LIVE)" alt="뮤지컬이퀄(LIVE)"><span class="icon">&nbsp;</span><span class="text">뮤지컬이퀄(LIVE)</span><span class="sreader"></span></a></li><li class="rating-15" data-index="26" movie_cd_group="20028694" movie_idx="85567"><a href="#" onclick="return false;" title="하우스오브구찌" alt="하우스오브구찌"><span class="icon">&nbsp;</span><span class="text">하우스오브구찌</span><span class="sreader"></span></a></li><li class="rating-all" data-index="27" movie_cd_group="20028748" movie_idx="85588"><a href="#" onclick="return false;" title="미싱타는여자들" alt="미싱타는여자들"><span class="icon">&nbsp;</span><span class="text">미싱타는여자들</span><span class="sreader"></span></a></li><li class="rating-all" data-index="28" movie_cd_group="20028733" movie_idx="85579"><a href="#" onclick="return false;" title="밀라노두오모콘서트" alt="밀라노두오모콘서트"><span class="icon">&nbsp;</span><span class="text">밀라노두오모콘서트</span><span class="sreader"></span></a></li><li class="rating-15" data-index="29" movie_cd_group="20022183" movie_idx="82987"><a href="#" onclick="return false;" title="타오르는여인의초상" alt="타오르는여인의초상"><span class="icon">&nbsp;</span><span class="text">타오르는여인의초상</span><span class="sreader"></span></a></li><li class="rating-15" data-index="30" movie_cd_group="20028811" movie_idx="85607"><a href="#" onclick="return false;" title="더마더" alt="더마더"><span class="icon">&nbsp;</span><span class="text">더마더</span><span class="sreader"></span></a></li><li class="rating-all" data-index="31" movie_cd_group="20028923" movie_idx="85646"><a href="#" onclick="return false;" title="[아트&amp;다이닝]나폴리,예술과정열을말하다" alt="[아트&amp;다이닝]나폴리,예술과정열을말하다"><span class="icon">&nbsp;</span><span class="text">[아트&amp;다이닝]나폴리,예술과정열을말하다</span><span class="sreader"></span></a></li><li class="rating-18" data-index="32" movie_cd_group="20009174" movie_idx="78723"><a href="#" onclick="return false;" title="캐롤" alt="캐롤"><span class="icon">&nbsp;</span><span class="text">캐롤</span><span class="sreader"></span></a></li><li class="rating-15" data-index="33" movie_cd_group="20028787" movie_idx="85600"><a href="#" onclick="return false;" title="임신한나무와도깨비" alt="임신한나무와도깨비"><span class="icon">&nbsp;</span><span class="text">임신한나무와도깨비</span><span class="sreader"></span></a></li><li class="rating-all" data-index="34" movie_cd_group="20028907" movie_idx="85643"><a href="#" onclick="return false;" title="대한민국대통령" alt="대한민국대통령"><span class="icon">&nbsp;</span><span class="text">대한민국대통령</span><span class="sreader"></span></a></li><li class="rating-12" data-index="35" movie_cd_group="20028689" movie_idx="85562"><a href="#" onclick="return false;" title="프랑스" alt="프랑스"><span class="icon">&nbsp;</span><span class="text">프랑스</span><span class="sreader"></span></a></li><li class="rating-15" data-index="36" movie_cd_group="20028865" movie_idx="85631"><a href="#" onclick="return false;" title="온세상이하얗다" alt="온세상이하얗다"><span class="icon">&nbsp;</span><span class="text">온세상이하얗다</span><span class="sreader"></span></a></li><li class="rating-all" data-index="37" movie_cd_group="20028975" movie_idx="85665"><a href="#" onclick="return false;" title="[인사이터XCGV]기어코살아남는전투형셀프브랜딩" alt="[인사이터XCGV]기어코살아남는전투형셀프브랜딩"><span class="icon">&nbsp;</span><span class="text">[인사이터XCGV]기어코살아남는전투형셀프브랜딩</span><span class="sreader"></span></a></li><li class="rating-12" data-index="38" movie_cd_group="20028947" movie_idx="85656"><a href="#" onclick="return false;" title="밴드스탠드" alt="밴드스탠드"><span class="icon">&nbsp;</span><span class="text">밴드스탠드</span><span class="sreader"></span></a></li><li class="rating-all" data-index="39" movie_cd_group="20028814" movie_idx="85610"><a href="#" onclick="return false;" title="[사이다경제_사계강의(겨울)]알아두면돈이되는설득언어의비밀" alt="[사이다경제_사계강의(겨울)]알아두면돈이되는설득언어의비밀"><span class="icon">&nbsp;</span><span class="text">[사이다경제_사계강의(겨울)]알아두면돈이되는설득언어의비밀</span><span class="sreader"></span></a></li><li class="rating-12" data-index="40" movie_cd_group="20028884" movie_idx="85637"><a href="#" onclick="return false;" title="리프레쉬" alt="리프레쉬"><span class="icon">&nbsp;</span><span class="text">리프레쉬</span><span class="sreader"></span></a></li><li class="rating-all" data-index="41" movie_cd_group="20028978" movie_idx="85668"><a href="#" onclick="return false;" title="[갤러리&amp;다이닝]우리집,작은미술관ArtStyling" alt="[갤러리&amp;다이닝]우리집,작은미술관ArtStyling"><span class="icon">&nbsp;</span><span class="text">[갤러리&amp;다이닝]우리집,작은미술관ArtStyling</span><span class="sreader"></span></a></li><li class="rating-12" data-index="42" movie_cd_group="20028977" movie_idx="85667"><a href="#" onclick="return false;" title="[LIVECLASS씨네블라썸withIsaac]언차티드" alt="[LIVECLASS씨네블라썸withIsaac]언차티드"><span class="icon">&nbsp;</span><span class="text">[LIVECLASS씨네블라썸withIsaac]언차티드</span><span class="sreader"></span></a></li><li class="rating-15" data-index="43" movie_cd_group="20028656" movie_idx="85549"><a href="#" onclick="return false;" title="특송" alt="특송"><span class="icon">&nbsp;</span><span class="text">특송</span><span class="sreader"></span></a></li><li class="rating-15" data-index="44" movie_cd_group="20028420" movie_idx="85451"><a href="#" onclick="return false;" title="경관의피" alt="경관의피"><span class="icon">&nbsp;</span><span class="text">경관의피</span><span class="sreader"></span></a></li><li class="rating-15" data-index="45" movie_cd_group="20028931" movie_idx="85652"><a href="#" onclick="return false;" title="나이트메어앨리" alt="나이트메어앨리"><span class="icon">&nbsp;</span><span class="text">나이트메어앨리</span><span class="sreader"></span></a></li><li class="rating-15" data-index="46" movie_cd_group="20028851" movie_idx="85623"><a href="#" onclick="return false;" title="세라비-다섯번의기적" alt="세라비-다섯번의기적"><span class="icon">&nbsp;</span><span class="text">세라비-다섯번의기적</span><span class="sreader"></span></a></li><li class="rating-12" data-index="47" movie_cd_group="20028976" movie_idx="85666"><a href="#" onclick="return false;" title="이상한나라의수학자" alt="이상한나라의수학자"><span class="icon">&nbsp;</span><span class="text">이상한나라의수학자</span><span class="sreader"></span></a></li><li class="rating-15" data-index="48" movie_cd_group="20029006" movie_idx="85677"><a href="#" onclick="return false;" title="카르멘" alt="카르멘"><span class="icon">&nbsp;</span><span class="text">카르멘</span><span class="sreader"></span></a></li><li class="rating-all" data-index="49" movie_cd_group="20029030" movie_idx="85683"><a href="#" onclick="return false;" title="CGVx전이수북콘서트“Check-in(冊:人)" alt="CGVx전이수북콘서트“Check-in(冊:人)"><span class="icon">&nbsp;</span><span class="text">CGVx전이수북콘서트“Check-in(冊:人)</span><span class="sreader"></span></a></li><li class="rating-all" data-index="50" movie_cd_group="20029014" movie_idx="85681"><a href="#" onclick="return false;" title="[웰니스&amp;다이닝]우주에서만나는힐링테라피콘서트" alt="[웰니스&amp;다이닝]우주에서만나는힐링테라피콘서트"><span class="icon">&nbsp;</span><span class="text">[웰니스&amp;다이닝]우주에서만나는힐링테라피콘서트</span><span class="sreader"></span></a></li><li class="rating-all" data-index="51" movie_cd_group="20028507" movie_idx=""><a href="#" onclick="return false;" title="EBS댄스파티,2021" alt="EBS댄스파티,2021"><span class="icon">&nbsp;</span><span class="text">EBS댄스파티,2021</span><span class="sreader"></span></a></li></ul>
+										<li class="rating-12 movieClick" data-index="0" movie_cd_group="20028797" movie_idx="85603" ><a class="movieName" href="#" onclick="return false;" title="극장판주술회전0" alt="극장판주술회전0"><span class="icon">&nbsp;</span><span class="text">극장판주술회전0</span><span class="sreader"></span></a></li>
+										<li class="rating-15 movieClick" data-index="1" movie_cd_group="20028855" movie_idx="85624"><a class="movieName" href="#" onclick="return false;" title="언차티드" alt="언차티드"><span class="icon">&nbsp;</span><span class="text">언차티드</span><span class="sreader"></span></a></li>
+										<li class="rating-15 movieClick" data-index="2" movie_cd_group="20028868" movie_idx="85632"><a class="movieName" href="#" onclick="return false;" title="더배트맨" alt="더배트맨"><span class="icon">&nbsp;</span><span class="text">더배트맨</span><span class="sreader"></span></a></li>
+										<li class="rating-15 movieClick" data-index="3" movie_cd_group="20028859" movie_idx="85627"><a class="movieName" href="#" onclick="return false;" title="리코리쉬피자" alt="리코리쉬피자"><span class="icon">&nbsp;</span><span class="text">리코리쉬피자</span><span class="sreader"></span></a></li>
+										<li class="rating-12 movieClick" data-index="4" movie_cd_group="20024619" movie_idx="83739"><a class="movieName" href="#" onclick="return false;" title="나일강의죽음" alt="나일강의죽음"><span class="icon">&nbsp;</span><span class="text">나일강의죽음</span><span class="sreader"></span></a></li>
+										<li class="rating-18 movieClick" data-index="5" movie_cd_group="20028871" movie_idx="85635"><a class="movieName" href="#" onclick="return false;" title="인민을위해복무하라" alt="인민을위해복무하라"><span class="icon">&nbsp;</span><span class="text">인민을위해복무하라</span><span class="sreader"></span></a></li>
+										<li class="rating-all movieClick" data-index="6" movie_cd_group="20022848" movie_idx="83152"><a class="movieName" href="#" onclick="return false;" title="나의촛불" alt="나의촛불"><span class="icon">&nbsp;</span><span class="text">나의촛불</span><span class="sreader"></span></a></li>
+										<li class="rating-12 movieClick" data-index="7" movie_cd_group="20028987" movie_idx="85672"><a class="movieName" href="#" onclick="return false;" title="라라랜드" alt="라라랜드"><span class="icon">&nbsp;</span><span class="text">라라랜드</span><span class="sreader"></span></a></li>
+										<li class="rating-12 movieClick" data-index="8" movie_cd_group="20028688" movie_idx="85561"><a class="movieName" href="#" onclick="return false;" title="해적-도깨비깃발" alt="해적-도깨비깃발"><span class="icon">&nbsp;</span><span class="text">해적-도깨비깃발</span><span class="sreader"></span></a></li>
+										<li class="rating-15 movieClick" data-index="9" movie_cd_group="20028235" movie_idx="85291"><a class="movieName"href="#" onclick="return false;" title="킹메이커" alt="킹메이커"><span class="icon">&nbsp;</span><span class="text">킹메이커</span><span class="sreader"></span></a></li>
+										<li class="rating-12 movieClick" data-index="10" movie_cd_group="20027596" movie_idx="84949"><a class="movieName" href="#" onclick="return false;" title="스파이더맨-노웨이홈" alt="스파이더맨-노웨이홈"><span class="icon">&nbsp;</span><span class="text">스파이더맨-노웨이홈</span><span class="sreader"></span></a></li>
+										<li class="rating-all movieClick" data-index="11" movie_cd_group="20029013" movie_idx="85680"><a class="movieName" href="#" onclick="return false;" title="에이핑크스페셜무비-혼" alt="에이핑크스페셜무비-혼"><span class="icon">&nbsp;</span><span class="text">에이핑크스페셜무비-혼</span><span class="sreader"></span></a></li>
+										<li class="rating-15 movieClick" data-index="12" movie_cd_group="20028772" movie_idx="85595"><a class="movieName" href="#" onclick="return false;" title="355" alt="355"><span class="icon">&nbsp;</span><span class="text">355</span><span class="sreader"></span></a></li>
+										<li class="rating-all movieClick" data-index="13" movie_cd_group="20027178" movie_idx="84780"><a class="movieName" href="#" onclick="return false;" title="씽2게더" alt="씽2게더"><span class="icon">&nbsp;</span><span class="text">씽2게더</span><span class="sreader"></span></a></li>
+										<li class="rating-15 movieClick" data-index="14" movie_cd_group="20028869" movie_idx="85633"><a class="movieName" href="#" onclick="return false;" title="굿보스" alt="굿보스"><span class="icon">&nbsp;</span><span class="text">굿보스</span><span class="sreader"></span></a></li>
+										<li class="rating-12 movieClick" data-index="15" movie_cd_group="20028737" movie_idx="85582"><a class="movieName" href="#" onclick="return false;" title="피그" alt="피그"><span class="icon">&nbsp;</span><span class="text">피그</span><span class="sreader"></span></a></li>
+										<li class="rating-all movieClick" data-index="16" movie_cd_group="20028908" movie_idx="85644"><a class="movieName" href="#" onclick="return false;" title="역으로가는길을알려줘" alt="역으로가는길을알려줘"><span class="icon">&nbsp;</span><span class="text">역으로가는길을알려줘</span><span class="sreader"></span></a></li>
+										<li class="rating-15 movieClick" data-index="17" movie_cd_group="20028951" movie_idx="85659"><a class="movieName" href="#" onclick="return false;" title="매미소리" alt="매미소리"><span class="icon">&nbsp;</span><span class="text">매미소리</span><span class="sreader"></span></a></li>
+										<li class="rating-15 movieClick" data-index="18" movie_cd_group="20028870" movie_idx="85634"><a class="movieName" href="#" onclick="return false;" title="시크릿카운터" alt="시크릿카운터"><span class="icon">&nbsp;</span><span class="text">시크릿카운터</span><span class="sreader"></span></a></li>
+										<li class="rating-15 movieClick" data-index="19" movie_cd_group="20028736" movie_idx="85581"><a class="movieName" href="#" onclick="return false;" title="안테벨룸" alt="안테벨룸"><span class="icon">&nbsp;</span><span class="text">안테벨룸</span><span class="sreader"></span></a></li>
+										<li class="rating-15 movieClick" data-index="20" movie_cd_group="20028469" movie_idx="85469"><a class="movieName" href="#" onclick="return false;" title="드라이브마이카" alt="드라이브마이카"><span class="icon">&nbsp;</span><span class="text">드라이브마이카</span><span class="sreader"></span></a></li><li class="rating-12" data-index="21" movie_cd_group="20028685" movie_idx="85560"><a href="#" onclick="return false;" title="만년이지나도변하지않는게있어" alt="만년이지나도변하지않는게있어"><span class="icon">&nbsp;</span><span class="text">만년이지나도변하지않는게있어</span><span class="sreader"></span></a></li><li class="rating-all" data-index="22" movie_cd_group="20028861" movie_idx="85628"><a href="#" onclick="return false;" title="극장판안녕자두야:제주도의비밀" alt="극장판안녕자두야:제주도의비밀"><span class="icon">&nbsp;</span><span class="text">극장판안녕자두야:제주도의비밀</span><span class="sreader"></span></a></li><li class="rating-15" data-index="23" movie_cd_group="20028464" movie_idx="85464"><a href="#" onclick="return false;" title="어나더라운드" alt="어나더라운드"><span class="icon">&nbsp;</span><span class="text">어나더라운드</span><span class="sreader"></span></a></li><li class="rating-12" data-index="24" movie_cd_group="20028925" movie_idx="85648"><a href="#" onclick="return false;" title="전투왕" alt="전투왕"><span class="icon">&nbsp;</span><span class="text">전투왕</span><span class="sreader"></span></a></li><li class="rating-15" data-index="25" movie_cd_group="20028889" movie_idx="85640"><a href="#" onclick="return false;" title="뮤지컬이퀄(LIVE)" alt="뮤지컬이퀄(LIVE)"><span class="icon">&nbsp;</span><span class="text">뮤지컬이퀄(LIVE)</span><span class="sreader"></span></a></li><li class="rating-15" data-index="26" movie_cd_group="20028694" movie_idx="85567"><a href="#" onclick="return false;" title="하우스오브구찌" alt="하우스오브구찌"><span class="icon">&nbsp;</span><span class="text">하우스오브구찌</span><span class="sreader"></span></a></li><li class="rating-all" data-index="27" movie_cd_group="20028748" movie_idx="85588"><a href="#" onclick="return false;" title="미싱타는여자들" alt="미싱타는여자들"><span class="icon">&nbsp;</span><span class="text">미싱타는여자들</span><span class="sreader"></span></a></li><li class="rating-all" data-index="28" movie_cd_group="20028733" movie_idx="85579"><a href="#" onclick="return false;" title="밀라노두오모콘서트" alt="밀라노두오모콘서트"><span class="icon">&nbsp;</span><span class="text">밀라노두오모콘서트</span><span class="sreader"></span></a></li><li class="rating-15" data-index="29" movie_cd_group="20022183" movie_idx="82987"><a href="#" onclick="return false;" title="타오르는여인의초상" alt="타오르는여인의초상"><span class="icon">&nbsp;</span><span class="text">타오르는여인의초상</span><span class="sreader"></span></a></li><li class="rating-15" data-index="30" movie_cd_group="20028811" movie_idx="85607"><a href="#" onclick="return false;" title="더마더" alt="더마더"><span class="icon">&nbsp;</span><span class="text">더마더</span><span class="sreader"></span></a></li><li class="rating-all" data-index="31" movie_cd_group="20028923" movie_idx="85646"><a href="#" onclick="return false;" title="[아트&amp;다이닝]나폴리,예술과정열을말하다" alt="[아트&amp;다이닝]나폴리,예술과정열을말하다"><span class="icon">&nbsp;</span><span class="text">[아트&amp;다이닝]나폴리,예술과정열을말하다</span><span class="sreader"></span></a></li><li class="rating-18" data-index="32" movie_cd_group="20009174" movie_idx="78723"><a href="#" onclick="return false;" title="캐롤" alt="캐롤"><span class="icon">&nbsp;</span><span class="text">캐롤</span><span class="sreader"></span></a></li><li class="rating-15" data-index="33" movie_cd_group="20028787" movie_idx="85600"><a href="#" onclick="return false;" title="임신한나무와도깨비" alt="임신한나무와도깨비"><span class="icon">&nbsp;</span><span class="text">임신한나무와도깨비</span><span class="sreader"></span></a></li><li class="rating-all" data-index="34" movie_cd_group="20028907" movie_idx="85643"><a href="#" onclick="return false;" title="대한민국대통령" alt="대한민국대통령"><span class="icon">&nbsp;</span><span class="text">대한민국대통령</span><span class="sreader"></span></a></li><li class="rating-12" data-index="35" movie_cd_group="20028689" movie_idx="85562"><a href="#" onclick="return false;" title="프랑스" alt="프랑스"><span class="icon">&nbsp;</span><span class="text">프랑스</span><span class="sreader"></span></a></li><li class="rating-15" data-index="36" movie_cd_group="20028865" movie_idx="85631"><a href="#" onclick="return false;" title="온세상이하얗다" alt="온세상이하얗다"><span class="icon">&nbsp;</span><span class="text">온세상이하얗다</span><span class="sreader"></span></a></li><li class="rating-all" data-index="37" movie_cd_group="20028975" movie_idx="85665"><a href="#" onclick="return false;" title="[인사이터XCGV]기어코살아남는전투형셀프브랜딩" alt="[인사이터XCGV]기어코살아남는전투형셀프브랜딩"><span class="icon">&nbsp;</span><span class="text">[인사이터XCGV]기어코살아남는전투형셀프브랜딩</span><span class="sreader"></span></a></li><li class="rating-12" data-index="38" movie_cd_group="20028947" movie_idx="85656"><a href="#" onclick="return false;" title="밴드스탠드" alt="밴드스탠드"><span class="icon">&nbsp;</span><span class="text">밴드스탠드</span><span class="sreader"></span></a></li><li class="rating-all" data-index="39" movie_cd_group="20028814" movie_idx="85610"><a href="#" onclick="return false;" title="[사이다경제_사계강의(겨울)]알아두면돈이되는설득언어의비밀" alt="[사이다경제_사계강의(겨울)]알아두면돈이되는설득언어의비밀"><span class="icon">&nbsp;</span><span class="text">[사이다경제_사계강의(겨울)]알아두면돈이되는설득언어의비밀</span><span class="sreader"></span></a></li><li class="rating-12" data-index="40" movie_cd_group="20028884" movie_idx="85637"><a href="#" onclick="return false;" title="리프레쉬" alt="리프레쉬"><span class="icon">&nbsp;</span><span class="text">리프레쉬</span><span class="sreader"></span></a></li><li class="rating-all" data-index="41" movie_cd_group="20028978" movie_idx="85668"><a href="#" onclick="return false;" title="[갤러리&amp;다이닝]우리집,작은미술관ArtStyling" alt="[갤러리&amp;다이닝]우리집,작은미술관ArtStyling"><span class="icon">&nbsp;</span><span class="text">[갤러리&amp;다이닝]우리집,작은미술관ArtStyling</span><span class="sreader"></span></a></li><li class="rating-12" data-index="42" movie_cd_group="20028977" movie_idx="85667"><a href="#" onclick="return false;" title="[LIVECLASS씨네블라썸withIsaac]언차티드" alt="[LIVECLASS씨네블라썸withIsaac]언차티드"><span class="icon">&nbsp;</span><span class="text">[LIVECLASS씨네블라썸withIsaac]언차티드</span><span class="sreader"></span></a></li><li class="rating-15" data-index="43" movie_cd_group="20028656" movie_idx="85549"><a href="#" onclick="return false;" title="특송" alt="특송"><span class="icon">&nbsp;</span><span class="text">특송</span><span class="sreader"></span></a></li><li class="rating-15" data-index="44" movie_cd_group="20028420" movie_idx="85451"><a href="#" onclick="return false;" title="경관의피" alt="경관의피"><span class="icon">&nbsp;</span><span class="text">경관의피</span><span class="sreader"></span></a></li><li class="rating-15" data-index="45" movie_cd_group="20028931" movie_idx="85652"><a href="#" onclick="return false;" title="나이트메어앨리" alt="나이트메어앨리"><span class="icon">&nbsp;</span><span class="text">나이트메어앨리</span><span class="sreader"></span></a></li><li class="rating-15" data-index="46" movie_cd_group="20028851" movie_idx="85623"><a href="#" onclick="return false;" title="세라비-다섯번의기적" alt="세라비-다섯번의기적"><span class="icon">&nbsp;</span><span class="text">세라비-다섯번의기적</span><span class="sreader"></span></a></li><li class="rating-12" data-index="47" movie_cd_group="20028976" movie_idx="85666"><a href="#" onclick="return false;" title="이상한나라의수학자" alt="이상한나라의수학자"><span class="icon">&nbsp;</span><span class="text">이상한나라의수학자</span><span class="sreader"></span></a></li><li class="rating-15" data-index="48" movie_cd_group="20029006" movie_idx="85677"><a href="#" onclick="return false;" title="카르멘" alt="카르멘"><span class="icon">&nbsp;</span><span class="text">카르멘</span><span class="sreader"></span></a></li><li class="rating-all" data-index="49" movie_cd_group="20029030" movie_idx="85683"><a href="#" onclick="return false;" title="CGVx전이수북콘서트“Check-in(冊:人)" alt="CGVx전이수북콘서트“Check-in(冊:人)"><span class="icon">&nbsp;</span><span class="text">CGVx전이수북콘서트“Check-in(冊:人)</span><span class="sreader"></span></a></li><li class="rating-all" data-index="50" movie_cd_group="20029014" movie_idx="85681"><a href="#" onclick="return false;" title="[웰니스&amp;다이닝]우주에서만나는힐링테라피콘서트" alt="[웰니스&amp;다이닝]우주에서만나는힐링테라피콘서트"><span class="icon">&nbsp;</span><span class="text">[웰니스&amp;다이닝]우주에서만나는힐링테라피콘서트</span><span class="sreader"></span></a></li><li class="rating-all" data-index="51" movie_cd_group="20028507" movie_idx=""><a href="#" onclick="return false;" title="EBS댄스파티,2021" alt="EBS댄스파티,2021"><span class="icon">&nbsp;</span><span class="text">EBS댄스파티,2021</span><span class="sreader"></span></a></li></ul>
 									<div class="pane pane-y" style="display: block; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px; top: 0px;"></div></div>
 									<div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div>
 									</div>
@@ -3180,7 +3221,7 @@
 									<!--<br/><a class="btn_traffic_info" href="#" onclick="return false;"><img src="http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step4/btn_traffic_info.png" alt="교통안내"/></a>-->
 								</div>
 								<div class="ticket_button_group"><div>
-									<a class="btn_step4 btn_red btn_ticket_print" href="#" onclick="printHomeTicket();return false;" style="margin: 0px 5px;"><span>예매정보 출력</span></a>
+									<a class="btn_step4 btn_red btn_ticket_print" href="#" onclick="printHomeTicket()" style="margin: 0px 5px;"><span>예매정보 출력</span></a>
 									<a class="btn_step4 btn_result_smssend" href="#" onclick="sendTicketResultSMS();return false;" style="margin: 0px 5px;"><span>예매결과 SMS발송</span></a>
 									<a class="btn_step4 btn_ticket_check" href="#" onclick="confirmCancelTicketResult();return false;" style="margin: 0px 5px;"><span>예매확인/취소</span></a>
 									<a class="btn_step4 btn_red btn_ticket_check_red" href="#" onclick="confirmCancelTicketResult();return false;" style="margin: 0px 5px;"><span>예매확인/취소</span></a>
@@ -3334,6 +3375,50 @@
 							<span>취소</span>
 						</a>
 					</div>
+				</div>
+
+
+
+				<!-- step2 안내창-->
+				<div class="ft_layer_popup popup_alert w450 ko" style="top: 50%; position: absolute; display: none;">
+					<div class="hd">
+						<div class="title_area">
+							<h4 class="alert_title">관람안내</h4>
+							<span class="sreader">빠른예매는 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</span>
+						</div>
+						<a href="#" onclick="return false;" class="layer_close">닫기</a>
+					</div>
+					<div class="bd p0">
+						<p class="alert_msg"><p class="inner"><img src="http://img.cgv.co.kr/Support/Ticket/Notice/2022/16424675308230.png" width="440" height="238"><span class="bd_comment">- 일행간 좌석 띄어앉기<br>
+- 상영관 내 물/음료(무알콜)만 취식 가능<br>
+- 극장 내 일행(지인) 최대 6인까지 관람 가능<br>
+&nbsp;&nbsp;&nbsp;(관련 증명서 지참 시, 동거가족 인원 제한 없음)</span></p></p>
+					</div>
+					<div class="ft">
+						<a title="확인" href="#" onclick="return false;" class="btn btn_ok">
+							<span>확인</span>
+						</a>
+						<a title="취소" href="#" onclick="return false;" class="btn btn_white btn_close" style="display: none;">
+							<span>취소</span>
+						</a>
+					</div>
+				</div>
+
+				<div class="ft_layer_popup popup_alert ko" style="top: 253px; position: absolute; display: none;">
+					<div class="hd">
+						<div class="title_area">
+							<h4 class="alert_title">관람등급 안내</h4>
+							<span class="sreader">빠른예매는 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</span>
+						</div>
+						<a href="#" onclick="return false;" class="layer_close">닫기</a>
+					</div><!-- //hd -->
+					<div class="bd">
+						<p class="alert_msg" style="width: 475px;"><em style="color:#CA4D10;">[15세 이상 관람가]</em><br>본 영화는 만 15세 이상 관람 가능한 영화입니다.<br>만 15세 미만 고객은 부모님 또는 만 19세 이상 보호자 동반 시 관람이 가능합니다.<br>연령 확인 불가 시 입장이 제한 될 수 있습니다.</p>
+					</div><!-- //bd -->
+					<div class="ft">
+						<a title="확인" href="#" onclick="return false;" class="btn btn_ok"><span>확인</span></a>
+						<a title="취소" href="#" onclick="return false;" class="btn btn_white btn_close" style="display: none;"><span>취소</span></a>
+					</div><!-- //ft -->
 				</div>
 
 				<!-- Popup - guide -->
@@ -3510,9 +3595,9 @@
 			<!-- btn-left -->
 			<a class="btn-left" id="btn-left" href="#" onclick="OnTnbLeftClick(); return false;" title="영화선택">이전단계로 이동</a>
 			<div class="info movie">
-				<span class="movie_poster"><img src="" alt="영화 포스터" style="display: none;"></span>
+				<span class="movie_poster"><img id="movie_poster" src="" alt="영화 포스터" style="display: none;"></span>
 				<div class="row movie_title colspan2" style="display: none;">
-					<span class="data letter-spacing-min ellipsis-line2"><a href="#" target="_blank" onmousedown="javascript:logClick('SUMMARY/영화상세보기');">영화정보 상세보기</a></span>
+					<span class="data letter-spacing-min ellipsis-line2"><a id="movie_sel" href="#" target="_blank" onmousedown="javascript:logClick('SUMMARY/영화상세보기');">영화정보 상세보기</a></span>
 				</div>
 				<div class="row movie_type" style="display: none;">
 					<span class="data ellipsis-line1"></span>

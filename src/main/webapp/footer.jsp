@@ -85,5 +85,35 @@
                         </section>
                     </article>
                     <!-- footer_area (e) -->
+                    <link rel="stylesheet" href="./css/footer-btn.css" />
+                    <div id="footer-btn">
+                        <div>
+                            <p>
+                                <a href="#"><img src="./css/ticket.png" alt="예매" /></a>
+                            </p>
+                            <p><a href="#">예매하기</a></p>
+                        </div>
+                        <div>
+                            <p>
+                                <a href="#"><img src="./css/calender.png" alt="상영시간표" /></a>
+                            </p>
+                            <p><a href="#">상영시간표</a></p>
+                        </div>
+                        <div>
+                            <p>
+                                <a href="#"><img src="./css/popcorn.png" alt="바로팝콘" /></a>
+                            </p>
+                            <p><a href="#">바로팝콘</a></p>
+                            <p>
+                        </div>
+                        <div> <a href="#"><img src="./css/coin.png" alt="포인트" /></a>
+                            </p>
+                            <p><a href="#">포인트적립</a></p>
+                            <p>
+                        </div>
+                        <div> <a href="#"><img src="./css/help.png" alt="고객센터" /></a>
+                            </p>
+                            <p><a href="#">고객센터</a></p>
+                        </div>
             </footer>
             <!-- E Footer -->

@@ -440,6 +440,8 @@
                     <div class="set-btn">
                         <button type="submit" id="save" class="round inred on"><span>확인</span></button>
                         <a href="./main.jsp" class="round gray" style="height: 25px"><span>CGV 첫화면으로</span></a>
+                        <br/><br/>
+                        <a href="./mycgv-myinfo-edit-myinfo.jsp"><button type="button" class="round inred"><span>맞는 비밀번호 입력시 어디로 가는지 확인용 버튼</span></button></a>
                     </div>
                 </form>
 
