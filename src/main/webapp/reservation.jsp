@@ -3193,7 +3193,7 @@
 									<a class="btn_step4 btn_ticket_check" href="#" onclick="confirmCancelTicketResult();return false;"><span>예매확인/취소</span></a>
 									<a class="btn_step4 btn_red btn_ticket_check_red" href="#" onclick="confirmCancelTicketResult();return false;"><span>예매확인/취소</span></a>
 									<a class="btn_step4 btn_ticket_message" href="#" onclick="enterTicketMessage();return false;"><span>티켓메시지 입력</span></a>
-									<a class="btn_step4 btn_cinedechef" href="#" onclick="ticketPopupShow('popup_cinedechef', $(this));return false;"><span>CINE de CHEF 이용안내</span></a>
+								
 								</div></div>
 								<div class="ticket_instructions">
 									<dl>
