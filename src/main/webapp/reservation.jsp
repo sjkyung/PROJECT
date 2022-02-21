@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+		 pageEncoding="UTF-8"%>
 
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-	<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
-	<head id="ctl00_Head1">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -32,118 +32,110 @@
 	<script type="text/javascript" src="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/jquery.cgv.crypto.js"></script>
 	<script type="text/javascript" src="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/jquery.cgv.data.js"></script>
 	<script type="text/javascript" src="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/jquery.cgv.net.js"></script>
-	
+
 	<script type="text/javascript" src="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/reservation.alert.js"></script>
-	
+
 	<script type="text/javascript" src="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/reservation.js"></script>
 	<script type="text/javascript" src="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/reservation.popup.js"></script>
 	<script type="text/javascript" src="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/reservation.step1.js"></script>
 	<script type="text/javascript" src="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/reservation.step2.js"></script>
 	<script type="text/javascript">
-	// for loadStep3Resources_STEP2 include source path;
-	var CDN_PATH_JS = "http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/";
-	// 초기 선택값 설정
-	preselectSetting( 
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		'',
-		''
-	);
+		// for loadStep3Resources_STEP2 include source path;
+		var CDN_PATH_JS = "http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/";
+		// 초기 선택값 설정
+		preselectSetting(
+				'',
+				'',
+				'',
+				'',
+				'',
+				'',
+				'',
+				'',
+				''
+		);
 	</script>
-	
-
-<script>
-	
-
-	'use strict'
-	window.onload =function(){
 
 
-		let guide=document.getElementsByClassName('button-guide');
-		let btnClose=document.getElementsByClassName('btn_close');
-		let popup =document.getElementsByClassName('popup_guide');
-		let blackscreen=document.getElementsByClassName("blackscreen");
+	<script>
 
 
-		guide[0].addEventListener('click', function(){
-			console.log("가이드!");
-			popup[0].style.display='block';
-			blackscreen[0].style.display='block';
-
-		});
-
-		btnClose[2].addEventListener('click', popupClose);
-		function popupClose(){
-			console.log("popup close()!")
-			popup[0].style.display='none';
-			blackscreen[0].style.display='none';
-		};
-
-		let placeholder=document.getElementsByClassName('placeholder');
-		let movie_click=document.getElementsByClassName('rating-15');
-		let movieName=document.getElementById('movieName').getAttribute('title');
-		let movieTitle=document.getElementsByClassName('movie_title');
-
-		movie_click[0].addEventListener('click',function(){
-			console.log("영화 선택!");
-			console.log(movieName);
-			movieTitle[0].style.display='block';
-			placeholder[1].style.display='none';
-		});
-
-		let pagenum=0;
-		let btnLeft=document.getElementById('btn-left');
-		let btnRight=document.getElementById('tnb_step_btn_right');
-		let step=document.getElementsByClassName('step');
-
-		btnRight.addEventListener('click',function(){
-			console.log("btn right()");
-			step[pagenum].style.display='none';
-			step[pagenum+1].style.display='block';
-			pagenum++;
-
-		});
+		'use strict'
+		window.onload =function(){
 
 
-		btnLeft.addEventListener('click',function(){
-			console.log("btn left()");
-			step[pagenum].style.display='none';
-			step[pagenum-1].style.display='block';
-			pagenum--;
-
-		});
+			let guide=document.getElementsByClassName('button-guide');
+			let btnClose=document.getElementsByClassName('btn_close');
+			let popup =document.getElementsByClassName('popup_guide');
+			let blackscreen=document.getElementsByClassName("blackscreen");
 
 
-	//
-	// let select =document.getElementsByClassName('rating-12');
-	// let post =document.getElementsByClassName('movie_poster');
-	// let movieType= document.getElementsByClassName('movie_type');
-	// let movieRating =document.getElementsByClassName('movie_rating');
-	//
-	// select[0].addEventListener('click', postImg);
-	// function  postImg(){
-	// 	// select[0].img.src='http://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85624/85624_185.JPG';
-	// 	post[0].style.display='inline';
-	// };
-	//
-	// select[1].addEventListener('click', movie)
-	// function movie(){
-	// 	movieType[0].style.display='block';
-	// 	movieRating[0].style.display='block';
-	// };
+			guide[0].addEventListener('click', function(){
+				console.log("가이드!");
+				popup[0].style.display='block';
+				blackscreen[0].style.display='block';
+
+			});
+
+			btnClose[2].addEventListener('click', popupClose);
+			function popupClose(){
+				console.log("popup close()!")
+				popup[0].style.display='none';
+				blackscreen[0].style.display='none';
+			};
+
+			let placeholder=document.getElementsByClassName('placeholder');
+			let movie_click=document.getElementsByClassName('rating-15');
+			let movieName=document.getElementById('movieName').getAttribute('title');
+			let movieTitle=document.getElementsByClassName('movie_title');
+
+			movie_click[0].addEventListener('click',function(){
+				console.log("영화 선택!");
+				console.log(movieName);
+				movieTitle[0].style.display='block';
+				placeholder[1].style.display='none';
+
+			});
+
+			let pagenum=0;
+			let btnLeft=document.getElementById('btn-left');
+			let btnRight=document.getElementById('tnb_step_btn_right');
+			let step=document.getElementsByClassName('step');
+			let tnb=document.getElementById("tnb");
+
+			btnRight.addEventListener('click',function(){
+				console.log(pagenum);
+				if(pagenum==2){
+					tnb.style.display='none';
+				}
+				console.log("btn right()");
+				step[pagenum].style.display='none';
+				step[pagenum+1].style.display='block';
+				tnb.className='tnb step'+(pagenum+2);
+				pagenum++;
+
+			});
+
+
+			btnLeft.addEventListener('click',function(){
+				console.log(pagenum);
+				console.log("btn left()");
+				step[pagenum].style.display='none';
+				step[pagenum-1].style.display='block';
+				tnb.className='tnb step'+(pagenum);
+				pagenum--;
+
+			});
+
+			function printHomeTicket(){
+				window.open("home_ticket.jsp","new","width=500,height=500,top=100,left=100");
+
+			}
 
 
 
-
-
-
-}
-</script>
+		}
+	</script>
 
 </head>
 
@@ -154,7 +146,7 @@
 	<div id="container">
 		<!-- 빠른예매 -->
 		<div id="ticket" class="ticket ko">
-			
+
 			<!-- 타이틀 -->
 			<div class="navi">
 				<div  class="newsletter">
@@ -164,13 +156,13 @@
 
 				</div>
 				<span class="right">
-				
+
 					<a class="button button-english" href="#" onmousedown="javascript:logClick('옵션/ENGLISH');" onclick="switchLanguage(); return false;"><span>ENGLISH</span></a>
 					<a class="button button-guide" href="#" onmousedown="javascript:logClick('옵션/예매가이드');" onclick="ticketPopupShow('popup_guide'); return false;"><span>예매가이드 - 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</span></a>
 					<a class="button button-discount" href="#" onmousedown="javascript:logClick('옵션/제휴할인혜택');" onclick="ticketNewWindow('./discount.jsp');return false;" title="새창열기"><span>제휴할인혜택</span></a>
 					<a class="button button-schedule" href="#" onmousedown="javascript:logClick('옵션/상영시간표');" onclick="openSchedulePopup();return false;" title="새창열기"><span>상영시간표</span></a>
 					<a class="button button-reservation-restart" href="#" onmousedown="javascript:logClick('옵션/예매다시하기');" onclick="ticketRestart(); return false;"><span>예매 다시하기</span></a>
-				
+
 				</span>
 				<div class="ie7_sucks" id="ie7_sucks"><span>Internet Explorer 9 이상에서 최적화된 서비스 이용이 가능합니다.</span></div>
 			</div>
@@ -221,52 +213,52 @@
 								<div class="sortmenu">
 									<a href="#" onclick="sortMovieByRank();return false;" id="movieSortRankBtn" class="button btn-rank selected">예매율순</a>
 									<a href="#" onclick="sortMovieByName();return false;" id="movieSortNameBtn" class="button btn-abc">가나다순</a>
-									
+
 								</div>
 								<div class="movie-list nano has-scrollbar has-scrollbar-y" id="movie_list">
 									<ul class="content scroll-y" onscroll="movieSectionScrollEvent();" tabindex="-1" style="right: -15px;"><div class="selectbox-movie-type checkedBD" style="width: auto; top: 0px; display: none;">
-									<a href="#" onclick="closeSelectboxMovieType();return false;" class="btn-close">영화속성 레이어 닫기</a>
-									<ul>
-										<li id="sbmt_all" class="GROUP1 ALL selected"><a data-type="ALL" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">전체</a></li>
-										<li id="sbmt_digital" class="GROUP1 DIGITAL proplist" style="display: list-item;"><a data-type="DIGITAL" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">2D</a></li>
-										<li id="sbmt_imax" class="GROUP1 IMAX proplist" style="display: list-item;"><a data-type="IMAX" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">IMAX</a></li>
-										<li id="sbmt_4dx" class="GROUP1 4DX proplist" style="display: list-item;"><a data-type="4DX" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">4DX</a></li>
-										<li id="sbmt_soundx" class="GROUP1 SOUNDX proplist" style="display: list-item;"><a data-type="SOUNDX" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">SOUNDX</a></li>
-										<li id="sbmt_screenx" class="GROUP1 SCREENX proplist dimmed" style="display: none;"><a data-type="SCREENX" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">SCREENX</a></li>
-										<li id="sbmt_3d" class="GROUP1 3D proplist dimmed" style="display: none;"><a data-type="3D" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">3D</a></li>
-										<li id="sbmt_dubbing" class="GROUP2 DUBBING proplist dimmed" style="display: none;"><a data-type="DUBBING" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">더빙</a></li>
-										<li id="sbmt_subtitle" class="GROUP2 SUBTITLES proplist overline" style="display: list-item;"><a data-type="SUBTITLES" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">자막</a></li>
-										<li id="sbmt_lovemom" class="GROUP3 LOVEMOM proplist dimmed" style="display: none;"><a data-type="LOVEMOM" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">러브맘</a></li>
-										<li id="sbmt_liveTalk" class="GROUP3 LIVETALK proplist dimmed" style="display: none;"><a data-type="LIVETALK" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">스타라이브톡</a></li>
-										<li id="sbmt_wheelchairAccess" class="GROUP3 WHEELCHAIRACCESS proplist dimmed" style="display: none;"><a data-type="WHEELCHAIRACCESS" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">배리어프리</a></li>
-									</ul>
+										<a href="#" onclick="closeSelectboxMovieType();return false;" class="btn-close">영화속성 레이어 닫기</a>
+										<ul>
+											<li id="sbmt_all" class="GROUP1 ALL selected"><a data-type="ALL" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">전체</a></li>
+											<li id="sbmt_digital" class="GROUP1 DIGITAL proplist" style="display: list-item;"><a data-type="DIGITAL" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">2D</a></li>
+											<li id="sbmt_imax" class="GROUP1 IMAX proplist" style="display: list-item;"><a data-type="IMAX" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">IMAX</a></li>
+											<li id="sbmt_4dx" class="GROUP1 4DX proplist" style="display: list-item;"><a data-type="4DX" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">4DX</a></li>
+											<li id="sbmt_soundx" class="GROUP1 SOUNDX proplist" style="display: list-item;"><a data-type="SOUNDX" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">SOUNDX</a></li>
+											<li id="sbmt_screenx" class="GROUP1 SCREENX proplist dimmed" style="display: none;"><a data-type="SCREENX" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">SCREENX</a></li>
+											<li id="sbmt_3d" class="GROUP1 3D proplist dimmed" style="display: none;"><a data-type="3D" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">3D</a></li>
+											<li id="sbmt_dubbing" class="GROUP2 DUBBING proplist dimmed" style="display: none;"><a data-type="DUBBING" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">더빙</a></li>
+											<li id="sbmt_subtitle" class="GROUP2 SUBTITLES proplist overline" style="display: list-item;"><a data-type="SUBTITLES" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">자막</a></li>
+											<li id="sbmt_lovemom" class="GROUP3 LOVEMOM proplist dimmed" style="display: none;"><a data-type="LOVEMOM" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">러브맘</a></li>
+											<li id="sbmt_liveTalk" class="GROUP3 LIVETALK proplist dimmed" style="display: none;"><a data-type="LIVETALK" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">스타라이브톡</a></li>
+											<li id="sbmt_wheelchairAccess" class="GROUP3 WHEELCHAIRACCESS proplist dimmed" style="display: none;"><a data-type="WHEELCHAIRACCESS" href="#" onclick="SelectboxMovieTypeClickListener(event);return false;">배리어프리</a></li>
+										</ul>
+									</div>
+										<li class="rating-15" data-index="0" movie_cd_group="20028797" movie_idx="85603"><a id="movieName" href="#" onclick="return false;" title="극장판주술회전0" alt="극장판주술회전0"><span class="icon">&nbsp;</span><span class="text">극장판주술회전0</span><span class="sreader"></span></a></li>
+										<li class="rating-12" data-index="1" movie_cd_group="20028855" movie_idx="85624"><a href="#" onclick="return false;" title="언차티드" alt="언차티드"><span class="icon">&nbsp;</span><span class="text">언차티드</span><span class="sreader"></span></a></li>
+										<li class="rating-15" data-index="2" movie_cd_group="20028868" movie_idx="85632"><a href="#" onclick="return false;" title="더배트맨" alt="더배트맨"><span class="icon">&nbsp;</span><span class="text">더배트맨</span><span class="sreader"></span></a></li>
+										<li class="rating-15" data-index="3" movie_cd_group="20028859" movie_idx="85627"><a href="#" onclick="return false;" title="리코리쉬피자" alt="리코리쉬피자"><span class="icon">&nbsp;</span><span class="text">리코리쉬피자</span><span class="sreader"></span></a></li>
+										<li class="rating-12" data-index="4" movie_cd_group="20024619" movie_idx="83739"><a href="#" onclick="return false;" title="나일강의죽음" alt="나일강의죽음"><span class="icon">&nbsp;</span><span class="text">나일강의죽음</span><span class="sreader"></span></a></li>
+										<li class="rating-18" data-index="5" movie_cd_group="20028871" movie_idx="85635"><a href="#" onclick="return false;" title="인민을위해복무하라" alt="인민을위해복무하라"><span class="icon">&nbsp;</span><span class="text">인민을위해복무하라</span><span class="sreader"></span></a></li>
+										<li class="rating-all" data-index="6" movie_cd_group="20022848" movie_idx="83152"><a href="#" onclick="return false;" title="나의촛불" alt="나의촛불"><span class="icon">&nbsp;</span><span class="text">나의촛불</span><span class="sreader"></span></a></li>
+										<li class="rating-12" data-index="7" movie_cd_group="20028987" movie_idx="85672"><a href="#" onclick="return false;" title="라라랜드" alt="라라랜드"><span class="icon">&nbsp;</span><span class="text">라라랜드</span><span class="sreader"></span></a></li>
+										<li class="rating-12" data-index="8" movie_cd_group="20028688" movie_idx="85561"><a href="#" onclick="return false;" title="해적-도깨비깃발" alt="해적-도깨비깃발"><span class="icon">&nbsp;</span><span class="text">해적-도깨비깃발</span><span class="sreader"></span></a></li>
+										<li class="rating-15" data-index="9" movie_cd_group="20028235" movie_idx="85291"><a href="#" onclick="return false;" title="킹메이커" alt="킹메이커"><span class="icon">&nbsp;</span><span class="text">킹메이커</span><span class="sreader"></span></a></li>
+										<li class="rating-12" data-index="10" movie_cd_group="20027596" movie_idx="84949"><a href="#" onclick="return false;" title="스파이더맨-노웨이홈" alt="스파이더맨-노웨이홈"><span class="icon">&nbsp;</span><span class="text">스파이더맨-노웨이홈</span><span class="sreader"></span></a></li>
+										<li class="rating-all" data-index="11" movie_cd_group="20029013" movie_idx="85680"><a href="#" onclick="return false;" title="에이핑크스페셜무비-혼" alt="에이핑크스페셜무비-혼"><span class="icon">&nbsp;</span><span class="text">에이핑크스페셜무비-혼</span><span class="sreader"></span></a></li>
+										<li class="rating-15" data-index="12" movie_cd_group="20028772" movie_idx="85595"><a href="#" onclick="return false;" title="355" alt="355"><span class="icon">&nbsp;</span><span class="text">355</span><span class="sreader"></span></a></li>
+										<li class="rating-all" data-index="13" movie_cd_group="20027178" movie_idx="84780"><a href="#" onclick="return false;" title="씽2게더" alt="씽2게더"><span class="icon">&nbsp;</span><span class="text">씽2게더</span><span class="sreader"></span></a></li>
+										<li class="rating-15" data-index="14" movie_cd_group="20028869" movie_idx="85633"><a href="#" onclick="return false;" title="굿보스" alt="굿보스"><span class="icon">&nbsp;</span><span class="text">굿보스</span><span class="sreader"></span></a></li>
+										<li class="rating-12" data-index="15" movie_cd_group="20028737" movie_idx="85582"><a href="#" onclick="return false;" title="피그" alt="피그"><span class="icon">&nbsp;</span><span class="text">피그</span><span class="sreader"></span></a></li>
+										<li class="rating-all" data-index="16" movie_cd_group="20028908" movie_idx="85644"><a href="#" onclick="return false;" title="역으로가는길을알려줘" alt="역으로가는길을알려줘"><span class="icon">&nbsp;</span><span class="text">역으로가는길을알려줘</span><span class="sreader"></span></a></li>
+										<li class="rating-15" data-index="17" movie_cd_group="20028951" movie_idx="85659"><a href="#" onclick="return false;" title="매미소리" alt="매미소리"><span class="icon">&nbsp;</span><span class="text">매미소리</span><span class="sreader"></span></a></li>
+										<li class="rating-15" data-index="18" movie_cd_group="20028870" movie_idx="85634"><a href="#" onclick="return false;" title="시크릿카운터" alt="시크릿카운터"><span class="icon">&nbsp;</span><span class="text">시크릿카운터</span><span class="sreader"></span></a></li>
+										<li class="rating-15" data-index="19" movie_cd_group="20028736" movie_idx="85581"><a href="#" onclick="return false;" title="안테벨룸" alt="안테벨룸"><span class="icon">&nbsp;</span><span class="text">안테벨룸</span><span class="sreader"></span></a></li>
+										<li class="rating-15" data-index="20" movie_cd_group="20028469" movie_idx="85469"><a href="#" onclick="return false;" title="드라이브마이카" alt="드라이브마이카"><span class="icon">&nbsp;</span><span class="text">드라이브마이카</span><span class="sreader"></span></a></li><li class="rating-12" data-index="21" movie_cd_group="20028685" movie_idx="85560"><a href="#" onclick="return false;" title="만년이지나도변하지않는게있어" alt="만년이지나도변하지않는게있어"><span class="icon">&nbsp;</span><span class="text">만년이지나도변하지않는게있어</span><span class="sreader"></span></a></li><li class="rating-all" data-index="22" movie_cd_group="20028861" movie_idx="85628"><a href="#" onclick="return false;" title="극장판안녕자두야:제주도의비밀" alt="극장판안녕자두야:제주도의비밀"><span class="icon">&nbsp;</span><span class="text">극장판안녕자두야:제주도의비밀</span><span class="sreader"></span></a></li><li class="rating-15" data-index="23" movie_cd_group="20028464" movie_idx="85464"><a href="#" onclick="return false;" title="어나더라운드" alt="어나더라운드"><span class="icon">&nbsp;</span><span class="text">어나더라운드</span><span class="sreader"></span></a></li><li class="rating-12" data-index="24" movie_cd_group="20028925" movie_idx="85648"><a href="#" onclick="return false;" title="전투왕" alt="전투왕"><span class="icon">&nbsp;</span><span class="text">전투왕</span><span class="sreader"></span></a></li><li class="rating-15" data-index="25" movie_cd_group="20028889" movie_idx="85640"><a href="#" onclick="return false;" title="뮤지컬이퀄(LIVE)" alt="뮤지컬이퀄(LIVE)"><span class="icon">&nbsp;</span><span class="text">뮤지컬이퀄(LIVE)</span><span class="sreader"></span></a></li><li class="rating-15" data-index="26" movie_cd_group="20028694" movie_idx="85567"><a href="#" onclick="return false;" title="하우스오브구찌" alt="하우스오브구찌"><span class="icon">&nbsp;</span><span class="text">하우스오브구찌</span><span class="sreader"></span></a></li><li class="rating-all" data-index="27" movie_cd_group="20028748" movie_idx="85588"><a href="#" onclick="return false;" title="미싱타는여자들" alt="미싱타는여자들"><span class="icon">&nbsp;</span><span class="text">미싱타는여자들</span><span class="sreader"></span></a></li><li class="rating-all" data-index="28" movie_cd_group="20028733" movie_idx="85579"><a href="#" onclick="return false;" title="밀라노두오모콘서트" alt="밀라노두오모콘서트"><span class="icon">&nbsp;</span><span class="text">밀라노두오모콘서트</span><span class="sreader"></span></a></li><li class="rating-15" data-index="29" movie_cd_group="20022183" movie_idx="82987"><a href="#" onclick="return false;" title="타오르는여인의초상" alt="타오르는여인의초상"><span class="icon">&nbsp;</span><span class="text">타오르는여인의초상</span><span class="sreader"></span></a></li><li class="rating-15" data-index="30" movie_cd_group="20028811" movie_idx="85607"><a href="#" onclick="return false;" title="더마더" alt="더마더"><span class="icon">&nbsp;</span><span class="text">더마더</span><span class="sreader"></span></a></li><li class="rating-all" data-index="31" movie_cd_group="20028923" movie_idx="85646"><a href="#" onclick="return false;" title="[아트&amp;다이닝]나폴리,예술과정열을말하다" alt="[아트&amp;다이닝]나폴리,예술과정열을말하다"><span class="icon">&nbsp;</span><span class="text">[아트&amp;다이닝]나폴리,예술과정열을말하다</span><span class="sreader"></span></a></li><li class="rating-18" data-index="32" movie_cd_group="20009174" movie_idx="78723"><a href="#" onclick="return false;" title="캐롤" alt="캐롤"><span class="icon">&nbsp;</span><span class="text">캐롤</span><span class="sreader"></span></a></li><li class="rating-15" data-index="33" movie_cd_group="20028787" movie_idx="85600"><a href="#" onclick="return false;" title="임신한나무와도깨비" alt="임신한나무와도깨비"><span class="icon">&nbsp;</span><span class="text">임신한나무와도깨비</span><span class="sreader"></span></a></li><li class="rating-all" data-index="34" movie_cd_group="20028907" movie_idx="85643"><a href="#" onclick="return false;" title="대한민국대통령" alt="대한민국대통령"><span class="icon">&nbsp;</span><span class="text">대한민국대통령</span><span class="sreader"></span></a></li><li class="rating-12" data-index="35" movie_cd_group="20028689" movie_idx="85562"><a href="#" onclick="return false;" title="프랑스" alt="프랑스"><span class="icon">&nbsp;</span><span class="text">프랑스</span><span class="sreader"></span></a></li><li class="rating-15" data-index="36" movie_cd_group="20028865" movie_idx="85631"><a href="#" onclick="return false;" title="온세상이하얗다" alt="온세상이하얗다"><span class="icon">&nbsp;</span><span class="text">온세상이하얗다</span><span class="sreader"></span></a></li><li class="rating-all" data-index="37" movie_cd_group="20028975" movie_idx="85665"><a href="#" onclick="return false;" title="[인사이터XCGV]기어코살아남는전투형셀프브랜딩" alt="[인사이터XCGV]기어코살아남는전투형셀프브랜딩"><span class="icon">&nbsp;</span><span class="text">[인사이터XCGV]기어코살아남는전투형셀프브랜딩</span><span class="sreader"></span></a></li><li class="rating-12" data-index="38" movie_cd_group="20028947" movie_idx="85656"><a href="#" onclick="return false;" title="밴드스탠드" alt="밴드스탠드"><span class="icon">&nbsp;</span><span class="text">밴드스탠드</span><span class="sreader"></span></a></li><li class="rating-all" data-index="39" movie_cd_group="20028814" movie_idx="85610"><a href="#" onclick="return false;" title="[사이다경제_사계강의(겨울)]알아두면돈이되는설득언어의비밀" alt="[사이다경제_사계강의(겨울)]알아두면돈이되는설득언어의비밀"><span class="icon">&nbsp;</span><span class="text">[사이다경제_사계강의(겨울)]알아두면돈이되는설득언어의비밀</span><span class="sreader"></span></a></li><li class="rating-12" data-index="40" movie_cd_group="20028884" movie_idx="85637"><a href="#" onclick="return false;" title="리프레쉬" alt="리프레쉬"><span class="icon">&nbsp;</span><span class="text">리프레쉬</span><span class="sreader"></span></a></li><li class="rating-all" data-index="41" movie_cd_group="20028978" movie_idx="85668"><a href="#" onclick="return false;" title="[갤러리&amp;다이닝]우리집,작은미술관ArtStyling" alt="[갤러리&amp;다이닝]우리집,작은미술관ArtStyling"><span class="icon">&nbsp;</span><span class="text">[갤러리&amp;다이닝]우리집,작은미술관ArtStyling</span><span class="sreader"></span></a></li><li class="rating-12" data-index="42" movie_cd_group="20028977" movie_idx="85667"><a href="#" onclick="return false;" title="[LIVECLASS씨네블라썸withIsaac]언차티드" alt="[LIVECLASS씨네블라썸withIsaac]언차티드"><span class="icon">&nbsp;</span><span class="text">[LIVECLASS씨네블라썸withIsaac]언차티드</span><span class="sreader"></span></a></li><li class="rating-15" data-index="43" movie_cd_group="20028656" movie_idx="85549"><a href="#" onclick="return false;" title="특송" alt="특송"><span class="icon">&nbsp;</span><span class="text">특송</span><span class="sreader"></span></a></li><li class="rating-15" data-index="44" movie_cd_group="20028420" movie_idx="85451"><a href="#" onclick="return false;" title="경관의피" alt="경관의피"><span class="icon">&nbsp;</span><span class="text">경관의피</span><span class="sreader"></span></a></li><li class="rating-15" data-index="45" movie_cd_group="20028931" movie_idx="85652"><a href="#" onclick="return false;" title="나이트메어앨리" alt="나이트메어앨리"><span class="icon">&nbsp;</span><span class="text">나이트메어앨리</span><span class="sreader"></span></a></li><li class="rating-15" data-index="46" movie_cd_group="20028851" movie_idx="85623"><a href="#" onclick="return false;" title="세라비-다섯번의기적" alt="세라비-다섯번의기적"><span class="icon">&nbsp;</span><span class="text">세라비-다섯번의기적</span><span class="sreader"></span></a></li><li class="rating-12" data-index="47" movie_cd_group="20028976" movie_idx="85666"><a href="#" onclick="return false;" title="이상한나라의수학자" alt="이상한나라의수학자"><span class="icon">&nbsp;</span><span class="text">이상한나라의수학자</span><span class="sreader"></span></a></li><li class="rating-15" data-index="48" movie_cd_group="20029006" movie_idx="85677"><a href="#" onclick="return false;" title="카르멘" alt="카르멘"><span class="icon">&nbsp;</span><span class="text">카르멘</span><span class="sreader"></span></a></li><li class="rating-all" data-index="49" movie_cd_group="20029030" movie_idx="85683"><a href="#" onclick="return false;" title="CGVx전이수북콘서트“Check-in(冊:人)" alt="CGVx전이수북콘서트“Check-in(冊:人)"><span class="icon">&nbsp;</span><span class="text">CGVx전이수북콘서트“Check-in(冊:人)</span><span class="sreader"></span></a></li><li class="rating-all" data-index="50" movie_cd_group="20029014" movie_idx="85681"><a href="#" onclick="return false;" title="[웰니스&amp;다이닝]우주에서만나는힐링테라피콘서트" alt="[웰니스&amp;다이닝]우주에서만나는힐링테라피콘서트"><span class="icon">&nbsp;</span><span class="text">[웰니스&amp;다이닝]우주에서만나는힐링테라피콘서트</span><span class="sreader"></span></a></li><li class="rating-all" data-index="51" movie_cd_group="20028507" movie_idx=""><a href="#" onclick="return false;" title="EBS댄스파티,2021" alt="EBS댄스파티,2021"><span class="icon">&nbsp;</span><span class="text">EBS댄스파티,2021</span><span class="sreader"></span></a></li></ul>
+									<div class="pane pane-y" style="display: block; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px; top: 0px;"></div></div>
+									<div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div>
+									</div>
 								</div>
-								<li class="rating-15" data-index="0" movie_cd_group="20028797" movie_idx="85603"><a id="movieName" href="#" onclick="return false;" title="극장판주술회전0" alt="극장판주술회전0"><span class="icon">&nbsp;</span><span class="text">극장판주술회전0</span><span class="sreader"></span></a></li>
-								<li class="rating-12" data-index="1" movie_cd_group="20028855" movie_idx="85624"><a href="#" onclick="return false;" title="언차티드" alt="언차티드"><span class="icon">&nbsp;</span><span class="text">언차티드</span><span class="sreader"></span></a></li>
-								<li class="rating-15" data-index="2" movie_cd_group="20028868" movie_idx="85632"><a href="#" onclick="return false;" title="더배트맨" alt="더배트맨"><span class="icon">&nbsp;</span><span class="text">더배트맨</span><span class="sreader"></span></a></li>
-								<li class="rating-15" data-index="3" movie_cd_group="20028859" movie_idx="85627"><a href="#" onclick="return false;" title="리코리쉬피자" alt="리코리쉬피자"><span class="icon">&nbsp;</span><span class="text">리코리쉬피자</span><span class="sreader"></span></a></li>
-								<li class="rating-12" data-index="4" movie_cd_group="20024619" movie_idx="83739"><a href="#" onclick="return false;" title="나일강의죽음" alt="나일강의죽음"><span class="icon">&nbsp;</span><span class="text">나일강의죽음</span><span class="sreader"></span></a></li>
-								<li class="rating-18" data-index="5" movie_cd_group="20028871" movie_idx="85635"><a href="#" onclick="return false;" title="인민을위해복무하라" alt="인민을위해복무하라"><span class="icon">&nbsp;</span><span class="text">인민을위해복무하라</span><span class="sreader"></span></a></li>
-								<li class="rating-all" data-index="6" movie_cd_group="20022848" movie_idx="83152"><a href="#" onclick="return false;" title="나의촛불" alt="나의촛불"><span class="icon">&nbsp;</span><span class="text">나의촛불</span><span class="sreader"></span></a></li>
-								<li class="rating-12" data-index="7" movie_cd_group="20028987" movie_idx="85672"><a href="#" onclick="return false;" title="라라랜드" alt="라라랜드"><span class="icon">&nbsp;</span><span class="text">라라랜드</span><span class="sreader"></span></a></li>
-								<li class="rating-12" data-index="8" movie_cd_group="20028688" movie_idx="85561"><a href="#" onclick="return false;" title="해적-도깨비깃발" alt="해적-도깨비깃발"><span class="icon">&nbsp;</span><span class="text">해적-도깨비깃발</span><span class="sreader"></span></a></li>
-								<li class="rating-15" data-index="9" movie_cd_group="20028235" movie_idx="85291"><a href="#" onclick="return false;" title="킹메이커" alt="킹메이커"><span class="icon">&nbsp;</span><span class="text">킹메이커</span><span class="sreader"></span></a></li>
-								<li class="rating-12" data-index="10" movie_cd_group="20027596" movie_idx="84949"><a href="#" onclick="return false;" title="스파이더맨-노웨이홈" alt="스파이더맨-노웨이홈"><span class="icon">&nbsp;</span><span class="text">스파이더맨-노웨이홈</span><span class="sreader"></span></a></li>
-								<li class="rating-all" data-index="11" movie_cd_group="20029013" movie_idx="85680"><a href="#" onclick="return false;" title="에이핑크스페셜무비-혼" alt="에이핑크스페셜무비-혼"><span class="icon">&nbsp;</span><span class="text">에이핑크스페셜무비-혼</span><span class="sreader"></span></a></li>
-								<li class="rating-15" data-index="12" movie_cd_group="20028772" movie_idx="85595"><a href="#" onclick="return false;" title="355" alt="355"><span class="icon">&nbsp;</span><span class="text">355</span><span class="sreader"></span></a></li>
-								<li class="rating-all" data-index="13" movie_cd_group="20027178" movie_idx="84780"><a href="#" onclick="return false;" title="씽2게더" alt="씽2게더"><span class="icon">&nbsp;</span><span class="text">씽2게더</span><span class="sreader"></span></a></li>
-								<li class="rating-15" data-index="14" movie_cd_group="20028869" movie_idx="85633"><a href="#" onclick="return false;" title="굿보스" alt="굿보스"><span class="icon">&nbsp;</span><span class="text">굿보스</span><span class="sreader"></span></a></li>
-								<li class="rating-12" data-index="15" movie_cd_group="20028737" movie_idx="85582"><a href="#" onclick="return false;" title="피그" alt="피그"><span class="icon">&nbsp;</span><span class="text">피그</span><span class="sreader"></span></a></li>
-								<li class="rating-all" data-index="16" movie_cd_group="20028908" movie_idx="85644"><a href="#" onclick="return false;" title="역으로가는길을알려줘" alt="역으로가는길을알려줘"><span class="icon">&nbsp;</span><span class="text">역으로가는길을알려줘</span><span class="sreader"></span></a></li>
-								<li class="rating-15" data-index="17" movie_cd_group="20028951" movie_idx="85659"><a href="#" onclick="return false;" title="매미소리" alt="매미소리"><span class="icon">&nbsp;</span><span class="text">매미소리</span><span class="sreader"></span></a></li>
-								<li class="rating-15" data-index="18" movie_cd_group="20028870" movie_idx="85634"><a href="#" onclick="return false;" title="시크릿카운터" alt="시크릿카운터"><span class="icon">&nbsp;</span><span class="text">시크릿카운터</span><span class="sreader"></span></a></li>
-								<li class="rating-15" data-index="19" movie_cd_group="20028736" movie_idx="85581"><a href="#" onclick="return false;" title="안테벨룸" alt="안테벨룸"><span class="icon">&nbsp;</span><span class="text">안테벨룸</span><span class="sreader"></span></a></li>
-								<li class="rating-15" data-index="20" movie_cd_group="20028469" movie_idx="85469"><a href="#" onclick="return false;" title="드라이브마이카" alt="드라이브마이카"><span class="icon">&nbsp;</span><span class="text">드라이브마이카</span><span class="sreader"></span></a></li><li class="rating-12" data-index="21" movie_cd_group="20028685" movie_idx="85560"><a href="#" onclick="return false;" title="만년이지나도변하지않는게있어" alt="만년이지나도변하지않는게있어"><span class="icon">&nbsp;</span><span class="text">만년이지나도변하지않는게있어</span><span class="sreader"></span></a></li><li class="rating-all" data-index="22" movie_cd_group="20028861" movie_idx="85628"><a href="#" onclick="return false;" title="극장판안녕자두야:제주도의비밀" alt="극장판안녕자두야:제주도의비밀"><span class="icon">&nbsp;</span><span class="text">극장판안녕자두야:제주도의비밀</span><span class="sreader"></span></a></li><li class="rating-15" data-index="23" movie_cd_group="20028464" movie_idx="85464"><a href="#" onclick="return false;" title="어나더라운드" alt="어나더라운드"><span class="icon">&nbsp;</span><span class="text">어나더라운드</span><span class="sreader"></span></a></li><li class="rating-12" data-index="24" movie_cd_group="20028925" movie_idx="85648"><a href="#" onclick="return false;" title="전투왕" alt="전투왕"><span class="icon">&nbsp;</span><span class="text">전투왕</span><span class="sreader"></span></a></li><li class="rating-15" data-index="25" movie_cd_group="20028889" movie_idx="85640"><a href="#" onclick="return false;" title="뮤지컬이퀄(LIVE)" alt="뮤지컬이퀄(LIVE)"><span class="icon">&nbsp;</span><span class="text">뮤지컬이퀄(LIVE)</span><span class="sreader"></span></a></li><li class="rating-15" data-index="26" movie_cd_group="20028694" movie_idx="85567"><a href="#" onclick="return false;" title="하우스오브구찌" alt="하우스오브구찌"><span class="icon">&nbsp;</span><span class="text">하우스오브구찌</span><span class="sreader"></span></a></li><li class="rating-all" data-index="27" movie_cd_group="20028748" movie_idx="85588"><a href="#" onclick="return false;" title="미싱타는여자들" alt="미싱타는여자들"><span class="icon">&nbsp;</span><span class="text">미싱타는여자들</span><span class="sreader"></span></a></li><li class="rating-all" data-index="28" movie_cd_group="20028733" movie_idx="85579"><a href="#" onclick="return false;" title="밀라노두오모콘서트" alt="밀라노두오모콘서트"><span class="icon">&nbsp;</span><span class="text">밀라노두오모콘서트</span><span class="sreader"></span></a></li><li class="rating-15" data-index="29" movie_cd_group="20022183" movie_idx="82987"><a href="#" onclick="return false;" title="타오르는여인의초상" alt="타오르는여인의초상"><span class="icon">&nbsp;</span><span class="text">타오르는여인의초상</span><span class="sreader"></span></a></li><li class="rating-15" data-index="30" movie_cd_group="20028811" movie_idx="85607"><a href="#" onclick="return false;" title="더마더" alt="더마더"><span class="icon">&nbsp;</span><span class="text">더마더</span><span class="sreader"></span></a></li><li class="rating-all" data-index="31" movie_cd_group="20028923" movie_idx="85646"><a href="#" onclick="return false;" title="[아트&amp;다이닝]나폴리,예술과정열을말하다" alt="[아트&amp;다이닝]나폴리,예술과정열을말하다"><span class="icon">&nbsp;</span><span class="text">[아트&amp;다이닝]나폴리,예술과정열을말하다</span><span class="sreader"></span></a></li><li class="rating-18" data-index="32" movie_cd_group="20009174" movie_idx="78723"><a href="#" onclick="return false;" title="캐롤" alt="캐롤"><span class="icon">&nbsp;</span><span class="text">캐롤</span><span class="sreader"></span></a></li><li class="rating-15" data-index="33" movie_cd_group="20028787" movie_idx="85600"><a href="#" onclick="return false;" title="임신한나무와도깨비" alt="임신한나무와도깨비"><span class="icon">&nbsp;</span><span class="text">임신한나무와도깨비</span><span class="sreader"></span></a></li><li class="rating-all" data-index="34" movie_cd_group="20028907" movie_idx="85643"><a href="#" onclick="return false;" title="대한민국대통령" alt="대한민국대통령"><span class="icon">&nbsp;</span><span class="text">대한민국대통령</span><span class="sreader"></span></a></li><li class="rating-12" data-index="35" movie_cd_group="20028689" movie_idx="85562"><a href="#" onclick="return false;" title="프랑스" alt="프랑스"><span class="icon">&nbsp;</span><span class="text">프랑스</span><span class="sreader"></span></a></li><li class="rating-15" data-index="36" movie_cd_group="20028865" movie_idx="85631"><a href="#" onclick="return false;" title="온세상이하얗다" alt="온세상이하얗다"><span class="icon">&nbsp;</span><span class="text">온세상이하얗다</span><span class="sreader"></span></a></li><li class="rating-all" data-index="37" movie_cd_group="20028975" movie_idx="85665"><a href="#" onclick="return false;" title="[인사이터XCGV]기어코살아남는전투형셀프브랜딩" alt="[인사이터XCGV]기어코살아남는전투형셀프브랜딩"><span class="icon">&nbsp;</span><span class="text">[인사이터XCGV]기어코살아남는전투형셀프브랜딩</span><span class="sreader"></span></a></li><li class="rating-12" data-index="38" movie_cd_group="20028947" movie_idx="85656"><a href="#" onclick="return false;" title="밴드스탠드" alt="밴드스탠드"><span class="icon">&nbsp;</span><span class="text">밴드스탠드</span><span class="sreader"></span></a></li><li class="rating-all" data-index="39" movie_cd_group="20028814" movie_idx="85610"><a href="#" onclick="return false;" title="[사이다경제_사계강의(겨울)]알아두면돈이되는설득언어의비밀" alt="[사이다경제_사계강의(겨울)]알아두면돈이되는설득언어의비밀"><span class="icon">&nbsp;</span><span class="text">[사이다경제_사계강의(겨울)]알아두면돈이되는설득언어의비밀</span><span class="sreader"></span></a></li><li class="rating-12" data-index="40" movie_cd_group="20028884" movie_idx="85637"><a href="#" onclick="return false;" title="리프레쉬" alt="리프레쉬"><span class="icon">&nbsp;</span><span class="text">리프레쉬</span><span class="sreader"></span></a></li><li class="rating-all" data-index="41" movie_cd_group="20028978" movie_idx="85668"><a href="#" onclick="return false;" title="[갤러리&amp;다이닝]우리집,작은미술관ArtStyling" alt="[갤러리&amp;다이닝]우리집,작은미술관ArtStyling"><span class="icon">&nbsp;</span><span class="text">[갤러리&amp;다이닝]우리집,작은미술관ArtStyling</span><span class="sreader"></span></a></li><li class="rating-12" data-index="42" movie_cd_group="20028977" movie_idx="85667"><a href="#" onclick="return false;" title="[LIVECLASS씨네블라썸withIsaac]언차티드" alt="[LIVECLASS씨네블라썸withIsaac]언차티드"><span class="icon">&nbsp;</span><span class="text">[LIVECLASS씨네블라썸withIsaac]언차티드</span><span class="sreader"></span></a></li><li class="rating-15" data-index="43" movie_cd_group="20028656" movie_idx="85549"><a href="#" onclick="return false;" title="특송" alt="특송"><span class="icon">&nbsp;</span><span class="text">특송</span><span class="sreader"></span></a></li><li class="rating-15" data-index="44" movie_cd_group="20028420" movie_idx="85451"><a href="#" onclick="return false;" title="경관의피" alt="경관의피"><span class="icon">&nbsp;</span><span class="text">경관의피</span><span class="sreader"></span></a></li><li class="rating-15" data-index="45" movie_cd_group="20028931" movie_idx="85652"><a href="#" onclick="return false;" title="나이트메어앨리" alt="나이트메어앨리"><span class="icon">&nbsp;</span><span class="text">나이트메어앨리</span><span class="sreader"></span></a></li><li class="rating-15" data-index="46" movie_cd_group="20028851" movie_idx="85623"><a href="#" onclick="return false;" title="세라비-다섯번의기적" alt="세라비-다섯번의기적"><span class="icon">&nbsp;</span><span class="text">세라비-다섯번의기적</span><span class="sreader"></span></a></li><li class="rating-12" data-index="47" movie_cd_group="20028976" movie_idx="85666"><a href="#" onclick="return false;" title="이상한나라의수학자" alt="이상한나라의수학자"><span class="icon">&nbsp;</span><span class="text">이상한나라의수학자</span><span class="sreader"></span></a></li><li class="rating-15" data-index="48" movie_cd_group="20029006" movie_idx="85677"><a href="#" onclick="return false;" title="카르멘" alt="카르멘"><span class="icon">&nbsp;</span><span class="text">카르멘</span><span class="sreader"></span></a></li><li class="rating-all" data-index="49" movie_cd_group="20029030" movie_idx="85683"><a href="#" onclick="return false;" title="CGVx전이수북콘서트“Check-in(冊:人)" alt="CGVx전이수북콘서트“Check-in(冊:人)"><span class="icon">&nbsp;</span><span class="text">CGVx전이수북콘서트“Check-in(冊:人)</span><span class="sreader"></span></a></li><li class="rating-all" data-index="50" movie_cd_group="20029014" movie_idx="85681"><a href="#" onclick="return false;" title="[웰니스&amp;다이닝]우주에서만나는힐링테라피콘서트" alt="[웰니스&amp;다이닝]우주에서만나는힐링테라피콘서트"><span class="icon">&nbsp;</span><span class="text">[웰니스&amp;다이닝]우주에서만나는힐링테라피콘서트</span><span class="sreader"></span></a></li><li class="rating-all" data-index="51" movie_cd_group="20028507" movie_idx=""><a href="#" onclick="return false;" title="EBS댄스파티,2021" alt="EBS댄스파티,2021"><span class="icon">&nbsp;</span><span class="text">EBS댄스파티,2021</span><span class="sreader"></span></a></li></ul>
-								<div class="pane pane-y" style="display: block; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px; top: 0px;"></div></div>
-								<div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div>
-								</div>
-							</div> 
-								
+
 							</div>
 						</div>
 					</div>
@@ -310,11 +302,11 @@
 											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name">부산/울산</span><span class="count">(17)</span></a><div class="area_theater_list nano has-scrollbar"><ul class="content scroll-y" tabindex="-1" style="right: -15px;"><li class="" data-index="44" areaindex="6" theater_cd="0061" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">대연<span class="sreader"></span></a></li><li class="" data-index="52" areaindex="6" theater_cd="0042" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">동래<span class="sreader"></span></a></li><li class="" data-index="69" areaindex="6" theater_cd="0337" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">부산명지<span class="sreader"></span></a></li><li class="" data-index="79" areaindex="6" theater_cd="0005" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">서면<span class="sreader"></span></a></li><li class="" data-index="80" areaindex="6" theater_cd="0285" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">서면삼정타워<span class="sreader"></span></a></li><li class="" data-index="81" areaindex="6" theater_cd="0303" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">서면상상마당<span class="sreader"></span></a></li><li class="" data-index="88" areaindex="6" theater_cd="0089" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">센텀시티<span class="sreader"></span></a></li><li class="" data-index="99" areaindex="6" theater_cd="P004" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">씨네드쉐프 센텀시티<span class="sreader"></span></a></li><li class="" data-index="102" areaindex="6" theater_cd="0160" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">아시아드<span class="sreader"></span></a></li><li class="" data-index="121" areaindex="6" theater_cd="0335" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">울산동구<span class="sreader"></span></a></li><li class="" data-index="122" areaindex="6" theater_cd="0128" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="삼산동">울산삼산<span class="sreader"></span></a></li><li class="" data-index="123" areaindex="6" theater_cd="0264" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">울산신천<span class="sreader"></span></a></li><li class="" data-index="124" areaindex="6" theater_cd="0246" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">울산진장<span class="sreader"></span></a></li><li class="" data-index="141" areaindex="6" theater_cd="0306" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">정관<span class="sreader"></span></a></li><li class="" data-index="180" areaindex="6" theater_cd="0245" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">하단아트몰링<span class="sreader"></span></a></li><li class="" data-index="181" areaindex="6" theater_cd="0318" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">해운대<span class="sreader"></span></a></li><li class="" data-index="184" areaindex="6" theater_cd="0159" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">화명<span class="sreader"></span></a></li></ul><div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div></li>
 											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name">경상</span><span class="count">(17)</span></a><div class="area_theater_list nano has-scrollbar"><ul class="content scroll-y" tabindex="-1" style="right: -15px;"><li class="" data-index="3" areaindex="7" theater_cd="0263" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">거제<span class="sreader"></span></a></li><li class="" data-index="6" areaindex="7" theater_cd="0330" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">경산<span class="sreader"></span></a></li><li class="" data-index="8" areaindex="7" theater_cd="0323" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">고성<span class="sreader"></span></a></li><li class="" data-index="23" areaindex="7" theater_cd="0053" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">구미<span class="sreader"></span></a></li><li class="" data-index="26" areaindex="7" theater_cd="0240" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">김천율곡<span class="sreader"></span></a></li><li class="" data-index="30" areaindex="7" theater_cd="0028" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">김해<span class="sreader"></span></a></li><li class="" data-index="31" areaindex="7" theater_cd="0311" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">김해율하<span class="sreader"></span></a></li><li class="" data-index="32" areaindex="7" theater_cd="0239" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">김해장유<span class="sreader"></span></a></li><li class="" data-index="59" areaindex="7" theater_cd="0033" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">마산<span class="sreader"></span></a></li><li class="" data-index="75" areaindex="7" theater_cd="0097" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="포항시 북구 덕산동">북포항<span class="sreader"></span></a></li><li class="" data-index="103" areaindex="7" theater_cd="0272" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">안동<span class="sreader"></span></a></li><li class="" data-index="108" areaindex="7" theater_cd="0234" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">양산삼호<span class="sreader"></span></a></li><li class="" data-index="149" areaindex="7" theater_cd="0324" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">진주혁신<span class="sreader"></span></a></li><li class="" data-index="150" areaindex="7" theater_cd="0023" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">창원<span class="sreader"></span></a></li><li class="" data-index="151" areaindex="7" theater_cd="0079" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">창원더시티<span class="sreader"></span></a></li><li class="" data-index="152" areaindex="7" theater_cd="0283" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">창원상남<span class="sreader"></span></a></li><li class="" data-index="176" areaindex="7" theater_cd="0045" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;" title="포항시 남구 상도동">포항<span class="sreader"></span></a></li></ul><div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div></li>
 											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name">광주/전라/제주</span><span class="count">(24)</span></a><div class="area_theater_list nano has-scrollbar"><ul class="content scroll-y" tabindex="-1" style="right: -15px;"><li class="" data-index="12" areaindex="8" theater_cd="0220" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">광양<span class="sreader"></span></a></li><li class="" data-index="13" areaindex="8" theater_cd="0221" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">광양 엘에프스퀘어<span class="sreader"></span></a></li><li class="" data-index="14" areaindex="8" theater_cd="0295" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">광주금남로<span class="sreader"></span></a></li><li class="" data-index="15" areaindex="8" theater_cd="0193" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">광주상무<span class="sreader"></span></a></li><li class="" data-index="16" areaindex="8" theater_cd="0210" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">광주용봉<span class="sreader"></span></a></li><li class="" data-index="17" areaindex="8" theater_cd="0218" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">광주첨단<span class="sreader"></span></a></li><li class="" data-index="18" areaindex="8" theater_cd="0244" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">광주충장로<span class="sreader"></span></a></li><li class="" data-index="19" areaindex="8" theater_cd="0090" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">광주터미널<span class="sreader"></span></a></li><li class="" data-index="20" areaindex="8" theater_cd="0215" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">광주하남<span class="sreader"></span></a></li><li class="" data-index="24" areaindex="8" theater_cd="0277" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">군산<span class="sreader"></span></a></li><li class="" data-index="33" areaindex="8" theater_cd="0237" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">나주<span class="sreader"></span></a></li><li class="" data-index="63" areaindex="8" theater_cd="0289" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">목포<span class="sreader"></span></a></li><li class="" data-index="64" areaindex="8" theater_cd="0280" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">목포평화광장<span class="sreader"></span></a></li><li class="" data-index="83" areaindex="8" theater_cd="0225" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">서전주<span class="sreader"></span></a></li><li class="" data-index="94" areaindex="8" theater_cd="0114" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">순천<span class="sreader"></span></a></li><li class="" data-index="95" areaindex="8" theater_cd="0268" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">순천신대<span class="sreader"></span></a></li><li class="" data-index="110" areaindex="8" theater_cd="0315" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">여수웅천<span class="sreader"></span></a></li><li class="" data-index="130" areaindex="8" theater_cd="0020" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">익산<span class="sreader"></span></a></li><li class="" data-index="138" areaindex="8" theater_cd="0213" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">전주고사<span class="sreader"></span></a></li><li class="" data-index="139" areaindex="8" theater_cd="0336" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">전주에코시티<span class="sreader"></span></a></li><li class="" data-index="140" areaindex="8" theater_cd="0179" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">전주효자<span class="sreader"></span></a></li><li class="" data-index="143" areaindex="8" theater_cd="0186" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">정읍<span class="sreader"></span></a></li><li class="" data-index="144" areaindex="8" theater_cd="0302" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">제주<span class="sreader"></span></a></li><li class="" data-index="145" areaindex="8" theater_cd="0259" rating_cd="undefined" style="display: list-item;"><a href="#" onclick="theaterListClickListener(event);return false;">제주노형<span class="sreader"></span></a></li></ul><div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div></li>
-										<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name">&nbsp;</span><span class="count">&nbsp;</span></a><div class="area_theater_list nano has-scrollbar"><ul class="content scroll-y" tabindex="-1" style="right: -15px;"></ul><div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div></li><li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name">&nbsp;</span><span class="count">&nbsp;</span></a><div class="area_theater_list nano has-scrollbar"><ul class="content scroll-y" tabindex="-1" style="right: -15px;"></ul><div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div></li></ul>
+											<li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name">&nbsp;</span><span class="count">&nbsp;</span></a><div class="area_theater_list nano has-scrollbar"><ul class="content scroll-y" tabindex="-1" style="right: -15px;"></ul><div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div></li><li><a href="#" onclick="theaterAreaClickListener(event);return false;"><span class="name">&nbsp;</span><span class="count">&nbsp;</span></a><div class="area_theater_list nano has-scrollbar"><ul class="content scroll-y" tabindex="-1" style="right: -15px;"></ul><div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div></li></ul>
 									</div>
 									<div class="theater-cgv-list nano has-scrollbar" id="theater_cgv_list">
 										<ul class="content scroll-y" tabindex="-1" style="right: -15px;"></ul>
-									<div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div>
+										<div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div>
 								</div>
 							</div>
 						</div>
@@ -329,13 +321,13 @@
 							<!-- 날짜선택 -->
 							<div class="date-list nano has-scrollbar has-scrollbar-y" id="date_list">
 								<ul class="content scroll-y" tabindex="-1" style="right: -15px;"><div><li class="month dimmed"><div><span class="year">2022</span><span class="month">2</span><div></div></div></li><li data-index="0" date="20220218" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">18</span><span class="sreader"></span></a></li><li data-index="1" date="20220219" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">19</span><span class="sreader"></span></a></li><li data-index="2" date="20220220" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">20</span><span class="sreader"></span></a></li><li data-index="3" date="20220221" class="day"><a href="#" onclick="return false;"><span class="dayweek">월</span><span class="day">21</span><span class="sreader"></span></a></li><li data-index="4" date="20220222" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">22</span><span class="sreader"></span></a></li><li data-index="5" date="20220223" class="day"><a href="#" onclick="return false;"><span class="dayweek">수</span><span class="day">23</span><span class="sreader"></span></a></li><li data-index="6" date="20220224" class="day"><a href="#" onclick="return false;"><span class="dayweek">목</span><span class="day">24</span><span class="sreader"></span></a></li><li data-index="7" date="20220225" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">25</span><span class="sreader"></span></a></li><li data-index="8" date="20220226" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">26</span><span class="sreader"></span></a></li><li data-index="9" date="20220227" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">27</span><span class="sreader"></span></a></li><li data-index="10" date="20220228" class="day"><a href="#" onclick="return false;"><span class="dayweek">월</span><span class="day">28</span><span class="sreader"></span></a></li><li class="month dimmed"><div><span class="year">2022</span><span class="month">3</span><div></div></div></li><li data-index="11" date="20220301" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">1</span><span class="sreader"></span></a></li><li data-index="12" date="20220302" class="day"><a href="#" onclick="return false;"><span class="dayweek">수</span><span class="day">2</span><span class="sreader"></span></a></li><li data-index="13" date="20220303" class="day"><a href="#" onclick="return false;"><span class="dayweek">목</span><span class="day">3</span><span class="sreader"></span></a></li><li data-index="14" date="20220304" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">4</span><span class="sreader"></span></a></li><li data-index="15" date="20220305" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">5</span><span class="sreader"></span></a></li><li data-index="16" date="20220306" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">6</span><span class="sreader"></span></a></li><li data-index="17" date="20220308" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">8</span><span class="sreader"></span></a></li><li data-index="18" date="20220312" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">12</span><span class="sreader"></span></a></li><li data-index="19" date="20220322" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">22</span><span class="sreader"></span></a></li><li data-index="20" date="20220326" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">26</span><span class="sreader"></span></a></li></div>
-							<div><li class="month dimmed"><div><span class="year">2022</span><span class="month">2</span><div></div></div></li><li data-index="0" date="20220218" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">18</span><span class="sreader"></span></a></li><li data-index="1" date="20220219" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">19</span><span class="sreader"></span></a></li><li data-index="2" date="20220220" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">20</span><span class="sreader"></span></a></li><li data-index="3" date="20220221" class="day"><a href="#" onclick="return false;"><span class="dayweek">월</span><span class="day">21</span><span class="sreader"></span></a></li><li data-index="4" date="20220222" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">22</span><span class="sreader"></span></a></li><li data-index="5" date="20220223" class="day"><a href="#" onclick="return false;"><span class="dayweek">수</span><span class="day">23</span><span class="sreader"></span></a></li><li data-index="6" date="20220224" class="day"><a href="#" onclick="return false;"><span class="dayweek">목</span><span class="day">24</span><span class="sreader"></span></a></li><li data-index="7" date="20220225" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">25</span><span class="sreader"></span></a></li><li data-index="8" date="20220226" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">26</span><span class="sreader"></span></a></li><li data-index="9" date="20220227" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">27</span><span class="sreader"></span></a></li><li data-index="10" date="20220228" class="day"><a href="#" onclick="return false;"><span class="dayweek">월</span><span class="day">28</span><span class="sreader"></span></a></li><li class="month dimmed"><div><span class="year">2022</span><span class="month">3</span><div></div></div></li><li data-index="11" date="20220301" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">1</span><span class="sreader"></span></a></li><li data-index="12" date="20220302" class="day"><a href="#" onclick="return false;"><span class="dayweek">수</span><span class="day">2</span><span class="sreader"></span></a></li><li data-index="13" date="20220303" class="day"><a href="#" onclick="return false;"><span class="dayweek">목</span><span class="day">3</span><span class="sreader"></span></a></li><li data-index="14" date="20220304" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">4</span><span class="sreader"></span></a></li><li data-index="15" date="20220305" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">5</span><span class="sreader"></span></a></li><li data-index="16" date="20220306" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">6</span><span class="sreader"></span></a></li><li data-index="17" date="20220308" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">8</span><span class="sreader"></span></a></li><li data-index="18" date="20220312" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">12</span><span class="sreader"></span></a></li><li data-index="19" date="20220322" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">22</span><span class="sreader"></span></a></li><li data-index="20" date="20220326" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">26</span><span class="sreader"></span></a></li></div>
-							</ul>
-							<div class="pane pane-y active" style="display: block; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px; top: 0px;"></div></div>
-							<div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div>
-						</div>
+									<div><li class="month dimmed"><div><span class="year">2022</span><span class="month">2</span><div></div></div></li><li data-index="0" date="20220218" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">18</span><span class="sreader"></span></a></li><li data-index="1" date="20220219" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">19</span><span class="sreader"></span></a></li><li data-index="2" date="20220220" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">20</span><span class="sreader"></span></a></li><li data-index="3" date="20220221" class="day"><a href="#" onclick="return false;"><span class="dayweek">월</span><span class="day">21</span><span class="sreader"></span></a></li><li data-index="4" date="20220222" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">22</span><span class="sreader"></span></a></li><li data-index="5" date="20220223" class="day"><a href="#" onclick="return false;"><span class="dayweek">수</span><span class="day">23</span><span class="sreader"></span></a></li><li data-index="6" date="20220224" class="day"><a href="#" onclick="return false;"><span class="dayweek">목</span><span class="day">24</span><span class="sreader"></span></a></li><li data-index="7" date="20220225" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">25</span><span class="sreader"></span></a></li><li data-index="8" date="20220226" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">26</span><span class="sreader"></span></a></li><li data-index="9" date="20220227" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">27</span><span class="sreader"></span></a></li><li data-index="10" date="20220228" class="day"><a href="#" onclick="return false;"><span class="dayweek">월</span><span class="day">28</span><span class="sreader"></span></a></li><li class="month dimmed"><div><span class="year">2022</span><span class="month">3</span><div></div></div></li><li data-index="11" date="20220301" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">1</span><span class="sreader"></span></a></li><li data-index="12" date="20220302" class="day"><a href="#" onclick="return false;"><span class="dayweek">수</span><span class="day">2</span><span class="sreader"></span></a></li><li data-index="13" date="20220303" class="day"><a href="#" onclick="return false;"><span class="dayweek">목</span><span class="day">3</span><span class="sreader"></span></a></li><li data-index="14" date="20220304" class="day"><a href="#" onclick="return false;"><span class="dayweek">금</span><span class="day">4</span><span class="sreader"></span></a></li><li data-index="15" date="20220305" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">5</span><span class="sreader"></span></a></li><li data-index="16" date="20220306" class="day day-sun"><a href="#" onclick="return false;"><span class="dayweek">일</span><span class="day">6</span><span class="sreader"></span></a></li><li data-index="17" date="20220308" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">8</span><span class="sreader"></span></a></li><li data-index="18" date="20220312" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">12</span><span class="sreader"></span></a></li><li data-index="19" date="20220322" class="day"><a href="#" onclick="return false;"><span class="dayweek">화</span><span class="day">22</span><span class="sreader"></span></a></li><li data-index="20" date="20220326" class="day day-sat"><a href="#" onclick="return false;"><span class="dayweek">토</span><span class="day">26</span><span class="sreader"></span></a></li></div>
+								</ul>
+								<div class="pane pane-y active" style="display: block; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px; top: 0px;"></div></div>
+								<div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div>
 							</div>
 						</div>
+					</div>
 					<!-- TIME 섹션 -->
 					<div class="section section-time">
 						<div class="col-head" id="skip_time_list">
@@ -351,7 +343,7 @@
 							<div class="time-list nano has-scrollbar"><div class="content scroll-y" tabindex="-1" style="right: -15px;"><div class="theater" screen_cd="014" movie_cd="20028955"><span class="title"><span class="name">SCREENX 2D</span><span class="floor">4관[SCREENX] 8층</span><span class="seatcount">(총124석)</span></span><ul><li data-index="0" data-remain_seat="124" play_start_tm="1750" screen_cd="014" movie_cd="20028955" play_num="5"><a class="button" href="#" onclick="screenTimeClickListener(event);return false;"><span class="time"><span>17:50</span></span><span class="count">120석</span><div class="sreader">종료시간 19:56</div><span class="sreader mod"></span></a></li><li data-index="1" data-remain_seat="124" play_start_tm="2015" screen_cd="014" movie_cd="20028955" play_num="6"><a class="button" href="#" onclick="screenTimeClickListener(event);return false;"><span class="time"><span>20:15</span></span><span class="count">107석</span><div class="sreader">종료시간 22:21</div><span class="sreader mod"></span></a></li></ul></div><div class="theater" screen_cd="003" movie_cd="20028855"><span class="title"><span class="name">2D</span><span class="floor">3관 8층[삼화페인트 안심닥터관]</span><span class="seatcount">(총172석)</span></span><ul><li data-index="2" data-remain_seat="172" play_start_tm="1000" screen_cd="003" movie_cd="20028855" play_num="1" class="morning"><a class="button" href="#" onclick="screenTimeClickListener(event);return false;"><span class="time"><span>10:00</span></span><span class="count">157석</span><div class="sreader">종료시간 12:06</div><span class="sreader mod"> 조조</span></a></li><li data-index="3" data-remain_seat="172" play_start_tm="1225" screen_cd="003" movie_cd="20028855" play_num="2"><a class="button" href="#" onclick="screenTimeClickListener(event);return false;"><span class="time"><span>12:25</span></span><span class="count">160석</span><div class="sreader">종료시간 14:31</div><span class="sreader mod"></span></a></li><li data-index="4" data-remain_seat="172" play_start_tm="1450" screen_cd="003" movie_cd="20028855" play_num="3"><a class="button" href="#" onclick="screenTimeClickListener(event);return false;"><span class="time"><span>14:50</span></span><span class="count">132석</span><div class="sreader">종료시간 16:56</div><span class="sreader mod"></span></a></li><li data-index="5" data-remain_seat="172" play_start_tm="1715" screen_cd="003" movie_cd="20028855" play_num="4"><a class="button" href="#" onclick="screenTimeClickListener(event);return false;" title=""><span class="time"><span>17:15</span></span><span class="count">149석</span><div class="sreader">종료시간 19:21</div><span class="sreader mod"></span></a></li></ul></div><div class="theater" screen_cd="005" movie_cd="20028855" style="border: none;"><span class="title"><span class="name">2D</span><span class="floor">5관(Laser) 10층</span><span class="seatcount">(총172석)</span></span><ul><li data-index="6" data-remain_seat="172" play_start_tm="0900" screen_cd="005" movie_cd="20028855" play_num="1" class="morning"><a class="button" href="#" onclick="screenTimeClickListener(event);return false;"><span class="time"><span>09:00</span></span><span class="count">161석</span><div class="sreader">종료시간 11:06</div><span class="sreader mod"> 조조</span></a></li><li data-index="7" data-remain_seat="172" play_start_tm="1120" screen_cd="005" movie_cd="20028855" play_num="2"><a class="button" href="#" onclick="screenTimeClickListener(event);return false;"><span class="time"><span>11:20</span></span><span class="count">152석</span><div class="sreader">종료시간 13:26</div><span class="sreader mod"></span></a></li><li data-index="8" data-remain_seat="172" play_start_tm="1345" screen_cd="005" movie_cd="20028855" play_num="3"><a class="button" href="#" onclick="screenTimeClickListener(event);return false;"><span class="time"><span>13:45</span></span><span class="count">140석</span><div class="sreader">종료시간 15:51</div><span class="sreader mod"></span></a></li><li data-index="9" data-remain_seat="172" play_start_tm="1610" screen_cd="005" movie_cd="20028855" play_num="4"><a class="button" href="#" onclick="screenTimeClickListener(event);return false;" title=""><span class="time"><span>16:10</span></span><span class="count">146석</span><div class="sreader">종료시간 18:16</div><span class="sreader mod"></span></a></li><li data-index="10" data-remain_seat="172" play_start_tm="1835" screen_cd="005" movie_cd="20028855" play_num="5"><a class="button" href="#" onclick="screenTimeClickListener(event);return false;"><span class="time"><span>18:35</span></span><span class="count">148석</span><div class="sreader">종료시간 20:41</div><span class="sreader mod"></span></a></li><li data-index="11" data-remain_seat="172" play_start_tm="2100" screen_cd="005" movie_cd="20028855" play_num="6"><a class="button" href="#" onclick="screenTimeClickListener(event);return false;"><span class="time"><span>21:00</span></span><span class="count">143석</span><div class="sreader">종료시간 23:06</div><span class="sreader mod"></span></a></li></ul></div></div><div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div>
 						</div>
 					</div>
-				</div>	
+				</div>
 				<!-- //step1 -->
 				<!-- step2 -->
 				<div class="step step2" style="display: none;">
@@ -3128,38 +3120,38 @@
 
 								<div class="ticket_summary_wrap">
 									<div class="ticket_summary">
-										<div class="poster"><img src="" alt=""></div>
+										<div class="poster"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85632/85632_185.JPG" alt="" style="visibility: visible; display: inline;"></div>
 										<table>
 											<caption>예매정보</caption>
 											<thead></thead>
 											<tbody>
 											<tr class="ticket_no">
 												<th scope="row">예매번호</th>
-												<td><span class="red"></span></td>
+												<td><span class="red">0056-0221-6185-899</span></td>
 											</tr>
 											<tr class="movie_name">
 												<th scope="row">영화</th>
-												<td><em></em></td>
+												<td><em>더 배트맨(전야 상영회,SCREENX 2D)</em></td>
 											</tr>
 											<tr class="theater">
 												<th scope="row">극장</th>
-												<td><em><span class="theater_name"></span> / <span class="theater_loc"></span></em></td>
+												<td><em><span class="theater_name">CGV 강남</span> / <span class="theater_loc">4관[SCREENX] 8층</span></em></td>
 											</tr>
 											<tr class="movie_date">
 												<th scope="row">일시</th>
-												<td><em><!--2013년 09월 30일(월) 15:05 ~ 17:02--></em></td>
+												<td><em>2022년2월28일(월)20:30 ~ 23:36</em></td>
 											</tr>
 											<tr class="people">
 												<th scope="row">인원</th>
-												<td><em><!--일반 2명--></em></td>
+												<td><em>일반 1명</em></td>
 											</tr>
 											<tr class="seat">
 												<th scope="row">좌석</th>
-												<td><em><!--C007, C008--></em></td>
+												<td><em>A9</em></td>
 											</tr>
 											<tr class="payment_price">
 												<th scope="row">결제금액</th>
-												<td><span class="price">0</span> 원</td>
+												<td><span class="price">13,000</span> 원</td>
 											</tr>
 											<tr class="payment_method">
 												<th scope="row">결제수단</th>
@@ -3174,13 +3166,13 @@
                                                         <span class="content"><span class="price">5,000</span>원</span>
                                                     </div>
                                                     -->
-												</td>
+													<div class="row"><span class="title"><em>카카오페이</em></span><span class="content"><span class="price">13,000</span> 원</span></div></td>
 											</tr>
 											</tbody>
 										</table>
 									</div>
 								</div>
-								<div class="ticket_exception">
+								<div class="ticket_exception" style="display: none;">
 
 									<em>CGV 청담씨네시티는 대중교통이용을 권장합니다.</em><br>
 									<span class="desc">발레파킹을 이용하실 수 있으나, 가능 차량수가 한정적이며 주변 교통상황에 따라 지연될 수 있습니다.</span>
@@ -3188,12 +3180,12 @@
 									<!--<br/><a class="btn_traffic_info" href="#" onclick="return false;"><img src="http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step4/btn_traffic_info.png" alt="교통안내"/></a>-->
 								</div>
 								<div class="ticket_button_group"><div>
-									<a class="btn_step4 btn_red btn_ticket_print" href="#" onclick="printHomeTicket();return false;"><span>예매정보 출력</span></a>
-									<a class="btn_step4 btn_result_smssend" href="#" onclick="sendTicketResultSMS();return false;"><span>예매결과 SMS발송</span></a>
-									<a class="btn_step4 btn_ticket_check" href="#" onclick="confirmCancelTicketResult();return false;"><span>예매확인/취소</span></a>
-									<a class="btn_step4 btn_red btn_ticket_check_red" href="#" onclick="confirmCancelTicketResult();return false;"><span>예매확인/취소</span></a>
-									<a class="btn_step4 btn_ticket_message" href="#" onclick="enterTicketMessage();return false;"><span>티켓메시지 입력</span></a>
-								
+									<a class="btn_step4 btn_red btn_ticket_print" href="#" onclick="printHomeTicket();return false;" style="margin: 0px 5px;"><span>예매정보 출력</span></a>
+									<a class="btn_step4 btn_result_smssend" href="#" onclick="sendTicketResultSMS();return false;" style="margin: 0px 5px;"><span>예매결과 SMS발송</span></a>
+									<a class="btn_step4 btn_ticket_check" href="#" onclick="confirmCancelTicketResult();return false;" style="margin: 0px 5px;"><span>예매확인/취소</span></a>
+									<a class="btn_step4 btn_red btn_ticket_check_red" href="#" onclick="confirmCancelTicketResult();return false;" style="margin: 0px 5px;"><span>예매확인/취소</span></a>
+									<a class="btn_step4 btn_ticket_message" href="#" onclick="enterTicketMessage();return false;" style="margin: 0px 5px;"><span>티켓메시지 입력</span></a>
+									<a class="btn_step4 btn_cinedechef" href="#" onclick="ticketPopupShow('popup_cinedechef', $(this));return false;" style="display: none; margin: 0px 5px;"><span>CINE de CHEF 이용안내</span></a>
 								</div></div>
 								<div class="ticket_instructions">
 									<dl>
@@ -3250,7 +3242,7 @@
 										<img src="http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step4/text_event_title.png" alt="알고 계시나요?">
 										<span class="option">현재 진행중인 스페셜 이벤트!</span>
 										<span class="more">
-						<a href="http://www.cgv.co.kr/culture-event/event/" target="_blank" title="새창열기">
+						<a href="defaultNew.jsp?mCode=001" target="_blank" title="새창열기">
 							<img src="http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step4/btn_more.png" alt="MORE">
 						</a>
 					</span>
@@ -3267,244 +3259,244 @@
 				</noscript>
 			</div>
 			<!-- 팝업 -->
-			<div class="popups">                
-				<!-- Popup - 로그인 --> 
-<div class="ft_layer_popup popup_login" style="display:none;">
-    <!--<div class="hd">
-        <div class="title_area">
-            
-            <h4>CGV회원 로그인</h4>
-			
-			<span class="sreader">빠른예매는 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</span>
-        </div>
-        <a href="#" onclick="return false;" class="layer_close">닫기</a>
-    </div>
-    <div class="bd">
-        <div class="login_form">
-            <div class="input_wrap id">
-                <label for="txtUserId" class="blind">아이디</label>
-                <input name="txtUserId" id="txtUserId" maxlength="25" type="text">
-            </div>
-            <div class="input_wrap password">
-                <label for="txtPassword" class="blind">비밀번호</label>
-                <input name="txtPassword" id="txtPassword" maxlength="25" type="password">
-            </div>
-            <button type="button" title="로그인" class="btn_login"><span>로그인</span></button>       
-        </div>
-        <div class="linkbar">
-        	
-            <a href="#" onclick="return false;" class="join_member">회원가입</a>
-            <a href="#" onclick="return false;" class="join_guest">비회원 예매</a>
-            <a href="#" onclick="return false;" class="id_find">아이디찾기</a>
-            <a href="#" onclick="return false;" class="pw_find">비밀번호찾기</a>    
-			
-        </div>
-    </div>-->
-</div>
-<!-- //Popup -->
+			<div class="popups">
+				<!-- Popup - 로그인 -->
+				<div class="ft_layer_popup popup_login" style="display:none;">
+					<!--<div class="hd">
+                        <div class="title_area">
 
-<!-- Popup - 얼럿 --> 
-<div class="ft_layer_popup popup_alert original" style="">
-    <div class="hd">
-        <div class="title_area">
-            <h4 class="alert_title">얼럿타이틀</h4>
-			<span class="sreader">빠른예매는 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</span>
-        </div>
-        <a href="#" onclick="return false;" class="layer_close">닫기</a>
-    </div><!-- //hd -->
-    <div class="bd">
-        <p class="alert_msg" style="width: 475px;">얼럿메세지</p>
-    </div><!-- //bd -->
-    <div class="ft">
-        <a title="확인" href="#" onclick="return false;" class="btn btn_ok"><span>확인</span></a>
-        <a title="취소" href="#" onclick="return false;" class="btn btn_white btn_close"><span>취소</span></a>
-    </div><!-- //ft -->     
-</div>
-<!-- //Popup -->
+                            <h4>CGV회원 로그인</h4>
 
-<!-- 2021.06.22 - 홈페이지 관람 안내 문구 팝업 창 -->
-<div class="ft_layer_popup popup_alert w450 base" style="top: 50%; position: absolute;">
-    <div class="hd">
-        <div class="title_area">
-            <h4 class="alert_title">얼럿타이틀</h4>
-			<span class="sreader">빠른예매는 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</span>
-        </div>
-        <a href="#" onclick="return false;" class="layer_close">닫기</a>
-    </div>
-    <div class="bd">
-        <p class="alert_msg">얼럿메세지</p>
-    </div>
-    <div class="ft">
-        <a title="확인" href="#" onclick="return false;" class="btn btn_ok">
-            <span>확인</span>
-        </a>
-        <a title="취소" href="#" onclick="return false;" class="btn btn_white btn_close">
-            <span>취소</span>
-        </a>
-    </div>
-</div>
+                            <span class="sreader">빠른예매는 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</span>
+                        </div>
+                        <a href="#" onclick="return false;" class="layer_close">닫기</a>
+                    </div>
+                    <div class="bd">
+                        <div class="login_form">
+                            <div class="input_wrap id">
+                                <label for="txtUserId" class="blind">아이디</label>
+                                <input name="txtUserId" id="txtUserId" maxlength="25" type="text">
+                            </div>
+                            <div class="input_wrap password">
+                                <label for="txtPassword" class="blind">비밀번호</label>
+                                <input name="txtPassword" id="txtPassword" maxlength="25" type="password">
+                            </div>
+                            <button type="button" title="로그인" class="btn_login"><span>로그인</span></button>
+                        </div>
+                        <div class="linkbar">
 
-<!-- Popup - guide --> 
-<div class="ft_layer_popup popup_guide" style="display:none;">
-	<div class="guide_hd">
-        <h4><span class="blind">CGV 예매가이드</span></h4>
-        <p><span class="blind">새롭게 바뀐 CGV 예매 서비스를 직접 확인해보세요!</span></p>
-    </div><!-- //hd -->
-    <div class="guide_bd">
-        <div class="tab_menu clfix">
-            <ul>
-                <li class="a first"><a href="#none" onclick="return false;" class="on" title="STEP 1 영화, 극장, 날짜, 시간 선택"><span><var><span class="blind_txt tab1">STEP 1 영화, 극장, 날짜, 시간 선택</span></var></span></a></li>
-                <li class="b"><a href="#none" onclick="return false;" title="STEP 2 인원, 좌석선택"><span><var><span class="blind_txt tab2">STEP 2 인원, 좌석선택</span></var></span></a></li>
-                <li class="c"><a href="#none" onclick="return false;" title="STEP 3 결제하기"><span><var><span class="blind_txt tab3">STEP 3 결제하기</span></var></span></a></li>
-            </ul>
-        </div>
-        <div class="content">
-            <div class="guide_step01">
-                <p class="notice"><span class="blind">원하시는 영화, 극장, 날짜, 시간 정보를 선택해주세요!</span></p>
-                <div class="guide_btn">
-                    <p><span class="question blind_txt">물음표</span><span class="info">를 오버시 해당 설명을 볼 수 있습니다.</span></p>
-                    <ul>
-                        <li class="btn01">
-                            <a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-새롭게 바뀐 CGV 예매서비스안내</a>
-                            <p class="infoBx">
-                                <span class="top"></span>
-                                <span class="middle">전체 화면구성이 세로형으로 변경되어 더 빠르고 쉽게 정보 선택이 가능해졌어요!</span>
-                                <span class="bottom"></span>
-                            </p>
-                        </li>
-                        <li class="btn02">
-                            <a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-영화분류안내</a>
-                            <p class="infoBx">
-                            <span class="top"></span>
-                            <span class="middle">무비꼴라쥬, 특별관 영화를 빠르고 편리하게 분류하여 확인할 수 있어요!</span>
-                            <span class="bottom"></span>
-                            </p>
-                        </li>
-                        <!--
-                        <li class="btn03">
-                            <a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-선택할 수 없는 영화안내</a>
-                            <p class="infoBx">
-                            <span class="top"></span>
-                            <span class="middle">선택 불가능한 정보는 장애인 차별금지법에 따라 패턴 디자인을 적용하여 모든 사용자가 쉽게 구분할 수 있어요!</span>
-                            <span class="bottom"></span>
-                            </p>
-                        </li>
-                        -->
-                        <li class="btn04">
-                            <a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-자주가는 CGV안내</a>
-                            <p class="infoBx">
-                            <span class="top"></span>
-                            <span class="middle">자주 가는 극장 설정 기능을 통해 보다 빠른 극장 선택이 가능해졌어요!</span>
-                            <span class="bottom"></span>
-                            </p>
-                        </li>
-                        <li class="btn05">
-                            <a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-영문 빠른예매</a>
-                            <p class="infoBx">
-                            <span class="top"></span>
-                            <span class="middle">영문 버전 빠른예매를 통해 다국적 사용자들도 쉽게 예매 서비스를 이용할 수 있어요!</span>
-                            <span class="bottom"></span>
-                            </p>
-                        </li>
-                        <li class="btn06">
-                            <a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-조조/심야구분안내</a>
-                            <p class="infoBx">
-                            <span class="top"></span>
-                            <span class="middle">조조/심야 영화 시간에 대해 쉽게 확인할 수 있어요!</span>
-                            <span class="bottom"></span>
-                            </p>
-                        </li>
-                        <li class="btn07">
-                            <a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-새롭게 바뀐 CGV 예매서비스안내</a>
-                            <p class="infoBx">
-                            <span class="top"></span>
-                            <span class="middle">선택한 예매 정보 및 나의 예매 진행 단계를 한 눈에 파악할 수 있어요!</span>
-                            <span class="bottom"></span>
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div><!--//guide_step01-->
-            <div class="guide_step02">
-                <p class="notice"><span class="blind">예매 인원수에 맞게 원하시는 자리 를 선택해주세요!</span></p>
-                <div class="guide_btn">
-                    <p><span class="question blind_txt">물음표</span><span class="info">를 오버시 해당 설명을 볼 수 있습니다.</span></p>
-                    <ul>
-                        <li class="btn01">
-                            <a href="#" onclick="return false;" title="" class="btnVisInfo blind_txt">물음표-상영관/시간 확인 및 변경안내</a>
-                            <p class="infoBx">
-                                <span class="top"></span>
-                                <span class="middle">선택한 상영관/시간 확인 및 변경 기능이 보다 쉽고 눈에 띄게 변경되었어요!</span>
-                                <span class="bottom"></span>
-                            </p>
-                        </li>
-                        <li class="btn02">
-                            <a href="#" onclick="return false;" title="" class="btnVisInfo blind_txt">물음표-다양한 좌석도 보기안내</a>
-                            <p class="infoBx">
-                                <span class="top"></span>
-                                <span class="middle">좌석도 크게 보기 기능으로 시력이 좋지 않으신 분들도 쉽게 예매가 가능해졌어요!</span>
-                                <span class="bottom"></span>
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div><!--//guide_step02-->
-            <div class="guide_step03">
-                <p class="notice"><span class="blind">원하시는 할인 및 결제수단을 이용하여 예매를 완료해주세요!</span></p>
-                <div class="guide_btn">
-                    <p><span class="question blind_txt">물음표</span><span class="info">를 오버시 해당 설명을 볼 수 있습니다.</span></p>
-                    <ul>
-                        <li class="btn01">
-                            <a href="#" onclick="return false;" title="" class="btnVisInfo blind_txt">물음표-할인 및 결제수단안내</a>
-                            <p class="infoBx">
-                                <span class="top"></span>
-                                <span class="middle">전체 화면구성이 할인수단과 결제수단 영역으로 나뉘어 한 눈에 보기 편리해졌어요!</span>
-                                <span class="bottom"></span>
-                            </p>
-                        </li>
-                        <li class="btn02">
-                            <a href="#" onclick="return false;" title="" class="btnVisInfo blind_txt">물음표-CGV영화관람권,할인쿠폰, CJ ONE포인트 안내</a>
-                            <p class="infoBx">
-                                <span class="top"></span>
-                                <span class="middle">주요 할인수단인 CGV영화관람권, CGV할인쿠폰, CJ ONE 포인트의 바로 조회 기능을 통해 보다 빠른 예매가 가능해졌어요!</span>
-                                <span class="bottom"></span>
-                            </p>
-                        </li>
-                        <li class="btn03">
-                            <a href="#" onclick="return false;" title="" class="btnVisInfo blind_txt">물음표-할인수단별 선택안내</a>
-                            <p class="infoBx">
-                                <span class="top"></span>
-                                <span class="middle">다양한 CGV의 할인수단을 보기 쉽게 그룹화하여 원하는 할인수단만 선택해 이용하실 수 있어요!</span>
-                                <span class="bottom"></span>
-                            </p>
-                        </li>
-                        <li class="btn04">
-                            <a href="#" onclick="return false;" title="" class="btnVisInfo blind_txt">물음표-결제정보안내</a>
-                            <p class="infoBx">
-                                <span class="top"></span>
-                                <span class="middle">내가 적용한 할인 및 결제수단 내역을 한 눈에 쉽게 확인 가능해요!</span>
-                                <span class="bottom"></span>
-                            </p>
-                        </li>
-                        <li class="btn05">
-                            <a href="#" onclick="return false;" title="" class="btnVisInfo blind_txt">물음표-최신할인정보안내</a>
-                            <p class="infoBx">
-                                <span class="top"></span>
-                                <span class="middle">다양한 CGV결제수단의 최신 할인 정보를 쉽게 모아 볼 수 있어요!</span>
-                                <span class="bottom"></span>
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div><!--//guide_step03-->
-        </div>
-    </div><!-- //bd -->  
-    <div class="ft">
-        <a title="닫기" href="#" onclick="return false;" class="btn btn_white btn_close"><span>닫기</span></a>
-        <a title="닫기" href="#" onclick="return false;" class="layer_close">닫기</a>
-    </div><!-- //ft -->  
-</div>
-<!-- //Popup -->
+                            <a href="#" onclick="return false;" class="join_member">회원가입</a>
+                            <a href="#" onclick="return false;" class="join_guest">비회원 예매</a>
+                            <a href="#" onclick="return false;" class="id_find">아이디찾기</a>
+                            <a href="#" onclick="return false;" class="pw_find">비밀번호찾기</a>
+
+                        </div>
+                    </div>-->
+				</div>
+				<!-- //Popup -->
+
+				<!-- Popup - 얼럿 -->
+				<div class="ft_layer_popup popup_alert original" style="">
+					<div class="hd">
+						<div class="title_area">
+							<h4 class="alert_title">얼럿타이틀</h4>
+							<span class="sreader">빠른예매는 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</span>
+						</div>
+						<a href="#" onclick="return false;" class="layer_close">닫기</a>
+					</div><!-- //hd -->
+					<div class="bd">
+						<p class="alert_msg" style="width: 475px;">얼럿메세지</p>
+					</div><!-- //bd -->
+					<div class="ft">
+						<a title="확인" href="#" onclick="return false;" class="btn btn_ok"><span>확인</span></a>
+						<a title="취소" href="#" onclick="return false;" class="btn btn_white btn_close"><span>취소</span></a>
+					</div><!-- //ft -->
+				</div>
+				<!-- //Popup -->
+
+				<!-- 2021.06.22 - 홈페이지 관람 안내 문구 팝업 창 -->
+				<div class="ft_layer_popup popup_alert w450 base" style="top: 50%; position: absolute;">
+					<div class="hd">
+						<div class="title_area">
+							<h4 class="alert_title">얼럿타이틀</h4>
+							<span class="sreader">빠른예매는 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</span>
+						</div>
+						<a href="#" onclick="return false;" class="layer_close">닫기</a>
+					</div>
+					<div class="bd">
+						<p class="alert_msg">얼럿메세지</p>
+					</div>
+					<div class="ft">
+						<a title="확인" href="#" onclick="return false;" class="btn btn_ok">
+							<span>확인</span>
+						</a>
+						<a title="취소" href="#" onclick="return false;" class="btn btn_white btn_close">
+							<span>취소</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- Popup - guide -->
+				<div class="ft_layer_popup popup_guide" style="display:none;">
+					<div class="guide_hd">
+						<h4><span class="blind">CGV 예매가이드</span></h4>
+						<p><span class="blind">새롭게 바뀐 CGV 예매 서비스를 직접 확인해보세요!</span></p>
+					</div><!-- //hd -->
+					<div class="guide_bd">
+						<div class="tab_menu clfix">
+							<ul>
+								<li class="a first"><a href="#none" onclick="return false;" class="on" title="STEP 1 영화, 극장, 날짜, 시간 선택"><span><var><span class="blind_txt tab1">STEP 1 영화, 극장, 날짜, 시간 선택</span></var></span></a></li>
+								<li class="b"><a href="#none" onclick="return false;" title="STEP 2 인원, 좌석선택"><span><var><span class="blind_txt tab2">STEP 2 인원, 좌석선택</span></var></span></a></li>
+								<li class="c"><a href="#none" onclick="return false;" title="STEP 3 결제하기"><span><var><span class="blind_txt tab3">STEP 3 결제하기</span></var></span></a></li>
+							</ul>
+						</div>
+						<div class="content">
+							<div class="guide_step01">
+								<p class="notice"><span class="blind">원하시는 영화, 극장, 날짜, 시간 정보를 선택해주세요!</span></p>
+								<div class="guide_btn">
+									<p><span class="question blind_txt">물음표</span><span class="info">를 오버시 해당 설명을 볼 수 있습니다.</span></p>
+									<ul>
+										<li class="btn01">
+											<a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-새롭게 바뀐 CGV 예매서비스안내</a>
+											<p class="infoBx">
+												<span class="top"></span>
+												<span class="middle">전체 화면구성이 세로형으로 변경되어 더 빠르고 쉽게 정보 선택이 가능해졌어요!</span>
+												<span class="bottom"></span>
+											</p>
+										</li>
+										<li class="btn02">
+											<a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-영화분류안내</a>
+											<p class="infoBx">
+												<span class="top"></span>
+												<span class="middle">무비꼴라쥬, 특별관 영화를 빠르고 편리하게 분류하여 확인할 수 있어요!</span>
+												<span class="bottom"></span>
+											</p>
+										</li>
+										<!--
+                                        <li class="btn03">
+                                            <a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-선택할 수 없는 영화안내</a>
+                                            <p class="infoBx">
+                                            <span class="top"></span>
+                                            <span class="middle">선택 불가능한 정보는 장애인 차별금지법에 따라 패턴 디자인을 적용하여 모든 사용자가 쉽게 구분할 수 있어요!</span>
+                                            <span class="bottom"></span>
+                                            </p>
+                                        </li>
+                                        -->
+										<li class="btn04">
+											<a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-자주가는 CGV안내</a>
+											<p class="infoBx">
+												<span class="top"></span>
+												<span class="middle">자주 가는 극장 설정 기능을 통해 보다 빠른 극장 선택이 가능해졌어요!</span>
+												<span class="bottom"></span>
+											</p>
+										</li>
+										<li class="btn05">
+											<a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-영문 빠른예매</a>
+											<p class="infoBx">
+												<span class="top"></span>
+												<span class="middle">영문 버전 빠른예매를 통해 다국적 사용자들도 쉽게 예매 서비스를 이용할 수 있어요!</span>
+												<span class="bottom"></span>
+											</p>
+										</li>
+										<li class="btn06">
+											<a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-조조/심야구분안내</a>
+											<p class="infoBx">
+												<span class="top"></span>
+												<span class="middle">조조/심야 영화 시간에 대해 쉽게 확인할 수 있어요!</span>
+												<span class="bottom"></span>
+											</p>
+										</li>
+										<li class="btn07">
+											<a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-새롭게 바뀐 CGV 예매서비스안내</a>
+											<p class="infoBx">
+												<span class="top"></span>
+												<span class="middle">선택한 예매 정보 및 나의 예매 진행 단계를 한 눈에 파악할 수 있어요!</span>
+												<span class="bottom"></span>
+											</p>
+										</li>
+									</ul>
+								</div>
+							</div><!--//guide_step01-->
+							<div class="guide_step02">
+								<p class="notice"><span class="blind">예매 인원수에 맞게 원하시는 자리 를 선택해주세요!</span></p>
+								<div class="guide_btn">
+									<p><span class="question blind_txt">물음표</span><span class="info">를 오버시 해당 설명을 볼 수 있습니다.</span></p>
+									<ul>
+										<li class="btn01">
+											<a href="#" onclick="return false;" title="" class="btnVisInfo blind_txt">물음표-상영관/시간 확인 및 변경안내</a>
+											<p class="infoBx">
+												<span class="top"></span>
+												<span class="middle">선택한 상영관/시간 확인 및 변경 기능이 보다 쉽고 눈에 띄게 변경되었어요!</span>
+												<span class="bottom"></span>
+											</p>
+										</li>
+										<li class="btn02">
+											<a href="#" onclick="return false;" title="" class="btnVisInfo blind_txt">물음표-다양한 좌석도 보기안내</a>
+											<p class="infoBx">
+												<span class="top"></span>
+												<span class="middle">좌석도 크게 보기 기능으로 시력이 좋지 않으신 분들도 쉽게 예매가 가능해졌어요!</span>
+												<span class="bottom"></span>
+											</p>
+										</li>
+									</ul>
+								</div>
+							</div><!--//guide_step02-->
+							<div class="guide_step03">
+								<p class="notice"><span class="blind">원하시는 할인 및 결제수단을 이용하여 예매를 완료해주세요!</span></p>
+								<div class="guide_btn">
+									<p><span class="question blind_txt">물음표</span><span class="info">를 오버시 해당 설명을 볼 수 있습니다.</span></p>
+									<ul>
+										<li class="btn01">
+											<a href="#" onclick="return false;" title="" class="btnVisInfo blind_txt">물음표-할인 및 결제수단안내</a>
+											<p class="infoBx">
+												<span class="top"></span>
+												<span class="middle">전체 화면구성이 할인수단과 결제수단 영역으로 나뉘어 한 눈에 보기 편리해졌어요!</span>
+												<span class="bottom"></span>
+											</p>
+										</li>
+										<li class="btn02">
+											<a href="#" onclick="return false;" title="" class="btnVisInfo blind_txt">물음표-CGV영화관람권,할인쿠폰, CJ ONE포인트 안내</a>
+											<p class="infoBx">
+												<span class="top"></span>
+												<span class="middle">주요 할인수단인 CGV영화관람권, CGV할인쿠폰, CJ ONE 포인트의 바로 조회 기능을 통해 보다 빠른 예매가 가능해졌어요!</span>
+												<span class="bottom"></span>
+											</p>
+										</li>
+										<li class="btn03">
+											<a href="#" onclick="return false;" title="" class="btnVisInfo blind_txt">물음표-할인수단별 선택안내</a>
+											<p class="infoBx">
+												<span class="top"></span>
+												<span class="middle">다양한 CGV의 할인수단을 보기 쉽게 그룹화하여 원하는 할인수단만 선택해 이용하실 수 있어요!</span>
+												<span class="bottom"></span>
+											</p>
+										</li>
+										<li class="btn04">
+											<a href="#" onclick="return false;" title="" class="btnVisInfo blind_txt">물음표-결제정보안내</a>
+											<p class="infoBx">
+												<span class="top"></span>
+												<span class="middle">내가 적용한 할인 및 결제수단 내역을 한 눈에 쉽게 확인 가능해요!</span>
+												<span class="bottom"></span>
+											</p>
+										</li>
+										<li class="btn05">
+											<a href="#" onclick="return false;" title="" class="btnVisInfo blind_txt">물음표-최신할인정보안내</a>
+											<p class="infoBx">
+												<span class="top"></span>
+												<span class="middle">다양한 CGV결제수단의 최신 할인 정보를 쉽게 모아 볼 수 있어요!</span>
+												<span class="bottom"></span>
+											</p>
+										</li>
+									</ul>
+								</div>
+							</div><!--//guide_step03-->
+						</div>
+					</div><!-- //bd -->
+					<div class="ft">
+						<a title="닫기" href="#" onclick="return false;" class="btn btn_white btn_close"><span>닫기</span></a>
+						<a title="닫기" href="#" onclick="return false;" class="layer_close">닫기</a>
+					</div><!-- //ft -->
+				</div>
+				<!-- //Popup -->
 
 			</div>
 			<!-- //팝업 -->
@@ -3514,82 +3506,82 @@
 	<!-- //컨텐츠 -->
 
 	<div id="ticket_tnb" class="tnb_container ">
-		<div class="tnb step2">
+		<div class="tnb step1" id="tnb">
 			<!-- btn-left -->
-			<a class="btn-left" id="btn-left" href="#" onclick="OnTnbLeftClick(); return false;" title="이전단계">이전단계로 이동</a>
+			<a class="btn-left" id="btn-left" href="#" onclick="OnTnbLeftClick(); return false;" title="영화선택">이전단계로 이동</a>
 			<div class="info movie">
-				<span class="movie_poster"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85632/85632_185.JPG" alt="영화 포스터" style="display: inline;"></span>
-				<div class="row movie_title colspan2" style="display: block;">
-					<span class="data letter-spacing-min ellipsis-line2"><a href="http://www.cgv.co.kr/movies/detail-view/?midx=85632" target="_blank" onmousedown="javascript:logClick('SUMMARY/영화상세보기');" title="더배트맨">더배트맨</a></span>
+				<span class="movie_poster"><img src="" alt="영화 포스터" style="display: none;"></span>
+				<div class="row movie_title colspan2" style="display: none;">
+					<span class="data letter-spacing-min ellipsis-line2"><a href="#" target="_blank" onmousedown="javascript:logClick('SUMMARY/영화상세보기');">영화정보 상세보기</a></span>
 				</div>
-				<div class="row movie_type" style="display: block;">
-					<span class="data ellipsis-line1" title="SCREENX 2D(전야 상영회)">SCREENX 2D(전야 상영회)</span>
+				<div class="row movie_type" style="display: none;">
+					<span class="data ellipsis-line1"></span>
 				</div>
-				<div class="row movie_rating" style="display: block;">
-					<span class="data" title="15세 관람가">15세 관람가</span>
+				<div class="row movie_rating" style="display: none;">
+					<span class="data" title=""></span>
 				</div>
-				<div class="placeholder" title="영화선택" style="display: none;"></div>
+				<div class="placeholder" title="영화선택"></div>
 			</div>
 			<div class="info theater">
-				<div class="row name" style="display: block;">
+				<div class="row name" style="display: none;">
 					<span class="header">극장</span>
-					<span class="data letter-spacing-min ellipsis-line1"><a target="_blank" onmousedown="javascript:logClick('SUMMARY/극장상세보기');" href="http://www.cgv.co.kr/theaters/?theaterCode=0056" title="CGV 강남">CGV 강남</a></span>
+					<span class="data letter-spacing-min ellipsis-line1"><a href="#" target="_blank" onmousedown="javascript:logClick('SUMMARY/극장상세보기');"><span class="sreader">극장정보 상세보기</span></a></span>
 				</div>
-				<div class="row date" style="display: block;">
+				<div class="row date" style="display: none;">
 					<span class="header">일시</span>
-					<span class="data" title="2022.2.28(월) 20:30">2022.2.28(월) 20:30</span>
+					<span class="data"></span>
 				</div>
-				<div class="row screen" style="display: block;">
+				<div class="row screen" style="display: none;">
 					<span class="header">상영관</span>
-					<span class="data" title="4관[SCREENX] 8층">4관[SCREENX] 8층</span>
+					<span class="data"></span>
 				</div>
-				<div class="row number" style="display: block;">
+				<div class="row number" style="display: none;">
 					<span class="header">인원</span>
-					<span class="data" title=""></span>
+					<span class="data"></span>
 				</div>
-				<div class="placeholder" title="극장선택" style="display: none;"></div>
+				<div class="placeholder" title="극장선택"></div>
 			</div>
 			<div class="info seat">
-				<div class="row seat_name" style="height: 0px;">
+				<div class="row seat_name">
 					<span class="header">좌석명</span>
-					<span class="data" title=""></span>
+					<span class="data">일반석</span>
 				</div>
 				<div class="row seat_no colspan3">
 					<span class="header">좌석번호</span>
-					<span class="data ellipsis-line3" title=""></span>
+					<span class="data ellipsis-line3"></span>
 				</div>
-				<div class="placeholder" title="좌석선택" style="display: block;"></div>
+				<div class="placeholder" title="좌석선택"></div>
 			</div>
-<%--			<div class="info payment-ticket" style="width: 155px;">--%>
-<%--				<div class="row payment-millitary" style="display: none;">--%>
-<%--					<span class="header">군인</span>--%>
-<%--					<span class="data"><span class="price">0 원</span></span>--%>
-<%--				</div>--%>
-<%--				<div class="row payment-adult" style="display: none;">--%>
-<%--					<span class="header">일반</span>--%>
-<%--					<span class="data"><span class="price">13,000 원</span></span>--%>
-<%--				</div>--%>
-<%--				<div class="row payment-youth" style="display: none;">--%>
-<%--					<span class="header">청소년</span>--%>
-<%--					<span class="data"><span class="price">0 원</span></span>--%>
-<%--				</div>--%>
-<%--				<div class="row payment-child" style="display: none;">--%>
-<%--					<span class="header">어린이</span>--%>
-<%--					<span class="data"><span class="price">0 원</span></span>--%>
-<%--				</div>--%>
-<%--				<div class="row payment-senior" style="display: none;">--%>
-<%--					<span class="header">경로</span>--%>
-<%--					<span class="data"><span class="price">0 원</span></span>--%>
-<%--				</div>--%>
-<%--				<div class="row payment-special" style="display: none;">--%>
-<%--					<span class="header">우대</span>--%>
-<%--					<span class="data"><span class="price">0 원</span></span>--%>
-<%--				</div>--%>
-<%--				<div class="row payment-final" style="display: none;">--%>
-<%--					<span class="header">총금액</span>--%>
-<%--					<span class="data"><span class="price">13,000</span><span class="won">원</span></span>--%>
-<%--					<span id="priceMapInfoIco" style="position: absolute; right: -17px; margin-top: 3px; cursor: pointer;"><img src="http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step2/ico_circle_14.png" height="14" width="14" alt="mappingIco"></span><div id="priceMappingContainer" style="display: none; position: absolute; right: -80px; z-index: 100; width: 150px; height: auto; padding: 10px; background: rgb(51, 51, 51); bottom: 115px;"><span class="typeNm" style="display:inline-block; width:60px;">일반</span> : LIGHT X 1<br></div></div>--%>
-<%--			</div>--%>
+			<!-- <div class="info payment-ticket">
+				<div class="row payment-millitary">
+					<span class="header">군인</span>
+					<span class="data"><span class="price"></span>원 x <span class="quantity"></span></span>
+				</div>
+				<div class="row payment-adult">
+					<span class="header">일반</span>
+					<span class="data"><span class="price"></span>원 x <span class="quantity"></span></span>
+				</div>
+				<div class="row payment-youth">
+					<span class="header">청소년</span>
+					<span class="data"><span class="price"></span>원 x <span class="quantity"></span></span>
+				</div>
+				<div class="row payment-child">
+					<span class="header">어린이</span>
+					<span class="data"><span class="price"></span>원 x <span class="quantity"></span></span>
+				</div>
+				<div class="row payment-senior">
+					<span class="header">경로</span>
+					<span class="data"><span class="price"></span>원 x <span class="quantity"></span></span>
+				</div>
+				<div class="row payment-special">
+					<span class="header">우대</span>
+					<span class="data"><span class="price"></span>원 x <span class="quantity"></span></span>
+				</div>
+				<div class="row payment-final">
+					<span class="header">총금액</span>
+					<span class="data"><span class="price">0</span><span class="won">원</span></span>
+				</div>
+			</div> -->
 			<div class="info path">
 				<div class="row colspan4">
 					<span class="path-step2" title="좌석선택">&nbsp;</span>
@@ -3598,26 +3590,28 @@
 			</div>
 			<!-- btn-right -->
 			<div class="tnb_step_btn_right_before" id="tnb_step_btn_right_before"></div>
-			<a class="btn-right" id="tnb_step_btn_right" href="#" onclick="OnTnbRightClick(); return false;" title="다음단계">다음단계로 이동 - 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</a>
+			<a class="btn-right" id="tnb_step_btn_right" href="#" onclick="OnTnbRightClick(); return false;" title="좌석선택">다음단계로 이동 - 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</a>
 		</div>
-	</div>
 	</div>
 
-	<!-- bottom banner -->
-	<div class="banner" id="ticket_bottom_banner">
-		<a target="_blank" title="새창" href="http://ad.cgv.co.kr/click/CGV/CGV_201401/RIA@B_ticketing?ads_id=46580&amp;creative_id=66105&amp;click_id=86408&amp;maid=&amp;event=" style="background-color: rgb(255, 255, 255);"><span style="sreader">??踰⑤８</span><img src="https://adimg.cgv.co.kr/images/202202/Antebellum/996x140.jpg" alt="??踰⑤８" onload="ticketNeedResize();" style="width:996px;height:140px"></a>
-	</div>
-	
-	<!-- wing banner -->
-	<div id="ticket_banner" class="ticket_banner">
-		<div>
-			<div class="AdvertiseCon" id="RIA_Skin_Ticketing_L" style="width: 160px; height: 300px; background: none; position: absolute; top: 75px; left: -164px; overflow: hidden;"><a href="http://ad.cgv.co.kr/click/CGV/CGV_201608/RIA@RIA_Skin_Ticketing?ads_id=28597&amp;creative_id=65465&amp;click_id=85718&amp;content_series=&amp;maid=&amp;event=" target="_blank" style="top: 0px;"><img src="https://adimg.cgv.co.kr/images/202111/cgvgift/1221_160x300.jpg" width="160" height="300" border="0" alt="광고-CGV 기프트 카드" style="width: 160px; height: 300px;"></a></div>
-			<div class="AdvertiseCon" id="RIA_Skin_Ticketing_R" style="width: 160px; height: 300px; background: none; position: absolute; top: 75px; left: 1000px; overflow: hidden;"><a href="http://ad.cgv.co.kr/click/CGV/CGV_201608/RIA@RIA_Skin_Ticketing?ads_id=28597&amp;creative_id=65465&amp;click_id=85718&amp;content_series=&amp;maid=&amp;event=" target="_blank" style="top: 0px;"><img src="https://adimg.cgv.co.kr/images/202111/cgvgift/1221_160x300.jpg" width="160" height="300" border="0" alt="광고-CGV 기프트 카드" style="width: 160px; height: 300px;"></a></div>
-		</div>
-	</div>
-	
+
 </div>
-	
+
+<!-- bottom banner -->
+<div class="banner" id="ticket_bottom_banner">
+	<a target="_blank" title="새창" href="http://ad.cgv.co.kr/click/CGV/CGV_201401/RIA@B_ticketing?ads_id=46580&amp;creative_id=66105&amp;click_id=86408&amp;maid=&amp;event=" style="background-color: rgb(255, 255, 255);"><span style="sreader">??踰⑤８</span><img src="https://adimg.cgv.co.kr/images/202202/Antebellum/996x140.jpg" alt="??踰⑤８" onload="ticketNeedResize();" style="width:996px;height:140px"></a>
+</div>
+
+<!-- wing banner -->
+<div id="ticket_banner" class="ticket_banner">
+	<div>
+		<div class="AdvertiseCon" id="RIA_Skin_Ticketing_L" style="width: 160px; height: 300px; background: none; position: absolute; top: 75px; left: -164px; overflow: hidden;"><a href="http://ad.cgv.co.kr/click/CGV/CGV_201608/RIA@RIA_Skin_Ticketing?ads_id=28597&amp;creative_id=65465&amp;click_id=85718&amp;content_series=&amp;maid=&amp;event=" target="_blank" style="top: 0px;"><img src="https://adimg.cgv.co.kr/images/202111/cgvgift/1221_160x300.jpg" width="160" height="300" border="0" alt="광고-CGV 기프트 카드" style="width: 160px; height: 300px;"></a></div>
+		<div class="AdvertiseCon" id="RIA_Skin_Ticketing_R" style="width: 160px; height: 300px; background: none; position: absolute; top: 75px; left: 1000px; overflow: hidden;"><a href="http://ad.cgv.co.kr/click/CGV/CGV_201608/RIA@RIA_Skin_Ticketing?ads_id=28597&amp;creative_id=65465&amp;click_id=85718&amp;content_series=&amp;maid=&amp;event=" target="_blank" style="top: 0px;"><img src="https://adimg.cgv.co.kr/images/202111/cgvgift/1221_160x300.jpg" width="160" height="300" border="0" alt="광고-CGV 기프트 카드" style="width: 160px; height: 300px;"></a></div>
+	</div>
+</div>
+
+</div>
+
 
 
 
