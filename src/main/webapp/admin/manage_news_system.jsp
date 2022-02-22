@@ -59,8 +59,8 @@
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
                     공지 / 뉴스
-                    <input type="button" value="전체" onclick="location.href='./manage_news.jsp'" style="background-color: #F08080"/>
-                    <input type="button" value="시스템점검" onclick="location.href='./manage_news_system.jsp'"/>
+                    <input type="button" value="전체" onclick="location.href='./manage_news.jsp'" />
+                    <input type="button" value="시스템점검" onclick="location.href='./manage_news_system.jsp'" style="background-color: #F08080"/>
                     <input type="button" value="극장" onclick="location.href='./manage_news_theaters.jsp'"/>
                     <input type="button" value="기타" onclick="location.href='./manage_news_other.jsp'" />
                     <input type="button" value="공지 작성" onclick="location.href='./manage_news_create.jsp'" style="float: right;">
@@ -90,29 +90,15 @@
                         <tbody>
                         <tr>
                             <td style="width: 10%;">12</td>
-                            <td style="width: 15%;">[극장]</td>
+                            <td style="width: 15%;">[시스템 점검] </td>
                             <td style="width: 40;">22년 문화가 있는 날 가격 조정 안내</td>
                             <td style="width: 25%;">2022.2.17</td>
                             <td style="width: 10%;">1004</td>
                         
                         </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>[극장] </td>
-                            <td>CGV대구아시아 영업 종료 안내</td>
-                            <td>2022.2.01</td>
-                            <td>1157</td>
-                    
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>[기타]</td>
-                            <td>홀리 쉿</td>
-                            <td>2022.1.14</td>
-                            <td>538</td>
                        
-                        </tr>
-                        <tr>
+                     
+                    <tr>
                             <td>9</td>
                             <td>[시스템 점검] </td>
                             <td>2022년 1월 시스템 점검 안내</td>
@@ -120,62 +106,13 @@
                             <td>361</td>
                   
                         </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>[기타]  </td>
-                            <td>[CGV통영] 22년 1월 임시 휴업</td>
-                            <td>2021.12.31</td>
-                            <td>592</td>
-           
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>[극장] </td>
-                            <td>[REMIND] CJ ONE 포인트 혜택 변경 안내(2022년 1월 1일 시행)</td>
-                            <td>2021.12.30</td>
-                            <td>800</td>
-                  
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>[극장] </td>
-                            <td>CGV남포 영업 종료 안내(2021년 12월 31일)</td>
-                            <td>2021.12.27</td>
-                            <td>657</td>
-                 
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>[기타]  </td>
-                            <td>개인정보처리방침 계정 안내(12월 15 시행)</td>
-                            <td>2021.12.14</td>
-                            <td>1435</td>
-             
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>[극장] </td>
-                            <td>CGV양산물금 영업 종료 안내 (2021년 12월 20일)</td>
-                            <td>2021.12.10</td>
-                            <td>314</td>
-                
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>[기타]  </td>
-                            <td>[기적] 스피드 쿠폰 2차 일부 CJ ONE 포인트 미적립 발생에 따른 조치 안내</td>
-                            <td>2021.12.08</td>
-                            <td>1261</td>
-                
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>[기타] </td>
-                            <td>포토 플레이 과거 제작 이미지 삭제 안내</td>
-                            <td>2021.09.15</td>
-                            <td>592</td>
-            
-                        </tr>
+                      
+                      
+                        
+                       
+                      
+                       
+                     
                         <tr>
                             <td>1</td>
                             <td>[시스템] </td>
