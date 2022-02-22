@@ -1,65 +1,105 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
+<<<<<<< HEAD
     pageEncoding="UTF-8"%>
+=======
+	pageEncoding="UTF-8"%>
+
+>>>>>>> 8a7a5b14be1f488ef1e2c9f0fc3f2a9c77527ddc
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta http-equiv="Expires" content="-1" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Cache-Control" content="No-Cache" />
-    <meta http-equiv="imagetoolbar" content="no" />
-    <meta name="viewport" content="width=1024" />
-    <meta name="keywords" content="CGV, 시지브이, 영화관, 극장, 영화, 티켓, 박스오피스, 극장, Movie, Theater, Cinema, Cgv, cgv, 예매, 상영작" />
-    <meta name="description" content="CGV는 선진화된 관람문화와 최고의 서비스로 고객에게 잊을 수 없는 감동을 선사합니다. CGV홈페이지를 통해 영화 예매뿐만 아니라 그 이상의 서비스와 감동을 전달하고, 다양한 즐거움과 특별한 경험을 제공하고자 합니다." />
-    <meta property="og:site_name" content="영화 그 이상의 감동. CGV"/>
-    <meta id="ctl00_og_title" property="og:title" content="영화 그 이상의 감동. CGV"></meta>
-    
-    
-    <meta id="ctl00_og_image" property="og:image" content="./css/logo_new_kakao_prevw.png"></meta>
-    <link rel="alternate" href="http://m.cgv.co.kr" />
-    <link rel="shortcut icon" href="./css/favicon.ico" type="image/x-icon" />
-    <title id="ctl00_headerTitle">영화 그 이상의 감동. CGV</title>
-    <link rel="shortcut icon" type="image/x-icon" href="https://img.cgv.co.kr/R2014/images/favicon.ico" />
-    <link rel="stylesheet" media="all" type="text/css" href="./css/webfont.css" />
-    <link rel="stylesheet" media="all" type="text/css" href="./css/reset.css" />
-    <link rel="stylesheet" media="all" type="text/css" href="./css/layout.css" />
-    <link rel="stylesheet" media="all" type="text/css" href="./css/module.css" />
-    <link rel="stylesheet" media="all" type="text/css" href="./css/content.css" />
-    <link rel="stylesheet" media="all" type="text/css" href="./css/common.css" />
-    
-    <link rel="stylesheet" media="all" type="text/css" href="./css/eggupdate.css" />
-    <link rel="stylesheet" media="print" type="text/css" href="./css/print.css" />    
-    <link rel="stylesheet" type="text/css" href="./css/custom.min.css" />
-    
-    <script type="text/javascript" src="/common/js/extraTheaters.js"></script>
-    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/app.config.js"></script>
-    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery.plugin/jquery.tmpl.min.js"></script>
-    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery.plugin/jquery.validate.js"></script>
-    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery.plugin/jquery.paging.min.js"></script>
-    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery.ui/jquery-ui-1.10.4.custom.min.js"></script>
-    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery.utils.js"></script>
-    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/app.utils.js"></script>
-	<script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery.utils.pageing.js"></script>
-    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/app.init.js"></script>
 
-    <!--[if lte IE 9]><script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery.plugin/jquery.placeholder.js"></script><![endif]-->
-    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery.plugin/jquery.dotdotdot.min.js"></script>
-    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/silverlight_link.js"></script>
-	<script src="https://img.cgv.co.kr/R2014/js/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Expires" content="-1" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="No-Cache" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="viewport" content="width=1024" />
+<meta name="keywords"
+	content="CGV, 시지브이, 영화관, 극장, 영화, 티켓, 박스오피스, 극장, Movie, Theater, Cinema, Cgv, cgv, 예매, 상영작" />
+<meta name="description"
+	content="CGV는 선진화된 관람문화와 최고의 서비스로 고객에게 잊을 수 없는 감동을 선사합니다. CGV홈페이지를 통해 영화 예매뿐만 아니라 그 이상의 서비스와 감동을 전달하고, 다양한 즐거움과 특별한 경험을 제공하고자 합니다." />
+<meta property="og:site_name" content="영화 그 이상의 감동. CGV" />
+<meta id="ctl00_og_title" property="og:title" content="영화 그 이상의 감동. CGV"></meta>
 
-    <link rel="stylesheet" media="all" type="text/css" href="./css/phototicket.css" />
-    <link rel="stylesheet" media="all" type="text/css" href="./css/slick.css" />
-	<link rel="stylesheet" media="all" type="text/css" href="./css/slick-theme-custom.css" />
 
-    <script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/icheck/login.timer.js"></script>
-    <script src="https://img.cgv.co.kr/R2014/js/icheck/icheck.min.js" type="text/javascript" charset="utf-8"></script>
-    <link rel="stylesheet" type="text/css" href="./css/iCheck.css" />
+<meta id="ctl00_og_image" property="og:image"
+	content="https://img.cgv.co.kr/WebApp/images/common/logo_new_kakao_prevw.png"></meta>
+<link rel="alternate" href="http://m.cgv.co.kr" />
+<link rel="shortcut icon"
+	href="https://img.cgv.co.kr/theater_img/favicon.ico"
+	type="image/x-icon" />
+<title id="ctl00_headerTitle"></title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="https://img.cgv.co.kr/R2014/images/favicon.ico" />
+<link rel="stylesheet" media="all" type="text/css"
+	href="https://img.cgv.co.kr/R2014/css/webfont.css" />
+<link rel="stylesheet" media="all" type="text/css"
+	href="./css/reset.css" />
+<link rel="stylesheet" media="all" type="text/css"
+	href="./css/layout.css" />
+<link rel="stylesheet" media="all" type="text/css"
+	href="https://img.cgv.co.kr/R2014/css/module.css?20211209" />
+<link rel="stylesheet" media="all" type="text/css"
+	href="https://img.cgv.co.kr/R2014/css/content.css" />
+<link rel="stylesheet" media="all" type="text/css"
+	href="https://img.cgv.co.kr/R2014/css/common.css" />
 
-    <!-- 2020.05.07 감정지수/프리에그 프로젝트 추가 -->
-    <link rel="stylesheet" media="all" type="text/css" href="./css/preegg.css" />
+<link rel="stylesheet" media="all" type="text/css"
+	href="https://img.cgv.co.kr/R2014/css/eggupdate.css" />
+<link rel="stylesheet" media="print" type="text/css"
+	href="https://img.cgv.co.kr/R2014/css/print.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://img.cgv.co.kr/R2014/js/jquery.ui/smoothness/jquery-ui-1.10.4.custom.min.css" />
 
+<script type="text/javascript" src="/common/js/extraTheaters.js"></script>
+<script type="text/javascript"
+	src="https://img.cgv.co.kr/R2014/js/app.config.js"></script>
+<script type="text/javascript"
+	src="https://img.cgv.co.kr/R2014/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript"
+	src="https://img.cgv.co.kr/R2014/js/jquery.plugin/jquery.tmpl.min.js"></script>
+<script type="text/javascript"
+	src="https://img.cgv.co.kr/R2014/js/jquery.plugin/jquery.validate.js"></script>
+<script type="text/javascript"
+	src="https://img.cgv.co.kr/R2014/js/jquery.plugin/jquery.paging.min.js"></script>
+<script type="text/javascript"
+	src="https://img.cgv.co.kr/R2014/js/jquery.ui/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript"
+	src="https://img.cgv.co.kr/R2014/js/jquery.utils.js"></script>
+<script type="text/javascript"
+	src="https://img.cgv.co.kr/R2014/js/app.utils.js"></script>
+<script type="text/javascript"
+	src="https://img.cgv.co.kr/R2014/js/jquery.utils.pageing.js"></script>
+<script type="text/javascript"
+	src="https://img.cgv.co.kr/R2014/js/app.init.js"></script>
+
+<!--[if lte IE 9]><script type="text/javascript" src="https://img.cgv.co.kr/R2014/js/jquery.plugin/jquery.placeholder.js"></script><![endif]-->
+<script type="text/javascript"
+	src="https://img.cgv.co.kr/R2014/js/jquery.plugin/jquery.dotdotdot.min.js"></script>
+<script type="text/javascript"
+	src="https://img.cgv.co.kr/R2014/js/silverlight_link.js"></script>
+<script src="https://img.cgv.co.kr/R2014/js/slick/slick.js"
+	type="text/javascript" charset="utf-8"></script>
+
+<link rel="stylesheet" media="all" type="text/css"
+	href="https://img.cgv.co.kr/R2014/css/phototicket/phototicket.css" />
+<link rel="stylesheet" media="all" type="text/css"
+	href="https://img.cgv.co.kr/R2014/css/slick.css" />
+<link rel="stylesheet" media="all" type="text/css"
+	href="https://img.cgv.co.kr/R2014/css/slick-theme-custom.css" />
+
+<script type="text/javascript"
+	src="https://img.cgv.co.kr/R2014/js/icheck/login.timer.js"></script>
+<script src="https://img.cgv.co.kr/R2014/js/icheck/icheck.min.js"
+	type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css"
+	href="https://img.cgv.co.kr/R2014/js/icheck/iCheck.css" />
+
+<!-- 2020.05.07 감정지수/프리에그 프로젝트 추가 -->
+<link rel="stylesheet" media="all" type="text/css"
+	href="https://img.cgv.co.kr/R2014/css/preegg.css" />
     <!-- 각페이지 Header Start--> 
     
 <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">https, http  혼합사용시-->
@@ -301,22 +341,16 @@
 
         //]]>
     </script>
-    
-
-    
 </head>
 <body class="">
-<%@include file="./header.jsp" %>
+<%@include file="header.jsp" %>
+<div class="skipnaiv">
+	<a href="#contents" id="skipHeader">메인 컨텐츠 바로가기</a>
+</div>
 	<!-- Contaniner -->
 	<div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
 		<!-- Contents Area -->
         <!-- Contents Start -->
-<input type="hidden" id="isOpenUserEmailYNPopup" name="isOpenUserEmailYNPopup" value="False" />
-
-<!-- S > Movie Selection
-    Description:
-    - iframe 영역으로 추후 협의 후 작업 진행 예정
- -->
             <div id="ctl00_PlaceHolderContent_divMovieSelection_wrap" class="movieSelection_wrap">
                 <div class="contents">
 
@@ -375,7 +409,7 @@
                                             
                                         </div>
                                         <div class="movieChart_btn_wrap">
-                                            <a href="./detailview.jsp" class="btn_movieChart_detail">상세보기</a>
+                                            <a href="./detail-view.jsp" class="btn_movieChart_detail">상세보기</a>
                                         
                                             <a href="./ticket.jsp" class='btn_movieChart_ticketing'>예매하기</a>
                                         
@@ -926,7 +960,7 @@
                     <div class="swiper-wrapper">
                         
                                  <div class="swiper-slide">
-                                    <a href="/culture-event/event/detailViewUnited.aspx?seq=33902">
+                                    <a href="./event01.jsp">
                                         <div class="img_wrap"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33902/16430866115440.jpg" alt="신년 맞이! [CGV 2022 챌린지]" onerror="errorImage(this)"></div>
                                         <strong>신년 맞이! [CGV 2022 챌린지]</strong>
                                         <span>2022.01.25~2022.02.13</span>
@@ -934,7 +968,7 @@
                                 </div>
                             
                                  <div class="swiper-slide">
-                                    <a href="/culture-event/event/detailViewUnited.aspx?seq=33839">
+                                    <a href="./event02.jsp">
                                         <div class="img_wrap"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33839/16425473374760.jpg" alt="[CGV NFT 플레이 포스터] No.1 킹메이커" onerror="errorImage(this)"></div>
                                         <strong>[CGV NFT 플레이 포스터] No.1 킹메이커</strong>
                                         <span>2022.01.19~2022.02.27</span>
@@ -942,7 +976,7 @@
                                 </div>
                             
                                  <div class="swiper-slide">
-                                    <a href="/culture-event/event/detailViewUnited.aspx?seq=33874">
+                                    <a href="./event03.jsp">
                                         <div class="img_wrap"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33874/16425472489570.jpg" alt="[킹메이커] 포토플레이 시크릿 컷" onerror="errorImage(this)"></div>
                                         <strong>[킹메이커] 포토플레이 시크릿 컷</strong>
                                         <span>2022.01.19~2022.02.27</span>
@@ -997,10 +1031,10 @@
                     <ul class="giftcon_list_wrap">
                         <li>
                             <dl class='giftcon_list'>
-                                <dt>영화관람권<a href='/culture-event/popcorn-store/store-category.aspx?CategoryIdx=2' class='btn_more'>더보기</a></dt>
+                                <dt>영화관람권<a href='./store-category.jsp?Categoryidx=2' class='btn_more'>더보기</a></dt>
                                
                                 <dd>
-                                    <a href='/culture-event/popcorn-store/product-detail.aspx?GG_NO=100253'>
+                                    <a href='./product-detail.jsp?GG_NO=100253'>
                                         <div class='img_wrap' data-scale=false><img src='http://img.cgv.co.kr/GiftStore/Product/Pc/List/16094706927780.jpg' alt='CGV 영화관람권'></div>
                                         <div class='giftcon_info_wrap'>
                                             <span>CGV 영화관람권</span>
@@ -1012,10 +1046,10 @@
                         </li>
                         <li>
                             <dl class='giftcon_list'>
-                                <dt>기프트카드<a href='/culture-event/popcorn-store/store-category.aspx?CategoryIdx=3' class='btn_more'>더보기</a></dt>
+                                <dt>기프트카드<a href='./store-category.jsp?Categoryidx=3' class='btn_more'>더보기</a></dt>
                                
                                 <dd>
-                                    <a href='/culture-event/popcorn-store/product-detail.aspx?GG_NO=100161'>
+                                    <a href='./product-detail.jsp?GG_NO=100253'>
                                         <div class='img_wrap' data-scale=false><img src='http://img.cgv.co.kr/GiftStore/Product/Pc/List/15814124358590.jpg' alt='PACONNIE A형'></div>
                                         <div class='giftcon_info_wrap'>
                                             <span>PACONNIE A형</span>
