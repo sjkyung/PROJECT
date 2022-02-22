@@ -1,14 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>manage-theaters</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-
+  to-fit=no">
+    <!-- Custom styles for this template -->
+    <link href="/css/jumbotron-narrow.css" rel="stylesheet">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <title>영화 관리</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -24,7 +34,7 @@
 <body class="sb-nav-fixed" >
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="main.jsp">CGV Administrator</a>
+    <a class="navbar-brand ps-3" href="../../../../../../Downloads/cgv_admin/index.html">CGV Administrator</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <!-- Navbar Search-->
@@ -50,97 +60,92 @@
 
 
 <div id="headers"></div>
-
-<div id="layoutSidenav_content" style="margin-top:70px; margin-left: 240px">
+	
+<div id="layoutSidenav_content" style="margin-top:100px; margin-left: 240px">
     <main>
-        <div class="container-fluid px-4" >
-
-            <div class="card mb-4">
-                <div class="card-header">
-                    <i class="fas fa-table me-1"></i>
-                    상영관 관리
-                </div>
-                <div>
-                    <form action="" method="">
-                        <table border="1">
-                            <th colspan="4">상영관 등록</th>
-                            <tr><!-- 첫번째 줄 시작 -->
-                                <td>상영관</td>
-                                <td><select name="상영관"> 
-                                    <option value="1관">1관</option>
-                                    <option value="2관">2관</option>
-                                    <option value="3관">3관</option>
-                                    <option value="4관">4관</option>
-                                    <option value="5관">5관</option>
-                                    <option value="6관">6관</option>
-                                    </select>
-                                </td>
-                                <td>상영관명</td>
-                                <td>
-                                    <select name="theatername">
-                                        <option value="2D">2D</option>
-                                        <option value="2D(자막)">2D(자막)</option>
-                                        <option value="3D">3D</option>
-                                        <option value="SCREENX 2D">SCREENX 2D</option>
-                                    </select>
-                                </td>
-                            </tr><!-- 첫번째 줄 끝 -->
-                            <tr><!-- 두번째 줄 시작 -->
-                                <td >특별관</td>
-                                <td>
-                                    <select name="특별관">
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                    </select>
-                                </td>
-                                <td>위치</td>
-                                <td>
-                                    <select name="위치">
-                                        <option value="6층">6층</option>
-                                        <option value="8층">8층</option>
-                                        <option value="10층">10층</option>
-                                    </select>
-                                </td>
-                            </tr><!-- 두번째 줄 끝 -->
-                            <tr><!-- 두번째 줄 시작 -->
-                                <td>총 좌석수</td>
-                                <td> <select name="seat">
-                                    <option value="124석">124석</option>
-                                    <option value="158석">158석</option>
-                                    <option value="172석">172석</option>
-                                    </select>
-                                </td>
-                                <td>일반석</td>
-                                <td>
-                                <select name="일반석">
-                                    <option value="115석">115석</option>
-                                    <option value="143석">143석</option>
-                                    <option value="155석">155석</option>
-                                </select>
-                                </td>
-                            </tr><!-- 두번째 줄 끝 -->
-                            <tr><!-- 세번째 줄 시작 -->
-                                <td >장애인석</td>
-                                <td>
-                                <select name="장애인석">
-                                    <option value="9석">9석</option>
-                                    <option value="15석">15석</option>
-                                    <option value="17석">17석</option>
-                                </select>
-                            </td>
-                            </tr><!-- 세번째 줄 끝 -->
-
-                        </table>
-                        <input type="reset" value="리셋"><input type="submit" value="등록">
-                    </form>
-                </div>
-
-
+        <div class="container-fluid px-4" style="margin:0 auto;">
+        	<h2 style="text-align:center;">상영관 등록</h2>
+        	<form style="width:40%; border:solid 2px red; border-radius:10px; padding:5%; margin:0 auto;">
+			    <div class="form-row">
+                    <div class="col">상영관
+                        <select class="form-control">
+                    <option>관 선택해주세요</option>
+                    <option >1관</option>
+                    <option >2관</option>
+                    <option >3관</option>
+                    <option >4관</option>
+                    <option >5관</option>
+                    <option >6관</option>
+                </select>
             </div>
+                <div class="col">상영관명
+                <select class="form-control">
+                        
+                    <option>상영관명 선택해주세요</option>
+                    <option >2D</option>
+                    <option >2D(자막)</option>
+                    <option >3D</option>
+                    <option >SCREENX 2D</option>
+                </select>
+            </div>
+        </div>
+			 
+			  <hr/>
+              <div class="form-row">
+                <div class="col">특별관
+                    <select class="form-control">
+                <option></option>
+                <option ></option>
+                <option ></option>
+                <option ></option>
+                <option ></option>
+                <option ></option>
+            </select>
+        </div>
+			 
+        <div class="col">위치
+            <select class="form-control">
+                <option>위치 선택해주세요</option>
+                <option >6층</option>
+                <option >8층</option>
+                <option >10층</option>
+                </select>
+            </div>
+        </div>
+              <hr/>
+              <label for="exampleInputEmail1">총 좌석수</label>
+			  <select class="form-control">
+                <option></option>
+                <option >124석</option>
+                <option >158석</option>
+                <option >172석</option>
+                </select>
+              <hr/>
+             
+			  <div class="form-row">
+			    <div class="col">일반석
+                    <select class="form-control">
+                        <option></option>
+                        <option value="115석">115석</option>
+                        <option value="143석">143석</option>
+                        <option value="155석">155석</option>
+                        </select>
+			    </div>
+			
+			    <div class="col">장애인석
+                    <select class="form-control">
+                        <option></option>
+                        <option value="9석">9석</option>
+                        <option value="15석">15석</option>
+                        <option value="17석">17석</option>
+                        </select>
+			    </div>
+			  </div>
+              <hr/>
+              <button type="reset" class="btn btn-primary" >리셋</button>
+              <button type="submit" class="btn btn-primary" style="background-color: #F08080">작성</button>
+			  
+			</form>
         </div>
     </main>
     <footer class="py-4 bg-light mt-auto">
