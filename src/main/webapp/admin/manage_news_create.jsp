@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>manage-ongoingmovies_create</title>
+    <title>manage_news_create</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -53,64 +53,10 @@
 
 <div id="layoutSidenav_content" style="margin-top:70px; margin-left: 240px">
     <main>
-        <div class="container-fluid px-4" >
+        
 
-            <div class="card mb-4">
-                <div class="card-header">
-                    <i class="fas fa-table me-1"></i>
-                    현재 상영중인 영화
-                </div>
-                <div>
-                    <form action="" method="">
-                        <table border="1">
-                            <th colspan="4">상영중인 영화 등록</th>
-                            <tr><!-- 첫번째 줄 시작 -->
-                                <td>영화코드</td>
-                                <td><input type="textbox"></td>
-                                <td>상영여부</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 첫번째 줄 끝 -->
+         
 
-                            <tr><!-- 두번째 줄 시작 -->
-                                <td >영화명</td>
-                                <td><input type="textbox"></td>
-                                <td>영화명(영문)</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 두번째 줄 끝 -->
-
-                            <tr><!-- 두번째 줄 시작 -->
-                                <td>개봉일</td>
-                                <td><input type="textbox"></td>
-                                <td>재개봉여부</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 두번째 줄 끝 -->
-
-                            <tr><!-- 세번째 줄 시작 -->
-                                <td >제작국가</td>
-                                <td><input type="textbox"></td>
-                                <td >시간</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 세번째 줄 끝 -->
-
-                            <tr><!-- 네번째 줄 시작 -->
-                                <td >장르</td>
-                                <td><input type="textbox"></td>
-                                <td >관람나이</td>
-                                <td><input type="textbox"> </td>
-                            </tr><!-- 네번째 줄 끝 -->
-
-                            <tr><!-- 다섯번째 줄 시작 -->
-                                <td >감독</td>
-                                <td><input type="textbox"></td>
-                                <td >출연 배우</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 다섯번째 줄 끝 -->
-
-                        </table>
-                        
-                    </form>
-                    <input type="reset" value="리셋"><input type="submit" value="등록">
-                </div>
 
             </div>
         </div>
