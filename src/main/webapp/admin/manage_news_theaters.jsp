@@ -1,13 +1,14 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
+    <title>manage_news</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>이벤트관리</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -16,13 +17,14 @@
         $(document).ready( function() {
 
             $("#headers").load("header.jsp");
+
         });
     </script>
 </head>
 <body class="sb-nav-fixed" >
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="../../../../../../Downloads/cgv_admin/index.html">CGV Administrator</a>
+    <a class="navbar-brand ps-3" href="main.jsp">CGV Administrator</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <!-- Navbar Search-->
@@ -49,74 +51,104 @@
 
 <div id="headers"></div>
 
-<div id="layoutSidenav_content" style="margin-top:100px; margin-left: 240px">
+<div id="layoutSidenav_content" style="margin-top:70px; margin-left: 240px">
     <main>
         <div class="container-fluid px-4" >
+
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    <input type="button" value="SPECIAL" onclick="location.href='./event-list-special.jsp'"/>
-                    <input type="button" value="영화/예매" onclick="location.href='./event-list-movie.jsp'"/>
-                    <input type="button" value="멤버십/CLUB" onclick="location.href='./event-list-CLUB.jsp'" style="background-color: #F08080"/>
-                    <input type="button" value="CGV 극장별" onclick="location.href='./event-list-CGV.jsp'"/>
-                    <input type="button" value="제휴/할인" onclick="location.href='./event-list-discount.jsp'"/>
+                    공지 / 뉴스
+                    <input type="button" value="전체" onclick="location.href='./mangage_news.jsp'" />
+                    <input type="button" value="시스템점검" onclick="location.href='./manage_news_system.jsp'"/>
+                    <input type="button" value="극장" onclick="location.href='./manage_news_theaters.jsp'" style="background-color: #F08080"/>
+                    <input type="button" value="기타" onclick="location.href='./manage_news_other.jsp'" />
+                    <input type="button" value="공지 작성" onclick="location.href='./manage_news_create.jsp'" style="float: right;">
+                   
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple">
                         <thead>
                         <tr>
-                            <th>영화</th>
-                            <th>극장</th>
-                            <th>내용</th>
-                            <th>기간</th>
+                            <th>No</th>
+                            <th>구분</th>
+                            <th>제목</th>
+                            <th>등록일</th>
+                            <th>조회수</th>
+                        
                         </tr>
                         </thead>
                         <tfoot>
                         <tr>
-                            <th>영화</th>
-                            <th>극장</th>
-                            <th>내용</th>
-                            <th>기간</th>
+                            <th>No</th>
+                            <th>구분</th>
+                            <th>제목</th>
+                            <th>등록일</th>
+                            <th>조회수</th>
                         </tr>
                         </tfoot>
                         <tbody>
                         <tr>
-                            <td style="width:150px"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34051/16451732420520.jpg" width="150px"></td>
-                            <td>[전체]</td>
-                            <td>[피그] 2022 네번째 아티스트 배지</td>
-                            <td>2022.02.23~2022.03.09</td>
+                            <td style="width: 10%;">12</td>
+                            <td style="width: 15%;">[극장]</td>
+                            <td style="width: 40;">22년 문화가 있는 날 가격 조정 안내</td>
+                            <td style="width: 25%;">2022.2.17</td>
+                            <td style="width: 10%;">1004</td>
+                        
                         </tr>
                         <tr>
-                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34047/16451517423540.jpg" width="150px"></td>
-                            <td>[전체]</td>
-                            <td>[이상한 나라의 수학자] VIP 시사회</td>
-                            <td>2022.02.18~2022.02.23</td>
+                            <td>11</td>
+                            <td>[극장] </td>
+                            <td>CGV대구아시아 영업 종료 안내</td>
+                            <td>2022.2.01</td>
+                            <td>1157</td>
+                    
+                        </tr>
+                      
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>[극장] </td>
+                            <td>[REMIND] CJ ONE 포인트 혜택 변경 안내(2022년 1월 1일 시행)</td>
+                            <td>2021.12.30</td>
+                            <td>800</td>
+                  
                         </tr>
                         <tr>
-                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34001/16444623941180.jpg" width="150px"></td>
-                            <td>[전체]</td>
-                            <td>아트하우스Club 회원 세번 째 마그넷 [리코리쉬 피자]</td>
-                            <td>2022.02.16~2022.02.27</td>
+                            <td>6</td>
+                            <td>[극장] </td>
+                            <td>CGV남포 영업 종료 안내(2021년 12월 31일)</td>
+                            <td>2021.12.27</td>
+                            <td>657</td>
+                 
                         </tr>
+                     
                         <tr>
-                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/31473/16420350632590.jpg" width="150px"></td>
-                            <td>[전체]</td>
-                            <td>무료가입하고 쿠폰받자♥ 2022년 아트하우스 Club</td>
-                            <td>2022.01.13~2022.12.31</td>
+                            <td>4</td>
+                            <td>[극장] </td>
+                            <td>CGV양산물금 영업 종료 안내 (2021년 12월 20일)</td>
+                            <td>2021.12.10</td>
+                            <td>314</td>
+                
                         </tr>
+                     
+                      
                         <tr>
-                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/32841/16347909174770.jpg" width="150px"></td>
-                            <td>[전체]</td>
-                            <td>[CGV VIP] SVIP 만원의 행복</td>
-                            <td></td>
+                            <td>1</td>
+                            <td>[극장] </td>
+                            <td>21년 문화가 있는 날 가격 조정 안내</td>
+                            <td>2021.09.13</td>
+                            <td>428</td>
+                           
+                    
                         </tr>
                         </tbody>
                     </table>
-                    <input type="button" value="이벤트 작성" style="background-color: #F08080" onclick = "location.href = './event-regist.jsp'"/>
                 </div>
+
+
+            </div>
         </div>
-
-
     </main>
     <footer class="py-4 bg-light mt-auto">
         <div class="container-fluid px-4">
