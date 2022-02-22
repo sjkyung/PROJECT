@@ -11,8 +11,8 @@
     <meta name="author" content="" />
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
-    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/reset.css">
-    <link rel="stylesheet" media="all" type="text/css" href="https://img.cgv.co.kr/R2014/css/content.css">
+    <link rel="stylesheet" media="all" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" media="all" type="text/css" href="./css/content.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript">
@@ -32,7 +32,7 @@
     <!-- Navbar Search-->
     <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
         <div class="input-group">
-            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" style="height:auto;" />
             <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
         </div>
     </form>
@@ -109,7 +109,7 @@
                                
                                          
                                 </div>
-                                <div style ="width: 100px"><input type="button" value="수정" onclick="location.href='./manage_pricerm_edit.jsp'"></div>   
+                                <div style ="width: 100px"><input type="button" value="수정" onclick="location.href='./manage_pricerm_create.jsp'"></div>
                 </div>
 
               

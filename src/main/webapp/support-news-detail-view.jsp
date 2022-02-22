@@ -176,152 +176,108 @@
 <%@ include file="header.jsp"%>
 
     <!-- Contaniner -->
-    <div id="contaniner"  class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
+<div id="contaniner" class=""><!-- 벽돌 배경이미지 사용 시 class="bg-bricks" 적용 / 배경이미지가 없을 경우 class 삭제  -->
 
+
+    <!-- Contents Area -->
+    <div id="contents" class="">
+
+
+        <!-- Contents Start -->
 
         <!-- Contents Area -->
-        <div id="contents" class="">
-
-
+        <div id="contents">
             <!-- Contents Start -->
+            <div class="cols-content">
 
-            <!-- Contents Area -->
-            <div id="contents">
-                <!-- Contents Start -->
-                <div class="cols-content">
+                <div class="col-aside">
+                    <h2>
+                        고객센터 메뉴</h2>
+                    <div class="snb">
+                        <ul>
+                            <li class=''><a href="./support.jsp">고객센터 메인<i></i></a></li>
+                            <li class=''><a href="./support-faq.jsp" title="현재선택">자주찾는 질문<i></i></a></li>
+                            <li class='on'><a href="./support-news.jsp">공지/뉴스<i></i></a></li>
+                            <li class=''><a href="./support-qna.jsp">이메일 문의<i></i></a></li>
+                            <li class=''><a href="./support-lost.jsp">분실물 문의<i></i></a></li>
+                            <li class=''><a href="./support-lease.jsp">단체/ 대관 문의<i></i></a></li>
 
-                    <div class="col-aside">
-                        <h2>
-                            고객센터 메뉴</h2>
-                        <div class="snb">
-                            <ul>
-                                <li class=''><a href="./support.jsp">고객센터 메인<i></i></a></li>
-                                <li class=''><a href="./support-faq.jsp" title="현재선택">자주찾는 질문<i></i></a></li>
-                                <li class='on'><a href="./support-news.jsp">공지/뉴스<i></i></a></li>
-                                <li class=''><a href="./support-qna.jsp">이메일 문의<i></i></a></li>
-                                <li class=''><a href="./support-lost.jsp">분실물 문의<i></i></a></li>
-                                <li class=''><a href="./support-lease.jsp">단체/ 대관 문의<i></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="ad-area">
-                          
-                            </div>
-                        </div>
+
+
+                        </ul>
                     </div>
-
-                    <div class="col-detail">
-                        <div class="customer_top">
-                            <h2 class="tit">공지/뉴스</h2>
-                            <p class="stit">CGV의 주요한 이슈 및 여러가지 소식들을 확인하실 수 있습니다.</p>
+                    <div class="ad-area">
+                        <div class="ad-partner01">
+                            <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@C_Rectangle" width="160" height="300" title="기업광고-CGV" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="C_Rectangle" id="C_Rectangle"></iframe>
                         </div>
-                        <div class="board_view_area">
-                            <ul class="top_title_faq">
-                                <li class="title">[[시스템점검]] 2022년 2월 시스템 점검 안내</li>
-                                <li class="stit_area">
-                                    <span>등록일<em class="regist_day">2022.02.16</em></span>
-                                    <span class="check_tit_area">조회수<em class="check_num">20</em></span>
-                                </li>
-                            </ul>
-                            <div class="view_area">
-                                <p><p>안녕하십니까, CGV입니다.&nbsp;</p><p>&nbsp;</p><p>원활하고 안정된 서비스 제공을 위하여 2022년 2월 새벽 시스템 점검 작업이 예정되어 있습니다.</p><p>점검 시간 중 CGV홈페이지 및 모바일의 모든 서비스가 중단될 예정이오니 이용에 불편 없으시기 바랍니다.&nbsp; &nbsp;&nbsp;&nbsp;</p><p>&nbsp;</p><p>1. 일시</p><p>- 2/22(화) 02시 ~ 07시 (월요일에서 화요일 넘어가는 새벽)&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>2. 내용&nbsp;</p><p>- 정기 PM작업(시스템 성능 개선 작업)&nbsp; &nbsp; &nbsp;</p><p>- 작업 대상 : 극장영업시스템, 온라인 서비스(홈페이지/모바일)&nbsp; &nbsp; &nbsp;&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>더욱 안정적이고 편리한 서비스를 제공하는 CGV가 되겠습니다.</p><p>감사합니다.&nbsp; &nbsp;</p></p>
-                            </div>
-                            <div class="customer_btn"><button type="button" class="round inblack" id="btn_list"><span>목록으로</span></button></div>
-                            <!-- 이전글,다음글 (s) -->
-                            <div class="btm_sup_list">
-                                <ul class="line_sup_next">
-                                    <li class="stit">이전글</li>
-                                    <li class="name"><a href='#' class="txt">이전 글이 없습니다.</a></li>
-
-                                </ul>
-                                <ul class="line_sup_prev">
-                                    <li class="stit">다음글</li>
-                                    <li class="name"><a href='/support/news/detail-view.aspx?idx=7872&type=1&page=1&searchtext=&searchfield=0' class="txt">PAYCO 서비스 개선 작업에 따른 서비스 이용 일시중지 (12/8 04:00~04:30)</a></li>
-                                    <li class="check_writ_area">등록일<span class="check_num">2021.11.29</span></li>
-                                </ul>
-                            </div>
-                            <!-- 이전글,다음글 (e) -->
+                        <div class="ad-partner02">
+                            <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@Image_text" width="160" height="35" title="영화광고-꾸뻬씨의행복여행" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="Image_text" id="Image_text"></iframe>
                         </div>
                     </div>
                 </div>
-                <!-- //Contents End -->
+
+                <div class="col-detail">
+                    <div class="customer_top">
+                        <h2 class="tit">공지/뉴스</h2>
+                        <p class="stit">CGV의 주요한 이슈 및 여러가지 소식들을 확인하실 수 있습니다.</p>
+                    </div>
+                    <div class="board_view_area">
+                        <ul class="top_title_faq">
+                            <li class="title">[[시스템점검]] 2022년 2월 시스템 점검 안내</li>
+                            <li class="stit_area">
+                                <span>등록일<em class="regist_day">2022.02.16</em></span>
+                                <span class="check_tit_area">조회수<em class="check_num">72</em></span>
+                            </li>
+                        </ul>
+                        <div class="view_area">
+                            <p></p><p>안녕하십니까, CGV입니다.&nbsp;</p><p>&nbsp;</p><p>원활하고 안정된 서비스 제공을 위하여 2022년 2월 새벽 시스템 점검 작업이 예정되어 있습니다.</p><p>점검 시간 중 CGV홈페이지 및 모바일의 모든 서비스가 중단될 예정이오니 이용에 불편 없으시기 바랍니다.&nbsp; &nbsp;&nbsp;&nbsp;</p><p>&nbsp;</p><p>1. 일시</p><p>- 2/22(화) 02시 ~ 07시 (월요일에서 화요일 넘어가는 새벽)&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>2. 내용&nbsp;</p><p>- 정기 PM작업(시스템 성능 개선 작업)&nbsp; &nbsp; &nbsp;</p><p>- 작업 대상 : 극장영업시스템, 온라인 서비스(홈페이지/모바일)&nbsp; &nbsp; &nbsp;&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>더욱 안정적이고 편리한 서비스를 제공하는 CGV가 되겠습니다.</p><p>감사합니다.&nbsp; &nbsp;</p><p></p>
+                        </div>
+                        <div class="customer_btn"><button onclick="location.href='./support-news.jsp'" type="button" class="round inblack"><span>목록으로</span></button></div>
+                        <!-- 이전글,다음글 (s) -->
+                        <div class="btm_sup_list">
+                            <ul class="line_sup_next">
+                                <li class="stit">이전글</li>
+                                <li class="name"><a href="#" class="txt">이전 글이 없습니다.</a></li>
+
+                            </ul>
+                            <ul class="line_sup_prev">
+                                <li class="stit">다음글</li>
+                                <li class="name"><a href="#" class="txt">PAYCO 서비스 개선 작업에 따른 서비스 이용 일시중지 (12/8 04:00~04:30)</a></li>
+                                <li class="check_writ_area">등록일<span class="check_num">2021.11.29</span></li>
+                            </ul>
+                        </div>
+                        <!-- 이전글,다음글 (e) -->
+                    </div>
+                </div>
             </div>
-            <!-- //Contents Area -->
-            <script type="text/javascript">
+            <!-- //Contents End -->
+        </div>
+        <!-- //Contents Area -->
+        <script type="text/javascript">
 
-                //<![CDATA[
+            //<![CDATA[
 
-                (function ($) {
-                    $(function () {
-                        $('#btn_list').on('click', function () {
-                            Search();
-                        });
-
-                        function Search() {
-                            location.href = "/support/news/default.aspx?searchtext=" + escape("") + "&page=1&type=1&searchfield=0";
-                            return false;
-                        }
+            (function ($) {
+                $(function () {
+                    $('#btn_list').on('click', function () {
+                        Search();
                     });
-                })(jQuery);
 
-                //]]>
-            </script>
+                    function Search() {
+                        location.href = "/support/news/default.aspx?searchtext=" + escape("") + "&page=1&type=1&searchfield=0";
+                        return false;
+                    }
+                });
+            })(jQuery);
+
+            //]]>
+        </script>
 
 
-            <!--/ Contents End -->
-        </div>
-        <!-- /Contents Area -->
+        <!--/ Contents End -->
     </div>
-    <!-- E Contaniner -->
-
-    <!-- S Popup -->
-    <div class="com_pop_wrap">
-        <div class="com_pop_fog"></div>
-    </div>
-    <div class="pop_wrap">
-        <!-- S > [팝업] 지원 OS 업데이트 유도-->
-        <div id="pop_supportOS" class="popup" style="display:none">
-            <div class="pop_iexp_wrap" style="position:fixed; left:50%; top:50%; width:600px; margin:-165px 0 0 -300px; z-index:1000;">
-                <div class="pi_headline">
-                    <img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_headline2.jpg" alt="CGV 홈페이지는 고객님께서 사용중인 MS Windows XP에서 정상적인 서비스 이용이 어려울 수 있으며, OS업데이트를 권장합니다." />
-                </div>
-                <div class="down_app">
-                    <p><img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_downtxt.jpg" alt="OS 업데이트가 어려운 경우 모바일앱을 이용하세요!!!" /></p>
-                    <a class="btn" href="https://itunes.apple.com/kr/app/id370441190?mt=8" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ios.jpg" alt="Ios down" /></a>
-                    <a class="btn" href="https://play.google.com/store/apps/details?id=com.cgv.android.movieapp" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_android.jpg" alt="Android down" /></a>
-                </div>
-                <a class="btn_close">닫기</a>
-            </div>
-        </div>
-        <!-- S > [팝업] 지원 브라우저 다운로드 유도-->
-        <div id="pop_supportBrower" class="popup" style="display:none">
-            <div class="pop_iexp_wrap" style="position:fixed; left:50%; top:50%; width:600px; margin:-265px 0 0 -300px; z-index:1000;">
-                <div class="pi_headline">
-                    <img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_headline1.jpg" alt="CGV 홈페이지는 Internet Explorer 9이상에서 최적의 서비스 이용이 가능합니다. IE9 이하 브라우저에서 이용 시 정상적인 서비스 이용이 어려울 수 있으며, 브라우저 업그레이드 하시기를 권장합니다." />
-                </div>
-                <ul class="down_browser">
-                    <li><a href="https://www.microsoft.com/ko-kr/edge" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ie.jpg" alt="Internet Explorer 다운받기" /></a></li>
-                    <li><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_chrome.jpg" alt="Chrome 다운받기" /></a></li>
-                </ul>
-                <div class="down_app">
-                    <p><img src="https://img.cgv.co.kr/images/popup/1606_iexp/pop_iexp_downtxt.jpg" alt="OS 업데이트가 어려운 경우 모바일앱을 이용하세요!" /></p>
-                    <a class="btn" href="https://itunes.apple.com/kr/app/id370441190?mt=8" target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_ios.jpg" alt="Ios down" /></a>
-                    <a class="btn" href="https://play.google.com/store/apps/details?id=com.cgv.android.movieapp " target="_blank"><img src="https://img.cgv.co.kr/images/popup/1606_iexp/btn_down_android.jpg" alt="Android down" /></a>
-                </div>
-                <a class="btn_close">닫기</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- E Popup -->
-
-    <!-- S 예매하기 및 TOP Fixed 버튼 -->
-    <div class="fixedBtn_wrap">
-
-        <a href="/ticket/" class="btn_fixedTicketing">예매하기</a>
-
-        <a href="#none" class="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="최상단으로 이동" /></a>
-    </div>
-
+    <!-- /Contents Area -->
+</div>
     <!-- E 예매하기 및 TOP Fixed 버튼 -->
 
     <!-- S Footer -->
@@ -405,10 +361,6 @@
         </script>
         <!-- footer_area (e) -->
 
-        <div class="adFloat" style="display:block">
-
-            <iframe src='//ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@Popicon' width='154' height='182' frameborder='0' scrolling='no' topmargin='0' leftmargin='0' marginwidth='0' marginheight='0' allowTransparency="true" id="ad_float1"></iframe>
-        </div>
         <script type="text/javascript">            OpenAD();</script>
         <!-- //Float Ad -->
     </footer>

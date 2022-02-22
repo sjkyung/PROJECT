@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>manage_ongoingmovies_create</title>
+    <title>manage_news</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -58,59 +58,74 @@
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    현재 상영중인 영화
+                    공지 / 뉴스
+                    <input type="button" value="전체" onclick="location.href='./manage_news.jsp'" />
+                    <input type="button" value="시스템점검" onclick="location.href='./manage_news_system.jsp'" style="background-color: #F08080"/>
+                    <input type="button" value="극장" onclick="location.href='./manage_news_theaters.jsp'"/>
+                    <input type="button" value="기타" onclick="location.href='./manage_news_other.jsp'" />
+                    <input type="button" value="공지 작성" onclick="location.href='./manage_news_create.jsp'" style="float: right;">
+                   
                 </div>
-                <div>
-                    <form action="" method="">
-                        <table border="1">
-                            <th colspan="4">상영중인 영화 등록</th>
-                            <tr><!-- 첫번째 줄 시작 -->
-                                <td>영화코드</td>
-                                <td><input type="textbox"></td>
-                                <td>상영여부</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 첫번째 줄 끝 -->
-
-                            <tr><!-- 두번째 줄 시작 -->
-                                <td >영화명</td>
-                                <td><input type="textbox"></td>
-                                <td>영화명(영문)</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 두번째 줄 끝 -->
-
-                            <tr><!-- 두번째 줄 시작 -->
-                                <td>개봉일</td>
-                                <td><input type="textbox"></td>
-                                <td>재개봉여부</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 두번째 줄 끝 -->
-
-                            <tr><!-- 세번째 줄 시작 -->
-                                <td >제작국가</td>
-                                <td><input type="textbox"></td>
-                                <td >시간</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 세번째 줄 끝 -->
-
-                            <tr><!-- 네번째 줄 시작 -->
-                                <td >장르</td>
-                                <td><input type="textbox"></td>
-                                <td >관람나이</td>
-                                <td><input type="textbox"> </td>
-                            </tr><!-- 네번째 줄 끝 -->
-
-                            <tr><!-- 다섯번째 줄 시작 -->
-                                <td >감독</td>
-                                <td><input type="textbox"></td>
-                                <td >출연 배우</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 다섯번째 줄 끝 -->
-
-                        </table>
+                <div class="card-body">
+                    <table id="datatablesSimple">
+                        <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>구분</th>
+                            <th>제목</th>
+                            <th>등록일</th>
+                            <th>조회수</th>
                         
-                    </form>
-                    <input type="reset" value="리셋"><input type="submit" value="등록">
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>No</th>
+                            <th>구분</th>
+                            <th>제목</th>
+                            <th>등록일</th>
+                            <th>조회수</th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                        <tr>
+                            <td style="width: 10%;">12</td>
+                            <td style="width: 15%;">[시스템 점검] </td>
+                            <td style="width: 40;">22년 문화가 있는 날 가격 조정 안내</td>
+                            <td style="width: 25%;">2022.2.17</td>
+                            <td style="width: 10%;">1004</td>
+                        
+                        </tr>
+                       
+                     
+                    <tr>
+                            <td>9</td>
+                            <td>[시스템 점검] </td>
+                            <td>2022년 1월 시스템 점검 안내</td>
+                            <td>2022.01.04</td>
+                            <td>361</td>
+                  
+                        </tr>
+                      
+                      
+                        
+                       
+                      
+                       
+                     
+                        <tr>
+                            <td>1</td>
+                            <td>[시스템] </td>
+                            <td>21년 문화가 있는 날 가격 조정 안내</td>
+                            <td>2021.09.13</td>
+                            <td>428</td>
+                           
+                    
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
+
 
             </div>
         </div>

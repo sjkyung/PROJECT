@@ -96,7 +96,7 @@
                         <tr>
                             <td>1</td>
                             <td>강남CGV</td>
-                            <td><a href="#">김선경</a></td>
+                            <td><a href="manage_AskAnswer.jsp">김선경</a></td>
                             <td>2022-02-22</td>
                             <td>2022-02-26</td>
                             <td style="background-color: #2c3034; color:white">접수완료</td>
@@ -104,7 +104,7 @@
                         <tr>
                             <td>2</td>
                             <td>신촌CGV</td>
-                            <td><a href="#">김선경</a></td>
+                            <td><a href="manage_AskAnswer.jsp">김선경</a></td>
                             <td>2022-01-20</td>
                             <td>2022-02-20</td>
                             <td style="background-color: #2c3034; color:white">완료</td>
@@ -112,7 +112,7 @@
                         <tr>
                             <td>3</td>
                             <td>강변CGV</td>
-                            <td><a href="#">김선경</a></td>
+                            <td><a href="manage_AskAnswer.jsp">김선경</a></td>
                             <td>2022-02-22</td>
                             <td>2022-02-26</td>
                             <td style="background-color: #2c3034; color:white">완료</td>

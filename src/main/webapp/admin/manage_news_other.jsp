@@ -1,10 +1,9 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-    <title>admin-lookup</title>
+    <title>manage_news</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -21,15 +20,6 @@
 
         });
     </script>
-    <style>
-        td>a{
-            text-decoration: none;
-            color:black;
-        }
-        td>a:hover{
-            border-bottom: 2px solid blue;
-        }
-    </style>
 </head>
 <body class="sb-nav-fixed" >
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -68,111 +58,90 @@
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    문의관리 - 분실문문의
+                    공지 / 뉴스
+                    <input type="button" value="전체" onclick="location.href='./manage_news.jsp'" />
+                    <input type="button" value="시스템점검" onclick="location.href='./manage_news_system.jsp'"/>
+                    <input type="button" value="극장" onclick="location.href='./manage_news_theaters.jsp'" />
+                    <input type="button" value="기타" onclick="location.href='./manage_news_other.jsp'" style="background-color: #F08080"/>
+                    <input type="button" value="공지 작성" onclick="location.href='./manage_news_create.jsp'" style="float: right;">
+                   
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple">
                         <thead>
                         <tr>
-                            <th>번호</th>
-                            <th>분실CGV</th>
-                            <th>작성자</th>
+                            <th>No</th>
+                            <th>구분</th>
                             <th>제목</th>
-                            <th>접수일</th>
-                            <th>상태</th>
+                            <th>등록일</th>
+                            <th>조회수</th>
+                        
                         </tr>
                         </thead>
                         <tfoot>
                         <tr>
-                            <th>번호</th>
-                            <th>분실CGV</th>
-                            <th>작성자</th>
+                            <th>No</th>
+                            <th>구분</th>
                             <th>제목</th>
-                            <th>접수일</th>
-                            <th>상태</th>
+                            <th>등록일</th>
+                            <th>조회수</th>
                         </tr>
                         </tfoot>
                         <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>강남CGV</td>
-                            <td>김선경</td>
-                            <td><a href="manage_AskAnswer.jsp">지갑을 분실했어요</a></td>
-                            <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="width: 10%;">12</td>
+                            <td style="width: 15%;">[기타]</td>
+                            <td style="width: 40;">[CGV통영] 22년 2월 임시 휴업</td>
+                            <td style="width: 25%;">2022.2.17</td>
+                            <td style="width: 10%;">1004</td>
+                        
+                        </tr>
+                     
+                        <tr>
+                            <td>10</td>
+                            <td>[기타]</td>
+                            <td>홀리 쉿</td>
+                            <td>2022.1.14</td>
+                            <td>538</td>
+                       
+                        </tr>
+                      
+                        <tr>
+                            <td>8</td>
+                            <td>[기타]  </td>
+                            <td>[CGV통영] 22년 1월 임시 휴업</td>
+                            <td>2021.12.31</td>
+                            <td>592</td>
+           
+                        </tr>
+                     
+                      
+                        <tr>
+                            <td>5</td>
+                            <td>[기타]  </td>
+                            <td>개인정보처리방침 계정 안내(12월 15 시행)</td>
+                            <td>2021.12.14</td>
+                            <td>1435</td>
+             
+                        </tr>
+                     
+                        <tr>
+                            <td>3</td>
+                            <td>[기타]  </td>
+                            <td>[기적] 스피드 쿠폰 2차 일부 CJ ONE 포인트 미적립 발생에 따른 조치 안내</td>
+                            <td>2021.12.08</td>
+                            <td>1261</td>
+                
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>강남CGV</td>
-                            <td>김선경</td>
-                            <td><a href="manage_AskAnswer.jsp">지갑을 분실했어요</a></td>
-                            <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td>[기타] </td>
+                            <td>포토 플레이 과거 제작 이미지 삭제 안내</td>
+                            <td>2021.09.15</td>
+                            <td>592</td>
+            
                         </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>강남CGV</td>
-                            <td>김선경</td>
-                            <td><a href="manage_AskAnswer.jsp">지갑을 분실했어요</a></td>
-                            <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>강남CGV</td>
-                            <td>김선경</td>
-                            <td><a href="manage_AskAnswer.jsp">지갑을 분실했어요</a></td>
-                            <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>강남CGV</td>
-                            <td>김선경</td>
-                            <td><a href="main.jsp">지갑을 분실했어요</a></td>
-                            <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>강남CGV</td>
-                            <td>김선경</td>
-                            <td><a href="main.jsp">지갑을 분실했어요</a></td>
-                            <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>강남CGV</td>
-                            <td>김선경</td>
-                            <td><a href="main.jsp">지갑을 분실했어요</a></td>
-                            <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>강남CGV</td>
-                            <td>김선경</td>
-                            <td><a href="main.jsp">지갑을 분실했어요</a></td>
-                            <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>강남CGV</td>
-                            <td>김선경</td>
-                            <td><a href="main.jsp">지갑을 분실했어요</a></td>
-                            <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>강남CGV</td>
-                            <td>김선경</td>
-                            <td><a href="main.jsp">지갑을 분실했어요</a></td>
-                            <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
-                        </tr>
+                      
                         </tbody>
                     </table>
                 </div>
