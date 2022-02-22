@@ -1,14 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>manage_ongoingmovies_create</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-
+  to-fit=no">
+    <!-- Custom styles for this template -->
+    <link href="/css/jumbotron-narrow.css" rel="stylesheet">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <title>영화 관리</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -24,7 +34,7 @@
 <body class="sb-nav-fixed" >
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="main.jsp">CGV Administrator</a>
+    <a class="navbar-brand ps-3" href="../../../../../../Downloads/cgv_admin/index.html">CGV Administrator</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <!-- Navbar Search-->
@@ -50,69 +60,77 @@
 
 
 <div id="headers"></div>
-
-<div id="layoutSidenav_content" style="margin-top:70px; margin-left: 240px">
+	
+<div id="layoutSidenav_content" style="margin-top:100px; margin-left: 240px">
     <main>
-        <div class="container-fluid px-4" >
-
-            <div class="card mb-4">
-                <div class="card-header">
-                    <i class="fas fa-table me-1"></i>
-                    현재 상영중인 영화
+        <div class="container-fluid px-4" style="margin:0 auto;">
+        	<h2 style="text-align:center;">상영중인 영화 등록</h2>
+        	<form style="width:40%; border:solid 2px red; border-radius:10px; padding:5%; margin:0 auto;">
+			    <div class="form-row">
+                    <div class="col">영화코드
+                        <input type="textbox">
+                    </div>
+                    <div class="col">상영여부
+                        <input type="textbox">
+                    </div>
                 </div>
-                <div>
-                    <form action="" method="">
-                        <table border="1">
-                            <th colspan="4">상영중인 영화 등록</th>
-                            <tr><!-- 첫번째 줄 시작 -->
-                                <td>영화코드</td>
-                                <td><input type="textbox"></td>
-                                <td>상영여부</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 첫번째 줄 끝 -->
-
-                            <tr><!-- 두번째 줄 시작 -->
-                                <td >영화명</td>
-                                <td><input type="textbox"></td>
-                                <td>영화명(영문)</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 두번째 줄 끝 -->
-
-                            <tr><!-- 두번째 줄 시작 -->
-                                <td>개봉일</td>
-                                <td><input type="textbox"></td>
-                                <td>재개봉여부</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 두번째 줄 끝 -->
-
-                            <tr><!-- 세번째 줄 시작 -->
-                                <td >제작국가</td>
-                                <td><input type="textbox"></td>
-                                <td >시간</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 세번째 줄 끝 -->
-
-                            <tr><!-- 네번째 줄 시작 -->
-                                <td >장르</td>
-                                <td><input type="textbox"></td>
-                                <td >관람나이</td>
-                                <td><input type="textbox"> </td>
-                            </tr><!-- 네번째 줄 끝 -->
-
-                            <tr><!-- 다섯번째 줄 시작 -->
-                                <td >감독</td>
-                                <td><input type="textbox"></td>
-                                <td >출연 배우</td>
-                                <td><input type="textbox"></td>
-                            </tr><!-- 다섯번째 줄 끝 -->
-
-                        </table>
-                        
-                    </form>
-                    <input type="reset" value="리셋"><input type="submit" value="등록">
-                </div>
-
-            </div>
+                <hr/>
+             
+             
+			  <div class="form-row">
+                <div class="col">영화명
+                        <input type="textbox">
+                    </div>
+                    <div class="col">영화명(영문)
+                        <input type="textbox">
+                    </div>
+               </div>     
+              <hr/>
+              <div class="form-row">
+                <div class="col">개봉일
+                        <input type="textbox">
+                    </div>
+                    <div class="col">재개봉여부
+                        <input type="textbox">
+                    </div>
+               </div>     
+              <hr/>
+              <div class="form-row">
+                <div class="col">제작국가
+                        <input type="textbox">
+                    </div>
+                    <div class="col">시간
+                        <input type="textbox">
+                    </div>
+               </div>     
+              <hr/>
+              <div class="form-row">
+                <div class="col">장르
+                        <input type="textbox">
+                    </div>
+                    <div class="col">관람나이
+                        <input type="textbox">
+                    </div>
+               </div>     
+              <hr/>
+              <div class="form-row">
+                <div class="col">감독
+                        <input type="textbox">
+                    </div>
+                    <div class="col">출연 배우
+                        <input type="textbox">
+                    </div>
+               </div>     
+              <hr/>
+              <div class="form-group">
+			    <label for="exampleFormControlFile1" >파일등록</label>
+			    <input type="file" class="form-control-file" id="exampleFormControlFile1" >
+            </hr>
+              <button type="reset" class="btn btn-primary" >리셋</button>
+              <button type="submit" class="btn btn-primary" style="background-color: #F08080">작성</button>
+        </div>
+    </hr>
+			</form>
         </div>
     </main>
     <footer class="py-4 bg-light mt-auto">
