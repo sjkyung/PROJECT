@@ -171,7 +171,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>1</td>
                                     <td>[홈페이지/모바일]</td>
-                                    <td id="title0" class="txt"><a href="/support/faq/detail-view.aspx?idx=951&type=245&searchtext=&page=1">인터넷 예매 후 CGV 현장에서 환불&#40;예매 취소&#41;이 가능한가요?</a></td>
+                                    <td id="title0" class="txt"><a href="support-fap-detail-view.jsp">인터넷 예매 후 CGV 현장에서 환불&#40;예매 취소&#41;이 가능한가요?</a></td>
                                     <td class="num">6836</td>
                                 </tr>
 
@@ -179,7 +179,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>2</td>
                                     <td>[VIP관련]</td>
-                                    <td id="title1" class="txt"><a href="/support/faq/detail-view.aspx?idx=968&type=1262&searchtext=&page=1">VIP 등급별 유지, 선정 포인트를 알고 싶어요</a></td>
+                                    <td id="title1" class="txt"><a href="support-fap-detail-view.jsp">VIP 등급별 유지, 선정 포인트를 알고 싶어요</a></td>
                                     <td class="num">4644</td>
                                 </tr>
 
@@ -187,7 +187,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>3</td>
                                     <td>[멤버쉽/클럽서비스]</td>
-                                    <td id="title2" class="txt"><a href="/support/faq/detail-view.aspx?idx=970&type=240&searchtext=&page=1">아이핀&#40;I-PIN&#41; 이 무엇인가요?</a></td>
+                                    <td id="title2" class="txt"><a href="support-fap-detail-view.jsp">아이핀&#40;I-PIN&#41; 이 무엇인가요?</a></td>
                                     <td class="num">4621</td>
                                 </tr>
 
@@ -195,7 +195,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>4</td>
                                     <td>[VIP관련]</td>
-                                    <td id="title3" class="txt"><a href="/support/faq/detail-view.aspx?idx=967&type=1262&searchtext=&page=1">VIP 선정 기준은 어떻게 되나요?</a></td>
+                                    <td id="title3" class="txt"><a href="support-fap-detail-view.jsp">VIP 선정 기준은 어떻게 되나요?</a></td>
                                     <td class="num">4351</td>
                                 </tr>
 
@@ -203,7 +203,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>5</td>
                                     <td>[멤버쉽/클럽서비스]</td>
-                                    <td id="title4" class="txt"><a href="/support/faq/detail-view.aspx?idx=980&type=240&searchtext=&page=1">생일콤보 받는 방법을 알려주세요. &#40;2020.04.01~&#41;</a></td>
+                                    <td id="title4" class="txt"><a href="support-fap-detail-view.jsp">생일콤보 받는 방법을 알려주세요. &#40;2020.04.01~&#41;</a></td>
                                     <td class="num">4074</td>
                                 </tr>
 
@@ -211,7 +211,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>6</td>
                                     <td>[관람권/결제수단]</td>
-                                    <td id="title5" class="txt"><a href="/support/faq/detail-view.aspx?idx=969&type=243&searchtext=&page=1">관람권 사용해서 예매했는데 현금영수증 발행을 못했어요!</a></td>
+                                    <td id="title5" class="txt"><a href="support-fap-detail-view.jsp">관람권 사용해서 예매했는데 현금영수증 발행을 못했어요!</a></td>
                                     <td class="num">4021</td>
                                 </tr>
 
@@ -219,7 +219,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>7</td>
                                     <td>[홈페이지/모바일]</td>
-                                    <td id="title6" class="txt"><a href="/support/faq/detail-view.aspx?idx=950&type=245&searchtext=&page=1">인터넷 예매 후 예매 내용 확인은 어떻게 하나요?</a></td>
+                                    <td id="title6" class="txt"><a href="support-fap-detail-view.jsp">인터넷 예매 후 예매 내용 확인은 어떻게 하나요?</a></td>
                                     <td class="num">3506</td>
                                 </tr>
 
@@ -227,7 +227,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>8</td>
                                     <td>[홈페이지/모바일]</td>
-                                    <td id="title7" class="txt"><a href="/support/faq/detail-view.aspx?idx=949&type=245&searchtext=&page=1">이미 예매한 내역의 결제수단을 변경하고 싶어요.</a></td>
+                                    <td id="title7" class="txt"><a href="support-fap-detail-view.jsp">이미 예매한 내역의 결제수단을 변경하고 싶어요.</a></td>
                                     <td class="num">3383</td>
                                 </tr>
 
@@ -235,7 +235,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>9</td>
                                     <td>[관람권/결제수단]</td>
-                                    <td id="title8" class="txt"><a href="/support/faq/detail-view.aspx?idx=971&type=243&searchtext=&page=1">CGV영화관람권&#40;무비머니&#41;은 어떻게 구매하나요?</a></td>
+                                    <td id="title8" class="txt"><a href="support-fap-detail-view.jsp">CGV영화관람권&#40;무비머니&#41;은 어떻게 구매하나요?</a></td>
                                     <td class="num">2817</td>
                                 </tr>
 
@@ -243,7 +243,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>10</td>
                                     <td>[홈페이지/모바일]</td>
-                                    <td id="title9" class="txt"><a href="/support/faq/detail-view.aspx?idx=942&type=245&searchtext=&page=1">내가 본 영화를 실수로 삭제했어요. 복구 가능한가요?</a></td>
+                                    <td id="title9" class="txt"><a href="support-fap-detail-view.jsp">내가 본 영화를 실수로 삭제했어요. 복구 가능한가요?</a></td>
                                     <td class="num">2202</td>
                                 </tr>
 
@@ -251,7 +251,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>11</td>
                                     <td>[특별관]</td>
-                                    <td id="title10" class="txt"><a href="/support/faq/detail-view.aspx?idx=972&type=244&searchtext=&page=1">CINE&LIVING ROOM&#40;씨네앤리빙룸&#41; 상영관은 어떤 곳인가요?</a></td>
+                                    <td id="title10" class="txt"><a href="support-fap-detail-view.jsp">CINE&LIVING ROOM&#40;씨네앤리빙룸&#41; 상영관은 어떤 곳인가요?</a></td>
                                     <td class="num">1976</td>
                                 </tr>
 
@@ -259,7 +259,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>12</td>
                                     <td>[영화관이용]</td>
-                                    <td id="title11" class="txt"><a href="/support/faq/detail-view.aspx?idx=996&type=246&searchtext=&page=1">LOLOL&#40;롤롤&#41; 운영시간은 어떻게되나요?</a></td>
+                                    <td id="title11" class="txt"><a href="support-fap-detail-view.jsp">LOLOL&#40;롤롤&#41; 운영시간은 어떻게되나요?</a></td>
                                     <td class="num">1894</td>
                                 </tr>
 
@@ -267,7 +267,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>13</td>
                                     <td>[영화관이용]</td>
-                                    <td id="title12" class="txt"><a href="/support/faq/detail-view.aspx?idx=978&type=246&searchtext=&page=1">V버스터즈가 뭔가요?</a></td>
+                                    <td id="title12" class="txt"><a href="support-fap-detail-view.jsp">V버스터즈가 뭔가요?</a></td>
                                     <td class="num">935</td>
                                 </tr>
 
@@ -275,7 +275,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>14</td>
                                     <td>[특별관]</td>
-                                    <td id="title13" class="txt"><a href="/support/faq/detail-view.aspx?idx=979&type=244&searchtext=&page=1">SKY BOX 상영관은 어떤 곳인가요?</a></td>
+                                    <td id="title13" class="txt"><a href="support-fap-detail-view.jsp">SKY BOX 상영관은 어떤 곳인가요?</a></td>
                                     <td class="num">847</td>
                                 </tr>
 
@@ -283,7 +283,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>15</td>
                                     <td>[홈페이지/모바일]</td>
-                                    <td id="title14" class="txt"><a href="/support/faq/detail-view.aspx?idx=995&type=245&searchtext=&page=1">통신사&#40;SKT, KT, LGU+&#41; 예매 시 적립/내가 본 영화 등록/포토플레이 제작은 어떻게 하나요?</a></td>
+                                    <td id="title14" class="txt"><a href="support-fap-detail-view.jsp">통신사&#40;SKT, KT, LGU+&#41; 예매 시 적립/내가 본 영화 등록/포토플레이 제작은 어떻게 하나요?</a></td>
                                     <td class="num">814</td>
                                 </tr>
 
@@ -291,7 +291,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>16</td>
                                     <td>[홈페이지/모바일]</td>
-                                    <td id="title15" class="txt"><a href="/support/faq/detail-view.aspx?idx=993&type=245&searchtext=&page=1">포토플레이 출력 가능 극장은 어떻게 되나요?</a></td>
+                                    <td id="title15" class="txt"><a href="support-fap-detail-view.jsp">포토플레이 출력 가능 극장은 어떻게 되나요?</a></td>
                                     <td class="num">580</td>
                                 </tr>
 
@@ -299,7 +299,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>17</td>
                                     <td>[홈페이지/모바일]</td>
-                                    <td id="title16" class="txt"><a href="/support/faq/detail-view.aspx?idx=991&type=245&searchtext=&page=1">포토플레이 출력은 어떻게 하나요?</a></td>
+                                    <td id="title16" class="txt"><a href="support-fap-detail-view.jsp">포토플레이 출력은 어떻게 하나요?</a></td>
                                     <td class="num">568</td>
                                 </tr>
 
@@ -307,7 +307,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>18</td>
                                     <td>[홈페이지/모바일]</td>
-                                    <td id="title17" class="txt"><a href="/support/faq/detail-view.aspx?idx=992&type=245&searchtext=&page=1">포토플레이 제작 기준은 어떻게 되나요?</a></td>
+                                    <td id="title17" class="txt"><a href="support-fap-detail-view.jsp">포토플레이 제작 기준은 어떻게 되나요?</a></td>
                                     <td class="num">528</td>
                                 </tr>
 
@@ -315,7 +315,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>19</td>
                                     <td>[홈페이지/모바일]</td>
-                                    <td id="title18" class="txt"><a href="/support/faq/detail-view.aspx?idx=994&type=245&searchtext=&page=1">예매대행업체&#40;맥스무비, 인터파크, YES24&#41; 예매 시 적립/내가 본 영화 등록/포토플레이 제작은 어떻게 하나요?</a></td>
+                                    <td id="title18" class="txt"><a href="support-fap-detail-view.jsp">예매대행업체&#40;맥스무비, 인터파크, YES24&#41; 예매 시 적립/내가 본 영화 등록/포토플레이 제작은 어떻게 하나요?</a></td>
                                     <td class="num">464</td>
                                 </tr>
 
@@ -323,7 +323,7 @@
                                     <!--순번 오름차순으로 변경-->
                                     <td>20</td>
                                     <td>[홈페이지/모바일]</td>
-                                    <td id="title19" class="txt"><a href="/support/faq/detail-view.aspx?idx=990&type=245&searchtext=&page=1">포토플레이 취소 및 환불 규정은 어떻게 되나요?</a></td>
+                                    <td id="title19" class="txt"><a href="support-fap-detail-view.jsp">포토플레이 취소 및 환불 규정은 어떻게 되나요?</a></td>
                                     <td class="num">434</td>
                                 </tr>
 

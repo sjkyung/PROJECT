@@ -258,7 +258,7 @@
                                 <tr class="first">
                                     <td>2836</td>
                                     <td>[기타]</td>
-                                    <td class="txt"><a href="#">CJ ONE 통합회원정보 정책 개선 안내 (2/17 字 시행)</a></td>
+                                    <td class="txt"><a href="support-news-detail-view.jsp">CJ ONE 통합회원정보 정책 개선 안내 (2/17 字 시행)</a></td>
                                     <td>2022.02.10</td>
                                     <td class="num">414</td>
                                 </tr>
@@ -266,7 +266,7 @@
                                 <tr class="first">
                                     <td>2835</td>
                                     <td>[기타]</td>
-                                    <td class="txt"><a href="#">개인정보처리방침, 위치기반서비스 이용약관 개정 안내 (2/17 字 시행)</a></td>
+                                    <td class="txt"><a href="support-news-detail-view.jsp">개인정보처리방침, 위치기반서비스 이용약관 개정 안내 (2/17 字 시행)</a></td>
                                     <td>2022.02.09</td>
                                     <td class="num">23</td>
                                 </tr>
@@ -274,7 +274,7 @@
                                 <tr class="first">
                                     <td>2834</td>
                                     <td>[극장]</td>
-                                    <td class="txt"><a href="#">22년 문화가 있는 날 가격 조정 안내</a></td>
+                                    <td class="txt"><a href="support-news-detail-view.jsp">22년 문화가 있는 날 가격 조정 안내</a></td>
                                     <td>2022.01.21</td>
                                     <td class="num">1655</td>
                                 </tr>
@@ -282,7 +282,7 @@
                                 <tr class="first">
                                     <td>2833</td>
                                     <td>[극장]</td>
-                                    <td class="txt"><a href="#">CGV대구이시아 영업 종료 안내</a></td>
+                                    <td class="txt"><a href="support-news-detail-view.jsp">CGV대구이시아 영업 종료 안내</a></td>
                                     <td>2022.01.14</td>
                                     <td class="num">636</td>
                                 </tr>
@@ -290,7 +290,7 @@
                                 <tr class="first">
                                     <td>2832</td>
                                     <td>[시스템점검]</td>
-                                    <td class="txt"><a href="#">2022년 1월 시스템 점검 안내</a></td>
+                                    <td class="txt"><a href="support-news-detail-view.jsp">2022년 1월 시스템 점검 안내</a></td>
                                     <td>2022.01.04</td>
                                     <td class="num">393</td>
                                 </tr>
@@ -298,7 +298,7 @@
                                 <tr class="first">
                                     <td>2831</td>
                                     <td>[극장]</td>
-                                    <td class="txt"><a href="#">[CGV통영]22년 1월 3일부터 임시휴업</a></td>
+                                    <td class="txt"><a href="support-news-detail-view.jsp">[CGV통영]22년 1월 3일부터 임시휴업</a></td>
                                     <td>2021.12.31</td>
                                     <td class="num">653</td>
                                 </tr>
@@ -306,7 +306,7 @@
                                 <tr class="first">
                                     <td>2830</td>
                                     <td>[기타]</td>
-                                    <td class="txt"><a href="#">[REMIND] CJ ONE 포인트 혜택 변경 안내 (2022년 1월 1일 字 시행)</a></td>
+                                    <td class="txt"><a href="support-news-detail-view.jsp">[REMIND] CJ ONE 포인트 혜택 변경 안내 (2022년 1월 1일 字 시행)</a></td>
                                     <td>2021.12.30</td>
                                     <td class="num">886</td>
                                 </tr>
@@ -314,7 +314,7 @@
                                 <tr class="first">
                                     <td>2829</td>
                                     <td>[극장]</td>
-                                    <td class="txt"><a href="#">CGV남포 영업 종료 안내(2021년 12월 31일)</a></td>
+                                    <td class="txt"><a href="support-news-detail-view.jsp">CGV남포 영업 종료 안내(2021년 12월 31일)</a></td>
                                     <td>2021.12.27</td>
                                     <td class="num">724</td>
                                 </tr>
@@ -322,7 +322,7 @@
                                 <tr class="first">
                                     <td>2828</td>
                                     <td>[극장]</td>
-                                    <td class="txt"><a href="#">CGV양산물금 영업 종료 안내(2021년 12월 20일)</a></td>
+                                    <td class="txt"><a href="support-news-detail-view.jsp">CGV양산물금 영업 종료 안내(2021년 12월 20일)</a></td>
                                     <td>2021.12.14</td>
                                     <td class="num">1483</td>
                                 </tr>
@@ -330,7 +330,7 @@
                                 <tr class="first">
                                     <td>2827</td>
                                     <td>[기타]</td>
-                                    <td class="txt"><a href="#">개인정보처리방침 개정 안내 (12/17 字 시행)</a></td>
+                                    <td class="txt"><a href="support-news-detail-view.jsp">개인정보처리방침 개정 안내 (12/17 字 시행)</a></td>
                                     <td>2021.12.10</td>
                                     <td class="num">331</td>
                                 </tr>
@@ -338,7 +338,7 @@
                                 <tr class="first">
                                     <td>2826</td>
                                     <td>[극장]</td>
-                                    <td class="txt"><a href="#">[공지] CGV압구정 아트하우스 ART3관, 일반관 전환 안내</a></td>
+                                    <td class="txt"><a href="support-news-detail-view.jsp">[공지] CGV압구정 아트하우스 ART3관, 일반관 전환 안내</a></td>
                                     <td>2021.12.08</td>
                                     <td class="num">1290</td>
                                 </tr>
@@ -346,7 +346,7 @@
                                 <tr class="first">
                                     <td>2825</td>
                                     <td>[시스템점검]</td>
-                                    <td class="txt"><a href="#">PAYCO 서비스 개선 작업에 따른 서비스 이용 일시중지 (12/8 04:00~04:30)</a></td>
+                                    <td class="txt"><a href="support-news-detail-view.jsp">PAYCO 서비스 개선 작업에 따른 서비스 이용 일시중지 (12/8 04:00~04:30)</a></td>
                                     <td>2021.11.29</td>
                                     <td class="num">179</td>
                                 </tr>
@@ -354,7 +354,7 @@
                                 <tr class="first">
                                     <td>2824</td>
                                     <td>[행사/이벤트]</td>
-                                    <td class="txt"><a href="#">"CGV가 쏜다! 만이많이" 이벤트 당첨자 발표 연기 안내</a></td>
+                                    <td class="txt"><a href="support-news-detail-view.jsp">"CGV가 쏜다! 만이많이" 이벤트 당첨자 발표 연기 안내</a></td>
                                     <td>2021.11.17</td>
                                     <td class="num">806</td>
                                 </tr>
@@ -362,7 +362,7 @@
                                 <tr class="first">
                                     <td>2823</td>
                                     <td>[기타]</td>
-                                    <td class="txt"><a href="#">[재안내] 현대 모빌리티 아멕스카드 블루멤버스 포인트 사용 일부 제한 재안내</a></td>
+                                    <td class="txt"><a href="support-news-detail-view.jsp">[재안내] 현대 모빌리티 아멕스카드 블루멤버스 포인트 사용 일부 제한 재안내</a></td>
                                     <td>2021.11.09</td>
                                     <td class="num">186</td>
                                 </tr>
