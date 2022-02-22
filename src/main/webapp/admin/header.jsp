@@ -37,10 +37,10 @@
                                 </a>
                              <div class="collapse" id="movie" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="testpage.jsp" style="font-size:15px; padding-left:30px;">상영스케쥴</a>
-                                        <a class="nav-link" href="testpage.jsp" style="font-size:15px; padding-left:30px;">관람가격설정</a>
-                                        <a class="nav-link" href="testpage.jsp" style="font-size:15px; padding-left:30px;">상영관관리</a>
-                                        <a class="nav-link" href="testpage.jsp" style="font-size:15px; padding-left:30px;">상영중인 영화</a>
+                                        <a class="nav-link" href="manage_movieSchedule.jsp" style="font-size:15px; padding-left:30px;">상영스케쥴</a>
+                                        <a class="nav-link" href="mange_pricerm.jsp" style="font-size:15px; padding-left:30px;">관람가격설정</a>
+                                        <a class="nav-link" href="mange_theaters.jsp" style="font-size:15px; padding-left:30px;">상영관관리</a>
+                                        <a class="nav-link" href="manage_ongoingmovies.jsp" style="font-size:15px; padding-left:30px;">상영중인 영화</a>
                                     </nav>
                             </div>
 
@@ -51,7 +51,7 @@
                             </a>
                             <div class="collapse" id="event" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="testpage.jsp" style="font-size:15px; padding-left:30px;">이벤트관리</a>
+                                    <a class="nav-link" href="event-list-special.jsp.jsp" style="font-size:15px; padding-left:30px;">이벤트관리</a>
                                     <a class="nav-link" href="testpage.jsp" style="font-size:15px; padding-left:30px;">이벤트 당첨자 추첨</a>
                                     <a class="nav-link" href="testpage.jsp" style="font-size:15px; padding-left:30px;">종료된 이벤트 관리</a>
                                 </nav>
@@ -65,7 +65,7 @@
                         <div class="collapse" id="notice" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="testpage.jsp" style="font-size:15px; padding-left:30px;">공지</a>
-                                <a class="nav-link" href="testpage.jsp" style="font-size:15px; padding-left:30px;">자주 묻는 질문</a>
+                                <a class="nav-link" href="./manage_qna.jsp" style="font-size:15px; padding-left:30px;">자주 묻는 질문</a>
                             </nav>
                     </div>
 
@@ -76,9 +76,9 @@
                     </a>
                     <div class="collapse" id="custom-center" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="layout-static.jsp" style="font-size:15px; padding-left:30px;">이메일문의(1:1문의)</a>
-                            <a class="nav-link" href="layout-sidenav-light.jsp" style="font-size:15px; padding-left:30px;">단체/대관문의</a>
-                            <a class="nav-link" href="layout-sidenav-light.jsp" style="font-size:15px; padding-left:30px;">분실문문의</a>
+                            <a class="nav-link" href="mailList.jsp" style="font-size:15px; padding-left:30px;">이메일문의(1:1문의)</a>
+                            <a class="nav-link" href="orgList.jsp" style="font-size:15px; padding-left:30px;">단체/대관문의</a>
+                            <a class="nav-link" href="lostList.jsp" style="font-size:15px; padding-left:30px;">분실문문의</a>
                         </nav>
                 </div>
 
