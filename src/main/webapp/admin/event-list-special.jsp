@@ -17,7 +17,6 @@
         $(document).ready( function() {
 
             $("#headers").load("header.jsp");
-
         });
     </script>
 </head>
@@ -86,7 +85,7 @@
                             <td style="width:150px"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34046/16451515365430.jpg" width="150px"></td>
                             <td>[전체]</td>
                             <td>[극장판 주술회전 0] CGV필름마크</td>
-                            <td>2022.02.18~2022.03.06</td>
+                            <td>2022.02.18~2022.03.07</td>
                         </tr>
                         <tr>
                             <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33839/16425473374760.jpg" width="150px"></td>
@@ -138,6 +137,7 @@
                         </tr>
                         </tbody>
                     </table>
+                    <input type="button" value="이벤트 작성" style="background-color: #F08080" onclick = "location.href = './event-regist.jsp'"/>
                 </div>
         </div>
 

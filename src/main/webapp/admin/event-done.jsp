@@ -1,3 +1,4 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -16,6 +17,7 @@
         $(document).ready( function() {
 
             $("#headers").load("header.jsp");
+
         });
     </script>
 </head>
@@ -55,9 +57,9 @@
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    <input type="button" value="SPECIAL" onclick="location.href='./event-list-special.jsp'"/>
+                    <input type="button" value="SPECIAL" onclick="location.href='./event-list-special.jsp'" style="background-color: #F08080"/>
                     <input type="button" value="영화/예매" onclick="location.href='./event-list-movie.jsp'"/>
-                    <input type="button" value="멤버십/CLUB" onclick="location.href='./event-list-CLUB.jsp'" style="background-color: #F08080"/>
+                    <input type="button" value="멤버십/CLUB" onclick="location.href='./event-list-CLUB.jsp'"/>
                     <input type="button" value="CGV 극장별" onclick="location.href='./event-list-CGV.jsp'"/>
                     <input type="button" value="제휴/할인" onclick="location.href='./event-list-discount.jsp'"/>
                 </div>
@@ -81,34 +83,58 @@
                         </tfoot>
                         <tbody>
                         <tr>
-                            <td style="width:150px"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34051/16451732420520.jpg" width="150px"></td>
+                            <td style="width:150px"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34046/16451515365430.jpg" width="150px"></td>
                             <td>[전체]</td>
-                            <td>[피그] 2022 네번째 아티스트 배지</td>
-                            <td>2022.02.23~2022.03.09</td>
+                            <td>[극장판 주술회전 0] CGV필름마크</td>
+                            <td>2022.02.18~2022.03.07</td>
                         </tr>
                         <tr>
-                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34047/16451517423540.jpg" width="150px"></td>
+                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33839/16425473374760.jpg" width="150px"></td>
                             <td>[전체]</td>
-                            <td>[이상한 나라의 수학자] VIP 시사회</td>
-                            <td>2022.02.18~2022.02.23</td>
+                            <td>[CGV NFT 플레이 포스터] No.1 킹메이커</td>
+                            <td>2022.01.19~2022.02.27</td>
                         </tr>
                         <tr>
-                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34001/16444623941180.jpg" width="150px"></td>
+                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34004/16444732784970.jpg" width="150px"></td>
                             <td>[전체]</td>
-                            <td>아트하우스Club 회원 세번 째 마그넷 [리코리쉬 피자]</td>
-                            <td>2022.02.16~2022.02.27</td>
+                            <td>[언차티드] 4DX 리미티드 포스터</td>
+                            <td>2022.02.16~2022.02.28</td>
                         </tr>
                         <tr>
-                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/31473/16420350632590.jpg" width="150px"></td>
+                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33993/16443856193110.jpg" width="150px"></td>
                             <td>[전체]</td>
-                            <td>무료가입하고 쿠폰받자♥ 2022년 아트하우스 Club</td>
-                            <td>2022.01.13~2022.12.31</td>
+                            <td>[언차티드] CGV 필름마크</td>
+                            <td>2022.02.09~2022.03.06</td>
                         </tr>
                         <tr>
-                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/32841/16347909174770.jpg" width="150px"></td>
+                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33874/16425472489570.jpg" width="150px"></td>
                             <td>[전체]</td>
-                            <td>[CGV VIP] SVIP 만원의 행복</td>
-                            <td></td>
+                            <td>[킹메이커] 포토플레이 시크릿 컷</td>
+                            <td>2022.01.19~2022.02.27</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34038/16450783727330.jpg" width="150px"></td>
+                            <td>[전체]</td>
+                            <td>공주들을 위한 프린세스전</td>
+                            <td>2022.02.17~2022.02.21</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34014/16445650100580.jpg" width="150px"></td>
+                            <td>[CGV 강남]</td>
+                            <td>[언차티드] IMAX 포스터 증정</td>
+                            <td>2022.02.16~2022.02.22</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34000/16444585263010.jpg" width="150px"></td>
+                            <td>[전체]</td>
+                            <td>[나일 강의 죽음] 오리지널 북마크</td>
+                            <td>2022.02.12~2022.02.27</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/33963/16438648940860.jpg" width="150px"></td>
+                            <td>[전체]</td>
+                            <td>[나일강의 죽음] CGV 필름마크</td>
+                            <td>2022.02.09~2022.02.27</td>
                         </tr>
                         </tbody>
                     </table>
