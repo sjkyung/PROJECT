@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>manage_qna</title>
+    <title>news_write</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -60,9 +60,9 @@
         //     form.q_sel.focus();
         //     return false;
         // }
-        if(form.q_title.value=="") {
+        if(form.n_title.value=="") {
             alert("제목을 입력해주세요");
-            form.q_title.focus();
+            form.n_title.focus();
             return false;
         } else if (form.summernote.value == "") {
             alert("내용을 입력해주세요");
@@ -80,51 +80,44 @@
         <div class="container-fluid px-4" >
             <h2>공지 작성</h2>
 
-            <form method="post" name="notification" action="manage_qna_write_ok.jsp">
-            <table width=900 border=1 cellspacing=5 cellpadding=10>
-                <tr>
-                    <td style="padding-left: 20px;"><b>작성자</b></td>
-                    <td> 강남 CGV
-                    <!--
-                    input type=text name="q_writer" size=50  maxlength=50>
-                    -->
-                    </td>
-                </tr>
+            <form method="post" name="notification" action="manage_news_write_ok.jsp">
+                <table width=1000 border=1 cellspacing=5 cellpadding=10>
+                    <tr>
+                        <td style="padding-left: 20px;"><b>작성자</b></td>
+                        <td> 강남 CGV
+                            <!--
+                            input type=text name="q_writer" size=50  maxlength=50>
+                            -->
+                        </td>
+                    </tr>
 
-                <tr>
+                    <tr>
 
-                    <td style="padding-left: 20px;"><b>구 분</b></td>
-                    <td>
-                        <select name="q_list" id="" class="" style="width:400px;">
-                        <option selected="selected" value="0" name="q_sel">전체</option>
-                        <option value="1">내용</option>
-                            <option value="1">예매/매표</option>
-                            <option value="2">관람권/결제수단</option>
-                            <option value="3">멤버쉽/클럽서비스</option>
-                            <option value="4">VIP관련</option>
-                            <option value="5">할인혜택</option>
-                            <option value="6">영화관이용</option>
-                            <option value="7">특별관</option>
-                            <option value="8">기프트샵</option>
-                            <option value="9">홈페이지/모바일</option>
-                        </select>
-                    </td>
-                </tr>
+                        <td style="padding-left: 20px;"><b>구 분</b></td>
+                        <td>
+                            <select name="n_list" id="" class="" style="width:400px;">
+                                <option selected="selected" value="0" name="n_sel">전체</option>
+                                <option value="1">시스템점검</option>
+                                <option value="1">극장</option>
+                                <option value="2">기타</option>
+                            </select>
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td style="padding-left: 20px;"><b>제 목</b></td>
-                    <td><input type=text name="q_title" size=50  maxlength=50 style="width: 400px"></td>
-                </tr>
+                    <tr>
+                        <td style="padding-left: 20px;"><b>제 목</b></td>
+                        <td><input type=text name="n_title" size=50  maxlength=50 style="width: 400px"></td>
+                    </tr>
 
-                <tr>
-                    <td style="padding-left: 20px;"><b>내 용</b></td>
-                    <td><textarea id="summernote" name="summernote"></textarea></td>
-<%--                    <td><textarea name="q_content" cols=40 rows=5 style="width: 400px"></textarea></td>--%>
-                </tr>
-            </table>
+                    <tr>
+                        <td style="padding-left: 20px;"><b>내 용</b></td>
+                        <td><textarea id="summernote" name="summernote"></textarea></td>
+                        <%--                    <td><textarea name="q_content" cols=40 rows=5 style="width: 400px"></textarea></td>--%>
+                    </tr>
+                </table>
 
                 <p></p>
-                <p><input type="button" value="등록" style="margin-left: 150px" onclick="checkLogin()"> <input type="reset" value="질문&답변 작성하기"> <input type="button" value="리스트" onclick="location.href='./manage_qna.jsp'"></p>
+                <p><input type="button" value="등록" style="margin-left: 150px" onclick="checkLogin()"> <input type="reset" value="공지 다시 작성하기"> <input type="button" value="리스트" onclick="location.href='./manage_qna.jsp'"></p>
 
 
             </form>
