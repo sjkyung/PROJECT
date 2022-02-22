@@ -15,7 +15,7 @@
     <script type="text/javascript">
         $(document).ready( function() {
 
-            $("#headers").load("header.jsp");;
+            $("#headers").load("header.jsp");
         });
     </script>
 </head>
@@ -136,6 +136,7 @@
                         </tr>
                         </tbody>
                     </table>
+                    <input type="button" value="이벤트 작성" style="background-color: #F08080" onclick = "location.href = './event-regist.jsp'"/>
                 </div>
         </div>
 

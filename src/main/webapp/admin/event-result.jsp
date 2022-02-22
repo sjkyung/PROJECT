@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>이벤트관리</title>
+    <title>이벤트당첨공지</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -16,8 +16,14 @@
         $(document).ready( function() {
 
             $("#headers").load("header.jsp");
+
         });
     </script>
+    <style>
+		td{
+			text-align: center;
+		}
+    </style>
 </head>
 <body class="sb-nav-fixed" >
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -55,64 +61,64 @@
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    <input type="button" value="SPECIAL" onclick="location.href='./event-list-special.jsp'"/>
-                    <input type="button" value="영화/예매" onclick="location.href='./event-list-movie.jsp'"/>
-                    <input type="button" value="멤버십/CLUB" onclick="location.href='./event-list-CLUB.jsp'" style="background-color: #F08080"/>
-                    <input type="button" value="CGV 극장별" onclick="location.href='./event-list-CGV.jsp'"/>
-                    <input type="button" value="제휴/할인" onclick="location.href='./event-list-discount.jsp'"/>
+                    <h2>이벤트 당첨 공지</h2>
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple">
                         <thead>
                         <tr>
-                            <th>영화</th>
-                            <th>극장</th>
-                            <th>내용</th>
+                            <th>이벤트타입</th>
+                            <th>제목</th>
                             <th>기간</th>
                         </tr>
                         </thead>
                         <tfoot>
                         <tr>
-                            <th>영화</th>
-                            <th>극장</th>
-                            <th>내용</th>
+                            <th>이벤트타입</th>
+                            <th>제목</th>
                             <th>기간</th>
                         </tr>
                         </tfoot>
                         <tbody>
                         <tr>
-                            <td style="width:150px"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34051/16451732420520.jpg" width="150px"></td>
-                            <td>[전체]</td>
-                            <td>[피그] 2022 네번째 아티스트 배지</td>
-                            <td>2022.02.23~2022.03.09</td>
+                            <td style="width:150px; color: #F08080">HOT</td>
+                            <td>[제페토CGV 오픈 사전 이벤트] 당첨자 발표 안내</td>
+                            <td>2021.12.21~2022.12.31</td>
                         </tr>
                         <tr>
-                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34047/16451517423540.jpg" width="150px"></td>
-                            <td>[전체]</td>
-                            <td>[이상한 나라의 수학자] VIP 시사회</td>
-                            <td>2022.02.18~2022.02.23</td>
+                            <td style="width:150px; color: #F08080">HOT</td>
+                            <td>2021 IMAX 포스터 컬렉션북 추가 당첨자 안내</td>
+                            <td>2022.01.21~2022.04.30</td>
                         </tr>
                         <tr>
-                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34001/16444623941180.jpg" width="150px"></td>
-                            <td>[전체]</td>
-                            <td>아트하우스Club 회원 세번 째 마그넷 [리코리쉬 피자]</td>
-                            <td>2022.02.16~2022.02.27</td>
+                            <td style="width:150px; color: #F08080">극장</td>
+                            <td>[해적:도깨비 깃발] 기대평 댓글 이벤트 당첨자 안내</td>
+                            <td>2022.01.01~2022.12.31</td>
                         </tr>
                         <tr>
-                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/31473/16420350632590.jpg" width="150px"></td>
-                            <td>[전체]</td>
-                            <td>무료가입하고 쿠폰받자♥ 2022년 아트하우스 Club</td>
-                            <td>2022.01.13~2022.12.31</td>
+                            <td style="width:150px; color: #F08080">영화</td>
+                            <td><만년이 지나도 변하지 않는게 있어>CGV회원 시사회 이벤트 당점자 공지</td>
+                            <td>2021.07.02~2031.07.02</td>
                         </tr>
                         <tr>
-                            <td><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/32841/16347909174770.jpg" width="150px"></td>
-                            <td>[전체]</td>
-                            <td>[CGV VIP] SVIP 만원의 행복</td>
-                            <td></td>
+                            <td style="width:150px; color: #F08080">영화</td>
+                            <td><해적:도깨비 깃발>CGV회원 시사회 이벤트 당첨자 안내</td>
+                            <td>2021.07.02~2031.07.02</td>
                         </tr>
+                        <tr>
+                            <td style="width:150px; color: #F08080">영화</td>
+                            <td><특송> 기대평 댓글 이벤트 당첨자 발표 안내</td>
+                            <td>2021.06.22~2031.07.12</td>
+                        </tr>
+                        <tr>
+                            <td style="width:150px; color: #F08080">영화</td>
+                            <td><원 세컨드> CGV회원 시사회 이벤트 당첨자 안내</td>
+                            <td>2021.06.22~2031.07.12</td>
+                        </tr>
+
                         </tbody>
                     </table>
-                    <input type="button" value="이벤트 작성" style="background-color: #F08080" onclick = "location.href = './event-regist.jsp'"/>
+                    <input type="button" value="이벤트 작성" style="background-color: #F08080" onclick = "location.href = './event-result-regist.jsp'"/>
                 </div>
         </div>
 
