@@ -62,35 +62,7 @@
                     <i class="fas fa-table me-1"></i>
                     영화 관람 가격 설정
                 </div>
-                
-                <!-- <div>
-                    <div> 일반(2D)
-                        <table>
-                         <tr>
-                            <th>요일</th>
-                            <th>시간대</th>
-                            <th>일반</th>
-                            <th>청소년</th>
-                            
-                        </tr>
-                    
-                        <tr>
-                            <td>월-목</td>
-                            <td></td>
-
-                            
-                        </tr>
-                    
-                        <tr>
-                            <td>금-일</td>
-
-
-
-                        </tr>
-                            
-                        </table>
-                    </div>
-                </div> -->
+            
                 <div id="div_TheaterPrice_box">
                     <div class="mp_tablebox" id="div_theatercode_0056">
                                          <div class="mp_table_item">
@@ -137,7 +109,7 @@
                                
                                          
                                 </div>
-                                <div><input type="button" value="수정" onclick="location.href='./manage_pricerm_edit.jsp'"></div>   
+                                <div style ="width: 100px"><input type="button" value="수정" onclick="location.href='./manage_pricerm_edit.jsp'"></div>   
                 </div>
 
               

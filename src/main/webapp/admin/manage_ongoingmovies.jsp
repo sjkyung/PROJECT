@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>manage-theaters</title>
+    <title>manage_ongoingmovies</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -59,7 +59,7 @@
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
                     현재 상영중인 영화
-                    <input type="button" value="영화 등록" onclick="location.href=#"   style="background-color: #F08080; float:right"/>
+                    <input type="button" value="영화 등록" onclick="location.href='./manage_ongoingmovies_create.jsp'"   style="background-color: #F08080; float:right"/>
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple">
