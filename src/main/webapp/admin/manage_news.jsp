@@ -48,6 +48,14 @@
     </ul>
 </nav>
 
+<script>
+    function go_detail() {
+        // location.href = "manage_news_detail?num=1";
+        location.href = "manage_news_detail.jsp";
+        return true;
+
+    }
+</script>
 
 <div id="headers"></div>
 
@@ -59,11 +67,9 @@
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
                     공지 / 뉴스
-                    <input type="button" value="전체" onclick="location.href='./manage_news.jsp'" style="background-color: #F08080"/>
-                    <input type="button" value="시스템점검" onclick="location.href='./manage_news_system.jsp'"/>
-                    <input type="button" value="극장" onclick="location.href='./manage_news_theaters.jsp'"/>
-                    <input type="button" value="기타" onclick="location.href='./manage_news_other.jsp'" />
-                    <input type="button" value="공지 작성" onclick="location.href='./manage_news_create.jsp'" style="float: right;">
+
+<%--                    <input type="button" value="시스템점검" onclick="location.href='#'"/>--%>
+                    <input type="button" value="공지 사항 작성" onclick="location.href='./manage_news_write.jsp'"/>
                    
                 </div>
                 <div class="card-body">
@@ -88,11 +94,11 @@
                         </tr>
                         </tfoot>
                         <tbody>
-                        <tr>
+                        <tr onclick="go_detail()">
                             <td style="width: 10%;">12</td>
-                            <td style="width: 15%;">[극장]</td>
-                            <td style="width: 40;">22년 문화가 있는 날 가격 조정 안내</td>
-                            <td style="width: 25%;">2022.2.17</td>
+                            <td style="width: 15%;">[시스템 점검]</td>
+                            <td style="width: 30%;">2022년 2월 시스템 점검 안내</td>
+                            <td style="width: 15%;">2022.2.17</td>
                             <td style="width: 10%;">1004</td>
                         
                         </tr>
@@ -114,8 +120,8 @@
                         </tr>
                         <tr>
                             <td>9</td>
-                            <td>[시스템 점검] </td>
-                            <td>2022년 1월 시스템 점검 안내</td>
+                            <td>[극장]</td>
+                            <td>22년 문화가 있는 날 가격 조정</td>
                             <td>2022.01.04</td>
                             <td>361</td>
                   
@@ -178,7 +184,7 @@
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>[시스템] </td>
+                            <td>[극장] </td>
                             <td>21년 문화가 있는 날 가격 조정 안내</td>
                             <td>2021.09.13</td>
                             <td>428</td>
@@ -193,19 +199,7 @@
             </div>
         </div>
     </main>
-    <footer class="py-4 bg-light mt-auto">
-        <div class="container-fluid px-4">
-            <div class="d-flex align-items-center justify-content-between small">
-                <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                <div>
-                    <a href="#">Privacy Policy</a>
-                    &middot;
-                    <a href="#">Terms &amp; Conditions</a>
-                </div>
-            </div>
-        </div>
 
-    </footer>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
