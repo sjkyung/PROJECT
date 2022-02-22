@@ -40,8 +40,17 @@
 	<script type="text/javascript" src="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/reservation.step1.js"></script>
 	<script type="text/javascript" src="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/reservation.step2.js"></script>
 	<script type="text/javascript">
+
+		// 마지막 프린트기능 추가
 		function printHomeTicket() {
 			window.open("home_ticket.jsp","new","width=500,height=500,top=100,left=100");
+
+		}
+		// 인원 선택시 좌석 선택가능
+		function adultClick(){
+			console.log('클릭!');
+			let dimmed=document.getElementById("dimmed");
+			dimmed.className='section section-seat';
 
 		}
 
@@ -171,6 +180,20 @@
 				pagenum--;
 
 			});
+
+			// 인원 선택시 활성화 .... 아직 고치는중
+			let adult_click=document.getElementsByClassName("adult_click");
+			for(let i=0; i<=adult_click.length-1;i++){
+				adult_click[i].addEventListener("click",function(){
+					this.className="selected adult_click";
+					console.log(i);
+
+				})
+
+			}
+
+
+
 
 
 
@@ -389,7 +412,7 @@
 				<!-- step2 -->
 				<div class="step step2" style="display: none;">
 					<!-- SEAT 섹션 -->
-					<div class="section section-seat dimmed four_line">
+					<div class="section section-seat dimmed" id="dimmed">
 						<div class="col-head" id="skip_seat_list">
 							<h3 class="sreader">
 								인원 / 좌석
@@ -433,13 +456,17 @@
 											<div class="group adult" id="nop_group_adult" style="display: block;">
 												<span class="title">일반</span>
 												<ul>
-													<li data-count="0" class="selected" type="adult"><a href="#" onclick="return false;"><span class="sreader mod">일반</span>0<span class="sreader">명</span></a></li>
-													<li data-count="1" type="adult"><a href="#" onclick="return false;"><span class="sreader mod">일반</span>1<span class="sreader">명</span></a></li>
-													<li data-count="2" type="adult" class=""><a href="#" onclick="return false;"><span class="sreader mod">일반</span>2<span class="sreader">명</span></a></li>
-													<li data-count="3" type="adult"><a href="#" onclick="return false;"><span class="sreader mod">일반</span>3<span class="sreader">명</span></a></li>
-													<li data-count="4" type="adult"><a href="#" onclick="return false;"><span class="sreader mod">일반</span>4<span class="sreader">명</span></a></li>
-													<li data-count="5" type="adult"><a href="#" onclick="return false;"><span class="sreader mod">일반</span>5<span class="sreader">명</span></a></li>
-													<li data-count="6" type="adult"><a href="#" onclick="return false;"><span class="sreader mod">일반</span>6<span class="sreader">명</span></a></li>
+													<li cldata-count="0" class="selected adult_click" type="adult">
+														<a href="#" onclick="adultClick()"><span class="sreader mod">일반</span>0<span class="sreader">명</span></a>
+													</li>
+													<li data-count="1" type="adult" class="adult_click">
+														<a href="#" onclick="adultClick()"><span class="sreader mod">일반</span>1<span class="sreader">명</span></a>
+													</li>
+													<li data-count="2" type="adult" class="adult_click"><a href="#" onclick="adultClick()"><span class="sreader mod">일반</span>2<span class="sreader">명</span></a></li>
+													<li data-count="3" type="adult" class="adult_click"><a href="#" onclick="adultClick()"><span class="sreader mod">일반</span>3<span class="sreader">명</span></a></li>
+													<li data-count="4" type="adult" class="adult_click"><a href="#" onclick="adultClick()"><span class="sreader mod">일반</span>4<span class="sreader">명</span></a></li>
+													<li data-count="5" type="adult" class="adult_click"><a href="#" onclick="adultClick()"><span class="sreader mod">일반</span>5<span class="sreader">명</span></a></li>
+													<li data-count="6" type="adult" class="adult_click"><a href="#" onclick="adultClick()"><span class="sreader mod">일반</span>6<span class="sreader">명</span></a></li>
 													<li data-count="7" type="adult" class="dimmed"><a href="#" onclick="return false;"><span class="sreader mod">일반</span>7<span class="sreader">명</span></a></li>
 													<li data-count="8" type="adult" class="dimmed"><a href="#" onclick="return false;"><span class="sreader mod">일반</span>8<span class="sreader">명</span></a></li>
 												</ul>
@@ -448,10 +475,10 @@
 												<span class="title">청소년</span>
 												<ul>
 													<li data-count="0" class="selected" type="youth"><a href="#" onclick="return false;"><span class="sreader mod">청소년</span>0<span class="sreader">명</span></a></li>
-													<li data-count="1" type="youth"><a href="#" onclick="return false;"><span class="sreader mod">청소년</span>1<span class="sreader">명</span></a></li>
-													<li data-count="2" type="youth"><a href="#" onclick="return false;"><span class="sreader mod">청소년</span>2<span class="sreader">명</span></a></li>
-													<li data-count="3" type="youth"><a href="#" onclick="return false;"><span class="sreader mod">청소년</span>3<span class="sreader">명</span></a></li>
-													<li data-count="4" type="youth"><a href="#" onclick="return false;"><span class="sreader mod">청소년</span>4<span class="sreader">명</span></a></li>
+													<li data-count="1" type="youth" class=""><a href="#" onclick="return false;"><span class="sreader mod">청소년</span>1<span class="sreader">명</span></a></li>
+													<li data-count="2" type="youth" class=""><a href="#" onclick="return false;"><span class="sreader mod">청소년</span>2<span class="sreader">명</span></a></li>
+													<li data-count="3" type="youth" class=""><a href="#" onclick="return false;"><span class="sreader mod">청소년</span>3<span class="sreader">명</span></a></li>
+													<li data-count="4" type="youth" class=""><a href="#" onclick="return false;"><span class="sreader mod">청소년</span>4<span class="sreader">명</span></a></li>
 													<li data-count="5" type="youth" class=""><a href="#" onclick="return false;"><span class="sreader mod">청소년</span>5<span class="sreader">명</span></a></li>
 													<li data-count="6" type="youth" class=""><a href="#" onclick="return false;"><span class="sreader mod">청소년</span>6<span class="sreader">명</span></a></li>
 													<li data-count="7" type="youth" class="dimmed"><a href="#" onclick="return false;"><span class="sreader mod">청소년</span>7<span class="sreader">명</span></a></li>
@@ -462,10 +489,10 @@
 												<span class="title">어린이</span>
 												<ul>
 													<li data-count="0" class="selected" type="child"><a href="#" onclick="return false;"><span class="sreader mod">어린이</span>0<span class="sreader">명</span></a></li>
-													<li data-count="1" type="child"><a href="#" onclick="return false;"><span class="sreader mod">어린이</span>1<span class="sreader">명</span></a></li>
-													<li data-count="2" type="child"><a href="#" onclick="return false;"><span class="sreader mod">어린이</span>2<span class="sreader">명</span></a></li>
-													<li data-count="3" type="child"><a href="#" onclick="return false;"><span class="sreader mod">어린이</span>3<span class="sreader">명</span></a></li>
-													<li data-count="4" type="child"><a href="#" onclick="return false;"><span class="sreader mod">어린이</span>4<span class="sreader">명</span></a></li>
+													<li data-count="1" type="child" class=""><a href="#" onclick="return false;"><span class="sreader mod">어린이</span>1<span class="sreader">명</span></a></li>
+													<li data-count="2" type="child" class=""><a href="#" onclick="return false;"><span class="sreader mod">어린이</span>2<span class="sreader">명</span></a></li>
+													<li data-count="3" type="child" class=""><a href="#" onclick="return false;"><span class="sreader mod">어린이</span>3<span class="sreader">명</span></a></li>
+													<li data-count="4" type="child" class=""><a href="#" onclick="return false;"><span class="sreader mod">어린이</span>4<span class="sreader">명</span></a></li>
 													<li data-count="5" type="child" class=""><a href="#" onclick="return false;"><span class="sreader mod">어린이</span>5<span class="sreader">명</span></a></li>
 													<li data-count="6" type="child" class=""><a href="#" onclick="return false;"><span class="sreader mod">어린이</span>6<span class="sreader">명</span></a></li>
 													<li data-count="7" type="child" class="dimmed"><a href="#" onclick="return false;"><span class="sreader mod">어린이</span>7<span class="sreader">명</span></a></li>
@@ -476,10 +503,10 @@
 												<span class="title">경로</span>
 												<ul>
 													<li data-count="0" class="selected" type="senior"><a href="#" onclick="return false;"><span class="sreader mod">경로</span>0<span class="sreader">명</span></a></li>
-													<li data-count="1" type="senior"><a href="#" onclick="return false;"><span class="sreader mod">경로</span>1<span class="sreader">명</span></a></li>
-													<li data-count="2" type="senior"><a href="#" onclick="return false;"><span class="sreader mod">경로</span>2<span class="sreader">명</span></a></li>
-													<li data-count="3" type="senior"><a href="#" onclick="return false;"><span class="sreader mod">경로</span>3<span class="sreader">명</span></a></li>
-													<li data-count="4" type="senior"><a href="#" onclick="return false;"><span class="sreader mod">경로</span>4<span class="sreader">명</span></a></li>
+													<li data-count="1" type="senior" class=""><a href="#" onclick="return false;"><span class="sreader mod">경로</span>1<span class="sreader">명</span></a></li>
+													<li data-count="2" type="senior" class=""><a href="#" onclick="return false;"><span class="sreader mod">경로</span>2<span class="sreader">명</span></a></li>
+													<li data-count="3" type="senior" class=""><a href="#" onclick="return false;"><span class="sreader mod">경로</span>3<span class="sreader">명</span></a></li>
+													<li data-count="4" type="senior" class=""><a href="#" onclick="return false;"><span class="sreader mod">경로</span>4<span class="sreader">명</span></a></li>
 													<li data-count="5" type="senior" class=""><a href="#" onclick="return false;"><span class="sreader mod">경로</span>5<span class="sreader">명</span></a></li>
 													<li data-count="6" type="senior" class=""><a href="#" onclick="return false;"><span class="sreader mod">경로</span>6<span class="sreader">명</span></a></li>
 													<li data-count="7" type="senior" class="dimmed"><a href="#" onclick="return false;"><span class="sreader mod">경로</span>7<span class="sreader">명</span></a></li>
@@ -490,10 +517,10 @@
 												<span class="title">우대</span>
 												<ul>
 													<li data-count="0" class="selected" type="special"><a href="#" onclick="return false;"><span class="sreader mod">우대</span>0<span class="sreader">명</span></a></li>
-													<li data-count="1" type="special"><a href="#" onclick="return false;"><span class="sreader mod">우대</span>1<span class="sreader">명</span></a></li>
-													<li data-count="2" type="special"><a href="#" onclick="return false;"><span class="sreader mod">우대</span>2<span class="sreader">명</span></a></li>
-													<li data-count="3" type="special"><a href="#" onclick="return false;"><span class="sreader mod">우대</span>3<span class="sreader">명</span></a></li>
-													<li data-count="4" type="special"><a href="#" onclick="return false;"><span class="sreader mod">우대</span>4<span class="sreader">명</span></a></li>
+													<li data-count="1" type="special" class=""><a href="#" onclick="return false;"><span class="sreader mod">우대</span>1<span class="sreader">명</span></a></li>
+													<li data-count="2" type="special" class=""><a href="#" onclick="return false;"><span class="sreader mod">우대</span>2<span class="sreader">명</span></a></li>
+													<li data-count="3" type="special" class=""><a href="#" onclick="return false;"><span class="sreader mod">우대</span>3<span class="sreader">명</span></a></li>
+													<li data-count="4" type="special" class=""><a href="#" onclick="return false;"><span class="sreader mod">우대</span>4<span class="sreader">명</span></a></li>
 													<li data-count="5" type="special" class=""><a href="#" onclick="return false;"><span class="sreader mod">우대</span>5<span class="sreader">명</span></a></li>
 													<li data-count="6" type="special" class=""><a href="#" onclick="return false;"><span class="sreader mod">우대</span>6<span class="sreader">명</span></a></li>
 													<li data-count="7" type="special" class="dimmed"><a href="#" onclick="return false;"><span class="sreader mod">우대</span>7<span class="sreader">명</span></a></li>

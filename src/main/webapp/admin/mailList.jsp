@@ -98,7 +98,7 @@
                         <tr>
                             <td>1</td>
                             <td>강남CGV</td>
-                            <td><a href="#">대관 문의는 어디서 하나요?</a></td>
+                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
                             <td>문의</td>
                             <td>2022-02-22</td>
                             <td style="background-color: #2c3034; color:white">접수완료</td>
@@ -107,7 +107,7 @@
                         <tr>
                             <td>2</td>
                             <td>강남CGV</td>
-                            <td><a href="#">미소지기가 너무 불친절해요</a></td>
+                            <td><a href="manage_AskAnswer.jsp">미소지기가 너무 불친절해요</a></td>
                             <td>불만</td>
                             <td>2022-02-22</td>
                             <td style="background-color: #2c3034; color:white">답변완료</td>
@@ -116,7 +116,7 @@
                         <tr>
                             <td>3</td>
                             <td>강변CGV</td>
-                            <td><a href="#">장애인석 문의</a></td>
+                            <td><a href="manage_AskAnswer.jsp">장애인석 문의</a></td>
                             <td>문의</td>
                             <td>2022-02-21</td>
                             <td style="background-color: #2c3034; color:white">접수완료</td>
@@ -125,7 +125,7 @@
                         <tr>
                             <td>4</td>
                             <td>강변CGV</td>
-                            <td><a href="#">대관 문의는 어디서 하나요?</a></td>
+                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
                             <td>문의</td>
                             <td>2022-02-21</td>
                             <td style="background-color: #2c3034; color:white">접수완료</td>
@@ -134,7 +134,7 @@
                         <tr>
                             <td>5</td>
                             <td>강변CGV</td>
-                            <td><a href="#">대관 문의는 어디서 하나요?</a></td>
+                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
                             <td>문의</td>
                             <td>2022-02-21</td>
                             <td style="background-color: #2c3034; color:white">접수완료</td>
@@ -143,7 +143,7 @@
                         <tr>
                             <td>6</td>
                             <td>강변CGV</td>
-                            <td><a href="#">대관 문의는 어디서 하나요?</a></td>
+                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
                             <td>문의</td>
                             <td>2022-02-21</td>
                             <td style="background-color: #2c3034; color:white">접수완료</td>
@@ -152,7 +152,7 @@
                         <tr>
                             <td>7</td>
                             <td>강남CGV</td>
-                            <td><a href="#">대관 문의는 어디서 하나요?</a></td>
+                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
                             <td>문의</td>
                             <td>2022-02-22</td>
                             <td style="background-color: #2c3034; color:white">접수완료</td>
@@ -161,7 +161,7 @@
                         <tr>
                             <td>8</td>
                             <td>강남CGV</td>
-                            <td><a href="#">대관 문의는 어디서 하나요?</a></td>
+                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
                             <td>문의</td>
                             <td>2022-02-22</td>
                             <td style="background-color: #2c3034; color:white">접수완료</td>
@@ -170,7 +170,7 @@
                         <tr>
                             <td>9</td>
                             <td>강남CGV</td>
-                            <td><a href="#">대관 문의는 어디서 하나요?</a></td>
+                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
                             <td>문의</td>
                             <td>2022-02-22</td>
                             <td style="background-color: #2c3034; color:white">접수완료</td>
@@ -179,7 +179,7 @@
                         <tr>
                             <td>10</td>
                             <td>강남CGV</td>
-                            <td><a href="#">대관 문의는 어디서 하나요?</a></td>
+                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
                             <td>문의</td>
                             <td>2022-02-22</td>
                             <td style="background-color: #2c3034; color:white">접수완료</td>
