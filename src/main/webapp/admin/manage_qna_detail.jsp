@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>manage_news_create</title>
+    <title>manage_qna_detail</title>
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -20,6 +21,8 @@
 
         });
     </script>
+
+
 </head>
 <body class="sb-nav-fixed" >
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -48,32 +51,56 @@
     </ul>
 </nav>
 
-
 <div id="headers"></div>
 
 <div id="layoutSidenav_content" style="margin-top:70px; margin-left: 240px">
     <main>
-        
 
-         
+        <div class="container-fluid px-4" >
+            <h4>자주 묻는 질문</h4>
+            <table style="width: 900px; border: #212121 solid 1px; text-align: center" cellspacing=5 cellpadding=10>
+                <tr style="border: #212121 solid 1px;">
+                    <td style="padding-left: 10px; border: #212121 solid 1px; width: 100px"><b>제 목</b></td>
+                    <td style="border: #212121 solid 1px;"><p style=" width:450px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">[홈페이지] 인터넷 예매 후 CGV 현장에서 환불(예매 취소)이 가능한가요?</p></td>
+                    <td style="border: #212121 solid 1px;"><span>등록일: </span> 2018.11.09</td>
+                    <td style="border: #212121 solid 1px;"><span>조회수: </span> 6871</td>
+                </tr>
 
+                <tr style="border: #212121 solid 1px;">
+                    <td style="padding-left: 10px; border: #212121 solid 1px;"><b>내 용</b></td>
+                    <td style="border: #212121 solid 1px; text-align: left" colspan="3">
+                      <p>
+                          인터넷 예매하신 부분은 상영시간 전까지는 CGV 현장에서 환불 가능합니다.<br/><br/>
+                          단, 부분 환불은 되지 않습니다.<br/>
 
-            </div>
+                          - 신용카드 환불의 경우 익일에 승인 취소를 확인하실 수 있습니다.<br/>
+                          - 예매일과 취소일이 다른 경우에 취소 확인 시까지 시일이 소요될 수 있습니다.<br/><br/>
+                      </p>
+                    </td>
+                </tr>
+            </table>
+
+            <p></p>
+            <p><input type="button" value="목록으로" style="color:indianred;margin-left: 820px" onclick="location.href='./manage_qna.jsp'"></p>
+
+            <table style="width: 900px; border-top: #212121 solid 1px; border-bottom: #212121 solid 0.5px;text-align: center" cellspacing=5 cellpadding=10>
+                <tr style="border: #212121 solid 1px;">
+                    <td style="padding-left: 10px; border: #212121 solid 1px; width: 100px"><b>▲ 이전글</b></td>
+                    <td style="border-left: #212121 solid 1px;">포토플레이 취소 및 환불 규정은 어떻게 되나요?</td>
+                    <td style="border-right: #212121 solid 1px;"><span>등록일 :</span> 2021.03.09 </td>
+                </tr>
+
+                <tr style="border: #212121 solid 1px;">
+                    <td style="padding-left: 10px; border: #212121 solid 1px; width: 100px"><b>▼ 다음글</b></td>
+                    <td style="border-left: #212121 solid 1px;">인터넷 예매 후 예매 내용 확인은 어떻게 하나요?</td>
+                    <td style="border-right: #212121 solid 1px;"><span>등록일: </span> 2018.11.09</td>
+                </tr>
+            </table>
+
         </div>
     </main>
-    <footer class="py-4 bg-light mt-auto">
-        <div class="container-fluid px-4">
-            <div class="d-flex align-items-center justify-content-between small">
-                <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                <div>
-                    <a href="#">Privacy Policy</a>
-                    &middot;
-                    <a href="#">Terms &amp; Conditions</a>
-                </div>
-            </div>
-        </div>
+</div>
 
-    </footer>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
@@ -83,5 +110,8 @@
 <script src="assets/demo/chart-bar-demo.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 <script src="js/datatables-simple-demo.js"></script>
+
+
 </body>
 </html>
+

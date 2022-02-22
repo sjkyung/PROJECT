@@ -40,8 +40,17 @@
 	<script type="text/javascript" src="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/reservation.step1.js"></script>
 	<script type="text/javascript" src="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/js/2022/0203.KIA_MEMBERS/1500/reservation.step2.js"></script>
 	<script type="text/javascript">
+
+		// 마지막 프린트기능 추가
 		function printHomeTicket() {
 			window.open("home_ticket.jsp","new","width=500,height=500,top=100,left=100");
+
+		}
+		// 인원 선택시 좌석 선택가능
+		function adultClick(){
+			console.log('클릭!');
+			let dimmed=document.getElementById("dimmed");
+			dimmed.className='section section-seat';
 
 		}
 
@@ -172,16 +181,15 @@
 
 			});
 
-			// 인원 선택시 활성화
+			// 인원 선택시 활성화 .... 아직 고치는중
+			let adult_click=document.getElementsByClassName("adult_click");
+			for(let i=0; i<=adult_click.length-1;i++){
+				adult_click[i].addEventListener("click",function(){
+					this.className="selected adult_click";
+					console.log(i);
 
-			let adult=document.getElementById("adult_click");
-			let adult_click=adult.childNodes;
-			let dimmed=document.getElementById("dimmed");
+				})
 
-			for(let i=0; i<=adult_click-1;i++){
-				adult_click[i].addEventListener("click", function(){
-					dimmed.className='section section-seat';
-				});
 			}
 
 
@@ -447,18 +455,18 @@
 											</div>
 											<div class="group adult" id="nop_group_adult" style="display: block;">
 												<span class="title">일반</span>
-												<ul id="adult_click">
-													<li data-count="0" class="selected" type="adult">
-														<a href="#" onclick="return false;"><span class="sreader mod">일반</span>0<span class="sreader">명</span></a>
+												<ul>
+													<li cldata-count="0" class="selected adult_click" type="adult">
+														<a href="#" onclick="adultClick()"><span class="sreader mod">일반</span>0<span class="sreader">명</span></a>
 													</li>
-													<li data-count="1" type="adult" class="">
-														<a href="#" onclick="return false;"><span class="sreader mod">일반</span>1<span class="sreader">명</span></a>
+													<li data-count="1" type="adult" class="adult_click">
+														<a href="#" onclick="adultClick()"><span class="sreader mod">일반</span>1<span class="sreader">명</span></a>
 													</li>
-													<li data-count="2" type="adult" class=""><a href="#" onclick="return false;"><span class="sreader mod">일반</span>2<span class="sreader">명</span></a></li>
-													<li data-count="3" type="adult" class=""><a href="#" onclick="return false;"><span class="sreader mod">일반</span>3<span class="sreader">명</span></a></li>
-													<li data-count="4" type="adult" class=""><a href="#" onclick="return false;"><span class="sreader mod">일반</span>4<span class="sreader">명</span></a></li>
-													<li data-count="5" type="adult" class=""><a href="#" onclick="return false;"><span class="sreader mod">일반</span>5<span class="sreader">명</span></a></li>
-													<li data-count="6" type="adult" class=""><a href="#" onclick="return false;"><span class="sreader mod">일반</span>6<span class="sreader">명</span></a></li>
+													<li data-count="2" type="adult" class="adult_click"><a href="#" onclick="adultClick()"><span class="sreader mod">일반</span>2<span class="sreader">명</span></a></li>
+													<li data-count="3" type="adult" class="adult_click"><a href="#" onclick="adultClick()"><span class="sreader mod">일반</span>3<span class="sreader">명</span></a></li>
+													<li data-count="4" type="adult" class="adult_click"><a href="#" onclick="adultClick()"><span class="sreader mod">일반</span>4<span class="sreader">명</span></a></li>
+													<li data-count="5" type="adult" class="adult_click"><a href="#" onclick="adultClick()"><span class="sreader mod">일반</span>5<span class="sreader">명</span></a></li>
+													<li data-count="6" type="adult" class="adult_click"><a href="#" onclick="adultClick()"><span class="sreader mod">일반</span>6<span class="sreader">명</span></a></li>
 													<li data-count="7" type="adult" class="dimmed"><a href="#" onclick="return false;"><span class="sreader mod">일반</span>7<span class="sreader">명</span></a></li>
 													<li data-count="8" type="adult" class="dimmed"><a href="#" onclick="return false;"><span class="sreader mod">일반</span>8<span class="sreader">명</span></a></li>
 												</ul>
