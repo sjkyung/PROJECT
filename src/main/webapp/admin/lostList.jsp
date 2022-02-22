@@ -97,7 +97,7 @@
                             <td>1</td>
                             <td>강남CGV</td>
                             <td>김선경</td>
-                            <td><a href="#">지갑을 분실했어요</a></td>
+                            <td><a href="manage_AskAnswer.jsp">지갑을 분실했어요</a></td>
                             <td>2022-02-22</td>
                             <td style="background-color: #2c3034; color:white">접수완료</td>
                         </tr>
@@ -105,7 +105,7 @@
                             <td>2</td>
                             <td>강남CGV</td>
                             <td>김선경</td>
-                            <td><a href="#">지갑을 분실했어요</a></td>
+                            <td><a href="manage_AskAnswer.jsp">지갑을 분실했어요</a></td>
                             <td>2022-02-22</td>
                             <td style="background-color: #2c3034; color:white">접수완료</td>
                         </tr>
@@ -113,7 +113,7 @@
                             <td>3</td>
                             <td>강남CGV</td>
                             <td>김선경</td>
-                            <td><a href="#">지갑을 분실했어요</a></td>
+                            <td><a href="manage_AskAnswer.jsp">지갑을 분실했어요</a></td>
                             <td>2022-02-22</td>
                             <td style="background-color: #2c3034; color:white">접수완료</td>
                         </tr>
@@ -121,7 +121,7 @@
                             <td>4</td>
                             <td>강남CGV</td>
                             <td>김선경</td>
-                            <td><a href="#">지갑을 분실했어요</a></td>
+                            <td><a href="manage_AskAnswer.jsp">지갑을 분실했어요</a></td>
                             <td>2022-02-22</td>
                             <td style="background-color: #2c3034; color:white">접수완료</td>
                         </tr>
