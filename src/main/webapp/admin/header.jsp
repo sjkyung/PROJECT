@@ -64,8 +64,8 @@
                         </a>
                         <div class="collapse" id="notice" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="testpage.jsp" style="font-size:15px; padding-left:30px;">공지</a>
-                                <a class="nav-link" href="./manage_qna.jsp" style="font-size:15px; padding-left:30px;">자주 묻는 질문</a>
+                                <a class="nav-link" href="manage_news.jsp" style="font-size:15px; padding-left:30px;">공지</a>
+                                <a class="nav-link" href="manage_qna.jsp" style="font-size:15px; padding-left:30px;">자주 묻는 질문</a>
                             </nav>
                     </div>
 

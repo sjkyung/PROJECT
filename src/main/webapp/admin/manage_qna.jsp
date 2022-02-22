@@ -49,6 +49,14 @@
     </ul>
 </nav>
 
+<script>
+    function go_detail() {
+        // location.href = "manage_qna_detail?num=1";
+        location.href = "manage_qna_detail.jsp";
+        return true;
+
+    }
+</script>
 
 <div id="headers"></div>
 
@@ -61,7 +69,7 @@
                     <i class="fas fa-table me-1"></i>
                     자주 묻는 질문
 
-                    <input type="button" value="시스템점검" onclick="location.href='#'"/>
+<%--                    <input type="button" value="시스템점검" onclick="location.href='#'"/>--%>
                     <input type="button" value="질문 / 답변 작성" onclick="location.href='./managa_qna_write.jsp'"/>
 
                 </div>
@@ -87,8 +95,8 @@
                         </tr>
                         </tfoot>
                         <tbody>
-                        <tr>
-                            <td style="width: 10%;">1</td>
+                        <tr onclick="go_detail()">
+                            <td style="width: 10%;">4</td>
                             <td style="width: 15%;">[홈페이지/모바일] </td>
                             <td style="width: 30%;">인터넷 예매 후 CGV 현장에서 환불(예매 취소)이 가능한가요?</td>
                             <td style="width: 15%;">2022.2.17</td>
@@ -96,7 +104,7 @@
 
                         </tr>
                         <tr>
-                            <td>2</td>
+                            <td>3</td>
                             <td>[VIP관련] </td>
                             <td>VIP 등급별 유지, 선정 포인트를 알고 싶어요</td>
                             <td>2022.2.17</td>
@@ -104,7 +112,7 @@
 
                         </tr>
                         <tr>
-                            <td>3</td>
+                            <td>2</td>
                             <td>[멤버쉽/클럽서비스] </td>
                             <td>아이핀(I-PIN) 이 무엇인가요?</td>
                             <td>2022.2.17</td>
@@ -112,7 +120,7 @@
 
                         </tr>
                         <tr>
-                            <td>4</td>
+                            <td>1</td>
                             <td>[관람권/결제수단] </td>
                             <td>관람권 사용해서 예매했는데 현금영수증 발행을 못했어요!</td>
                             <td>2022.2.17</td>
