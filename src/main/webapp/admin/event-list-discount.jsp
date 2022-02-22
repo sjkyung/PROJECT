@@ -16,7 +16,6 @@
         $(document).ready( function() {
 
             $("#headers").load("header.jsp");
-
         });
     </script>
 </head>
