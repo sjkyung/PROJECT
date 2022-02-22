@@ -41,3 +41,4 @@ tmp/
 .target
 /build/
 target/
+WEB-INF/web.xml
