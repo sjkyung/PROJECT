@@ -66,70 +66,83 @@
         <div class="container-fluid px-4" style="margin:0 auto;">
         	<h2 style="text-align:center;">상영중인 영화 등록</h2>
         	<form style="width:40%; border:solid 2px red; border-radius:10px; padding:5%; margin:0 auto;">
-			    <div class="form-row">
-                    <div class="col">영화코드
-                        <input type="textbox">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">영화코드</label>
+                      <input type="text" class="form-control" id="input" placeholder="">
                     </div>
-                    <div class="col">상영여부
-                        <input type="textbox">
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">상영여부</label>
+                      <input type="text" class="form-control" id="input" placeholder="">
                     </div>
-                </div>
-                <hr/>
+                    </div>
+                <hr/> 
+                <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">영화명</label>
+                    <input type="text" class="form-control" id="input" placeholder="">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">영화명(영문)</label>
+                    <input type="text" class="form-control" id="input" placeholder="">
+                  </div>
+                  </div>    
+              <hr/>
+              <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">개봉일</label>
+                <input type="text" class="form-control" id="input" placeholder="">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">재개봉여부</label>
+                <input type="text" class="form-control" id="input" placeholder="">
+              </div>
+              </div>   
+              <hr/>
+              
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">제작국가</label>
+                    <input type="text" class="form-control" id="input" placeholder="">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">시간</label>
+                    <input type="text" class="form-control" id="input" placeholder="">
+                  </div>
+               </div>     
+              <hr/>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">장르</label>
+                    <input type="text" class="form-control" id="input" placeholder="">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">관람 나이</label>
+                    <input type="text" class="form-control" id="input" placeholder="">
+                  </div>
+               </div>
+                 
+              <hr/>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">감독</label>
+                    <input type="text" class="form-control" id="input" placeholder="">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">출연 배우</label>
+                    <input type="text" class="form-control" id="input" placeholder="">
+                  </div>
              
-             
-			  <div class="form-row">
-                <div class="col">영화명
-                        <input type="textbox">
-                    </div>
-                    <div class="col">영화명(영문)
-                        <input type="textbox">
-                    </div>
-               </div>     
-              <hr/>
-              <div class="form-row">
-                <div class="col">개봉일
-                        <input type="textbox">
-                    </div>
-                    <div class="col">재개봉여부
-                        <input type="textbox">
-                    </div>
-               </div>     
-              <hr/>
-              <div class="form-row">
-                <div class="col">제작국가
-                        <input type="textbox">
-                    </div>
-                    <div class="col">시간
-                        <input type="textbox">
-                    </div>
-               </div>     
-              <hr/>
-              <div class="form-row">
-                <div class="col">장르
-                        <input type="textbox">
-                    </div>
-                    <div class="col">관람나이
-                        <input type="textbox">
-                    </div>
-               </div>     
-              <hr/>
-              <div class="form-row">
-                <div class="col">감독
-                        <input type="textbox">
-                    </div>
-                    <div class="col">출연 배우
-                        <input type="textbox">
-                    </div>
                </div>     
               <hr/>
               <div class="form-group">
 			    <label for="exampleFormControlFile1" >파일등록</label>
 			    <input type="file" class="form-control-file" id="exampleFormControlFile1" >
-            </hr>
+            <hr/>
               <button type="reset" class="btn btn-primary" >리셋</button>
               <button type="submit" class="btn btn-primary" style="background-color: #F08080">작성</button>
         </div>
-    </hr>
+    
 			</form>
         </div>
     </main>
