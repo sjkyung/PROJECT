@@ -1,3 +1,17 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: small
+  Date: 2022-02-23
+  Time: 오후 7:46
+  To change this template use File | Settings | File Templates.
+--%>
+<%--
+  Created by IntelliJ IDEA.
+  User: small
+  Date: 2022-02-23
+  Time: 오후 6:29
+  To change this template use File | Settings | File Templates.
+--%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
@@ -21,13 +35,6 @@
 
         });
     </script>
-    <style>
-        td>a{
-            text-decoration: none;
-            color:black;
-        }
-
-    </style>
 </head>
 <body class="sb-nav-fixed" >
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -66,59 +73,44 @@
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    문의관리 - 대관
+                    예매 내역 조회
                 </div>
-                <div class="card-body">
-                    <table id="datatablesSimple">
-                        <thead>
-                        <tr>
-                            <th>번호</th>
-                            <th>대관CGV</th>
-                            <th>문의자</th>
-                            <th>등록일</th>
-                            <th>대관요청일</th>
-                            <th>상태</th>
-                        </tr>
-                        </thead>
-                        <tfoot>
-                        <tr>
-                            <th>번호</th>
-                            <th>대관CGV</th>
-                            <th>문의자</th>
-                            <th>등록일</th>
-                            <th>대관요청일</th>
-                            <th>상태</th>
-                        </tr>
-                        </tfoot>
-                        <tbody>
-                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
-                            <td>1</td>
-                            <td>강남CGV</td>
-                            <td><a href="">김선경</a></td>
-                            <td>2022-02-22</td>
-                            <td>2022-02-26</td>
-                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
-                        </tr>
-                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
-                            <td>2</td>
-                            <td>신촌CGV</td>
-                            <td>김선경</td>
-                            <td>2022-01-20</td>
-                            <td>2022-02-20</td>
-                            <td style="background-color: #a94442; color:white; font-weight: bold">완료</td>
-                        </tr>
-                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
-                            <td>3</td>
-                            <td>강변CGV</td>
-                            <td>김선경</td>
-                            <td>2022-02-22</td>
-                            <td>2022-02-26</td>
-                            <td style="background-color: #a94442; color:white; font-weight: bold">완료</td>
-                        </tr>
+                <div class="card-body" style="margin: 0 auto;">
+                    <div style="border:1px solid #a52834; border-radius: 10px; width: 700px; height: auto; margin-top:10%; padding:20px"  >
+
+                        <h2 style="text-align: center">김사과 님</h2>
+                        <p style="text-align: center">appleid</p>
+                        <p style="text-align: center">010-0000-0000</p>
+                        <hr/>
+
+                        <div style="width:50%;height:auto; text-align: center; margin:0 auto; ">
+                            <p>예매번호: <input class="form-control" value="0001-0218-1234-432" readonly></p>
+                            <p>관람극장: <input class="form-control" value="CGV 강변" readonly></p>
+                        </div>
+                        <div style="width:50%;height:auto; text-align: center; margin:0 auto; ">
+                            <p>관람일시: <input class="form-control" value="2022.02.22(화) 17:50" readonly></p>
+                            <p>상영관: <input class="form-control" value="8관" readonly></p>
+                            <p>관람인원: <input class="form-control" value="일반 1" readonly></p>
+                        </div>
+                        <div style="width:50%;height:auto; text-align: center; margin:0 auto; ">
+                            <p>관람좌석: <input class="form-control" value="F08" readonly></p>
+                            <p>결제일: <input class="form-control" value="2022.02.18(화) 14:00" readonly></p>
+                            </p>
+                        </div>
+                        <div></div>
 
 
-                        </tbody>
-                    </table>
+                    </div>
+
+
+
+                </div>
+                <div style="width:50%;height:auto; text-align: center; margin:0 auto; " >
+                    <input onclick="location.href='./member-ticket.jsp'" class="btn btn-default" type="button" value="목록">
+                    <input class="btn btn-default" type="submit" value="예매취소">
+                </div>
+                <div style="width:50%;height:auto; text-align: center; margin:0 auto; " >
+                    <input onclick="location.href='./member-paymentlist.jsp'" class="btn btn-default" type="submit" value="결제내역">
                 </div>
 
 
@@ -137,3 +129,5 @@
 <script src="js/datatables-simple-demo.js"></script>
 </body>
 </html>
+
+

@@ -86,7 +86,7 @@
                         </tr>
                         </tfoot>
                         <tbody>
-                        <tr>
+                        <tr onclick="location.href='./manage_user_view.jsp'">
                             <td style="width: 10%;">apple</td>
                             <td style="width: 10%;">1234</td>
                             <td style="width: 15%;">010-1111-1111</td>
@@ -95,7 +95,7 @@
                             <td style="width: 15%;">2020/02/02</td>
                             <td style="width: 15%;">50,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_user_view.jsp'">
                             <td>banana</td>
                             <td>5678</td>
                             <td>010-2222-2222</td>
@@ -104,7 +104,16 @@
                             <td>2020/01/02</td>
                             <td>5,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_user_view.jsp'">
+                            <td>apple</td>
+                            <td>1234</td>
+                            <td>010-3333-3333</td>
+                            <td>서울특별시 강남구 양재동</td>
+                            <td>15</td>
+                            <td>2020/12/02</td>
+                            <td>4,000 P</td>
+                        </tr>
+                        <tr onclick="location.href='./manage_user_view.jsp'">
                             <td>hello</td>
                             <td>1234</td>
                             <td>010-3333-3333</td>
@@ -113,16 +122,7 @@
                             <td>2020/12/02</td>
                             <td>4,000 P</td>
                         </tr>
-                        <tr>
-                            <td>hello</td>
-                            <td>1234</td>
-                            <td>010-3333-3333</td>
-                            <td>서울특별시 강남구 양재동</td>
-                            <td>15</td>
-                            <td>2020/12/02</td>
-                            <td>4,000 P</td>
-                        </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_user_view.jsp'">
                             <td>banana</td>
                             <td>5678</td>
                             <td>010-2222-2222</td>
@@ -131,7 +131,7 @@
                             <td>2020/01/02</td>
                             <td>5,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_user_view.jsp'">
                             <td>hello</td>
                             <td>1234</td>
                             <td>010-3333-3333</td>
@@ -140,7 +140,7 @@
                             <td>2020/12/02</td>
                             <td>4,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_user_view.jsp'">
                             <td>hello</td>
                             <td>1234</td>
                             <td>010-3333-3333</td>
@@ -149,7 +149,7 @@
                             <td>2020/12/02</td>
                             <td>4,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_user_view.jsp'">
                             <td>banana</td>
                             <td>5678</td>
                             <td>010-2222-2222</td>
@@ -158,7 +158,7 @@
                             <td>2020/01/02</td>
                             <td>5,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_user_view.jsp'">
                             <td>hello</td>
                             <td>1234</td>
                             <td>010-3333-3333</td>
@@ -167,7 +167,7 @@
                             <td>2020/12/02</td>
                             <td>4,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_user_view.jsp'">
                             <td>hello</td>
                             <td>1234</td>
                             <td>010-3333-3333</td>
@@ -176,7 +176,7 @@
                             <td>2020/12/02</td>
                             <td>4,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_user_view.jsp'">
                             <td>banana</td>
                             <td>5678</td>
                             <td>010-2222-2222</td>
@@ -185,7 +185,7 @@
                             <td>2020/01/02</td>
                             <td>5,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_user_view.jsp'">
                             <td>hello</td>
                             <td>1234</td>
                             <td>010-3333-3333</td>
