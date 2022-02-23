@@ -89,7 +89,7 @@
                         </tr>
                         </tfoot>
                         <tbody>
-                        <tr>
+                        <tr onclick="location.href='manage_ticketing_view.jsp'">
                             <td style="width: 10%;">apple</td>
                             <td style="width: 10%;">0001-0218-1234-432</td>
                             <td style="width: 10%;">CGV 강변</td>
@@ -99,7 +99,7 @@
                             <td style="width: 10%;">F08</td>
                             <td style="width: 15%;">2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='manage_ticketing_view.jsp'">
                             <td>None</td>
                             <td>0002-0220-1234-123</td>
                             <td>CGV 구리</td>
@@ -109,7 +109,7 @@
                             <td>G12</td>
                             <td>2022.02.20(화) 11:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='manage_ticketing_view.jsp'">
                             <td>banana</td>
                             <td>0001-0220-1234-456</td>
                             <td>CGV 광교</td>
@@ -119,7 +119,7 @@
                             <td>A10</td>
                             <td>2022.02.19(월) 13:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='manage_ticketing_view.jsp'">
                             <td>apple</td>
                             <td>0001-0218-1234-432</td>
                             <td>CGV 강변</td>
@@ -129,7 +129,7 @@
                             <td>F08</td>
                             <td>2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='manage_ticketing_view.jsp'">
                             <td>None</td>
                             <td>0002-0220-1234-123</td>
                             <td>CGV 구리</td>
@@ -139,7 +139,7 @@
                             <td>G12</td>
                             <td>2022.02.20(화) 11:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='manage_ticketing_view.jsp'">
                             <td>banana</td>
                             <td>0001-0220-1234-456</td>
                             <td>CGV 광교</td>
@@ -149,7 +149,7 @@
                             <td>A10</td>
                             <td>2022.02.19(월) 13:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='manage_ticketing_view.jsp'">
                             <td>banana</td>
                             <td>0001-0220-1234-456</td>
                             <td>CGV 광교</td>
@@ -159,7 +159,7 @@
                             <td>A10</td>
                             <td>2022.02.19(월) 13:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='manage_ticketing_view.jsp'">
                             <td>None</td>
                             <td>0002-0220-1234-123</td>
                             <td>CGV 구리</td>
@@ -169,7 +169,7 @@
                             <td>G12</td>
                             <td>2022.02.20(화) 11:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='manage_ticketing_view.jsp'">
                             <td>banana</td>
                             <td>0001-0220-1234-456</td>
                             <td>CGV 광교</td>
@@ -179,7 +179,7 @@
                             <td>A10</td>
                             <td>2022.02.19(월) 13:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='manage_ticketing_view.jsp'">
                             <td>banana</td>
                             <td>0001-0220-1234-456</td>
                             <td>CGV 광교</td>
@@ -189,7 +189,7 @@
                             <td>A10</td>
                             <td>2022.02.19(월) 13:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='manage_ticketing_view.jsp'">
                             <td>None</td>
                             <td>0002-0220-1234-123</td>
                             <td>CGV 구리</td>
@@ -199,7 +199,7 @@
                             <td>G12</td>
                             <td>2022.02.20(화) 11:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='manage_ticketing_view.jsp'">
                             <td>banana</td>
                             <td>0001-0220-1234-456</td>
                             <td>CGV 광교</td>
