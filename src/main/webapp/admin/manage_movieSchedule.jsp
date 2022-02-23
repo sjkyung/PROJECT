@@ -1,24 +1,14 @@
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-
-  to-fit=no">
-    <!-- Custom styles for this template -->
-    <link href="/css/jumbotron-narrow.css" rel="stylesheet">
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>movie-schedule</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>영화 관리</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -34,7 +24,7 @@
 <body class="sb-nav-fixed" >
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="../../../../../../Downloads/cgv_admin/index.html">CGV Administrator</a>
+    <a class="navbar-brand ps-3" href="main.jsp">CGV Administrator</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <!-- Navbar Search-->
@@ -60,58 +50,156 @@
 
 
 <div id="headers"></div>
-	
-<div id="layoutSidenav_content" style="margin-top:100px; margin-left: 240px">
+
+<div id="layoutSidenav_content" style="margin-top:70px; margin-left: 240px">
     <main>
-        <div class="container-fluid px-4" style="margin:0 auto;">
-        	<h2 style="text-align:center;">영화 상영 스케줄 등록</h2>
-        	<form style="width:40%; border:solid 2px red; border-radius:10px; padding:5%; margin:0 auto;">
-			  <div class="form-group">
-			    <label for="exampleInputEmail1">상영관</label>
-                <select class="form-control">
-                    <option></option>
-                    <option >1관</option>
-                    <option >2관</option>
-                    <option >3관</option>
-                    <option >4관</option>
-                    <option >5관</option>
-                    <option >6관</option>
-                </select>
-			  </div>
-			  <hr/>
-			  <label for="exampleInputEmail1">영화코드</label>
-			  <select class="form-control">
-				  <option></option>
-                  <option >극장판 주술회전 0(20220217)</option>
-                  <option >언차티드(20220216)</option>
-                  <option >나일 강의 죽음(20220209)</option>
-                  <option >리코리쉬 피자(20220216)</option>
-                  <option >더배트맨(20220301)</option>
-                  <option >안테벨룸(20220223)</option>
-			  </select>
-			  <hr/>
-			  <label for="exampleInputEmail1">상영일</label>
-			  <div class="form-row">
-			    <div class="col">
-			      <input type="date" class="form-control" placeholder="yyyy-mm-dd">
-			    </div>
-			  </div>
-			  <hr/>
-			  <label for="exampleInputEmail1">상영시간</label>
-			  <div class="form-row">
-			    <div class="col">시작시간
-			      <input type="time" class="form-control" placeholder="">
-			    </div>
-			    <h2 style="margin-top: 20px;"> ~ </h2>
-			    <div class="col">종료시간
-			      <input type="time" class="form-control" placeholder="">
-			    </div>
-			  </div>
-              <hr/>
-              <button type="reset" class="btn btn-primary" >리셋</button>
-              <button type="submit" class="btn btn-primary" style="background-color: #F08080">작성</button>
-			  
-			</form>
+        <div class="container-fluid px-4" >
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    영화 상영 스케줄
+                    <input type="button" value="새로운 스케줄 등록" onclick="location.href='./manage_movieSchedule_create.jsp'"   style="background-color: #F08080; float:right"/>
+                </div>
+                <div class="card-body">
+                    <table id="datatablesSimple">
+                        <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>상영관</th>
+                            <th>영화제목/(코드)</th>
+                            <th>상영일</th>
+                            <th>시작시간</th>
+                            <th>종료시간</th>
+                            <th>regdate</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>No</th>
+                            <th>상영관</th>
+                            <th>영화제목/(코드)</th>
+                            <th>상영일</th>
+                            <th>시작시간</th>
+                            <th>종료시간</th>
+                            <th>regdate</th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                        <tr>
+                            <td style="width: 10%;">12</td>
+                            <td style="width: 10%;">6관 </td>
+                            <td style="width: 25%;">나일 강의 죽음 (20220217)</td>
+                            <td style="width: 20%;">2022.2.17</td>
+                            <td style="width: 10%;">20 : 00</td>
+                            <td style="width: 10%;">22 : 17</td>
+                            <td style="width: 15%;">2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>5관 </td>
+                            <td>언차티드 (20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>18 : 35</td>
+                            <td>20 : 41</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>5관 </td>
+                            <td>언차티드 (20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>16 : 10</td>
+                            <td>18 : 16</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>3관 </td>
+                            <td>언차티드 (20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>17 : 15</td>
+                            <td>19 : 21</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>4관 </td>
+                            <td>언차티드 (20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>20 : 15</td>
+                            <td>22 : 21</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>4관 </td>
+                            <td>언차티드 (20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>17 : 50</td>
+                            <td>19 : 56</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>4관 </td>
+                            <td>극장판-주술회전 0(20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>15 : 30</td>
+                            <td>17 : 25</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>3관 </td>
+                            <td>극장판-주술회전 0(20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>21 : 50</td>
+                            <td>23 : 45</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>3관 </td>
+                            <td>극장판-주술회전 0(20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>19 : 40</td>
+                            <td>21 : 35</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>1관 </td>
+                            <td>극장판-주술회전 0(20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>20 : 50</td>
+                            <td>22 : 45</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>1관 </td>
+                            <td>극장판-주술회전 0(20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>18 : 40</td>
+                            <td>20 : 35</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1관 </td>
+                            <td>극장판-주술회전 0(20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>16 : 30</td>
+                            <td>18 : 25</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
         </div>
     </main>
     <footer class="py-4 bg-light mt-auto">
