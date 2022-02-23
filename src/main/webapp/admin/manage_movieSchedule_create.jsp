@@ -64,12 +64,12 @@
 <div id="layoutSidenav_content" style="margin-top:100px; margin-left: 240px">
     <main>
         <div class="container-fluid px-4" style="margin:0 auto;">
-        	<h2 style="text-align:center;">상영관 등록</h2>
+        	<h2 style="text-align:center;">영화 상영 스케줄 등록</h2>
         	<form style="width:40%; border:solid 2px red; border-radius:10px; padding:5%; margin:0 auto;">
-			    <div class="form-row">
-                    <div class="col">상영관
-                        <select class="form-control">
-                    <option>관 선택해주세요</option>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">상영관</label>
+                <select class="form-control">
+                    <option></option>
                     <option >1관</option>
                     <option >2관</option>
                     <option >3관</option>
@@ -77,68 +77,34 @@
                     <option >5관</option>
                     <option >6관</option>
                 </select>
-            </div>
-                <div class="col">상영관명
-                <select class="form-control">
-                        
-                    <option>상영관명 선택해주세요</option>
-                    <option >2D</option>
-                    <option >2D(자막)</option>
-                    <option >3D</option>
-                    <option >SCREENX 2D</option>
-                </select>
-            </div>
-        </div>
-			 
+			  </div>
 			  <hr/>
-              <div class="form-row">
-                <div class="col">특별관
-                    <select class="form-control">
-                <option></option>
-                <option ></option>
-                <option ></option>
-                <option ></option>
-                <option ></option>
-                <option ></option>
-            </select>
-        </div>
-			 
-        <div class="col">위치
-            <select class="form-control">
-                <option>위치 선택해주세요</option>
-                <option >6층</option>
-                <option >8층</option>
-                <option >10층</option>
-                </select>
-            </div>
-        </div>
-              <hr/>
-              <label for="exampleInputEmail1">총 좌석수</label>
+			  <label for="exampleInputEmail1">영화코드</label>
 			  <select class="form-control">
-                <option></option>
-                <option >124석</option>
-                <option >158석</option>
-                <option >172석</option>
-                </select>
-              <hr/>
-             
+				  <option></option>
+                  <option >극장판 주술회전 0(20220217)</option>
+                  <option >언차티드(20220216)</option>
+                  <option >나일 강의 죽음(20220209)</option>
+                  <option >리코리쉬 피자(20220216)</option>
+                  <option >더배트맨(20220301)</option>
+                  <option >안테벨룸(20220223)</option>
+			  </select>
+			  <hr/>
+			  <label for="exampleInputEmail1">상영일</label>
 			  <div class="form-row">
-			    <div class="col">일반석
-                    <select class="form-control">
-                        <option></option>
-                        <option value="115석">115석</option>
-                        <option value="143석">143석</option>
-                        <option value="155석">155석</option>
-                        </select>
+			    <div class="col">
+			      <input type="date" class="form-control" placeholder="yyyy-mm-dd">
 			    </div>
-			
-			    <div class="col">장애인석
-                    <select class="form-control">
-                        <option></option>
-                        <option value="9석">9석</option>
-                        <option value="15석">15석</option>
-                        <option value="17석">17석</option>
-                        </select>
+			  </div>
+			  <hr/>
+			  <label for="exampleInputEmail1">상영시간</label>
+			  <div class="form-row">
+			    <div class="col">시작시간
+			      <input type="time" class="form-control" placeholder="">
+			    </div>
+			    <h2 style="margin-top: 20px;"> ~ </h2>
+			    <div class="col">종료시간
+			      <input type="time" class="form-control" placeholder="">
 			    </div>
 			  </div>
               <hr/>

@@ -58,52 +58,144 @@
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    영화 상영 스케줄 등록
+                    영화 상영 스케줄
+                    <input type="button" value="새로운 스케줄 등록" onclick="location.href='./manage_movieSchedule_create.jsp'"   style="background-color: #F08080; float:right"/>
                 </div>
-
-                <div>
-                    <form action="" method="">
-                        <table border="1">
-                            <th colspan="4">새로운 영화 상영 스케줄 등록하기</th>
-                            <tr><!-- 첫번째 줄 시작 -->
-                                <td>상영관</td>
-                                <td><select name="상영관"> 
-                                    <option value="1관">1관</option>
-                                    <option value="2관">2관</option>
-                                    <option value="3관">3관</option>
-                                    <option value="4관">4관</option>
-                                    <option value="5관">5관</option>
-                                    <option value="6관">6관</option>
-                                    </select>
-                                </td>
-                                <td>영화 코드</td>
-                                <td>
-                                    <select name="movieCode">
-                                        <option value="20220217">극장판 주술회전 0(20220217)</option>
-                                        <option value="20220216">언차티드(20220216)</option>
-                                        <option value="20220209">나일 강의 죽음(20220209)</option>
-                                        <option value="20220216">리코리쉬 피자(20220216)</option>
-                                        <option value="20220301">더배트맨(20220301)</option>
-                                        <option value="20220223">안테벨룸(20220223)</option>
-                                    </select>
-                                </td>
-                            </tr><!-- 첫번째 줄 끝 -->
-                            <tr><!-- 두번째 줄 시작 -->
-                                <td colspan="2">상영일</td>
-                                <td>
-                                   <input type="date" value="startday">
-                                </td>
-                                <td></td>
-                            </tr><!-- 두번째 줄 끝 -->
-                            <tr><!-- 두번째 줄 시작 -->
-                                <td>시작 시간</td>
-                                <td> <input type="time" value="starttime"></td>
-                                <td>종료 시간</td>
-                                <td><input type="time" value="endtime"></td>
-                            </tr><!-- 두번째 줄 끝 -->
-                        </table>
-                        <input type="reset" value="리셋"><input type="submit" value="등록">
-                    </form>
+                <div class="card-body">
+                    <table id="datatablesSimple">
+                        <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>상영관</th>
+                            <th>영화제목/(코드)</th>
+                            <th>상영일</th>
+                            <th>시작시간</th>
+                            <th>종료시간</th>
+                            <th>regdate</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>No</th>
+                            <th>상영관</th>
+                            <th>영화제목/(코드)</th>
+                            <th>상영일</th>
+                            <th>시작시간</th>
+                            <th>종료시간</th>
+                            <th>regdate</th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                        <tr>
+                            <td style="width: 10%;">12</td>
+                            <td style="width: 10%;">6관 </td>
+                            <td style="width: 25%;">나일 강의 죽음 (20220217)</td>
+                            <td style="width: 20%;">2022.2.17</td>
+                            <td style="width: 10%;">20 : 00</td>
+                            <td style="width: 10%;">22 : 17</td>
+                            <td style="width: 15%;">2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>5관 </td>
+                            <td>언차티드 (20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>18 : 35</td>
+                            <td>20 : 41</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>5관 </td>
+                            <td>언차티드 (20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>16 : 10</td>
+                            <td>18 : 16</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>3관 </td>
+                            <td>언차티드 (20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>17 : 15</td>
+                            <td>19 : 21</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>4관 </td>
+                            <td>언차티드 (20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>20 : 15</td>
+                            <td>22 : 21</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>4관 </td>
+                            <td>언차티드 (20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>17 : 50</td>
+                            <td>19 : 56</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>4관 </td>
+                            <td>극장판-주술회전 0(20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>15 : 30</td>
+                            <td>17 : 25</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>3관 </td>
+                            <td>극장판-주술회전 0(20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>21 : 50</td>
+                            <td>23 : 45</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>3관 </td>
+                            <td>극장판-주술회전 0(20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>19 : 40</td>
+                            <td>21 : 35</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>1관 </td>
+                            <td>극장판-주술회전 0(20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>20 : 50</td>
+                            <td>22 : 45</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>1관 </td>
+                            <td>극장판-주술회전 0(20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>18 : 40</td>
+                            <td>20 : 35</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1관 </td>
+                            <td>극장판-주술회전 0(20220217)</td>
+                            <td>2022.2.17</td>
+                            <td>16 : 30</td>
+                            <td>18 : 25</td>
+                            <td>2022-2-17</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
 
 

@@ -22,6 +22,14 @@
 
         });
     </script>
+     <style>
+        td> input{
+            width:100px;
+        }
+        .inner_button{
+            width:100px
+        }
+    </style>
 </head>
 <body class="sb-nav-fixed" >
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -109,7 +117,9 @@
                                
                                          
                                 </div>
-                                <div style ="width: 100px"><input type="button" value="수정" onclick="location.href='./manage_pricerm_create.jsp'"></div>
+                                <div >
+                                    <input class="inner_button" type="button" value="수정" onclick="location.href='./manage_pricerm_create.jsp'">
+                                </div>
                 </div>
 
               
