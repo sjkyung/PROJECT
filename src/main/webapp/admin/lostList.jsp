@@ -26,9 +26,7 @@
             text-decoration: none;
             color:black;
         }
-        td>a:hover{
-            border-bottom: 2px solid blue;
-        }
+
     </style>
 </head>
 <body class="sb-nav-fixed" >
@@ -93,85 +91,85 @@
                         </tr>
                         </tfoot>
                         <tbody>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>1</td>
                             <td>강남CGV</td>
                             <td>김선경</td>
-                            <td><a href="manage_AskAnswer.jsp">지갑을 분실했어요</a></td>
+                            <td>지갑을 분실했어요</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>2</td>
                             <td>강남CGV</td>
                             <td>김선경</td>
-                            <td><a href="manage_AskAnswer.jsp">지갑을 분실했어요</a></td>
+                            <td>지갑을 분실했어요</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>3</td>
                             <td>강남CGV</td>
                             <td>김선경</td>
-                            <td><a href="manage_AskAnswer.jsp">지갑을 분실했어요</a></td>
+                            <td>지갑을 분실했어요</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>4</td>
                             <td>강남CGV</td>
                             <td>김선경</td>
-                            <td><a href="manage_AskAnswer.jsp">지갑을 분실했어요</a></td>
+                            <td>지갑을 분실했어요</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>5</td>
                             <td>강남CGV</td>
                             <td>김선경</td>
-                            <td><a href="main.jsp">지갑을 분실했어요</a></td>
+                            <td>지갑을 분실했어요</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>6</td>
                             <td>강남CGV</td>
                             <td>김선경</td>
-                            <td><a href="main.jsp">지갑을 분실했어요</a></td>
+                            <td>지갑을 분실했어요</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>7</td>
                             <td>강남CGV</td>
                             <td>김선경</td>
-                            <td><a href="main.jsp">지갑을 분실했어요</a></td>
+                            <td>지갑을 분실했어요</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>8</td>
                             <td>강남CGV</td>
                             <td>김선경</td>
-                            <td><a href="main.jsp">지갑을 분실했어요</a></td>
+                            <td>지갑을 분실했어요</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>9</td>
                             <td>강남CGV</td>
                             <td>김선경</td>
-                            <td><a href="main.jsp">지갑을 분실했어요</a></td>
+                            <td>지갑을 분실했어요</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>10</td>
                             <td>강남CGV</td>
                             <td>김선경</td>
-                            <td><a href="main.jsp">지갑을 분실했어요</a></td>
+                            <td>지갑을 분실했어요</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                         </tr>
                         </tbody>
                     </table>
@@ -181,19 +179,7 @@
             </div>
         </div>
     </main>
-    <footer class="py-4 bg-light mt-auto">
-        <div class="container-fluid px-4">
-            <div class="d-flex align-items-center justify-content-between small">
-                <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                <div>
-                    <a href="#">Privacy Policy</a>
-                    &middot;
-                    <a href="#">Terms &amp; Conditions</a>
-                </div>
-            </div>
-        </div>
 
-    </footer>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

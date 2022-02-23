@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>영화 관리</title>
+    <title>이벤트관리</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -64,54 +64,61 @@
 <div id="layoutSidenav_content" style="margin-top:100px; margin-left: 240px">
     <main>
         <div class="container-fluid px-4" style="margin:0 auto;">
-        	<h2 style="text-align:center;">영화 상영 스케줄 등록</h2>
-        	<form style="width:40%; border:solid 2px red; border-radius:10px; padding:5%; margin:0 auto;">
+        	<h2 style="text-align:center;">이벤트 당첨 공지</h2>
+        	<div style="width:40%; border:solid 2px red; border-radius:10px; padding:5%; margin:0 auto;">
 			  <div class="form-group">
-			    <label for="exampleInputEmail1">상영관</label>
-                <select class="form-control">
-                    <option></option>
-                    <option >1관</option>
-                    <option >2관</option>
-                    <option >3관</option>
-                    <option >4관</option>
-                    <option >5관</option>
-                    <option >6관</option>
-                </select>
+                <table summary="당첨자 발표 리스트" style="text-align: center; border:solid 1px black;">
+                    <colgroup>
+                        <col style="width: 118px">
+                        <col>
+                        <col style="width: 188px">
+                    </colgroup>
+                    <thead style="background-color: #DCDCDC;">
+                        <tr>
+                            <th scope="col" style="width:150px;">
+                                이벤트타입
+                            </th>
+                            <th scope="col" style="width:500px;">
+                                제목
+                            </th>
+                            <th scope="col" style="width:400px">
+                                기간
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="color:blue;">
+                                <em class="txt-lightblue">
+                                    영화</em>
+                            </td>
+                            <td>
+                                [안테벨룸] VIP 시사회 당첨자 안내
+                            </td>
+                            <td>
+                                2022.02.11
+                                ~
+                                2022.02.16
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 			  </div>
 			  <hr/>
-			  <label for="exampleInputEmail1">영화코드</label>
-			  <select class="form-control">
-				  <option></option>
-                  <option >극장판 주술회전 0(20220217)</option>
-                  <option >언차티드(20220216)</option>
-                  <option >나일 강의 죽음(20220209)</option>
-                  <option >리코리쉬 피자(20220216)</option>
-                  <option >더배트맨(20220301)</option>
-                  <option >안테벨룸(20220223)</option>
-			  </select>
-			  <hr/>
-			  <label for="exampleInputEmail1">상영일</label>
-			  <div class="form-row">
 			    <div class="col">
-			      <input type="date" class="form-control" placeholder="yyyy-mm-dd">
+			      <p style="text-align:center; height:300px; padding:20px;">안녕하세요, CGV 입니다. 
+
+					<안테벨룸> CGV VIP 시사회 이벤트 당첨 안내 드립니다.
+					
+					이벤트 응모 고객께서는 아래 '당첨 확인' 버튼을 눌러 당첨 여부를 확인해 주십시오.
+					
+					앞으로도 CGV 이벤트에 많은 관심 부탁드립니다.
+					
+					감사합니다.</p>
 			    </div>
-			  </div>
 			  <hr/>
-			  <label for="exampleInputEmail1">상영시간</label>
-			  <div class="form-row">
-			    <div class="col">시작시간
-			      <input type="time" class="form-control" placeholder="">
-			    </div>
-			    <h2 style="margin-top: 20px;"> ~ </h2>
-			    <div class="col">종료시간
-			      <input type="time" class="form-control" placeholder="">
-			    </div>
-			  </div>
-              <hr/>
-              <button type="reset" class="btn btn-primary" >리셋</button>
-              <button type="submit" class="btn btn-primary" style="background-color: #F08080">작성</button>
-			  
-			</form>
+        		<input type="button" value="이벤트 당첨 목록" style="background-color: #F08080" onclick = "location.href='./event-result.jsp'"/>
+			</div>
         </div>
     </main>
 </div>

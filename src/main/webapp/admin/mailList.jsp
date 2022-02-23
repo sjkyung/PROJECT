@@ -26,9 +26,6 @@
             text-decoration: none;
             color:black;
         }
-        td>a:hover{
-            border-bottom: 2px solid blue;
-        }
     </style>
 </head>
 <body class="sb-nav-fixed" >
@@ -95,94 +92,94 @@
                         </tr>
                         </tfoot>
                         <tbody>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>1</td>
-                            <td>강남CGV</td>
-                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
+                            <td>강변CGV</td>
+                            <td>대관 문의는 어디서 하나요?</td>
                             <td>문의</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                             <td>평가준비중</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>2</td>
                             <td>강남CGV</td>
-                            <td><a href="manage_AskAnswer.jsp">미소지기가 너무 불친절해요</a></td>
+                            <td>미소지기가 불친절해요</td>
                             <td>불만</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">답변완료</td>
-                            <td>평가완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
+                            <td>평가준비중</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>3</td>
-                            <td>강변CGV</td>
-                            <td><a href="manage_AskAnswer.jsp">장애인석 문의</a></td>
+                            <td>강남CGV</td>
+                            <td>대관 문의는 어디서 하나요?</td>
                             <td>문의</td>
-                            <td>2022-02-21</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td>2022-02-22</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                             <td>평가준비중</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>4</td>
-                            <td>강변CGV</td>
-                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
+                            <td>신촌CGV</td>
+                            <td>대관 문의는 어디서 하나요?</td>
                             <td>문의</td>
-                            <td>2022-02-21</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td>2022-02-22</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                             <td>평가준비중</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>5</td>
-                            <td>강변CGV</td>
-                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
+                            <td>강남CGV</td>
+                            <td>대관 문의는 어디서 하나요?</td>
                             <td>문의</td>
-                            <td>2022-02-21</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td>2022-02-22</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                             <td>평가준비중</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>6</td>
                             <td>강변CGV</td>
-                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
+                            <td>대관 문의는 어디서 하나요?</td>
                             <td>문의</td>
-                            <td>2022-02-21</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td>2022-02-22</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                             <td>평가준비중</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>7</td>
                             <td>강남CGV</td>
-                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
+                            <td>대관 문의는 어디서 하나요?</td>
                             <td>문의</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                             <td>평가준비중</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>8</td>
                             <td>강남CGV</td>
-                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
+                            <td>대관 문의는 어디서 하나요?</td>
                             <td>문의</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                             <td>평가준비중</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>9</td>
                             <td>강남CGV</td>
-                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
+                            <td>대관 문의는 어디서 하나요?</td>
                             <td>문의</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                             <td>평가준비중</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./manage_AskAnswer.jsp'">
                             <td>10</td>
                             <td>강남CGV</td>
-                            <td><a href="manage_AskAnswer.jsp">대관 문의는 어디서 하나요?</a></td>
+                            <td>대관 문의는 어디서 하나요?</td>
                             <td>문의</td>
                             <td>2022-02-22</td>
-                            <td style="background-color: #2c3034; color:white">접수완료</td>
+                            <td style="background-color: #a94442; color:white; font-weight: bold">접수완료</td>
                             <td>평가준비중</td>
                         </tr>
                         </tbody>
@@ -193,19 +190,7 @@
             </div>
         </div>
     </main>
-    <footer class="py-4 bg-light mt-auto">
-        <div class="container-fluid px-4">
-            <div class="d-flex align-items-center justify-content-between small">
-                <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                <div>
-                    <a href="#">Privacy Policy</a>
-                    &middot;
-                    <a href="#">Terms &amp; Conditions</a>
-                </div>
-            </div>
-        </div>
 
-    </footer>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
