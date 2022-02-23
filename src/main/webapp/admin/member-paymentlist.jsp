@@ -64,7 +64,7 @@
                 <div class="card-body">
                     <table id="datatablesSimple">
                         <thead>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <th>Id</th>
                             <th>결제 번호</th>
                             <th>상품 종류</th>
@@ -75,7 +75,7 @@
                         </tr>
                         </thead>
                         <tfoot>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <th>Id</th>
                             <th>결제 번호</th>
                             <th>상품 종류</th>
@@ -86,7 +86,7 @@
                         </tr>
                         </tfoot>
                         <tbody>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td style="width: 10%;">apple</td>
                             <td style="width: 10%;">0003-0218-1234-432</td>
                             <td style="width: 10%;">003-ticket-normal</td>
@@ -95,7 +95,7 @@
                             <td style="width: 10%;">11,000 원</td>
                             <td style="width: 15%;">2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>None</td>
                             <td>0004-0220-1234-123</td>
                             <td>004-giftcard-A</td>
@@ -104,7 +104,7 @@
                             <td>300,000 원</td>
                             <td>2022.02.20(화) 11:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>apple</td>
                             <td>0003-0218-1234-432</td>
                             <td>003-ticket-gold</td>
@@ -113,7 +113,7 @@
                             <td>70,000 원</td>
                             <td>2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>banana</td>
                             <td>0005-0218-1234-432</td>
                             <td>005-combo-cgv</td>
@@ -122,7 +122,7 @@
                             <td>18,000 원</td>
                             <td>2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>pineapple</td>
                             <td>0006-0218-1234-432</td>
                             <td>006-popcorn-original</td>
@@ -131,7 +131,7 @@
                             <td>10,000 원</td>
                             <td>2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>goodluck</td>
                             <td>0007-0218-1234-432</td>
                             <td>007-drink-coke</td>
@@ -140,7 +140,7 @@
                             <td>7,500 원</td>
                             <td>2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>goodluck</td>
                             <td>0006-0218-1234-432</td>
                             <td>006-popcorn-caramel</td>
@@ -149,7 +149,7 @@
                             <td>6,000 원</td>
                             <td>2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>None</td>
                             <td>0004-0220-1234-123</td>
                             <td>004-giftcard-A</td>
@@ -158,7 +158,7 @@
                             <td>300,000 원</td>
                             <td>2022.02.20(화) 11:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>apple</td>
                             <td>0003-0218-1234-432</td>
                             <td>003-ticket-gold</td>
@@ -167,7 +167,7 @@
                             <td>70,000 원</td>
                             <td>2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>banana</td>
                             <td>0005-0218-1234-432</td>
                             <td>005-combo-cgv</td>
@@ -176,7 +176,7 @@
                             <td>18,000 원</td>
                             <td>2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>pineapple</td>
                             <td>0006-0218-1234-432</td>
                             <td>006-popcorn-original</td>
@@ -185,7 +185,7 @@
                             <td>10,000 원</td>
                             <td>2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>goodluck</td>
                             <td>0007-0218-1234-432</td>
                             <td>007-drink-coke</td>
@@ -194,7 +194,7 @@
                             <td>7,500 원</td>
                             <td>2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>goodluck</td>
                             <td>0006-0218-1234-432</td>
                             <td>006-popcorn-caramel</td>
@@ -203,7 +203,7 @@
                             <td>6,000 원</td>
                             <td>2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>None</td>
                             <td>0004-0220-1234-123</td>
                             <td>004-giftcard-A</td>
@@ -212,7 +212,7 @@
                             <td>300,000 원</td>
                             <td>2022.02.20(화) 11:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>apple</td>
                             <td>0003-0218-1234-432</td>
                             <td>003-ticket-gold</td>
@@ -221,7 +221,7 @@
                             <td>70,000 원</td>
                             <td>2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>banana</td>
                             <td>0005-0218-1234-432</td>
                             <td>005-combo-cgv</td>
@@ -230,7 +230,7 @@
                             <td>18,000 원</td>
                             <td>2022.02.18(화) 14:00</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_paymentlist_view.jsp'">
                             <td>pineapple</td>
                             <td>0006-0218-1234-432</td>
                             <td>006-popcorn-original</td>

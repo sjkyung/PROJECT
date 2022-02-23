@@ -64,7 +64,7 @@
                 <div class="card-body">
                     <table id="datatablesSimple">
                         <thead>
-                        <tr>
+                        <tr onclick="location.href='./member_pointlist_view.jsp'">
                             <th>Id</th>
                             <th>적립 구분</th>
                             <th>상품 구매 극장</th>
@@ -75,7 +75,7 @@
                         </tr>
                         </thead>
                         <tfoot>
-                        <tr>
+                        <tr onclick="location.href='./member_pointlist_view.jsp'">
                             <th>Id</th>
                             <th>적립 구분</th>
                             <th>상품 구매 극장</th>
@@ -86,7 +86,7 @@
                         </tr>
                         </tfoot>
                         <tbody>
-                        <tr>
+                        <tr onclick="location.href='./member_pointlist_view.jsp'">
                             <td style="width: 15%;">apple</td>
                             <td style="width: 15%;">팝콘</td>
                             <td style="width: 15%;">시흥 CGV</td>
@@ -95,7 +95,7 @@
                             <td style="width: 15%;">2020/02/02</td>
                             <td style="width: 15%;">50,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_pointlist_view.jsp'">
                             <td>apple</td>
                             <td>팝콘</td>
                             <td>시흥 CGV</td>
@@ -104,7 +104,7 @@
                             <td>2020/02/02</td>
                             <td>50,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_pointlist_view.jsp'">
                             <td>apple</td>
                             <td>팝콘</td>
                             <td>시흥 CGV</td>
@@ -113,7 +113,7 @@
                             <td>2020/02/02</td>
                             <td>50,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_pointlist_view.jsp'">
                             <td>apple</td>
                             <td>팝콘</td>
                             <td>시흥 CGV</td>
@@ -122,7 +122,7 @@
                             <td>2020/02/02</td>
                             <td>50,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_pointlist_view.jsp'">
                             <td>apple</td>
                             <td>팝콘</td>
                             <td>시흥 CGV</td>
@@ -131,7 +131,7 @@
                             <td>2020/02/02</td>
                             <td>50,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_pointlist_view.jsp'">
                             <td>apple</td>
                             <td>팝콘</td>
                             <td>시흥 CGV</td>
@@ -140,7 +140,7 @@
                             <td>2020/02/02</td>
                             <td>50,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_pointlist_view.jsp'">
                             <td>apple</td>
                             <td>팝콘</td>
                             <td>시흥 CGV</td>
@@ -149,7 +149,7 @@
                             <td>2020/02/02</td>
                             <td>50,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_pointlist_view.jsp'">
                             <td>apple</td>
                             <td>팝콘</td>
                             <td>시흥 CGV</td>
@@ -158,7 +158,7 @@
                             <td>2020/02/02</td>
                             <td>50,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_pointlist_view.jsp'">
                             <td>apple</td>
                             <td>팝콘</td>
                             <td>시흥 CGV</td>
@@ -167,7 +167,7 @@
                             <td>2020/02/02</td>
                             <td>50,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_pointlist_view.jsp'">
                             <td>apple</td>
                             <td>팝콘</td>
                             <td>시흥 CGV</td>
@@ -176,7 +176,7 @@
                             <td>2020/02/02</td>
                             <td>50,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_pointlist_view.jsp'">
                             <td>apple</td>
                             <td>팝콘</td>
                             <td>시흥 CGV</td>
@@ -185,7 +185,7 @@
                             <td>2020/02/02</td>
                             <td>50,000 P</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./member_pointlist_view.jsp'">
                             <td>apple</td>
                             <td>팝콘</td>
                             <td>시흥 CGV</td>
