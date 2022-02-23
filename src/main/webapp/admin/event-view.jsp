@@ -62,8 +62,11 @@
 <div id="layoutSidenav_content" style="margin-top:100px; margin-left: 240px">
     <main>
         <div class="container-fluid px-4" style="margin:0 auto;">
-        <p><input type="button" value="이벤트 삭제" style="background-color: #F08080" onclick = "#"/></p>
-        	<img src="http://img.cgv.co.kr/event/develop/2202_fm2/1044_bg_event.jpg" />
+        <p>
+        	<input type="button" value="이벤트 삭제" style="background-color: #F08080" onclick = "#"/>
+        	<input type="button" value="이벤트 목록" style="background-color: #F08080" onclick = "location.href='./event-list-special.jsp'"/>
+        </p>
+        	<img src="http://img.cgv.co.kr/event/develop/2202_fm2/1044_bg_event.jpg"/>
         </div>
     </main>
     <footer class="py-4 bg-light mt-auto">

@@ -118,7 +118,7 @@
 
                         </tbody>
                     </table>
-                    <input type="button" value="이벤트 작성" style="background-color: #F08080" onclick = "location.href = './event-result-regist.jsp'"/>
+                    <input type="button" value="공지 작성" style="background-color: #F08080" onclick = "location.href = './event-result-regist.jsp'"/>
                 </div>
         </div>
 
