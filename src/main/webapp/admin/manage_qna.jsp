@@ -70,7 +70,7 @@
                     자주 묻는 질문
 
 <%--                    <input type="button" value="시스템점검" onclick="location.href='#'"/>--%>
-                    <input type="button" value="질문 / 답변 작성" onclick="location.href='./managa_qna_write.jsp'"/>
+                    <input type="button" value="질문 / 답변 작성" onclick="location.href='./manage_qna_write.jsp'"/>
 
                 </div>
                 <div class="card-body">
