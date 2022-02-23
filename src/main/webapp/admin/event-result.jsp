@@ -80,17 +80,17 @@
                         </tr>
                         </tfoot>
                         <tbody>
-                        <tr>
+                        <tr onclick="location.href='./event-result-view.jsp'">
                             <td style="width:150px; color: #F08080">HOT</td>
                             <td>[제페토CGV 오픈 사전 이벤트] 당첨자 발표 안내</td>
                             <td>2021.12.21~2022.12.31</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./event-result-view.jsp'">
                             <td style="width:150px; color: #F08080">HOT</td>
                             <td>2021 IMAX 포스터 컬렉션북 추가 당첨자 안내</td>
                             <td>2022.01.21~2022.04.30</td>
                         </tr>
-                        <tr>
+                        <tr onclick="location.href='./event-result-view.jsp'">
                             <td style="width:150px; color: #F08080">극장</td>
                             <td>[해적:도깨비 깃발] 기대평 댓글 이벤트 당첨자 안내</td>
                             <td>2022.01.01~2022.12.31</td>
@@ -120,6 +120,7 @@
                     </table>
                     <input type="button" value="공지 작성" style="background-color: #F08080" onclick = "location.href = './event-result-regist.jsp'"/>
                 </div>
+        </div>
         </div>
 
 
