@@ -84,7 +84,7 @@
                         <tr onclick="location.href='./event-view.jsp'">
                             <td style="width:150px"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/34046/16451515365430.jpg" width="150px"></td>
                             <td>[전체]</td>
-                            <td><a href="./event-view.jsp">[극장판 주술회전 0] CGV필름마크</a></td>
+                            <td>[극장판 주술회전 0] CGV필름마크</td>
                             <td>2022.02.18~2022.03.07</td>
                         </tr>
                         <tr onclick="location.href='./event-view.jsp'">
