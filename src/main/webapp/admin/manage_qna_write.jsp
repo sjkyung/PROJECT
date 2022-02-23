@@ -78,7 +78,7 @@
 <div id="layoutSidenav_content" style="margin-top:70px; margin-left: 240px">
     <main>
         <div class="container-fluid px-4" >
-            <h2>공지 작성</h2>
+            <h2>질문 / 답변 작성</h2>
 
             <form method="post" name="notification" action="manage_qna_write_ok.jsp">
             <table width=900 border=1 cellspacing=5 cellpadding=10>

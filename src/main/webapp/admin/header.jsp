@@ -51,8 +51,8 @@
                             </a>
                             <div class="collapse" id="event" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="event-list-special.jsp.jsp" style="font-size:15px; padding-left:30px;">이벤트관리</a>
-                                    <a class="nav-link" href="testpage.jsp" style="font-size:15px; padding-left:30px;">이벤트 당첨자 추첨</a>
+                                    <a class="nav-link" href="event-list-special.jsp" style="font-size:15px; padding-left:30px;">이벤트관리</a>
+                                    <a class="nav-link" href="event-result.jsp" style="font-size:15px; padding-left:30px;">이벤트 당첨자 추첨</a>
                                     <a class="nav-link" href="testpage.jsp" style="font-size:15px; padding-left:30px;">종료된 이벤트 관리</a>
                                 </nav>
                         </div>
