@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,13 +19,8 @@
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
 
-            $("#headers").load("header.jsp");
-            
-        });
-    </script>
+
 </head>
 <body class="sb-nav-fixed" >
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -59,10 +54,17 @@
 
 <div id="layoutSidenav_content">
     <main style="height:100vh !important">
+
         <div class="container-fluid px-4" STYLE="margin-left: 240px;
                     margin-top: 100px !important " >
 
             <h1 class="mt-4">여기서부터 본문 시작해주세요!!!</h1>
+<%--            <textarea class="summernote" name="editordata"></textarea>--%>
+            <div class="container">
+
+        </div>
+
+
 
 
         </div>
@@ -83,7 +85,14 @@
 
     </footer>
 </div>
+<script type="text/javascript">
+    $(function() {
+        $("#headers").load("header.jsp");
 
+    });
+
+
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="js/scripts.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
